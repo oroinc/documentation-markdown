@@ -1,0 +1,164 @@
+# End-to-End Testing with Behat
+
+With Behat framework, you can write human-readable stories describing your application’s behavior. These stories might be auto-tested against your application.
+We transform user actions into steps and expected outcomes to test the application. Scenario steps simulate user interaction with the application through the Google Chrome browser so that you can modify the application state.
+
+You can organize dependent scenarios into features. The features are isolated by default to avoid data collisions and dependencies between features when they are running one by one. For example, the database and cache directories are dumped before running the feature tests; they are restored once the feature tests are executed. This means that when we run Behat tests, they are connected to services used by the application, such as the database, cache, message broker, and so on, and can interact with them, bypassing the application. As a result, these tests are rather integration than end-to-end.
+
+You can disable features isolation with the `--skip-isolation` option of the bin/behat console command. When isolation is disabled, tests interact only with the application by simulating a user through the browser. In this case, services are not touched, and tests become more black-box and, as a result, **end-to-end**.
+
+## Use Cases
+
+There are two main cases when end-to-end tests are helpful:
+
+### Remote Application Testing
+
+You can test your development, staging, or production environment remotely with the disabled isolation to ensure crucial features work as expected after deployment. When testing the production application, consider the artifacts and side effects of the tests because, with disabled isolators, tests change the application state permanently. As a consequence, you should never operate real users’ data. For example, to mitigate the effects of running automated scenarios, you can create separate users explicitly for tests.
+
+To test the external application, change the `base_url` option in the behat.yml file to the remote one. As many isolators do not support remote application testing, you can test external applications only with the skip-isolators option.
+
+### Preparation for Manual Testing
+
+Behat features can automate tedious tasks for preparing the manual testing environment, like filling multiple forms to create testing data.
+
+For example, you can integrate with an external payment and shipping system and create or import products with prices to manually test the checkout process when the data are ready.
+
+## Prerequisites
+
+- <a href="https://www.php.net/manual/en/install.php" target="_blank">PHP 8.1</a>
+- <a href="https://getcomposer.org/" target="_blank">Composer</a>
+- The latest version of <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a>
+- The <a href="https://sites.google.com/chromium.org/driver/" target="_blank">ChromeDriver</a> binary for your platform
+- [The Oro Application Source Code](../setup/get-source-files.md#installation-get-files).
+
+#### NOTE
+Please avoid reusing an existing local application installation for running end-to-end tests. Instead, create a separate instance of the application with the same code.
+
+#### HINT
+If you are using a previously installed application, clean up the application state before you begin:
+
+```bash
+rm -rf config/parameters.yml var/cache/prod
+composer build-parameters -n
+```
+
+## Running Tests
+
+1. To test a remote application, define the database server version in the config/parameters.yml file, so the application does not attempt to connect to the database:
+   ```bash
+   composer set-param database_server_version=8
+   ```
+2. Create a `behat.yml` file in the application folder. In this file, set the `base_url` option to the application URL to test.
+   ```yaml
+   imports:
+     - ./behat.yml.dist
+
+   default: &default
+       extensions: &default_extensions
+           Behat\MinkExtension:
+               base_url: "https://example.com"
+           # This configuration changes artifacts URLs to local file links.
+           # Remove it if artifacts URLs are the same as for the tested application
+           # or change the base_url to the custom base URL for artifacts.
+           Oro\Bundle\TestFrameworkBundle\Behat\ServiceContainer\OroTestFrameworkExtension:
+               artifacts:
+                   handlers:
+                       local:
+                           directory: '%paths.base%/public/media/behat'
+                           base_url: ~ # default is '%mink.base_url%/media/behat/'
+                           auto_clear: false
+   ```
+3. Start the ChromeDriver:
+   ```bash
+   chromedriver --url-base=wd/hub --port=4444
+   ```
+4. You can now run behat tests with the skip-isolators option:
+   ```bash
+   php bin/behat --skip-isolators -- <path-to-behat.feature>
+   ```
+
+   #### HINT
+   You can use the `--stop-on-failure` option to stop processing on the first failed scenario.
+
+You can find Behat features provided by Oro that cover most application features by running the `php bin/behat --available-features` command. However, remember that most of them require data fixtures to be loaded to the database, so you cannot use them as-is for the end-to-end testing without the database connection to the tested application.
+
+#### NOTE
+Some behat steps interact with application services. When testing the remote application, avoid using these steps or provide service connection details for the required services in the config/parameters.yml file to fulfill requirements for such step(s).
+
+## Running Tests with Data Fixtures
+
+To test a feature, you often need different data loaded (users to log in, products with prices to add to the shopping list, etc.). Loading all the required data with behat steps might take a while and is often unnecessary. You can load data directly to the database with fixtures before running tests to speed up such scenarios. This requires the database connection from the application instance that runs tests to the tested one.
+
+#### NOTE
+Your local application source code must match the code of the tested application. Otherwise, you may face issues with the data load.
+
+1. Provide database credentials for the tested application to the config/parameters.yml file. E.g.:
+   ```yaml
+   parameters:
+       database_driver:        pdo_mysql
+       database_host:          10.0.0.1
+       database_port:          3306
+       database_name:          oro_db
+       database_user:          oro_db_user
+       database_password:      oro_db_pass
+   ```
+2. Create a `behat.yml` file in the application folder. In this file, set the `base_url` option to the application URL to test.
+   ```yaml
+   imports:
+     - ./behat.yml.dist
+
+   default: &default
+       extensions: &default_extensions
+           Behat\MinkExtension:
+               base_url: "https://example.com"
+   ```
+3. Start the ChromeDriver:
+   ```bash
+   chromedriver --url-base=wd/hub --port=4444
+   ```
+4. You can now run tests with skipped isolators, except the one that loads data fixtures:
+   ```bash
+   php bin/behat --skip-isolators-but-load-fixtures -- <path-to-behat.feature>
+   ```
+
+<!-- Frontend -->
+
+## Using Secrets Variables in Tests
+
+#### HINT
+This feature is available starting from OroCommerce v5.0.3. To check which application version you are running, see the [system information](../../user/back-office/system/system-information/index.md#system-information).
+
+To test a feature, you may need to use sensitive data like credentials which should not be defined in fixtures. You can define this variables in secrets variable file and use those variables in your scenarios.
+
+1. Create a `.behat-secrets.yml` file in the application folder, and set your configuration variables to use in the test.
+   ```yaml
+   secrets:
+       login:
+           username: admin
+           password: s3crEtPas$
+   ```
+2. Modify your scenario with variables in format <Secret:variable.path>\`.
+   ```gherkin
+   Feature: Example to use secrets variables
+     Scenario: Login into Admin with variables
+       Given I go to "admin"
+       And I fill form with:
+         | Username | <Secret:login.username> |
+         | Password | <Secret:login.password> |
+       And I click "Log in"
+   ```
+
+## Built-in Scenarios
+
+To configure predefined integrations, you can use one of the built-in scenarios.
+
+1. To use scenarios, install the extension:
+   ```bash
+   composer require oro/e2e-tests --dev -n
+   ```
+2. Copy `.behat-secrets.yml.dist` to `.behat-secrets.yml` in the application root and modify the necessary credentials to the actual one.
+3. Check available scenarios in `vendor/oro/e2e-tests/Tests/Behat/Features/`
+4. Run the following scenario:
+   ```bash
+   php bin/behat --skip-isolators -- vendor/oro/e2e-tests/Tests/Behat/Features/create_mailchimp_integration.feature
+   ```

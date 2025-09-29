@@ -1,0 +1,94 @@
+# Upgrade Website Index to Elasticsearch >=7.7, <8.0
+
+You have two options to perform the upgrade: either via full reindexation or via search index dump.
+
+Keep in mind that Elasticsearch 7.\* can be used with version 3.1 as well, but in this case application uses old index
+structure (with mapping types). If you need to upgrade to the current version from a such application, then
+you should change index prefix in config/parameters.yml file during the upgrade and allow application to create
+new indices with a new structure (without mapping types). Both upgrade options can be used to do that.
+Indices with old structure (with old prefix) should be removed after the upgrade.
+
+## Full Reindexation
+
+This option is suitable for upgrades from version lower than 2.6, or if you have a small number of entities (fewer than a hundred thousand).
+
+Search index upgrade is part of the [application upgrade](../../../backend/setup/upgrade-to-new-version.md#upgrade-application).
+So, once you have turned on maintenance mode through `app/console lexik:maintenance:lock --env=prod`, you need to perform the following actions:
+
+1. <a href="https://www.elastic.co/guide/en/elasticsearch/reference/master/stopping-elasticsearch.html" target="_blank">Stop old Elasticsearch</a>
+2. Modify credentials  for search engine configuration in the config/parameters.yml file
+3. <a href="https://www.elastic.co/guide/en/elasticsearch/reference/master/starting-elasticsearch.html" target="_blank">Start the Elasticsearch</a> 7.\* service.
+
+Proceed with the [standard upgrade procedure](../../../backend/setup/upgrade-to-new-version.md#upgrade-application).
+
+<a id="standard-elasticsearch-dump"></a>
+
+## Search Index Dump
+
+Search index dump is suitable only if you perform upgrade from versions 2.6 to 3.1, and you have a large number of entities.
+The biggest advantage of this approach is that you do not need to schedule reindexation and wait until it is finished.
+
+Generating the search index dump is also part of standard procedure of application upgrade.
+But you should note that the elastic index dump must be created from the old version of the code (2.6 to 3.1). So follow next step of upgrade procedure:
+
+1. Turn on maintenance mode to switch the application to the maintenance mode.
+   * 2.6 version:
+     ```none
+     app/console lexik:maintenance:lock --env=prod
+     ```
+   * 3.1 version:
+     ```none
+     bin/console lexik:maintenance:lock --env=prod
+     ```
+2. Create Elastic search index dump. Consider you must do this **before** updating code to new version.
+   * 2.6 version:
+     ```none
+     app/console oro:elasticsearch:dump-standard-index elasticsearch7 standard-index-es7.dump --env=prod
+     ```
+   * 3.1 version:
+     ```none
+     bin/console oro:elasticsearch:dump-standard-index elasticsearch7 standard-index-es7.dump --env=prod
+     ```
+
+It creates the standard-index-es7.dump file (in application directory) with <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.x/docs-bulk.html" target="_blank">search index dump in the Elasticsearch bulk API</a> format which is applicable for Elasticsearch version 7.\*.
+
+Here is an example:
+
+```none
+{"index":{"_index":"oro_search_oro_organization","_id":1}}
+{"all_text":"Oro","oro_organization_owner":0,"organization":0,"name":"Oro"}
+```
+
+1. <a href="https://www.elastic.co/guide/en/elasticsearch/reference/master/stopping-elasticsearch.html" target="_blank">Stop old Elasticsearch service</a>.
+2. Proceed with the [standard upgrade procedure](../../../backend/setup/upgrade-to-new-version.md#upgrade-application) which includes creating needed backups and updating code to new version, updating composer dependencies (all actions needed before running update command).
+
+5. Then modify credentials for search engine configuration in the config/parameters.yml file.
+Consider you should do this **after** updating code to new version.
+
+1. <a href="https://www.elastic.co/guide/en/elasticsearch/reference/master/starting-elasticsearch.html" target="_blank">Start the Elasticsearch</a> 7.\* service.
+2. Execute update command from standard upgrade procedure but **pay attention** to skip-search-reindexation (it will prevent full reindexation start):
+   ```none
+   bin/console oro:platform:update --skip-search-reindexation --env=prod
+   ```
+3. Now you need to execute command which will create an empty indexes (without any data) with correct elastic search mappings:
+   ```none
+   bin/console oro:elasticsearch:create-standard-index --env=prod
+   ```
+4. Upload the dump data to the Elasticsearch 7.\* index, the Elasticsearch 7.\* bulk API, and the dump file created previously using a standard curl CLI command:
+   ```none
+   curl -XPOST http://localhost:9200/_bulk -H 'Content-Type: application/json' --data-binary @standard-index-es7.dump > /dev/null
+   ```
+
+To speed up this process you may split the dump file into smaller chunks and upload them in parallel. In this case, each chunk has to contain an even number of lines because each document is represented by two lines in the dump file.
+
+1. Finish the [standard upgrade procedure](../../../backend/setup/upgrade-to-new-version.md#upgrade-application).
+
+You may adjust this procedure according to your needs, but keep in mind that you need to:
+
+* create index dump **before** upgrading to 4.+ and ensure that old Elasticsearch service is running at this time;
+* create and upload index dump during maintenance mode to avoid data loss.
+
+#### HINT
+See the [Indexation process](../../../backend/architecture/tech-stack/search/index.md#search-index-overview-indexation-process) documentation for more details on synchronous and asynchronous (scheduled) indexation.
+
+<!-- Frontend -->

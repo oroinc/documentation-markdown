@@ -1,0 +1,23 @@
+<!-- meta: description = Orders creation and management guides for the OroCommerce storefront users -->
+
+<a id="frontstore-guide-orders"></a>
+
+# Manage Orders in the Storefront
+
+There are two ways to create an [order](../../glossary.md#term-Order) in the storefront:
+
+* From a shopping list
+* From a quick order form
+
+After you submit an order, it becomes available in the [Order History](../account/order-history.md#my-account-order-history) menu which you can reach via the Quick Access menu under **Orders**. Here, you can review ordered items, view order billing and shipping information and re-order products from previous orders.
+
+![image](user/img/storefront/orders/Orders.png)
+
+#### HINT
+Read more on how to place orders and proceed through various types of checkout in the [Checkout](../checkout/index.md#frontstore-guide-orders-checkout) topic.
+
+<!-- fa-bars = fa-navicon -->
+<!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
+<!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
+<!-- Check mark in the square. -->
+<!-- SortDesc is also used as drop-down arrow -->

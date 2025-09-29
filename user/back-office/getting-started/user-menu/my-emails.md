@@ -1,0 +1,160 @@
+<a id="doc-my-oro-emails"></a>
+
+<a id="user-guide-using-emails"></a>
+
+<a id="doc-activities-emails-actions-compose"></a>
+
+<a id="user-guide-using-emails-view"></a>
+
+# My Emails
+
+<!-- note: Before using **My Emails**, please configure your personal mailbox connection to the mail server. See :ref:`Personal Email Configuration <my-email-configuration>` for more information. -->
+
+Oro application allows you to send and receive emails from within the system using both personal and system (company-wide) mailboxes. You can neatly design letters using HTML formatting and a built-in text editor, create and use email templates, attach files to emails, and configure personalized signatures.
+
+It is also possible to configure auto-actions and auto-responses. For example, with auto-actions, a lead record or a case may be created in the system for each email received to a particular mailbox.
+
+Oro also provides a feature of auto-assignment to contacts, thanks to which new emails synced into the application are automatically linked to contacts if the email addresses of these contacts appear in the correspondence.
+
+> See a short demo on <a href="https://academy.oroinc.com/media-library/create-manage-emails-orocrm" target="_blank">how to create and manage emails</a>, or keep reading the step-by-step guidance below.
+
+> <iframe width="560" height="315" src="https://www.youtube.com/embed/hTI0IWEsSF4" frameborder="0" allowfullscreen></iframe>
+<!-- start_my_emails -->
+
+Navigate to **My Emails** by clicking on your user name on the top right of the application page.
+
+From the page of all emails, you can:
+
+* View all available emails
+* Filter emails
+* Compose a new email from scratch or using a template and send it
+* Synchronize emails with your email server (e.g., save drafts)
+* Mark one or selected emails as unread
+
+## Save Table Views
+
+There are four table views for emails available by default:
+
+- **All Emails** (contains all available emails).
+- **Inbox** (contains newly delivered emails).
+- **Sent Mail** (contains sent emails).
+- **Mailbox: Local** (contains emails sent to the user’s personal
+  email).
+
+![Four table views for emails available by default](user/img/getting_started/user_menu/my_emails_page.jpg)
+
+## Use Filters
+
+To enable filters for My Emails page, click the <i class="fa fa-filter fa-lg" aria-hidden="true"></i> button on the right:
+
+Filters sort your emails based on specific criteria, such as subject, date/time, message type, folders, status, mailbox, etc.
+
+To find a specific record, click <i class="fa fa-filter fa-lg" aria-hidden="true"></i> and select the necessary search parameter from the list:
+
+![Select the necessary search parameter from the list](user/img/getting_started/user_menu/filters_dropdown.jpg)
+
+To save a page filtered according to the necessary criteria:
+
+1. Filter your emails according to your requirements using **Filters**.
+2. Click **Options**.
+3. Select **Save As/Save As Default**.
+4. Give your email page a name and click **Save**.
+5. The saved page should now appear on the list.
+
+#### NOTE
+To synchronize your emails manually, click **Sync Emails** on the top right of the page with all emails.
+
+## Compose A New Email
+
+To compose a new email:
+
+1. On the page of all emails, click **Compose** on the top right.
+2. Provide the following information on the page that opens:
+
+| **Field**          | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **From**           | The **From** field should contain the sender’s email address. Note that the primary email address is used as a default value and additional addresses are available in the selector for the **From** field.                                                                                                                                                                                                                                                                                                                                                                      |
+| **To**             | The **To** field should contain the email(s) of the recipient(s). You can add more than one email to the field.<br/>**Cc:** Clicking **Cc** (carbon copy) will prompt a new field to appear to include more recipients to the emails whom the sender wishes to *publicly* inform of the message. Such recipients will be visible to all other recipients.<br/>**Bcc:** Clicking **Bcc** (blind carbon copy) will prompt a new field to appear to include those recipients whom the sender wishes to inform of the email *discreetly*. Such recipients are not visible to anyone. |
+| **Subject**        | Short, descriptive outline of the email message displayed in the recipients’ mailbox.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Apply Template** | You can apply a pre-configured template for your email. More information on email template configuration can be found In the [corresponding](../../system/emails/email-templates.md#user-guide-email-template) section of this guide.<br/>: Keep in mind that the ability to view and add email templates from the dropdown list depends on specific [roles and permissions](../../system/user-management/roles/index.md#user-guide-user-management-permissions-roles) defined in the system configuration.                                                                      |
+| **Type**           | Select the type of the message to be sent:<br/>**HTML:** The email will be coded so that the text is formatted and images are added.<br/>**Plain:** The email will contain plain text with no formatting or unique layout options.                                                                                                                                                                                                                                                                                                                                               |
+| **Body**           | Enter the text of your email.<br/>You can customize your email text using the following features:<br/>-  Bold, Italic, Underline styles<br/>-  Text color<br/>-  Background color<br/>-  Bullet List<br/>-  Numbered List<br/>-  Insert/Edit link<br/>-  Source Code<br/>-  Image Embed Upload<br/>-  Fullscreen view                                                                                                                                                                                                                                                            |
+| **Add Signature**  | The signature may be added to any email you write in the Oro application. Your organization settings define whether the signature will be added automatically or manually.<br/>If you have a signature configured, you can add it by clicking **Add Signature**. For example:<br/>-<br/>John Doe, VP<br/>Example Inc.<br/>t.: 0786756465<br/>e.: [john.doe@example.com](mailto:john.doe@example.com)<br/>For more information, see **Add Signature To Your Email** section of this guide.                                                                                        |
+| **Attach a file**  | You can attach a file from your PC or a related record.<br/>Click **From a Record** to re-use an attachment from another email in the thread or to choose an attachment assigned to the records.<br/>Click **Upload** and select the necessary file to be uploaded from your computer as an attachment to your email.                                                                                                                                                                                                                                                            |
+| **Contexts**       | Context is any record or records that ha(s)ve meaningful relation to an email conversation. When you add context of a record to the email conversation, it will be displayed in the **Activity** section of that record’s page.<br/>**Note**: If an email has been created from an entity record view page (e.g., from a lead’s page), this record will be added as a context automatically.                                                                                                                                                                                     |
+1. Click **Send** to send your email.
+
+## Save Unfinished Email
+
+To save an unfinished email, minimize the email dialog window by clicking on the corresponding button in the top right corner of the email dialog window.
+
+Your unfinished email will appear as a minimized window throughout the sessions.
+
+![Unfinished email appears as a minimized window](user/img/getting_started/user_menu/email_minimized2.jpg)
+
+You can save several of such emails as drafts.
+
+![Several unfinished emails appear as minimized windows](user/img/getting_started/user_menu/several_minimized_emails.jpg)
+
+## View Emails
+
+To **open** an email, click on either the email or the **View** icon at the right end of the email.
+
+From the email details page, you can:
+
+- **Add Comment** (add, edit, or delete a comment to the email).
+- **Add Task** (assign a task through an email).
+- **Mark Unread**
+- **Add Context** (define a record related to the email).
+  ![Add context to emails](user/img/getting_started/user_menu/add_context.jpg)
+- **Reply** (reply directly to the sender).
+- **Reply All** (reply to everyone in the email conversation).
+- **Forward** (forward an email to a different recipient).
+- **Download Attachment** (download the attached file, if available).
+
+## View Recent Emails
+
+<!-- start_recent_emails_menu_button -->
+
+You can reach your emails by clicking on the Recent Emails button in the top right corner of the Oro application window. A list of unread emails
+will appear, as illustrated in the screenshot below:
+
+![View the list of unread emails displayed when clicking the Recent Emails button](user/img/getting_started/user_menu/recent_emails_button.jpg)
+
+Clicking on an email from the list redirects you to the page of the selected email.
+
+The following features are available within the **Recent Emails** list:
+
+1. **Mark All as Read** (marks all unread emails as read).
+2. **Mark As Read/Unread**
+   * Clicking on the yellow envelope icon marks the selected email as read.
+   * Clicking on the grey envelope icon marks the selected email as unread.
+3. **Reply All** (launches a **Reply** email dialog window).
+
+## Recent Emails Widget
+
+The Recent Emails widget allows you to see the most recent additions to your inbox and outbox.
+
+![A sample of the Recent Emails widget](user/img/dashboards/recent_emails.png)
+
+#### NOTE
+For how to add widgets to the dashboard and manage them, see the relevant topics:
+
+* [Add Widgets to the Dashboard](../../dashboards/widgets/index.md#user-guide-business-intelligence-widgets-add)
+* [Manage Widgets on the Dashboard](../../dashboards/widgets/index.md#user-guide-business-intelligence-widgets-manage)
+
+<!-- finish_my_emails -->
+
+**Related Articles**
+
+* [My User](my-user.md#doc-my-user-view-page)
+* [My Configuration](my-configuration.md#doc-my-user-configuration-profile)
+* [My Tasks](../../activities/tasks/index.md#doc-activities-tasks)
+* [My Calendar](my-calendar.md#user-guide-calendars-manage)
+* [Log Out](../application-authentication/log-in-out.md#doc-log-out)
+
+<!-- fa-bars = fa-navicon -->
+<!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
+<!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
+<!-- Check mark in the square. -->
+<!-- SortDesc is also used as drop-down arrow -->

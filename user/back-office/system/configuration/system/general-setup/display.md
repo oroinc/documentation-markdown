@@ -1,0 +1,99 @@
+<a id="configuration-general-setup-display-settings"></a>
+
+# Configure Global Display Settings
+
+In this section, you can define a number of display-related options to be applied to the Oro application.
+
+#### HINT
+The settings are available on four levels: globally, [per organization](../../../user-management/organizations/org-configuration/general-setup-org/organization-display-settings.md#configuration-general-setup-display-settings-organization), [per website](../../../websites/web-configuration/general-sys-config/general/website-display-settings.md#display-settings-website), and [per user](../../../user-management/users/configuration/user-display-settings.md#doc-my-user-configuration-display).
+
+#### NOTE
+See a short demo on how to set display settings in your Oro application, or continue reading the guidance below.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B2DqoTVQCao" frameborder="0" allowfullscreen></iframe>
+
+To open display settings:
+
+1. Navigate to **System > Configuration** in the main menu.
+2. Select **System Configuration > General Setup > Display Settings** in the menu to the left.
+
+![Global display settings configuration](user/img/system/config_system/display_settings.png)
+1. In the **User Bar** section, configure the setting:
+   * **Show Recent Emails** — Enable the checkbox to display the recent emails on the user bar. They will appear next to the user name.
+
+   ![A recent emails icon displayed on the user bar](user/img/system/config_system/user_configuration_showemailsuserbar.png)
+2. In the **Navigation bar** section, configure the setting:
+   * **Position** — Select whether the OroCommerce main menu will be positioned at the top of the page or on its left.
+
+<a id="doc-configuration-display-settings"></a>
+1. In the **Data Grid Settings** section, configure the options to display all the record lists (grids) in the back-office:
+   * **Items Per Page By Default** — Defines the number of items displayed on one page of the grid by default (every time you open the grid).
+   * **Lock Headers In Grids** — Ensures that grid headers stay visible while you scroll.
+   * **Row Link Navigation** — Enables the ability for the row in the grid to behave like a native link. By right-clicking on the item in the grid, you can open it in a new tab/window.
+   * **Record Pagination** — Enables the user navigation to the previous or next grid record from a record view page.
+     ![A record pagination sample](user/img/system/config_system/user_configuration_pagination.png)
+   * **Record Pagination Limit** — Defines a maximum number of records available for the record pagination.
+2. In the **Activity Lists** section, configure the options to display [activities](../../../../activities/index.md#user-guide-activities).
+   * **Sort By Field** — Select whether to sort activity records by the date when they were created or by the date when they were updated for the last time.
+   * **Sort Direction** — Select whether to sort records in the ascending or descending direction.
+   * **Items Per Page By Default** — Select how many records will appear on one page of the activity grids.
+3. In the **WYSIWYG Settings** section, enable the [WYSIWYG Editor](../../../../../concept-guides/content-management/wysiwyg.md#getting-started-wysiwyg-editor-field) setting:
+   * **Enable WYSIWYG Editor** — Select this checkbox to enable text formatting tools for emails, notes and comments.
+
+   ![A formatting tool bar that enables editing a text for emails, notes, and comments](user/img/system/config_system/user_configuration_wysiwyg.png)
+
+8. In the **Sidebar Settings** section, enable or disable the left and/or right sidebar to keep your sticky notes
+and task lists:
+
+> * **Enable Left Sidebar** — Select **Yes** to enable the user to see and utilize the left sidebar.
+> * **Enable Right Sidebar** — Select **Yes** to enable the user to see and utilize the right sidebar.
+1. In the **Tag Settings** section, specify the taxonomy colors available in the system.
+   ![Global tag settings](user/img/system/config_system/tag_settings.png)
+2. In the **Calendar Settings** section, specify the colors available to manage calendars:
+   * **Calendar Colors** — A set of colors available for color coding different organization calendars.
+   * **Event Colors** — A set of colors available for color coding different organization events.
+
+   To change any color in the set:
+   1. Click it. The color picker opens.
+   2. Drag and drop a dot on the color picker wheel to select a new color.
+   3. Adjust the color brightness by dragging the level on the shades bar.
+
+   ![Global calendar settings](user/img/system/config_system/calendar_settings.png)
+3. In the **Map Settings** section, configure the map preview settings:
+   * **Enable Map Preview** — Select whether to show the location on a map when a customer views an address in the storefront. This option does not affect maps in the back-office. Please be aware that a valid Google API key is required to display maps in the storefront. Please see [the back-office settings](../integrations/google-settings/google-integration.md#system-configuration-integrations-google) for more information.
+
+   ![Preview the map in a customer account address book menu in th storefront](user/img/system/config_system/map_settings_map.png)
+
+<a id="doc-configuration-display-settings-report"></a>
+1. In the **Reports Settings** section, configure the following settings:
+   * **Group Same-Entity Conditions Within Condition Groups** — Select this checkbox to enable report generation for an entity only if the values match all the field conditions queries within a [conditions group](../../../../reports-segments/filters.md#user-guide-business-intelligence-filters-condition-groups). This means that if two conditions (A and B) are applied in a condition group, the report will be generated only when both of them are satisfied. Disable the checkbox to receive the report that would include the values which satisfy the A condition, the B condition, and both.
+
+> * **Display SQL In Reports And Segments** — Select this checkbox to enable the user to review the SQL request sent to the system for a report or a segment. This way, users can check if a report has been developed correctly.
+
+> ![A sample of the enabled display SQL field](user/img/system/config_system/user_configuration_showsql.png)
+
+> This link will only be available if the View SQL query of a report/segment capability has been enabled for the role.
+
+<a id="doc-configuration-display-settings-quick-actions"></a>
+
+#### HINT
+The Quick Action Buttons feature is available starting from OroCommerce v5.0.8. To check which application version you are running, see the [system information](../../../system-information/index.md#system-information).
+
+1. In the **Upcoming Changes** section, configure the following setting:
+
+> * **Enable Quick Creation Buttons** — Select the option to add quick action buttons to the customer, customer user, and customer group view pages.
+
+> ![Displaying quick action buttons on the customer view page](user/img/system/config_system/quick-creation-buttons.png)
+1. In the **Window Settings** section, configure the following setting:
+
+> * **Quick Create Actions** — Select the preferred way to display the quick creation buttons form. The buttons with quick actions appear on the customer, customer user, and customer group view pages. When clicked, the form can be displayed in a new browser tab, a popup dialog window, or replace the current page.
+1. In the **Email Template Editor Settings** section, configure the following settings (available starting from OroCommerce v5.0.15):
+   * **Use Localization Names In Email Template Editor** — Select the option to enable the email template editor to use localization names instead of localization titles on the form tabs, which will allow users to easily distinguish localizations when there are more than one localization with the same title. It will become the default email editor behavior in future versions.
+
+   ![Displaying the difference between localization names and localization titles on the email template form tabs](user/img/system/config_system/localization-names-vs-titles.png)
+
+<!-- fa-bars = fa-navicon -->
+<!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
+<!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
+<!-- Check mark in the square. -->
+<!-- SortDesc is also used as drop-down arrow -->

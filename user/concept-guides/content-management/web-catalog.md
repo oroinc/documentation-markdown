@@ -1,0 +1,196 @@
+<a id="concept-guide-web-catalog"></a>
+
+# Web Catalog Management Concept Guide
+
+Web catalogs are a powerful content management tool that enables sellers to create unlimited customizable and personalized versions of their OroCommerce storefronts to provide an engaging and personalized experience for B2B customers.
+
+Visually, a web catalog represents the main navigation bar of the storefront website. It enables buyers to browse the product catalog, click on products to view details, and add them to shopping lists before ultimately buying them. Under the hood, OroCommerce sellers can not only build new catalogs from scratch but also modify default catalogs, customizing and enriching them with new menu items for various localizations, customers, or customer groups.
+
+Sellers can add new pages to existing catalogs or create all new catalogs. They may want to change out catalogs seasonally or create a catalog for a VIP promotion or sale and redirect particular customers to the promotional page. With restrictions, it is easy to ensure that only specific customers can access these personalized pages.
+
+#### BUSINESS TIP
+# Business Tip
+
+Are you looking for the <a href="https://oroinc.com/b2b-ecommerce/b2b-ecommerce-comparison" target="_blank">best eCommerce platform for B2B</a> organizations? Evaluate your options with our platform comparison chart.
+
+## Web Catalog Elements
+
+In the back-office, a web catalog consists of the **content tree** (the catalog structure), populated with **content nodes** (catalog categories). Building a catalog tree structures the product collection and defines the storefront menu look and feel.
+
+A good first step when it comes to building a web catalog is creating the root content node, followed by adding the **first level menu items** that represent menu headers, for example:
+
+* Outdoor & Garden
+* Building & Hardware
+* Lighting & Electrical
+
+![First level menu items in back-office vs storefront](user/img/concept-guides/web-catalog/bo-sf-nodes.png)
+
+and then populating them with child (content) nodes:
+
+* Outdoor & Garden: *Garden Furniture, Garden Tools, Fencing*
+* Building & Hardware: *Building Supplies, Doors & Windows, Timber & Sheet Materials*
+* Lighting & Electrical: *Lightning, Home Electrical, Smart Home*
+
+![Child menu items in back-office vs storefront](user/img/concept-guides/web-catalog/bo-sf-child-nodes.png)
+
+Each of these nodes can have more child categories:
+
+* Fencing: *Fence panels, Garden Gates, Gravel Boards*
+* Timber & Sheet Materials: *Timber Cladding, Skirting Boards, Decorative Mouldings*
+* Smart Home: *Voice Assistants, Cameras, Heating, Doorbells*
+
+![Deeper child menu items in back-office vs storefront](user/img/concept-guides/web-catalog/bo-sf-further-child-nodes.png)
+
+#### HINT
+In addition to the catalog items, the main storefront menu can also contain static custom menu items, such as Contact Us or About. These custom menu items are not part of either master catalog or web catalog and can be moved to a different section of your storefront. Please see the [documentation on frontend menu items](../../back-office/system/frontend-menus/index.md#backend-frontend-menus) to learn more.
+
+![Catalog-based VS custom menu in the storefront](user/img/concept-guides/web-catalog/catalog-vs-custom-menu.png)
+
+Every child node must be populated with [content variants](../../back-office/marketing/web-catalogs/edit-content-tree/content-variants.md#user-guide-marketing-web-catalog-content-variant). **Content variants** are the types of pages that you add to the content node. These pages can be of the following types:
+
+* [System page](../../back-office/marketing/web-catalogs/edit-content-tree/content-variants.md#user-guide-marketing-web-catalog-content-variant-system-page) –  one of many standard pre-designed pages for the OroCommerce storefront(Sign In page, Open Orders page, Request a Quote page, etc.)
+* [Product page](../../back-office/marketing/web-catalogs/edit-content-tree/content-variants.md#user-guide-marketing-web-catalog-content-variant-product-page) – a direct link to product details
+* [All Products page](../../back-office/marketing/web-catalogs/edit-content-tree/content-variants.md#user-guide-marketing-web-catalog) – a collection of all products usually added for smaller catalogs with no more than a few hundred products
+* [Category page](../../back-office/marketing/web-catalogs/edit-content-tree/content-variants.md#user-guide-marketing-web-catalog-content-variant-category) – a direct link to products from a master catalog category
+* [Product Collection page](../../back-office/marketing/web-catalogs/edit-content-tree/content-variants.md#user-guide-marketing-web-catalog-content-variant-product-collection) – a dynamic collection of products that you filtered/selected manually or in bulk to be displayed for this page
+* [Landing page](../../back-office/marketing/web-catalogs/edit-content-tree/content-variants.md#user-guide-marketing-web-catalog-content-variant-landing-page) – a direct link to a custom content page
+* **Resource Library** – if you download a <a href="https://github.com/oroinc/resource-library" target="_blank">Resource Library Extension</a>, you can add media content, such as news, banners, product review videos, safety specifications, etc.
+
+#### HINT
+It is possible to add a custom content page and link it as a content variant, but this requires some customization effort.
+
+![Content variants in the back-office](user/img/concept-guides/web-catalog/content-variants.png)
+
+You can configure more than one content variant per node, in case you want to display different variations of a page to different customers. By default, the web catalog with all its nodes has no **visibility restrictions** and may be displayed for any localization, on any website, and for any customer. However, depending on your business processes, you can adjust web catalog nodes to be displayed in a particular **localization** (e.g., Germany, UK, France, etc.), on a specific **website** (e.g., B2B, B2C, Europe, Australia), and/or for the selected **customer(s)** or **customer group** (e.g., Non-Authenticated Visitors, Wholesalers, Partners, etc.), while keeping the same URL.
+
+![Visibility restrictions for content variant](user/img/concept-guides/web-catalog/restrictions.png)
+
+You can also control which section of the web catalog to display on your website. By configuring a **navigation root**, you select relevant categories that you want to be included, instead of the whole web catalog content tree. For example, build the main menu starting from the *Smart Home*  content node and its child nodes.
+
+![Configuring a navigation root to display a segment of a web catalog](user/img/concept-guides/web-catalog/nav-root.png)
+
+You can use the nodes excluded from the main menu. For example, create a category and add it as a separate block in the storefront homepage as part of the [featured menu](../menus/index.md#menu-management-concept-guide). This block can lead to a product listing page with a number of discounted items with the product listing page not be part of the main menu and will only be available via a link from the new featured menu block on the homepage (e.g., Special Offers).
+
+![A segment of web catalog added to featured menu in the storefront](user/img/concept-guides/web-catalog/featured-menu-nav-root.png)
+
+## Web Catalogs in a Multi-Org Application
+
+#### NOTE
+The multi-org functionality is only available in the Enterprise edition.
+
+Each [organization](../../back-office/system/user-management/organizations/index.md#user-management-organizations) in a multi-org Oro application is a clean slate with a separate inventory, catalogs, products, and the organization configuration options that may or may not fall back to the [system configuration](../../back-office/system/configuration/index.md#mc-system-configuration).
+
+When you create a new organization, you also need to build a new web catalog as web catalogs and products are not replicated from one organization into another.
+
+The only organization that can display web catalogs and products from different organizations is called **global**. Users in the global organization, given they have  Global access levels in their role, can access and control all system data in all organizations within one instance of the application.
+
+## Web Catalogs and Websites
+
+#### NOTE
+The multi-website functionality is only available in the Enterprise edition.
+
+You can build as many catalogs as you need in each organization within one Oro application, but you can assign only one web catalog per website (via the website configuration). That said, there is no limit to how many times you can reuse the same web catalog for other websites.
+
+![Add a web catalog to a website](user/img/concept-guides/web-catalog/web-cat-config-website.png)
+
+#### HINT
+Web catalogs can only be assigned to websites, not customers or customer groups.
+
+## Web Catalogs and Consents
+
+Customers want and deserve to feel their data is safe when shopping online, that is why online businesses must comply with data protection regulations, such as <a href="https://ccpa-info.com/" target="_blank">CCPA</a> or <a href="https://www.eugdpr.org/" target="_blank">GDPR</a>. One of the data protection obligations is to give customers greater access to their personal information and let them have more control over it. OroCommerce allows you to [create and manage customer consents](../../back-office/system/consent-management/index.md#system-consent-management) while enabling buyers to view, manage, and revoke these in your storefront.
+
+#### NOTE
+See [Consent Management Concept Guide](../consents/index.md#user-guide-consents) for more information on data protection.
+
+To be able to display the text of the consent to customers in the storefront, you need to create a [consent landing page](../../back-office/marketing/landing-pages/index.md#user-guide-landing-pages) with the corresponding description and [add it as a content variant](../../back-office/marketing/web-catalogs/edit-content-tree/content-variants.md#user-guide-marketing-web-catalog-content-variant-landing-page) for a specific node in a web catalog.
+
+As contents in OroCommerce can be either **mandatory** or **optional**, you may or may not require to add a landing page with a consent description to your catalog. The rule of thumb is that if your consent does not require any descriptive text, or if your consent is optional, you do not have to add it to the web catalog node as a landing page. However, if you need to comply with the GDPR, make sure that the mandatory consent has a detailed description of the terms that the buyer should agree to, in which case you should add this consent as a landing page to the selected web catalog node.
+
+![Web catalogs in consents](user/img/concept-guides/web-catalog/consents.png)
+
+## Web Catalog and Master Catalog
+
+An OroCommerce application does not have to have a web catalog to display your product collection, as you can use the [master catalog](../../back-office/products/master-catalog/index.md#user-guide-master-catalog). The structure of the master catalog is always displayed in the storefront when you have no web catalog, or it is not connected to the website (in the system configuration [globally](../../back-office/system/configuration/system/websites/global-routing.md#user-guide-marketing-web-catalog-enable-globally) or [per website](../../back-office/system/websites/web-configuration/general-sys-config/websites/website-routing.md#sys-websites-sysconfig-websites-routing)).
+
+However, using a web catalog over a master catalog has its perks, as it offers more flexibility to create different versions of one OroCommerce application, catering for different needs of different B2B buyers.
+
+The following table summarizes the difference between a master catalog and a web catalog:
+
+#### URL Structure
+
+| Master Catalog          | Web Catalog        | Notes                                                                                                                                                                                                                                                 |
+|-------------------------|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| store.com/ [categories] | store.com/ [nodes] | A link to the same product can have two different URL addresses, depending on whether a master catalog (store.com/category/subсategory…) or a web catalog category (store.com/2nd-level-node/3rd-level-node) has been connected to a storefront page. |
+
+#### Personalization
+
+| Master Catalog      | Web Catalog   | Notes                                                                                                                                                                                     |
+|---------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Visibility Settings | Variants      | To hide a product/category in the master catalog, you need to change  its visibility settings. To hide a product/category in a web catalog, you need to toggle content node restrictions. |
+
+#### Display Type
+
+| Master Catalog     | Web Catalog                                                            | Notes                                                                                                                                                                                                                                                                                                                                                  |
+|--------------------|------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Product Collection | System Page, Product, Page, Product Collection, Category, Landing Page | When the master catalog is used to display products in the storefront, the complete product collection is used where one product cannot be reused for the second time in a different category. Web catalog, on the other hand, enables you to set up different types of pages and reuse the same product in various categories for marketing purposes. |
+
+#### Attribute-based product assignment
+
+| Master Catalog   | Web Catalog   | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+|------------------|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| No               | Yes           | Unlike the master catalog, a web catalog enables you to add a [filter-based segment](../../back-office/marketing/web-catalogs/edit-content-tree/content-variants.md#user-guide-marketing-web-catalog-content-variant-product-collection) to select and display a dynamic set of products in the storefront. For instance, you can create a product collection segment for a special promotion using a variety of filters and conditions, such as putting on sale all products that are in stock but with inventory lower than 500 items. |
+![Filtering products for a product Collection in a web catalog](user/img/concept-guides/web-catalog/AdvancedFilter.png)
+
+#### Multiple Instances
+
+| Master Catalog   | Web Catalog   | Notes                                                                               |
+|------------------|---------------|-------------------------------------------------------------------------------------|
+| No               | Yes           | There is always only one master catalog per organization but multiple web catalogs. |
+
+#### Product Association
+
+| Master Catalog   | Web Catalog   | Notes                                                                                                                                                |
+|------------------|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Single           | Multiple      | The master and web catalogs share the same product collection but unlike the former, a web catalog can have the same product in multiple categories. |
+
+#### Visibility Restrictions
+
+| Master Catalog     | Web Catalog            | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|--------------------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| May affect product | Do not affect products | The [visibility of a product](../../back-office/products/products/managing-product-visibility.md#products-product-visibility) is determined based on the master catalog category, not a web catalog node. This is because one product can relate to many web catalog nodes (e.g., one web catalog category may be hidden, the other one visible), which would make it difficult to determine the product’s actual visibility. You can also determine product visibility on the [product level](../../back-office/products/products/managing-product-visibility.md#products-product-visibility). *By default, product visibility depends on the master catalog category visibility* (i.e., if you hide a master catalog category, you hide all products of this category in the web catalog). You can change this visibility behavior per product, if necessary, in addition to changing product visibility per website. However, keep in mind that product visibility has priority over the category visibility. If the product is visible, but the category is hidden, the product is still visible. |
+
+#### Value Fallback
+
+| Master Catalog   | Web Catalog   | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|------------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Yes              | No            | Product-related values fall back to the master catalog settings. Let’s take inventory as an example. In the *Inventory* section on a product edit page, you can either provide a custom value to most inventory options, choose to fall back to category defaults, or follow the configuration determined on the website level. If in the master catalog, *Paper and Mailing* has **Is Upcoming** set to *Yes*, then *PPR1 - Copier Paper White A4 500 Sheets* that belongs to *Paper and Mailing* will have the option *Is Upcoming* set to *Yes* whenever the product falls back to *Category Defaults* (i.e. falls back to the value set for *Is Upcoming* on category level in the master catalog). |
+![Value Fallback illustration](user/img/products/master_catalog/value_fallback.png)
+
+## Use Cases
+
+### Using Master and Web Catalogs Together
+
+As no business is alike, OroCommerce can be easily adapted to your business processes. Some sellers may be comfortable enough to use the master catalog to display all their product collection, and some may have more complicated processes, where interchanging web catalogs is their key marketing strategy.
+
+One of the common ways approach catalogs is to section the main menu into Products and Brands, where both of these items are built through the web catalog. Products in this case fully mirror the structure of the master catalog, while Brands categorize and filter all product collection based on the brand names.
+
+![Products and brands in the main menu of the storefront](user/img/concept-guides/web-catalog/products-brands.png)
+
+Keeping the structure of the master catalog in Products helps adhere to a unified organization strategy, but using a web catalog as the tool for publication helps reuse existing products for Brands. This would not be possible via standard master catalog publication, as in the master catalog products can only be used once.
+
+**Related Topics**
+
+* [Master Catalog User Guide](../../back-office/products/master-catalog/index.md#user-guide-master-catalog)
+* [Master Catalog Concept Guide](../master-catalog/index.md#concept-guide-master-catalog)
+* [Manage Product Visibility](../../back-office/products/products/managing-product-visibility.md#products-product-visibility)
+* [Web Catalogs User Guide](../../back-office/marketing/web-catalogs/index.md#user-guide-web-catalog)
+* [Build a Custom Web Catalog From Scratch](../../back-office/marketing/web-catalogs/build-from-scratch.md#user-guide-marketing-web-catalog-sample)
+* [Use Web Catalog Nodes as Root Nodes](../../back-office/marketing/web-catalogs/web-catalog-nav-tool-usecase.md#user-guide-web-catalog-navigation-tool)
+
+**Further Practice**
+
+* <a href="https://academy.oroinc.com/course/fundamental-orocommerce/" target="_blank">Fundamental OroCommerce Online Course</a>
+* <a href="https://academy.oroinc.com/course/content-management/" target="_blank">Content Management Online Course</a>
+
+<!-- Frontend -->
