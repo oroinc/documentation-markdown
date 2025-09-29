@@ -1,0 +1,344 @@
+<a id="backend-entities-migrations"></a>
+
+# Database Structure Migrations
+
+Each bundle can have migration files that enable you to update the database schema.
+
+Migration files should be located in the `Migrations\Schema\version_number` folder. A version number must be a PHP-standardized version number string but with some limitations. This string must not contain “.” and “+” characters as a version parts separator. You can find more information about PHP-standardized version number string in the <a href="http://php.net/manual/en/function.version-compare.php" target="_blank">PHP manual</a>.
+
+Each migration class must implement the <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/MigrationBundle/Migration/Migration.php" target="_blank">Migration</a> interface and the up method. This method receives a current database structure in the schema parameter and queries parameter, adding additional queries.
+
+With the schema parameter, you can create or update the database structure without fear of compatibility between database engines.
+If you want to execute additional SQL queries before or after applying a schema modification, you can use the queries parameter. This parameter represents a <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/MigrationBundle/Migration/QueryBag.php" target="_blank">query bag</a> and allows to add additional queries which will be executed before (addPreQuery method) or after (addQuery or addPostQuery method). A query can be a string or an instance of a class that implements <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/MigrationBundle/Migration/MigrationQuery.php" target="_blank">MigrationQuery</a> interface. There are several ready to use implementations of this interface:
+
+> - <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/MigrationBundle/Migration/SqlMigrationQuery.php" target="_blank">SqlMigrationQuery</a> - represents one or more SQL queries
+> - <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/MigrationBundle/Migration/ParametrizedSqlMigrationQuery.php" target="_blank">ParametrizedSqlMigrationQuery</a> - similar to the previous class, but each query can have its own parameters.
+
+If you need to create your own implementation of the <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/MigrationBundle/Migration/MigrationQuery.php" target="_blank">MigrationQuery</a>, implement <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/MigrationBundle/Migration/ConnectionAwareInterface.php" target="_blank">ConnectionAwareInterface</a> in your migration query class if you need a database connection. You can also use the <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/MigrationBundle/Migration/ParametrizedMigrationQuery.php" target="_blank">ParametrizedMigrationQuery</a> class as the base class for your migration query.
+
+If you have several migration classes within the same version and you need to make sure that they are executed in a specific order, use <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/MigrationBundle/Migration/OrderedMigrationInterface.php" target="_blank">OrderedMigrationInterface</a>.
+
+Below is an example of a migration file:
+
+```php
+namespace Acme\Bundle\TestBundle\Migrations\Schema\v1_0;
+
+use Doctrine\DBAL\Schema\Schema;
+use Oro\Bundle\MigrationBundle\Migration\Migration;
+use Oro\Bundle\MigrationBundle\Migration\QueryBag;
+use Oro\Bundle\MigrationBundle\Migration\Extension\RenameExtension;
+use Oro\Bundle\MigrationBundle\Migration\Extension\RenameExtensionAwareInterface;
+
+class AcmeTestBundle implements Migration, RenameExtensionAwareInterface
+{
+    protected RenameExtension $renameExtension;
+
+    /**
+     * @inheritdoc
+     */
+    public function setRenameExtension(RenameExtension $renameExtension)
+    {
+        $this->renameExtension = $renameExtension;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function up(Schema $schema, QueryBag $queries)
+    {
+        $table = $schema->createTable('test_table');
+        $table->addColumn('id', 'integer', ['autoincrement' => true]);
+        $table->addColumn('created', 'datetime', []);
+        $table->addColumn('field', 'string', ['length' => 500]);
+        $table->addColumn('another_field', 'string', ['length' => 255]);
+        $table->setPrimaryKey(['id']);
+
+        $this->renameExtension->renameTable(
+            $schema,
+            $queries,
+            'old_table_name',
+            'new_table_name'
+        );
+        $queries->addQuery(
+            "ALTER TABLE another_table ADD COLUMN test_column INT NOT NULL",
+        );
+    }
+}
+```
+
+Each bundle can also have an **installation** file. This migration file replaces running multiple migration files. Install migration class must implement the <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/MigrationBundle/Migration/Installation.php" target="_blank">Installation</a> interface and the up and getMigrationVersion methods. The getMigrationVersion method must return the max migration version number that this installation file replaces.
+
+When an install migration file is found during the install process (when you install the system from scratch), it is loaded first, followed by the migration files with versions greater than the version returned by the getMigrationVersion method.
+
+For example, let’s assume we have migrations v1_0, v1_1, v1_2, v1_3 and installed the migration class. This class returns v1_2 as the migration version. That is why, during the install process, the install migration file is loaded first, followed only by migration file v1_3. In this case, migrations from v1_0 to v1_2 are not loaded.
+
+Below is an example of an install migration file:
+
+```php
+namespace Acme\Bundle\TestBundle\Migrations\Schema;
+
+use Doctrine\DBAL\Schema\Schema;
+use Oro\Bundle\MigrationBundle\Migration\Installation;
+use Oro\Bundle\MigrationBundle\Migration\QueryBag;
+
+class AcmeTestBundleInstaller implements Installation
+{
+    /**
+     * @inheritdoc
+     */
+    public function getMigrationVersion()
+    {
+        return 'v1_1';
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function up(Schema $schema, QueryBag $queries)
+    {
+        $table = $schema->createTable('test_installation_table');
+        $table->addColumn('id', 'integer', ['autoincrement' => true]);
+        $table->addColumn('field', 'string', ['length' => 500]);
+        $table->setPrimaryKey(['id']);
+    }
+}
+```
+
+A good practice is for a bundle to have the installation file for the current version and migration files for migrating from the previous to the current version.
+
+You can use the following algorithm for new versions of your bundle:
+
+- Create a new migration.
+- Apply it with **oro:migration:load**.
+- Generate a new installation file with **oro:migration:dump**.
+- If required, add migration extension calls to the generated installation.
+
+## Load Migrations Command
+
+To run migrations, use the **oro:migration:load** command. This command collects migration files from bundles, sorts them by their version number, and applies changes.
+
+This command supports the following additional options:
+
+- **force** - Causes the generated by migrations SQL statements to be physically executed against your database;
+- **dry-run** - Outputs list of migrations without applying them;
+- **show-queries** - Outputs list of database queries for each migration file;
+- **bundles** - A list of bundles to load data from. If option is not set, migrations are taken from all bundles;
+- **exclude** - A list of bundle names where migrations should be skipped.
+
+## Migrations Dump Command
+
+Use the **oro:migration:dump** command to help create installation files. This command outputs the current database structure as plain SQL or as `Doctrine\DBAL\Schema\Schema` queries.
+
+This command supports the following additional options:
+
+- **plain-sql** - Outputs schema as plain SQL queries
+- **bundle** - The bundle name for which the migration is generated
+- **migration-version** - Migration version number. This option sets the value returned by the getMigrationVersion method of the generated installation file.
+
+## Examples of Database Structure Migrations
+
+- <a href="https://github.com/oroinc/platform/blob/4.2/src/Oro/Bundle/UserBundle/Migrations/Schema/v1_0/OroUserBundle.php" target="_blank">Simple migration</a>
+- <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/InstallerBundle/Migrations/Schema" target="_blank">Installer</a>
+- <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/EntityConfigBundle/Migrations/Schema/v1_2" target="_blank">Complex migration</a>
+
+## Extensions for Database Structure Migrations
+
+You cannot always use standard Doctrine methods to modify the database structure. For example, `Schema::renameTable` does not work because it drops an existing table and then creates a new one. To help you manage such a case and enable you to to add additional functionality to any migration, use the extensions mechanism. The following example illustrates how <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/MigrationBundle/Migration/Extension/RenameExtension.php" target="_blank">RenameExtension</a> can be used:
+
+```php
+namespace Acme\Bundle\TestBundle\Migrations\Schema\v1_0;
+
+use Doctrine\DBAL\Schema\Schema;
+use Oro\Bundle\MigrationBundle\Migration\Migration;
+use Oro\Bundle\MigrationBundle\Migration\QueryBag;
+use Oro\Bundle\MigrationBundle\Migration\Extension\RenameExtension;
+use Oro\Bundle\MigrationBundle\Migration\Extension\RenameExtensionAwareInterface;
+
+class AcmeTestBundle implements Migration, RenameExtensionAwareInterface
+{
+    protected RenameExtension $renameExtension;
+
+    /**
+     * @inheritdoc
+     */
+    public function setRenameExtension(RenameExtension $renameExtension)
+    {
+        $this->renameExtension = $renameExtension;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function up(Schema $schema, QueryBag $queries)
+    {
+        $this->renameExtension->renameTable(
+            $schema,
+            $queries,
+            'old_table_name',
+            'new_table_name'
+        );
+    }
+}
+```
+
+As you can see from the example above, your migration class should implement <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/MigrationBundle/Migration/Extension/RenameExtensionAwareInterface.php" target="_blank">RenameExtensionAwareInterface</a> and setRenameExtension method in order to use the <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/MigrationBundle/Migration/Extension/RenameExtension.php" target="_blank">RenameExtension</a>.
+You can also use the following additional interfaces in your migration class:
+
+- ContainerAwareInterface - provides an access to Symfony dependency container.
+- <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/MigrationBundle/Migration/Extension/DatabasePlatformAwareInterface.php" target="_blank">DatabasePlatformAwareInterface</a> - allows to write database type independent migrations.
+- <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/MigrationBundle/Migration/Extension/NameGeneratorAwareInterface.php" target="_blank">NameGeneratorAwareInterface</a> - provides access to the <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/MigrationBundle/Tools/DbIdentifierNameGenerator.php" target="_blank">DbIdentifierNameGenerator</a> class used to generate names of indices, foreign key constraints, etc.
+
+Here is a list of available extensions:
+
+**Commerce**
+
+* <a href="https://github.com/oroinc/orocommerce/tree/4.2/src/Oro/Bundle/PaymentTermBundle/Migration/Extension/PaymentTermExtension.php" target="_blank">PaymentTermExtension</a> - Adds payment term association to the entity.
+* <a href="https://github.com/oroinc/orocommerce/blob/4.2/src/Oro/Bundle/RedirectBundle/Migration/Extension/SlugExtension.php" target="_blank">SlugExtension</a> - Adds slugs to the entity. More information is available in the [RedirectBundle documentation](../../bundles/commerce/RedirectBundle/index.md#bundle-docs-commerce-redireect-bundle-migration-extension).
+
+**CRM**
+
+* <a href="https://github.com/oroinc/crm/blob/4.2/src/Oro/Bundle/SalesBundle/Migration/Extension/CustomerExtension.php" target="_blank">CustomerExtension</a> - Adds association between the target customer table and the customer table. More information is available in the [Migration Extension documentation](../../bundles/crm/SalesBundle/index.md#bundle-docs-crm-sales-bundle-migration-extension).
+
+**Platform**
+
+* ActivityExtension - Adds association between the given table and the table that contains activity records.
+* <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/ActivityListBundle/Migration/Extension/ActivityListExtension.php" target="_blank">ActivityListExtension</a> - Adds association between the given table and the activity list table. See an example of usage in the [Activity List Inheritance Targets documentation](../../bundles/platform/ActivityListBundle/index.md#bundle-docs-platform-activity-list-bundle-inheritance).
+* <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/AttachmentBundle/Migration/Extension/AttachmentExtension.php" target="_blank">AttachmentExtension</a> - Provides an ability to create file and attachment fields and attachment association. More information is available in the [Use Migration Extension Example in AttachmentBundle](../../bundles/platform/AttachmentBundle/attachment-bundle-config.md#attachment-bundle-migration-extension).
+* <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/CommentBundle/Migration/Extension/CommentExtension.php" target="_blank">CommentExtension</a> - Adds comments association to the entity. More information is available in <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/CommentBundle#how-to-enable-comment-association-with-new-activity-entity-using-migrations" target="_blank">Enable Comment Association with New Activity Entity</a>.
+* <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/DataAuditBundle/Migration/Extension/AuditFieldExtension.php" target="_blank">AuditFieldExtension</a> - Add a possibility for developers to extend data types for DataAudit. More information is available in the [Add New Auditable Types](../entities-data-management/data-audit.md#bundle-docs-platform-data-audit-add-new-types) topic.
+* <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/EntityBundle/Migrations/Extension/ChangeTypeExtension.php" target="_blank">ChangeTypeExtension</a> - Allows to change the type of entity primary column type.
+* <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/EntityExtendBundle/Migration/Extension/ExtendExtension.php" target="_blank">ExtendExtension</a> - Provides the ability to create extended enum tables and fields, and add relations between tables. More information is available in the [Create Custom Entities](create-custom-entities.md#backend-entities-create-custom-entities) topic.
+* <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/EntityExtendBundle/Migration/Extension/ConvertToExtendExtension.php" target="_blank">ConvertToExtendExtension</a> - Allows to convert existing entity field to extended.
+* <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/MigrationBundle/Migration/Extension/RenameExtension.php" target="_blank">RenameExtension</a> - Allows to rename an extended table or an extended column without losing data.
+* <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/MigrationBundle/Migration/Extension/DataStorageExtension.php" target="_blank">DataStorageExtension</a>- Used ito exchange data between different migrations.
+* <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/ScopeBundle/Migration/Extension/ScopeExtension.php" target="_blank">ScopeExtension</a> - Adds  association between the target table and the scope table.
+* <a href="https://github.com/oroinc/OroEntitySerializedFieldsBundle/blob/4.2/Migration/Extension/SerializedFieldsExtension.php" target="_blank">SerializedFieldsExtension</a> - The migration extension that helps manage serialized fields of extended entities. More information is available in the [Serialized Fields](extend-entities/serialized-fields.md#book-entities-extended-entities-serialized-fields) topic.
+
+<a id="backend-entities-migrations-create-extensions"></a>
+
+## Create Extensions for Database Structure Migrations
+
+To create your own extension:
+
+1. Create an extension class in the `YourBundle/Migration/Extension` directory. Using `YourBundle/Migration/Extension` directory is not mandatory, but highly recommended. For example:
+   > ```php
+   > namespace Acme\Bundle\TestBundle\Migration\Extension;
+
+   > use Doctrine\DBAL\Schema\Schema;
+   > use Oro\Bundle\MigrationBundle\Migration\QueryBag;
+
+   > class MyExtension
+   > {
+   >     public function doSomething(Schema $schema, QueryBag $queries, /* other parameters, for example */ $tableName)
+   >     {
+   >         $table = $schema->getTable($tableName); // highly recommended to make sure that a table exists
+   >         $query = 'SOME SQL'; /* or $query = new SqlMigrationQuery('SOME SQL'); */
+
+   >         $queries->addQuery($query);
+   >     }
+   > }
+   > ```
+2. Create \*AwareInterface in the same namespace. It is important that the interface name is `{ExtensionClass}AwareInterface` and the set method is `set{ExtensionClass}({ExtensionClass} ${extensionName})`.    For example:
+   > ```php
+   > namespace Acme\Bundle\TestBundle\Migration\Extension;
+
+   > /**
+   >  * MyExtensionAwareInterface should be implemented by migrations that depends on a MyExtension.
+   >  */
+   > interface MyExtensionAwareInterface
+   > {
+   >     /**
+   >      * Sets the MyExtension
+   >      *
+   >      * @param MyExtension $myExtension
+   >      */
+   >     public function setMyExtension(MyExtension $myExtension);
+   > }
+   > ```
+3. Register an extension in the dependency container. For example:
+   > ```yaml
+   > services:
+   >     Acme\Bundle\TestBundle\Migration\Extension\MyExtension:
+   >         tags:
+   >             - { name: oro_migration.extension, extension_name: test /*, priority: -10 - priority attribute is optional an can be helpful if you need to override existing extension */ }
+   > ```
+
+To access the database platform or the name generator, your extension class should implement <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/MigrationBundle/Migration/Extension/DatabasePlatformAwareInterface.php" target="_blank">DatabasePlatformAwareInterface</a> or <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/MigrationBundle/Migration/Extension/NameGeneratorAwareInterface.php" target="_blank">NameGeneratorAwareInterface</a> appropriately.
+
+To use another extension in your extension, the extension class should implement `*AwareInterface` of the extension you need.
+
+## Events During Migration
+
+The `Oro\Bundle\MigrationBundle\Migration\Loader\MigrationsLoader` dispatches two events when migrations are being executed, *oro_migration.pre_up* and *oro_migration.post_up*. You can listen to either event and register your own migrations in your event listener. Use the `Oro\Bundle\MigrationBundle\Event\MigrationEvent::addMigration` method of the passed event instance to register your custom migrations:
+
+*src/Acme/DemoBundle/EventListener/RegisterCustomMigrationListener.php*
+```php
+ namespace Acme\DemoBundle\EventListener;
+
+ use Acme\DemoBundle\Migration\CustomMigration;
+ use Oro\Bundle\MigrationBundle\Event\PostMigrationEvent;
+ use Oro\Bundle\MigrationBundle\Event\PreMigrationEvent;
+
+ class RegisterCustomMigrationListener
+ {
+     // listening to the oro_migration.pre_up event
+     public function preUp(PreMigrationEvent $event)
+     {
+         $event->addMigration(new CustomMigration());
+     }
+
+     // listening to the oro_migration.post_up event
+     public function postUp(PostMigrationEvent $event)
+     {
+         $event->addMigration(new CustomMigration());
+     }
+ }
+```
+
+#### TIP
+You can learn more about <a href="https://symfony.com/doc/4.4/event_dispatcher.html" target="_blank">custom event listeners</a> in the Symfony documentation.
+
+Migrations registered in the *oro_migration.pre_up* event are executed before the *main* migrations while migrations registered in the *oro_migration.post_up* event are executed after the *main* migrations have been processed.
+
+<a id="installer-generate"></a>
+
+## Generate an Installer for a Bundle
+
+When you have implemented new entities, you want to be sure that upon installing the application, the entities are added to the database. For this, you need to create an installer [migration](#backend-entities-migrations). You can do it manually, however, it is more convenient to use a dump of the database as a template.
+
+To create an installer for AcmeBundle:
+
+1. Clear the application cache:
+   ```bash
+   php bin/console cache:clear
+   ```
+2. Apply the changes that you defined in your code to the database:
+   ```bash
+   php bin/console doctrine:schema:update
+   ```
+3. Generate an installer and save it to the AcmeBundleInstaller.php:
+   ```bash
+   php bin/console oro:migration:dump --bundle=AcmeBundle > AcmeBundleInstaller.php
+   ```
+
+   #### HINT
+   The generated installer may contain a lot of excessive information as the same database table might contain options related to different bundles and entities while the generator has no option to distinguish which entity ‘has added’ particular options. Delete the information unrelated to your entities from the output file.
+
+> Move AcmeBundleInstall.php to the AcmeBundle/Migrations/Schema directory.
+1. Reinstall your application instance.
+2. Check that the database is synced with your code:
+   ```bash
+   php bin/console doctrine:schema:update --dump-sql
+   ```
+
+   If the database is successfully synchronized, you will see the following message:
+   ```none
+   Nothing to update - your database is already in sync with the current entity metadata.
+   ```
+
+#### BUSINESS TIP
+## Business Tip
+
+<a href="https://oroinc.com/b2b-ecommerce/blog/digital-transformation-in-manufacturing/" target="_blank">Digital transformation</a> has been fueled by technologies in core industries such as manufacturing. Read more about the role of eCommerce in the technological age of manufacturing.
+
+<!-- Frontend -->

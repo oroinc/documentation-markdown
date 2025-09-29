@@ -1,0 +1,24 @@
+<a id="user-guide-business-intelligence-widgets-recently-accessed-accounts"></a>
+
+# Recently Accessed Account
+
+The Recently Accessed Accounts widget displays the list of recently accessed accounts.
+
+![A sample of the Recently Accessed Accounts widget](user/img/dashboards/recently_accessed_accounts.png)
+
+#### NOTE
+For how to add widgets to the dashboard and manage them, see the relevant topics:
+
+* [Add Widgets to the Dashboard](index.md#user-guide-business-intelligence-widgets-add)
+* [Manage Widgets on the Dashboard](index.md#user-guide-business-intelligence-widgets-manage)
+
+## Recently Accessed Accounts Widget Configuration
+
+You can adjust the following settings for the recently accessed accounts widget:
+
+* **Widget title** — the name displayed on the dashboard. To change the name, clear the **Use Default** check box and provide a new name.
+* **Business unit** — select the business unit to present statistics for.
+* **Role** — select the user’s role (e.g. a sales manager, an administrator, a leads development rep, etc.) to see statistics for.
+* **Owner** — select the owner for the widget to see statistics for a certain user.
+
+![Configuring the Recently Accessed Accounts widget](user/img/dashboards/recently_accessed_accounts_config.png)

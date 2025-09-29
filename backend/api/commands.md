@@ -1,0 +1,282 @@
+<a id="web-api-commands"></a>
+
+# CLI Commands
+
+<a id="oroapidoccacheclear-command"></a>
+
+## oro:api:cache:clear
+
+This command command clears the API cache.
+
+Usually you need to run this command when you add a new entity to Resources/config/oro/api.yml or you add a new processor that changes a list of available via the API.
+
+```none
+php bin/console oro:api:cache:clear
+```
+
+The `--no-warmup` option can be used to skip warming up the cache after cleaning:
+
+```none
+php bin/console oro:api:cache:clear --no-warmup
+```
+
+<a id="oroapidoccacheclear"></a>
+
+## oro:api:doc:cache:clear
+
+This clears or warms up API documentation cache.
+
+If this command is launched without parameters, it warm ups all API documentation caches:
+
+```none
+php bin/console oro:api:doc:cache:clear
+```
+
+To clear the cache without then warming it up, use the `--no-warmup` option:
+
+```none
+php bin/console oro:api:doc:cache:clear --no-warmup
+```
+
+To work only with the specified <a href="https://github.com/nelmio/NelmioApiDocBundle/blob/2.x/Resources/doc/multiple-api-doc.rst" target="_blank">API documentation views</a> use `--view` option:
+
+```none
+php bin/console oro:api:doc:cache:clear --view=rest_json_api
+```
+
+## oro:api:dump
+
+This command shows all resources accessible via the API.
+
+Run this command without parameters to see all available resources:
+
+```none
+php bin/console oro:api:dump
+```
+
+To display resources for a particular request type, specify the `--request-type` option:
+
+```none
+php bin/console oro:api:dump --request-type=rest --request-type=json_api
+```
+
+To show all available sub-resources, use the `--sub-resources` option:
+
+```none
+php bin/console oro:api:dump --sub-resources
+```
+
+If you are interested in information about a particular entity, specify an entity class or entity alias as an argument:
+
+```none
+php bin/console oro:api:dump "Oro\Bundle\UserBundle\Entity\User" --sub-resources
+```
+
+or
+
+```none
+php bin/console oro:api:dump users --sub-resources
+```
+
+To get all entities that are not accessible via the API, see the `--not-accessible` option:
+
+```none
+php bin/console oro:api:dump --not-accessible
+```
+
+<a id="oroapidebug"></a>
+
+## oro:api:debug
+
+This command shows details about registered API actions and processors.
+
+To display all actions, run this command without parameters:
+
+```none
+php bin/console oro:api:debug
+```
+
+To see the processors registered for a given action, specify the action name as an argument:
+
+```none
+php bin/console oro:api:debug <action>
+```
+
+or
+
+```none
+php bin/console oro:api:debug --no-docs <action>
+```
+
+The list of the processors can be limited to some group specified as the second argument:
+
+```none
+php bin/console oro:api:debug <action> <group>
+```
+
+or
+
+```none
+php bin/console oro:api:debug --no-docs <action> <group>
+```
+
+The –attribute option can be used to show the processors that will be executed only when the context has a given attribute with the specified value.
+The attribute name and value should be separated by a colon, e.g. –attribute=collection:true   for a scalar value, or –attribute=extra:[definition,filters] for an array value:
+
+```none
+php bin/console oro:api:debug --attribute=collection:true <action>
+```
+
+or
+
+```none
+php bin/console oro:api:debug --attribute=extra:[definition,filters] <action>
+```
+
+The –processors and –processors-without-description options can be used to display all processors and all processors without descriptions respectively:
+
+```none
+php bin/console oro:api:debug --processors
+```
+
+or
+
+```none
+php bin/console oro:api:debug --processors-without-description
+```
+
+The –request-type option can limit the scope to the specified request type(s).  Omitting this option is equivalent to –request-type=rest –request-type=json_api. Available types: rest, json_api, batch, or use any to include all request types:
+
+```none
+php bin/console oro:api:debug --request-type=rest other options and arguments
+```
+
+```none
+php bin/console oro:api:debug --request-type=json_api other options and arguments
+```
+
+```none
+php bin/console oro:api:debug --request-type=batch other options and arguments
+```
+
+```none
+php bin/console oro:api:debug --request-type=any other options and arguments
+```
+
+## oro:api:config:dump
+
+This command shows configuration for a particular entity.
+
+Execute this command with an entity class or entity alias specified as an argument:
+
+```none
+php bin/console oro:api:config:dump "Oro\Bundle\UserBundle\Entity\User"
+```
+
+or
+
+```none
+php bin/console oro:api:config:dump users
+```
+
+To display the configuration used for a particular action, use the `--action option` (please note that the default value for this option is `get`):
+
+```none
+php bin/console oro:api:config:dump users --action=update
+```
+
+To display the configuration for a particular request type you can use the `request-type` option:
+
+```none
+php bin/console oro:api:config:dump users --request-type=rest --request-type=json_api
+```
+
+By default no extra configuration data are added into output, but they can be added with the `--extra` option. The value for `extra` option can be: actions, definition, filters, sorters, descriptions or the full name of a class implements <a href="https://github.com/oroinc/platform/tree/4.2/src/Oro/Bundle/ApiBundle/Config/Extra/ConfigExtraInterface.php" target="_blank">ConfigExtraInterface</a>, e.g.
+
+```none
+php bin/console oro:api:config:dump users --extra=filters --extra=sorters
+```
+
+To display the human-readable representation of an entity and its fields:
+
+```none
+php bin/console oro:api:config:dump users --extra=descriptions
+```
+
+If a new extra section was added, pass the FQCN of a ConfigExtra:
+
+```none
+php bin/console oro:api:config:dump users --extra="Acme\Bundle\AcmeBundle\Config\AcmeConfigExtra"
+```
+
+You can pass multiple options:
+
+```none
+php bin/console oro:api:config:dump users --extra=sorters --extra=descriptions --extra=filters --extra="Acme\Bundle\AcmeBundle\Config\AcmeConfigExtra"
+```
+
+## oro:api:metadata:dump
+
+This command shows metadata for a particular entity.
+
+To display the metadata, run this command with an entity class or entity alias specified as an argument:
+
+```none
+php bin/console oro:api:metadata:dump "Oro\Bundle\UserBundle\Entity\User"
+```
+
+or
+
+```none
+php bin/console oro:api:metadata:dump users
+```
+
+To display the entity metadata used for a particular action, use the `--action` option (please note that the default value for this option is `get`):
+
+```none
+php bin/console oro:api:metadata:dump users --action=update
+```
+
+To display the entity metadata used for a particular request type, use the `--request-type` option:
+
+```none
+php bin/console oro:api:metadata:dump users --request-type=rest --request-type=json_api
+```
+
+To include the HATEOAS links to the metadata, use the `--hateoas` option:
+
+```none
+php bin/console oro:api:metadata:dump --hateoas <entity>
+```
+
+## oro:api:config:dump-reference
+
+This command shows the structure of Resources/config/oro/api.yml.
+
+```none
+php bin/console oro:api:config:dump-reference
+```
+
+The –max-nesting-level option can be used to limit the depth of nesting target entities:
+
+```none
+php bin/console oro:api:config:dump-reference --max-nesting-level=<number>
+```
+
+<a id="web-api-commands-oro-cron-api-async-operations-cleanup"></a>
+
+## oro:cron:api:async_operations:cleanup
+
+This command deletes all obsolete asynchronous operations used by Batch API.
+
+```none
+php bin/console oro:cron:api:async_operations:cleanup
+```
+
+To show the number of obsolete asynchronous operations without the deletion of them, use the `--dry-run` option:
+
+```none
+php bin/console oro:cron:api:async_operations:cleanup --dry-run
+```
+
+<!-- Frontend -->

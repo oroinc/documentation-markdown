@@ -1,0 +1,51 @@
+<a id="user-guide-system-configuration-commerce-sales-rfq-website"></a>
+
+<a id="sys-conf-commerce-sales-rfq-notifications-website"></a>
+
+# Configure Request for Quote Settings per Website
+
+#### HINT
+This section is part of the [RFQ and Quote Management](../../../../../../concept-guides/rfq-quotes/index.md#concept-guide-rfq-quotes) topic that provides the general understanding of the RFQ and quote concepts in OroCommerce.
+
+On the RFQ configuration page, you can enable RFQ feature for the back-office and storefront, control RFQ Notification options and Guest RFQs.
+
+To configure the request for quote settings per website:
+
+1. Navigate to **System > Websites** in the main menu.
+2. For the necessary website, hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the necessary website and click <i class="fas fa-cog" aria-hidden="true"></i> to start editing the configuration.
+3. Select **Commerce > Sales > Request for Quote** in the menu to the left.
+
+   #### NOTE
+   For faster navigation between the configuration menu sections, use [Quick Search](../../../../configuration/quick-search.md#user-guide-system-configuration-quick-search).
+
+![RFQ configuration options per website](user/img/system/websites/web_configuration/website_rfq_config.png)
+1. Clear the **Use Organization** check box to override the organization-wide configuration options.
+2. In the **General** section, customize the following options:
+
+   **Enable RFQ (Store Front)** — the option enables the OroCommerce-driven RFQ functionality for the storefront. Your customers will be able to submit RFQs from the storefront.
+3. In the **Notifications** section, configure notifications for all the parties concerned, namely:
+   * an assigned sales representatives of the customer
+   * the owner of the customer user
+   * the owner of the customer
+
+   For the aforementioned parties the options are the following:
+   * Select **Always** to notify the related entity each time an RFQ is submitted.
+   * Select **If user has no sales reps assigned** to notify the related entity only in case they do not have any assigned sales representatives.
+4. In the **Guest RFQ** section, set whether guests are allowed to request quotes on the items they are interested in. This will also allow sales reps collect information on potential sales in the back-office.
+
+> #### HINT
+> Make sure you enable [Guest Shopping Lists](website-guest-shopping-list.md#user-guide-system-configuration-commerce-sales-shopping-list-per-website) in the back-office to let guest customers create RFQs from the shopping lists in their storefront.
+
+> By default, guest request for quote submission is disabled. To enable it, clear *Use Organization* and select the *Enable Guest RFQ* check box. When the guest RFQ is enabled, click **Save Settings** to display the additional **Guest RFQ Owner Settings** section.
+1. In the **Guest RFQ Owner Settings** section, select the user who will be the default owner of all guest RFQs.  Depending on the roles and permissions of the owner, guest RFQs may or may not be viewed and managed by the users who are subordinated to the owner.
+
+#### NOTE
+To enable users from the same business unit or organization (that the owner belongs to) to view and manage guest RFQs, adjust permissions for the Request for Quote entity in their roles accordingly.
+
+1. Click **Save Settings**.
+
+<!-- fa-bars = fa-navicon -->
+<!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
+<!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
+<!-- Check mark in the square. -->
+<!-- SortDesc is also used as drop-down arrow -->

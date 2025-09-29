@@ -1,0 +1,67 @@
+<a id="customize-install"></a>
+
+# Customizing the Installation Process
+
+To customize the installation process and modify the database structure and/or data that are loaded in the OroCommerce after installation, you can:
+
+> * [Execute Custom Migrations](#execute-custom-migrations)
+> * [Load Custom Data Fixtures](#load-custom-data-fixtures)
+
+<a id="customize-install-execute-custom-migrations"></a>
+
+## Execute Custom Migrations
+
+You can create your own [migrations](../../entities/migration.md#backend-entities-migrations) that can be executed during the installation.
+A migration is a class which implements the `Oro\Bundle\MigrationBundle\Migration\Migration` interface:
+
+*src/Acme/DemoBundle/Migration/1_0/CustomMigration.php*
+```php
+ namespace Acme\DemoBundle\Migration\1_0;
+
+ use Doctrine\DBAL\Schema\Schema;
+ use Oro\Bundle\MigrationBundle\Migration\Migration;
+ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
+
+ class CustomMigration implements Migration
+ {
+     public function up(Schema $schema, QueryBag $queries)
+     {
+         // ...
+     }
+ }
+```
+
+#### NOTE
+Entity metadata in the PHP entity classes (annotations) should match exactly what the schema migration is doing. If you create a migration that modifies the type, length or another property of an existing entity field, please remember to make the same change in the PHP entity class annotations.
+
+In the `Oro\Bundle\MigrationBundle\Migration\Migration::up`, you can modify the database schema and/or add additional SQL queries that are executed before and after the schema changes.
+
+<a id="load-custom-data-fixtures"></a>
+
+## Load Custom Data Fixtures
+
+To load your own data [fixtures](../../entities/fixtures.md#backend-entities-fixtures), you will need to implement Doctrine’s  *“FixtureInterface”*:
+
+*src/Acme/DemoBundle/Migrations/Data/ORM/CustomFixture.php*
+```php
+ namespace Acme\DemoBundle\Migrations\Data\ORM;
+
+ use Doctrine\Common\DataFixtures\FixtureInterface;
+ use Doctrine\Persistence\ObjectManager;
+
+ class CustomFixture implements FixtureInterface
+ {
+     public function load(ObjectManager $manager)
+     {
+         // ...
+     }
+ }
+```
+
+#### CAUTION
+Your data fixture classes must reside in the  *“Migrations/Data/ORM”* sub-directory of your bundle to be loaded automatically during the installation.
+
+#### TIP
+Read the <a href="https://github.com/doctrine/data-fixtures/blob/master/README.md" target="_blank">doctrine data fixtures documentation</a> to learn more about the Doctrine Data Fixtures extension.
+
+<!-- Frontend -->
