@@ -1,0 +1,244 @@
+<a id="user-guide-marketing-tracking"></a>
+
+# Manage Tracking Websites in the Back-Office
+
+Oro application offers an out-of-the-box tracking website solution that helps gain insight into how your customers use your website, track their actions on the website, and then use these data to collect statistics. These statistics can be used to generate segments of potential consumers to send targeted email campaigns to.
+
+## Prerequisites for Creating a Tracking Website
+
+Before you start using tracking websites, ensure that you have configured and enabled [marketing features](../../system/configuration/marketing/general-setup-marketing/index.md#marketing-system-configuration) and [tracking settings](../../system/configuration/system/general-setup/tracking.md#admin-configuration-tracking) in Oro application via the system configuration.
+
+Once the tracking configuration is ready, create a tracking website record and add the generated code to the web pages that you want to monitor.
+
+<a id="user-guide-marketing-tracking-websites-create"></a>
+
+## Create a Tracking Website and Generate a Tracking Code
+
+To generate a new website tracking code:
+
+1. Navigate to **Marketing > Tracking Websites** in the main menu.
+2. Click **Create Tracking Website** in the top right corner.
+3. In the **General** section, provide the following information:
+   * **Owner** — Limits the list of users who can manage the tracking website record to the users, whose roles allow managing tracking websites of the owner (e.g. the owner, members of the same business unit, system administrator, etc.). By default, the field is prepopulated with the user creating the tracking website.
+   * **Name** — The name used to refer to the tracking website record in the system.
+   * **Identifier** — A unique code of the website used to generate its tracking.
+   * **URL** — The URL of the website to be tracked.
+   * **Description** — Additional information about the record. This field is optional.
+
+   ![Creating a tracking website](user/img/marketing/tracking_websites/tracking_create.png)
+4. Click **Save and Close**.
+5. The javascript code is generated once you save the tracking website.
+   ![A sample of a javascript code](user/img/marketing/tracking_websites/javascript_code.png)
+
+<a id="user-guide-how-to-track"></a>
+
+## Use the Tracking Code
+
+Now that the tracking code is generated, you can embed it into every page of the website you would like to monitor.
+
+#### NOTE
+The tracking code comes with the following instructions on its basic use and customization:
+
+*Make sure this code is on every page of your website before the </body> tag. To track custom events, please uncomment the trackEvent string and replace [name], [value], and [user_identifier] parameters with your values. The script will log an event with the [name] name and optional [value].*
+
+![Detailed view of a javascript code](user/img/marketing/tracking_websites/javascript_code_detail.png)
+
+Oro application uses the <a href="https://matomo.org/" target="_blank">Matomo</a> software (previously known as Piwik), a highly customizable open-source platform, that enables you to create a javascript code to track your website’s visitors and their actions on the website with respect to your business objectives.
+
+Make sure to amend the following variables for the code to work properly:
+
+```html
+_paq.push(['setUserId', [user_identifier] ])
+```
+
+**[user_identifier]** defines the user ID used in compliance with the website settings. The user ID is generated once a user signs into your website. Then you will get a unique code that will represent this particular user. This may be an email address ([user@sample.com](mailto:user@sample.com)), a username, or a random string such as UUID (universally unique identifier UID1234567)
+
+<br/>
+
+If you want to track user activities on a specific page of the website, uncomment this line
+
+```html
+_paq.push(['trackEvent', 'OroCRM', 'Tracking', [name], [value] ]
+```
+
+and replace the **[name]** and **[value]** with the event name (string) and value (number) that you would like to see in the **Events** report in Oro application (e.g. for a cart, event name may be cart_created, and the value may store the item code or cost).
+
+#### NOTE
+The code may be filled with both static and dynamic values. However, the usage of dynamic values requires complex backend development.
+
+## Example of a Tracked Website
+
+With the tracking code, you can monitor the following user activities:
+
+* visits
+* adding product items to the shopping list
+* clicking a phone button
+* clicking a campaign banner
+* placing an order
+
+**Visit**
+
+This is a code pre-implemented for an average website:
+
+```html
+<script type="text/javascript">
+    var _paq = _paq || [];
+    _paq.push(['setUserId', "id=guest; visitor-id=51"]);
+    _paq.push(['setConversionAttributionFirstReferrer', false]);
+    _paq.push(['trackPageView']);
+
+    (function() {
+        var u="http://crm.dev/";
+        _paq.push(['setTrackerUrl', u+'tracking.php']);
+        _paq.push(['setSiteId', 'ANAWERAGEWEBSITE']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+        g.defer=true; g.async=true; g.src=u+'bundles/orotracking/js/piwik.min.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+```
+
+Every time a user gets to the page where this code is embedded, a *visit* event is recorded in the **Event** section of the website tracking details with the corresponding value.
+
+Visitors are treated as guests unless they sign in. As soon as a visitor signs in, their identification is logged in the *visitor-id* field. A special block has been implemented to enable transfer of the ID data to Oro application.
+
+**Cart Item Added**
+
+For example, on the shopping list or shopping cart page, the following tracking script may be used:
+
+```html
+<script type="text/javascript">
+    var _paq = _paq || [];
+    _paq.push(['setUserId', "id=guest; visitor-id=51"]);
+    _paq.push(['setConversionAttributionFirstReferrer', false]);
+    _paq.push(['trackPageView']);
+    _paq.push(['trackEvent', 'OroCRM', 'Tracking', 'cart item added', '27' ]);
+    (function() {
+       var u="http://crm.dev/";
+     _paq.push(['setTrackerUrl', u+'tracking.php']);
+     _paq.push(['setSiteId', 'ANAWERAGEWEBSITE']);
+     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+     g.defer=true; g.async=true; g.src=u+'bundles/orotracking/js/piwik.min.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+```
+
+Every time a visitor gets to the website page where the code is embedded, a *Cart item added* event is recorded in the **Event** section of the website tracking details.
+
+![A cart item added event is recorded in the Event section](user/img/marketing/tracking_websites/cart_item_added.png)
+
+**Phone Button Clicked**
+
+If you need to retrieve the statistics of how many visitors clicked the phone number, add the following code:
+
+```html
+<a href="#" onclick="javascript:_paq.push(['trackEvent', 'SideMenu', 'Click', 'Phone Button Clicked']);">Phone: + (123) 456-789</a>
+```
+
+to the corresponding phone number line. Once a user clicks the specified phone button, the corresponding event is logged in the application.
+
+![A phone button clicked event is recorded in the Event section](user/img/marketing/tracking_websites/phone_button_clicked.png)
+
+**Banner Clicked**
+
+Similarly, clicking a specific campaign banner will trigger a *Banner Clicked* event. Its value is the number of times the banner was clicked.
+
+![A banner clicked event is recorded in the Event section](user/img/marketing/tracking_websites/banner_clicked.png)
+
+<a id="user-guide-marketing-tracking-websites-actions"></a>
+
+## Manage Tracking Websites
+
+You can manage tracking websites directly from their details page. Here, you can perform the following actions:
+
+* [Share](#user-guide-marketing-tracking-websites-share-page) the website tracking summary with other Oro application user (available for the Enterprise edition only)
+* Edit the existing website tracking record
+* Delete the unnecessary website tracking
+
+![Actions that are available from the tracking websites' details page](user/img/marketing/tracking_websites/tracking_website_actions.png)
+
+The same actions are available on the page of all tracking websites under **Marketing > Tracking Websites**.
+
+Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the required tracking website and select the necessary action, either <i class="fa fa-eye fa-lg" aria-hidden="true"></i> View, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> Edit, or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) Delete.
+
+![Actions that are available from the page of all tracking websites](user/img/marketing/tracking_websites/tracking_website_action.png)
+
+#### NOTE
+The tracking process also depends on the [Tracking Settings](../../system/configuration/system/general-setup/tracking.md#admin-configuration-tracking) defined for the Oro instance.
+
+<a id="user-guide-marketing-tracking-websites-share-page"></a>
+
+### Share the Tracking Website
+
+#### NOTE
+Sharing tracking websites is available in the Enterprise edition applications and can be enabled for users in the [back-office configuration settings](../../system/configuration/system/general-setup/user.md#admin-configuration-user-settings-share).
+
+To share the website tracking summary with other Oro application user:
+
+1. Navigate to **Marketing > Tracking Websites** in the main menu.
+2. Click the selected tracking website to preview its content.
+3. Click **Share** at the top right corner of the page to open the **Sharing Settings** popup dialog.
+
+![The popup of sharing settings](user/img/marketing/tracking_websites/tracking_website_share.png)
+1. Type in the username in the *Share with* field, or search for the necessary user: click <i class="fa fa-bars fa-lg" aria-hidden="true"></i>, find the person you need, select the checkbox next to their name, and click **Add**.
+
+The **Already shared with** section gets automatically populated with the person you have added.
+
+1. Click **Apply** to save the changes.
+2. To cancel sharing of the tracking website with a particular person, click **Share**, and then click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) next to the username. Use mass actions to cancel sharing for more than one user.
+
+<a id="user-guide-marketing-tracking-websites-plus-campaign"></a>
+
+## Assign a Marketing Campaign to the Tracking Website
+
+Now that you have generated a tracking code and embedded it into your website, you can assign any marketing campaign to promote your commercial products and track users that arrive at your website from different marketing channels such as direct links in email campaigns, social media, and so on.
+
+To assign a certain marketing campaign to the tracking website, follow the next steps:
+
+1. Create a [marketing campaign](../marketing-campaigns/index.md#user-guide-marketing-campaigns) that will generate marketing tracking codes, a URL parameter and a push code.
+
+   #### NOTE
+   Check the difference between these two codes in the [Compare a URL Parameter and a Push Code](../marketing-campaigns/index.md#user-guide-marketing-codes) topic.
+2. Add the URL parameter to the URL of every website page that you want to monitor. Use this modified URL as a target in mailing, advert, landing pages, and other links that lead to the website page. Each time a user reaches a page using the modified URL, an event is logged within the campaign.
+
+Or
+
+1. Add the push code to the tracking script provided in the **Tracking Code** section of the website tracking details (insert it after the *setUserId* call). Each time a user reaches a page with such a code hardcoded into the website’s javascript, an event will be logged within the campaign.
+
+<a id="user-guide-how-to-track-statistics"></a>
+
+## Collect Website Statistics
+
+#### IMPORTANT
+To make sure that synchronization between your website and the application is successful, you may need to enable dynamic website tracking. For this, navigate to **System > Configuration > System Configuration > General Setup > Tracking**, and select the **Enable Dynamic Tracking** checkbox.
+
+![Enable dynamic tracking in system configuration](user/img/marketing/tracking_websites/enable_dynamic_tracking_new.png)
+
+A list of events on the tracking website page helps you monitor every occurrence of the tracked action (e.g. a user has accessed a pre-defined part of the website following the campaign). You can find event name and value, user id (guest or user email), the URL of the visited page, the code of the marketing campaign and time when the event was logged.
+
+> ![View the list of events under the Events section of a tracking website record's page](user/img/marketing/tracking_websites/tracking_view_events.png)
+
+In the example above, you can see the three kinds of events defined for the Jack and Johnson E-commerce website tracking. As soon as a user gets on any of the website pages, a *visit* event is logged with the *1* value. As soon as a user gets to the **Orders** page of the website, an *Order* event is logged, with the value that stores an ordered item id. As soon as a user gets to the **Item Details** page of the website, a *View item* event is logged with a value that stores a viewed item id.
+
+<!-- stop -->
+<!-- fa-bars = fa-navicon -->
+<!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
+<!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
+<!-- Check mark in the square. -->
+<!-- SortDesc is also used as drop-down arrow -->
+<!-- A -->
+<!-- B -->
+<!-- C -->
+<!-- D -->
+<!-- E -->
+<!-- F -->
+<!-- G -->
+<!-- H -->
+<!-- I -->
+<!-- L -->
+<!-- M -->
+<!-- P -->
+<!-- R -->
+<!-- S -->
+<!-- T -->
+<!-- U -->
+<!-- Z -->

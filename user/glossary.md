@@ -1,0 +1,320 @@
+<!-- meta: description = An alphabetical list of OroCommerce terms with definitions -->
+
+<a id="glossary"></a>
+
+# Glossary
+
+<a id="term-Account"></a>
+
+Account
+: An account represents a person, a company or a group of people you do business activities with.
+  An account aggregates details of all the customer identities assigned to it, providing for a 360-degree view of the customer activity.
+
+<a id="term-Attribute"></a>
+
+Attribute
+: A characteristic of an entity. For example, a zip-code and a street name are attributes of an address.
+
+<a id="term-Business-Unit"></a>
+
+Business Unit
+: A system [entity](#term-Entity). Its [records](#term-Record) represent group of [users](#term-User) with
+  similar business or administrative tasks/roles.
+
+<a id="term-Channel"></a>
+
+Channel
+: A channel represents a source of customers and customer data, for example a specific shop, an outlet, a web-store, etc.
+
+<a id="term-Configurable-Product"></a>
+
+Configurable Product
+: A configurable product is an item available in multiple variations. Customers ‘configure’ the product in terms of its color, size or any other applicable parameters according to buying needs. Buyers in the storefront choose from the options provided to ‘configure’ a product according to their needs.
+
+<a id="term-Consent"></a>
+
+Consent
+: In compliance with the [GDPR](https://eugdpr.org/) in the EU, OroCommerce provides flexible mechanisms for [collecting and managing customer consents](concept-guides/administration/consents/index.md#user-guide-consents). Mandatory consents restrict buyers in the storefront from proceeding to the checkout or creating RFQs, unless they accept these consents. Optional consents do not restrict buyers from working with the application and are usually used to retrieve permissions to send them email newsletters, inform about upcoming sales or seasonal discounts, etc.
+
+<a id="term-Contact"></a>
+
+Contact
+: A system [entity](#term-Entity). Its [records](#term-Record) represent actual people contacted in the course of
+  sales activities.
+
+<a id="term-Context"></a>
+
+Context
+: A set of [records](#term-Record) related to a certain email.
+
+<a id="term-Custom-Entity"></a>
+
+Custom Entity
+: An [entity](#term-Entity) added to the system by a user from the UI.
+
+<a id="term-Custom-Field"></a>
+
+Custom Field
+: An [field](#term-Field) added to an entity by a user from the UI.
+
+<a id="term-Customer"></a>
+
+Customer
+: A system [entity](#term-Entity). Customers represent businesses, companies or divisions who buy products using the storefront.
+
+<a id="term-Customer-Group"></a>
+
+Customer Group
+: Customer groups organize customers into groups and share the price lists, payment and tax-related settings between several customers.
+
+<a id="term-Customer-User"></a>
+
+Customer User
+: Customer users are actual people who act on behalf of companies (i.e. customers) and have a limited set of permissions which depend on their role and function in the customer organization.
+
+<a id="term-Dashboard"></a>
+
+Dashboard
+: Dashboard is a default page you see after you log in. It is an adjustable view that may contain many types of information blocks (widgets), such as today’s calendar, recent calls and emails, quick launchpad, etc. You can have several dashboards that serve different purposes and switch between them.
+
+<a id="term-Digital-Assets"></a>
+
+Digital Assets
+: Digital Assets are multimedia content like videos, pictures, documents and other media. These digital files must possess the rights to use them to be considered an asset, otherwise, they are not assets.
+
+<a id="term-Entity"></a>
+
+Entity
+: A grouping of things with common rules that represent objects of similar nature. For example, orders, customers, addresses, etc.
+
+<a id="term-Field"></a>
+
+Field
+: Fields are used to store details of entity records. For example, a *street name*, a *zip code*, and a *building number* may be fields of an *address*. You can add new fields to any [custom entity](#term-Custom-Entity) or an extendable [system entity](#term-System-Entity).
+
+<a id="term-Flat-Rate"></a>
+
+Flat Rate
+: A fixed fee that is charged for a shipping service. A flat rate is used to specify one specific price to ship orders. This fee remains the same for everyone in all cases.
+
+<a id="term-Global-Organization"></a>
+
+Global Organization
+: An [organization](#term-Organization), from which a user can (subject to the permissions and access settings) see and process details of records in each and any organization within an Oro application instance.
+
+<a id="term-Grid-Record-Table"></a>
+
+Grid (Record Table)
+: A grid is an aggregated view of all the records within an entity. Each row of a grid is one record and each column is one of the grid properties.
+
+<a id="term-Landing-Page"></a>
+
+Landing Page
+: Landing page is a marketing tool that generates interest and leads for your sales pipeline and has a distinct call to action with a single focused objective.
+
+<a id="term-Lead"></a>
+
+Lead
+: A system [entity](#term-Entity). Its [records](#term-Record) represent commercial activity with
+  people or businesses that have authority, budget and interest to purchase goods and/or services from you, such
+  that probability of the actual sales is not yet high or impossible to define.
+
+<a id="term-Lifetime-Sales-Value"></a>
+
+Lifetime Sales Value
+: A metric that helps understand the [Customer](#term-Customer). It predicts the potential benefit that the selling organization can obtain from a relationship with the customer in the long-term perspective. Lifetime sales value measures the total amount of money received from the customer based on orders placed and registered in the Oro application. When calculating a lifetime sales value, OroCommerce takes into account an average order amount, purchase frequency, and an average retention period.
+
+<a id="term-Localization"></a>
+
+Localization
+: Localization is the process of [translating and adapting a product](back-office/system/localization/index.md#doc-user-management-users-configuration-localization) for a specific country or region. Oro application allows a user to customize the format of date and time, numeric, percent, and monetary values as well as the format of names and addresses.
+
+<a id="term-Marketing-Lists"></a>
+
+Marketing Lists
+: Marketing lists are lists of contacts segmented according to conditions which are defined for the purpose of bulk emailing or telephone outreach.
+
+<a id="term-Marketplace"></a>
+
+Marketplace
+: OroMarketplace is an open-source comprehensive solution for marketplaces with built-in OroCommerce Enterprise.
+
+<a id="term-Marketplace-Operator"></a>
+
+Marketplace Operator
+: A marketplace operator is an organization that owns and manages the overall operation and infrastructure of the marketplace platform for marketplace seller(s).
+
+<a id="term-Marketplace-Seller"></a>
+
+Marketplace Seller
+: A marketplace seller is a person or company that sells products or services on the OroMarketplace platform. Every marketplace seller can have multiple users associated with the their operations on the platform.
+
+<a id="term-Master-Catalog"></a>
+
+Master Catalog
+: Master catalog is a tree structure that organizes all the products of your store under corresponding categories. A category combines the products of the same type into groups and helps enforce the unified selling strategy by configuring a special set of product options, visibility, and SEO settings that best fit the resulting product family.
+
+<a id="term-Opportunity"></a>
+
+Opportunity
+: A system [entity](#term-Entity). Its [records](#term-Record) represent highly probable potential or actual sales to a new or established customer.
+
+<a id="term-Order"></a>
+
+Order
+: An order contains information about a buyer’s shopping list submitted for purchase and the
+  collected information about billing and shipping address, payment method, etc.
+
+<a id="term-Organization"></a>
+
+Organization
+: A system [entity](#term-Entity). The highest level of the system permissions grouping.  Its [records](#term-Record) represent a group of [users](#term-User) that belong to the same enterprise, business, commerce or another organization. Different roles and permission settings can be defined for different organization records.
+
+<a id="term-OroCommerce"></a>
+
+OroCommerce
+: An open-source B2B Commerce solution with built in sales interaction tools for a commerce business.
+
+<a id="term-Owner"></a>
+
+Owner
+: An [organization](#term-Organization) or [business unit](#term-Business-Unit), members whereof can view/process
+  the entity records, or a [user](#term-User), who can view/process the entity records, subject to the
+  access and permission settings.
+
+<a id="term-Payment-Term"></a>
+
+Payment Term
+: A Payment Term describes the conditions under which a seller will complete a sale (e.g. the period allowed to a buyer to pay off the amount due).
+
+<a id="term-Price-Attribute"></a>
+
+Price Attribute
+: Price attributes are custom parameters, like manufacturer’s suggested retail price (MSRP) or minimum advertised price (MAP), that may be needed as input information for your retail price listed on the website. Price attributes help you extend the product options with any custom value related to the price formation.
+
+<a id="term-Product-Attribute"></a>
+
+Product Attribute
+: A product attribute is a special type of custom field in the product details. For product attributes, OroCommerce enables you to manage and group attributes that are unique to a special product family. By adding the product attributes only to the product families they fit, you can limit the product data to the necessary characteristics.
+
+<a id="term-Product-Family"></a>
+
+Product Family
+: A product family is a set of the product attributes that are enough to store complete information about the products of a similar type (e.g., TV attributes vs T-shirts attributes). In the product family, attributes are organized into attribute groups that are displayed as titled sections on the OroCommerce storefront.
+
+<a id="term-Product-Kit"></a>
+
+Product Kit
+: A product kit is a type of a product that represents a grouping of items or services that you can sell together as a bundle (the Product Kits feature is still in development and some functionality is incomplete).
+
+<a id="term-Product-Tax-Code"></a>
+
+Product Tax Code
+: Product Tax Code is a label that is assigned to a product or product group and indicates the tax obligations and exemptions customers have when they purchase this product. These tax obligations are taken into account when a [customer (user)](#term-Customer-User) submits an order.
+
+<a id="term-Product-Unit"></a>
+
+Product Unit
+: Product units represent a measurement system of products or their combinations. All products in OroCommerce must have a product unit assigned to them for the customer users to be able to add items to the shopping list and determine their quantity in the OroCommerce storefront. Product units are also used throughout the system for inventory and pricing control. Each product in OroCommerce can be assigned multiple units with custom pricing added to each particular product unit.
+
+<a id="term-Promotion"></a>
+
+Promotion
+: Promotions provide discounts for [customer users](#term-Customer-User) in the storefront, enable sellers to apply various discounts to their orders, generate personalized discount coupons, and build a strategic schedule for promotions.
+
+<a id="term-Quote"></a>
+
+Quote
+: A quote is used to negotiate with the customer (e.g. offer better price, more convenient quantities and additional services). A quote may be created in response to a customer request for quote, or as a result of the direct communication with the customer. Once the customer is happy with the offer in the quote and is ready to proceed with their order, they accept the quote.
+
+<a id="term-Record"></a>
+
+Record
+: One item of each entity <Entity>, such as an address record, a contact record, etc.
+
+<a id="term-Request-for-Quote"></a>
+
+Request for Quote
+: RFQs are used by sales representatives to assist customers and meet their needs through negotiations on a better price, more convenient quantities of products, or additional services. Once a customer submits a request for quotes in the Oro storefront, it immediately becomes available in the Oro back-office.
+
+<a id="term-Sales-Territories"></a>
+
+Sales Territories
+: A sales territory is the customer group or geographical area for which an individual sales person or a sales team holds responsibility. Territories can be based on various factors such as geography, industry, product line, the expected revenue, etc.
+
+<a id="term-Shipping-Rule"></a>
+
+Shipping Rule
+: Shipping rules enable shipping methods for the provided destinations and set the customized shipping service price by adding a surcharge per service option or globally for all options of the service provider.
+
+<a id="term-Shopping-List"></a>
+
+Shopping List
+: Shopping lists are similar to shopping carts in most online stores. However, shopping lists have additional features. These include the ability to manage multiple shopping lists simultaneously, request quotes from a shopping list, submit orders from a shopping list, create as many shopping lists as needed, via the back-office, you can access any shopping list created in the Oro storefront.
+
+<a id="term-Simple-Product"></a>
+
+Simple Product
+: Simple products are physical items that exist in a basic, single variation. Their qualifiers, such as color or size, cannot be modified meaning customers cannot select the same product with slightly different characteristics. Simple products have a unique SKU and serve as ‘building blocks’ for configurable products. You can manage the inventory information and the price for a simple product.
+
+<a id="term-Stock-keeping-unit-SKU"></a>
+
+Stock keeping unit (SKU)
+: An SKU is a machine readable identifier of a product or service that helps inventory an item.
+
+<a id="term-System-Entity"></a>
+
+System Entity
+: An [entity](#term-Entity) available in the system out of the box.
+
+<a id="term-Tag"></a>
+
+Tag
+: A non-hierarchical keyword assigned to a record. Can be used for filtering.
+
+<a id="term-Tax-Jurisdiction"></a>
+
+Tax Jurisdiction
+: Tax Jurisdiction is a geographical address of the area that is governed by the same tax laws and regulations, and that requires a dedicated set of tax calculation rules in OroCommerce: the tax rates for taxable/tax-exempt types of customers and products.
+
+<a id="term-Tier-Price"></a>
+
+Tier Price
+: In OroCommerce, a price tier refers to a pricing structure that allows businesses to offer different prices for products based on the quantity of products purchased. For instance, customers may receive a lower price per unit if they buy in bulk. In this case, if product price per item is provided for the purchase of one item, ten items, and fifty items, and a buyer orders 20 items, the price per item applied will be based on the rate for ten items.
+  Price tiers for a selected product can be derived from the same price list, or from the different price lists if they allow price merge. For example, you set the following prices in the price list:
+  <br/>
+  . image:: /user/img/glossary/price_per_tier.png
+  <br/>
+  > If you buy 9 or less item, it would cost you $44.99 for 1 item
+  > If you buy from 10 to 19 items, the price per item is lowered to $42.74 per item
+  > If you buy from 20 to 49 items, the price per item is lowered further to $40.49, and so on
+
+<a id="term-User"></a>
+
+User
+: User [records](#term-Record) represent a person, a group of people or a third-party system using the Oro application.
+  User’s credentials (login and password) identify a unique user and define what part of the system, which
+  features and actions will available for them in the system.
+
+<a id="term-Web-Catalog"></a>
+
+Web Catalog
+: Web catalog is a content management tool that helps build personalized custom versions of websites by mixing in category pages, product pages, landing pages and pre-existing system pages in different variations based on the customer account information, their customer group or language preference.
+
+<a id="term-Website"></a>
+
+Website
+: A website is OroCommerce customer-facing interface (web store).
+  OroCommerce Enterprise supports multiple websites (web stores) that are attached to the same store administration and configuration interface (back-office).
+  Every website may have unique product lines, localization settings, prices, etc.
+
+<a id="term-Workflow"></a>
+
+Workflow
+: A sequence of industrial, administrative of other processes applied to a piece of work  from initiation to
+  completion and a system [entity](#term-Entity) with [records](#term-Record) that represent such a sequence.
+
+<a id="term-WYSIWYG-What-You-See-Is-What-You-Get"></a>
+
+WYSIWYG (What You See Is What You Get)
+: The editor that enables to edit the content of a landing page, product page, and any other HTML-like web page, embed codes, media files, and widgets, and preview the results in the editor’s framework directly.

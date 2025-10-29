@@ -1,0 +1,51 @@
+<a id="frontstore-guide-orders-checkout-single-page-checkout"></a>
+
+# Navigate through Single Page Checkout in the Storefront
+
+#### HINT
+This section is part of the [Checkout Configuration Concept Guide](../../concept-guides/administration/checkout/index.md#checkout-management-concept-guide) topic that provides a general understanding of single-page and multi-page checkout concepts.
+
+In the single page checkout, you can see how far along in the checkout you are, and how many fields are left to complete it. All checkout steps are displayed on a single page.
+
+![image](user/img/system/workflows/single_page_checkout/SinglePageCheckout.png)
+
+**Step 1: Billing Information**
+
+1. Enter billing information for the order by selecting an existing address from the address book, or creating a new one.
+2. Choose a suitable [payment method](../../concept-guides/administration/payment-configuration/index.md#user-guide-payment) by selecting it from the list of all available methods.
+
+**Step 2: Shipping Information**
+
+1. If the **Ship to this address** checkbox has been checked in the Billing Information step, the provided address will be automatically used at the **Shipping Information** step.
+
+   To edit shipping information, clear the **Use billing address** checkbox and provide a different shipping address for the order.
+
+> 1. Provide a [shipping method](../../concept-guides/administration/shipping-configuration/index.md#user-guide-shipping) by selecting one from the list of the available methods.
+> 2. Set the **Do Not Ship Later Than** date, if applicable.
+
+**Step 3: Order Summary**
+
+> Once all the necessary information has been provided, it is possible to review the order in the **Order Summary** section.
+
+> 1. Check the item SKUs, quantity, price and the subtotal amount.
+> 2. Check and/or edit **Order Options** (PO number and notes).
+> 3. Select the **Delete this shopping list after ordering** checkbox to delete the shopping list after submitting the order.
+> 4. Edit the already provided information by clicking ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) on the right side of the section.
+> 5. Submit the order by clicking **Submit Order** on the bottom of the checkout page.
+<!-- A -->
+<!-- B -->
+<!-- C -->
+<!-- D -->
+<!-- E -->
+<!-- F -->
+<!-- G -->
+<!-- H -->
+<!-- I -->
+<!-- L -->
+<!-- M -->
+<!-- P -->
+<!-- R -->
+<!-- S -->
+<!-- T -->
+<!-- U -->
+<!-- Z -->

@@ -1,0 +1,17 @@
+<a id="admin-configuration-user-settings"></a>
+
+# Configure Global User Settings
+
+To apply user-related options in your Oro application instance:
+
+1. Navigate to **System > Configuration** in the main menu.
+2. Click **System Configuration > General Setup > User Settings**.
+   ![User settings on global level](user/img/system/config_system/user.png)
+3. Under **Email Settings**, configure the following:
+
+* **Case-Insensitive Email Addresses** — If this option is enabled, the letter case is ignored when comparing email addresses. For example, [john.doe@example.com](mailto:john.doe@example.com) and [John.Doe@example.com](mailto:John.Doe@example.com) are treated equally. By default, the option is disabled. Be noted that the setting is only applied to back-office users. The identical option for customer users is managed [here](../../commerce/customer/global-customer-users.md#sys-config-configuration-commerce-customers-customer-users).
+
+<a id="admin-configuration-user-settings-share"></a>
+1. Under **Sharing Records**, activate or deactivate the ability to share entity records:
+
+* **Allow Sharing** — If this option is enabled, users are allowed to share entities in the Oro application back-office. This option is available in the Enterprise Edition only.

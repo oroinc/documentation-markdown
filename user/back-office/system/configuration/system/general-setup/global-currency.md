@@ -1,0 +1,147 @@
+<a id="sys-config-sysconfig-general-setup-currency"></a>
+
+<a id="admin-configuration-currency"></a>
+
+# Configure Global Currency Settings
+
+Currency configuration helps you:
+
+* Add and remove currencies from the allowed currencies list.
+* Set the base currency.
+* Specify the conversion rate to and from the base currency.
+* Define the order used when the currencies are displayed to the storefront and back-office users.
+* Toggle between the currency display formats (currency code, e.g. USD, and currency symbol, e.g. $).
+
+#### HINT
+Currency configuration is available on three levels, globally, [per organization](../../../user-management/organizations/org-configuration/general-setup-org/organization-currency.md#admin-configuration-currency-org) and [per website](../../../websites/web-configuration/commerce/catalog/website-pricing.md#sys-websites-sysconfig-currency).
+
+#### NOTE
+The organization-level configuration for base currency and display format has higher priority and overrides the system setting. However, to enable a currency on the organization level, you should add it to the list of allowed currencies at the system level first.
+
+<a id="user-guide-multi-currency"></a>
+
+## Multi-Currency
+
+Multiple currency functionality in the Oro application is a useful tool for companies that do business internationally and negotiate deals in various currencies.
+
+#### NOTE
+This feature is only available in the Enterprise edition.
+
+Currency configuration allows to:
+
+- Create and manage the list of currencies that will be available for selection in multi-currency fields (e.g. opportunity budget).
+- Designate one currency as base.
+
+Think of a US-based business that is shipping certain goods to the UK. Its base currency is US dollars, which means that this is the currency that its business’s turnover is usually in. The contract between the US and the UK companies, however, is to be signed in British pounds for the total value of £20 000. When creating a new opportunity for the mentioned contract, a sales manager of the US company would need to add the **Budget Amount** in pounds rather than dollars.
+
+With the Oro application Enterprise multi-currency feature, the system can make the necessary recalculations of this budget amount into the base currency for you. This means that if you enter the amount of £20 000 into the Budget Amount field, this value will be converted into your base currency and constitute $27 200, as illustrated in the screenshot below. This conversion is calculated according to the currency rate, determined beforehand.
+
+![The price is recalculated while selecting a currency](user/img/system/config_system/budget_recalculated1.png)
+
+Next, let us have a look at how you can configure currencies and rates.
+
+## Global Currency Configuration
+
+To change the default currency setting globally:
+
+1. Navigate to **System > Configuration** in the main menu.
+2. Select **System Configuration > General Setup > Currency** in the menu to the left.
+
+   #### NOTE
+   For faster navigation between the configuration menu sections, use [Quick Search](../../quick-search.md#user-guide-system-configuration-quick-search).
+
+### Currency Settings
+
+The following sections are available within the **Currency** tab:
+
+![Global currency configuration settings](user/img/system/config_system/currency1.png)
+
+| **Name**               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Allowed currencies** | **Allowed currencies** list allows you to select some of all available currencies to enable them in OroCommerce.<br/><br/>To add the allowed currency, select it from the list and click **Add**.<br/><br/>The new row is added to the allowed currencies options table, where you can configure the exchange rates<br/>for the newly added currency and may set it as a base currency.<br/>See [Allowed Currencies Options]() for more information.                                                                                                                       |
+| **Display format**     | This setting controls how the currencies will be displayed within the system, as a 3-letter ISO code<br/>(e.g. GBP) or as the currency symbol (e.g. £).<br/><br/>To customize the **Display Format**:<br/><br/>1. Clear the **Use Default** checkbox next to the option.<br/>2. Select the new option value (either *Currency Code* or *Currency Symbol*).<br/><br/>![Display the order total using the currency code](user/img/system/config_system/currency_code.png)<br/><br/>**Note:** Some currencies may not have symbols, in which case ISO codes are used instead. |
+
+### Allowed Currencies Options
+
+The information about the allowed currencies options is grouped in the following columns:
+
+#### NOTE
+This feature is only available in the Enterprise edition.
+
+| **Name**            | Description                                                                                                                                                                                                                                 |
+|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Base**            | A flag helps you to select the base currency.<br/>Base currency is used by default to display totals, budgets, and amounts.                                                                                                                 |
+| **Currency Name**   | International name of the currency that follows ISO 4217 standard (e.g. US dollar).                                                                                                                                                         |
+| **Currency Code**   | International currency code that follows ISO 4217 standard (e.g. USD).                                                                                                                                                                      |
+| **Currency Symbol** | Graphical symbol that is used to denote a currency (e.g. $).                                                                                                                                                                                |
+| **Rate From**       | The conversion rate from the selected currency to the base currency. Used to calculate transaction amounts<br/>(e.g. opportunity budget) in the base currency if they were entered in other currencies.<br/>Maximum precision is 10 digits. |
+| **Rate To**         | The conversion rate from the base currency to the selected currency. Used to calculate new exchange rates<br/>when the base currency is changed. Maximum precision is 10 digits.                                                            |
+1. To change the base currency, click the **Base** option in the corresponding row. This will lead to reconversion of all multi-currency data to the new base currency, and all values will be re-converted according to the current rates.
+
+   Before:
+   ![Global currency configuration table with US dollar as a base currency](user/img/system/config_system/currency_base2.png)
+
+   After:
+   ![Re-converted global currency configuration table with Euro as a base currency](user/img/system/config_system/currency_base4.png)
+
+#### IMPORTANT
+Changing base currency requires manual update of the money values (budgets, totals, revenues, etc.). You will be prompted to confirm the change.
+
+In the example below, the base currency is British pounds but the budget of the opportunity deal is in US dollars.
+
+![The list of all open opportunities with two budget columns in US and GBP](user/img/system/config_system/example_base_and_us_budget1.png)
+
+When you close a deal (determined by opportunity status), the exchange rate for it becomes locked and will no longer take rate changes into account.
+
+Dashboard widgets with monetary values (e.g. Forecast) and monetary metrics work in the base currency irrespective of the currency that the deals were made in.
+
+![Sample of dashboard widgets that provide metrics in US](user/img/system/config_system/widgets_base_currency.png)
+1. To modify the currency exchange rate to and from the base currency, edit the **Rate To** and **Rate From** values in the corresponding row.
+   ![Demonstrate the example of the currency calculation provided that the rate of US dollar to British pound is 1 to 0.76](user/img/system/config_system/rate_recalculation1.png)
+
+   #### NOTE
+   The base currency rate is always 1 to 1 and cannot be changed.
+2. To add a currency to the allowed currencies list:
+   1. Select the currency from the **Allowed Currencies** list and click **Add** next to it.
+      ![Selecting the currency from the dropdown list](user/img/system/config_system/currency_add.png)
+
+      The currency is appended to the top of the list.
+      ![A new currency is added](user/img/system/config_system/currency_add3.png)
+   2. Fill in the exchange rate to and from the base currency.
+3. To delete a currency from the allowed currencies list, click the <i class="fa fa-times fa-lg" aria-hidden="true"></i> **Delete Currency** icon at the end of the corresponding row.
+
+   #### NOTE
+   Deleting base currency is restricted. To unlock the delete action for the currency that is set as base, switch to a different base currency.
+4. To change the currency sort order, click and hold the <i class="fas fa-arrows-alt-v" aria-hidden="true"></i> **Sort** icon, and drag the currency up or down the list.
+5. To roll back any changes to the currency settings, click **Reset** on the top right.
+6. Click **Save Settings**.
+
+<!-- finish_global_currency -->
+
+**Related Articles**
+
+* [Pricing Overview](../../../../../concept-guides/catalog-promotions/pricing/index.md#user-guide-pricing)
+* [Global Pricing Configuration](../../commerce/catalog/global-pricing.md#sys-config-commerce-catalog-pricing)
+
+<!-- fa-bars = fa-navicon -->
+<!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
+<!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
+<!-- Check mark in the square. -->
+<!-- SortDesc is also used as drop-down arrow -->
+<!-- A -->
+<!-- B -->
+<!-- C -->
+<!-- D -->
+<!-- E -->
+<!-- F -->
+<!-- G -->
+<!-- H -->
+<!-- I -->
+<!-- L -->
+<!-- M -->
+<!-- P -->
+<!-- R -->
+<!-- S -->
+<!-- T -->
+<!-- U -->
+<!-- Z -->

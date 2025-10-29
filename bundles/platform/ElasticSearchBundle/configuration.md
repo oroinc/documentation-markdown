@@ -1,0 +1,146 @@
+# ElasticSearch Configuration
+
+#### HINT
+See the [Search Index](../../../backend/architecture/tech-stack/search/index.md#search-index-overview) documentation to get a more high-level understanding of the search index concept in the Oro application.
+
+This bundle provides you with the opportunity to configure search engine for your needs.
+
+## Parameters
+
+If you have a running Elasticsearch server, the default settings are sufficient. The search engine automatically defines the client and index configuration and then creates the index.
+
+If required, you can customize the Elasticsearch client settings. For this, modify the following environment variables:
+
+Basic parameters:
+
+* **search_engine_dsn** - An engine DSN, must be “elastic_search” for the Elasticsearch engine. For example, `elastic-search://valid_user:valid_password@127.0.0.1:9200?prefix=oro_search`. The `valid_user:valid_password@'` DSN’s part can be skipped if authentication is not enabled.
+
+If you need more specific Elasticsearch configuration, see the chapters below.
+
+## Client Configuration
+
+To configure your Elasticsearch engine, put the following configuration into the config/config.yml file, under the oro_search section:
+
+```yaml
+oro_search:
+    engine: "elastic_search"
+```
+
+In this case, all the required settings will be taken from corresponding environment variables.
+Default configuration is defined at Oro/Bundle/ElasticSearchBundle/Resources/config/oro/app.yml.
+
+If you need to create a more transparent and detailed configuration, define the required settings directly in the config/config.yml.
+
+```yaml
+oro_search:
+    engine: "elastic_search"
+    engine_parameters:
+        client:
+            hosts: ['192.168.10.5:9200', '192.168.15.7:9200']
+            # other configuration options for which setters exist in ElasticSearch\ClientBuilder class
+            # (e.g. retries option can be used as setRetries() method exists)
+            retries: 1
+```
+
+## Index Configuration
+
+All settings required for the creation of an ElasticSearch index are defined in the search.yml and config.yml (the main config) files. This configuration is converted to the ElasticSearch mappings format and appears as follows:
+
+```yaml
+oro_search:
+    engine_parameters:
+        client:
+            # ... client configuration
+        index:
+            index: <indexName>
+            body:
+                mappings:                               # mapping parameters
+                    <entityTypeName-1>:                 # a name of the type
+                        properties:
+                            <entityField-1>:            # a name of the field
+                                type:   string          # a type of the field
+                            # ... list of entity fields
+                            <entityField-N>:
+                                type:   string
+                    # ... list of types
+                    <entityTypeName-N>:
+                        properties:
+                            <entityField-1>:
+                                type:   string
+```
+
+For more information about the index configuration, see the <a href="https://www.elastic.co/guide/en/elasticsearch/client/php-api/current/_index_management_operations.html" target="_blank">Elasticsearch documentation</a>.
+
+## Per-request Client Configuration
+
+You can also configure per-request client options like this:
+
+```yaml
+oro_search:
+    engine_parameters:
+        client_per_request:
+            timeout: 10
+            connect_timeout: 10
+            # ... other options
+```
+
+For more information, see the <a href="https://www.elastic.co/guide/en/elasticsearch/client/php-api/5.x/_per_request_configuration.html" target="_blank">Elasticsearch per-request configuration documentation</a>.
+
+## Disable Environment Checks
+
+The bundle provides you with the opportunity to disable some system level checks that are performed during the application installation or index creation. These checks are used to ensure that environment is properly configured and that the search index is accessible.
+
+However, in some cases, these checks might be disabled to isolate all interactions with Elasticsearch at the /<indexName>/ URL. These checks do not affect the application performance - the flags are used only during the application installation or full reindexation.
+
+**Important!** Disabling of these checks might lead to inconsistent or unpredictable behavior of the application. Use them at your own risk.
+
+Set the following options to false to disable checks:
+
+* **system_requirements_check** (default true) - Check the system requirements during the application installation and usage. Please make sure that a supported version of Elasticsearch is used and all required plugins are installed.
+* **index_status_check** (default true) - Check the index accessibility and readiness after creation. Please make sure that the Elasticsearch index will be available upon creation.
+
+Here is an example of the configuration that disables both of these checks:
+
+```yaml
+oro_search:
+    engine_parameters:
+        system_requirements_check: false
+        index_status_check: false
+```
+
+## Language Optimization
+
+The bundle provides ability to enable language optimization of indexation. There is only one option here:
+
+* **language_optimization** (default false) - use specialized language analyzers for search index based on the used language.
+
+List of all <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.x/analysis-lang-analyzer.html" target="_blank">applicable analyzers</a> can be found in the Elasticsearch documentation.
+
+If no appropriate analyzer found then default whitespace analyzer will be used instead.
+
+Here is how language optimization may be enabled.
+
+```yaml
+oro_search:
+    engine_parameters:
+        language_optimization: true
+```
+
+To start usage of this optimization search index must be completely removed and full reindexation has to be started to fill it with data.
+
+## Force Refresh
+
+Elasticsearch is an asynchronous search engine, which means that data might be available with a small delay after it was scheduled for indexation. If you want to make is work synchronously then you should trigger <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.x/indices-refresh.html" target="_blank">refresh operation</a> after each reindexation request. To enable such synchronous behavior you should define option force_refresh at engine parameters:
+
+```yaml
+oro_search:
+    engine_parameters:
+        force_refresh: true
+```
+
+Pay attention that synchronous indexation is slower than asynchronous because application has to wait for reindexation to finish after every reindexation request.
+
+#### HINT
+See the [Indexation process](../../../backend/architecture/tech-stack/search/index.md#search-index-overview-indexation-process) documentation for more details on synchronous and asynchronous (scheduled) indexation.
+
+<!-- Frontend -->

@@ -1,0 +1,41 @@
+<a id="import-customer-users"></a>
+
+# Import Customer User Details
+
+#### HINT
+This section is part of the [Data Import](../../../concept-guides/administration/data-import/index.md#concept-guide-data-import) concept guide topic that provides guidelines on import operations in Oro applications.
+
+<!-- start -->
+
+**Import File** option helps import the customer user information using the .csv file that follows the customer user details data structure.
+
+**Example of customer user bulk import template**
+
+|   ID | Name Prefix   | First Name   | Middle Name   | Last Name   | Name Suffix   | Birthday   | Email Address                                 |   Customer Id | Customer Name   | Roles 1 Role        |   Enabled |   Confirmed |   Owner Id |   Website Id |
+|------|---------------|--------------|---------------|-------------|---------------|------------|-----------------------------------------------|---------------|-----------------|---------------------|-----------|-------------|------------|--------------|
+|    1 | Mr            | Jerry        | John          | Coleman     | Jr.           | 04/19/1987 | [example@email.com](mailto:example@email.com) |           111 | Oro Inc.        | ROLE_FRONTEND_BUYER |         1 |           0 |          1 |            1 |
+
+To import a bulk of customer user information:
+
+1. In the main menu, navigate to **Customers > Customer Users**. The customer users list opens.
+2. Click **Import File** on the top right.
+3. In the **Import** dialog, click **Choose File** under the required tab, *Customer Users* or *Customer User Addresses*, depending on what data you are importing. Select the .csv file you prepared, and then click **Import File**.
+
+#### NOTE
+Ensure that your .csv file is saved in the Unicode (UTF-8) encoding. Otherwise, the content of the file can be rendered improperly.
+
+![image](user/img/customers/customer_users/import-steps-customer-users.png)
+
+1. Click **Download Import Template** to download a sample .csv file with the necessary headers.
+2. **Prepare data for import**: Based on the downloaded file, create your bulk information in the .csv format. Once your file is ready, click **Choose File**, select the prepared comma-separated values (.csv) file, and click **Import File**.
+3. **Validate import results**: Click **Validate** to check your import results. If there are any *Records with errors*, fix them in the .csv file before starting the import.
+4. **Launch import:** After successful validation, click **Import File**.
+5. Click **Cancel** to decline the import.
+
+#### IMPORTANT
+Interactive status messages inform about the import progress, and once the import is complete, the changes are reflected in the list upon refresh. Additionally, an email message with the import status is delivered to your mailbox.
+
+Follow the on-screen guidance for any additional actions. For example, for the inventory template, select one of the options: a) inventory statuses only or b) detailed inventory levels.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p5HrsdMUB7A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- finish -->

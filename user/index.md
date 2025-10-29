@@ -1,0 +1,94 @@
+<!-- meta: description = Concept guides, back-office, and storefront user documentation -->
+
+<a id="user-documentation"></a>
+
+# User Documentation
+
+Oro Online User Documentation is an aggregated and structured knowledge base of information on OroCommerce application. It is designed for all business users work who with the application UI.
+
+Oro User Documentation is split into five sections, each delivering user-specific content in different ways:
+
+<ul class="icons-list">
+     <li>
+        <div class="icon">
+            <img src="../_static/images/icon-business-users.png" alt="" role="presentation">
+        </div>
+        <div class="items-body">
+            <p class="first"><a class="reference internal" href="solution-architect/"><span class="std std-ref">Solution Architecture</span></a></p>
+            <p> Solution Architecture guide offers an overview of the application concepts, architectural framework, and key integration points that are essential for the successful deployment and integration of the OroCommerce application.</p>
+        </div>
+    </li>
+    <li>
+        <div class="icon">
+            <img src="../_static/images/business-and-finance.svg" alt="" role="presentation">
+        </div>
+        <div class="items-body">
+            <p class="first"><a class="reference internal" href="concept-guides/"><span class="std std-ref">Concept Guides</span></a></p>
+            <p>Concept Guides provide overviews of features and use-cases, help out with a general understanding of large topics.</p>
+        </div>
+    </li>
+    <li>
+        <div class="icon">
+            <img src="../_static/images/interface.svg" alt="" role="presentation">
+        </div>
+        <div class="items-body">
+            <p class="first"><a class="reference internal" href="back-office/"><span class="std std-ref">Back-Office</span></a></p>
+            <p>Back-office documentation contains how-to topics grouped into sections that mirror the structure of back-office user interface.</p>
+        </div>
+    </li>
+    <li>
+        <div class="icon">
+            <img src="../_static/images/icon-demo.png" alt="" role="presentation">
+        </div>
+        <div class="items-body">
+            <p class="first"><a class="reference internal" href="storefront/"><span class="std std-ref">Commerce Storefront</span></a></p>
+            <p>Commerce Storefront documentation illustrates how to navigate, browse, and interact with the default OroCommerce storefront.</p>
+        </div>
+    </li>
+    <li>
+        <div class="icon">
+            <img src="../_static/images/web.svg" alt="" role="presentation">
+        </div>
+        <div class="items-body">
+            <p class="first"><a class="reference internal" href="integrations/"><span class="std std-ref">Integrations</span></a></p>
+            <p>Oro Integrations documentation provides information on the types of integrations Oro applications support and can be integrated with to streamline data exchange and enhance operational efficiency.</p>
+        </div>
+    </li>
+    <li>
+        <div class="icon">
+            <img src="../_static/images/communication.svg" alt="" role="presentation">
+        </div>
+        <div class="items-body">
+            <p class="first"><a class="reference internal" href="glossary/"><span class="std std-ref">Glossary</span></a></p>
+            <p>Glossary is an alphabetical list of OroCommerce terms used throughout the documentation.</p>
+        </div>
+    </li>
+</ul>
+
+#### BUSINESS TIP
+# Business Tip
+
+Looking for the <a href="https://oroinc.com/b2b-ecommerce/b2b-ecommerce-comparison" target="_blank">top B2B eCommerce platforms</a>? Check out our platform comparison guide to assist you in making a decision.
+
+<!-- fa-bars = fa-navicon -->
+<!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
+<!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
+<!-- Check mark in the square. -->
+<!-- SortDesc is also used as drop-down arrow -->
+<!-- A -->
+<!-- B -->
+<!-- C -->
+<!-- D -->
+<!-- E -->
+<!-- F -->
+<!-- G -->
+<!-- H -->
+<!-- I -->
+<!-- L -->
+<!-- M -->
+<!-- P -->
+<!-- R -->
+<!-- S -->
+<!-- T -->
+<!-- U -->
+<!-- Z -->

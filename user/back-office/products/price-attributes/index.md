@@ -1,0 +1,113 @@
+<a id="user-guide-products-price-attributes"></a>
+
+# Manage Price Attributes in the Back-Office
+
+A [Price Attribute](../../../glossary.md#term-Price-Attribute) is a custom parameter, like the manufacturer’s suggested retail price (MSRP), minimum advertised price (MAP), or shipping cost that may be needed as input information for your retail price listed on the website. Price attributes help you extend the product options with any custom value related to the price formation.
+
+Before reading on, consider watching a short demo from our media library on <a href="https://academy.oroinc.com/media-library/setup-price-attributes" target="_blank">how to set up price attributes in OroCommerce</a>.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SO36BC3SaXQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+You can use the price attribute as a base value for manually or automatically generated price list.
+
+## Create a Price Attribute
+
+To create a new price attribute:
+
+1. Navigate to **Products > Price Attributes** in the main menu.
+2. Click **Create Price Attribute**. The following page opens:
+3. Type in the price attribute name (used as a UI label) and the field name used in the code and database to refer to the price attribute container.
+4. Select the currencies that are supported for this price attribute:
+   * Click the currency to select only one of them.
+   * Hold the `Ctrl` key and click another currency to add it to the selection.
+   * Hold the `Shift` key and click another currency to select a range of currencies.
+5. Click **Save**.
+
+Now you can set the price attribute value for every product in the **Product Prices** section:
+
+![Display the location of the product price attributes](user/img/products/price_attributes/PriceAttributesInProduct.png)
+
+<a id="user-guide-products-price-attributes-manage"></a>
+
+## Manage Price Attributes
+
+### View Price Attribute Details
+
+To view all price attributes, navigate to **Products > Price Attributes** in the main menu.
+
+![The page of all price attributes](user/img/products/price_attributes/PriceAttributes.png)
+
+Here, you can create a new price attribute, filter the list of existing ones by a price attribute name or a field name, and view price attribute details by clicking on the item. Also, you can  <i class="fa fa-eye fa-lg" aria-hidden="true"></i> view, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit, or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) delete a price attribute by hovering over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the item.
+
+To remove multiple price attributes, select checkboxes in front of the price attributes that you want to delete. At the right end of the list header, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu and click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** to remove all selected price attributes.
+
+Find the necessary price attribute in the list and click on it.
+
+The following information is available immediately:
+
+* **Price Attribute** – The name or label of the price attribute.
+* **Field Name** – The name of the field in the code/database that represents the price attribute.
+* **Currencies** – The currencies in which this price attribute is supported.
+* **Enabled in Product Export** – If enabled, this price attribute is used in the [storefront product listing export](../../../storefront/getting-started/common-controls.md#frontstore-guide-navigation-product-data-export).
+
+![Price attribute edit page](user/img/products/price_attributes/price-attribute-edit.png)
+
+<a id="doc-price-attributes-actions-edit"></a>
+
+### Edit a Price Attribute
+
+To edit a price attribute:
+
+1. Navigate to **Products > Price Attributes** in the main menu.
+2. Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the item and click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** to start editing its details.
+3. Amend the price attribute name (used as a UI label) and/or the field name used in the code and database to refer to the price attribute container.
+4. Modify the selection of the currencies that are supported for this price attribute:
+   * Click the currency to select only one of them.
+   * Hold the `Ctrl` key and click another currency to add it to the selection.
+   * Hold the `Shift` key and click another currency to select a range of currencies.
+5. Click **Save**.
+
+Next, adjust the price attribute values and provide values for newly added currencies in the product details.
+
+### Set a Price Attribute Value in the Product Details
+
+To set a price attribute (e.g., Minimal Advertised Price) for a product:
+
+1. Navigate to **Products > Products** in the main menu.
+2. Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the item and click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** to start editing its details.
+
+   Price attributes such as MSRP and MAP are available under the **Product Prices** section of the product view/edit page:
+   ![Price attributes in the Product Prices section of the selected product](user/img/products/price_attributes/PriceAttributesInProduct.png)
+
+   [Shipping cost price attribute](../products/manage/view.md#products-shipping-options-price-attribute) information is available under the **Shipping Options** section of the product view/edit page:
+   ![Illustration of shipping cost information on the product view page](user/img/products/price_attributes/shipping-cost-price-attribute.png)
+
+   Shipping cost can work in conjunction with a shipping method, such as [Fixed Shipping Cost](../../system/integrations/shipping-integration/fixed-shipping.md#doc-integration-fixed-shipping-cost). For example, if the shipping cost for a product is set to $2.70 and the surcharge configured for the Fixed Shipping Cost shipping method is $3, then the shipping charge at checkout will equate to $5.70.
+   ![Illustration of how shipping cost set for the price attribute works in combination with the surcharge defined in the fixed product shipping cost integration](user/img/products/price_attributes/shipping-cost-price-attribute-with-integration.png)
+3. Provide the value per unit and currency.
+4. Click **Save**.
+
+Now you can use the price attribute as a variable parameter in price list generation.
+
+<!-- fa-bars = fa-navicon -->
+<!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
+<!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
+<!-- Check mark in the square. -->
+<!-- SortDesc is also used as drop-down arrow -->
+<!-- A -->
+<!-- B -->
+<!-- C -->
+<!-- D -->
+<!-- E -->
+<!-- F -->
+<!-- G -->
+<!-- H -->
+<!-- I -->
+<!-- L -->
+<!-- M -->
+<!-- P -->
+<!-- R -->
+<!-- S -->
+<!-- T -->
+<!-- U -->
+<!-- Z -->

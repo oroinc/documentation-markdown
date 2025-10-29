@@ -1,0 +1,57 @@
+<a id="user-import-master-catalog-categories"></a>
+
+# Import Master Catalog Categories Information
+
+#### HINT
+This section is part of the [Data Import](../../../concept-guides/administration/data-import/index.md#concept-guide-data-import) concept guide topic that provides guidelines on import operations in Oro applications.
+
+To import the bulk details of updated or processed master catalog categories information in the .csv format, follow the steps below.
+
+1. In the main menu, navigate to **Products > Master Catalog**.
+2. Click **Import File** on the top right.
+3. In the **Import** dialog, click **Choose File** and select the .csv file you have prepared.
+
+#### NOTE
+Ensure your .csv file is saved in the Unicode (UTF-8) encoding. Otherwise, the content of the file can be rendered improperly.
+
+1. Click **Validate** to check your import results. If there are any *Records with errors*, fix them in the .csv file before starting the import.
+2. After successful validation, click **Import File**.
+3. Click **Cancel** to decline the import.
+
+Alternatively,
+
+1. Click **Download Import Template** to download a sample .csv file with the necessary headers.
+2. Based on the downloaded file, create your bulk information in the .csv format.
+3. Once your file is ready, click **Choose File** and select the .csv file you have prepared.
+4. Click **Validate** to check your import results. If there are any *Records with errors*, fix them in the .csv file before starting the import.
+5. After successful validation, click **Import File**.
+6. Click **Cancel** to decline the import.
+
+Interactive status messages inform about the import progress, and once the import is complete, the changes are reflected in the list upon refresh. An email message with the import status is also delivered to your mailbox.
+
+**Example of a master catalog categories bulk import template**
+
+|   id | titles.default.fallback   | titles.default.value   | titles.English.fallback   | titles.English.value   | parentCategory.id   | parentCategory.title   | Organization (EE feature)   | slugPrototypes.default.fallback   | slugPrototypes.default.value   | slugPrototypes.English.fallback   | slugPrototypes.English.value   | shortDescriptions.default.fallback   | shortDescriptions.default.value       | shortDescriptions.English.fallback   | shortDescriptions.English.value               | longDescriptions.default.fallback   | longDescriptions.default.value   | longDescriptions.English.fallback   | longDescriptions.English.value        | metaTitles.default.fallback   | metaTitles.default.value   | metaTitles.English.fallback   | metaTitles.English.value        | metaDescriptions.default.fallback   | metaDescriptions.default.value   | metaDescriptions.English.fallback   | metaDescriptions.English.value        | metaKeywords.default.fallback   | metaKeywords.default.value   | metaKeywords.English.fallback   | metaKeywords.English.value         |
+|------|---------------------------|------------------------|---------------------------|------------------------|---------------------|------------------------|-----------------------------|-----------------------------------|--------------------------------|-----------------------------------|--------------------------------|--------------------------------------|---------------------------------------|--------------------------------------|-----------------------------------------------|-------------------------------------|----------------------------------|-------------------------------------|---------------------------------------|-------------------------------|----------------------------|-------------------------------|---------------------------------|-------------------------------------|----------------------------------|-------------------------------------|---------------------------------------|---------------------------------|------------------------------|---------------------------------|------------------------------------|
+|    1 |                           | All Products           | system                    |                        |                     |                        | Oro Inc.                    |                                   |                                | system                            |                                |                                      | <p>All Products short description</p> |                                      | <p>All Products english short description</p> |                                     | All products long description    |                                     | All Products english long description |                               | All Products Meta Title    |                               | All Products English Meta Title |                                     | All Products Meta Description    |                                     | All Products English Meta Description |                                 | All Products Meta Keywords   |                                 | All Products English Meta Keywords |
+|    2 |                           | NewCategory            | system                    |                        | 1                   | All Products           | Oro Inc.                    |                                   | new-category                   |                                   | new-category-en                |                                      | <p>NewCategory short description</p>  |                                      | <p>NewCategory english short description</p>  |                                     | NewCategory long description     |                                     | NewCategory english long description  |                               | NewCategory Meta Title     |                               | NewCategory English Meta Title  |                                     | NewCategory Meta Description     |                                     | NewCategory English Meta Description  |                                 | NewCategory Meta Keywords    |                                 | NewCategory English Meta Keywords  |
+
+The columns you need to pay attention to are the following:
+
+* **id** — the ID of the existing category. IDs are generated by the system. Do not specify any ID for the new categories you want to import. Once imported, IDs are assigned to all new categories.
+* **titles.default.fallback** — the column can be ignored. The same applies to `slugPrototypes.default.fallback`, `shortDescriptions.default.fallback`, `longDescriptions.default.fallback`, `metaTitles.default.fallback`, `metaDescriptions.default.fallback`, and `metaKeywords.default.fallback`.
+* **titles.default.value** — the title of the category. The field is required for new categories.
+* **titles.English.fallback** — determines what to do if no English translation is provided. Options include:
+  * `system` — For localized fields (e.g., `titles.English.fallback`), use the default value. For default fields (e.g., `URL Slug.default.fallback`), use the system-generated URL (such as `product/view/ID`)
+  * `parent_localization` — Use the parent category’s value
+  * Provide a custom value
+  * Leave empty
+
+  The same applies to `slugPrototypes.English.fallback`, `shortDescriptions.English.fallback`, etc.
+* **titles.English.value** — the English translation of the category title.
+* **parentCategory.id** — the ID of the parent category. If no ID is provided, the parent category title is considered to identify the parent category. If neither ID nor title is provided, it means that the current category does not have any parent category. In this case, all new categories are assigned to the root node of the master catalog, and the parents of all existing categories remain unchanged.
+* **parentCategory.title** — the title of the parent category. The parent title can be provided in two forms, short (Phone Charges) and long (All Products / Electronics / Chargers / Phone Chargers). The long title should start with the root node of the master catalog, separated by \`\` / \`\` (space, forward slash, space). It is required to use the long title if you have several categories with the same name to avoid selecting the wrong parent category. If no title is provided, the parent category ID is considered to identify the parent category. If neither ID nor title is provided, it means that the current category does not have any parent category. In this case, all new categories are assigned to the root node of the master catalog, and the parents of all existing categories remain unchanged.
+* **Organization** — the organization that the category is assigned to. You cannot modify the organization for the existing categories. You cannot specify the parent from the organization other than the organization of the child. The column is available if the import is initiated in the global organization (valid for the multi-org Enterprise Edition applications).
+
+#### NOTE
+Check all columns when importing the .csv file. If you do not want to modify the values of a certain field (e.g., `shortDescriptions`), delete all columns related to it (e.g., `shortDescriptions.default.value`, `shortDescriptions.default.fallback`, `shortDescriptions.English.value`, `shortDescriptions.English.fallback`). Otherwise, the import will overwrite existing values with empty ones. The only exceptions are the `parentCategory.id` and `parentCategory.title`, as described above.

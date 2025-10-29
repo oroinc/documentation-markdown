@@ -1,0 +1,89 @@
+<a id="frontstore-guide-orders-checkout-multi-page-checkout"></a>
+
+# Navigate through Multi Page Checkout in the Storefront
+
+#### HINT
+This section is part of the [Checkout Configuration Concept Guide](../../concept-guides/administration/checkout/index.md#checkout-management-concept-guide) topic that provides a general understanding of single-page and multi-page checkout concepts.
+
+**Step 1: Billing Information**
+
+1. Enter billing information for the order by selecting an existing address from the address book, or creating a new one.
+2. If you wish to use the provided billing address for shipping, select the **Ship to this address** checkbox.
+3. Click **Continue** to proceed to the next step.
+
+**Step 2: Shipping Information**
+
+#### NOTE
+If the **Ship to this address** checkbox has been selected in the Billing Information step, this step will be skipped.
+
+1. Enter shipping information for the order by selecting an existing address from the address book, or creating a new one.
+
+   If the **Ship to this address** checkbox has been checked in the Billing Information step, the provided address will be automatically selected in the Shipping Information step.
+
+   To use billing information for shipping, select the **Use billing address** checkbox.
+2. Click **Continue** to proceed to the next step.
+
+**Step 3: Shipping Method**
+
+1. Provide a [shipping method](../../concept-guides/administration/shipping-configuration/index.md#user-guide-shipping) by selecting one from the list of the available methods.
+   ![image](user/img/system/workflows/checkout/Shipping_Info.png)
+
+   #### NOTE
+   If shipping discounts apply to the order, this will be displayed in the summary.
+   ![image](user/img/marketing/promotions/ShippingDiscountFront.png)
+2. Click **Continue** to proceed to the next step.
+
+**Step 4: Payment**
+
+1. Choose a suitable [payment method](../../concept-guides/administration/payment-configuration/index.md#user-guide-payment) by selecting it from the list of all available methods.
+   ![image](user/img/system/workflows/checkout/Payment.png)
+2. Click **Continue** to proceed to the next step.
+
+**Step 5: Order Review**
+
+1. Once all the necessary information has been provided, review the order details.
+
+> #### IMPORTANT
+> Check SKUs, quantities, price, subtotal, shipping and total cost.
+
+> If not all of the items are visible, click **Show Less Items** on the bottom right of the item list.
+
+> #### TIP
+> You can edit the order content if required. To do this, click ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) on the top right of the item list. The shopping list page will open. Make the required changes and then click **Checkout**. You will be redirected back to the order you have been submitting.
+1. If required, provide additional order options:
+   * **Do not ship later than** — Click the field to select the date on which the order expires.
+   * **PO Number** — Enter the purchase order number for reference.
+   * **Notes** — Provide any additional information regarding the order.
+   * **Delete this shopping list after ordering** — Select this checkbox to remove the shopping list after the order is completed.
+2. To submit the order, click **Submit Order** at the bottom of the page.
+   ![image](user/img/system/workflows/checkout/Order_Review.png)
+
+#### TIP
+Until you have submitted the order, you can return back and edit any step using the step list on the left of the page:
+
+* Click the step that you want to return to. In this case, *all the changes made at the later steps will be lost*.
+* Click ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) next to the step that you want to edit. In this case, *all the changes made at the later steps will be preserved*.
+  ![image](user/img/system/workflows/checkout/EditInfo.png)
+
+#### TIP
+It is also possible to amend the order content until the order is submitted. To do this, click ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) **Edit Items** in the right corner of the **Order Review** section. You will be redirected back to the shopping list page.
+
+![image](user/img/system/workflows/checkout/edit-items.png)
+
+<!-- A -->
+<!-- B -->
+<!-- C -->
+<!-- D -->
+<!-- E -->
+<!-- F -->
+<!-- G -->
+<!-- H -->
+<!-- I -->
+<!-- L -->
+<!-- M -->
+<!-- P -->
+<!-- R -->
+<!-- S -->
+<!-- T -->
+<!-- U -->
+<!-- Z -->

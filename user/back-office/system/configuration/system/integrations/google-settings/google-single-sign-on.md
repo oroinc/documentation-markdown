@@ -1,0 +1,85 @@
+<a id="user-guide-google-single-sign-on"></a>
+
+# Configure Google Single Sign-On in the Back-Office
+
+Oro application supports Google Single Sign-On. This means that for a user that has the same primary email in the Oro application and Google accounts, it is enough to log in only once during a session.
+
+## Google Side
+
+### Create Project
+
+To configure single sign-on on the Google side:
+
+1. Open <a href="https://console.developers.google.com/start" target="_blank">Google API Console</a>.
+2. Click **My Project** selector in the top left corner to open a popup form.
+3. Click **New Project** at the top right.
+   ![Create a project in the Google API console](user/img/google/create_project.png)
+4. Define the **Project Name** and select the **Location**.
+5. Click **Create**.
+   ![A new project page](user/img/google/new_project.png)
+
+### Create Credentials
+
+1. Navigate to **API & Services > Credentials** in the menu on the left.
+2. Click **+ Create Credentials** and then click **0Auth client ID.**
+   ![The Credentials menu details](user/img/google/create_credentials.png)
+3. To create an OAuth client ID, set the **Application Type** to **Web Application** to load more settings depending on the selected type.
+4. Enter the **Name** of your OAuth client.  This name is only used to identify the client in the console and will not be shown to end users.
+5. For **Authorized JavaScript Origins**, enter the URL of the Oro application instance for which single sign-on is being enabled.
+6. **Authorized Redirect URIs** are unified resource names used for the interaction between Google and the Oro application instance. It is recommended to add the following two values:
+   * [Oro application instance URL]/admin/login/check-google
+   * [Oro application instance URL]/index.php/admin/login/check-google
+
+![The details you need to provide to configure to create OAuth client ID](user/img/google/create_credentials_form.png)
+
+#### NOTE
+Please pay attention to the **Authorized Redirect URIs**, the value from the **System > Configuration > Integrations > Google Settings > Google Integration Settings > Redirect URI** must be added in Authorized Redirect URIs configuration.
+
+1. Click **Create**.
+2. Your **Client ID** and **Client Secret** are generated. For security reasons, the Client Secret is displayed only once – immediately after you have created a new OAuth client. You cannot view the Client Secret anywhere in the application once you close this dialog, so make sure you save it somewhere safe to access it later.
+
+![OAuth client ID and secret](user/img/google/id_secret.png)
+
+The client ID can always be accessed from the **Google Auth Platform > Clients** main menu.
+
+![OAuth client ID under Google Auth Platform > Clients menu](user/img/google/clients_id_secret.png)
+
+## Oro Application Side
+
+### Configure Google Single Sign-On
+
+To configure the integration with Google Single Sign-On in your Oro application:
+
+1. Navigate to **System > Configuration > Integrations > Google Settings** in the main menu.
+2. Make sure that the information in the **Google Integration Settings** and **OAuth 2.0 for Gmail emails sync** is filled as described in the [Configure Google Integration Settings](google-integration.md#system-configuration-integrations-google) topic.
+3. Define the following fields for **Google Sign-On:**
+   * **Enable** — Check **Enable** to activate Google Single Sign-on.
+   * **Domains** — Enter a comma-separated list of email domains allowed to use Google SSO (e.g., domains associated with your company). It limits Google SSO access to users with email addresses matching these domains. Leave the field empty to allow any domain.
+   * **Disable Non-SSO Login for Listed Domains** — When enabled, users with email addresses matching the domains specified in the *Domains* field will be required to sign in using **Google SSO only**. Username and password login will be restricted for these users.
+
+![Global Google integration settings](user/img/system/config_system/google_integration_new.png)
+
+### Log in with Google
+
+When a user opens the login page of the instance with the enabled single sign-on capability, the **Login Using Google** link is displayed.
+
+![The login page with the link to log in via google](user/img/google/login_using_google.png)
+
+If the user is not logged into their Google account, then clicking the button triggers opening a usual Google login page.
+
+As soon as the user logs into their Google account, they need to accept the policy of using the application.
+
+As soon as the user has logged into their Google account, a request to use the account in order to login to the Oro application is displayed (details defined for the consent screen is used).
+
+![Google account page](user/img/google/google_connection.jpg)
+
+Now, a Google-registered user can click the **Login using Google** button to enter the Oro application.
+
+#### NOTE
+Note that the email used for the Google account and the primary email of the user in the Oro application must be the same.
+
+**Related Topics**
+
+* [Configure Global Google Settings](index.md#admin-configuration-integrations-google)
+* [Configure Google Integration Settings](google-integration.md#system-configuration-integrations-google)
+* [Configure Google Tag Manager Integration](../../../../integrations/gtm/index.md#gtm-ga-4-integration)
