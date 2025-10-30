@@ -30,10 +30,10 @@ oro_customer:
 
 Additional notes:
 
-- You can use the <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/WebsiteBundle/Api/Processor/SetWebsite.php" target="_blank">SetWebsite</a> processor to assign an entity to the current website.
-- You can use the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/CurrencyBundle/Api/Processor/SetCurrency.php" target="_blank">SetCurrency</a> processor to set the current currency to an entity.
-- You can use the <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/CustomerBundle/Api/Processor/SetCustomer.php" target="_blank">SetCustomer</a> processor to assign an entity to the current customer.
-- You can use the <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/CustomerBundle/Api/Processor/SetCustomerUser.php" target="_blank">SetCustomerUser</a> processor to assign an entity to the current customer user.
+- You can use the <a href="https://github.com/oroinc/customer-portal/tree/6.1/src/Oro/Bundle/WebsiteBundle/Api/Processor/SetWebsite.php" target="_blank">SetWebsite</a> processor to assign an entity to the current website.
+- You can use the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/CurrencyBundle/Api/Processor/SetCurrency.php" target="_blank">SetCurrency</a> processor to set the current currency to an entity.
+- You can use the <a href="https://github.com/oroinc/customer-portal/tree/6.1/src/Oro/Bundle/CustomerBundle/Api/Processor/SetCustomer.php" target="_blank">SetCustomer</a> processor to assign an entity to the current customer.
+- You can use the <a href="https://github.com/oroinc/customer-portal/tree/6.1/src/Oro/Bundle/CustomerBundle/Api/Processor/SetCustomerUser.php" target="_blank">SetCustomerUser</a> processor to assign an entity to the current customer user.
 
 An example of registration of such processors:
 

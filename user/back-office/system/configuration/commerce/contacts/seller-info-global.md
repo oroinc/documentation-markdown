@@ -2,6 +2,9 @@
 
 # Configure Global Seller Info Settings
 
+#### NOTE
+The Seller Info settings are available as of OroCommerce version 6.1.1.
+
 Some business information, such as your company name, contact details, and tax ID, may need to appear in customer-facing materials such as emails and invoices. You can now manage these details directly from the system configuration.
 
 #### NOTE

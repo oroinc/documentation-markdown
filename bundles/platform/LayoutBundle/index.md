@@ -2,7 +2,7 @@
 
 # OroLayoutBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/LayoutBundle" target="_blank">OroLayoutBundle</a> integrates the OroLayout Component into OroPlatform and enables layout themes definition and configuration which supports building layouts based on the configuration of other bundles.
+<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/LayoutBundle" target="_blank">OroLayoutBundle</a> integrates the OroLayout Component into OroPlatform and enables layout themes definition and configuration which supports building layouts based on the configuration of other bundles.
 
 ## Related Documentation
 

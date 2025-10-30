@@ -2,7 +2,7 @@
 
 # OroUIBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/UIBundle" target="_blank">OroUIBundle</a> defines the architecture of the front-end part of Oro application and provides tools that ensure coordinated work of the architecture parts.
+<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/UIBundle" target="_blank">OroUIBundle</a> defines the architecture of the front-end part of Oro application and provides tools that ensure coordinated work of the architecture parts.
 
 ## Configuration Settings
 

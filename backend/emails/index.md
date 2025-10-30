@@ -126,14 +126,14 @@ You can manually create an email by creating a new instance of the `Email` model
 
 #### The `EmailModelBuilder` Class
 
-An alternative approach to manually creating `Email` models is to use the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php" target="_blank">EmailModelBuilder</a> helper class which offers several methods to create new emails based on existing data:
+An alternative approach to manually creating `Email` models is to use the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php" target="_blank">EmailModelBuilder</a> helper class which offers several methods to create new emails based on existing data:
 
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php#L102" target="_blank">createEmailModel</a> - Create a new email or add missing data to an existing email.
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php#L136" target="_blank">createReplyEmailModel</a> - Create an email that is a response to an existing email.
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php#L169" target="_blank">createReplyAllEmailModel</a> - Create an email that responds to all recipients and the sender of an existing email.
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php#L215" target="_blank">createForwardEmailModel</a> - Create a new email that forwards an existing email.
+* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php#L102" target="_blank">createEmailModel</a> - Create a new email or add missing data to an existing email.
+* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php#L136" target="_blank">createReplyEmailModel</a> - Create an email that is a response to an existing email.
+* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php#L169" target="_blank">createReplyAllEmailModel</a> - Create an email that responds to all recipients and the sender of an existing email.
+* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php#L215" target="_blank">createForwardEmailModel</a> - Create a new email that forwards an existing email.
 
-After emails have been processed (see below), they will be persisted to the database. You can create an email model based on such a persisted entity by using the useful <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php" target="_blank">EmailModelBuilder</a> helper class:
+After emails have been processed (see below), they will be persisted to the database. You can create an email model based on such a persisted entity by using the useful <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php" target="_blank">EmailModelBuilder</a> helper class:
 
 *src/Acme/Bundle/DemoBundle/Controller/EmailController.php*
 ```php

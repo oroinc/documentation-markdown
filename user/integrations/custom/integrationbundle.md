@@ -2,7 +2,7 @@
 
 # IntegrationBundle
 
-<a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/IntegrationBundle/" target="_blank">OroIntegrationBundle</a> introduces a framework that enables developers to create integrations between the OroPlatform-based and third-party applications. It also provides UI for the application users to manage the implemented integrations.
+<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/IntegrationBundle/" target="_blank">OroIntegrationBundle</a> introduces a framework that enables developers to create integrations between the OroPlatform-based and third-party applications. It also provides UI for the application users to manage the implemented integrations.
 
 The IntegrationBundle-Based integration approach is a powerful tool for achieving integration with third-party systems. This approach is particularly well-suited for integrating payment and shipping methods, as it ensures that these critical functions are tightly integrated with the rest of your application.
 

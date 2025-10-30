@@ -528,7 +528,7 @@ New technologies empower digital transformation in key industries such as manufa
 * <a href="https://www.oreilly.com/library/view/web-performance-tuning/059600172X/" target="_blank">Web Performance Tuning: 4.2. Latency and Throughput</a>
 * [Standard Search Index Type](#search-index-db-from-md)
 * [Elasticsearch support for Standard Index Type](../../../../bundles/platform/ElasticSearchBundle/index.md#elastic-search)
-* <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/WebsiteSearchBundle/README.md" target="_blank">Website Search Index Type</a>
+* <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/WebsiteSearchBundle/README.md" target="_blank">Website Search Index Type</a>
 
 **Table of Contents**
 

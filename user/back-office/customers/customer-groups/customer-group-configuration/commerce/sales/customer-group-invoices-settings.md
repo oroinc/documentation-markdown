@@ -2,6 +2,9 @@
 
 # Configure Invoice Settings per Customer Group
 
+#### NOTE
+The Invoices functionality is available as of OroCommerce version 6.1.3.
+
 You can configure invoice-related sales [globally](../../../../../system/configuration/commerce/sales/global-invoices.md#configuration-guide-commerce-configuration-sales-invoices), per organization, [website](../../../../../system/websites/web-configuration/commerce/sales/website-invoices.md#user-guide-system-configuration-commerce-sales-invoices-per-website), customer group, and [customer](../../../../customers/customer-configuration/commerce/sales/customer-invoices-settings.md#user-guide-customers-invoice-settings).
 
 To configure invoices per customer group:

@@ -2,7 +2,7 @@
 
 # OroFormBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/FormBundle" target="_blank">OroFormBundle</a> implements a set of form types and validation rules for the application data entry. The bundle allows to reuse specialized form elements and improves the data entry experience.
+<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/FormBundle" target="_blank">OroFormBundle</a> implements a set of form types and validation rules for the application data entry. The bundle allows to reuse specialized form elements and improves the data entry experience.
 
 ## Related Documentation
 

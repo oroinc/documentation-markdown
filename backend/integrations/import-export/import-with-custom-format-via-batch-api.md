@@ -33,7 +33,7 @@ entity_name: # the name of entity in current file
             entity_path: businessUnitOwner.name # specifies a custom path from which to retrieve data from the entity when generating the import template.
 ```
 
-As example of existing configuration, see the configuration of the <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/OrderBundle/Resources/config/oro/external_order_import.yml" target="_blank">External Orders Import</a>.
+As example of existing configuration, see the configuration of the <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/Oro/Bundle/OrderBundle/Resources/config/oro/external_order_import.yml" target="_blank">External Orders Import</a>.
 
 ## Configure the Mapping
 
@@ -59,7 +59,7 @@ acme_demo.importexport.converter.my_import_mapping_provider:
 
 In some cases, you may need to add or modify the mapping dynamically. For this, you can register additional mapping providers using the same service tag that was used to add the main configuration.
 
-The class of such a provider must implement the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ImportExportBundle/Converter/ComplexData/Mapping/ComplexDataMappingProviderInterface.php" target="_blank">ComplexDataMappingProviderInterface</a> interface. An example of such a provider is <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/OrderBundle/ImportExport/Converter/OrderStatusMappingProvider.php" target="_blank">OrderStatusMappingProvider</a>.
+The class of such a provider must implement the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ImportExportBundle/Converter/ComplexData/Mapping/ComplexDataMappingProviderInterface.php" target="_blank">ComplexDataMappingProviderInterface</a> interface. An example of such a provider is <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/Oro/Bundle/OrderBundle/ImportExport/Converter/OrderStatusMappingProvider.php" target="_blank">OrderStatusMappingProvider</a>.
 
 ## Configure the Converter
 

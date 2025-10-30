@@ -2,7 +2,7 @@
 
 # Entity Manager
 
-Class <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityBundle/ORM/OroEntityManager.php" target="_blank">OroEntityManager</a> is used to extend some native Doctrine Entity Manager functionality. If any other modifications are required, your class should extend OroEntityManager instead of the Doctrine Entity Manager.
+Class <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/ORM/OroEntityManager.php" target="_blank">OroEntityManager</a> is used to extend some native Doctrine Entity Manager functionality. If any other modifications are required, your class should extend OroEntityManager instead of the Doctrine Entity Manager.
 
 **Additional ORM Lifecycle Events**
 

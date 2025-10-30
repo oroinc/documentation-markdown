@@ -2,7 +2,7 @@
 
 # OroAnalyticsBundle
 
-<a href="https://github.com/oroinc/crm/tree/master/src/Oro/Bundle/AnalyticsBundle" target="_blank">OroAnalyticsBundle</a> provides a framework for developers to enable analytical metrics in Oro applications.
+<a href="https://github.com/oroinc/crm/tree/6.1/src/Oro/Bundle/AnalyticsBundle" target="_blank">OroAnalyticsBundle</a> provides a framework for developers to enable analytical metrics in Oro applications.
 
 The bundle implements the <a href="https://en.wikipedia.org/wiki/RFM_(market_research)" target="_blank">RFM</a> metrics and enables users to configure the score for the metrics’ parameters for various sales channels. It also enables users to see RFM metrics on the account and customer view pages or build custom reports based on the calculated RFM metrics data.
 

@@ -1,8 +1,5 @@
 <a id="cloud-maintenance-mq"></a>
 
-#### IMPORTANT
-You are viewing the upcoming documentation for OroCloud, scheduled for release later in 2025. For accurate and up-to-date information, please refer only to the documentation of <a href="https://doc.oroinc.com/cloud/" target="_blank">the latest LTS version</a>.
-
 # MessageQueue Configuration in OroCloud
 
 Message queues enable asynchronous processing of Oro application data. This means that the application is able to process data in the background without affecting user experience. Here are some examples of the message queue processing used in OroCommerce:

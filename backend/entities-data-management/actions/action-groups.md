@@ -57,7 +57,7 @@ Note that **Action group** runs with empty context data. For example, if a calle
 
 ## Call from PHP
 
-All named action groups are internally gathered under the oro_action.action_group_registry registry service which is the instance of the Oro\\Bundle\\ActionBundle\\Model\\ActionGroupRegistry class. It has simple api to get the <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ActionBundle/Model/ActionGroup.php" target="_blank">action group</a> configured instance and perform its execution by applying the \\Oro\\Bundle\\ActionBundle\\Model\\ActionGroup::execute method with proper parameters.
+All named action groups are internally gathered under the oro_action.action_group_registry registry service which is the instance of the Oro\\Bundle\\ActionBundle\\Model\\ActionGroupRegistry class. It has simple api to get the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ActionBundle/Model/ActionGroup.php" target="_blank">action group</a> configured instance and perform its execution by applying the \\Oro\\Bundle\\ActionBundle\\Model\\ActionGroup::execute method with proper parameters.
 
 ## Recommendations
 
@@ -67,7 +67,7 @@ In the above-mentioned actions block, we have used the action called @flash_mess
 
 ## Using Results of Action Group
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Component/Action/Action/ActionInterface.php" target="_blank">\`ActionInterface\`</a> implements most actions and stores the results of these actions under their execution context object. Usually, it is one of the <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Component/Action/Model/AbstractStorage.php" target="_blank">\`AbstractStorage\`</a> child instances. So all the results of the action group are accessed from the context data passed to its execute(…) method.
+<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/Action/Action/ActionInterface.php" target="_blank">\`ActionInterface\`</a> implements most actions and stores the results of these actions under their execution context object. Usually, it is one of the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/Action/Model/AbstractStorage.php" target="_blank">\`AbstractStorage\`</a> child instances. So all the results of the action group are accessed from the context data passed to its execute(…) method.
 
 Here, there are two @run_action_group configuration options: results (transfers data from the action group context to the caller context separately) and result (allocates all context of the executed action group under a desired node of the caller context).
 

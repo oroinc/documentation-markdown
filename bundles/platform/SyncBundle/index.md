@@ -2,7 +2,7 @@
 
 # OroSyncBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/SyncBundle/" target="_blank">OroSyncBundle</a> uses GosWebSocketBundle to enable real-time websocket notifications between an Oro application server and users’ browsers.
+<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/SyncBundle/" target="_blank">OroSyncBundle</a> uses GosWebSocketBundle to enable real-time websocket notifications between an Oro application server and users’ browsers.
 
 Out-of-the-box, OroSyncBundle triggers flash notifications about the outdated content if several users try to edit the same entity record simultaneously. It also sends flash notifications to all application site visitors once a developer turns on the system maintenance mode by a console’s CLI tool.
 

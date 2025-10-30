@@ -2,7 +2,7 @@
 
 # OroFeatureToggleBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/FeatureToggleBundle" target="_blank">OroFeatureToggleBundle</a> provides the ability for the application users to enable or disable application features using the system configuration UI, and assists developers in managing the application flow, depending on the status of this feature.
+<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/FeatureToggleBundle" target="_blank">OroFeatureToggleBundle</a> provides the ability for the application users to enable or disable application features using the system configuration UI, and assists developers in managing the application flow, depending on the status of this feature.
 
 ## Related Documentation
 

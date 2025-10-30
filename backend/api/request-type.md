@@ -11,7 +11,7 @@ You need to have a different set of processors for API requests, such as REST AP
 The concept of the request type in ApiBundle reflects all mentioned above and
 enables you to configure shared and specific processors easily.
 
-Take a look at the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Request/RequestType.php" target="_blank">RequestType</a> class. It was designed to contain different aspects
+Take a look at the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Request/RequestType.php" target="_blank">RequestType</a> class. It was designed to contain different aspects
 of a request; the combination of these aspects represents a specific request type.
 For instance, if this class contains both `rest` and `json_api`, it can be interpreted as a request type for REST API that conforms to the JSON:API specification. If you add the `my_erp` aspect to this request type, it means that it represents REST API specially designed for the integration with the “My ERP” system and is based on the JSON:API specifications. If, for example, you have two types of REST API, one that conforms to the JSON:API specification and another one that conforms to the GraphQL specification, then the RequestType object may contain `rest` and `json_api` for JSON:API requests and `rest` and `graphql` for GraphQL requests.
 

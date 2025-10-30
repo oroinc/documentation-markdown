@@ -2,7 +2,7 @@
 
 # OroImapBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ImapBundle" target="_blank">OroImapBundle</a> enables the data synchronization between local user mailboxes provided by OroEmailBundle and remote
+<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ImapBundle" target="_blank">OroImapBundle</a> enables the data synchronization between local user mailboxes provided by OroEmailBundle and remote
 email servers using the capabilities of the IMAP protocol.
 
 ## Related Documentation

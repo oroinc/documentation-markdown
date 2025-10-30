@@ -24,7 +24,7 @@ has basic @mixins, @functions, variables, color palette, typography, settings an
 
 Assets for each theme are located in a particular theme folder, e.g., `BundleName/Resources/public/{theme_name}/scss/`.
 
-Core styles are located in <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/UIBundle" target="_blank">UIBundle</a>: *UIBundle/Resources/public/default/scss/*.
+Core styles are located in <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/UIBundle" target="_blank">UIBundle</a>: *UIBundle/Resources/public/default/scss/*.
 
 CSS structure has three folders, **components**, **settings**, and **variables**:
 

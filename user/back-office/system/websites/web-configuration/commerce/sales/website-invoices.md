@@ -2,6 +2,9 @@
 
 # Configure Invoice Settings per Website
 
+#### NOTE
+The Invoices functionality is available as of OroCommerce version 6.1.3.
+
 You can configure invoice-related sales [globally](../../../../configuration/commerce/sales/global-invoices.md#configuration-guide-commerce-configuration-sales-invoices), [per organization](../../../../user-management/organizations/org-configuration/commerce/sales/organization-invoices.md#user-guide-system-configuration-commerce-sales-invoices-org), website, [customer group](../../../../../customers/customer-groups/customer-group-configuration/commerce/sales/customer-group-invoices-settings.md#user-guide-customer-group-invoice-settings) and [customer](../../../../../customers/customers/customer-configuration/commerce/sales/customer-invoices-settings.md#user-guide-customers-invoice-settings).
 
 To configure invoices per website:
@@ -16,7 +19,7 @@ For faster navigation between the configuration menu sections, use [Quick Search
 ![The invoice configuration settings per website](user/img/sales/invoices/invoice_website.png)
 1. In the **General** section, toggle the following options:
    * **Show Invoices in the Storefront** — enable this option to display invoices in the storefront.
-2. In the **Invoice PDF** section, configure the following options:
+2. In the **Invoice PDF** section, configure the following options (available as of OroCommerce v.6.1.5):
    * **Generate PDF When Invoice Becomes Posted** — Enable the option to generate a PDF file when the invoice is marked as *Posted*. Once created, the PDF will not be re-created, even if the invoice is modified later.
    * **Enable Invoice PDF Download in Customer Portal** — Enable the option to display a **Download** button on invoice pages in the storefront, if a PDF file has been created and attached to the invoice.
 3. In the **Payments** section, toggle the following options:

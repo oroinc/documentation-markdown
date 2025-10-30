@@ -15,7 +15,7 @@ OroUIBundle declares some mediator handlers. It’s preferable to use indirect m
 | changeURL       | Accepts route and options for Backbone.history.navigate, allows to change url without dispatching new route |
 
 #### SEE ALSO
-See <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBundle/Resources/public/js/app/application.js" target="_blank">oroui/js/app/application</a> module for details.
+See <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/UIBundle/Resources/public/js/app/application.js" target="_blank">oroui/js/app/application</a> module for details.
 
 ## Page Controller
 
@@ -27,7 +27,7 @@ See <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBun
 | submitPage     | Performs submit form action via save call for a model, accepts options object with packed in data                      |
 
 #### SEE ALSO
-See <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBundle/Resources/public/js/app/controllers/page-controller.js" target="_blank">oroui/js/app/controllers/page-controller</a> module for details
+See <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/UIBundle/Resources/public/js/app/controllers/page-controller.js" target="_blank">oroui/js/app/controllers/page-controller</a> module for details
 
 ## Messenger
 
@@ -39,7 +39,7 @@ See <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBun
 | showErrorMessage | messenger.showErrorMessage         |
 
 #### SEE ALSO
-See <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBundle/Resources/public/js/messenger.js" target="_blank">oroui/js/messenger</a> module for details
+See <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/UIBundle/Resources/public/js/messenger.js" target="_blank">oroui/js/messenger</a> module for details
 
 ## Widgets (Widget Manager)
 
@@ -49,7 +49,7 @@ See <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBun
 | widgets:getByAliasAsync | widgetManager.getWidgetInstanceByAlias | Asynchronously fetches widget instance its alias    |
 
 #### SEE ALSO
-See <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBundle/Resources/public/js/widget/widget-manager.js" target="_blank">oroui/js/widget-manager</a> module for details
+See <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/UIBundle/Resources/public/js/widget/widget-manager.js" target="_blank">oroui/js/widget-manager</a> module for details
 
 ## PageLoadingMaskView
 

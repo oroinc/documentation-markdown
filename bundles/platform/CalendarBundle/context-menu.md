@@ -47,7 +47,7 @@ You can define the following attributes:
   </li>
   ```
 
-In the template, provide the `<li{{ oro_menu.attributes(itemAttributes) }}>` tag. If the template was not defined, the item is displayed the way it is presented in the <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Resources/views/Calendar/Menu/contextMenu.html.twig" target="_blank">context menu template</a>.
+In the template, provide the `<li{{ oro_menu.attributes(itemAttributes) }}>` tag. If the template was not defined, the item is displayed the way it is presented in the <a href="https://github.com/oroinc/OroCalendarBundle/tree/6.1/Resources/views/Calendar/Menu/contextMenu.html.twig" target="_blank">context menu template</a>.
 
 **Module** receives the following values from **options** into **initialize**:
 

@@ -36,6 +36,10 @@ To configure your current storefront theme:
   > ![Illustrating the selected 5 content widgets on the customer user’s Dashboard page](user/img/system/theme-configuration/recommended-products-widgets.png)
 * **Promotional Content Block (1-2)** — Select a [content block](../../marketing/content-blocks/index.md#user-guide-landing-pages-marketing-content-blocks) from the dropdown list to display on the customer user’s [Dashboard](../../../storefront/account/dashboard/index.md#storefront-dashboard) page. You can select up to two content blocks. This section can include important information such as news, blog posts, or other relevant content.
   > ![Illustrating the selected 5 content widgets on the customer user’s Dashboard page](user/img/system/theme-configuration/dashboard-promotional-block.png)
+
+#### NOTE
+The Scorecard content widget is available as of OroCommerce version 6.1.2.
+
 * **Customer Dashboard Scorecard (1-4)** — Select a [scorecard content widget](../../marketing/content-widgets/index.md#content-widgets-dashboard-scorecard-widget) from the list of predefined widgets to display on the customer user’s [Dashboard](../../../storefront/account/dashboard/index.md#storefront-dashboard) page. You can select up to four content widgets. Only the widgets of the **Scorecard** type are displayed in the dropdown list. The scorecards represent the information about the total number of customer users under the current customer, the number of shopping lists, open Requests for Quote (excluding cancelled ones), and the total value of all non-cancelled orders.
   > ![Illustration of the Scorecard widget in the storefront](user/img/marketing/content_widgets/scorecard.png)
 * **Promotional Content** — Select a [content block](../../marketing/content-blocks/index.md#user-guide-landing-pages-marketing-content-blocks) from the dropdown list to display it at the top of the storefront header.

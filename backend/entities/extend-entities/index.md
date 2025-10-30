@@ -7,7 +7,7 @@ attributes to existing entities. Of course, one can extend an entity class and a
 fields and associations in the subclass. However, this approach does not work anymore when an entity should be
 extended by different modules.
 
-To solve this, you can use <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/EntityExtendBundle" target="_blank">EntityExtendBundle</a> which offers the following features:
+To solve this, you can use <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityExtendBundle" target="_blank">EntityExtendBundle</a> which offers the following features:
 
 * Dynamically add fields to entities through configuration.
 * Users with appropriate permissions can add or remove dynamic fields from entities in the user

@@ -1,8 +1,5 @@
 <a id="orocloud-maintenance-advanced-use"></a>
 
-#### IMPORTANT
-You are viewing the upcoming documentation for OroCloud, scheduled for release later in 2025. For accurate and up-to-date information, please refer only to the documentation of <a href="https://doc.oroinc.com/cloud/" target="_blank">the latest LTS version</a>.
-
 # Advanced Configuration
 
 ## Deployment and Maintenance Configuration
@@ -69,7 +66,7 @@ orocloud_options:
 
 **pre_upgrade_commands, post_upgrade_commands, pre_maintenance_commands, post_maintenance_commands**
 
-Set up notifications using [Maintenance mode notifications](../../bundles/platform/NotificationBundle/index.md#bundle-docs-platform-notification-bundle) for [Upgrades](run-upgrades.md#orocloud-maintenance-use-upgrade) and [Maintenance Mode](../../backend/websockets/recipes/maintenance-mode.md#dev-cookbook-system-websockets-maintenance-mode).
+Set up notifications using [Maintenance mode notifications](../../bundles/platform/NotificationBundle/index.md#bundle-docs-platform-notification-bundle) for [Upgrades](basic-use.md#orocloud-maintenance-use-upgrade) and [Maintenance Mode](../../backend/websockets/recipes/maintenance-mode.md#dev-cookbook-system-websockets-maintenance-mode).
 
 ```yaml
 ---
@@ -82,12 +79,12 @@ orocloud_options:
 
     # Executed after `oro:platform:update` dry-run check.
     # Executed before `oro:platform:update --force` or customized `upgrade_commands` commands, `oro:maintenance:lock` or `lexik:maintenance:lock` commands.
-    # Works with Upgrade With Maintenance using `orocloud-cli upgrade` only.
+    # Works with Upgrade With Downtime using `orocloud-cli upgrade` only.
     pre_maintenance_commands:
       - 'oro:maintenance-notification --message=Maintenance\ start --subject=At\ UAT'
 
     # Executed after `oro:platform:update --force` or customized `upgrade_commands` commands, `oro:maintenance:unlock` or `lexik:maintenance:unlock` commands.
-    # Works with Upgrade With Maintenance using `orocloud-cli upgrade` only.
+    # Works with Upgrade With Downtime using `orocloud-cli upgrade` only.
     post_maintenance_commands:
       - 'oro:maintenance-notification --message=Maintenance\ finish --subject=At\ UAT'
 
@@ -134,7 +131,7 @@ Some options may also be omitted as they are added automatically:
 **[Deprecated] after_composer_install_commands**
 
 #### IMPORTANT
-Please avoid using it as it is incompatible with the [Application Packages Approach](run-upgrades.md#orocloud-maintenance-use-upgrade).
+Please avoid using it as it is incompatible with the [Application Packages Approach](basic-use.md#orocloud-maintenance-use-upgrade).
 
 ```yaml
 ---
@@ -785,4 +782,202 @@ Where:
 * **whitelist** is an array of whitelisted mail domains
 
 #### NOTE
-In production environments all domains are whitelisted. When you create a whitelist, it blocks sending email to any recipients, except for the ones in the whitelisted email domains.
+In production environments, all domains are whitelisted. When you create a whitelist, it blocks sending emails to any recipients, except those in the whitelisted email domains.
+
+<a id="orocloud-maintenance-advanced-use-sanitization-conf"></a>
+
+## Sanitizing Configuration
+
+#### IMPORTANT
+As of OroCommerce version 6.0 LTS, [Data Sanitization](../../backend/entities/sanitize.md#dev-sanitize) has replaced the previous Sanitizing Configuration functionality.
+
+Regardless of the Oro application type, each has its own default sanitize rules (sanitize.method.rawsql and sanitize.method.update). However, you can add your own rules, remove a specific default rule, or completely override them.
+
+The sanitize configuration is grouped under the sanitize node and supports the following sanitize methods:
+
+* **sanitize.rawsql_add_rules** — the list of raw SQL queries that help you to sanitize the existing data, for example, delete data using the TRUNCATE method, UPDATE data to apply any custom modification, etc.
+* **sanitize.rawsql_delete_rules** —  the list of raw SQL queries, which should be removed from the list in sanitize.method.rawsql. The format is the same as sanitize.rawsql_add.
+* **sanitize.rawsql_override_rules** —  the list of raw SQL queries, which will be applied to sanitizing data and override the default sanitize rule sanitize.method.rawsql. Please note that if this option is specified, all sanitize.rawsql_add_rules and sanitize.rawsql_delete_rules will be ignored. The format is the same as sanitize.rawsql_add_rules.
+* **sanitize.update_add_rules** — the mapping between specific table columns and the sanitizing method that should be used for the values.
+* **sanitize.update_delete_rules** — the list of rules which will be deleted from the list in sanitize.method.update. The format is the same as in sanitize.update_add_rules.
+* **sanitize.update_override_rules** — the list of rules which will be applied to sanitizing data and overriding the default sanitize rule sanitize.method.update. Please note that if this option is specified, all sanitize.update_add_rules and sanitize.update_delete_rules will be ignored. The format is the same as sanitize.update_add_rules.
+
+#### NOTE
+Please keep in mind that **ALL** values in rawsql_\*_rules and update_\*_rules **MUST** be wrapped in **SINGLE** quotes.
+
+```none
+---
+orocloud_options:
+  deployment:
+    sanitize:
+      rawsql_add_rules:
+        - 'TRUNCATE oro_message_queue_job_unique_test'
+      rawsql_delete_rules:
+        - 'TRUNCATE oro_tracking_visit_event'
+        - 'TRUNCATE oro_tracking_website CASCADE'
+      rawsql_override_rules:
+        - 'TRUNCATE oro_tracking_visit_event'
+        - 'TRUNCATE oro_tracking_website CASCADE'
+      update_add_rules:
+        - '{ table: oro_email_test, columns: [{name: subject, method: md5}, {name: from_name, method: md5}] }'
+      update_delete_rules:
+        - '{ table: oro_integration_transport, columns: [{name: api_key, method: md5},{name: api_user, method: md5},{name: api_token, method: md5}] }'
+      update_override_rules:
+        - '{ table: oro_integration_transport, columns: [{name: api_key, method: md5},{name: api_user, method: md5},{name: api_token, method: md5}] }'
+      custom_email_domain: 'example.com'
+```
+
+### General Conventions
+
+Please use the following conventions to design your sanitize.update_\* strategy:
+
+* Provide sanitizing configuration for every table as a new item:
+  ```none
+  update_add_rules:
+        - '{ table: oro_address, columns: [{name: street, method: md5}, {name: city, method: md5}, {name: postal_code, method: md5}, {name: last_name, method: md5}] }'
+        - '{ table: oro_business_unit, columns: [{name: email, method: email}, {name: name, method: md5}, {name: phone, method: md5}] }'
+  ```
+* Provide the table name in the table node.
+* In the columns section, provide an array of column names and sanitizing method pairs for all the columns that should be sanitized in the mentioned table.
+
+  For example:
+  ```none
+  columns: [{name: street, method: md5}, {name: city, method: md5} ]
+  ```
+* Provide the column name in the name node. Use the following sanitize methods/strategies (ensure they reasonably match the column type):
+  * md5 — Replaces the original string with the string hash.
+  * email — Replaces the email with the sanitized version of the email. When the sanitize.custom_email_domain configuration parameter is provided in the deployment.yml or orocloud.yaml files, the email strategy replaces the real email domain with the custom one provided as sanitize.custom_email_domain. If the custom domain is not provided, the sanitized email will be generated randomly. For example, example@example.com.
+  * date — Replaces the date values with the current date and time.
+  * attachment — Replaces the attachment file content with a dummy blank image.
+
+## Environments Data Synchronization
+
+Cloud-based environments may be synchronized by a user without filing a request to the support team.
+
+To retrieve a list of the environments to which you can sync the sanitized data from the current environment, run the following command:
+
+```none
+orocloud-cli dump:environments
+```
+
+#### NOTE
+If you have no environments in the output, ask the support team to update your environment settings.
+
+This means that you can push data from the current environment to the linked environment.
+
+```none
+orocloud-cli dump:create --help
+```
+
+```none
+Description:
+  Create an application environment data dump and copy it to another environment.
+
+Usage:
+  dump:create [options]
+
+Options:
+      --log=LOG                                Log to file
+      --downtime-duration[=DOWNTIME-DURATION]  (OPTIONAL) Downtime duration, by default 1 hour. Expected format: '{number}d{number}h{number}m'. Usage example: '1d3h15m' means 1 day 3 hours 15 minutes OR '30m' means 30 minutes.
+      --downtime-comment[=DOWNTIME-COMMENT]    Comment for provided custom downtime value. Required if [downtime-duration] provided. Wrap with double-quotes if it contains spaces.
+  -e, --environment[=ENVIRONMENT]              Name of the destination environment where data dump will be copied. To list all available environments, please use dump:environments command.
+  -c, --components[=COMPONENTS]                Comma-separated components list (without spaces) to be included in the dump. Allowed: db,ess,media,code. Default: db. The database is sanitized. If the media component is selected, it may take a long time. [default: "db"]
+  -i, --indices[=INDICES]                      Comma-separated Elastic indices list to be included in the dump. If not set, all indices will be included.
+  -h, --help                                   Display this help message
+  -q, --quiet                                  Do not output any message
+  -V, --version                                Display this application version
+      --ansi                                   Force ANSI output
+      --no-ansi                                Disable ANSI output
+  -n, --no-interaction                         Do not ask any interactive question
+  -v|vv|vvv, --verbose                         Increase the verbosity of messages: 1 for normal output, 2 for more verbose output, and 3 for debug
+
+* **option "--environment"** - Name of the destination environment where the data dump will be copied.
+
+* **option "--components"** - Comma-separated components list (without spaces) to be included in the dump. Allowed: db,ess,rpm. Default: db. The database is sanitized.
+
+* **option "--indices"** - Comma-separated Elastic indices list to be included in the dump. If not set, all indices will be included.
+```
+
+#### NOTE
+RabbitMQ messages sync is not supported. If the media component is selected, sync may take a long time.
+
+When the data push is done, you may start with the import in the target environment.
+
+To list all available data dumps that can be restored to the current environment, run:
+
+```none
+orocloud-cli dump:list --help
+```
+
+```none
+Description:
+  Lists all available data dumps that can be restored to the current environment.
+
+Usage:
+  dump:list [options]
+
+Options:
+      --log=LOG            Log to file
+      --page=PAGE          Page for display (25 items per page) [default: 1]
+      --per-page=PER-PAGE  Items per page [default: 25]
+  -h, --help               Display this help message
+  -q, --quiet              Do not output any message
+  -V, --version            Display this application version
+      --ansi               Force ANSI output
+      --no-ansi            Disable ANSI output
+  -n, --no-interaction     Do not ask any interactive question
+  -v|vv|vvv, --verbose     Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+```
+
+To restore it as is, run the following command in the target environment:
+
+```none
+orocloud-cli dump:load --help
+```
+
+```none
+Description:
+  Load application data from the dump to the current environment.
+
+Usage:
+  dump:load [options] [--] [<timestamp>]
+
+Arguments:
+  timestamp                                    The timestamp of the exported environment list items to be restored.
+
+Options:
+      --log=LOG                                Log to file
+      --downtime-duration[=DOWNTIME-DURATION]  (OPTIONAL) Downtime duration, by default 1 hour. Expected format: '{number}d{number}h{number}m'. Usage example: '1d3h15m' means 1 day 3 hours 15 minutes OR '30m' means 30 minutes.
+      --downtime-comment[=DOWNTIME-COMMENT]    Comment for provided custom downtime value. Required if [downtime-duration] provided. Wrap with double-quotes if it contains spaces.
+      --force[=FORCE]                          Force dump:load operation execution, otherwise the confirmation will be requested. [default: false]
+      --host[=HOST]                            Stop program(s) on specified job host only [ocom-vdrizheruk-dev2-app1], otherwise [all].
+  -c, --components[=COMPONENTS]                Comma-separated list (without spaces) of components for data to be loaded. Allowed: db,ess,media,code. Default: db. The database is sanitized. If the media component is selected, it may take a long time.
+      --skip-purge-media                       Skip purging media on fetch operation
+      --skip-prepare-app                       Skip prepare application operations. With this option, the application will not be usable after finishing the operation.
+      --flush-elasticsearch                    Flush ElasticSearch. All ElasticSearch data will be lost.
+      --run-base-reindex                       Run command [oro:search:reindex] in background.
+      --run-website-reindex                    Run command [oro:website-search:reindex] in background.
+  -h, --help                                   Display this help message
+  -q, --quiet                                  Do not output any message
+  -V, --version                                Display this application version
+      --ansi                                   Force ANSI output
+      --no-ansi                                Disable ANSI output
+  -n, --no-interaction                         Do not ask any interactive question
+  -v|vv|vvv, --verbose                         Increase the verbosity of messages: 1 for normal output, 2 for more verbose output, and 3 for debug
+
+* **option "--components"** - Comma-separated list (without spaces) of components for data to be loaded. Allowed: db,ess,rpm. Default: db. The database is sanitized.
+
+* **option "--skip-prepare-app"** - Skip prepare application operations. With this option, the application will not be usable after finishing the operation.
+
+* **option "--flush-elasticsearch"** - Flush ElasticSearch. All ElasticSearch data will be lost.
+
+* **option "--run-base-reindex"** - Run command [oro:search:reindex] in background to update search index for the specified entities.
+
+* **option "--run-website-reindex"** - Run command [oro:website-search:reindex] in background to rebuild storefront search index.
+```
+
+#### NOTE
+If during dump:load not all components(db,ess,rpm) are selected, the application may be not working. By default only db will be restored.
+
+#### NOTE
+During dump:load, the database is always sanitized.

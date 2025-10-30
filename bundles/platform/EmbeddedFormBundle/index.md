@@ -2,7 +2,7 @@
 
 # OroEmbeddedFormBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/EmbeddedFormBundle" target="_blank">OroEmbeddedFormBundle</a> enables the application users to create integrated forms using UI, embed them into third-party sites with inline or iframe codes, and collect the submitted information in the Oro application database.
+<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EmbeddedFormBundle" target="_blank">OroEmbeddedFormBundle</a> enables the application users to create integrated forms using UI, embed them into third-party sites with inline or iframe codes, and collect the submitted information in the Oro application database.
 
 This bundle has the following configuration options:
 

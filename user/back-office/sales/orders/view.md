@@ -27,7 +27,7 @@ available by default but depend on the order status:
 - **Add Coupon Code** — Click to [provide a coupon code](../../marketing/promotions/coupons/index.md#user-guide-marketing-promotions-coupons-edit-on-order-page).
 - **Edit** — Click to [edit an order](manage.md#user-guide-sales-orders-edit).
 - **Delete** — Click to [delete an order](manage.md#doc-orders-actions-delete).
-- **Download** — Click to download a PDF of the current order. Each time you click, a new PDF is generated with an updated timestamp.
+- **Download** — Click to download a PDF of the current order (available as of OroCommerce version 6.1.6). Each time you click, a new PDF is generated with an updated timestamp.
 - **More Actions** drop-down:
   - **Add Attachment** — Click to [attach a file to the order](../../getting-started/information-management/attachments.md#user-guide-activities-attachments).
   - **Add Note** — Click to [make a note regarding this order](../../getting-started/information-management/notes.md#user-guide-add-note).

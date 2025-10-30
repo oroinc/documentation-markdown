@@ -2,7 +2,7 @@
 
 # OroCommentBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/CommentBundle" target="_blank">OroCommentBundle</a> adds the Comments functionality which can be used with the application entities.
+<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/CommentBundle" target="_blank">OroCommentBundle</a> adds the Comments functionality which can be used with the application entities.
 
 ## Enable Comments for an Entity
 

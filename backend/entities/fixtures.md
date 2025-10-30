@@ -18,7 +18,7 @@ The order of fixtures can be changed using the standard Doctrine ordering or dep
 
 Some fixtures require execution time after time. An example is a fixture that uploads data on countries. Usually, if you add a new list with countries, you need to create a new data fixture that will upload this data. To avoid this, you can use versioned data fixtures.
 
-To make a fixture versioned, it must implement <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MigrationBundle/Fixture/VersionedFixtureInterface.php" target="_blank">VersionedFixtureInterface</a> and the getVersion method that returns a version of the fixture data.
+To make a fixture versioned, it must implement <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/MigrationBundle/Fixture/VersionedFixtureInterface.php" target="_blank">VersionedFixtureInterface</a> and the getVersion method that returns a version of the fixture data.
 
 Example:
 
@@ -66,7 +66,7 @@ In this example, the fixture will be loaded, and version 1.0 will be saved as it
 
 To have the possibility to load this fixture again, it must return a version greater than 1.0, for example, 1.0.1 or 1.1. The version number must be a PHP-standardized version number string. You can find more information about PHP-standardized version number string in the <a href="http://php.net/manual/en/function.version-compare.php" target="_blank">PHP manual</a>.
 
-If the fixture needs to know the last loaded version, it must implement <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MigrationBundle/Fixture/LoadedFixtureVersionAwareInterface.php" target="_blank">LoadedFixtureVersionAwareInterface</a> and the setLoadedVersion method:
+If the fixture needs to know the last loaded version, it must implement <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/MigrationBundle/Fixture/LoadedFixtureVersionAwareInterface.php" target="_blank">LoadedFixtureVersionAwareInterface</a> and the setLoadedVersion method:
 
 *src/Acme/Bundle/DemoBundle/Migrations/Data/ORM/LoadVersionedFavoriteData.php*
 ```php
@@ -117,7 +117,7 @@ class LoadVersionedFavoriteData extends AbstractFixture implements
 
 When refactoring, you may need to change the fixture namespace or class name.
 
-To prevent the fixture from loading again, this fixture must implement <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MigrationBundle/Fixture/RenamedFixtureInterface.php" target="_blank">RenamedFixtureInterface</a> and the getPreviousClassNames method, which returns a list of all previous fully specified class names.
+To prevent the fixture from loading again, this fixture must implement <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/MigrationBundle/Fixture/RenamedFixtureInterface.php" target="_blank">RenamedFixtureInterface</a> and the getPreviousClassNames method, which returns a list of all previous fully specified class names.
 
 Example:
 

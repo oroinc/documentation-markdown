@@ -2,7 +2,7 @@
 
 # OroMailChimpBundle
 
-<a href="https://github.com/oroinc/OroCRMMailChimpBundle" target="_blank">OroMailChimpBundle</a> provides <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/IntegrationBundle" target="_blank">integration</a> with <a href="https://mailchimp.com/" target="_blank">MailChimp</a> marketing automation platform for Oro applications.
+<a href="https://github.com/oroinc/OroCRMMailChimpBundle" target="_blank">OroMailChimpBundle</a> provides <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/IntegrationBundle" target="_blank">integration</a> with <a href="https://mailchimp.com/" target="_blank">MailChimp</a> marketing automation platform for Oro applications.
 
 The bundle enables users to create and configure the integration, schedule, or manually start synchronization between Oro application marketing lists and MailChimp subscribers list and import data of MailChimp email campaigns into the Oro application.
 

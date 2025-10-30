@@ -45,7 +45,7 @@ If your production is configured with a real-time log service (<a href="https://
 
 ### Console Messages Output
 
-Message Queue Consumer provides <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MessageQueueBundle/Log/Handler/ConsoleHandler.php" target="_blank">ConsoleHandler</a> that listens to console events and writes log messages to the console output depending on the console verbosity. It uses a <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MessageQueueBundle/Log/Formatter/ConsoleFormatter.php" target="_blank">ConsoleFormatter</a> to format the record before logging it. Record format pattern is described below:
+Message Queue Consumer provides <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/MessageQueueBundle/Log/Handler/ConsoleHandler.php" target="_blank">ConsoleHandler</a> that listens to console events and writes log messages to the console output depending on the console verbosity. It uses a <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/MessageQueueBundle/Log/Formatter/ConsoleFormatter.php" target="_blank">ConsoleFormatter</a> to format the record before logging it. Record format pattern is described below:
 
 ```php
 "%datetime% %start_tag%%channel%.%level_name%%end_tag%: %message%%context%%extra%\n"
@@ -57,8 +57,8 @@ An administrator must be informed about the state of consumers in the system (wh
 
 This is covered by the Consumer Heartbeat functionality that works in the following way:
 
-* On start and after every configured time period, each consumer calls the `tick` method of the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MessageQueueBundle/Consumption/ConsumerHeartbeat.php" target="_blank">ConsumerHeartbeat</a> service that informs the system that the consumer is alive.
-* The <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MessageQueueBundle/Command/ConsumerHeartbeatCommand.php" target="_blank">oro:cron:message-queue:consumer_heartbeat_check</a> cron command is periodically executed to check consumers’ state. If no alive consumers found, the `oro/message_queue_state` socket message is sent notifying all logged-in users that the system may work incorrectly (because consumers are not available).
+* On start and after every configured time period, each consumer calls the `tick` method of the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/MessageQueueBundle/Consumption/ConsumerHeartbeat.php" target="_blank">ConsumerHeartbeat</a> service that informs the system that the consumer is alive.
+* The <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/MessageQueueBundle/Command/ConsumerHeartbeatCommand.php" target="_blank">oro:cron:message-queue:consumer_heartbeat_check</a> cron command is periodically executed to check consumers’ state. If no alive consumers found, the `oro/message_queue_state` socket message is sent notifying all logged-in users that the system may work incorrectly (because consumers are not available).
 * The same check is also performed when a user logs in. This is done to notify users about the problem as soon as possible.
 
 The check period can be changed in the application configuration file using the `consumer_heartbeat_update_period` option:

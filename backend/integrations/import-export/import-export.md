@@ -151,8 +151,8 @@ do so:
 
 ## Import and Export Entity Data
 
-The <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ImportExportBundle" target="_blank">OroImportExportBundle</a> is intended to import entities into or export
-them out of OroPlatform. The bundle uses the <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/BatchBundle" target="_blank">OroBatchBundle</a> to organize
+The <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ImportExportBundle" target="_blank">OroImportExportBundle</a> is intended to import entities into or export
+them out of OroPlatform. The bundle uses the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/BatchBundle" target="_blank">OroBatchBundle</a> to organize
 the execution of import/export operations. Any import/export operation is
 a job.
 
@@ -172,10 +172,10 @@ it is forwarded to the writer. Finally, the writer saves data to its final
 destination.
 
 #### SEE ALSO
-You can take a look at the code in the OroCRM <a href="https://github.com/oroinc/crm/tree/master/src/Oro/Bundle/ContactBundle" target="_blank">ContactBundle</a> for a real-world
+You can take a look at the code in the OroCRM <a href="https://github.com/oroinc/crm/tree/6.1/src/Oro/Bundle/ContactBundle" target="_blank">ContactBundle</a> for a real-world
 example. It extends base classes from the ImportExportBundle (see
-classes in the <a href="https://github.com/oroinc/crm/tree/master/src/Oro/Bundle/ContactBundle/ImportExport" target="_blank">ImportExport namespace</a>) to implement contact specific
-behavior. The configuration is located in the <a href="https://github.com/oroinc/crm/blob/master/src/Oro/Bundle/ContactBundle/Resources/config/importexport.yml" target="_blank">Resources/config/importexport.yml</a>
+classes in the <a href="https://github.com/oroinc/crm/tree/6.1/src/Oro/Bundle/ContactBundle/ImportExport" target="_blank">ImportExport namespace</a>) to implement contact specific
+behavior. The configuration is located in the <a href="https://github.com/oroinc/crm/tree/6.1/src/Oro/Bundle/ContactBundle/Resources/config/importexport.yml" target="_blank">Resources/config/importexport.yml</a>
 file.
 
 ## Import and Export Configuration
@@ -444,7 +444,7 @@ For example:
 To write your own provider for import operations, you should create a class
 that extends the `Oro\Bundle\ImportExportBundle\Reader\AbstractReader`
 class. To support custom export formats, you just need to create a new class
-that implements the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/BatchBundle/Item/ItemWriterInterface.php" target="_blank">ItemWriterInterface</a> from the <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/BatchBundle" target="_blank">OroBatchBundle</a>.
+that implements the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/BatchBundle/Item/ItemWriterInterface.php" target="_blank">ItemWriterInterface</a> from the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/BatchBundle" target="_blank">OroBatchBundle</a>.
 The new classes must be declared as services:
 
 ```yaml
@@ -469,7 +469,7 @@ the following methods:
 * `findExistingEntity()`
 
 #### SEE ALSO
-You can see an example of an adapted strategy in the <a href="https://github.com/oroinc/crm/blob/master/src/Oro/Bundle/ContactBundle/ImportExport/Strategy/ContactAddOrReplaceStrategy.php" target="_blank">ContactAddOrReplaceStrategy</a>
+You can see an example of an adapted strategy in the <a href="https://github.com/oroinc/crm/tree/6.1/src/Oro/Bundle/ContactBundle/ImportExport/Strategy/ContactAddOrReplaceStrategy.php" target="_blank">ContactAddOrReplaceStrategy</a>
 from the OroCRM ContactBundle.
 
 > #### Example: Adding a custom Strategy

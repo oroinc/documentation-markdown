@@ -60,7 +60,7 @@ This parameter sets default settings for OroActivityBundle. This bundle helps cl
 
 #### `attachment`
 
-You can configure this attribute when you use <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/AttachmentBundle/Provider/AttachmentProvider.php" target="_blank">AttachmentProvider</a>.
+You can configure this attribute when you use <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/AttachmentBundle/Provider/AttachmentProvider.php" target="_blank">AttachmentProvider</a>.
 
 * **enabled** *boolean* - indicates whether attachments can be added to the entity or not.
 * **maxsize** *integer* - is the max size of the uploaded file in megabytes.
@@ -155,12 +155,12 @@ This attribute sets default settings for [Extend Entities](../../entities/extend
   > ]
   > ```
 * **is_serialized** *boolean* - if TRUE then field data will be saved in serialized_data column without doctrine schema update.
-* **state** *string* - the state of the extend config field. See available states in <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityExtendBundle/EntityConfig/ExtendScope.php" target="_blank">ExtendScope.php</a>.
+* **state** *string* - the state of the extend config field. See available states in <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityExtendBundle/EntityConfig/ExtendScope.php" target="_blank">ExtendScope.php</a>.
 * **is_extend** *boolean* - if true, the config entity is able to extend.
 * **is_deleted** *boolean* - if true, the config entity is able to delete.
 * **upgradeable** *boolean* - if true, the extend config entity is able to update.
 * **pk_columns** *string[]* - a list of Primary Keys column name.
-* **index** *string[]* - a list of index fields of the entity. See available index states in <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityBundle/EntityConfig/IndexScope.php" target="_blank">IndexScope.php</a>
+* **index** *string[]* - a list of index fields of the entity. See available index states in <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/EntityConfig/IndexScope.php" target="_blank">IndexScope.php</a>
 * **schema** *array* - contains information about the structure and entity class of the extend.
 * **relation** *array* - contains information about the relation of the entity.
 * **extend_class** *string* - extends class name.
@@ -257,7 +257,7 @@ Data sharding allows to improve OroCommerce operation and accelerate database pe
 
 #### `slug`
 
-This attribute is set for <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/RedirectBundle/Entity/SluggableInterface.php" target="_blank">SluggableInterface</a>.
+This attribute is set for <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/RedirectBundle/Entity/SluggableInterface.php" target="_blank">SluggableInterface</a>.
 
 * **source** *string* - slug source field name.
 

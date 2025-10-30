@@ -2,7 +2,7 @@
 
 # OroApruveBundle
 
-<a href="https://github.com/oroinc/OroApruveBundle" target="_blank">OroApruveBundle</a> adds <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/IntegrationBundle" target="_blank">integration</a> with <a href="https://apruve.com/" target="_blank">Apruve</a> B2B Credit Management and Automation Platform in Oro applications.
+<a href="https://github.com/oroinc/OroApruveBundle" target="_blank">OroApruveBundle</a> adds <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/IntegrationBundle" target="_blank">integration</a> with <a href="https://apruve.com/" target="_blank">Apruve</a> B2B Credit Management and Automation Platform in Oro applications.
 
 The bundle allows admin users to enable and configure the Apruve <a href="https://github.com/oroinc/orocommerce/tree/master/src/Oro/Bundle/PaymentBundle" target="_blank">payment method</a> available <a href="https://github.com/oroinc/orocommerce/tree/master/src/Oro/Bundle/CheckoutBundle" target="_blank">at the checkout</a> process and enables customers to pay for orders by credit obligations attested by Apruve.
 

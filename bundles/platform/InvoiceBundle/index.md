@@ -21,6 +21,9 @@ The bundle introduces the `invoice` feature, enabling the invoice management fun
 * Invoice index and view pages in the back-office
 * Invoice PDF generation in the back-office
 
+#### NOTE
+By default, the **Enable Invoices** option is disabled.
+
 Each invoice gets a unique invoice number generated automatically when an invoice is created. For more information, see [Invoice Number Generation](invoice-number-generation.md#bundle-docs-platform-invoice-number-generation).
 
 ## Invoice Internal Status

@@ -25,7 +25,7 @@ The main two parts of WAMP protocol are <a href="https://en.wikipedia.org/wiki/R
 Therefore, the **WAMP** protocol implies that there is a **WebSocket server** that plays the role of message broker; there are ways for the
 application components to **register topics** for messages, **publish messages** to topics, and **subscribe to topic** messages.
 
-In Oro applications, all WebSocket-related functionality is provided by <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/SyncBundle/" target="_blank">OroSyncBundle</a>. As OroSyncBundle is
+In Oro applications, all WebSocket-related functionality is provided by <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/SyncBundle/" target="_blank">OroSyncBundle</a>. As OroSyncBundle is
 part of OroPlatform, which is the base for all Oro applications, the WebSocket functionality exists in all Oro
 applications.
 

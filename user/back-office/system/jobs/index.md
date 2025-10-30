@@ -28,6 +28,6 @@ a user can interrupt a job. Also, a job can create a set of sub-jobs to split a 
 them in parallel.
 
 Documentation on Message Queue implementation, including information on messages, jobs, consumers, etc., can be found
-in <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Component/MessageQueue" target="_blank">OroMessageQueueComponent</a> and <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/MessageQueueBundle" target="_blank">OroMessageQueueBundle</a>.
+in <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/MessageQueue" target="_blank">OroMessageQueueComponent</a> and <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/MessageQueueBundle" target="_blank">OroMessageQueueBundle</a>.
 
 <!-- Frontend -->

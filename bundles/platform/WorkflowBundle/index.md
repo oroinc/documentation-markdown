@@ -2,7 +2,7 @@
 
 # OroWorkflowBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/WorkflowBundle" target="_blank">OroWorkflowBundle</a> enables developers to incorporate business processes into the Oro applications by defining and managing conditional sequences of entity transformations in Workflows and Processes YAML configuration files.
+<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/WorkflowBundle" target="_blank">OroWorkflowBundle</a> enables developers to incorporate business processes into the Oro applications by defining and managing conditional sequences of entity transformations in Workflows and Processes YAML configuration files.
 
 ## Related Documentation
 

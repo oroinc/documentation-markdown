@@ -2,7 +2,7 @@
 
 # OroFilterBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/FilterBundle" target="_blank">OroFilterBundle</a> implements a variety of Form Types with dynamic JS components and filter models that help build filter conditions on the UI and apply them to the data source. The bundle extends OroDataGridBundle and enables filters for the DataGrid sources.
+<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/FilterBundle" target="_blank">OroFilterBundle</a> implements a variety of Form Types with dynamic JS components and filter models that help build filter conditions on the UI and apply them to the data source. The bundle extends OroDataGridBundle and enables filters for the DataGrid sources.
 
 ## Related Documentation
 

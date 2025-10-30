@@ -8,7 +8,7 @@ Configuration extensions help add new options to existing configuration sections
 
 ## Creating a Configuration Extension
 
-Each configuration extension must implement <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Config/Extension/ConfigExtensionInterface.php" target="_blank">ConfigExtensionInterface</a> (you can also use <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Config/Extension/AbstractConfigExtension.php" target="_blank">AbstractConfigExtension</a> as a superclass). To register a new configuration extension, add it to Resources/config/oro/app.yml in your bundle or use config/config.yml of your application. Here is an example:
+Each configuration extension must implement <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Config/Extension/ConfigExtensionInterface.php" target="_blank">ConfigExtensionInterface</a> (you can also use <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Config/Extension/AbstractConfigExtension.php" target="_blank">AbstractConfigExtension</a> as a superclass). To register a new configuration extension, add it to Resources/config/oro/app.yml in your bundle or use config/config.yml of your application. Here is an example:
 
 ```php
 namespace Acme\Bundle\DemoBundle\Api;
@@ -36,7 +36,7 @@ oro_api:
 
 ## Add Options to an Existing Configuration Section
 
-To add options to an existing configuration section, implement the `getConfigureCallbacks` method of <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Config/Extension/ConfigExtensionInterface.php" target="_blank">ConfigExtensionInterface</a>. If you need to add logic before the normalization during the configuration validation, implement the `getPreProcessCallbacks` and `getPostProcessCallbacks` methods.
+To add options to an existing configuration section, implement the `getConfigureCallbacks` method of <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Config/Extension/ConfigExtensionInterface.php" target="_blank">ConfigExtensionInterface</a>. If you need to add logic before the normalization during the configuration validation, implement the `getPreProcessCallbacks` and `getPostProcessCallbacks` methods.
 
 The following table describes existing sections to which you can add new options.
 
@@ -103,9 +103,9 @@ class MyConfigExtension extends AbstractConfigExtension
 
 ## Add New Configuration Section
 
-To add new configuration section,  create a class implements <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Config/Definition/ConfigurationSectionInterface.php" target="_blank">ConfigurationSectionInterface</a> and return instance of it in the `getEntityConfigurationSections` method of your configuration extension.
+To add new configuration section,  create a class implements <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Config/Definition/ConfigurationSectionInterface.php" target="_blank">ConfigurationSectionInterface</a> and return instance of it in the `getEntityConfigurationSections` method of your configuration extension.
 
-By default, the configuration is returned as an array, but if you want to provide a class that represents the configuration of your section, you can implement a configuration loader. The loader is a class that implements <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Config/Loader/ConfigLoaderInterface.php" target="_blank">ConfigLoaderInterface</a>. An instance of the loader should be returned by the `getEntityConfigurationLoaders` method of your configuration extension.
+By default, the configuration is returned as an array, but if you want to provide a class that represents the configuration of your section, you can implement a configuration loader. The loader is a class that implements <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Config/Loader/ConfigLoaderInterface.php" target="_blank">ConfigLoaderInterface</a>. An instance of the loader should be returned by the `getEntityConfigurationLoaders` method of your configuration extension.
 
 An example of a simple configuration section:
 

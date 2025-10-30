@@ -2,6 +2,9 @@
 
 # OroPay Payment Service in the Back-Office
 
+#### NOTE
+The OroPay payment service is available as of OroCommerce version 6.1.3.
+
 #### HINT
 This section is part of the [Payment Configuration](../../../../../concept-guides/administration/payment-configuration/index.md#user-guide-payment) topic that provides a general understanding of the payment concept in OroCommerce.
 
@@ -61,6 +64,9 @@ A customer can select the preferred payment method, or enter a card number, expi
 ![View the OroPay payment method at checkout](user/img/system/integrations/oropay/oropay-checkout.png)
 
 ## Pay Invoices with OroPay
+
+#### NOTE
+The Invoices functionality is available as of OroCommerce version 6.1.3.
 
 To pay invoices with OroPay, make sure you have configured the following:
 

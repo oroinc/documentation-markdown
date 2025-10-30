@@ -2,6 +2,9 @@
 
 # Import External Orders in JSON Format
 
+#### NOTE
+The feature is available as of OroCommerce version 6.1.2.
+
 #### HINT
 This section is part of the [Data Import](../../../concept-guides/administration/data-import/index.md#concept-guide-data-import) concept guide topic that provides guidelines on import operations in Oro applications.
 

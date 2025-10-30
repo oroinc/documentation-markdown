@@ -142,7 +142,7 @@ navigation:
 
 ## Templating System
 
-<a href="https://symfony.com/doc/6.4/templates.html" target="_blank">Symfony Templating</a> is widely extended in Oro Applications by the <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/LayoutBundle" target="_blank">Layouts</a> concept, which allows addressing Symfony’s limitations in UI extension and composition.
+<a href="https://symfony.com/doc/6.4/templates.html" target="_blank">Symfony Templating</a> is widely extended in Oro Applications by the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/LayoutBundle" target="_blank">Layouts</a> concept, which allows addressing Symfony’s limitations in UI extension and composition.
 
 However, all features of the <a href="https://twig.symfony.com/" target="_blank">TWIG templating engine</a> and <a href="https://symfony.com/doc/6.4/components/templating.html" target="_blank">Symfony Templating Component</a> are widely used in Oro
 applications in UI building.

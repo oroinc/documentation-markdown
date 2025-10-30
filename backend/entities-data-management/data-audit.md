@@ -2,7 +2,7 @@
 
 # Data Audit
 
-The <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/DataAuditBundle" target="_blank">OroDataAuditBundle</a> leverages the Loggable <a href="https://github.com/Atlantic18/DoctrineExtensions" target="_blank">Doctrine extension</a>
+The <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/DataAuditBundle" target="_blank">OroDataAuditBundle</a> leverages the Loggable <a href="https://github.com/Atlantic18/DoctrineExtensions" target="_blank">Doctrine extension</a>
 (<a href="https://github.com/stof/StofDoctrineExtensionsBundle" target="_blank">StofDoctrineExtension</a>) to provide changelogs for your entities.
 
 ## Entity Configuration

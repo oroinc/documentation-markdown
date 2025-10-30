@@ -5,7 +5,7 @@
 #### HINT
 See the [Search Index](../../../backend/architecture/tech-stack/search/index.md#search-index-overview) documentation to get a more high-level understanding of the search index concept in the Oro application.
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/SearchBundle" target="_blank">OroSearchBundle</a> enables the full-text search feature for the Oro applications users and enables the advanced query language usage to build structured queries in the search UI.
+<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/SearchBundle" target="_blank">OroSearchBundle</a> enables the full-text search feature for the Oro applications users and enables the advanced query language usage to build structured queries in the search UI.
 
 The bundle provides the ability for developers to use different search engines, setup configuration for search engines and indexation options for every application entity in the YAML configuration files. It also performs indexation of entire application data, particular entities or even specific entity records using CLI tools.
 

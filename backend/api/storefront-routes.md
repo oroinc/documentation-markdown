@@ -7,8 +7,8 @@ This information includes a resource type and the relative URL of an API resourc
 
 Two types of resolvers are used to provide this information:
 
-> - the resource type resolver, that is represented by <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/FrontendBundle/Api/ResourceTypeResolverInterface.php" target="_blank">ResourceTypeResolverInterface</a>;
-> - the API URL resolver that is represented by <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/FrontendBundle/Api/ResourceApiUrlResolverInterface.php" target="_blank">ResourceApiUrlResolverInterface</a>.
+> - the resource type resolver, that is represented by <a href="https://github.com/oroinc/customer-portal/tree/6.1/src/Oro/Bundle/FrontendBundle/Api/ResourceTypeResolverInterface.php" target="_blank">ResourceTypeResolverInterface</a>;
+> - the API URL resolver that is represented by <a href="https://github.com/oroinc/customer-portal/tree/6.1/src/Oro/Bundle/FrontendBundle/Api/ResourceApiUrlResolverInterface.php" target="_blank">ResourceApiUrlResolverInterface</a>.
 
 The resource type resolvers should be registered in the service container with a tag `oro_frontend.api.resource_type_resolver`,
 and optionally, the `routeName` tag attribute can be used to specify the route for which the resolver is applicable.
@@ -38,10 +38,10 @@ services:
             - { name: oro_frontend.api.resource_api_url_resolver, routeName: oro_cms_frontend_page_view, requestType: rest }
 ```
 
-Here are some useful implementations of <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/FrontendBundle/Api/ResourceTypeResolverInterface.php" target="_blank">ResourceTypeResolverInterface</a> and <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/FrontendBundle/Api/ResourceApiUrlResolverInterface.php" target="_blank">ResourceApiUrlResolverInterface</a>:
+Here are some useful implementations of <a href="https://github.com/oroinc/customer-portal/tree/6.1/src/Oro/Bundle/FrontendBundle/Api/ResourceTypeResolverInterface.php" target="_blank">ResourceTypeResolverInterface</a> and <a href="https://github.com/oroinc/customer-portal/tree/6.1/src/Oro/Bundle/FrontendBundle/Api/ResourceApiUrlResolverInterface.php" target="_blank">ResourceApiUrlResolverInterface</a>:
 
-- <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/FrontendBundle/Api/ResourceTypeResolver.php" target="_blank">ResourceTypeResolver</a> - resolves a resource type by a route name.
-- <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/FrontendBundle/Api/ResourceRestApiGetActionUrlResolver.php" target="_blank">ResourceRestApiGetActionUrlResolver</a> - resolves the URL of the [get](actions.md#get-action) action REST API resource by a route name.
-- <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/FrontendBundle/Api/ResourceRestApiGetListActionUrlResolver.php" target="_blank">ResourceRestApiGetListActionUrlResolver</a> - resolves the URL of the [get_list](actions.md#get-list-action) action REST API resource by a route name.
+- <a href="https://github.com/oroinc/customer-portal/tree/6.1/src/Oro/Bundle/FrontendBundle/Api/ResourceTypeResolver.php" target="_blank">ResourceTypeResolver</a> - resolves a resource type by a route name.
+- <a href="https://github.com/oroinc/customer-portal/tree/6.1/src/Oro/Bundle/FrontendBundle/Api/ResourceRestApiGetActionUrlResolver.php" target="_blank">ResourceRestApiGetActionUrlResolver</a> - resolves the URL of the [get](actions.md#get-action) action REST API resource by a route name.
+- <a href="https://github.com/oroinc/customer-portal/tree/6.1/src/Oro/Bundle/FrontendBundle/Api/ResourceRestApiGetListActionUrlResolver.php" target="_blank">ResourceRestApiGetListActionUrlResolver</a> - resolves the URL of the [get_list](actions.md#get-list-action) action REST API resource by a route name.
 
 <!-- Frontend -->

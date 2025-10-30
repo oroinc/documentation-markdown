@@ -58,7 +58,7 @@ ORO_WEBSOCKET_FRONTEND_DSN=//*:443/ws
 ORO_WEBSOCKET_BACKEND_DSN=tcp://127.0.0.1:8080
 ```
 
-For more information on these parameters, see <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/SyncBundle" target="_blank">OroSyncBundle documentation</a>.
+For more information on these parameters, see <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/SyncBundle" target="_blank">OroSyncBundle documentation</a>.
 
 ## Configure File Storages
 

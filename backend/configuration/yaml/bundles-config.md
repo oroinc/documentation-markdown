@@ -442,8 +442,8 @@ oro_asset:
     # Path to NodeJs executable
     nodejs_path:          ~
 
-    # Path to PNPM executable
-    pnpm_path:             ~
+    # Path to NPM executable
+    npm_path:             ~
 
     # Assets build timeout in seconds, null to disable timeout
     build_timeout:        null

@@ -10,7 +10,7 @@ In this section, you’ll find a description of the main principles for organizi
 ## How It Works
 
 Application Framework functionality in OroPlatform is based on the <a href="https://symfony.com/" target="_blank">Symfony Framework</a> and extends it in the
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/PlatformBundle" target="_blank">OroPlatformBundle</a> and <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/DistributionBundle" target="_blank">OroDistributionBundle</a> to improve several aspects of development experience.
+<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/PlatformBundle" target="_blank">OroPlatformBundle</a> and <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/DistributionBundle" target="_blank">OroDistributionBundle</a> to improve several aspects of development experience.
 
 Please refer to the [Architecture Principles of Oro Applications](architecture-principles.md#dev-guide-application-web-framework-symfony) article
 for the synopsis of structural aspects of the Oro applications:

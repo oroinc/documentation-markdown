@@ -2,7 +2,7 @@
 
 # OroAssetBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/AssetBundle" target="_blank">OroAssetBundle</a> adds the possibility to install project assets using webpack.
+<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/AssetBundle" target="_blank">OroAssetBundle</a> adds the possibility to install project assets using webpack.
 
 ## Architecture
 
@@ -182,7 +182,7 @@ Detailed information about JS modules configuration is available in the [JS Modu
 
 ## Configuration Reference
 
-AssetBundle defines the configuration for NodeJs and PNPM executable.
+AssetBundle defines the configuration for NodeJs and NPM executable.
 
 All these options are configured under the oro_asset key in your application configuration.
 
@@ -201,11 +201,11 @@ All these options are configured under the oro_asset key in your application con
 
 Path to NodeJs executable.
 
-### pnpm_path
+### npm_path
 
 **type: \`string\` required, default: found dynamically**
 
-Path to PNPM executable.
+Path to NPM executable.
 
 ### build_timeout
 
@@ -213,11 +213,11 @@ Path to PNPM executable.
 
 Assets build timeout in seconds, null to disable the timeout.
 
-### pnpm_install_timeout
+### npm_install_timeout
 
 **type: \`integer\` required, default: \`null\`**
 
-PNPM installation timeout in seconds, null to disable the timeout.
+Npm installation timeout in seconds, null to disable the timeout.
 
 ### webpack_dev_server
 
@@ -270,22 +270,9 @@ rm -rf var/cache/*
 php bin/console cache:warmup
 ```
 
-**PNPM not found**
-
-Appears after migration to PNPM.
-
-To fix the error, install pnpm, remove the existing node modules and re-build the assets:
-
-```none
-npm install -g pnpm
-rm -rf ./node_modules
-php bin/console cache:clear
-php bin/console oro:assets:build
-```
-
 **Error: “output” for “assets” group in theme “oro” is not defined**
 
-Please follow <a href="https://github.com/oroinc/platform/blob/master/CHANGELOG.md#assetbundle-1" target="_blank">upgrade documentation</a> to update assets.yml files according to new requirements.
+Please follow <a href="https://github.com/oroinc/platform/tree/6.1/CHANGELOG.md#assetbundle-1" target="_blank">upgrade documentation</a> to update assets.yml files according to new requirements.
 
 **Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID**
 

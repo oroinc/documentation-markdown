@@ -205,9 +205,9 @@ use Oro\Bundle\SecurityBundle\Attribute\Acl;
 use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
 use Oro\Bundle\SecurityBundle\Attribute\CsrfProtection;
 use Oro\Bundle\SecurityBundle\ORM\Walker\AclHelper;
-use Symfony\Bridge\Twig\Attribute\Template;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Acl\Voter\FieldVote;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
@@ -218,7 +218,7 @@ use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 class FavoriteController extends AbstractController
 {
     #[Route(path: '/', name: 'index')]
-    #[Template('@AcmeDemo/Favorite/index.html.twig')]
+    #[Template]
     #[AclAncestor('acme_demo_favorite_index')]
     public function indexAction(): array
     {
@@ -254,9 +254,9 @@ Attribute #[AclAncestor] enables you to reuse ACL resources defined with the ACL
 > use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
 > use Oro\Bundle\SecurityBundle\Attribute\CsrfProtection;
 > use Oro\Bundle\SecurityBundle\ORM\Walker\AclHelper;
-> use Symfony\Bridge\Twig\Attribute\Template;
+> use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 > use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-> use Symfony\Component\Routing\Attribute\Route;
+> use Symfony\Component\Routing\Annotation\Route;
 > use Symfony\Component\Security\Acl\Voter\FieldVote;
 > use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
@@ -340,9 +340,9 @@ use Oro\Bundle\SecurityBundle\Attribute\Acl;
 use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
 use Oro\Bundle\SecurityBundle\Attribute\CsrfProtection;
 use Oro\Bundle\SecurityBundle\ORM\Walker\AclHelper;
-use Symfony\Bridge\Twig\Attribute\Template;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Acl\Voter\FieldVote;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
@@ -396,9 +396,9 @@ use Oro\Bundle\SecurityBundle\Attribute\Acl;
 use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
 use Oro\Bundle\SecurityBundle\Attribute\CsrfProtection;
 use Oro\Bundle\SecurityBundle\ORM\Walker\AclHelper;
-use Symfony\Bridge\Twig\Attribute\Template;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Acl\Voter\FieldVote;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
@@ -430,7 +430,7 @@ class FavoriteController extends AbstractController
 
 If you need to carry out an ACL check on an object not in the controller, use the `isGranted` method of the security.authorization_checker service.
 
-The security.authorization_checker service is a public service used to check whether access to a resource is granted or denied. This service represents the <a href="https://symfony.com/doc/current/components/security/authorization.html#authorization-checker" target="_blank">Authorization Checker</a>. The implementation of the Platform specific attributes and objects is in <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/SecurityBundle/Authorization/AuthorizationChecker.php" target="_blank">AuthorizationChecker class</a>.
+The security.authorization_checker service is a public service used to check whether access to a resource is granted or denied. This service represents the <a href="https://symfony.com/doc/current/components/security/authorization.html#authorization-checker" target="_blank">Authorization Checker</a>. The implementation of the Platform specific attributes and objects is in <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/SecurityBundle/Authorization/AuthorizationChecker.php" target="_blank">AuthorizationChecker class</a>.
 
 The main entry point is the isGranted method:
 
@@ -480,8 +480,8 @@ The first ACL for $myEntity object is checked; if nothing is found, it checks th
 
 Two additional authorization checkers can also be helpful:
 
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/SecurityBundle/Authorization/ClassAuthorizationChecker.php" target="_blank">ClassAuthorizationChecker</a>
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/SecurityBundle/Authorization/RequestAuthorizationChecker.php" target="_blank">CRequestAuthorizationChecker</a>
+* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/SecurityBundle/Authorization/ClassAuthorizationChecker.php" target="_blank">ClassAuthorizationChecker</a>
+* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/SecurityBundle/Authorization/RequestAuthorizationChecker.php" target="_blank">CRequestAuthorizationChecker</a>
 
 ### Restricting Access to Non-Entity Resources
 

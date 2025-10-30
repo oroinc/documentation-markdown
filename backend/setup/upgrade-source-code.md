@@ -2,9 +2,9 @@
 
 <a id="upgrade-to-6"></a>
 
-# Upgrade the Source Code to v7.0
+# Upgrade the Source Code to v6.1
 
-This guide covers the complete process of upgrading your codebase to OroCommerce v7.0, including dependency updates and code migration.
+This guide covers the complete process of upgrading your codebase to OroCommerce v6.1, including dependency updates and code migration.
 
 #### TIP
 If you are looking for instructions on upgrading the entire OroCommerce application rather than just the source code, please refer to our guide on [Upgrading the Application to the Next Version](upgrade-to-new-version.md#upgrade-application).
@@ -48,7 +48,6 @@ Next, run the following commands:
 ```none
 rm -rf var/cache/*
 rm -rf public/bundles/*
-rm -rf ./node_modules
 php bin/console assets:install
 php bin/console oro:theme:migrate
 ```

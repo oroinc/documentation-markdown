@@ -4,7 +4,7 @@
 
 To create an activity from your new entity, make the entity extended and include it in the activity group.
 
-To make the entity extended, implement the ExtendEntityInterface using the ExtendEntityTrait. The class must also implement <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ActivityBundle/Model/ActivityInterface.php" target="_blank">ActivityInterface</a>.
+To make the entity extended, implement the ExtendEntityInterface using the ExtendEntityTrait. The class must also implement <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ActivityBundle/Model/ActivityInterface.php" target="_blank">ActivityInterface</a>.
 
 Here is an example:
 
@@ -49,7 +49,7 @@ Your entity is now recognized as the activity entity. To make sure that the acti
 ## Working with Activity Associations
 
 Activity associations are represented by [multiple many-to-many](extend-entities/multi-target-associations.md#book-entities-extended-entities-multi-target-associations-types) associations.
-It is quite a complex type of associations, and to help work with activities, use the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ActivityBundle/Manager/ActivityManager.php" target="_blank">ActivityManager</a> class.
+It is quite a complex type of associations, and to help work with activities, use the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ActivityBundle/Manager/ActivityManager.php" target="_blank">ActivityManager</a> class.
 
 This class provides the following functionality:
 
@@ -75,7 +75,7 @@ Before using the new activity entity within OroPlatform, you need to:
 * [Configure UI for Activity List Section]()
 * [Configure UI for an Activity Button]()
 
-Take a look at <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ActivityBundle/Resources/config/oro/entity_config.yml" target="_blank">all configuration options</a> for the activity scope before reading further.
+Take a look at <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ActivityBundle/Resources/config/oro/entity_config.yml" target="_blank">all configuration options</a> for the activity scope before reading further.
 
 ### Configure UI for Activity List Section
 
@@ -93,11 +93,7 @@ Keep in mind that:
      * This action is used to render the list of sms associated with the given entity
      * on the view page of this entity
      */
-    #[Route(
-        path: '/activity/view/{entityClass}/{entityId}',
-        name: 'acme_demo_sms_activity_view',
-        requirements: ['entityClass' => '\w+', 'entityId' => '\d+']
-    )]
+    #[Route(path: '/activity/view/{entityClass}/{entityId}', name: 'acme_demo_sms_activity_view', requirements: ['entityClass' => '\w+', 'entityId' => '\d+'])]
     #[AclAncestor('acme_demo_sms_view')]
     public function activityAction(string $entityClass, int $entityId): Response
     {
@@ -332,7 +328,7 @@ datagrids:
 
 The column type is twig (unchangeable), so you can also specify template.
 
-The default one is <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ActivityBundle/Resources/views/Grid/Column/contexts.html.twig" target="_blank">@OroActivity/Grid/Column/contexts.html.twig</a>.
+The default one is <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ActivityBundle/Resources/views/Grid/Column/contexts.html.twig" target="_blank">@OroActivity/Grid/Column/contexts.html.twig</a>.
 
 ```twig
 {% for item in value %}
@@ -653,12 +649,7 @@ Create a view action in your controller and a TWIG template.
 
 *src/Acme/Bundle/DemoBundle/Controller/SmsController.php*
 ```php
-    #[Route(
-        path: '/widget/info/{id}',
-        name: 'acme_demo_sms_widget_info',
-        requirements: ['id' => '\d+'],
-        options: ['expose' => true]
-    )]
+    #[Route(path: '/widget/info/{id}', name: 'acme_demo_sms_widget_info', requirements: ['id' => '\d+'], options: ['expose' => true])]
     #[Template('@AcmeDemo/Sms/widget/info.html.twig')]
     #[AclAncestor('acme_demo_sms_view')]
     public function infoAction(Request $request, Sms $entity): array
@@ -729,13 +720,8 @@ Define the update action in your controller.
     /**
      * Edit Sms form
      */
-    #[Route(
-        path: '/update/{id}',
-        name: 'acme_demo_sms_update',
-        requirements: ['id' => '\d+'],
-        options: ['expose' => true]
-    )]
-    #[Template('@AcmeDemo/Sms/update.html.twig')]
+    #[Route(path: '/update/{id}', name: 'acme_demo_sms_update', requirements: ['id' => '\d+'], options: ['expose' => true])]
+    #[Template]
     #[Acl(id: 'acme_demo_sms_update', type: 'entity', class: 'Acme\Bundle\DemoBundle\Entity\Sms', permission: 'EDIT')]
     public function updateAction(Sms $entity, Request $request): array|RedirectResponse
     {

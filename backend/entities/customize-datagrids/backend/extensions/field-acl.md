@@ -2,7 +2,7 @@
 
 # Field ACL Extension
 
-<a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/DataGridBundle/Extension/FieldAcl/FieldAclExtension.php" target="_blank">Field ACL extension</a> allows checking access to grid columns. Currently, it is implemented only for the ORM datasource.
+<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/DataGridBundle/Extension/FieldAcl/FieldAclExtension.php" target="_blank">Field ACL extension</a> allows checking access to grid columns. Currently, it is implemented only for the ORM datasource.
 
 To enable field ACL protection for a column, use the `field_acl` section in a datagrid declaration:
 

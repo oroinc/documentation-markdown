@@ -8,12 +8,12 @@ The Symfony <a href="https://symfony.com/doc/6.4/validation.html" target="_blank
 
 The validation rules are loaded from Resources/config/validation.yml and annotations, as is commonly done in Symfony applications. So, all validation rules defined for an entity also apply to the API. API uses two validation groups: **Default** and **api**. If you need to add validation constraints that should be applied in the API only, add them to the **api** validation group.
 
-Suppose a validation rule cannot be implemented as a regular validation constraint due to its complexity. In that case, you can implement it as a processor for the `post_validate` event of  the [customize_form_data](actions.md#customize-form-data-action) action. Keep in mind that <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Form/FormUtil.php" target="_blank">FormUtil class</a> contains methods that may be useful in such a processor.
+Suppose a validation rule cannot be implemented as a regular validation constraint due to its complexity. In that case, you can implement it as a processor for the `post_validate` event of  the [customize_form_data](actions.md#customize-form-data-action) action. Keep in mind that <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Form/FormUtil.php" target="_blank">FormUtil class</a> contains methods that may be useful in such a processor.
 
-If the input data violate validation constraints, they will be automatically converted into the [validation errors](processors.md#web-api-processors) that help build the correct response of the API. The conversion is performed by the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Processor/Shared/CollectFormErrors.php" target="_blank">CollectFormErrors</a> processor. By default, the HTTP status code for validation errors is `400 Bad Request`. To change it, you can:
+If the input data violate validation constraints, they will be automatically converted into the [validation errors](processors.md#web-api-processors) that help build the correct response of the API. The conversion is performed by the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Processor/Shared/CollectFormErrors.php" target="_blank">CollectFormErrors</a> processor. By default, the HTTP status code for validation errors is `400 Bad Request`. To change it, you can:
 
-- Implement <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Validator/Constraints/ConstraintWithStatusCodeInterface.php" target="_blank">ConstraintWithStatusCodeInterface</a> in you constraint class.
-- Implement your own constraint text extractor. The API bundle has the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Request/ConstraintTextExtractor.php" target="_blank">default implementation of constraint text extractor</a>. To add a new extractor, create a class implements <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Request/ConstraintTextExtractorInterface.php" target="_blank">ConstraintTextExtractorInterface</a> and tag it with the `oro.api.constraint_text_extractor` in the dependency injection container. This service can also be used to change an error code and type for a validation constraint.
+- Implement <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Validator/Constraints/ConstraintWithStatusCodeInterface.php" target="_blank">ConstraintWithStatusCodeInterface</a> in you constraint class.
+- Implement your own constraint text extractor. The API bundle has the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Request/ConstraintTextExtractor.php" target="_blank">default implementation of constraint text extractor</a>. To add a new extractor, create a class implements <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Request/ConstraintTextExtractorInterface.php" target="_blank">ConstraintTextExtractorInterface</a> and tag it with the `oro.api.constraint_text_extractor` in the dependency injection container. This service can also be used to change an error code and type for a validation constraint.
 
 The following example shows how to add validation constraints to the API resources using the Resources/config/oro/api.yml configuration file:
 
@@ -81,7 +81,7 @@ oro_api:
 #### NOTE
 The form_types section can contain either the class name or the service id of a form type. Usually, the service id is used if a form type depends on other services in the dependency injection container.
 
-You can find the already registered API form elements in <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ApiBundle/Resources/config/oro/app.yml" target="_blank">Resources/config/oro/app.yml</a>.
+You can find the already registered API form elements in <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Resources/config/oro/app.yml" target="_blank">Resources/config/oro/app.yml</a>.
 
 If you need to add new form elements can by tagging them in the dependency injection container, use tags from the following table:
 
@@ -113,8 +113,8 @@ acme.form.guesser.test:
         - { name: oro.api.form.type_guesser } # add the form type guesser to API forms
 ```
 
-To switch between the general and API forms, use the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Processor/Shared/InitializeApiFormExtension.php" target="_blank">Processor\\Shared\\InitializeApiFormExtension</a> and <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Processor/Shared/RestoreDefaultFormExtension.php" target="_blank">Processor\\Shared\\RestoreDefaultFormExtension</a> processors.
+To switch between the general and API forms, use the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Processor/Shared/InitializeApiFormExtension.php" target="_blank">Processor\\Shared\\InitializeApiFormExtension</a> and <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Processor/Shared/RestoreDefaultFormExtension.php" target="_blank">Processor\\Shared\\RestoreDefaultFormExtension</a> processors.
 
-The <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Processor/Shared/BuildFormBuilder.php" target="_blank">Processor\\Shared\\BuildFormBuilder</a> processor builds the form for a particular entity on the fly based on the [API configuration](configuration.md#web-api-configuration) and the entity metadata.
+The <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Processor/Shared/BuildFormBuilder.php" target="_blank">Processor\\Shared\\BuildFormBuilder</a> processor builds the form for a particular entity on the fly based on the [API configuration](configuration.md#web-api-configuration) and the entity metadata.
 
 <!-- Frontend -->

@@ -1,8 +1,3 @@
-<a id="orocloud-skip-assets"></a>
-
-#### IMPORTANT
-You are viewing the upcoming documentation for OroCloud, scheduled for release later in 2025. For accurate and up-to-date information, please refer only to the documentation of <a href="https://doc.oroinc.com/cloud/" target="_blank">the latest LTS version</a>.
-
 # Application Upgrade Using Pre-Built Assets
 
 On an upgrade, one of the most resource-consuming operations is JavaScript and CSS assets build.
@@ -95,7 +90,7 @@ When the  application is ready to be released, follow the two steps outlined bel
    #### NOTE
    To avoid a large number of changed files during development, it is recommended that you do not store pre-built assets in the dev branches and add them only to the release branches or tags.
 
-After pushing pre-built assets to the git repository, you can run an upgrade with one of the [maintenance commands](run-upgrades.md#orocloud-maintenance-use-upgrade).
+After pushing pre-built assets to the git repository, you can run an upgrade with one of the [maintenance commands](basic-use.md#orocloud-maintenance-use-upgrade).
 
 #### WARNING
 It is required to rebuild assets every time before the upgrade. Otherwise, you can end up with outdated or broken styles and javascript assets on your website.

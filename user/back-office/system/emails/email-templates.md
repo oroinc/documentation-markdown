@@ -365,7 +365,7 @@ get_payment_status(Order $entity)
 
 **Description:** Returns the payment status for requested order.
 
-**Returns:** string, one of Oro\\Bundle\\PaymentBundle\\PaymentStatus\\PaymentStatuses class statuses
+**Returns:** string, one of Oro\\Bundle\\PaymentBundle\\Provider\\PaymentStatusProvider class statuses
 (‘full’, ‘partially’, ‘invoiced’, ‘authorized’, ‘declined’, ‘pending’)
 
 **Example:**
@@ -588,15 +588,15 @@ On top of functions, you can use filters in email templates. The full set of the
 * <a href="https://twig.symfony.com/doc/2.x/filters/trim.html" target="_blank">trim</a>
 * <a href="https://twig.symfony.com/doc/2.x/filters/upper.html" target="_blank">upper</a>
 * [oro_html_sanitize](../../../../bundles/platform/UIBundle/twig-filters.md#bundle-docs-platform-ui-bundle-twig-filters)
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBundle/Twig/FormatExtension.php#L76" target="_blank">oro_format</a>
+* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/UIBundle/Twig/FormatExtension.php#L76" target="_blank">oro_format</a>
 * [oro_format_address](../../../../bundles/platform/LocaleBundle/address-formatting.md#bundle-docs-platform-locale-bundle-oro-format-address)
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/LocaleBundle/Twig/DateTimeExtension.php#L122" target="_blank">oro_format_date</a>
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/LocaleBundle/Twig/DateTimeExtension.php#L174" target="_blank">oro_format_time</a>
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/LocaleBundle/Twig/DateTimeExtension.php#L92" target="_blank">oro_format_datetime</a>
+* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/LocaleBundle/Twig/DateTimeExtension.php#L122" target="_blank">oro_format_date</a>
+* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/LocaleBundle/Twig/DateTimeExtension.php#L174" target="_blank">oro_format_time</a>
+* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/LocaleBundle/Twig/DateTimeExtension.php#L92" target="_blank">oro_format_datetime</a>
 * oro_format_datetime_organization
 * [oro_format_name](../../../../bundles/platform/LocaleBundle/name-formatting.md#bundle-docs-platform-locale-bundle-format-name)
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/CurrencyBundle/Twig/CurrencyExtension.php#L111" target="_blank">oro_format_price</a>
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/LocaleBundle/Twig/NumberExtension.php#L212" target="_blank">oro_format_currency</a>
+* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/CurrencyBundle/Twig/CurrencyExtension.php#L111" target="_blank">oro_format_price</a>
+* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/LocaleBundle/Twig/NumberExtension.php#L212" target="_blank">oro_format_currency</a>
 * [oro_format_short_product_unit_value](../../../../bundles/commerce/ProductBundle/product-unit-formatting.md#product-bundle-short-formatting)
 * <a href="https://twig.symfony.com/doc/2.x/filters/join.html" target="_blank">join</a>
 

@@ -10,7 +10,7 @@ from a predefined set of options. The OroPlatform provides two different data ty
 
 The option sets are quite complex. Both the `enum` and `multiEnum` types are based on [serialized fields](serialized-fields.md#book-entities-extended-entities-serialized-fields). The main difference between them is that the `enum` type is based on a virtual many-to-one association, while the `multiEnum` type is based on a virtual many-to-many association.
 
-To add the option set field to an entity, you can use <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityExtendBundle/Migration/Extension/ExtendExtension.php" target="_blank">ExtendExtension</a>.
+To add the option set field to an entity, you can use <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityExtendBundle/Migration/Extension/ExtendExtension.php" target="_blank">ExtendExtension</a>.
 
 The following example illustrates how to do it:
 
@@ -115,7 +115,7 @@ class LoadUserInternalRatingData extends AbstractFixture implements DependentFix
 }
 ```
 
-<a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityExtendBundle/Tools/ExtendHelper.php" target="_blank">ExtendHelper</a> class which can be helpful when you work with option sets:
+<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityExtendBundle/Tools/ExtendHelper.php" target="_blank">ExtendHelper</a> class which can be helpful when you work with option sets:
 
 * **buildEnumCode()** - Builds an option set code based on its name.
 * **generateEnumCode()** - Generates an option set code based on a field for which this option set is created.
@@ -130,16 +130,16 @@ class LoadUserInternalRatingData extends AbstractFixture implements DependentFix
 * **buildEnumOptionTranslationKey()** - Builds enum option translation key (symfony translation).
 * **extractEnumCode()** - Extracts the enum code from the enum option identifier.
 
-As mentioned above, each option set has its own table to store available options. But translations for all options of all option sets are stored in one table. You can find more details in <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityExtendBundle/Entity/EnumOptionTranslation.php" target="_blank">EnumOptionTranslation</a> and <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityExtendBundle/Entity/EnumOptionInterface.php" target="_blank">EnumOptionInterface</a>.
+As mentioned above, each option set has its own table to store available options. But translations for all options of all option sets are stored in one table. You can find more details in <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityExtendBundle/Entity/EnumOptionTranslation.php" target="_blank">EnumOptionTranslation</a> and <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityExtendBundle/Entity/EnumOptionInterface.php" target="_blank">EnumOptionInterface</a>.
 The EnumOptionTranslation class is used to store translations. The EnumOptionInterface is the base interface for all option set entities.
 
 If for some reason you create system option sets and you have to render them manually, the following components can be helpful:
 
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityExtendBundle/Twig/EnumExtension.php" target="_blank">TWIG extension</a> to sort and translate options. It can be used the following way:
+* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityExtendBundle/Twig/EnumExtension.php" target="_blank">TWIG extension</a> to sort and translate options. It can be used the following way:
   `optionIds|sort_enum`, `optionId|trans_enum`.
-* Symfony form types that can be used to build forms contain option set fields: <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityExtendBundle/Form/Type/EnumChoiceType.php" target="_blank">EnumChoiceType</a> and <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityExtendBundle/Form/Type/EnumSelectType.php" target="_blank">EnumSelectType</a>.
-* Grid filters: <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/FilterBundle/Filter/EnumFilter.php" target="_blank">EnumFilter</a> and <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/FilterBundle/Filter/MultiEnumFilter.php" target="_blank">MultiEnumFilter</a>. Check out how to use these filters in datagrids.yml. You can learn
-  how to configure datagrid formatters for option sets in <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityExtendBundle/Grid/ExtendColumnOptionsGuesser.php" target="_blank">ExtendColumnOptionsGuesser</a>. Keep in mind that the backend datagrid is configured in the `/config/oro/datagrids.yml` file, while the frontend datagrid is configured in the `/views/layouts/<theme>/config/datagrids.yml` file within the configuration directory of your bundle.
+* Symfony form types that can be used to build forms contain option set fields: <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityExtendBundle/Form/Type/EnumChoiceType.php" target="_blank">EnumChoiceType</a> and <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityExtendBundle/Form/Type/EnumSelectType.php" target="_blank">EnumSelectType</a>.
+* Grid filters: <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/FilterBundle/Filter/EnumFilter.php" target="_blank">EnumFilter</a> and <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/FilterBundle/Filter/MultiEnumFilter.php" target="_blank">MultiEnumFilter</a>. Check out how to use these filters in datagrids.yml. You can learn
+  how to configure datagrid formatters for option sets in <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityExtendBundle/Grid/ExtendColumnOptionsGuesser.php" target="_blank">ExtendColumnOptionsGuesser</a>. Keep in mind that the backend datagrid is configured in the `/config/oro/datagrids.yml` file, while the frontend datagrid is configured in the `/views/layouts/<theme>/config/datagrids.yml` file within the configuration directory of your bundle.
 
   Please take in account that this class passes the class name as the option set identifier, but you can also use the enum code.
 

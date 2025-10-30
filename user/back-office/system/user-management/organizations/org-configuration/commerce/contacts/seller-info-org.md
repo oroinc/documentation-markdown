@@ -3,6 +3,9 @@
 # Configure Seller Info Settings per Organization
 
 #### NOTE
+The Seller Info settings are available as of OroCommerce version 6.1.1.
+
+#### NOTE
 Seller information can be configured [globally](../../../../../configuration/commerce/contacts/seller-info-global.md#sys-conf-commerce-contacts-seller-info), per organization, and [per website](../../../../../websites/web-configuration/commerce/contacts/seller-info-website.md#system-website-configuration-commerce-contacts-seller-info).
 
 To configure the seller information settings per organization:

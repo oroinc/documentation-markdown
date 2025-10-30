@@ -4,7 +4,7 @@
 
 ## Entity Name Resolver
 
-The <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityBundle/Provider/EntityNameResolver.php" target="_blank">Entity Name Resolver</a> service has been introduced to make the configuring of entity name formatting more flexible.
+The <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Provider/EntityNameResolver.php" target="_blank">Entity Name Resolver</a> service has been introduced to make the configuring of entity name formatting more flexible.
 
 It provides two functions for getting the entity name:
 
@@ -47,7 +47,7 @@ Note that it is possible to specify the fallback format for the entity that will
 The Entity Name Resolver does not know how to get the entity name by itself but instead, it expects to have a collection of Entity Name Providers that will do the job.
 The first provider that can return a reliable result wins. The rest of the providers will not be asked.
 
-To create an Entity Name Provider, you should implement the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityBundle/Provider/EntityNameProviderInterface.php" target="_blank">EntityNameProviderInterface</a>:
+To create an Entity Name Provider, you should implement the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Provider/EntityNameProviderInterface.php" target="_blank">EntityNameProviderInterface</a>:
 
 ```php
 use Oro\Bundle\EntityBundle\Provider\EntityNameProviderInterface;

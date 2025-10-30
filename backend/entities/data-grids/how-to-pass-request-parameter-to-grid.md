@@ -53,14 +53,14 @@ The controller receives an entity “priority” and passes it to the view:
 class PriorityController extends AbstractController
 {
     #[Route(path: '/view/{id}', name: 'view', requirements: ['id' => '\d+'])]
-    #[Template('@AcmeDemo/Priority/view.html.twig')]
+    #[Template]
     public function viewAction(Priority $entity): array
     {
         return [
             'entity' => $entity,
         ];
     }
-}
+    }
 ```
 
 In this example, the entity mapping page adds a grid with the data of the linked entity.
@@ -105,7 +105,7 @@ In case if names of the parameter in the grid and the query do not match, you ca
 ```
 
 #### CAUTION
-A datasource must implement the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/DataGridBundle/Datasource/BindParametersInterface.php" target="_blank">BindParametersInterface</a> to support the `bind_parameters` option.
+A datasource must implement the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/DataGridBundle/Datasource/BindParametersInterface.php" target="_blank">BindParametersInterface</a> to support the `bind_parameters` option.
 
 ## Solution 2. Create Custom Event Listener
 

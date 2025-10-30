@@ -2,16 +2,16 @@
 
 ## ExpressionEditorUtil
 
-Source: <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/FormBundle/Resources/public/js/expression-editor-util.js" target="_blank">oroform/js/expression-editor-util</a>.
+Source: <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/FormBundle/Resources/public/js/expression-editor-util.js" target="_blank">oroform/js/expression-editor-util</a>.
 
 Implements core autocomplete and validate functionality for expressions.
 
 Expression editor:
 
-- Parses an expression with the extension of ExpressionLanguage (<a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ExpressionLanguageBundle/Resources/public/js/extend/expression-language.js" target="_blank">oroexpressionlanguage/js/extend/expression-language</a>,
+- Parses an expression with the extension of ExpressionLanguage (<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ExpressionLanguageBundle/Resources/public/js/extend/expression-language.js" target="_blank">oroexpressionlanguage/js/extend/expression-language</a>,
   see [documentation](../../../../ExpressionLanguageBundle/Resources/doc/js/expression-language-extension.md)).
-- Validates an expression with the particular ExpressionOperandTypeValidator validator (<a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/FormBundle/Resources/public/js/expression-operand-type-validator.js" target="_blank">oroform/js/expression-operand-type-validator</a>).
-- Uses EntityStructureDataProvider (<a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityBundle/Resources/public/js/app/services/entity-structure-data-provider.js" target="_blank">oroentity/js/app/services/entity-structure-data-provider</a>,
+- Validates an expression with the particular ExpressionOperandTypeValidator validator (<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/FormBundle/Resources/public/js/expression-operand-type-validator.js" target="_blank">oroform/js/expression-operand-type-validator</a>).
+- Uses EntityStructureDataProvider (<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Resources/public/js/app/services/entity-structure-data-provider.js" target="_blank">oroentity/js/app/services/entity-structure-data-provider</a>,
   see [documentation](../../../../EntityBundle/Resources/doc/client-side/entity-structure-data-provider.md)) to build
   autocomplete items from the entity fields.
 
@@ -56,9 +56,9 @@ ExpressionOperandTypeValidator (see below).
 
 ## ExpressionOperandTypeValidator
 
-Source: <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/FormBundle/Resources/public/js/expression-operand-type-validator.js" target="_blank">oroform/js/expression-operand-type-validator</a>.
+Source: <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/FormBundle/Resources/public/js/expression-operand-type-validator.js" target="_blank">oroform/js/expression-operand-type-validator</a>.
 
-Uses ASTNodeWrapper (<a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ExpressionLanguageBundle/Resources/public/js/ast-node-wrapper.js" target="_blank">oroexpressionlanguage/js/ast-node-wrapper</a>,
+Uses ASTNodeWrapper (<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ExpressionLanguageBundle/Resources/public/js/ast-node-wrapper.js" target="_blank">oroexpressionlanguage/js/ast-node-wrapper</a>,
 see [documentation](../../../../ExpressionLanguageBundle/Resources/doc/js/ast-node-wrapper.md)) to analyze the parsed expression.
 
 Constructor supports the following options:
@@ -72,7 +72,7 @@ It has only one public method, expectValid, that gets the parsed expression and 
 
 ## <a name=”view”>ExpressionEditorView</a>
 
-Source: <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/FormBundle/Resources/public/js/app/views/expression-editor-view.js" target="_blank">oroform/js/app/views/expression-editor-view</a>.
+Source: <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/FormBundle/Resources/public/js/app/views/expression-editor-view.js" target="_blank">oroform/js/app/views/expression-editor-view</a>.
 
 Used ExpressionEditorUtil and typeahead widget to provide autocomplete and validate the UI for text fields.
 
@@ -111,11 +111,11 @@ const editorView = new ExpressionEditorView({
 console.log(editorView.util.validate('email.id == 1'))
 ```
 
-How to create a provider see into its documentation <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityBundle/Resources/public/js/app/services/entity-structure-data-provider.js" target="_blank">oroentity/js/app/services/entity-structure-data-provider</a>.
+How to create a provider see into its documentation <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Resources/public/js/app/services/entity-structure-data-provider.js" target="_blank">oroentity/js/app/services/entity-structure-data-provider</a>.
 
 ## ExpressionEditorComponent
 
-Source: <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/FormBundle/Resources/public/js/app/components/expression-editor-component.js" target="_blank">oroform/js/app/components/expression-editor-component</a>.
+Source: <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/FormBundle/Resources/public/js/app/components/expression-editor-component.js" target="_blank">oroform/js/app/components/expression-editor-component</a>.
 
 For convenient using of view there is particular component. It’s designed to create entity data provider and then to
 create a view instance

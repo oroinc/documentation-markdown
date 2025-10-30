@@ -2,7 +2,7 @@
 
 # OroTagBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/TagBundle" target="_blank">OroTagBundle</a> implements tags for application entities and enables users to manage tags on entity view pages, observe them in DataGrids, and use them as filtering fields in report query builders.
+<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/TagBundle" target="_blank">OroTagBundle</a> implements tags for application entities and enables users to manage tags on entity view pages, observe them in DataGrids, and use them as filtering fields in report query builders.
 With this bundle, admin users can enable or disable the tag feature for particular entities in the entity management UI.
 
 Developers can also configure tags for every entity in the entity configuration metadata.
@@ -25,7 +25,7 @@ Tags can only be enabled for Configurable entities. To enable tags for an entity
 
 Tags can also be enabled/disabled for an entity in the UI **System > Entities > Entity Management** (attribute Tagging).
 
-**Please note**, <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/TagBundle/Entity/Taggable.php" target="_blank">Taggable interface</a> is still supported, but deprecated. If entity implements Taggable interface, you cannot disable tagging for it in the UI.
+**Please note**, <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/TagBundle/Entity/Taggable.php" target="_blank">Taggable interface</a> is still supported, but deprecated. If entity implements Taggable interface, you cannot disable tagging for it in the UI.
 
 ## Tags in Grids
 

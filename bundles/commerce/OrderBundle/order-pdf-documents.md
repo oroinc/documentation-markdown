@@ -29,9 +29,12 @@ The Twig templates for **order_default** `PDF document type` are located in the 
 
 Order PDF document is automatically created in the following cases:
 
-- When an order is created after the checkout process is completed in the storefront, via `\Oro\Bundle\OrderBundle\EventListener\PdfDocument\CreatePdfDocumentOnCheckoutFinishListener`.
+- When an order is created after the checkout process is completed in the storefront, via `\Oro\Bundle\OrderBundle\EventListener\PdfDocument\CreatePdfDocumentOnCheckoutFinishListener`. By default, this functionality is disabled.
 - When the PDF document is requested via the Download button in the back-office order view page, via `\Oro\Bundle\OrderBundle\Controller\OrderPdfDocumentDownloadController`.
 - When the PDF document is requested via the Download button on the storefront order view page, via `\Oro\Bundle\OrderBundle\Controller\Frontend\FrontendOrderPdfDocumentDownloadController`.
+
+#### NOTE
+By default, the **Order PDF document functionality in the storefront** is disabled.
 
 ## Order PDF URL
 

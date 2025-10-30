@@ -2,7 +2,7 @@
 
 # OroEmailBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/EmailBundle" target="_blank">OroEmailBundle</a> introduces mailing functionality based on the <a href="https://symfony.com/components/Mailer" target="_blank">Symfony Mailer</a> component. It enables system and
+<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EmailBundle" target="_blank">OroEmailBundle</a> introduces mailing functionality based on the <a href="https://symfony.com/components/Mailer" target="_blank">Symfony Mailer</a> component. It enables system and
 user mailboxes in the application and provides the ability to synchronize mailboxes with mail servers,
 send emails from the application and use email templates.
 

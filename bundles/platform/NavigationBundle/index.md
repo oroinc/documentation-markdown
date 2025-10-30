@@ -2,7 +2,7 @@
 
 # OroNavigationBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/NavigationBundle" target="_blank">OroNavigationBundle</a> introduces menu navigation structures in the Oro application UI, enables developers to define menus using YAML configuration files or menu builder services, and provides a possibility for application users to adjust existing menus in the system menu management UI.
+<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/NavigationBundle" target="_blank">OroNavigationBundle</a> introduces menu navigation structures in the Oro application UI, enables developers to define menus using YAML configuration files or menu builder services, and provides a possibility for application users to adjust existing menus in the system menu management UI.
 
 ## Menu Data Sources
 
