@@ -10,7 +10,7 @@ To edit a web catalog content tree:
    ![Clicking Edit Content Tree on the top right of the page](user/img/marketing/web_catalogs/EditContentTree.png)
 4. On the page that opens, fill in the details of the **homepage node** of the web catalog as described in the [Set Up the Homepage, First Level Menu, and Sub Menus](first-level-menu.md#user-guide-marketing-web-catalog-root-node) section.
 
-   The content selected in the content variants of the **homepage node** is shown when the buyer navigates to the OroCommerce storefront. The **homepage node** also acts as a parent node for the web catalog menu and sub-menu items.
+   The content selected in the content variants of the **homepage node** is shown when the buyer navigates to the OroCommerce storefront. The **homepage node** also acts as a parent node for the web catalog menu and sub-menu items. We recommended using the Oro Frontend Root system page as a root node of your web catalog.
 5. Under the **homepage node**, create main menu content nodes (e.g., the first level of the main menu in the storefront) as described in the [Set Up the Homepage, First Level Menu, and Sub Menus](first-level-menu.md#user-guide-marketing-web-catalog-root-node) section. We recommend creating a dedicated landing page for the main menu nodes of your web catalog.
    ![Edit content tree](user/img/marketing/web_catalogs/WebCatalogCreate2.png)
 
@@ -53,20 +53,3 @@ Once you created a web catalog, update your web-catalog configuration to enable 
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

@@ -16,20 +16,8 @@ After you submit an order, it becomes available in the [Order History](../accoun
 #### HINT
 Read more on how to place orders and proceed through various types of checkout in the [Checkout](../checkout/index.md#frontstore-guide-orders-checkout) topic.
 
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->
+<!-- fa-bars = fa-navicon -->
+<!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
+<!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
+<!-- Check mark in the square. -->
+<!-- SortDesc is also used as drop-down arrow -->

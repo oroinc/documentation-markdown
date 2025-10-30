@@ -8,8 +8,8 @@ Below is the list of key highlights of how to handle errors, work with logs and 
 ## Logs, Output, and Verbosity
 
 Message Queue Consumer uses <a href="https://github.com/symfony/monolog-bundle" target="_blank">MonologBundle</a> to output Logs.
-To output message with any of logging levels/priorities, you should inject **LoggerInterface** in your *processor* and log errors the same way as it is described in <a href="https://symfony.com/doc/6.4/logging.html#logging-a-message" target="_blank">Logging with Monolog" Symfony doc</a>.
-Consumer console command has different <a href="https://symfony.com/doc/6.4/console/verbosity.html" target="_blank">verbosity levels</a> that determine the messages displayed in the output.
+To output message with any of logging levels/priorities, you should inject **LoggerInterface** in your *processor* and log errors the same way as it is described in <a href="https://symfony.com/doc/5.4/logging.html#logging-a-message" target="_blank">Logging with Monolog" Symfony doc</a>.
+Consumer console command has different <a href="https://symfony.com/doc/5.4/console/verbosity.html" target="_blank">verbosity levels</a> that determine the messages displayed in the output.
 
 | Console option    | Output Errors                  |
 |-------------------|--------------------------------|
@@ -33,7 +33,7 @@ Sometimes, it is necessary to add your own data to log extra data. For more deta
 ### Handlers
 
 Consumer output is based on <a href="https://github.com/Seldaek/monolog" target="_blank">Monolog</a>, so it supports a stack of handlers that can be used to write the log entries to different locations (e.g., files, database, Slack, etc).
-See more information in the <a href="https://symfony.com/doc/6.4/logging.html#handlers-writing-logs-to-different-locations" target="_blank">related Symfony documentation</a>.
+See more information in the <a href="https://symfony.com/doc/5.4/logging.html#handlers-writing-logs-to-different-locations" target="_blank">related Symfony documentation</a>.
 
 It is useful when your production is configured with the real-time log service such as <a href="https://cloud.google.com/stackdriver" target="_blank">Google Stackdriver</a>. Read more in the [How to write logs to Stackdriver](../stackdriver.md#dev-guide-mq-stackdriver).
 
@@ -45,7 +45,7 @@ If your production is configured with a real-time log service (<a href="https://
 
 ### Console Messages Output
 
-Message Queue Consumer provides <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MessageQueueBundle/Log/Handler/ConsoleHandler.php" target="_blank">ConsoleHandler</a> that listens to console events and writes log messages to the console output depending on the console verbosity. It uses a <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MessageQueueBundle/Log/Formatter/ConsoleFormatter.php" target="_blank">ConsoleFormatter</a> to format the record before logging it. Record format pattern is described below:
+Message Queue Consumer provides <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/MessageQueueBundle/Log/Handler/ConsoleHandler.php" target="_blank">ConsoleHandler</a> that listens to console events and writes log messages to the console output depending on the console verbosity. It uses a <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/MessageQueueBundle/Log/Formatter/ConsoleFormatter.php" target="_blank">ConsoleFormatter</a> to format the record before logging it. Record format pattern is described below:
 
 ```php
 "%datetime% %start_tag%%channel%.%level_name%%end_tag%: %message%%context%%extra%\n"
@@ -57,8 +57,8 @@ An administrator must be informed about the state of consumers in the system (wh
 
 This is covered by the Consumer Heartbeat functionality that works in the following way:
 
-* On start and after every configured time period, each consumer calls the `tick` method of the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MessageQueueBundle/Consumption/ConsumerHeartbeat.php" target="_blank">ConsumerHeartbeat</a> service that informs the system that the consumer is alive.
-* The <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MessageQueueBundle/Command/ConsumerHeartbeatCommand.php" target="_blank">oro:cron:message-queue:consumer_heartbeat_check</a> cron command is periodically executed to check consumers’ state. If no alive consumers found, the `oro/message_queue_state` socket message is sent notifying all logged-in users that the system may work incorrectly (because consumers are not available).
+* On start and after every configured time period, each consumer calls the `tick` method of the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/MessageQueueBundle/Consumption/ConsumerHeartbeat.php" target="_blank">ConsumerHeartbeat</a> service that informs the system that the consumer is alive.
+* The <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/MessageQueueBundle/Command/ConsumerHeartbeatCommand.php" target="_blank">oro:cron:message-queue:consumer_heartbeat_check</a> cron command is periodically executed to check consumers’ state. If no alive consumers found, the `oro/message_queue_state` socket message is sent notifying all logged-in users that the system may work incorrectly (because consumers are not available).
 * The same check is also performed when a user logs in. This is done to notify users about the problem as soon as possible.
 
 The check period can be changed in the application configuration file using the `consumer_heartbeat_update_period` option:
@@ -138,7 +138,9 @@ use Oro\Component\MessageQueue\Consumption\Context;
 
 class CustomExtension extends AbstractExtension
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function onPostReceived(Context $context)
     {
         // ... own logic
@@ -173,12 +175,6 @@ A few examples of common errors that may occur in the course of your application
 * Third-party integrations errors
 
 If one listed error occurs, processor will return **REQUEUE**, and message will be redelivered.
-
-## Error Reporting Level
-
-The error reporting level can be changed through customization:
-
-`AppKernel::getErrorReportingLevel()`
 
 ## Profiling
 
@@ -234,10 +230,10 @@ For more information, see the following external resources:
 
 * <a href="https://github.com/Seldaek/monolog" target="_blank">Monolog</a>
 * <a href="https://github.com/symfony/monolog-bundle" target="_blank">MonologBundle</a>
-* <a href="https://symfony.com/doc/6.4/logging.html#logging-a-message" target="_blank">Symfony "Logging with Monolog"</a>
-* <a href="https://symfony.com/doc/6.4/console/verbosity.html" target="_blank">Symfony Verbosity Levels</a>
-* <a href="https://symfony.com/doc/6.4/logging/processors.html" target="_blank">Symfony Logging Processors</a>
-* <a href="https://symfony.com/doc/6.4/logging.html#handlers-writing-logs-to-different-locations" target="_blank">Symfony Logging Handlers</a>
+* <a href="https://symfony.com/doc/5.4/logging.html#logging-a-message" target="_blank">Symfony "Logging with Monolog"</a>
+* <a href="https://symfony.com/doc/5.4/console/verbosity.html" target="_blank">Symfony Verbosity Levels</a>
+* <a href="https://symfony.com/doc/5.4/logging/processors.html" target="_blank">Symfony Logging Processors</a>
+* <a href="https://symfony.com/doc/5.4/logging.html#handlers-writing-logs-to-different-locations" target="_blank">Symfony Logging Handlers</a>
 * <a href="https://cloud.google.com/stackdriver" target="_blank">Google Stackdriver</a>
 * <a href="https://www.elastic.co/elk-stack" target="_blank">ELK Stack: Elasticsearch, Logstash, Kibana</a>
 

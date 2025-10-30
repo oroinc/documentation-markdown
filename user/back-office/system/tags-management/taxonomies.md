@@ -27,7 +27,7 @@ Within the taxonomies list, you can:
 
 1. View the details of a taxonomic unit:<i class="fa fa-eye fa-lg" aria-hidden="true"></i>
 2. Edit a taxonomic unit: <i class="fa fa-edit fa-lg" aria-hidden="true"></i>
-3. Delete a taxonomic unit from the system:![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg)
+3. Delete a taxonomic unit from the system:<i class="fas fa-trash-alt" aria-hidden="true"></i>
 4. Filter taxonomies: <i class="fa fa-filter fa-lg" aria-hidden="true"></i>
 5. Configure grid settings for taxonomies: <i class="fa fa-cog fa-lg" aria-hidden="true"></i>
 
@@ -37,20 +37,3 @@ Within the taxonomies list, you can:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

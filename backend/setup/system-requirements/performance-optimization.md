@@ -281,7 +281,7 @@ You can make Symfony faster if you optimize your servers and applications:
   composer dump-autoload --optimize --no-dev --classmap-authoritative
   ```
 
-For more information on Symfony performance optimization, see the list of all recommendations on the <a href="https://symfony.com/doc/6.4/performance.html" target="_blank">Symfony website</a>.
+For more information on Symfony performance optimization, see the list of all recommendations on the <a href="https://symfony.com/doc/5.4/performance.html" target="_blank">Symfony website</a>.
 
 ## Improve Doctrine Performance
 

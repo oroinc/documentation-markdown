@@ -2,6 +2,9 @@
 
 # Create a Product Kit
 
+#### NOTE
+Product Kits in the back-office are available as of 5.1LTS. Product Kits in the storefront are available as of 5.1.3. By default, the product kits feature is disabled for v.5.1 but you can enable it with developer assistance in the <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/ProductBundle/Resources/config/oro/app.yml" target="_blank">yaml file of the ProductBundle</a>.
+
 #### HINT
 This section is part of the [Product Management](../../../concept-guides/catalog-promotions/product-management/index.md#concept-guides-product-management) topic that provides a general understanding of the product concept in OroCommerce.
 
@@ -34,7 +37,7 @@ To create a new product kit:
    You can also drag and drop products in the kit section to a different position:
    <br/>
    ![Dragging and dropping products in the kit](user/img/products/products/kits/drag-drop.gif)
-9. In the **Shipping Options** section, define how fixed shipping costs should be calculated for the selected product kit. The field is available for product kits and is only applied when calculating [Fixed Product Shipping](../../system/integrations/shipping-integration/fixed-shipping.md#doc-integration-fixed-shipping-cost) costs for product kits. The field has the following options:
+9. In the **Shipping Options** section, define how fixed shipping costs should be calculated for the selected product kit (available starting from OroCommerce v5.1.10). The field is only applied when calculating [Fixed Product Shipping](../../system/integrations/shipping-integration/fixed-shipping.md#doc-integration-fixed-shipping-cost) costs for product kits. The field has the following options:
    * **Kit product and kit items** (Default) — Shipping costs are calculated based on the combined shipping parameters of both the main product kit and its individual items.
    * **Only kit product itself** — Shipping costs are calculated exclusively on the shipping parameters of the main product kit, ignoring the individual items within the kit.
    * **Only kit items** — Shipping costs are calculated exclusively based on the shipping parameters of the individual items within the kit, ignoring the main kit product itself.
@@ -47,7 +50,4 @@ Provide unit, weight, and weight measuring unit, dimensions (width, height, dept
 #### HINT
 You can choose to sell an item exclusively as part of the kit, and not separately. To hide it from buyers in the storefront, change the product’s [visibility settings](managing-product-visibility.md#products-product-visibility) to **Hidden**. Customers will still be able to [purchase it](../../../storefront/orders/kits.md#storefront-guide-orders-kits) but only as part of the selected kit.
 
-**Related Topics**
-
-* [Product Kits Concept Guide](../../../concept-guides/catalog-promotions/product-management/kits-concept.md#concept-guides-product-management-kits)
-* [Tax Calculation in Kits](../../../../bundles/commerce/TaxBundle/index.md#bundle-docs-commerce-tax-bundle-kits)
+![Standalone product hidden and can only by purchased in a product kit](user/img/products/products/kits/item-only-for-kits.png)

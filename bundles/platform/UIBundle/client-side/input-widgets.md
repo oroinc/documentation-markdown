@@ -57,10 +57,10 @@ $(':input').inputWidget('val', newValue);
 
 Your can see more examples in code:
 
-* InputWidgetManager and $.fn.inputWidget with examples in comments: <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBundle/Resources/public/js/input-widget-manager.js" target="_blank">oroui/js/input-widget-manager.js</a>
-* AbstractInputWidget: <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBundle/Resources/public/js/app/views/input-widget/abstract.js" target="_blank">oroui/js/app/views/input-widget/abstract</a>
-* UniformSelectInputWidget: <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBundle/Resources/public/js/app/views/input-widget/uniform-select.js" target="_blank">oroui/js/app/views/input-widget/uniform-select</a>
-* UniformFileInputWidget: <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBundle/Resources/public/js/app/views/input-widget/uniform-file.js" target="_blank">oroui/js/app/views/input-widget/uniform-file</a>
-* Register UniformSelectInputWidget and UniformFileInputWidget in InputWidgetManager: <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBundle/Resources/public/js/app/modules/input-widgets.js" target="_blank">oroui/js/app/modules/input-widgets</a>
+* InputWidgetManager and $.fn.inputWidget with examples in comments: <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/UIBundle/Resources/public/js/input-widget-manager.js" target="_blank">oroui/js/input-widget-manager.js</a>
+* AbstractInputWidget: <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/UIBundle/Resources/public/js/app/views/input-widget/abstract.js" target="_blank">oroui/js/app/views/input-widget/abstract</a>
+* UniformSelectInputWidget: <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/UIBundle/Resources/public/js/app/views/input-widget/uniform-select.js" target="_blank">oroui/js/app/views/input-widget/uniform-select</a>
+* UniformFileInputWidget: <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/UIBundle/Resources/public/js/app/views/input-widget/uniform-file.js" target="_blank">oroui/js/app/views/input-widget/uniform-file</a>
+* Register UniformSelectInputWidget and UniformFileInputWidget in InputWidgetManager: <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/UIBundle/Resources/public/js/app/modules/input-widgets.js" target="_blank">oroui/js/app/modules/input-widgets</a>
 
 <!-- Frontend -->

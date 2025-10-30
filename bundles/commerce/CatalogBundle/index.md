@@ -2,7 +2,7 @@
 
 # OroCatalogBundle
 
-<a href="https://github.com/oroinc/orocommerce/tree/master/src/Oro/Bundle/CatalogBundle" target="_blank">OroCatalogBundle</a> defines the master catalog and the categories that are aimed at structuring products in OroCommerce.
+<a href="https://github.com/oroinc/orocommerce/tree/5.1/src/Oro/Bundle/CatalogBundle" target="_blank">OroCatalogBundle</a> defines the master catalog and the categories that are aimed at structuring products in OroCommerce.
 
 The bundle provides the ability to manage categories and assign products to them.
 
@@ -33,12 +33,13 @@ and will look like:
 All Products \ category-1 \ category-1-1 \ category-1-1-1
 ```
 
-The breadcrumb logic follows SEO best practices:
+Breadcrumbs behavior is configurable via the following options under **System > Configuration > Commerce > Product > SEO** [in the back-office](../../../user/back-office/system/configuration/commerce/product/seo.md#sys-commerce-product-seo):
 
-- The current page is automatically excluded from the breadcrumbs on all pages.
-- Breadcrumbs that consist of only one item are automatically removed.
+- *Exclude Current Page in Breadcrumbs on Product View*
+- *Exclude Current Page in Breadcrumbs on All Pages*
+- * Hides the breadcrumbs block entirely when it contains a single item\*
 
-This logic is applied by default across the storefront and does not require manual configuration.
+These options allow you to exclude the current product/category from the breadcrumbs, or remove single-item breadcrumbs entirely.
 
 ## Performance notes
 

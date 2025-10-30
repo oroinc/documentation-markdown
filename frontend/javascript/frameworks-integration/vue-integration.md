@@ -103,7 +103,7 @@ The example below illustrates creating a simple component, such as the one shown
            - oroui/js/app/components/vue-app-component
            - acmevueapp/js/vue-app/App
    ```
-5. To build the application after changes, run the `pnpm run build` command. To rebuild the application automatically, run the `pnpm run watch` command.
+5. To build the application after changes, run the `npm run build` command. To rebuild the application automatically, run the `npm run watch` command.
 6. In the Twig template, define where our Vue app will be displayed with a specific Page component using the `data-page-component-vue-app` shortcut. Copy and paste the code below:
    *src/{YourBundleName}/Resources/views/layout.html.twig*
    ```html+jinja
@@ -145,7 +145,7 @@ The webpack config does not support the `vue-loader` out-of-the-box. You need to
 The example below implements the same functionality discussed above but uses the Single File Component in Vue3.
 
 ![Vue SFC demo](img/frontend/frontend-architecture/frameworks/vue-sfc-demo.png)
-1. Install the `vue-loader` by running the command `pnpm install vue-loader@next -D`.
+1. Install the `vue-loader` by running the command `npm install vue-loader@next -D`.
 2. Open your `webpack.config.js` and replace the code with the one below:
    ```javascript
    const { VueLoaderPlugin } = require('vue-loader');
@@ -249,7 +249,7 @@ The example below implements the same functionality discussed above but uses the
            - oroui/js/app/components/vue-app-component
            - acmevuesfcapp/js/vue-app/App.vue
    ```
-3. To build the application after changes, run the `pnpm run build` command.  To rebuild the application automatically, run the `pnpm run watch` command.
+3. To build the application after changes, run the `npm run build` command.  To rebuild the application automatically, run the `npm run watch` command.
 4. Once the page component with Vue instance is created, declare it in the template of the required page. Copy and paste the code below:
    *src/{YourBundleName}/Resources/views/layout.html.twig*
    ```html+jinja

@@ -9,7 +9,7 @@
 During the checkout, `ShippingContext` object is created by the `\Oro\Bundle\CheckoutBundle\Factory\CheckoutShippingContextFactory`, although it is recommended to use `\Oro\Bundle\CheckoutBundle\Provider\CheckoutShippingContextProvider` that utilizes memory caching to avoid unnecessary calls to the factory. `ShippingLineItem` in its turn is created by `\Oro\Bundle\ShippingBundle\Context\LineItem\Factory\ShippingLineItemFromProductLineItemFactory`. If a `ShippingLineItem` represents a product kit, then for its kit item line items `ShippingKitItemLineItem` objects are created by `\Oro\Bundle\ShippingBundle\Context\LineItem\Factory\ShippingKitItemLineItemFromProductKitItemLineItemFactory`.
 
 #### NOTE
-`ShippingLineItemFromProductLineItemFactory` implements `\Oro\Bundle\ShippingBundle\Context\LineItem\Factory\ShippingLineItemFromProductLineItemFactoryInterface` and `ShippingKitItemLineItemFromProductKitItemLineItemFactory` - `\Oro\Bundle\ShippingBundle\Context\LineItem\Factory\ShippingKitItemLineItemFromProductKitItemLineItemFactoryInterface`
+`BasicShippingLineItemBuilder` implements `\Oro\Bundle\ShippingBundle\Context\LineItem\Builder\ShippingLineItemBuilderInterface` and `ShippingKitItemLineItemFromProductKitItemLineItemFactory` - `\Oro\Bundle\ShippingBundle\Context\LineItem\Factory\ShippingKitItemLineItemFromProductKitItemLineItemFactoryInterface`
 
 The main entry point where `ShippingContext` is used is `\Oro\Bundle\ShippingBundle\Provider\ShippingPriceProvider` that delegates further calls to shipping methods and shipping rules providers.
 

@@ -14,15 +14,15 @@ The `public email address` is an address that belongs to public email owners, no
 
 The default list of public email owner entities:
 
-- <a href="https://github.com/oroinc/crm/blob/master/src/Oro/Bundle/ContactBundle/Entity/Contact.php" target="_blank">Contact entity</a>
-- <a href="https://github.com/oroinc/crm/blob/master/src/Oro/Bundle/SalesBundle/Entity/Lead.php" target="_blank">Lead entity</a>
-- <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/CustomerBundle/Entity/CustomerUser.php" target="_blank">Customer User entity</a>
-- <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/RFPBundle/Entity/Request.php" target="_blank">RFP Request entity</a>
+- <a href="https://github.com/oroinc/crm/blob/5.1/src/Oro/Bundle/ContactBundle/Entity/Contact.php" target="_blank">Contact entity</a>
+- <a href="https://github.com/oroinc/crm/blob/5.1/src/Oro/Bundle/SalesBundle/Entity/Lead.php" target="_blank">Lead entity</a>
+- <a href="https://github.com/oroinc/customer-portal/blob/5.1/src/Oro/Bundle/CustomerBundle/Entity/CustomerUser.php" target="_blank">Customer User entity</a>
+- <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/RFPBundle/Entity/Request.php" target="_blank">RFP Request entity</a>
 
 The default list of private email owner entities:
 
-- <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UserBundle/Entity/User.php" target="_blank">User entity</a>
-- <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EmailBundle/Entity/Mailbox.php" target="_blank">Mailbox entity</a>
+- <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/UserBundle/Entity/User.php" target="_blank">User entity</a>
+- <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EmailBundle/Entity/Mailbox.php" target="_blank">Mailbox entity</a>
 
 ## ACL Restrictions of Public and Private Emails
 

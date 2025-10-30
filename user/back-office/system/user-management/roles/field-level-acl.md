@@ -17,7 +17,7 @@ The following table illustrates the actions that can be performed to entity fiel
 |----------|---------------------------------------------------------------------------|
 | View     | A user can see entity record fields and values.                           |
 | Create   | A user can see and modify entity record fields on the ‘new entity’ form.  |
-| Edit     | A user can see and modify entity record fields on the ‘view entity’ form. |
+| Edit     | A user can see and modify entity record fields on the ‘edit entity’ form. |
 ![image](user/img/system/user_management/roles_permissions_fields_general_ex.png)
 
 For each of these actions you can set the required access level. However, the set of available access levels for entity fields depends on:
@@ -50,13 +50,13 @@ To enable field-level access:
 
 When field-level permissions are enabled, the **+** icon appears next to the entities when creating or editing a role.
 
-![image](user/img/system/user_management/enable_field_acl.png)
+![image](user/img/system/user_management/enable_field_acl.gif)
 
 <a id="user-guide-user-management-permissions-roles-field-level-acl-enable-user"></a>
 
 ## Enable Users to See Restricted Fields
 
-You can enable users to modify only certain entity fields and restrict them from modifying others. For example, you can enable sales managers to modify opportunity budget amount, but restrict sales assistants to only viewing it with no permissions to update amount in any way. Fields disabled for editing will appear dimmed on the interface.
+You can enable users to modify only certain entity fields and restrict them from modifying others. For example, you can enable sales managers to modify opportunity statuses, but restrict sales representatives to only viewing them with no permissions to update statuses in any way. Fields disabled for editing will appear dimmed on the interface.
 
 ![image](user/img/system/user_management/opportunity_greyed-status.png)
 
@@ -80,4 +80,5 @@ To enable field-level access:
 
 * [Introduction to Role Management](index.md#user-guide-user-management-permissions-roles)
 * [Create and Manage Roles](create-manage-roles.md#user-guide-user-management-permissions-roles-actions)
+* [End-to-end Access Configuration in Context](access-in-context.md#user-guide-user-management-permissions-roles-examples)
 * [Entity and System Capabilities](admin-capabilities.md#admin-capabilities)

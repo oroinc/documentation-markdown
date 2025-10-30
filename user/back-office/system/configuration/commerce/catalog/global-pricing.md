@@ -11,7 +11,7 @@ Out-of-the-box, OroCommerce comes with a Combined Price List (CPL) functionality
 
 If you operate a business without complex pricing, or use an external third-party pricing system to generate and manage prices outside of OroCommerce, you can [switch from the default CPL pricing to a simpler Flat pricing](../../../../../../backend/setup/post-install/flat-pricing.md#dev-guide-setup-flat-pricing). To use the Flat pricing feature, your system administrator should enable it via the console, not the UI. The pricing configuration page will then have only the General, Pricing Rounding, Price List, and Display Currency settings.
 
-![Pricing configuration page when flat pricing is enabled](user/img/system/config_commerce/catalog/flat-pricing-enabed-config.png)
+> ![Pricing configuration page when flat pricing is enabled](user/img/system/config_commerce/catalog/flat-pricing-enabed-config.png)
 
 The pricing settings are configured globally, per [organization](../../../user-management/organizations/org-configuration/commerce/catalog/pricing.md#configuration-guide-commerce-configuration-catalog-pricing-organization), and per [website](../../../websites/web-configuration/commerce/catalog/website-pricing.md#pricing-currency-website).
 
@@ -20,166 +20,59 @@ The price list settings (i.e., price list assignment and fallback) are configure
 To change the default global pricing settings:
 
 1. Navigate to **System > Configuration > Commerce > Catalog > Pricing** in the main menu.
-2. To customize the option configuration, clear the **Use Default** checkbox next to the option and select or type in the new option value.
-3. Click **Reset** at the top right to roll back any changes to the pricing settings.
-4. Click **Save Settings** to save the changes.
 
-## Oro Pricing
+![Pricing system configuration page](user/img/system/config_commerce/catalog/pricing_sys_config.png)
+1. To customize the option configuration, clear the **Use Default** checkbox next to the option and select or type in the new option value.
+2. In the **General** section, enable or disable the default OroCommerce pricing management system.
+   * **Enable Oro Pricing** — By default, this option is enabled. When disabled, all pricing stored in and managed by the default OroCommerce pricing management system becomes hidden from the application. Disable **Oro Pricing** when you need to introduce a custom pricing management system for storing and fetching prices.
+3. In the **Pricing Rounding** section, set the price precision and price rounding strategy:
+   * **Price Calculation Precision in Price Lists** — The number of digits allowed in the fractional part of the price calculation rule results. The results will be rounded using the “round half away from zero” rule (2.5 will be rounded to 3). If this value is empty, the system will not apply any rounding until the maximum supported price precision (4 digits) is reached.
+   * **Subtotals Calculation Precision in Sales Documents** — The number of digits allowed in the fractional part of the subtotals, totals, and taxes calculated in shopping lists, checkout, orders, and RFQs. For example, with precision for sales documents set to 2, even when the original precision of prices is 4, such as $10.0001, the subtotals and taxes will be rounded to 2 digits.
+   * **Pricing Rounding Type** — The rounding type used when calculated product price has more digits in the fractional part than allowed by the respective price precision settings. These are the rounding settings used for price and tax calculations that happen in shopping lists, checkout, orders, and RFQs. Please use one of the following options:
+     - *Ceil* — Rounds to the nearest integer that is not less than the price with the fractional part (e.g., 23.5 is rounded to 24; 23.3 is rounded to 24; 23.7 is rounded to 24)
+     - *Floor* — Rounds to the nearest integer that does not exceed the price with the fractional part (e.g., 23.5 is rounded to 23; 23.3 is rounded to 23; 23.7 is rounded to 23)
+     - *Half Down* — Uses ceil rounding for the prices with the fractional part that is bigger than 0.5 and uses floor rounding for the prices with a fractional part that is that lower than or equal to 0.5 (e.g., 23.5 is rounded to 23; 23.3 is rounded to 23; 23.7 is rounded to 24)
+     - *Half Up* —  Uses ceil rounding for the prices with the fractional part that is bigger than or equal to 0.5 and uses floor rounding for the prices with a fractional part that is that lower than 0.5 (e.g., 23.5 is rounded to 24; 23.3 is rounded to 23; 23.7 is rounded to 24)
+     - *Half Even* — Uses ceil rounding for the prices with the fractional part that is bigger than 0.5, uses floor rounding for the prices with a fractional part that is that lower than 0.5, and rounds the price to the nearest even integer when the price fraction is exactly 0.5 (e.g., 23.5 is rounded to 24; 23.3 is rounded to 23; 23.7 is rounded to 24)
+4. In the **Default Price Lists** section, configure default price lists, their priority, and merge strategy to get the necessary resulting combination of prices that are shown on the websites:
+   * **Price Lists** — A set of default price lists that can be used for price calculation. A [website](../../../websites/configure-price-lists.md#sys-website-edit-price-lists), a [customer group](../../../../customers/customer-groups/customer-group-price-lists.md#customers-customer-groups-edit-price-lists), and a [customer](../../../../customers/customers/customer-price-lists.md#customers-customers-edit-price-lists) can have their own set of price lists that overrides the default configuration. Remember that the customer group configuration overrides the config on the website level, while the customer configuration overrides the one on the customer group level (website < customer group < customer).
 
-In the **General** section, enable or disable the default OroCommerce pricing management system.
-
-**Enable Oro Pricing** — By default, this option is enabled. When disabled, all pricing stored in and managed by the default OroCommerce pricing management system becomes hidden from the application. Disable **Oro Pricing** when you need to introduce a [custom pricing management system](../../../../../concept-guides/catalog-promotions/pricing/index.md#flat-vs-combined-pricing-strategy) for storing and fetching prices.
-
-<a id="sys-config-commerce-catalog-pricing-rounding"></a>
-
-## Pricing Rounding
-
-### Price Calculation Precision in Price Lists
-
-**Price Calculation Precision in Price Lists** — The number of digits allowed in the fractional part of the price calculation rule results when generating price lists in the back-office. The system uses the **round half away from zero** rule to round the results. For example:
-
-> * 2.5 rounds up to 3 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg) (the fractional part `0.5` is **0.5 or greater**, that’s why the number rounds up)
-> * 2.49 rounds down to 2 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) (the fractional part `0.49` is **less than 0.5**, that’s why the number rounds down)
-
-If this value is empty, the system will not apply any rounding until the maximum supported price precision (4 digits) is reached. For example: The price calculated as 5.55555 will be rounded to 5.5556 (4 digits). Below is a table that compares the input price with the results after different levels of precision are applied.
-
-|   Input Price |   Precision (0) |   Precision (1) |   Precision (2) |   Precision (3) |   Precision (4) |   Precision (Empty) |
-|---------------|-----------------|-----------------|-----------------|-----------------|-----------------|---------------------|
-|       5.55055 |               6 |             5.6 |            5.55 |           5.551 |          5.5506 |              5.5506 |
-|      10.5052  |              11 |            10.5 |           10.51 |          10.505 |         10.5052 |             10.5052 |
-
-The illustration of applying the price precision value (`1`) to a Med Price List.
-
-![Illustration of applying the price precision value (1) to a Med Price List](user/img/system/config_commerce/catalog/price_precision_1.png)![Illustration of a product price with applied precision in the storefront](user/img/system/config_commerce/catalog/price_precision_storefront.png)
-
-### Subtotals Calculation Precision in Sales Documents
-
-**Subtotals Calculation Precision in Sales Documents** — The number of digits allowed in the fractional part of the subtotals, totals, and taxes calculated in shopping lists, checkout, orders, and RFQs. The value cannot be empty. For example, if the precision for sales documents is set to `2`, and the original price is $5.5556, the subtotal or tax will be rounded to $5.56 (2 digits). The system uses the **Pricing Rounding Type** setting to decide how to round the value if the fractional part exceeds the allowed precision.
-
-![Illustration of a price precision in sales documents in the storefront](user/img/system/config_commerce/catalog/price_precision_sales_documents.png)
-
-#### Pricing Rounding Type
-
-**Pricing Rounding Type** — The rounding type is used when a calculated product price has more digits in the fractional part than allowed by the respective price precision settings. These are the rounding settings used for price and tax calculations that happen in shopping lists, checkout, orders, and RFQs. Please use one of the following options:
-
-1. **Ceil** — **Always rounds up** ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg) to the nearest integer that is not less than the price with the fractional part (e.g., `23.3`, `23.5` and `23.7` are all rounded up to `24`).
-
-|   Product Price | Subtotal Precision (0)                                                       |   Subtotal Precision (1) |   Subtotal Precision (2) |   Subtotal Precision (3) |   Subtotal Precision (4) |
-|-----------------|------------------------------------------------------------------------------|--------------------------|--------------------------|--------------------------|--------------------------|
-|          5.5505 | 6.00 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)  |                      5.6 |                     5.56 |                    5.551 |                   5.5505 |
-|         23.3533 | 24.00 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg) |                     23.4 |                    23.36 |                   23.354 |                  23.3533 |
-|         23.5    | 24.00 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg) |                     23.5 |                    23.5  |                   23.5   |                  23.5    |
-|         23.5253 | 24.00 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg) |                     23.6 |                    23.53 |                   23.526 |                  23.5253 |
-|         23.7577 | 24.00 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg) |                     23.8 |                    23.76 |                   23.758 |                  23.7577 |
-|         10.5051 | 11.00 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg) |                     10.6 |                    10.51 |                   10.506 |                  10.5051 |
-![Illustration of a subtotal price displayed in the storefront with the precision value set to 0 and the pricing round type set to Ceil](user/img/system/config_commerce/catalog/precision-0-ceil.png)
-1. **Floor** — **Always rounds down** ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) to the nearest integer that does not exceed the price with the fractional part (e.g., `23.3`, `23.5` or `23.7` is rounded down to `23`).
-
-|   Product Price | Subtotal Precision (0)                                                           |   Subtotal Precision (1) |   Subtotal Precision (2) |   Subtotal Precision (3) |   Subtotal Precision (4) |
-|-----------------|----------------------------------------------------------------------------------|--------------------------|--------------------------|--------------------------|--------------------------|
-|          5.5505 | 5.00 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg)  |                      5.5 |                     5.55 |                    5.55  |                   5.5505 |
-|         23.3533 | 23.00 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) |                     23.3 |                    23.35 |                   23.353 |                  23.3533 |
-|         23.5    | 23.00 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) |                     23.5 |                    23.5  |                   23.5   |                  23.5    |
-|         23.5253 | 23.00 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) |                     23.5 |                    23.52 |                   23.525 |                  23.5253 |
-|         23.7577 | 23.00 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) |                     23.7 |                    23.75 |                   23.757 |                  23.7577 |
-|         10.5051 | 10.00 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) |                     10.5 |                    10.5  |                   10.505 |                  10.5051 |
-![Illustration of a subtotal price displayed in the storefront with the precision value set to 1 and the pricing round type set to Floor](user/img/system/config_commerce/catalog/precision-1-floor.png)
-1. **Half Down** — **Rounds down** ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) if the fractional part is **less or exactly 0.5** (`X ≤ 0.5`). **Rounds up** ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg) otherwise ( `X > 0.5`). For instance, `23.3`, `23.5` are rounded down to `23`, while `23.7` is rounded up to `24`.
-
-|   Product Price | Subtotal Precision (0)                                                           | Subtotal Precision (1)                                                           | Subtotal Precision (2)                                                           | Subtotal Precision (3)                                                            |   Subtotal Precision (4) |
-|-----------------|----------------------------------------------------------------------------------|----------------------------------------------------------------------------------|----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|--------------------------|
-|          5.5505 | 6.00 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)      | 5.60 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)      | 5.55 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg)  | 5.55 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg)   |                   5.5505 |
-|         23.3533 | 23.00 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) | 23.40 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 23.35 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) | 23.353 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) |                  23.3533 |
-|         23.5    | 23.00 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) | 23.50                                                                            | 23.50                                                                            | 23.50                                                                             |                  23.5    |
-|         23.5253 | 24.00 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 23.50 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) | 23.53 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 23.525 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) |                  23.5253 |
-|         23.7577 | 24.00 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 23.80 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 23.76 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 23.758 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     |                  23.7577 |
-|         10.5051 | 11.00 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 10.50 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) | 10.51 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 10.505 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) |                  10.5051 |
-![Illustration of a subtotal price displayed in the storefront with the precision value set to 2 and the pricing round type set to Half Down](user/img/system/config_commerce/catalog/precision-2-half-down.png)
-1. **Half Up** — **Rounds up** ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg) if the fractional part is **exactly 0.5 or more** (`X ≥ 0.5`). **Rounds down** ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) otherwise ( `X < 0.5`). For instance, `23.3` is rounded down to `23`, while `23.5` and `23.7` are rounded up to `24`.
-
-|   Product Price | Subtotal Precision (0)                                                           | Subtotal Precision (1)                                                           | Subtotal Precision (2)                                                           | Subtotal Precision (3)                                                            |   Subtotal Precision (4) |
-|-----------------|----------------------------------------------------------------------------------|----------------------------------------------------------------------------------|----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|--------------------------|
-|          5.5505 | 6.00 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)      | 5.60 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)      | 5.55 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg)  | 5.551 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)      |                   5.5505 |
-|         23.3533 | 23.00 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) | 23.40 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 23.35 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) | 23.353 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) |                  23.3533 |
-|         23.5    | 23.00 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) | 23.50                                                                            | 23.50                                                                            | 23.50                                                                             |                  23.5    |
-|         23.5253 | 24.00 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 23.50 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) | 23.53 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 23.525 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) |                  23.5253 |
-|         23.7577 | 24.00 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 23.80 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 23.76 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 23.758 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     |                  23.7577 |
-|         10.5051 | 11.00 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 10.50 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) | 10.51 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 10.505 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) |                  10.5051 |
-![Illustration of a subtotal price displayed in the storefront with the precision value set to 2 and the pricing round type set to Half Up](user/img/system/config_commerce/catalog/precision-2-half-up.png)
-1. **Half Even** — **Rounds up** ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg) if the fractional part is **more than 0.5** (`X > 0.5`). **Rounds down** ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) if the fractional part is **less than 0.5** (`X < 0.5`). **Rounds to the nearest even integer** if the fractional part is **exactly 0.5** (`X = 0.5`). For instance, `23.5` is rounded up to `24` (odd to even integer), while `24.5` is rounded down to `24` (the nearest even integer).
-
-|   Product Price | Subtotal Precision (0)                                                           | Subtotal Precision (1)                                                           | Subtotal Precision (2)                                                           | Subtotal Precision (3)                                                            |   Subtotal Precision (4) |
-|-----------------|----------------------------------------------------------------------------------|----------------------------------------------------------------------------------|----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|--------------------------|
-|          5.5505 | 6.00 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)      | 5.60 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)      | 5.55 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg)  | 5.55 **(even integer)**                                                           |                   5.5505 |
-|         23.3533 | 23.00 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) | 23.40 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 23.35 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) | 23.353 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) |                  23.3533 |
-|         23.5    | 24.00 **(even integer)**                                                         | 23.50                                                                            | 23.50                                                                            | 23.50                                                                             |                  23.5    |
-|         23.5253 | 24.00 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 23.50 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) | 23.53 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 23.525 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) |                  23.5253 |
-|         23.7577 | 24.00 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 23.80 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 23.76 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 23.758 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     |                  23.7577 |
-|         10.5051 | 11.00 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 10.50 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) | 10.51 ![ArrowUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-up.svg)     | 10.505 ![ArrowDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/arrow-down.svg) |                  10.5051 |
-![Illustration of a subtotal price displayed in the storefront with the precision value set to 3 and the pricing round type set to Half Even](user/img/system/config_commerce/catalog/precision-3-half-even.png)
-
-#### HINT
-For more information on how rounding is applied to taxes, refer to the [Tax Calculation](../taxation/tax-calculation.md#user-guide-taxes-tax-configuration) documentation.
-
-## Default Price Lists
-
-In the **Default Price Lists** section, configure default price lists, their priority, and merge strategy to get the necessary resulting combination of prices that are shown on the websites:
-
-**Price Lists** — A set of default price lists that can be used for price calculation. A [website](../../../websites/configure-price-lists.md#sys-website-edit-price-lists), a [customer group](../../../../customers/customer-groups/customer-group-price-lists.md#customers-customer-groups-edit-price-lists), and a [customer](../../../../customers/customers/customer-price-lists.md#customers-customers-edit-price-lists) can have their own set of price lists that overrides the default configuration. Remember that the customer group configuration overrides the config on the website level, while the customer configuration overrides the one on the customer group level (website < customer group < customer).
-
-> 1. To add a price list to the default price lists, click **Add Price List** and select the price list in the newly added line. The price list is appended to the bottom of the list and, initially, has lower priority than the existing price lists.
-> 2. To change the price list priority, click and hold the <i class="fas fa-arrows-alt-v" aria-hidden="true"></i> **Sort** icon, and drag the price list up or down the list.
-> 3. To control the way prices are merged into the combined price list, select or clear the **Merge Allowed** option for the price lists. The option is shown only for the *Merge by priority* price selection strategy. When merge is allowed, the prices for the tiers and units that are missing in the higher priority price list can be covered by the prices from the lower priority price lists that should support price merge too.
-> 4. To delete a price list from the default price lists, click the <i class="fa fa-times fa-lg" aria-hidden="true"></i> **Deactivate** at the end of the corresponding row.
+   > 1. To add a price list to the default price lists, click **Add Price List** and select the price list in the newly added line. The price list is appended to the bottom of the list and, initially, has lower priority than the existing price lists.
+   > 2. To change the price list priority, click and hold the <i class="fas fa-arrows-alt-v" aria-hidden="true"></i> **Sort** icon, and drag the price list up or down the list.
+   > 3. To control the way prices are merged into the combined price list, select or clear the **Merge Allowed** option for the price lists. The option is shown only for the *Merge by priority* price selection strategy. When merge is allowed, the prices for the tiers and units that are missing in the higher priority price list can be covered by the prices from the lower priority price lists that should support price merge too.
+   > 4. To delete a price list from the default price lists, click the <i class="fa fa-times fa-lg" aria-hidden="true"></i> **Deactivate** at the end of the corresponding row.
 
 <a id="offset-of-processing-cpl-prices"></a>
+1. In the **Price List Calculations** section, specify an offset in hours that helps launch combined price list recalculation before price change is activated.
+   * **Offset Of Processing CPL Prices** — An offset (in hours) from the scheduled price change that determines how early the price list recalculation and reindex should happen to prepare the actual prices in the OroCommerce storefront for the scheduled launch. Delayed recalculation helps spread resource-consuming tasks in time and launch them only when the price is going to be used soon. This eliminates unnecessary intermediate recalculation every time the price is updated between the time price list schedule is added and the time when recalculation is expected to start (considering the offset from the scheduled launch). If you update the price once a week, set the offset to 40 (hours). If you update prices more frequently, set the value that approximately matches the delay between the updates of the price information. It can be aligned with the data synchronization process between your OroCommerce and the external ERP system. For continuos price updates use the minimal recommended offset value of 0.083 (5 minutes).
+2. In the **Price Selection Strategy** section, configure the following setting:
+   * **Pricing Strategy** — The strategy used for matching prices. OroCommerce searches for the closest match of the product price in the selected units and currency for the requested product quantity in one of the following ways:
+     - Using *Minimal Price* strategy — From the default or customized set of price lists, OroCommerce collects all products prices that match product units, currency, and the requested product quantity, and selects the minimal price per tier and per unit as the one to show to the customer user:
+       ![Default price lists configuration when minimal strategy is selected](user/img/system/config_commerce/catalog/pricing_pricelist_new_ui.png)
+     - Using *Merge by priority* strategy — OroCommerce walks through the default or customized set of price lists starting with the price list of the top priority and moving along to those with the lower priority.
 
-## Price List Calculations
+       When the product price is initially found in the price list with the **Merge Allowed** option *enabled*, the price and the price list priority are collected for further evaluation and merge. Prices for other units and for other tiers of product quantity can be collected from the same price list and from other price lists with the **Merge Allowed** option *enabled*. The tier/unit prices with the highest priority are shown to the customer user.
 
-In the **Price List Calculations** section, specify an offset in hours that helps launch combined price list recalculation before the price change is activated.
-
-**Offset Of Processing CPL Prices** — An offset (in hours) from the scheduled price change that determines how early the price list recalculation and reindex should happen to prepare the actual prices in the OroCommerce storefront for the scheduled launch. Delayed recalculation helps spread resource-consuming tasks in time and launch them only when the price is going to be used soon. This eliminates unnecessary intermediate recalculation every time the price is updated between the time the price list schedule is added and the time when recalculation is expected to start (considering the offset from the scheduled launch). If you update the price once a week, set the offset to 40 (hours). If you update prices more frequently, set the value that approximately matches the delay between the updates of the price information. It can be aligned with the data synchronization process between your OroCommerce and the external ERP system. For continuous price updates, use the minimal recommended offset value of 0.083 (5 minutes).
-
-<a id="sys-config-commerce-catalog-price-selection"></a>
-
-## Price Selection Strategy
-
-In the **Price Selection Strategy** section, configure the following setting:
-
-**Pricing Strategy** — The strategy used for matching prices. OroCommerce searches for the closest match of the product price in the selected units and currency for the requested product quantity in one of the following ways:
-
-* Using *Minimal Price* strategy — From the default or customized set of price lists, OroCommerce collects all product prices that match product units, currency, and the requested product quantity, and selects the minimal price per tier and per unit as the one to show to the customer user:
-  > ![Default price lists configuration when minimal strategy is selected](user/img/system/config_commerce/catalog/pricing_pricelist_new_ui.png)
-* Using *Merge by priority* strategy — OroCommerce walks through the default or customized set of price lists, starting with the price list of the top priority and moving along to those with the lower priority.
-
-#### HINT
-See the [Price Selection Strategy](../../../../../../api/create-update-related-resources.md#web-services-api-create-update-related-resources) article for more details about strategy concepts and differences.
-
-When the product price is initially found in the price list with the **Merge Allowed** option *enabled*, the price and the price list priority are collected for further evaluation and merge. Prices for other units and for other tiers of product quantity can be collected from the same price list and from other price lists with the **Merge Allowed** option *enabled*. The tier/unit prices with the highest priority are shown to the customer user.
-
-When the product price is initially found in the price list with the **Merge Allowed** option *disabled*, OroCommerce collects the product prices for all units and for all tiers of product quantity from this price list only. Other price lists are not taken into account, as price merge is not allowed. The units and tiers of quantity where the price is missing are hidden from the customer user.
-
-![Default price lists configuration when merge allowed is selected](user/img/system/config_commerce/catalog/pricing_pricelist2_new_ui.png)
-
-## Display Currencies
+       When the product price is initially found in the price list with the **Merge Allowed** option *disabled*, OroCommerce collects the product prices for all units and for all tiers of product quantity from this price list only. Other price lists are not taken into account, as price merge is not allowed. The units and tiers of quantity where the price is missing are hidden from the customer user.
+       ![Default price lists configuration when merge allowed is selected](user/img/system/config_commerce/catalog/pricing_pricelist2_new_ui.png)
 
 #### NOTE
 The **Display Currencies** setting is only available in the Enterprise edition.
 
-In the **Display Currencies** section, enable all or some currencies from the allowed currencies list to be used in the OroCommerce storefront and back-office.
+1. In the **Display Currencies** section, enable all or some currencies from the allowed currencies list to be used in the OroCommerce storefront and back-office.
+   * **Enabled Currencies** — The subset of [allowed currencies](../../system/general-setup/global-currency.md#sys-config-sysconfig-general-setup-currency) that is available for the customer user by default.
 
-* **Enabled Currencies** — The subset of [allowed currencies](../../system/general-setup/global-currency.md#sys-config-sysconfig-general-setup-currency) that is available for the customer user by default.
+   ![Display the currency selector in the storefront](user/img/system/config_commerce/catalog/currency_on_the_front_store.png)
+   * **Default Currency** — The currency that is used by default to show prices in the storefront.
+2. In the **Minimum Sellable Quantity**, you can enable the following options:
+   * **Allow fractional quantity price calculation on quantities smaller than the minimum quantity priced in a price list(s)** — Applicable only to the product units that allow fractional quantity input (unit precision > 0). The implied minimum sellable quantity is 1 (one whole unit). The *Allow fractional quantity price calculation on quantity less than 1 whole unit* configuration option can be enabled to go lower than 1  unit. The *Minimum quantity to order* for specific products can be used to prevent purchases of fractional quantities smaller than the desired sellable quantity either way.
+   * **Allow fractional quantity price calculation on quantity less than 1 whole unit** — Applicable only to the product units that allow fractional quantity input (unit precision > 0). The *Minimum quantity to order* for specific products can be set to 1 to prevent purchases of fractional quantities smaller than 1 whole unit.
+   * **Allow price calculation on quantities smaller than the minimal quantity priced in a price list(s)** — Applicable to the product units that allow only whole numbers for quantity. The *Minimum quantity to order* for specific products can be used to prevent purchases of quantities smaller than the desired sellable quantity.
 
-![Display the currency selector in the storefront](user/img/system/config_commerce/catalog/currency_on_the_front_store.png)
-* **Default Currency** — The currency that is used by default to show prices in the storefront.
-
-## Minimum Sellable Quantity
-
-In the **Minimum Sellable Quantity**, you can enable the following options:
-
-* **Allow fractional quantity price calculation on quantities smaller than the minimum quantity priced in a price list(s)** — Applicable only to the product units that allow fractional quantity input (unit precision > 0). The implied minimum sellable quantity is 1 (one whole unit). The *Allow fractional quantity price calculation on quantity less than 1 whole unit* configuration option can be enabled to go lower than 1  unit. The *Minimum quantity to order* for specific products can be used to prevent purchases of fractional quantities smaller than the desired sellable quantity either way.
-* **Allow fractional quantity price calculation on quantity less than 1 whole unit** — Applicable only to the product units that allow fractional quantity input (unit precision > 0). The *Minimum quantity to order* for specific products can be set to 1 to prevent purchases of fractional quantities smaller than 1 whole unit.
-* **Allow price calculation on quantities smaller than the minimal quantity priced in a price list(s)** — Applicable to the product units that allow only whole numbers for quantity. The *Minimum quantity to order* for specific products can be used to prevent purchases of quantities smaller than the desired sellable quantity.
+   #### HINT
+   Minimum Sellable Quantity configuration options are available starting from OroCommerce version 5.1.10.
+3. Click **Reset** at the top right to roll back any changes to the pricing settings.
+4. Click **Save Settings** to save the changes.
 
 **Related Articles**
 
@@ -192,20 +85,3 @@ In the **Minimum Sellable Quantity**, you can enable the following options:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

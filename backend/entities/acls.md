@@ -10,33 +10,32 @@ Using ACLs you can granularly grant access to your entities. Doing so requires t
 
 ## Activating ACL Checks on your Entities
 
-To have your entity available in the admin UI to be able to assign permissions to your users, you have to enable ACLs for these entities using the `#[Config]` attribute:
+To have your entity available in the admin UI to be able to assign permissions to your users, you have to enable ACLs for these entities using the `@Config` annotation:
 
 *src/Acme/Bundle/DemoBundle/Entity/Favorite.php*
 ```php
 namespace Acme\Bundle\DemoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\Config;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config;
 
 /**
  * ORM Entity Favorite.
+ *
+ * @ORM\Table(
+ *     name="acme_demo_favorite"
+ * )
+ * @Config(
+ *     defaultValues={
+ *         "security"={
+ *             "type"="ACL",
+ *             "permissions"="All",
+ *             "group_name"="",
+ *             "category"="",
+ *         },
+ *     }
+ * )
  */
-#[ORM\Table(name: 'acme_demo_favorite')]
-#[Config(
-    defaultValues: [
-        'ownership' => [
-            'owner_type' => 'USER',
-            'owner_field_name' => 'owner',
-            'owner_column_name' => 'user_owner_id',
-            'organization_field_name' => 'organization',
-            'organization_column_name' => 'organization_id'
-        ],
-        'grid' => ['default' => 'acme-demo-favorite-grid'],
-        'security' => ['type' => 'ACL', 'permissions' => 'All', 'group_name' => '', 'category' => ''],
-        'dataaudit' => ['auditable' => true]
-    ]
-)]
 ```
 
 After you have done this and have cleared the cache, you can toggle all kinds of permission checks (`CREATE`, `EDIT`, `DELETE`, `VIEW`, and `ASSIGN`) in the user role management interface.
@@ -51,33 +50,34 @@ You can use the optional `group_name` attribute to group entities by application
 You have two options to define your custom access control lists:
 
 <a id="cookbook-entity-acl-controller"></a>
-1. In your controller class, you can use the `#[Acl]` attribute:
+1. In your controller class, you can use the `@Acl` annotation:
 
 *src/Acme/Bundle/DemoBundle/Controller/FavoriteController.php*
 ```php
 namespace Acme\Bundle\DemoBundle\Controller;
 
 use Acme\Bundle\DemoBundle\Entity\Favorite;
-use Oro\Bundle\SecurityBundle\Attribute\Acl;
-use Oro\Bundle\SecurityBundle\Attribute\CsrfProtection;
-use Symfony\Bridge\Twig\Attribute\Template;
-use Symfony\Component\Routing\Attribute\Route;
+use Oro\Bundle\SecurityBundle\Annotation\Acl;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
  * Contains CRUD actions for Favorite
+ *
+ * @Route("/favorite", name="acme_demo_favorite_")
  */
-#[Route(path: '/favorite', name: 'acme_demo_favorite_')]
 class FavoriteController extends AbstractController
 {
-    #[Route(path: '/custom', name: 'custom')]
-    #[CsrfProtection]
-    #[Template('@AcmeDemo/Favorite/index.html.twig')]
-    #[Acl(
-        id: 'acme_demo_favorite_custom',
-        type: 'entity',
-        class: 'Acme\Bundle\DemoBundle\Entity\Favorite',
-        permission: 'VIEW'
-    )]
+    /**
+     * @Route("/custom", name="custom")
+     * @Template("@AcmeDemo/Favorite/index.html.twig")
+     * @Acl(
+     *   id="acme_demo_favorite_custom",
+     *   type="entity",
+     *   class="AcmeDemoBundle:Favorite",
+     *   permission="VIEW"
+     * )
+     * @CsrfProtection()
+     */
     public function customAction(): array
     {
         return ['entity_class' => Favorite::class];
@@ -85,7 +85,7 @@ class FavoriteController extends AbstractController
 }
 ```
 
-Using the `#[Acl]` attribute does not only create new access control lists to which you can refer in other parts of your code, it also triggers the access decision manager when your actions are accessed by users and thus protect them from being accessed without the needed permissions.
+Using the `@Acl` annotation does not only create new access control lists to which you can refer in other parts of your code, it also triggers the access decision manager when your actions are accessed by users and thus protect them from being accessed without the needed permissions.
 
 1. If you do not want to protect any controller methods or if you prefer to keep the definition of your ACLs separated from the application code, you can define them using some YAML config in a file named `acls.yml`:
 
@@ -94,7 +94,7 @@ Using the `#[Acl]` attribute does not only create new access control lists to wh
 acls:
     favorites_edit:
         type: entity
-        class: Acme\Bundle\DemoBundle\Entity\Favorite
+        class: AcmeDemoBundle:Favorite
         permission: EDIT
 ```
 
@@ -106,26 +106,29 @@ acls:
 > namespace Acme\Bundle\DemoBundle\Controller;
 > 
 > use Acme\Bundle\DemoBundle\Entity\Favorite;
-> use Oro\Bundle\SecurityBundle\Attribute\Acl;
-> use Oro\Bundle\SecurityBundle\Attribute\CsrfProtection;
-> use Symfony\Bridge\Twig\Attribute\Template;
-> use Symfony\Component\Routing\Attribute\Route;
+> use Oro\Bundle\SecurityBundle\Annotation\Acl;
+> use Oro\Bundle\SecurityBundle\Annotation\CsrfProtection;
+> use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 > 
 > /**
 >  * Contains CRUD actions for Favorite
+>  *
+>  * @Route("/favorite", name="acme_demo_favorite_")
 >  */
-> #[Route(path: '/favorite', name: 'acme_demo_favorite_')]
 > class FavoriteController extends AbstractController
 > {
->     #[Route(path: '/protected', name: 'protected')]
->     #[CsrfProtection]
->     #[Template('@AcmeDemo/Favorite/index.html.twig')]
->     #[Acl(id: 'acme_demo_favorite_protected_action', type: 'action')]
+>     /**
+>      * @Acl(
+>      *   id="acme_demo_favorite_protected_action",
+>      *   type="action"
+>      * )
+>      * @Route("/protected", name="protected")
+>      * @Template("@AcmeDemo/Favorite/index.html.twig")
+>      * @CsrfProtection()
+>      */
 >     public function protectedAction()
 >     {
->         $repository = $this->container->get(DoctrineHelper::class)
->             ->getEntityManager(Favorite::class)
->             ->getRepository(Favorite::class);
+>         $repository = $this->container->get('doctrine')->getRepository(Favorite::class);
 >         $queryBuilder = $repository
 >             ->createQueryBuilder('f')
 >             ->where('f.viewCount > :viewCount')
@@ -148,7 +151,7 @@ acls:
 > acls:
 >     favorites_edit:
 >         type: entity
->         class: Acme\Bundle\DemoBundle\Entity\Favorite
+>         class: AcmeDemoBundle:Favorite
 >         permission: EDIT
 >         bindings:
 >             -   class: Acme\Bundle\DemoBundle\Controller\FavoritesController
@@ -156,15 +159,15 @@ acls:
 > ```
 > 
 > #### SEE ALSO
-> All configuration options are explained in full details in the [#[Acl]](../configuration/annotation/acl.md#acl),
-> [#[AclAncestor]](../configuration/annotation/acl-ancestor.md#acl-ancestor), and [ACL YAML format](../configuration/yaml/acls.md#access-control-lists)
+> All configuration options are explained in full details in the [@Acl](../configuration/annotation/acl.md#acl),
+> [@AclAncestor](../configuration/annotation/acl-ancestor.md#acl-ancestor), and [ACL YAML format](../configuration/yaml/acls.md#access-control-lists)
 > reference.
 
 <a id="coobook-entities-acl-check"></a>
 
 ## Performing Access Checks
 
-Once you have configured the ACLs, you can protect all application parts. You can use the `isGranted()` method of the `security.authorization_checker` service (which is an instance of the <a href="https://github.com/symfony/symfony/blob/6.4/src/Symfony/Component/Security/Core/Authorization/AuthorizationCheckerInterface.php" target="_blank">Symfony\\Component\\Security\\Core\\Authorization\\AuthorizationCheckerInterface</a>) anywhere in your PHP code:
+Once you have configured the ACLs, you can protect all application parts. You can use the `isGranted()` method of the `security.authorization_checker` service (which is an instance of the <a href="https://github.com/symfony/symfony/blob/5.4/src/Symfony/Component/Security/Core/Authorization/AuthorizationCheckerInterface.php" target="_blank">Symfony\\Component\\Security\\Core\\Authorization\\AuthorizationCheckerInterface</a>) anywhere in your PHP code:
 
 ```php
 $authorizationChecker = $this->get('security.authorization_checker');
@@ -218,19 +221,21 @@ Use the `acl_resource_id` option to hide navigation items from users who are not
 
 ### Protecting Controllers Referring to Existing ACLs
 
-You can define new ACLs as [shown above](#cookbook-entity-acl-controller) and protect your controllers with them in a single step using the `#[Acl]` attribute. However, you can also refer to an existing access control list using the `#[AclAncestor]` attribute:
+You can define new ACLs as [shown above](#cookbook-entity-acl-controller) and protect your controllers with them in a single step using the `@Acl` annotation. However, you can also refer to an existing access control list using the `@AclAncestor` annotation:
 
 *src/Acme/Bundle/DemoBundle/Controller/TaskController.php*
 ```php
  namespace Acme\Bundle\DemoBundle\Controller;
 
  use Acme\Bundle\DemoBundle\Entity\Task;
- use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
+ use Oro\Bundle\SecurityBundle\Annotation\AclAncestor;
  use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
  class TaskController extends AbstractController
  {
-     #[AclAncestor('acme_task_view')]
+     /**
+      * @AclAncestor("acme_task_view")
+      */
      public function viewAction(Task $task)
      {
          // ...

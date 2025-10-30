@@ -9,15 +9,9 @@ To configure the [order](../../../../../../../glossary.md#term-Order) creation o
 
    #### NOTE
    For faster navigation between the configuration menu sections, use [Quick Search](../../../../../configuration/quick-search.md#user-guide-system-configuration-quick-search).
-3. In the **Order Creation** section, clear the **Use System** checkbox next to the required option, if it is selected, to toggle the following options:
-   * **New Internal Order Status** — Select the [status](../../../../../../sales/orders/statuses.md#doc-orders-statuses-internal) to be assigned to all newly created orders. This status is displayed in the back-office.
-   * **Default Owner for New Orders** — Select the user to assign as the owner of newly created orders when the owner cannot be automatically determined.
-   * **Enable Order PDF Download Storefront** — When enabled, customers can download a PDF version of the order from the storefront order pages. The PDF is generated using the most up-to-date order data at the time of download.
-
-   ![Illustration of the Order Download Button in the storefront](user/img/system/config_commerce/order/order-pdf.png)
-   * **Generate PDF When Order is Created** — When this option is enabled, a PDF is generated after an order is placed and attached to the order confirmation email sent to the customer. To include the PDF in the email, navigate to **System > Emails > Templates** in the back-office menu, open the edit page of the Order Confirmation Email template, and select Order Default PDF Template in the [Attachments field](../../../../../emails/email-templates.md#email-templates-attachments).
-
-   ![Screenshot of the back-office Email Templates edit page showing the Order Confirmation template. The Attachments field is highlighted, with the Order Default PDF Template selected to include the PDF in confirmation emails.](user/img/system/config_commerce/order/order-pdf-template-attachment.png)
+3. In the **Order Creation** section:
+   1. Clear the **Use System** checkbox if it is selected.
+   2. From the **New Internal Order Status** list, select the required status. This option defines the [status](../../../../../../sales/orders/statuses.md#doc-orders-statuses-internal) that is assigned to an order upon creation. This status is visible in the back-office. Select one of the following statuses: Open, Cancelled, Shipped, Closed, Archived.
 4. Click **Save Settings**.
 
 <!-- finish_body -->
@@ -26,20 +20,3 @@ To configure the [order](../../../../../../../glossary.md#term-Order) creation o
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

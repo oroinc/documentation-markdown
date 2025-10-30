@@ -33,6 +33,7 @@ To create a new segment:
    5. Optionally, specify the records limit. The segment shows the first X results in case the limit is provided.
    6. Select the segment owner - a business unit, members of which can manage the segment, subject to the roles defined in the system.
 4. In the *Designer > Columns* section, define the set of the fields of the entity records to be shown in the segment.
+   ![Illustrate the Designer section on the create segment page](user/img/reports/list_columns.png)
 
    To add a column to the grid:
    > 1. Choose a field from the drop-down in the **Column** section.
@@ -44,7 +45,7 @@ To create a new segment:
    > ![Adding the product status, featured products, product id, and SKU columns in the designer section](user/img/reports/segments_column.png)
 
    To manage the columns, use action icons in the last column:
-   > - Delete a column from the segment with ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg).
+   > - Delete a column from the segment with <i class="fas fa-trash-alt" aria-hidden="true"></i>.
    > - Edit the column settings with <i class="fa fa-edit fa-lg" aria-hidden="true"></i>.
    > - Change the column position, dragging the column by the <i class="fas fa-arrows-alt-v" aria-hidden="true"></i> icon.
 5. In the *Designer > Filters* section, define the filter to select the records for the segment.
@@ -71,20 +72,3 @@ To view the records selected using the segment filter:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

@@ -2,7 +2,7 @@
 
 # OroIntegrationBundle
 
-<a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/IntegrationBundle/" target="_blank">OroIntegrationBundle</a> introduces a framework that enables developers to create integrations between the OroPlatform-based and third-party applications. It also provides UI for the application users to manage the implemented integrations.
+<a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/IntegrationBundle/" target="_blank">OroIntegrationBundle</a> introduces a framework that enables developers to create integrations between the OroPlatform-based and third-party applications. It also provides UI for the application users to manage the implemented integrations.
 
 ## Related Documentation
 

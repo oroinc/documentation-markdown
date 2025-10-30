@@ -16,7 +16,7 @@ To change the default settings per organization:
 5. In the **Web API** section, select the required options:
    * **Enable API** — enables the back-office API feature for an organization.
    * **Enable Storefront API** — enables the storefront API feature for an organization.
-   * **Enable Guest Storefront API** — grants access to some storefront API resources of an organization to non-authenticated visitors. This option is available when the storefront API feature is enabled.
+   * **Enable Guest Storefront API** — grants access to some storefront API resources of an organization to non-authenticated visitors (available starting from v5.1.3). This option is activated when the storefront API feature is enabled.
 
    #### NOTE
    The back-office API feature can be toggled on the [global](../../../../configuration/system/general-setup/application.md#admin-configuration-application) and organization levels, while the storefront API configuration is available on three levels - globally, per organization, and per [website](../../../../websites/web-configuration/general-sys-config/general/website-application-settings.md#admin-configuration-application-website).
@@ -27,20 +27,3 @@ To change the default settings per organization:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

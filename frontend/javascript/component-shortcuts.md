@@ -79,7 +79,7 @@ by element attributes and shortcut config.
 
 **References:**
 
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBundle/Resources/public/js/component-shortcuts-manager.js" target="_blank">ComponentShortcutManager</a>
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBundle/Resources/public/js/app/modules/component-shortcuts-module.js" target="_blank">ComponentShortcutsModule</a>
+* <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/UIBundle/Resources/public/js/component-shortcuts-manager.js" target="_blank">ComponentShortcutManager</a>
+* <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/UIBundle/Resources/public/js/app/modules/component-shortcuts-module.js" target="_blank">ComponentShortcutsModule</a>
 
 <!-- Frontend -->

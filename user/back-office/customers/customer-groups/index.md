@@ -9,10 +9,10 @@ In the Customer Group section, you can organize customers into groups and share 
 
 On a customer group details page, you can:
 
-* <i class="fas fa-cog" aria-hidden="true"></i> **Edit Storefront Menu**
+* <i class="fas fa-cog" aria-hidden="true"></i> **Edit Frontend Menu**
 * <i class="fas fa-cog" aria-hidden="true"></i> **Configure** customer group settings.
 * <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** customer group details.
-* ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** existing customer groups.
+* <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** existing customer groups.
 * **Add a note**
 * **Create a new customer**. Alternatively, use a quick action button under the **Customers** menu to create a new customer directly from the customer group page. The form for data input can be displayed in a new browser tab, a popup dialog window, or replace the current page, [depending on its system configuration](../../system/configuration/system/general-setup/display.md#doc-configuration-display-settings-quick-actions).
 
@@ -66,25 +66,8 @@ To configure the price list priority and controlled merge for the customer group
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->
 
 * [Configure Price List per Customer Group](customer-group-price-lists.md)
-* [Add All Products Page to Storefront Menus per Customer Group](customer-group-all-products-menus.md)
-* [Customize Storefront Menus per Customer Group](customer-group-frontend-menus.md)
+* [Add All Products Page to Frontend Menus per Customer Group](customer-group-all-products-menus.md)
+* [Customize Frontend Menus per Customer Group](customer-group-frontend-menus.md)
 * [Configure Settings per Customer Group](customer-group-configuration/index.md)

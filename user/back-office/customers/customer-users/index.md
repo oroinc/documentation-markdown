@@ -44,7 +44,7 @@ Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More 
 * <i class="fa fa-ban fa-lg" aria-hidden="true"></i> **Disable** a customer user.
 * <i class="fa fa-eye fa-lg" aria-hidden="true"></i> **View** customer user details. Alternatively, click on the item to open its details page.
 * <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** customer user details.
-* ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** existing customer users.
+* <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** existing customer users.
 
 ## Create a Customer User
 
@@ -78,7 +78,7 @@ When at least one consent to process personal data has been accepted by a custom
 
 You can read more information on consent management in the following related topics:
 
-* [Configure Consents](../../system/configuration/commerce/customer/global-interactions.md#configuration-guide-commerce-configuration-consents)
+* [Configure Consents](../../system/configuration/commerce/customer/global-consents.md#configuration-guide-commerce-configuration-consents)
 * [Create Consents](../../system/consent-management/index.md#user-guide-consents-create)
 * [Add a Consent Landing Page to a Web Catalog](../../../concept-guides/administration/consents/add-consent.md#user-guide-consents-add)
 * [View and Accept Consents in the Storefront](../../../storefront/account/my-profile/index.md#frontstore-guide-profile-consents)
@@ -92,14 +92,12 @@ You may want to delegate some of the customer user management capabilities to th
 
 ![The list of account management capabilities](user/img/customers/customer_user_roles/CustomerUserRolesManageAccounts_cust.png)
 
-<a id="user-guide-customers-customer-user-impersonate"></a>
-
 ## Impersonate a Customer User
 
 #### HINT
 This feature is available in the Enterprise edition.
 
-For troubleshooting purposes or to place orders on behalf of a customer user, you can use user impersonation to allow back-office users with the **Login as Customer User** [role capability](../../system/user-management/roles/admin-capabilities.md#admin-capabilities) to access and operate the OroCommerce storefront as if they were logged in as a specific customer user. Such back-office user is redirected to the website assigned to the customer user they are impersonating (i.e., the website where the customer user registered).
+For troubleshooting purposes, user impersonation allows back-office users with the **Login as Customer User** [role capability](../../system/user-management/roles/admin-capabilities.md#admin-capabilities) to access and operate the OroCommerce storefront as if they were logged in as a specific customer user. Such back-office user is redirected to the website assigned to the customer user they are impersonating (i.e., the website where the customer user registered).
 
 #### HINT
 Before proceeding, make sure this feature is enabled in the system configuration [globally](../../system/configuration/commerce/customer/global-customer-users.md#system-configuration-user-impersonation) or [per organization](../../system/user-management/organizations/org-configuration/commerce/customers/organization-customer-users.md#organization-user-impersonation).
@@ -119,15 +117,6 @@ The storefront session in impersonation mode opens in a new browser tab.
 ![Impersonation mode in the storefront](user/img/customers/customer_user_roles/impersonation-mode.png)
 
 To exit impersonation mode, click **Log out** in the blue banner.
-
-#### NOTE
-If a back-office user placed an order on behalf of the customer user, this will be reflected on the order view page in the storefront with the following note: *This order was created on your behalf by a member of our staff.*
-
-![An order view page with a note saying "This order was created on your behalf by a member of our staff".](user/img/storefront/orders/order-impersonated.png)
-
-In the back-office you can view who created the order on the order view page and in the grid.
-
-![image](user/img/customers/customer_users/created-by.png)
 
 <a id="user-guide-customers-customer-user-reset-password"></a>
 
@@ -179,7 +168,7 @@ If no keys are found, the following warning message will be displayed in the bac
 To add a new OAuth application for a customer user in the back-office:
 
 1. Navigate to **Customers > Customer Users** in the main menu.
-2. Click on the name of your selected customer user to open their details page.
+2. Click once on the name of your selected customer user to open their details page.
 3. In the **OAuth Applications** section, click **Add Application** and provide the following details in the pop-up dialog:
    * **Organization** — If you are adding an application within the organization with *global* access, you can select which other available organization to add the application to.
    * **Application Name** — Provide a meaningful name for the application you are adding.
@@ -217,23 +206,6 @@ For the aggregated information on all OAuth applications created by customer use
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->
 
 * [Export Customer User Details](export.md)
 * [Import Customer User Details](import.md)

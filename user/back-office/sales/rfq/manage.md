@@ -34,7 +34,7 @@ Additionally, you can perform the following actions by clicking on the correspon
 
 * Click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> to edit the quote.
 * Click <i class="far fa-copy" aria-hidden="true"></i> to clone the quote.
-* Click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) to delete it.
+* Click <i class="fas fa-trash-alt" aria-hidden="true"></i> to delete it.
 * Click <i class="fa fa-envelope fa-lg" aria-hidden="true"></i> **Send to Customer** to send a notification email message the customer user regarding their quote.
   ![The steps you need to take to create send a quote to a customer](user/img/sales/rfq/rfq_7.png)
 
@@ -42,7 +42,7 @@ Once the message is prepared and sent, the quote backoffice status is changed to
 
 ![A sample of the quote with the Sent to Customer status and available actions](user/img/sales/rfq/rfq_8.png)
 
-From this page, you can cancel <i class="fa fa-times fa-lg" aria-hidden="true"></i> or expire <i class="far fa-clock" aria-hidden="true"></i> the quote, delete ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) the quote, and the back-office status will change to *Closed*.
+From this page, you can cancel <i class="fa fa-times fa-lg" aria-hidden="true"></i> or expire <i class="far fa-clock" aria-hidden="true"></i> the quote, delete <i class="fas fa-trash-alt" aria-hidden="true"></i> the quote, and the back-office status will change to *Closed*.
 
 Additionally, you can create a new quote for the customer, or if the customer declined the offer, you can mark it as **Declined by Customer**.
 
@@ -98,7 +98,7 @@ Now you can perform the following actions with an RFQ in the back-office:
 
 Once a customer submits the RFQ in the storefront, it becomes immediately available in the RFQ back-office in the *Open* status.
 
-![Display the RFQ with the internal status Open in the back-office](user/img/sales/rfq/rfq_13.png)
+![Display the RFQ with the customer status Submitted in the storefront](user/img/sales/rfq/rfq_12.png)![Display the RFQ with the internal status Open in the back-office](user/img/sales/rfq/rfq_13.png)
 
 <a id="user-guide-sales-requests-for-quote-steps-and-transitions-processed"></a>
 
@@ -136,7 +136,7 @@ The internal status changes back to *Open*, and the customer status changes back
 
 To decline the RFQ,  click **Decline** on the RFQ page.
 
-This will change the internal status to *Declined* and the customer status to *Cancelled*.
+This will change the internal status to *Declined\*and the customer status to \*Cancelled*.
 
 ![Display the RFQ with the internal status Declined in the back-office](user/img/sales/rfq/rfq_17.png)
 
@@ -156,20 +156,3 @@ The internal status will be changed to *Deleted*.
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

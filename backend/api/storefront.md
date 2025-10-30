@@ -19,7 +19,7 @@ All approaches described in [API Developer Guide](index.md#web-api) are applicab
 - for API functional tests, use `Oro\Bundle\FrontendBundle\Tests\Functional\ApiFrontend\FrontendRestJsonApiTestCase` instead of
   `Oro\Bundle\ApiBundle\Tests\Functional\RestJsonApiTestCase`. By default, all API requests are executed by an anonymous user. To execute them by the customer user with administrative permissions, use the  `Oro\Bundle\CustomerBundle\Tests\Functional\ApiFrontend\DataFixtures\LoadAdminCustomerUserData` data fixture and add the `$this->loadFixtures([LoadAdminCustomerUserData::class]);` in `setUp()` method of your test class. To execute the test by the customer user with buyer permissions, you can use the `Oro\Bundle\CustomerBundle\Tests\Functional\ApiFrontend\DataFixtures\LoadBuyerCustomerUserData` data fixture.
 
-When [Public Storefront API](../../user/back-office/system/configuration/system/general-setup/application.md#admin-configuration-application) is enabled some API resources can be used by non-authenticated visitors. The list of such resources is configured by developers by `oro_customer / frontend_api / non_authenticated_visitors_api_resources` in Resources/config/oro/app.yml, for example:
+When [Public Storefront API](../../user/back-office/system/configuration/system/general-setup/application.md#admin-configuration-application) is enabled, some API resources can be used by non-authenticated visitors. The list of such resources is configured by developers by `oro_customer / frontend_api / non_authenticated_visitors_api_resources` in Resources/config/oro/app.yml, for example:
 
 ```yaml
 oro_customer:
@@ -30,10 +30,10 @@ oro_customer:
 
 Additional notes:
 
-- You can use the <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/WebsiteBundle/Api/Processor/SetWebsite.php" target="_blank">SetWebsite</a> processor to assign an entity to the current website.
-- You can use the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/CurrencyBundle/Api/Processor/SetCurrency.php" target="_blank">SetCurrency</a> processor to set the current currency to an entity.
-- You can use the <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/CustomerBundle/Api/Processor/SetCustomer.php" target="_blank">SetCustomer</a> processor to assign an entity to the current customer.
-- You can use the <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/CustomerBundle/Api/Processor/SetCustomerUser.php" target="_blank">SetCustomerUser</a> processor to assign an entity to the current customer user.
+- You can use the <a href="https://github.com/oroinc/customer-portal/blob/5.1/src/Oro/Bundle/WebsiteBundle/Api/Processor/SetWebsite.php" target="_blank">SetWebsite</a> processor to assign an entity to the current website.
+- You can use the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/CurrencyBundle/Api/Processor/SetCurrency.php" target="_blank">SetCurrency</a> processor to set the current currency to an entity.
+- You can use the <a href="https://github.com/oroinc/customer-portal/blob/5.1/src/Oro/Bundle/CustomerBundle/Api/Processor/SetCustomer.php" target="_blank">SetCustomer</a> processor to assign an entity to the current customer.
+- You can use the <a href="https://github.com/oroinc/customer-portal/blob/5.1/src/Oro/Bundle/CustomerBundle/Api/Processor/SetCustomerUser.php" target="_blank">SetCustomerUser</a> processor to assign an entity to the current customer user.
 
 An example of registration of such processors:
 

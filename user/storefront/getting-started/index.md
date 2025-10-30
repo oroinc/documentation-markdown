@@ -11,23 +11,11 @@ Oro applications offer high flexibility and customization, which means that the 
 
 ![Common controls of the OroCommerce storefront](user/img/storefront/navigation/navigation_ui_storefront.png)
 
-You can also use detailed search auto-complete across the whole storefront. It shows up-to-date product information, such as SKU, name, price, and inventory status. For mode details on other search features and possibilities, read the [Search Functions](../../concept-guides/catalog-promotions/search/index.md#user-guide-getting-started-search) concept guide.
+You can also use detailed search auto-complete across the whole storefront. It shows up-to-date product information, such as SKU, name, price, and inventory status.
 
 ![Search auto-complete illustration](user/img/storefront/navigation/search-autocomplete.png)
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->
+<!-- fa-bars = fa-navicon -->
+<!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
+<!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
+<!-- Check mark in the square. -->
+<!-- SortDesc is also used as drop-down arrow -->

@@ -4,6 +4,10 @@
 
 # Emails
 
+Once the ORO application is installed, you can access it at the following link
+
+<a id="index-0"></a>
+
 ## Email Templates
 
 Communicating with customers is an integral part of every business. In OroPlatform, an email address is represented by the `Oro\Bundle\EmailBundle\Entity\EmailAddress` class.
@@ -20,8 +24,10 @@ To provide mail templates, create Twig templates for the desired format (namely 
 
  class EmailTemplatesFixture extends AbstractEmailFixture
  {
-     #[\Override]
-     public function getEmailsDir(): string
+     /**
+      * @inheritDoc
+      */
+     public function getEmailsDir()
      {
          return $this->container
              ->get('kernel')
@@ -126,14 +132,14 @@ You can manually create an email by creating a new instance of the `Email` model
 
 #### The `EmailModelBuilder` Class
 
-An alternative approach to manually creating `Email` models is to use the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php" target="_blank">EmailModelBuilder</a> helper class which offers several methods to create new emails based on existing data:
+An alternative approach to manually creating `Email` models is to use the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php" target="_blank">EmailModelBuilder</a> helper class which offers several methods to create new emails based on existing data:
 
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php#L102" target="_blank">createEmailModel</a> - Create a new email or add missing data to an existing email.
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php#L136" target="_blank">createReplyEmailModel</a> - Create an email that is a response to an existing email.
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php#L169" target="_blank">createReplyAllEmailModel</a> - Create an email that responds to all recipients and the sender of an existing email.
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php#L215" target="_blank">createForwardEmailModel</a> - Create a new email that forwards an existing email.
+* <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php#L102" target="_blank">createEmailModel</a> - Create a new email or add missing data to an existing email.
+* <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php#L136" target="_blank">createReplyEmailModel</a> - Create an email that is a response to an existing email.
+* <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php#L169" target="_blank">createReplyAllEmailModel</a> - Create an email that responds to all recipients and the sender of an existing email.
+* <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php#L215" target="_blank">createForwardEmailModel</a> - Create a new email that forwards an existing email.
 
-After emails have been processed (see below), they will be persisted to the database. You can create an email model based on such a persisted entity by using the useful <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php" target="_blank">EmailModelBuilder</a> helper class:
+After emails have been processed (see below), they will be persisted to the database. You can create an email model based on such a persisted entity by using the useful <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EmailBundle/Builder/EmailModelBuilder.php" target="_blank">EmailModelBuilder</a> helper class:
 
 *src/Acme/Bundle/DemoBundle/Controller/EmailController.php*
 ```php
@@ -198,7 +204,9 @@ To be notified of such an event, you have to create an `Oro\Bundle\NotificationB
 
  class CreateCommentNotification extends AbstractFixture
  {
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function load(ObjectManager $manager)
      {
          $notification = new EmailNotification();
@@ -261,39 +269,55 @@ Sample `Email` entity:
  use Doctrine\ORM\Mapping as ORM;
  use Oro\Bundle\EmailBundle\Entity\EmailInterface;
 
- #[ORM\Entity]
+ /**
+  * @ORM\Entity()
+  */
  class ApplicantEmail implements EmailInterface
  {
-     #[ORM\Id]
-     #[ORM\Column(name: 'id', type: 'integer')]
-     #[ORM\GeneratedValue(strategy: 'AUTO')]
+     /**
+      * @ORM\Id
+      * @ORM\Column(type="integer", name="id")
+      * @ORM\GeneratedValue(strategy="AUTO")
+      */
      private $id;
 
-     #[ORM\Column(type: 'string', length: 255)]
+     /**
+      * @ORM\Column(type="string", length=255)
+      */
      private $email;
 
-     #[ORM\ManyToOne(targetEntity: 'Applicant', inversedBy: 'emails')]
+     /**
+      * @ORM\ManyToOne(targetEntity="Applicant", inversedBy="emails")
+      */
      private $applicant;
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getEmailField()
      {
          return 'email';
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getId()
      {
          return $this->id;
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getEmail()
      {
          return $this->email;
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getEmailOwner()
      {
          return $this->applicant;
@@ -326,42 +350,52 @@ For the `Applicant` entity, the implementation should be similar to the followin
  use Doctrine\ORM\Mapping as ORM;
  use Oro\Bundle\EmailBundle\Entity\EmailOwnerInterface;
 
- #[ORM\Entity]
+ /**
+  * @ORM\Entity()
+  */
  class Applicant implements EmailOwnerInterface
  {
-     #[ORM\Id]
-     #[ORM\Column(name: 'id', type: 'integer')]
-     #[ORM\GeneratedValue(strategy: 'AUTO')]
+     /**
+      * @ORM\Id
+      * @ORM\Column(type="integer", name="id")
+      * @ORM\GeneratedValue(strategy="AUTO")
+      */
      private $id;
 
-     #[ORM\OneToMany(
-         mappedBy: 'applicant',
-         targetEntity: 'ApplicantEmail',
-         cascade: ['persist'],
-         orphanRemoval: true
-     )]
+     /**
+      * @ORM\OneToMany(targetEntity="ApplicantEmail", mappedBy="applicant", orphanRemoval=true, cascade={"persist"})
+      */
      private $emails;
 
-     #[ORM\Column(type: 'string', length: 255)]
+     /**
+      * @ORM\Column(type="string", length=255)
+      */
      private $firstName;
 
-     #[ORM\Column(type: 'string', length: 255)]
-     private $lastName;
+     /**
+      * @ORM\Column(type="string", length=255)
+      */
      private $lastName;
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getClass()
      {
          return 'Acme\Bundle\DemoBundle\Entity\Applicant';
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getEmailFields()
      {
          return ['email'];
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getId()
      {
          return $this->id;
@@ -375,13 +409,17 @@ For the `Applicant` entity, the implementation should be similar to the followin
          return $this->emails;
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getFirstName()
      {
          return $this->firstName;
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getLastName()
      {
          return $this->lastName;
@@ -418,13 +456,17 @@ The provider class should then look like this:
 
  class EmailOwnerProvider implements EmailOwnerProviderInterface
  {
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getEmailOwnerClass(): string
      {
          return Applicant::class;
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function findEmailOwner(EntityManagerInterface $em, string $email): ?EmailOwnerInterface
      {
          /** @var ApplicantEmail|null $emailEntity */
@@ -436,7 +478,9 @@ The provider class should then look like this:
          return $emailEntity->getEmailOwner();
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getOrganizations(EntityManagerInterface $em, string $email): array
      {
          $rows = $em->createQueryBuilder()
@@ -456,7 +500,9 @@ The provider class should then look like this:
          return $result;
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getEmails(EntityManagerInterface $em, int $organizationId): iterable
      {
          $qb = $em->createQueryBuilder()

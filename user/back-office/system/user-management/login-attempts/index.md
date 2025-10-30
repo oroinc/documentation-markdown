@@ -7,7 +7,7 @@ login attempts.
 
 The login info data is stored in the database and in the logs in the **security** log channel. The logs have the ID parameter used in the database to enable you to find a particular log item quickly.
 
-The list of all login attempts is available under **System > User Management > Login Attempts** in the main back-office menu under the Global organization.
+The list of all login attempts is available under **System > User Management > Login Attempts** in the main back-office menu.
 
 ![Login Attempts](user/img/system/user_management/login_attempts/login_attempts.png)
 
@@ -23,20 +23,3 @@ In this case, the data in datagrid will be filtered by this user:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

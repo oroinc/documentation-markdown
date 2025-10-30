@@ -18,7 +18,7 @@ See the documentation on how to install ELK Stack on <a href="https://www.elasti
 ## Using Logstash Formatter
 
 Logstash supports a variety of inputs that pull in all events from a multitude of common sources simultaneously. For more detailed documentation, check the <a href="https://www.elastic.co/products/logstash" target="_blank">Logstash product page</a>.
-Configure <a href="https://github.com/Seldaek/monolog/blob/master/src/Monolog/Formatter/LogstashFormatter.php" target="_blank">Monolog Logstash formatter</a> in your `config_%env%.yml` file.
+Configure <a href="https://github.com/Seldaek/monolog/blob/5.1/src/Monolog/Formatter/LogstashFormatter.php" target="_blank">Monolog Logstash formatter</a> in your `config_%env%.yml` file.
 
 *path/to/config_prod.yml*
 ```yaml
@@ -118,7 +118,7 @@ For more information, see the following external resources:
 * <a href="https://www.elastic.co/products/beats/filebeat" target="_blank">Elastic Filebeat</a>
 * <a href="https://www.elastic.co/products/kibana" target="_blank">Elastic Kibana</a>
 * <a href="https://www.elastic.co/products/elasticsearch" target="_blank">Elastic Elasticsearch</a>
-* <a href="https://github.com/Seldaek/monolog/blob/master/src/Monolog/Formatter/LogstashFormatter.php" target="_blank">Monolog LogstashFormatter</a>
+* <a href="https://github.com/Seldaek/monolog/blob/5.1/src/Monolog/Formatter/LogstashFormatter.php" target="_blank">Monolog LogstashFormatter</a>
 
 #### BUSINESS TIP
 ### Business Tip

@@ -41,7 +41,7 @@ You can configure routes for your controller actions the same way as in Symfony.
 ```yaml
  default_controller:
      resource: "@AcmeDemoBundle/Controller/DefaultController.php"
-     type:     attribute
+     type:     annotation
 
  acme_demo:
      resource: "@AcmeDemoBundle/Resources/config/routing.yml"
@@ -52,40 +52,44 @@ With OroPlatform, you can still configure your routes the way you like. As long 
 
 ## Access Control Lists
 
-<a href="https://symfony.com/doc/6.4/security/acl.html" target="_blank">Access Control Lists</a> (ACLs) usually involve working with the ACL provider, object identities, ACEs, the mask builder, etc. OroPlatform makes
-things more accessible by providing the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/SecurityBundle/Annotation/Acl.php" target="_blank">#[Acl]</a> attribute that you can use to define an ACL and protect a controller in a single step:
+<a href="https://symfony.com/doc/5.4/security/acl.html" target="_blank">Access Control Lists</a> (ACLs) usually involve working with the ACL provider, object identities, ACEs, the mask builder, etc. OroPlatform makes
+things more accessible by providing the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/SecurityBundle/Annotation/Acl.php" target="_blank">@Acl</a> annotation that you can use to define an ACL and protect a controller in a single step:
 
 *src/Acme/Bundle/DemoBundle/Controller/BlogController.php*
 ```php
  namespace Acme\Bundle\DemoBundle\Controller;
 
- use Oro\Bundle\SecurityBundle\Attribute\Acl;
+ use Oro\Bundle\SecurityBundle\Annotation\Acl;
 
  // ...
 
- #[Acl(
-     id: 'acme_demo.blog_post_view',
-     type: 'entity',
-     class: 'Acme\Bundle\WysiwygBundle\Entity\BlogPost',
-     permission: 'VIEW'
- )]
+ /**
+  * @Acl(
+  *     id="acme_demo.blog_post_view",
+  *     type="entity",
+  *     class="AcmeDemoBundle:BlogPost",
+  *     permission="VIEW"
+  * )
+  */
  public function indexAction()
  {
      // ...
  }
 ```
 
-Furthermore, once an ACL has been defined, you can reuse it using the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/SecurityBundle/Annotation/AclAncestor.php" target="_blank">#[AclAncestor]</a> attribute:
+Furthermore, once an ACL has been defined, you can reuse it using the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/SecurityBundle/Annotation/AclAncestor.php" target="_blank">@AclAncestor</a> annotation:
 
 *src/Acme/Bundle/DemoBundle/Controller/BlogController.php*
 ```php
 namespace Acme\Bundle\DemoBundle\Controller;
 
-use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
+use Oro\Bundle\SecurityBundle\Annotation\AclAncestor;
 
 // ...
 
-#[AclAncestor('acme_demo.blog_post_view')]
+/**
+ * @AclAncestor("acme_demo.blog_post_view")
+ */
 public function postAction()
 {
     // ...
@@ -97,7 +101,7 @@ For more information, see [Security documentation](../../bundles/platform/Securi
 
 ## Extension Management
 
-With the <a href="https://getcomposer.org/" target="_blank">Composer</a>, you can easily pull in third-party libraries and bundles for the application. Aside from using Composer to manage dependency management, OroPlatform supports Oro extensions. An extension is a package that adds new features to the Platform. To achieve this, the <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/DistributionBundle" target="_blank">OroDistributionBundle</a> leverages Composer and <a href="https://packagist.org/" target="_blank">Packagist</a>. All extensions feature on the <a href="https://extensions.oroinc.com/orocommerce/" target="_blank">Oro Extensions Store</a>. You do not have to use the command line to install extensions unless you want to, and a user with admin permissions can install them on their own in the UI.
+With the <a href="https://getcomposer.org/" target="_blank">Composer</a>, you can easily pull in third-party libraries and bundles for the application. Aside from using Composer to manage dependency management, OroPlatform supports Oro extensions. An extension is a package that adds new features to the Platform. To achieve this, the <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/DistributionBundle" target="_blank">OroDistributionBundle</a> leverages Composer and <a href="https://packagist.org/" target="_blank">Packagist</a>. All extensions feature on the <a href="https://extensions.oroinc.com/orocommerce/" target="_blank">Oro Extensions Store</a>. You do not have to use the command line to install extensions unless you want to, and a user with admin permissions can install them on their own in the UI.
 
 #### SEE ALSO
 You can also [add your own extension](../extension/add-extension.md#dev-extend-how-to-publish-extension-on-the-marketplace) to the Oro Extensions Store.

@@ -23,7 +23,9 @@ use Oro\Bundle\GoogleTagManagerBundle\DataLayer\Collector\CollectorInterface;
 
 class CustomCollector implements CollectorInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function handle(Collection $data): void
     {
         $data->add([
@@ -185,7 +187,7 @@ layout:
 {% endblock %}
 ```
 
-See more in <a href="https://github.com/oroinc/google-tag-manager/blob/master/src/Oro/Bundle/GoogleTagManagerBundle/Resources/public/js/app/components/products-embedded-list-gtm-component.js" target="_blank">products-embedded-list-gtm-component.js</a> and <a href="https://github.com/oroinc/google-tag-manager/blob/master/src/Oro/Bundle/GoogleTagManagerBundle/Resources/public/js/app/product-details-gtm-helper.js" target="_blank">product-details-gtm-helper.js</a>.
+See more in <a href="https://github.com/oroinc/google-tag-manager/blob/5.1/src/Oro/Bundle/GoogleTagManagerBundle/Resources/public/js/app/components/products-embedded-list-gtm-component.js" target="_blank">products-embedded-list-gtm-component.js</a> and <a href="https://github.com/oroinc/google-tag-manager/blob/5.1/src/Oro/Bundle/GoogleTagManagerBundle/Resources/public/js/app/product-details-gtm-helper.js" target="_blank">product-details-gtm-helper.js</a>.
 
 ### Push GTM Message In JavaScript
 

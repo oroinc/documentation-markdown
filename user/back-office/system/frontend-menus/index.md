@@ -13,7 +13,16 @@ This section is part of the [Storefront and Back-Office Menu Management Concept 
 
 Storefront menu in OroCommerce allows users to navigate your website and easily access product collections, their account, shopping cart, and other essential information. There are several types of menus available for the storefront, described in the [Storefront Menu Components section](../../../concept-guides/administration/menus/index.md#menu-management-concept-guide).
 
-![A list of all available storefront menu items](user/img/concept-guides/menus/frontend_menu_list.png)
+![A list of all storefront menu items](user/img/system/frontend_menu/frontend_menu_1.png)
+
+You can customize the way your storefront menus look globally (see below), per organization, per website, per customer, and per customer group.
+
+To configure a default storefront menu globally:
+
+1. Navigate to **System > Frontend Menus** in the main menu.
+2. Click on the menu you would like to edit.
+3. Update the menu contents following the guidelines provided in the [Edit a Storefront Menu](edit-frontend-menu.md#user-guide-system-menu-menu-frontend) section.
+   The changes apply automatically.
 
 To learn how to configure them on other levels, follow the links below:
 
@@ -21,13 +30,6 @@ To learn how to configure them on other levels, follow the links below:
 * [Customize Storefront Menus per Website](../websites/website-frontend-menus.md#frontend-menus-website)
 * [Customize Storefront Menus per Customer](../../customers/customers/customer-frontend-menus.md#frontend-menus-customer)
 * [Customize Storefront Menus per Customer Group](../../customers/customer-groups/customer-group-frontend-menus.md#frontend-menus-customer-group)
-
-To configure a default storefront menu globally:
-
-1. Navigate to **System > Storefront Menus** in the main menu.
-2. Click on the menu you would like to edit.
-3. Update the menu contents following the guidelines provided in the [Edit a Storefront Menu](edit-frontend-menu.md#user-guide-system-menu-menu-frontend) section.
-   The changes apply automatically.
 
 ## Configure Permissions to Customize Storefront Menus
 
@@ -54,20 +56,3 @@ To learn how to add  All Products Page  to a storefront menu globally after enab
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

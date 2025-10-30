@@ -1,7 +1,5 @@
 <!-- meta: description = Back-office manuals for the Oro application and OroMarketplace users -->
 
-<a id="user-guide-back-office"></a>
-
 # Back-Office
 
 Back-office is a primary management tool in Oro applications that allows managers to perform all essential activities related to their eCommerce business, such as updating product lines, managing customers and sales, setting up taxes, running marketing campaigns, managing web store content, reporting, administering user roles, and other.
@@ -31,7 +29,7 @@ When browsing documentation, be on the lookout for the ![Extension is required](
       <li><a class="" href="system/integrations/shipping-integration/">Shipping Integrations</a></li>
       <li><a class="" href="system/integrations/payment-integration/">Payment Integrations</a></li>
       <li><a class="tag-very-important" href="system/websites/">Websites</a></li>
-      <li><a class="" href="system/frontend-menus/">Storefront Menus</a></li>
+      <li><a class="" href="system/frontend-menus/">Frontend Menus</a></li>
    </ul><h2>Application-Wide Features</h2>
 
    <ul class="tag-cloud">
@@ -66,20 +64,3 @@ Are you in search of the <a href="https://oroinc.com/b2b-ecommerce/b2b-ecommerce
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

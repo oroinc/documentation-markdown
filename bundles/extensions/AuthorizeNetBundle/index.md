@@ -2,7 +2,7 @@
 
 # OroAuthorizeNetBundle
 
-<a href="https://github.com/oroinc/OroAuthorizeNetBundle" target="_blank">OroAuthorizeNetBundle</a> adds the <a href="https://www.authorize.net/" target="_blank">Authorize.Net</a> <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/IntegrationBundle" target="_blank">integration</a> to OroCommerce applications.
+<a href="https://github.com/oroinc/OroAuthorizeNetBundle" target="_blank">OroAuthorizeNetBundle</a> adds the <a href="https://www.authorize.net/" target="_blank">Authorize.Net</a> <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/IntegrationBundle" target="_blank">integration</a> to OroCommerce applications.
 
 The bundle allows admin users to enable and configure the Authorize.Net payment method for customer orders, which allows customers to pay for orders with credit and debit cards or eChecks using Authorize.Net Payment Gateway.
 

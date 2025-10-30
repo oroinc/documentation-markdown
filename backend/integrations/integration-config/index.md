@@ -1,6 +1,6 @@
 # Oro Integration Bundle
 
-OroPlatform provides means to achieve a seamless integration of third-party systems through the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/IntegrationBundle/" target="_blank">OroIntegrationBundle</a>.
+OroPlatform provides means to achieve a seamless integration of third-party systems through the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/IntegrationBundle/" target="_blank">OroIntegrationBundle</a>.
 
 Check out the topics below to learn more:
 

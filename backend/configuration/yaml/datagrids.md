@@ -666,22 +666,6 @@ datagrids:
 
 See for more information [Frontend Datagrid](../../entities/customize-datagrids/frontend/index.md#customizing-data-grid-in-orocommerce-frontend).
 
-#### itemsCounter
-
-##### transTemplate
-
-type: `string`
-
-There is an option that allows setting of a translation template for the datagrid items counter.
-
-```yaml
-grid-name:
-    options:
-        toolbarOptions:
-            itemsCounter:
-                transTemplate: 'oro_frontend.datagrid.pagination.totalRecords.ordersPlural'
-```
-
 ### jsmodules
 
 ```yaml
@@ -862,7 +846,7 @@ The name of the route to the controller action that should be called.
 
 type: `string`
 
-Can be either `url` or `callable` to use a statically configured route or to dynamically generate a link.
+Can be either `route` or `callable` to use a statically configured route or to dynamically generate a link.
 
 ## sorters
 
@@ -1094,8 +1078,8 @@ The entities to query from. Each entry is a map that must contain the following 
 
 type: `string`
 
-The entity class name or the entity alias in the `Acme\Bundle\DemoBundle\Entity\MyEntity` notation (for example,
-`Acme\Bundle\DemoBundle\Entity\User`).
+The entity class name or the entity alias in the `BundleName:EntityName` notation (for example,
+`AcmeDemoBundle:User`).
 
 ##### alias
 
@@ -1235,7 +1219,7 @@ datagrids:
 ```
 
 #### NOTE
-By default, all datagrids that use ORM datasource are marked by the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/DoctrineUtils/README.md#preciseorderbywalker-class" target="_blank">HINT_PRECISE_ORDER_BY</a> query hint. This guarantees that rows are sorted the same way independently of the state of the SQL server and the values of OFFSET and LIMIT clauses.
+By default, all datagrids that use ORM datasource are marked by the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Component/DoctrineUtils/README.md#preciseorderbywalker-class" target="_blank">HINT_PRECISE_ORDER_BY</a> query hint. This guarantees that rows are sorted the same way independently of the state of the SQL server and the values of OFFSET and LIMIT clauses.
 
 If you need to disable this behavior for your datagrid, use the following configuration:
 
@@ -1585,7 +1569,7 @@ datagrids:
         views_list: '@acme_demo.favorite_view_list'
 ```
 
-See [View List](../../entities/customize-datagrids/backend/views-list.md#customize-datagrids-views-list)  for more information.
+See [View List](../../entities/customize-datagrids/backend/views-list.md#customize-datagrids-views-list) for more information.
 
 **Related Article**
 

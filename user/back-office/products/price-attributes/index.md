@@ -37,9 +37,9 @@ To view all price attributes, navigate to **Products > Price Attributes** in the
 
 ![The page of all price attributes](user/img/products/price_attributes/PriceAttributes.png)
 
-Here, you can create a new price attribute, filter the list of existing ones by a price attribute name or a field name, and view price attribute details by clicking on the item. Also, you can  <i class="fa fa-eye fa-lg" aria-hidden="true"></i> view, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit, or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) delete a price attribute by hovering over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the item.
+Here, you can create a new price attribute, filter the list of existing ones by a price attribute name or a field name, and view price attribute details by clicking on the item. Also, you can  <i class="fa fa-eye fa-lg" aria-hidden="true"></i> view, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit, or <i class="fas fa-trash-alt" aria-hidden="true"></i> delete a price attribute by hovering over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the item.
 
-To remove multiple price attributes, select checkboxes in front of the price attributes that you want to delete. At the right end of the list header, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu and click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** to remove all selected price attributes.
+To remove multiple price attributes, select checkboxes in front of the price attributes that you want to delete. At the right end of the list header, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu and click <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** to remove all selected price attributes.
 
 Find the necessary price attribute in the list and click on it.
 
@@ -94,20 +94,3 @@ Now you can use the price attribute as a variable parameter in price list genera
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

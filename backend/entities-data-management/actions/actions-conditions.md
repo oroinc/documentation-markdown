@@ -115,7 +115,7 @@ OR
 
 **Options:**
 
-- destination / 0 - the route name specified in the #[Config] attribute of an entity
+- destination / 0 - the route name specified in the @Config annotation of an entity
 - entity / 1 - (optional) property path of the original entity (by default, equals to entity)
 - attribute / 2 - (optional) target property path where the action results are saved (by default, equals to redirectUrl)
 
@@ -196,7 +196,7 @@ For more information, please refer to the <a href="https://packagist.org/package
 
 ### Add Custom Condition
 
-The conditions are based on the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/ConfigExpression/README.md" target="_blank">ConfigExpression</a> component.
+The conditions are based on the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Component/ConfigExpression/README.md" target="_blank">ConfigExpression</a> component.
 
 To add a custom condition, add a service to DIC with the “oro_action.condition” tag, for example:
 

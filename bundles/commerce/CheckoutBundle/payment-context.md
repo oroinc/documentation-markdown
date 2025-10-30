@@ -9,7 +9,7 @@
 During a checkout `PaymentContext` object is created by the `\Oro\Bundle\CheckoutBundle\Factory\CheckoutPaymentContextFactory`, although it is recommended to use `\Oro\Bundle\CheckoutBundle\Provider\CheckoutPaymentContextProvider` that utilizes memory caching to avoid unnecessary calls to the factory. `PaymentLineItem` in its turn is created by `\Oro\Bundle\PaymentBundle\Context\LineItem\Factory\PaymentLineItemFromProductLineItemFactory`. If a `PaymentLineItem` represents a product kit, then for its kit item line items `PaymentKitItemLineItem` objects are created by `\Oro\Bundle\PaymentBundle\Context\LineItem\Factory\PaymentKitItemLineItemFromProductKitItemLineItemFactory`.
 
 #### NOTE
-`PaymentLineItemFromProductLineItemFactory` implements `\Oro\Bundle\PaymentBundle\Context\LineItem\Factory\PaymentLineItemFromProductLineItemFactoryInterface` and `PaymentKitItemLineItemFromProductKitItemLineItemFactory` - `\Oro\Bundle\PaymentBundle\Context\LineItem\Factory\PaymentKitItemLineItemFromProductKitItemLineItemFactoryInterface`
+`BasicPaymentLineItemBuilder` implements `\Oro\Bundle\PaymentBundle\Context\LineItem\Builder\PaymentLineItemBuilderInterface` and `PaymentKitItemLineItemFromProductKitItemLineItemFactory` - `\Oro\Bundle\PaymentBundle\Context\LineItem\Factory\PaymentKitItemLineItemFromProductKitItemLineItemFactoryInterface`
 
 The main entry point where `PaymentContext` is used is `\Oro\Bundle\PaymentBundle\Method\Provider\ApplicablePaymentMethodsProvider` that delegates further calls to payment methods and payment rules providers.
 

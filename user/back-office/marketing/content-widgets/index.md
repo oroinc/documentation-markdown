@@ -9,15 +9,13 @@ This section is part of the [Content Management Concept Guide](../../../concept-
 
 Content widgets are snippets of structured information that you can insert into any WYSIWYG field in your application. [WYSIWYG fields](../../../concept-guides/content-management/wysiwyg.md#getting-started-wysiwyg-editor-field) are available throughout OroCommerce; for example, in category descriptions, on edit pages of products, content blocks, and landing pages.
 
-There are seven content widget types:
+There are four content widget types:
 
 * An Image Slider
-* A Contact Us Form
+* A Contact Us form
 * A Product Mini Block
 * A Product Segment
 * Tabbed Content
-* Customer Dashboard DataGrid
-* Customer Dashboard Scorecard
 
 Each of these widget types has a different set of options.
 
@@ -39,52 +37,34 @@ To create a new content widget:
    #### NOTE
    If you have more than one organization in your OroCommerce application, first select the organization to which you want to add a new content widget.
 3. Depending on the widget type, form fields are different:
+   * **Contact Us Form** - Enables you to add a standard Contact Us form.
 
-* **Contact Us Form** - Enables you to add a standard Contact Us form to the Contact Us storefront page. Once the widget is saved, add it to the **Contact Us Form** field under the [theme configuration](../../system/theme-configuration/index.md#back-office-theme-configuration).
+   > ![Contact us content widget form](user/img/marketing/content_widgets/contact_us.png)
+   * **Image Slider** - Enables you to configure and add an image slider.
 
-![Contact us content widget form](user/img/marketing/content_widgets/contact_us.png)
-* **Image Slider** - Enables you to add an image slider with multiple images, configure slider options and style each slide. To configure the image slider, you can select the number of slides to show or scroll, enable or disable autoplay and control its speed in milliseconds, select whether to display dots and/or arrows at the bottom of the image slider in the storefront, control how the slide images are positioned and scaled, and enable or disable infinite scroll. To add slides, click **Add** at the bottom of the *Slides* section. You can customize each slide by setting its sort order, URL, target window, ALT text, text alignment, header and text for the image. You can choose different image sizes based on screen size (extra large, large, medium, small).
+   > ![Image slider content widget form](user/img/marketing/content_widgets/image_slider_1.png)
+   > <br/>
 
-![Image slider content widget form](user/img/marketing/content_widgets/image_slider_1.png)
-* **Product Mini Block** - Enables you to add a block with product information with or without prices and/or the **Add to Shopping List** button.
+   > #### NOTE
+   > You can add as many slides as necessary by clicking **Add** at the bottom of the *Slides* section.
+   > ![Image slider content widget form](user/img/marketing/content_widgets/image_slider_2.png)
 
-![A product mini block form](user/img/marketing/content_widgets/mini-block.png)
+   > <br/>
+   * **Product Mini Block** - Enables you to add a block with product information with or without prices and/or the **Add to Shopping List** button.
+     ![A product mini block form](user/img/marketing/content_widgets/mini-block.png)
 
-<a id="content-widgets-product-segment"></a>
-* **Product Segment** - Enables you to add a product segment content widget to your website page. Only segments with type *Product* are listed in the **Segment** field dropdown. You can modify an existing [segment](../../reports-segments/segments.md#user-guide-business-intelligence-filters-segments) or create a new one under **Reports & Segments > Manage Segments**. You can add a label to be displayed above the list of the products, configure the max and min number of items to show, whether to use slider on mobile, and show the **Add to Shopping List** button in the storefront. Additionally, you can enable or disable autoplay and control its speed in milliseconds, select whether to display dots and/or arrows at the bottom of the product segment and on touchscreens, enable or disable infinite scroll, and enable the display of inventory levels for customers in the storefront.
+   > <br/>
+   * **Product Segment** - Enables you to add a product segment content widget, configure how many max and min items to show, whether to use slider on mobile, and show the **Add to Shopping List** button in the storefront. Only segments with type *Product* are listed in the **Segment** field dropdown. You can modify an existing [segment](../../reports-segments/segments.md#user-guide-business-intelligence-filters-segments) or create a new one under **Reports&Segments > Manage Segments**.
+     ![A product mini block form](user/img/marketing/content_widgets/product-segment.png)
 
-![A product segment form](user/img/marketing/content_widgets/product-segment.png)
-* **Tabbed Content** - Enables you to add content to your storefront website in a form of tabs or an accordion.
+   > <br/>
+   * **Tabbed Content** - Enables you to add content to your storefront website in a form of tabs or an accordion.
+     ![Tabbed vs Accordion view of tabbed content widget](user/img/marketing/content_widgets/tabs-vs-accordion.png)
 
-![Tabbed vs Accordion view of tabbed content widget](user/img/marketing/content_widgets/tabs-vs-accordion-new.png)
-
-Tabbed content widget uses the [WYSIWYG editor](../../../concept-guides/content-management/wysiwyg.md#getting-started-wysiwyg-editor-field) which enables you to inject other content widget(s), such as a contact us form, into your current tabbed content widget.
-
-![Contact us widget embedded in tabbed content widget](user/img/marketing/content_widgets/injected-widget-new.png)
-
-<a id="content-widgets-dashboard-datagrid-widget"></a>
-* **Customer Dashboard DataGrid** - Enables you to add a structured, table-style (datagrid) widget to the customer user’s [Dashboard](../../../storefront/account/dashboard/index.md#storefront-dashboard) page in the My Account section. Each widget presents up to five of the latest records and allows customers to navigate to a dedicated page for full details. You can configure the datagrid widget to display data from one of the following entities:
-  > * **Latest Orders** – Lists the most recent orders placed by the current **customer user**, including order number, total amount, status, and last update.
-  > * **Open Quotes** – Lists open quotes associated with the current **customer**, including quote number, PO number, and expiration date. Depending on the customer user’s permissions, they may or may not see quotes from other users within their organization.
-  > * **My Checkouts** – Lists ongoing checkout sessions of the current **customer user**, including the number of items, subtotal, and last update. Customers can proceed to checkout directly from this widget.
-  > * **Requests for Quote** – Lists the most recent RFQs submitted by the current **customer**, including RFQ number, PO number, status, and last update. Depending on the customer user’s permissions, they may or may not see RFQs from other users within their organization.
-  > * **My Shopping Lists** – Shows the shopping lists of the current **customer user**, including the shopping list name, the number of items, subtotal, and last update. Users can either edit or view the list based on their permissions.
-
-Once the widget is saved, add it to the **Customer Dashboard Content Widget** field in the [theme configuration](../../system/theme-configuration/index.md#back-office-theme-configuration).
-
-![Illustrating the created 5 content widgets on the customer user’s Dashboard page](user/img/marketing/content_widgets/customer-dashboard-content-widget.png)
-
-<a id="content-widgets-dashboard-scorecard-widget"></a>
-* **Scorecard** - Enables you to add a block of key business metrics in a compact, easy-to-read format to the customer user’s [Dashboard](../../../storefront/account/dashboard/index.md#storefront-dashboard) page in the My Account section. The scorecard is shown only if the current customer user has appropriate *View* permissions for the corresponding entity. If the customer user has *View – None* permission, the respective scorecard will not be displayed. Scorecards represent the following metrics:
-  * **Users** – Displays the total number of customer users under the current customer, including all customer users on lower hierarchy levels (e.g., divisions or sub-accounts). The block visibility is based on the *View* permission on the *Customer User* entity.
-  * **Shopping Lists** – Shows the number of shopping lists available to the current customer user. The block visibility is based on the *View* permission on the *Shopping List* entity.
-  * **Open RFQs** – Shows the number of open Requests for Quote (RFQs), excluding those that are cancelled. The block visibility is based on the *View* permission on the *Request for Quote* entity.
-  * **Total Orders** – Shows the cumulative total value of all orders that the current customer user has access to, excluding those that are cancelled. The block visibility is based on the *View* permission on the *Order* entity.
-
-Once the widget is saved, add it to the **Customer Dashboard Scorecard** field in the [theme configuration](../../system/theme-configuration/index.md#back-office-theme-configuration).
-
-![Illustration of the Scorecard widget in the storefront](user/img/marketing/content_widgets/scorecard.png)
-1. Once you have provided all widget-specific details, click **Save and Close**.
+   > <br/>
+   > > Tabbed content widget uses the [WYSIWYG editor](../../../concept-guides/content-management/wysiwyg.md#getting-started-wysiwyg-editor-field) which enables you to inject other content widget(s), such as a contact us form, into your current tabbed content widget.
+   > > ![Contact us widget embedded in tabbed content widget](user/img/marketing/content_widgets/injected-widget.png)
+4. Once you have provided all widget-specific details, click **Save and Close**.
    <!-- .. image:: /user/img/marketing/content_widgets/widget-view.png
    :alt: Content widget view page -->
    <br/>

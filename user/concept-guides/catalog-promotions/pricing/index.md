@@ -19,8 +19,6 @@ You can also have a separate price list for the Wholesalers customer group that 
 
 You can also have one or multiple price lists with prices entered in US dollars and Euros defining the pricing for all your customers, a different price list with prices in US dollars available only to your large-volume US-based distributors, and another price list with prices in Euros available only to some selected European partners of your company.
 
-<a id="flat-vs-combined-pricing-strategy"></a>
-
 ## Flat VS Combined Pricing
 
 OroCommerce comes with a powerful Combined Price List (CPL) functionality fit for the needs of large B2B businesses, equipped with multiple price lists, pricing strategies, price fallbacks, and price merges. However, if your operate a small-scale business and don’t need complex pricing, or use an external third-party pricing system, such as an ERP, to generate and manage prices outside of OroCommerce, you can switch from the default CPL pricing to a simpler flat pricing. This is usually done as part of [application post-install configuration activities](../../../../backend/setup/post-install/flat-pricing.md#dev-guide-setup-flat-pricing) by a system administrator. If flat pricing is configured for the whole application, prices are fetched directly from the price lists without complex pricing strategies and merges. If prices are absent for a certain product in the assigned price list, they will also be absent in the storefront without falling back to another higher level price list. If no price list is assigned for a product on a particular level (e.g., customer level), the prices will be taken from the higher level price lists (e.g., customer group level), following the [standard price list fallback sequence](#price-lists-fallback-config). Unlike CPL configuration, which is available on global and website levels, flat pricing configuration is available on [global](../../../back-office/system/configuration/commerce/catalog/global-pricing.md#sys-config-commerce-catalog-pricing), [organization](../../../back-office/system/user-management/organizations/org-configuration/commerce/catalog/pricing.md#configuration-guide-commerce-configuration-catalog-pricing-organization) and [website](../../../back-office/system/websites/web-configuration/commerce/catalog/website-pricing.md#pricing-currency-website) levels.
@@ -35,18 +33,21 @@ When one of your customers logs into the storefront, they may see prices for bot
 
 Pricing strategy is the approach you take when considering which prices from the existing ones to use for your customers. Different prices depend on different situations. You can select whether your customers will see the lowest prices, or prices from a higher priority price list, as described in the [global price selection strategy](../../../back-office/system/configuration/commerce/catalog/global-pricing.md#sys-config-commerce-catalog-pricing) topic. A website, customer group, and customer can have their own set of price lists that overrides the default configuration.
 
+#### NOTE
+The minimal price selection strategy is enabled by default starting from OroCommerce version 2.2. The priority-based price merging was the default configuration in the earlier OroCommerce versions.
+
 ![Set a pricing selection strategy in the system configuration](user/img/concept-guides/prices/price_selection_strategy.png)
 
 The best way to illustrate the strategy differences is to compare prices for one product, e.g., *220 Lumen Rechargeable Headlamp*, in different price lists.
 
 Let’s consider the following scenario:
 
-|                                 | **Stock Clearance PL**   | **Customer A PL**   | **Partner B PL**   | **Wholesale PL**   | **Spring Sale PL**                                                |
+|                                 | **Stock Clearance PL**   | **Customer A PL**   | **Partner B PL**   | **Wholesale PL**   | **Spring Sale 2020 PL**                                           |
 |---------------------------------|--------------------------|---------------------|--------------------|--------------------|-------------------------------------------------------------------|
 | **Product Discount**            | 20%                      | 15%                 | 5%                 | 10%                | 10% for purchasing less than 49 items, 13% for more than 50 items |
 | **Product Price with Discount** | $80 / 1 item             | $85 / 1 item        | $95 / 1 item       | $90 / 1 item       | $90 / 1 item                                                      |
 
-Customer A is assigned three price lists from the five available – *Stock Clearance PL*, *Customer A PL*, and *Spring Sale PL*.
+Customer A is assigned three price lists from the five available – *Stock Clearance PL*, *Customer A PL*, and *Spring Sale 2020 PL*.
 
 ![View the three price lists assigned to Customer A](user/img/concept-guides/prices/price_lists_for_customerA.png)
 
@@ -56,7 +57,7 @@ When you select the Minimal Prices strategy, all your price lists are combined t
 
 In our example, the minimal price per item for Customer A is $80 from the *Stock Clearance PL*.
 
-|                                 | **Stock Clearance PL**   | **Customer A PL**   | **Partner B PL**   | **Wholesale PL**   | **Spring Sale PL**                                                |
+|                                 | **Stock Clearance PL**   | **Customer A PL**   | **Partner B PL**   | **Wholesale PL**   | **Spring Sale 2020 PL**                                           |
 |---------------------------------|--------------------------|---------------------|--------------------|--------------------|-------------------------------------------------------------------|
 | **Product Discount**            | 20%                      | 15%                 | 5%                 | 10%                | 10% for purchasing less than 49 items, 13% for more than 50 items |
 | **Product Price with Discount** | **$80 / 1 item**         | $85 / 1 item        | $95 / 1 item       | $90 / 1 item       | $90 / 1 item                                                      |
@@ -94,7 +95,7 @@ Based on the price lists priority that you have set for Customer A, the lumen he
 
 **Merge Allowed** is a price list configuration setting that defines whether the system should combine price tiers of the same product from multiple price lists.
 
-If we enable the Merge Allowed option for all price lists available for the Customer A, we combine them all together, allowing the system to fill the empty price tiers for the lumen headlamp from other price lists in the priority order. The price will then be displayed as follows, where the first four price tiers for *1 through 99* items are taken from the *Customer A PL* which has the highest priority. As the *Customer A PL* does not define the price for 100+ items, the system then searches for the relevant price in the second priority price list, the *Stock Clearance PL*. It does not specify the required price either. Only the third priority price list, the *Spring Sale Pl*, has the required price for 100+ items which is taken by the system to display in the storefront.
+If we enable the Merge Allowed option for all price lists available for the Customer A, we combine them all together, allowing the system to fill the empty price tiers for the lumen headlamp from other price lists in the priority order. The price will then be displayed as follows, where the first four price tiers for *1 through 99* items are taken from the *Customer A PL* which has the highest priority. As the *Customer A PL* does not define the price for 100+ items, the system then searches for the relevant price in the second priority price list, the *Stock Clearance PL*. It does not specify the required price either. Only the third priority price list, the *Spring Sale 2020 Pl*, has the required price for 100+ items which is taken by the system to display in the storefront.
 
 ![View all prices per tier for the lumen headlamp provided that Merge Allowed is enabled for all three price lists](user/img/concept-guides/prices/merge_by_priority_example3.png)
 
@@ -180,7 +181,7 @@ Check out the Manage Price Attributes in the Back-Office guide to learn more on 
   > * [Generate Product Price Automatically](../../../back-office/sales/price-lists/auto.md#user-guide-pricing-price-list-auto)
   > * [Review Examples of Price Rule Automation](../../../back-office/sales/price-lists/auto.md#price-rules-auto-examples)
   > * [Filtering Expression Syntax](../../../back-office/sales/price-lists/auto.md#user-guide-pricing-auto-expression), [Autocomplete](../../../back-office/sales/price-lists/autocomplete.md#user-guide-pricing-price-list-auto-autocomplete) and [Storage Type](../../../back-office/sales/price-lists/auto.md#user-guide-pricing-auto-expression-storage-type)
-  > * [Tier Pricing in the Storefront](../../../storefront/getting-started/common-controls.md#frontstore-guide-navigation-product-price)
+  > * [Your Price vs Listed Price](../../../storefront/getting-started/common-controls.md#frontstore-guide-navigation-product-price)
 * [Global Pricing Configuration](../../../back-office/system/configuration/commerce/catalog/global-pricing.md#pricing-configuration)
 * [Price Lists Configuration per Website](../../../back-office/system/websites/configure-price-lists.md#sys-website-edit-price-lists)
 * [Price Lists Configuration per Customer Group](../../../back-office/customers/customer-groups/customer-group-price-lists.md#customers-customer-groups-edit-price-lists)
@@ -193,20 +194,3 @@ Check out the Manage Price Attributes in the Back-Office guide to learn more on 
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

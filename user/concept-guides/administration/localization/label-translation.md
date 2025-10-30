@@ -36,10 +36,9 @@ Keep in mind that if an attribute is of a *select* or *multi-select* type, you c
 
 1. Click **Save and Close** (or its version in your default language).
 
-The product attribute label and its options are updated in the storefront.
+The product attribute label and it options are updated in the storefront.
 
-<!-- .. image:: /user/img/system/localization/labels/label_updated.png
-:alt: Updated product attribute label in the storefront -->
+> ![Updated product attribute label in the storefront](user/img/system/localization/labels/label_updated.png)
 
 #### NOTE
 To translate any UI system element, label, or a popup message, read the [related documentation](messages-translation.md#localization-translations-messages).

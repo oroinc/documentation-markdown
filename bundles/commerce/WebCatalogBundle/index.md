@@ -2,7 +2,7 @@
 
 # OroWebCatalogBundle
 
-<a href="https://github.com/oroinc/orocommerce/tree/master/src/Oro/Bundle/WebCatalogBundle" target="_blank">OroWebCatalogBundle</a> enables the OroCommerce back-office administrators to set a different structure and content of the storefront for individual customers, customer groups, or all visitors of the website by combining product pages, category pages, system pages, and product collections into custom catalogs for these audiences.
+<a href="https://github.com/oroinc/orocommerce/tree/5.1/src/Oro/Bundle/WebCatalogBundle" target="_blank">OroWebCatalogBundle</a> enables the OroCommerce back-office administrators to set a different structure and content of the storefront for individual customers, customer groups, or all visitors of the website by combining product pages, category pages, system pages, and product collections into custom catalogs for these audiences.
 
 ## Create a Content Variant
 
@@ -30,7 +30,9 @@ This migration should implement ExtendExtensionAwareInterface.
 ```php
 class OroWebCatalogBundle implements Migration, ExtendExtensionAwareInterface
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->createRelationToBlogPostFromContentVariant($schema);
@@ -98,25 +100,33 @@ class ProductPageContentVariantType implements ContentVariantTypeInterface
 
     ...
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getName()
     {
         return self::TYPE;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getTitle()
     {
         return 'blog_post_page.label';
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getFormType()
     {
         return BlogPostPageVariantType::class;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getRouteData(ContentVariantInterface $contentVariant)
     {
         /** @var BlogPost $post */
@@ -125,13 +135,17 @@ class ProductPageContentVariantType implements ContentVariantTypeInterface
         return new RouteData('frontend_blog_post_view', ['id' => $post->getId()]);
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getApiResourceClassName()
     {
         return BlogPost::class;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getApiResourceIdentifierDqlExpression($alias)
     {
         return sprintf('IDENTITY(%s.content_variant_blog_post)', $alias);
@@ -158,12 +172,12 @@ For more details, see <a href="https://doc.oroinc.com/backend/api/storefront/" t
 
 If your content variant is represented by a non-ORM entity, enabling storefront API may be more time-consuming. As an example you can investigate how it is done for the system page content variant:
 
-- <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/WebCatalogBundle/Api/Model/SystemPage.php" target="_blank">SystemPage Model</a>
-- <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/WebCatalogBundle/Resources/config/oro/api_frontend.yml" target="_blank">SystemPage declaration in Resources/config/oro/api_frontend.yml</a>
-- <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/WebCatalogBundle/Api/Repository/SystemPageRepository.php" target="_blank">SystemPageRepository class</a>
-- <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/WebCatalogBundle/Api/Processor/LoadSystemPage.php" target="_blank">LoadSystemPage API processor</a>
-- <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/WebCatalogBundle/Api/Processor/ExpandSystemPageContentVariant.php" target="_blank">ExpandSystemPageContentVariant API processor</a>
-- <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/WebCatalogBundle/Api/Processor/LoadSystemPageContentVariantSubresource.php" target="_blank">LoadSystemPageContentVariantSubresource API processor</a>
+- <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/WebCatalogBundle/Api/Model/SystemPage.php" target="_blank">SystemPage Model</a>
+- <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/WebCatalogBundle/Resources/config/oro/api_frontend.yml" target="_blank">SystemPage declaration in Resources/config/oro/api_frontend.yml</a>
+- <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/WebCatalogBundle/Api/Repository/SystemPageRepository.php" target="_blank">SystemPageRepository class</a>
+- <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/WebCatalogBundle/Api/Processor/LoadSystemPage.php" target="_blank">LoadSystemPage API processor</a>
+- <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/WebCatalogBundle/Api/Processor/ExpandSystemPageContentVariant.php" target="_blank">ExpandSystemPageContentVariant API processor</a>
+- <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/WebCatalogBundle/Api/Processor/LoadSystemPageContentVariantSubresource.php" target="_blank">LoadSystemPageContentVariantSubresource API processor</a>
 
 **Adding scope selectors for content variants is automatic**
 

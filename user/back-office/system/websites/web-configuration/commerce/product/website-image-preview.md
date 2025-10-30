@@ -28,10 +28,22 @@ You can update the product watermark settings, enable image preview and configur
    * **File** – The image file with the watermark on a transparent background.
    * **Size** – The size of the watermark in percentage compared to the whole image.
    * **Position** – The watermark position on the image (e.g, top left, top, top right, left, right, center, bottom left, bottom, and bottom right).
-4. In the **Image Gallery Options** section, enable or disable product preview on product listing pages in the storefront.
+4. In the **Image Gallery Options** section, the following options are available:
+   * **Enable Image Preview on Product Listing** — When this option is enabled, clicking on the product image on the product listing page in the storefront will open a pop up image gallery, rather than the product page.
+     ![image](user/img/system/websites/web_configuration/ImagePreviewEnabledWebsite.png)
 
-   **Enable Image Preview on Product Listing** - Enable the option to add the <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> icon to the product image on the product listing page in the storefront which will open a pop up image gallery once clicked.
-   > ![Illustration of the Enable Image Preview on Product Listing option in the storefront being enabled and disabled](user/img/system/config_commerce/product/ImagePreviewStorefront.png)
+     When the option is disabled, clicking on the product image on the product listing page in the storefront will open the product page.
+     ![image](user/img/system/websites/web_configuration/ImagePreviewDisabledWebsite.png)
+5. When **Popup Gallery on Product View** is enabled, image gallery in the storefront takes the following form:
+   ![image](user/img/system/websites/web_configuration/ImageGalleryWebsiteEnabled1.png)
+
+   By clicking on the image, the pop up gallery is displayed in the middle of the screen:
+   ![image](user/img/system/websites/web_configuration/ImageGalleryWebsiteEnabled2.png)
+6. When **Popup Gallery on Product View** is disabled, the image gallery takes the form of an inline view:
+   <!-- image::/img/system/websites/web_configuration/ImageGalleryWebsiteDisabled.png
+   :class: with-border -->
+
+   Flick through the pictures in the gallery by pressing < or > arrows without leaving the product page.
 
 <!-- finish -->
 <!-- fa-bars = fa-navicon -->
@@ -39,20 +51,3 @@ You can update the product watermark settings, enable image preview and configur
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

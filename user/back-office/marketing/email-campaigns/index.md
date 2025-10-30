@@ -58,7 +58,7 @@ You can assign multiple email campaigns to a marketing campaign.
 
 The following actions are available for an email campaign from the grid:
 
-- Delete the campaign from the system: ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg)
+- Delete the campaign from the system: <i class="fas fa-trash-alt" aria-hidden="true"></i>
 - Edit the campaign: <i class="fa fa-edit fa-lg" aria-hidden="true"></i>
 - View the details of the campaign: <i class="fa fa-eye fa-lg" aria-hidden="true"></i>
 
@@ -86,20 +86,3 @@ statistics will be uploaded and synchronized.
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

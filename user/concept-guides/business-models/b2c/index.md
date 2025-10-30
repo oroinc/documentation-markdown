@@ -89,7 +89,7 @@ Another example goes for the case with several businesses running in different c
 
 ![Different website look for the English and French localizations](user/img/concept-guides/b2c/dif_localization.png)
 
-You can also create another localization for the same language (for instance, *English (United States-B2B)* and *English (B2C)* with the same formatting to enable the additional translation of the UI system elements and content. In this case, you can diversify the same UI and content elements for B2B and B2C businesses running on the same platform in the same language. This way, you can change the name and description of the same content element, turning *Handheld Flashlight* from website A into *Electric Flash Lamp* for website B with different description, a *shopping list* into a *shopping cart*, and so on.
+You can also create another localization for the same language (for instance, *English-B2B* and *English-B2C*) with the same formatting to enable the additional translation of the UI system elements and content. In this case, you can diversify the same UI and content elements for B2B and B2C businesses running on the same platform in the same language. This way, you can change the name and description of the same content element, turning *Women’s Nursing Shoe* from website A into *Women’s White Slip-On Clogs* for website B with different description, a *shopping list* into a *shopping cart*, and so on.
 
 ![Different website look for the English-B2B and English-B2C localizations](user/img/concept-guides/b2c/diff_local.png)
 

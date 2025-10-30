@@ -18,21 +18,20 @@ To configure the request for quote settings per website:
    #### NOTE
    For faster navigation between the configuration menu sections, use [Quick Search](../../../../configuration/quick-search.md#user-guide-system-configuration-quick-search).
 
-   ![RFQ configuration options per website](user/img/system/websites/web_configuration/website_rfq_config.png)
-4. Clear the **Use Organization** checkbox to override the organization-wide configuration options.
-5. In the **General** section, customize the following options:
-   * **Enable RFQ (Storefront)** — the option enables the OroCommerce-driven RFQ functionality for the storefront. Your customers will be able to submit RFQs from the storefront.
-   * **Enable RFQ Project Name** — this option enables project name management for RFQs in the storefront. In the back-office, the feature is enabled automatically if it is turned on for an organization or for at least one website within that organization. Once active, a Project Name field appears on RFQ edit pages, and a Project Name column is added to the RFQ grid in the back-office. The project name serves as an optional identifier that helps users search for and track RFQs by name, particularly when records originate from external systems or third parties.
-6. In the **Notifications** section, configure notifications for all the parties concerned, namely:
+![RFQ configuration options per website](user/img/system/websites/web_configuration/website_rfq_config.png)
+1. Clear the **Use Organization** checkbox to override the organization-wide configuration options.
+2. In the **General** section, customize the following options:
+
+   **Enable RFQ (Store Front)** — the option enables the OroCommerce-driven RFQ functionality for the storefront. Your customers will be able to submit RFQs from the storefront.
+3. In the **Notifications** section, configure notifications for all the parties concerned, namely:
    * an assigned sales representatives of the customer
    * the owner of the customer user
    * the owner of the customer
 
-For the aforementioned parties the options are the following:
-
-> * Select **Always** to notify the related entity each time an RFQ is submitted.
-> * Select **If user has no sales reps assigned** to notify the related entity only in case they do not have any assigned sales representatives.
-1. In the **Guest RFQ** section, set whether guests are allowed to request quotes on the items they are interested in. This will also allow sales reps collect information on potential sales in the back-office.
+   For the aforementioned parties the options are the following:
+   * Select **Always** to notify the related entity each time an RFQ is submitted.
+   * Select **If user has no sales reps assigned** to notify the related entity only in case they do not have any assigned sales representatives.
+4. In the **Guest RFQ** section, set whether guests are allowed to request quotes on the items they are interested in. This will also allow sales reps collect information on potential sales in the back-office.
 
 > #### HINT
 > Make sure you enable [Guest Shopping Lists](website-guest-shopping-list.md#user-guide-system-configuration-commerce-sales-shopping-list-per-website) in the back-office to let guest customers create RFQs from the shopping lists in their storefront.
@@ -50,20 +49,3 @@ To enable users from the same business unit or organization (that the owner belo
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

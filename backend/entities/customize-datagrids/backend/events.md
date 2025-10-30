@@ -23,7 +23,7 @@ Four events are dispatched during the build process:
 By listening to these events, you can add new elements to the grid configuration or modify the already existing configuration in your event listener.
 You can use the generic `build.before` event to listen to all or specific datagrids, which will be called only for the given datagrid - `build.before.DATAGRID_NAME`.
 
-The `BuildBefore` event class has access to the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/DataGridBundle/Datagrid/Common/DatagridConfiguration.php" target="_blank">DatagridConfiguration</a> instance.
+The `BuildBefore` event class has access to the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/DataGridBundle/Datagrid/Common/DatagridConfiguration.php" target="_blank">DatagridConfiguration</a> instance.
 
 #### HINT
 Please note that at this point datasource has not been initialized yet, therefore calling `$event->getDatagrid()->getDatasource()` returns `null`.
@@ -73,7 +73,7 @@ this event is to modify the query (add additional joins, selects, the `where` co
 You can use a generic `build.after` event for listening to all or specific datagrids, which will be called
 only for a given datagrid - `build.after.DATAGRID_NAME`.
 
-The `BuildAfter` event class has access to <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/DataGridBundle/Datagrid/Datagrid.php" target="_blank">Datagrid</a> instance.
+The `BuildAfter` event class has access to <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/DataGridBundle/Datagrid/Datagrid.php" target="_blank">Datagrid</a> instance.
 
 For example, let us filter the datagrid by a particular value from the request params. For this, create an event listener and modify the query builder, as illustrated below:
 
@@ -138,7 +138,7 @@ tags:
 Result events are type-specific, which means that `datasource` is responsible for dispatching them.
 Listening to these events is useful both when you need to access a query (e.g., ORM, search) and modify the results.
 
-As an example, have a look at the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/DataGridBundle/Datasource/Orm/OrmDatasource.php" target="_blank">OrmDatasource</a>. In the `getResult()` method it dispatches 4 main and 2 additional events:
+As an example, have a look at the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/DataGridBundle/Datasource/Orm/OrmDatasource.php" target="_blank">OrmDatasource</a>. In the `getResult()` method it dispatches 4 main and 2 additional events:
 
 * Additional - Class `OrmResultBeforeQuery`, event name: `oro_datagrid.orm_datasource.result.before_query`
 * Additional - Class `OrmResultBeforeQuery`, event name: `oro_datagrid.orm_datasource.result.before_query.DATAGRID_NAME`

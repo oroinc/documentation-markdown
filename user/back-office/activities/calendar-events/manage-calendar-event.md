@@ -22,6 +22,8 @@
 
 <a id="doc-activities-events-actions-respond"></a>
 
+<a id="doc-activities-events-actions-hangout"></a>
+
 # Manage Calendar Events
 
 In your Oro application, you can manage calendar events from the following pages:
@@ -47,7 +49,7 @@ To manage a specific calendar event from the page of all calendar events:
    * **?** Accept Tentatively
    * <i class="fa fa-eye fa-lg" aria-hidden="true"></i> View
    * <i class="fa fa-edit fa-lg" aria-hidden="true"></i> Edit
-   * ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) Delete
+   * <i class="fas fa-trash-alt" aria-hidden="true"></i> Delete
 
    ![The actions available for a calendar event on the calendar event's grid](user/img/activities/ManageCalendarEventsPage.png)
 
@@ -56,7 +58,7 @@ To manage a specific calendar event from the page of all calendar events:
 To edit, delete, add context or comment to a specific calendar event from its page:
 
 1. Navigate to **Activities > Calendar Events** in the main menu.
-2. Click on the required event to open it.
+2. Click once on the required event to open it.
 3. Select the necessary actions.
 4. To respond to the event, click  **Yes**, **Maybe**, or **No** for *Going* depending on whether you are going to attend the event.
 
@@ -84,7 +86,7 @@ You can also edit or delete calendar events from the My Calendar page and the To
 
 You can view, edit, or delete events from the page of the selected system calendar:
 
-1. Navigate to **System > System Calendars** in the main menu.
+1. Navigate **System > System Calendars** in the main menu.
 2. Click on the required calendar.
 3. The list of all events related to the selected calendar is located under the **Calendar Events** section. For each event, you can perform the necessary action.
 
@@ -93,20 +95,3 @@ You can view, edit, or delete events from the page of the selected system calend
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

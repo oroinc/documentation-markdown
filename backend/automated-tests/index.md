@@ -15,5 +15,4 @@ Follow the links below to learn how to use automated tests for Oro applications:
 * [End-to-End](e2e.md)
 * [Integration](behat.md)
 * [Functional](functional.md)
-* [k6 Performance Tests](k6-performance-tests.md)
 * [Debug Behat Tests](debug-behat-tests.md)

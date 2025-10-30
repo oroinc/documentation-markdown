@@ -103,15 +103,22 @@ However, if you buy the same product in sets, the price is even lower:
 * If you buy 1 set, 1 item within it goes for $8.80
 * If you buy 10 sets, 1 item within the set goes for $8.6.
 
-Depending on the quantity selected for the product unit, your price in the storefront will be different.
+Depending on the quantity selected for the product unit, **Your Price** in the storefront will be different.
+
+**Listed Price** is the pricing assigned to the available product units and their variations of quantity. **Your Price** is the *Listed* price under your current tier pricing configuration.
 
 For instance:
 
-* For 1 brush, your price is $9.50 per item, however, if you choose 50 items, your price is recalculated to $8.99, because this is the tier pricing set for the quantity of 50 brushes.
+* For 1 brush, your price is $9.50 per item, the same as the listed price.
+  ![Your price and listed price are the same in the storefront](user/img/products/products/your_listed_pricing_equal.png)
+* However, if you choose 50 items, your price is recalculated to $8.99 because this is the tier pricing set for the quantity of 50 brushes.
   ![Your price and listed price are different because the pricing tier is applied](user/img/products/products/your_price_recalculated_after_tier_application.png)
 * The same goes for sets:
 
 ![Your price is recalculated for sets](user/img/products/products/your_price_recalculated_sets.png)
+
+#### HINT
+See another example of the difference between [Your Price and Listed price in the storefront](../../../../storefront/getting-started/common-controls.md#frontstore-guide-navigation-product-price).
 
 ### Use Units in Promotions
 

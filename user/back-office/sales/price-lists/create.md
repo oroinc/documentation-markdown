@@ -9,9 +9,10 @@ See a short demo on <a href="https://academy.oroinc.com/media-library/configurin
 
 To create a new price list:
 
-1. Navigate to **Sales > Price Lists** using the main menu, and click **Create Price List**.
+1. Navigate to **Sales > Price Lists** using the main menu.
+   ![The list of all price lists available in the system](user/img/sales/pricelist/PriceLists.png)
+2. Click **Create Price List**. The following page opens:
    ![The create price list page](user/img/sales/pricelist/PriceListsCreate.png)
-2. If you have more than one organization in the application, select the organization for which you are creating the price list.
 3. In the **General** section, provide the following information:
    1. **Name** — Type in the price list name.
    2. **Currencies** — Select one or more currencies you would like to enable for the prices in the price list.

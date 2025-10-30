@@ -27,7 +27,7 @@ This section describes the steps that are necessary to delete integration with t
 To delete an integration and related shipping methods:
 
 1. Navigate to the **Manage Integrations** page by clicking **System > Integrations > Manage Integrations** in the main menu.
-2. Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu on the right side of the line with the necessary integration and click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg).
+2. Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu on the right side of the line with the necessary integration and click <i class="fas fa-trash-alt" aria-hidden="true"></i>.
 
    The confirmation box is shown.
 
@@ -51,20 +51,3 @@ The shipping methods created due to this integration are no longer usable in Oro
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

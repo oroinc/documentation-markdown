@@ -40,5 +40,5 @@ Learn more about website management from the following sections:
   * [Customize a Payment Method per Website](manage.md#customize-a-payment-method-per-website)
   * [Customize a Shipping Method per Website](manage.md#customize-a-shipping-method-per-website)
 * [Configure Price Lists per Website](configure-price-lists.md)
-* [Add All Products Page to Storefront Menus per Website](website-all-products-menu.md)
-* [Customize Storefront Menus per Website](website-frontend-menus.md)
+* [Add All Products Page to Frontend Menus per Website](website-all-products-menu.md)
+* [Customize Frontend Menus per Website](website-frontend-menus.md)

@@ -5,7 +5,7 @@
 #### NOTE
 The website routing settings can be configured [globally](../../../../../system/configuration/system/websites/global-routing.md#sys-config-sysconfig-websites-routing), per [organization](../../../../../system/user-management/organizations/org-configuration/general-setup-org/organization-routing.md#organization-config-website-routing), per [website](../../../../../system/websites/web-configuration/general-sys-config/websites/website-routing.md#sys-websites-sysconfig-websites-routing), customer group and [customer](../../../../customers/customer-configuration/system-configuration/website/customer-routing-settings.md#user-guide-customer-configuration-settings-routing).
 
-You can configure what [storefront menu](../../../../../system/frontend-menus/index.md#frontend-menus-overview) will represent the [main menu](../../../../../../storefront/getting-started/general-layout.md#frontstore-guide-navigation-main-menu) in the storefront.
+You can configure what [frontend menu](../../../../../system/frontend-menus/index.md#frontend-menus-overview) will represent the [main menu](../../../../../../storefront/getting-started/general-layout.md#frontstore-guide-navigation-main-menu) in the storefront.
 
 To configure the main navigation menu per customer group:
 
@@ -15,7 +15,7 @@ To configure the main navigation menu per customer group:
 ![Customer group routing configuration settings](user/img/customers/customer_groups/configuration/customer-group-config-routing.png)
 1. Select **System Configuration > Websites > Routing** in the menu to the left.
 2. In the General section, clear the **Use Website** checkbox and configure the following option:
-   * **Main Navigation Menu** – Use the dropdown to select which storefront menu will represent the main menu in the storefront.
+   * **Main Navigation Menu** – Use the dropdown to select which frontend menu will represent the main menu in the storefront.
 3. Click **Save Settings**.
 
 **Related Topics**
@@ -28,20 +28,3 @@ To configure the main navigation menu per customer group:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

@@ -4,7 +4,10 @@
 
 Roles are predefined sets of permissions. In the Roles section, you can view, edit and create new roles to define the level of permissions and access to the actions and data in OroCommerce storefront for the users of a specific role.
 
-You can access the list of storefront roles in the menu under your profile name in the top navigation bar.
+To locate roles:
+
+1. Navigate to **Account** in the [user menu](../../getting-started/general-layout.md#frontstore-guide-navigation-user-menu).
+2. Click **Roles** in the menu on the left.
 
 ![image](user/img/storefront/users_roles/Roles.png)
 
@@ -23,20 +26,20 @@ The roles table shows the following data:
 
 Within the table you have the following [actions buttons](../../getting-started/common-controls.md#frontstore-guide-navigation-action-buttons) available:
 
-1. Refresh ![Refresh-SVG](_themes/sphinx_rtd_theme/static/svg-icons/refresh.svg) the view table.
-2. Reset ![Reset-SVG](_themes/sphinx_rtd_theme/static/svg-icons/reset.svg) the view table to clear view table customization and return to default settings. Reset applies to all filters, records per page and sorting changes that you have made.
-3. Manage ![Columns-SVG](_themes/sphinx_rtd_theme/static/svg-icons/columns.svg) table settings to define which columns to show in the table.
-4. Manage [filters](../../getting-started/common-controls.md#frontstore-guide-navigation-filters) ![Settings-SVG](_themes/sphinx_rtd_theme/static/svg-icons/settings.svg).
+1. Refresh the view table: click <i class="fas fa-sync-alt" aria-hidden="true"></i> to update the view table.
+2. Reset the view table: click <i class="fas fa-sync-alt" aria-hidden="true"></i> to clear view table customization and return to default settings. Reset applies to all filters, records per page and sorting changes that you have made.
+3. Table settings: click <i class="fa fa-cog fa-lg" aria-hidden="true"></i> to define which columns to show in the table.
+4. [Filters](../../getting-started/common-controls.md#frontstore-guide-navigation-filters) <i class="fa fa-filter fa-lg" aria-hidden="true"></i>.
 
 ## Role View Page
 
 To open a specific role: click on the selected role in the view table.
 
-To edit a specific role from its view page: click ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) **Edit Role** on the right of the page.
+To edit a specific role from its view page: click <i class="fas fa-pencil-alt" aria-hidden="true"></i> **Edit Role** on the right of the page.
 
 ![image](user/img/storefront/users_roles/BuyerEditRole.png)
 
-To delete a specific customizable role from its view page: click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete**
+To delete a specific customizable role from its view page: click <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete**
 
 #### NOTE
 If the role is predefined, it cannot be deleted. Neither can it be deleted if it is assigned to a user/users. Reassign the assigned users to a different role to be able to delete it.
@@ -63,6 +66,8 @@ The following permissions are available:
 
 With the Customer User Role you can manage the following access- and permissions-related settings and capabilities:
 
+![image](user/img/storefront/users_roles/AccessPermissions.png)
+
 | Field                   | Entities                                                                              | Capabilities (Checkboxes)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |-------------------------|---------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **All**                 | Address, Customer User, Customer User Address, Customer User Roles, Grid (Table) View | Account Management:<br/><br/>- Audit history for Customer User<br/>- [Quote] Enter the shipping address manually<br/>- [Quote] Use any shipping address from the customer address book.<br/>- [Quote] Use any shipping address from the customer user’s address book<br/>- [Quote] Use the default shipping address from the customer user’s address book<br/><br/>Checkout:<br/><br/>- Approve orders that exceed the allowable amount<br/>- Enter the billing address manually<br/>- Enter the shipping address manually<br/>- Use any billing address from the customer address book<br/>- Use any billing address from the customer user’s address book<br/>- Use any shipping address from the customer address book<br/>- Use any shipping address from the customer user’s address book<br/>- Use the default billing address from the customer user’s address book<br/>- Use the default shipping address from the customer user’s address book.<br/><br/>Application:<br/><br/>- Share Data View. |
@@ -83,20 +88,8 @@ To apply a role to a specific user:
 3. Click **Save**.
 
 ![image](user/img/storefront/users_roles/RolesAllUsers.png)
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->
+<!-- fa-bars = fa-navicon -->
+<!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
+<!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
+<!-- Check mark in the square. -->
+<!-- SortDesc is also used as drop-down arrow -->

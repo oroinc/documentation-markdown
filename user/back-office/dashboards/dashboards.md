@@ -20,11 +20,14 @@ To create a dashboard:
    ![A form for creating a new dashboard](user/img/dashboards/dashboards_1.png)
    * **Label** — The name used to refer to the dashboard in the system.
    * **Owner** — Limits the list of users who can manage the dashboard to the users whose roles allow managing dashboards of the owner (e.g., the owner, members of the same business unit, head of the department, etc.)
-   * **Dashboard Type** — Select whether the dashboard you are creating is of the [widget](widgets/index.md#user-guide-business-intelligence-widgets-explore) (available with any Oro application) or [seller](../../concept-guides/business-models/marketplace/index.md#concept-guide-oro-marketplace) type (available for OroCommerce Enterprise).
+   * **Dashboard Type** — Select whether the dashboard you are creating is of the [widget](widgets/index.md#user-guide-business-intelligence-widgets-explore) (available with any Oro application) or [seller](../../concept-guides/business-models/marketplace/index.md#concept-guide-oro-marketplace) type (available for OroСommerce Enterprise).
+   * **Clone from** — Choose an existing dashboard to be used as a base for a new one. If you want to create a dashboard from scratch, choose the *Blank Dashboard* option.  This field is available only for the *widget* dashboard type.
 
 If the system have more than one dashboard type, you can select the required type via the **Dashboard type** select box. The default type of dashboards is built from and called widgets.
 
 1. Click **Save and Close** on the top right.
+
+Initially, the dashboard contains all the widgets of the dashboard it has been cloned from. Dashboards cloned from the Blank Dashboard are empty.
 
 ## Switch Between Dashboards
 
@@ -47,20 +50,3 @@ To edit, create or delete a dashboard, you can either:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

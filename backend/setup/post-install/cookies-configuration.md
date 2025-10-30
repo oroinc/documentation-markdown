@@ -36,7 +36,7 @@ framework:
         cookie_samesite:  null    # prevents the browser from sending a cookie along with cross-site requests
 ```
 
-More information about configuration options is available in the <a href="https://symfony.com/doc/6.4/reference/configuration/framework.html#session" target="_blank">cookie secure configuration</a> documentation.
+More information about configuration options is available in the <a href="https://symfony.com/doc/5.4/reference/configuration/framework.html#session" target="_blank">cookie secure configuration</a> documentation.
 
 ## Back-Office Remember Me Cookie
 
@@ -62,7 +62,7 @@ security:
                 samesite:  null    # prevents the browser from sending cookie along with cross-site requests
 ```
 
-More information about configuration options is available in the <a href="https://symfony.com/doc/6.4/reference/configuration/framework.html#session" target="_blank">cookie secure configuration</a> documentation.
+More information about configuration options is available in the <a href="https://symfony.com/doc/5.4/reference/configuration/framework.html#session" target="_blank">cookie secure configuration</a> documentation.
 
 ## CSRF Cookie
 
@@ -135,7 +135,7 @@ security:
                 samesite:  null    # prevents the browser from sending cookie along with cross-site requests
 ```
 
-More information about configuration options is available in the <a href="https://symfony.com/doc/6.4/reference/configuration/framework.html#session" target="_blank">cookie secure configuration</a> documentation.
+More information about configuration options is available in the <a href="https://symfony.com/doc/5.4/reference/configuration/framework.html#session" target="_blank">cookie secure configuration</a> documentation.
 
 ## Customer Visitor Cookie
 

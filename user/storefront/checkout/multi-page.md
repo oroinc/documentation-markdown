@@ -21,6 +21,7 @@ If the **Ship to this address** checkbox has been selected in the Billing Inform
    If the **Ship to this address** checkbox has been checked in the Billing Information step, the provided address will be automatically selected in the Shipping Information step.
 
    To use billing information for shipping, select the **Use billing address** checkbox.
+   ![image](user/img/system/workflows/checkout/UseBillingAddressBox.png)
 2. Click **Continue** to proceed to the next step.
 
 **Step 3: Shipping Method**
@@ -29,7 +30,7 @@ If the **Ship to this address** checkbox has been selected in the Billing Inform
    ![image](user/img/system/workflows/checkout/Shipping_Info.png)
 
    #### NOTE
-   If shipping discounts apply to the order, this will be displayed in the summary.
+   If shipping discounts apply to the order, this will be displayed in the totals.
    ![image](user/img/marketing/promotions/ShippingDiscountFront.png)
 2. Click **Continue** to proceed to the next step.
 
@@ -49,12 +50,12 @@ If the **Ship to this address** checkbox has been selected in the Billing Inform
 > If not all of the items are visible, click **Show Less Items** on the bottom right of the item list.
 
 > #### TIP
-> You can edit the order content if required. To do this, click ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) on the top right of the item list. The shopping list page will open. Make the required changes and then click **Checkout**. You will be redirected back to the order you have been submitting.
+> You can edit the order content if required. To do this, click <i class="fas fa-pencil-alt" aria-hidden="true"></i> on the top right of the item list. The shopping list page will open. Make the required changes and then click **Create Order**. You will be redirected back to the order you have been submitting.
 1. If required, provide additional order options:
    * **Do not ship later than** — Click the field to select the date on which the order expires.
    * **PO Number** — Enter the purchase order number for reference.
    * **Notes** — Provide any additional information regarding the order.
-   * **Delete this shopping list after ordering** — Select this checkbox to remove the shopping list after the order is completed.
+   * **Delete this shopping list after submitting order** — Select this checkbox to remove the shopping list after the order is completed.
 2. To submit the order, click **Submit Order** at the bottom of the page.
    ![image](user/img/system/workflows/checkout/Order_Review.png)
 
@@ -62,28 +63,16 @@ If the **Ship to this address** checkbox has been selected in the Billing Inform
 Until you have submitted the order, you can return back and edit any step using the step list on the left of the page:
 
 * Click the step that you want to return to. In this case, *all the changes made at the later steps will be lost*.
-* Click ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) next to the step that you want to edit. In this case, *all the changes made at the later steps will be preserved*.
+* Click <i class="fas fa-pencil-alt" aria-hidden="true"></i> next to the step that you want to edit. In this case, *all the changes made at the later steps will be preserved*.
   ![image](user/img/system/workflows/checkout/EditInfo.png)
 
 #### TIP
-It is also possible to amend the order content until the order is submitted. To do this, click ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) **Edit Items** in the right corner of the **Order Review** section. You will be redirected back to the shopping list page.
+It is also possible to amend the order content until the order is submitted. To do this, click <i class="fas fa-pencil-alt" aria-hidden="true"></i> **Edit Items** in the right corner of the **Order Review** section. You will be redirected back to the shopping list page.
 
 ![image](user/img/system/workflows/checkout/edit-items.png)
 
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->
+<!-- fa-bars = fa-navicon -->
+<!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
+<!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
+<!-- Check mark in the square. -->
+<!-- SortDesc is also used as drop-down arrow -->

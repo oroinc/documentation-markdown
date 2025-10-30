@@ -5,7 +5,7 @@
 # Configure Global Related Items Settings
 
 #### HINT
-This section is part of the [Product Recommendations](../../../../../concept-guides/catalog-promotions/product-management/index.md#user-guide-products-recommendations) topic that provides a general understanding of personalized and relevant product suggestions concept in OroCommerce.
+Read more on this topic in [Products](../../../../products/index.md#doc-products).
 
 In the Related Items section, you can configure the system settings for related, up-sell, and similar products. These settings may apply globally, per [organization](../../../user-management/organizations/org-configuration/commerce/catalog/organization-related-products.md#sys-users-organization-commerce-catalog-related-products), and per [website](../../../websites/web-configuration/commerce/catalog/website-related-products.md#sys-websites-commerce-catalog-related-products).
 
@@ -72,7 +72,7 @@ To update the related, up-sell, or similar product settings globally:
    * **Category Boost** — A boost factor for the product category. Leave the field empty to disable the boost.
    * **Parent Category Boost** — A boost factor for the parent of a product category. Leave the field empty to disable the boost.
    * **Second Level Parent Category Boost** — A boost factor for the second level parent of a product category. Leave the field empty to disable the boost.
-2. In the **Similar Products in Shopping Lists**, the following options are available:
+2. In the **Similar Products in Shopping Lists** (available as of OroCommerce version 5.1.9), the options are:
    * **Enable Similar Products in Shopping Lists** – Enabling this option add a block of Similar Products to the shopping list page.
    * **Maximum Items** — A limit of similar products that are shown to a buyer on the shopping list page.
    * **Minimum Items** — The minimum number of similar products that may be shown to the buyer on the shopping list page..
@@ -96,20 +96,3 @@ Technology is driving digital transformation in key industries, such as manufact
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

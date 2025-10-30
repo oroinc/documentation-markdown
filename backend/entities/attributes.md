@@ -8,7 +8,7 @@ Attributes allow you to create additional entity fields dynamically. An attribut
 
 You can enable attributes for any extendable and configurable entity by doing the following:
 
-1. Add #[Config] attribute to the class with the ‘attribute’ scope and add key ‘has_attributes’ set to true.
+1. Add @Config annotation to the class with the ‘attribute’ scope and add key ‘has_attributes’ set to true.
 2. Add the **attributeFamily** field with many-to-one relation to `Oro\Bundle\EntityConfigBundle\Attribute\Entity\AttributeFamily`. Make the field configurable, activate import if necessary, and add migration.
 3. Implement **AttributeFamilyAwareInterface** and accessors for the **attributeFamily** field.
 
@@ -18,12 +18,16 @@ The following example illustrates enabling attributes for the *Document* entity:
 ```php
 /**
  * ORM Entity Document.
+ *
+ * @Config(
+ *     defaultValues={
+ *         "attribute"={
+ *             "has_attributes"=true
+ *         },
+ *     }
+ * )
  */
-#[Config(
-    defaultValues: [
-        'attribute' => ['has_attributes' => true]
-    ]
-)]
+
 class Document implements
     AttributeFamilyAwareInterface,
     // ...
@@ -31,16 +35,25 @@ class Document implements
     // ...
     /**
      * @var AttributeFamily
+     *
+     * @ORM\ManyToOne(targetEntity="Oro\Bundle\EntityConfigBundle\Attribute\Entity\AttributeFamily")
+     * @ORM\JoinColumn(name="attribute_family_id", referencedColumnName="id", onDelete="RESTRICT")
+     * @ConfigField(
+     *      defaultValues={
+     *          "dataaudit"={
+     *              "auditable"=false
+     *          },
+     *          "importexport"={
+     *              "order"=10
+     *          }
+     *      }
+     *  )
      */
-    #[ORM\ManyToOne(targetEntity: 'Oro\Bundle\EntityConfigBundle\Attribute\Entity\AttributeFamily')]
-    #[ORM\JoinColumn(name: 'attribute_family_id', referencedColumnName: 'id', onDelete: 'RESTRICT')]
-    #[ConfigField(defaultValues: ['dataaudit' => ['auditable' => false], 'importexport' => ['order' => 10]])]
     protected $attributeFamily;
 
     /**
      * @param AttributeFamily $attributeFamily
      */
-    #[\Override]
     public function setAttributeFamily(AttributeFamily $attributeFamily): self
     {
         $this->attributeFamily = $attributeFamily;
@@ -48,7 +61,6 @@ class Document implements
         return $this;
     }
 
-    #[\Override]
     public function getAttributeFamily(): ?AttributeFamily
     {
         return $this->attributeFamily;
@@ -66,7 +78,9 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
 
 class AddAttributeFamilyField implements Migration
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->addAttributeFamilyField($schema);

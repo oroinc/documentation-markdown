@@ -12,15 +12,15 @@ To customize a **storefront menu** for a particular organization:
 
 1. Navigate to **System > User Management > Organizations** in the main menu.
 2. Click on the organization you would like to edit the menu for.
-3. Click <i class="fas fa-cog" aria-hidden="true"></i> **Edit Storefront Menu**.
-4. Update the menu contents following the guidelines provided in the [Edit a Storefront Menu](../../frontend-menus/edit-frontend-menu.md#user-guide-system-menu-menu-frontend) section.
+3. Click <i class="fas fa-cog" aria-hidden="true"></i> **Edit Frontend Menu**.
+4. Update the menu contents following the guidelines provided in the [Edit a Frontend Menu](../../frontend-menus/edit-frontend-menu.md#user-guide-system-menu-menu-frontend) section.
    The changes apply automatically.
 
 <br/>
 
 <a id="backend-menu-organization"></a>
 
-To customize a **back-office menu** for a particular organization:
+To customize a **backend menu** for a particular organization:
 
 1. Navigate to **System > User Management > Organizations** in the main menu.
 2. Click on the organization you would like to edit the menu for.
@@ -33,20 +33,3 @@ To customize a **back-office menu** for a particular organization:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

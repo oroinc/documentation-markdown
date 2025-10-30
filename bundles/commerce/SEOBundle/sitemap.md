@@ -45,7 +45,9 @@ Providers with this tag will be used in case you restrict access to the website.
 To add custom logic to providers, each provider dispatches events on start and end of the UrlItemsProvider::getUrlItems method:
 
 ```php
-#[\Override]
+/**
+ * @inheritDoc
+ */
 public function getUrlItems(WebsiteInterface $website, $version)
 {
     $this->loadConfigs($website);
@@ -111,7 +113,9 @@ use Oro\Component\Website\WebsiteInterface;
 
 class MyProvider implements UrlItemsProviderInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getUrlItems(WebsiteInterface $website, $version)
     {
         // return \Generator|Oro\Bundle\SEOBundle\Model\DTO\UrlItem[]
@@ -146,7 +150,9 @@ class MyProvider implements UrlItemsProviderInterface
 {
     use FeatureCheckerHolderTrait;
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getUrlItems(WebsiteInterface $website, $version)
     {
         if (!$this->isFeaturesEnabled()) {

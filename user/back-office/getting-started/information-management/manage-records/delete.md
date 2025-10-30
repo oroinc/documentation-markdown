@@ -7,7 +7,7 @@ Some records in your Oro application can be removed from the system using bulk d
 To delete several records:
 
 1. In the table, select the checkboxes next to the records you want to delete.
-2. Click the ellipsis menu at the right end of the table header row, and the click the ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** icon.
+2. Click the ellipsis menu at the right end of the table header row, and the click the <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** icon.
 3. In the confirmation dialog, click **Yes, Delete**.
 4. Once deletion is confirmed, the records are removed.
 
@@ -18,20 +18,3 @@ To delete several records:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

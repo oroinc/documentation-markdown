@@ -27,39 +27,19 @@ To configure filters and sorting options globally:
 
    > ![The storefront product page illustrating the Don't Change Initial Filter State configuration](user/img/system/config_commerce/catalog/dont_change_initial_filter_state.png)
 
-   > #### NOTE
-   > If a multi-attribute product has only one attribute, the filter is not displayed for it in the storefront.
+   #### NOTE
+   If a multi-attribute product has only one attribute, the filter is not displayed for it in the storefront.
 
-   > For example, if a product (e.g., a shirt) has several options for the attribute of color (red, green, yellow) but only red items are available, then no filter by color will be displayed in the storefront. This way, customers will not see the filter for the attribute where multiple options are unavailable at that moment.
+   For example, if a product (e.g., a shirt) has several options for the attribute of color (red, green, yellow) but only red items are available, then no filter by color will be displayed in the storefront. This way, customers will not see the filter for the attribute where multiple options are unavailable at that moment.
 3. In the **Display Settings** section, select the required option for the following settings:
    * **Default Filter Panel State** — controls the visibility of the filters applied to the product grids in the storefront. The filter panel can be either expanded to show all filter bars or collapsed to reduce the screen space. In this case, the collapsed filters are substituted with the text representation of all applied filters.
-   * **Filter Panel Position** — specifies where the filter panel should be represented in the storefront, at the top or in the sidebar.
 
-   #### IMPORTANT
-   The Filter Panel Position configuration applies to OroCommerce version 5.1 and below and is retained in the current version only for legacy backward compatibility. For v6.0 and above, please configure this option under [System > Theme Configuration](../../../theme-configuration/index.md#back-office-theme-configuration).
+   > ![The storefront product page illustrating the Default Filter Panel State configuration](user/img/system/config_commerce/catalog/filters_and_sorters_storefront.png)
+   > * **Filter Panel Position** — enables to select the required position of the filter bar in the storefront. There are two options available:
 
-   #### HINT
-   To specify how to display the multi-select filter options, refer to the [theme-related settings](../design/theme-global.md#configuration-commerce-design-theme).
-4. In the **Product Sorting** section, configure the options that enable you to override the default product sorting behavior in the storefront, which is typically based on a product sort order (if specified) and by relevance score.
+   > > When *Top* (default) is selected, the filter bar is displayed on the top of the product listing page.
+   > > ![The storefront product page illustrating the filter on the top of the product listing page](user/img/system/config_commerce/catalog/filters_panel_position_top.png)
 
-#### NOTE
-The product sorting feature is only available in the Enterprise edition.
-
-#### HINT
-Before enabling the options, ensure to:
-
-1. Define the options for the [inventory_status](../../../../products/product-attributes/index.md#products-product-attributes) product attribute under the Products > Product Attributes back-office menu. Drag and drop statuses to arrange them by priority (e.g., *In Stock, Out Of Stock, Discontinued*). Products with higher-priority statuses will be displayed first. Please note that the inventory_status attribute is a system product attribute, so only a system administrator of the global organization can edit it.
-   > ![The details page of the Inventory status product attribute](user/img/system/config_commerce/catalog/inventory-status-attribute.png)
-2. Check the [visibility of the inventory statuses](../inventory/allowed-statuses.md#configuration-guide-commerce-configuration-inventory-allowed-statuses) under System > Configuration > Commerce > Inventory > Allowed Statuses to ensure that products with the specified status can be visible in the storefront.
-   > ![The config page of the Allowed Statuses commerce system menu](user/img/system/config_commerce/catalog/inventory-status-visibility-config.png)
-
-* **Sort Category Products by Inventory Status** — When enabled, the items on product listing (master catalog category) pages in the storefront will be sorted by their inventory status, as configured under the Products > Product Attributes back-office menu. Products with higher-priority statuses (e.g., *In Stock*) will appear first, followed by others in the defined order. Within the same inventory status group, products are further sorted by the sort order number assigned to them in the category.
-
-![The master catalog category details page with the products with different inventory statuses and sort order, and the storefront page that reflects the enabled sorting behavior](user/img/system/config_commerce/catalog/category-products-sorting.png)
-* **Sort Search Results by Inventory Status** — When enabled, the items on the search results page in the storefront will be sorted by their inventory status, as configured under the Products > Product Attributes back-office menu. Products with higher-priority statuses (e.g., *In Stock*) will appear first, followed by others in the defined order.
-
-![The storefront page that reflects the enabled sorting behavior, where the products with higher-priority status *In Stock* appear first](user/img/system/config_commerce/catalog/search-results-sorting.png)
-* **Sort Product Collection by Inventory Status** — When enabled, the items in product collections in the storefront will be sorted by their inventory status, as configured under the Products > Product Attributes back-office menu. Products with higher-priority statuses (e.g., *In Stock*) will appear first, followed by others in the defined order. Within the same inventory status group, products are further sorted by the sort order number assigned to them in the product collection.
-
-![The web catalog content node details page with the assigned product collection and the storefront page that reflects the enabled sorting behavior](user/img/system/config_commerce/catalog/product-collection-sorting.png)
-1. Click **Save Settings**.
+   > > When *Sidebar* is selected, the filter is displayed in the left sidebar.
+   > > ![The storefront product page illustrating the filter in the left sidebar](user/img/system/config_commerce/catalog/filters_panel_position_sidebar.png)
+4. Click **Save Settings**.

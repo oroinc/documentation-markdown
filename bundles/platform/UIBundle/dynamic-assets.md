@@ -2,7 +2,7 @@
 
 # Dynamic Assets
 
-You can change assets during an application life cycle, for instance when an administrator is configuring your website. In this case, the assets cache should be busted properly. Symfony does not manage this case out-of-the-box but the <a href="https://symfony.com/doc/6.4/components/asset.html" target="_blank">Asset Component</a> can be easily enhanced to support this feature.
+You can change assets during an application life cycle, for instance when an administrator is configuring your website. In this case, the assets cache should be busted properly. Symfony does not manage this case out-of-the-box but the <a href="https://symfony.com/doc/5.4/components/asset.html" target="_blank">Asset Component</a> can be easily enhanced to support this feature.
 
 The following samples of code show how to add dynamic versioning for any asset package.
 
@@ -16,7 +16,7 @@ For example, let us assume that acme asset package should use the dynamic versio
                acme:
                    version_strategy: 'Oro\Bundle\AssetBundle\VersionStrategy\BuildVersionStrategy'
    ```
-2. Set <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBundle/Asset/DynamicAssetVersionStrategy.php" target="_blank">DynamicAssetVersionStrategy</a> for this package.
+2. Set <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/UIBundle/Asset/DynamicAssetVersionStrategy.php" target="_blank">DynamicAssetVersionStrategy</a> for this package.
    ```php
    namespace Acme\Bundle\DemoBundle;
 
@@ -27,7 +27,9 @@ For example, let us assume that acme asset package should use the dynamic versio
 
    class DemoBundle extends Bundle
    {
-       #[\Override]
+       /**
+        * {@inheritdoc}
+        */
        public function build(ContainerBuilder $container): void
        {
            parent::build($container);

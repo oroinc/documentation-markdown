@@ -26,7 +26,7 @@ When creating a new record in the global organization, you first need to select 
 
 * [Create an Organization](create.md)
 * [Manage Organizations](manage.md)
-* [Add All Products Page to Storefront Menus per Organization](organization-all-products-menus.md)
+* [Add All Products Page to Frontend Menus per Organization](organization-all-products-menus.md)
 * [Customize Menus per Organization](organization-frontend-menus.md)
 * [Configure Organization System Settings](org-configuration/index.md)
 * [Organization Types](organization-types.md)

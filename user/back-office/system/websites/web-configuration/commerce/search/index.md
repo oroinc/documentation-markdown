@@ -5,4 +5,3 @@
 * [Search Synonyms](website-search-synonyms.md)
 * [Customer Recommendations](website-customer-recom.md)
 * [Search History](website-search-terms.md)
-* [Search Stop Words](website-stop-words.md)

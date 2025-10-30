@@ -38,10 +38,8 @@ To configure email settings per organization:
    > * *Encryption* — Encryption type: None, SSL or TLS
    > * *Username* — Your email address
    > * *Password* — The password for your email address
-6. Under **HTML in templates**, configure the following:
-   > * **Enable HTML Purifier** — Enable or disable HTML Purifier. Disabling HTML Purifier allows you to paste any HTML code into a template or an email body editor without tag stripping.
-   > * **Enable WYSIWYG For Email Templates** — Enable or disable the WYSIWYG editor for [email templates](../../../../emails/index.md#admin-guide-email-configuration). Remember that the WYSIWYG editor does not support variables provided by the default base email template. Enabling the WYSIWYG editor may break existing email templates.
-7. Under **System Mailboxes**, configure a [system mailbox](../../../../configuration/system/general-setup/global-email.md#admin-configuration-system-mailboxes) that allows people who do not have access to the company mailbox addresses to write to the company. To add a new system mailbox, click **Add Mailbox**.
+6. Under **HTML in templates**, enable or disable HTML Purifier. Disabling HTML Purifier allows pasting any HTML code into a template or an email body editor without tag stripping.
+7. Under **System Mailboxes**, configure a [system mailbox](../../../../configuration/system/general-setup/global-email.md#admin-configuration-system-mailboxes) that allows people who do not have access to the company mailbox addresses write to the company. To add a new system mailbox, click **Add Mailbox**.
 8. Click **Save Settings**.
 
 <a id="admin-configuration-system-mailboxes-organization"></a>
@@ -71,10 +69,10 @@ To configure a system mailbox on the [organization level](../../../../index.md#c
    * *Encryption* — Select the encryption type, SSL or TLS
    * *User* — Provide your email address
    * *Password* — Provide your password
-7. Click **Check Connection/Retrieve Folders**. After a successful connection, a list of available folders is displayed. Select the checkboxes next to the folders you wish to synchronize.
+7. Click **Check Connection/Retrieve Folders**. After successful connection, a list of available folders is displayed. Select the checkboxes next to the folders you wish to synchronize.
 
    #### HINT
-   Detailed instructions on the way to set up IMAP and SMTP connection in Gmail are provided on the <a href="https://support.google.com/mail/troubleshooter/1668960?hl=en&rd=1#ts=1665018%2C1665144" target="_blank">Google support page</a>.
+   Detailed instructions on the way to set-up IMAP and SMTP connection in Gmail, are provided on the <a href="https://support.google.com/mail/troubleshooter/1668960?hl=en&rd=1#ts=1665018%2C1665144" target="_blank">Google support page</a>.
 
    #### HINT
    To enable connection, select the checkbox next to <a href="https://support.google.com/accounts/answer/6010255?hl=en" target="_blank">Allow Access for Less Secure Apps Box</a>.
@@ -115,20 +113,3 @@ To configure a system mailbox on the [organization level](../../../../index.md#c
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

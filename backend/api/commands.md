@@ -157,12 +157,6 @@ To get all entities that support [the upsert operation](../../api/upsert-operati
 php bin/console oro:api:dump --upsert
 ```
 
-To get all entities that support [the validate operation](../../api/validate-operation.md#web-services-api-validate-operation), use the `--validate` option:
-
-```none
-php bin/console oro:api:dump --validate
-```
-
 <a id="oroapidebug"></a>
 
 ## oro:api:debug
@@ -272,7 +266,7 @@ To display the configuration for a particular request type, use the `request-typ
 php bin/console oro:api:config:dump users --request-type=rest --request-type=json_api
 ```
 
-No extra configuration data are added to the output by default, but you can add them with the `--extra` option. The value for the `extra` option can be: actions, definition, filters, sorters, descriptions, or the full name of a class implements <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Config/Extra/ConfigExtraInterface.php" target="_blank">ConfigExtraInterface</a>, e.g.
+No extra configuration data are added to the output by default, but you can add them with the `--extra` option. The value for the `extra` option can be: actions, definition, filters, sorters, descriptions, or the full name of a class implements <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ApiBundle/Config/Extra/ConfigExtraInterface.php" target="_blank">ConfigExtraInterface</a>, e.g.
 
 ```none
 php bin/console oro:api:config:dump users --extra=filters --extra=sorters

@@ -50,7 +50,7 @@ To add a product page node to the menu in the OroCommerce storefront:
 Once the All Products page has been enabled in the system configuration [globally](../../../system/configuration/commerce/catalog/global-all-products.md#sys-conf-commerce-catalog-special-pages-global) or [per website](../../../system/websites/web-configuration/commerce/catalog/website-all-products.md#sys-conf-commerce-catalog-special-pages-website), you can add it as part of your web catalog.
 
 #### NOTE
-We recommend enabling the All Products page exclusively for *small catalogs* with no more than a few hundred products, otherwise browser performance might be affected.
+We do not recommend enabling the All Products page exclusively for *small catalogs* with no more than a few hundred products, otherwise browser performance might be affected.
 
 1. Navigate to **Marketing > Web Catalogs** in the main menu.
 2. For the necessary web catalog, hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> more actions menu to the right and click <i class="fa fa-sitemap fa-lg" aria-hidden="true"></i> to start editing the catalog content tree.
@@ -105,10 +105,10 @@ To add a landing page node to the menu in the OroCommerce storefront:
 1. Select the **Add Landing Page** in the Content Variants list.
    ![Add a landing page and specify the restrictions](user/img/marketing/web_catalogs/WebCatalogCreateContentVariantsLandingPage.png)
 2. Select the existing landing page from the list. To use search, start typing the keywords in the box to search for the necessary page. To use filtering, click on the **bars**, and select the filtering conditions in the *Manage filters* section. Alternatively, you can create a new landing page:
-   1. To create a new landing page, click **+** to the right from the Landing page list.
-   2. Fill in the landing page details and contents as described [here](../../landing-pages/index.md#user-guide-landing-pages-create).
+   1. Click **+** to the right from the Landing page list.
 
-   Enable the **Do Not Render Title** option if you do not want the title of the landing page to be displayed in the storefront.
+      The Create Landing Page pops up.
+   2. Fill in the landing page details and contents as described [here](../../landing-pages/index.md#user-guide-landing-pages-create).
 3. This step applies only to the content nodes with more than one content variant.
 
    When your landing page is not selected as a default variant for the content node, you can define the condition when the landing page overrides the default content variant in the *Restrictions* section beneath the selected landing page. See [Configure Content Visibility](visibility.md#user-guide-marketing-web-catalog-content-visibility) section for more information.
@@ -190,20 +190,3 @@ Select the radio on the top left of its type to set up a newly added content var
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

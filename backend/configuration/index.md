@@ -1,15 +1,15 @@
-<!-- meta: description = Examples of using attributes and YAML configuration references in the Oro applications -->
+<!-- meta: description = Examples of using annotations and YAML configuration references in the Oro applications -->
 
 <a id="dev-config-reference"></a>
 
 # Configuration Reference
 
-* [Attributes](annotation/index.md)
-  * [#[Acl]](annotation/acl.md)
-  * [#[AclAncestor]](annotation/acl-ancestor.md)
-  * [#[Config]](annotation/config.md)
-  * [#[ConfigField]](annotation/config-field.md)
-  * [#[TitleTemplate]](annotation/title-template.md)
+* [Annotations](annotation/index.md)
+  * [@Acl](annotation/acl.md)
+  * [@AclAncestor](annotation/acl-ancestor.md)
+  * [@Config](annotation/config.md)
+  * [@ConfigField](annotation/config-field.md)
+  * [@TitleTemplate](annotation/title-template.md)
 * [YAML](yaml/index.md)
   * [Bundles’ Configuration](yaml/bundles-config.md)
   * [Access Control Lists](yaml/acls.md)

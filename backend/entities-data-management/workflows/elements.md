@@ -8,11 +8,11 @@
 
 ### Add a Custom Condition
 
-Conditions are based on the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/ConfigExpression/README.md" target="_blank">ConfigExpression</a> component.
+Conditions are based on the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Component/ConfigExpression/README.md" target="_blank">ConfigExpression</a> component.
 
 To add a custom condition, add a service to DIC with tag oro_action.condition, as illustrated below:
 
-```yaml
+```php
 services:
     Oro\Bundle\WorkflowBundle\ConfigExpression\Blank:
         tags:
@@ -56,7 +56,7 @@ var_dump($condition->evaluate($data)); // will output TRUE
 
 To add a custom action, add a service to DIC with tag oro_action.action, as illustrated below:
 
-```yaml
+```php
 services:
     Oro\Component\Action\Action\CloseWorkflow:
         tags:
@@ -75,7 +75,7 @@ Syntax examples are provided below:
 
 **Full Configuration Example**
 
-```yaml
+```php
 - '@alias_of_action':
     conditions:
         # optional condition configuration
@@ -87,7 +87,7 @@ Syntax examples are provided below:
 
 **Short Configuration Example**
 
-```yaml
+```php
 - '@alias_of_action':
     - some_parameters: some_value
     # other parameters of action

@@ -24,7 +24,7 @@ Total indexed items: 733
 To reindex only a certain website and specific entity, use the –website-id and –class parameters:
 
 ```bash
-$ php bin/console oro:website-search:reindex --website-id=1 --class="Oro\Bundle\UserBundle\Entity\User"
+$ php bin/console oro:website-search:reindex --website-id 1 --class OroUserBundle:User
 ```
 
 ## oro:website-search:reindex –scheduled

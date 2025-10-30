@@ -20,7 +20,7 @@ The **HAS GROUP** checkbox defines if the contact is assigned a specific contact
 
 1. Click **Save and Close**.
 
-Now, you can <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) delete a contact group from the system by clicking the corresponding icon next to the required row in the grid.
+Now, you can <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit or <i class="fas fa-trash-alt" aria-hidden="true"></i> delete a contact group from the system by clicking the corresponding icon next to the required row in the grid.
 
 ![The actions available to contact groups from the grid](user/img/system/contact_groups/cont_groups_grid.png)
 <!-- fa-bars = fa-navicon -->
@@ -28,20 +28,3 @@ Now, you can <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit or ![Trash
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

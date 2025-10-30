@@ -14,6 +14,4 @@ Learn how to configure commerce-specific settings for selected websites:
 * [Sales](sales/index.md)
 * [Catalog](catalog/index.md)
 * [Search](search/index.md)
-* [Shipping](shipping/index.md)
-* [Contacts](contacts/index.md)
 * [Orders](orders/index.md)

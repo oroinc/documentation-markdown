@@ -48,14 +48,14 @@ All contacts available in the system are displayed on the page of all contacts u
 
 [Inline editing](../../getting-started/information-management/manage-records/index.md#doc-grids-actions-records-edit-inline) can help you amend details of contacts without opening the edit contact form. For contacts, it is available from records’ grids and view pages.
 
-If the ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) **Edit Inline** icon appears next to a value, you can edit it inline. You can edit contacts inline from the grid the same way.
+If the <i class="fas fa-pencil-alt" aria-hidden="true"></i> **Edit Inline** icon appears next to a value, you can edit it inline. You can edit contacts inline from the grid the same way.
 
 ![Illustrate inline editing](user/img/customers/contacts/inline_editing_contacts.gif)
 <!-- .. important:: Learn how to :ref:`export <export-bulk-items>` and :ref:`import <import-contacts>` contacts in the .csv format in corresponding topics in Oro documentation library. -->
 
 ## Create an Address
 
-For customers, customer users, and contacts in the Oro application, the address book allows to enter and view account/customer address details.
+For customers, customer users, and contacts in the Oro application, the address book allows to enter and view account address details.
 
 To add an address to the address book:
 
@@ -101,7 +101,7 @@ Please be aware that a valid Google API key is required to display maps in the s
 Delete is disabled for the primary address. To delete the address marked as primary, you must first move the primary label to a different address.
 
 * **Edit an address** - To edit an address, click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> on the top right of the address background, update the address details, and click **Save**.
-* **Delete an address** - Delete an address by clicking ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) next to it.
+* **Delete an address** - Delete an address by clicking <i class="fas fa-trash-alt" aria-hidden="true"></i> next to it.
 
 * [Export Contacts](export-contacts.md)
 * [Import Contacts](import-contacts.md)
@@ -111,20 +111,3 @@ Delete is disabled for the primary address. To delete the address marked as prim
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

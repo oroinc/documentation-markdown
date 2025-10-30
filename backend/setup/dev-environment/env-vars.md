@@ -1,3 +1,5 @@
+<a id="setup-environment-variables"></a>
+
 # Managing Application Configuration with .env-app Files and Real Environment Variables in Oro
 
 The following guide provides instructions on how to migrate from using a

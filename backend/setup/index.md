@@ -68,7 +68,6 @@
                 </div>
                     <p>Configure development and production environments, install and upgrade them to a new version.</p>
                      <ul class="guideline_\_list">
-                                  <li><a class="reference internal" href="upgrade-source-code/">Upgrade Source Code</a></li>
                                   <li><a class="reference internal" href="upgrade-to-new-version/">Upgrade Application</a></li>
                                   <li><a class="reference internal" href="deploy-the-update/">Deploy Changes</a></li>
                      </ul>

@@ -32,7 +32,7 @@ As an illustration, we are going to proceed through the steps of the Checkout wo
 
 <!-- start_checkout_sample_0 -->
 
-Several items have been added to a shopping list in the OroCommerce storefront. To proceed to the checkout, click **Create Order**.
+Several items have been added to a shopping list in the OroCommerce storefront. To proceed to the checkout, click **Create Order** on the bottom right of the shopping list page.
 
 ![Shopping list with option to create order and proceed to checkout](user/img/system/workflows/checkout/CreateOrderButton.png)
 
@@ -47,15 +47,13 @@ The **Create Order** button is available if the following conditions are met:
 A warning message is shown if for some reason you are unable to start the checkout process.
 
 <!-- finish_checkout_sample_0 -->
+<!-- check the conditions -->
 
 ### Step 1: Agreements
 
-At the Agreements step, you are required to accept all mandatory [consents](../../consent-management/index.md#system-consent-management) to process your personal data, if such consents have not been accepted previously. Keep in mind that if you leave the checkout after accepting a mandatory consent, this consent is considered accepted and can be revoked only through the [profile management](../../../../storefront/account/my-profile/index.md#frontstore-guide-profile-consents-revoke).
+At the Agreements step, you are required to accept all mandatory consents to process your personal data, if such consents have not been accepted previously. Keep in mind that if you leave the checkout after accepting a mandatory consent, this consent is considered accepted and can be revoked only through the [profile management](../../../../storefront/account/my-profile/index.md#frontstore-guide-profile-consents-revoke).
 
-#### IMPORTANT
-Keep in mind that for the Agreements section to be displayed in the checkout, you need to [add the necessary consents to the list of enabled consents](../../configuration/commerce/customer/global-interactions.md#admin-guide-commerce-configuration-customers-consents-enable-globally) in the system configuration.
-
-![The first step of the checkout is agreements where you are required to accept any available mandatory consents](user/img/system/workflows/checkout_with_consents/storefront_step_agreements.png)![Accept a mandatory consent on the agreements step at checkout](user/img/system/workflows/checkout_with_consents/storefront_step_accept_agreement.png)
+> ![The first step of the checkout is agreements where you are required to accept any available mandatory consents](user/img/system/workflows/checkout_with_consents/storefront_step_agreements.png)![Accept a mandatory consent on the agreements step at checkout](user/img/system/workflows/checkout_with_consents/storefront_step_accept_agreement.png)
 
 Once the consent is accepted, click **Continue** to proceed with the checkout.
 
@@ -72,7 +70,7 @@ Clicking **Continue** redirects you to the next step.
 #### NOTE
 You can edit *the already provided* information (until the order is submitted) by clicking <i class="fas fa-pencil-alt" aria-hidden="true"></i> on the left side of the page.
 
-<!-- finish_checkout_sample_1 -->![The billing information step at the checkout (with consents)](user/img/system/workflows/checkout_with_consents/Checkout_BilInfo.png)
+<!-- finish_checkout_sample_1 -->![The billing information step at the checkout (with consents)](user/img/system/workflows/checkout/Checkout_BilInfo.png)
 
 ### Step 3: Shipping Information
 
@@ -82,7 +80,7 @@ If the **Ship to this address** box has been checked at the Billing Information 
 
 To edit shipping information, clear the **Use billing address** box and provide a different shipping address for the order.
 
-<!-- finish_checkout_sample_2 -->![image](user/img/system/workflows/checkout_with_consents/UseBillingAddressBox.png)
+<!-- finish_checkout_sample_2 -->![image](user/img/system/workflows/checkout/UseBillingAddressBox.png)
 
 ### Step 4: Shipping Method
 
@@ -90,7 +88,7 @@ To edit shipping information, clear the **Use billing address** box and provide 
 
 Provide a [shipping method](../../../../concept-guides/administration/shipping-configuration/index.md#user-guide-shipping) by selecting one from the list of the available methods.
 
-<!-- finish_checkout_sample_3 -->![The shipping method step at the checkout](user/img/system/workflows/checkout_with_consents/Shipping_Info.png)
+<!-- finish_checkout_sample_3 -->![The shipping method step at the checkout](user/img/system/workflows/checkout/Shipping_Info.png)
 
 ### Step 5: Payment
 
@@ -98,7 +96,7 @@ Provide a [shipping method](../../../../concept-guides/administration/shipping-c
 
 Choose a suitable [payment method](../../../../concept-guides/administration/payment-configuration/index.md#user-guide-payment) by selecting it from the list of all available methods.
 
-<!-- finish_checkout_sample_4 -->![The payment method step at the checkout](user/img/system/workflows/checkout_with_consents/Payment.png)
+<!-- finish_checkout_sample_4 -->![The payment method step at the checkout](user/img/system/workflows/checkout/Payment.png)
 
 ### Step 6: Order Review
 
@@ -116,7 +114,7 @@ Once all the necessary information has been provided, you can review the order a
 * Edit the Order
 * Edit the already provided information by clicking <i class="fas fa-pencil-alt" aria-hidden="true"></i> on the left side of the page
 
-To submit the order, click **Submit Order**.
+To submit the order, click **Submit Order** at the bottom of the page.
 
 <!-- finish_checkout_sample_alt5 -->
 
@@ -134,20 +132,3 @@ Explore our guide to discover how <a href="https://oroinc.com/b2b-ecommerce/blog
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

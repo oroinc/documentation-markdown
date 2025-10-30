@@ -2,12 +2,12 @@
 
 # Data Audit
 
-The <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/DataAuditBundle" target="_blank">OroDataAuditBundle</a> leverages the Loggable <a href="https://github.com/Atlantic18/DoctrineExtensions" target="_blank">Doctrine extension</a>
+The <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/DataAuditBundle" target="_blank">OroDataAuditBundle</a> leverages the Loggable <a href="https://github.com/Atlantic18/DoctrineExtensions" target="_blank">Doctrine extension</a>
 (<a href="https://github.com/stof/StofDoctrineExtensionsBundle" target="_blank">StofDoctrineExtension</a>) to provide changelogs for your entities.
 
 ## Entity Configuration
 
-DataAudit can only be enabled for Configurable entities. To add a property of an entity to the changelog, enable the audit for the entity itself and specify some fields you want to be logged. To achieve this, use the `Oro\Bundle\EntityConfigBundle\Metadata\Attribute\Config` and `Oro\Bundle\EntityConfigBundle\Metadata\Attribute\ConfigField` attributes for the entity.
+DataAudit can only be enabled for Configurable entities. To add a property of an entity to the changelog, enable the audit for the entity itself and specify some fields you want to be logged. To achieve this, use the `Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config` and `Oro\Bundle\EntityConfigBundle\Metadata\Annotation\ConfigField` annotations for the entity.
 
 #### CAUTION
 Note that this annotation will be read-only on installation. On platform updates, this annotation will be read and only saved in the configuration for new entities or for entities that were not Configurable before or have not been changed via the configuration UI.
@@ -15,7 +15,7 @@ Note that this annotation will be read-only on installation. On platform updates
 #### NOTE
 An audit can be enabled/disabled per an entire entity or for separate fields in the UI under *System* / *Entities* / *EntityManagement* (attribute  *Auditable*).
 
-Example of attribute configuration:
+Example of annotation configuration:
 
 *src/Acme/Bundle/DemoBundle/Entity/Question.php*
 ```php
@@ -27,41 +27,56 @@ use Doctrine\ORM\Mapping as ORM;
 use Oro\Bundle\DataAuditBundle\Entity\AuditAdditionalFieldsInterface;
 use Oro\Bundle\EntityBundle\EntityProperty\DatesAwareInterface;
 use Oro\Bundle\EntityBundle\EntityProperty\DatesAwareTrait;
-use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\Config;
-use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\ConfigField;
-use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityInterface;
-use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityTrait;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\ConfigField;
 use Oro\Bundle\OrganizationBundle\Entity\OrganizationAwareInterface;
 use Oro\Bundle\UserBundle\Entity\Ownership\AuditableUserAwareTrait;
+use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityInterface;
+use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityTrait;
 
 /**
  * ORM Entity Question.
+ *
+ * @ORM\Entity(
+ *     repositoryClass="Acme\Bundle\DemoBundle\Entity\Repository\QuestionRepository"
+ * )
+ * @ORM\Table(
+ *     name="acme_demo_question"
+ * )
+ * @Config(
+ *     routeName="acme_demo_question_index",
+ *     routeView="acme_demo_question_view",
+ *     routeCreate="acme_demo_question_create",
+ *     routeUpdate="acme_demo_question_update",
+ *     defaultValues={
+ *         "form"={
+ *             "form_type"="Acme\Bundle\DemoBundle\Form\Type\QuestionCreateOrSelectType",
+ *             "grid_name"="acme-demo-question-grid-select"
+ *         },
+ *         "grid"={
+ *             "default"="acme-demo-question-grid-select"
+ *         },
+ *         "entity"={
+ *             "icon"="fa-question"
+ *         },
+ *         "ownership"={
+ *             "owner_type"="USER",
+ *             "owner_field_name"="owner",
+ *             "owner_column_name"="user_owner_id",
+ *             "organization_field_name"="organization",
+ *             "organization_column_name"="organization_id"
+ *         },
+ *         "security"={
+ *             "type"="ACL",
+ *             "group_name"="",
+ *             "category"=""
+ *         },
+ *         "dataaudit"={
+ *             "auditable"=true
+ *         }
+ *     }
+ * )
  */
-#[ORM\Entity(repositoryClass: 'Acme\Bundle\DemoBundle\Entity\Repository\QuestionRepository')]
-#[ORM\Table(name: 'acme_demo_question')]
-#[Config(
-    routeName: 'acme_demo_question_index',
-    routeView: 'acme_demo_question_view',
-    routeCreate: 'acme_demo_question_create',
-    routeUpdate: 'acme_demo_question_update',
-    defaultValues: [
-        'form' => [
-            'form_type' => 'Acme\Bundle\DemoBundle\Form\Type\QuestionCreateOrSelectType',
-            'grid_name' => 'acme-demo-question-grid-select'
-        ],
-        'grid' => ['default' => 'acme-demo-question-grid-select'],
-        'entity' => ['icon' => 'fa-question'],
-        'ownership' => [
-            'owner_type' => 'USER',
-            'owner_field_name' => 'owner',
-            'owner_column_name' => 'user_owner_id',
-            'organization_field_name' => 'organization',
-            'organization_column_name' => 'organization_id'
-        ],
-        'security' => ['type' => 'ACL', 'group_name' => '', 'category' => ''],
-        'dataaudit' => ['auditable' => true]
-    ]
-)]
 class Question implements
     DatesAwareInterface,
     OrganizationAwareInterface,
@@ -72,13 +87,31 @@ class Question implements
     use AuditableUserAwareTrait;
     use ExtendEntityTrait;
 
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: 'integer')]
+    /**
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     */
     private $id;
 
-    #[ORM\Column(name: 'subject', type: 'string', length: 255, nullable: false)]
-    #[ConfigField(defaultValues: ['dataaudit' => ['auditable' => true], 'importexport' => ['identity' => true]])]
+    /**
+     * @ORM\Column(
+     *     name="subject",
+     *     type="string",
+     *     length=255,
+     *     nullable=false
+     * )
+     * @ConfigField(
+     *     defaultValues={
+     *         "dataaudit"={
+     *             "auditable"=true
+     *         },
+     *         "importexport"={
+     *             "identity"=true
+     *         }
+     *     }
+     * )
+     */
     private $subject;
 }
 ```
@@ -113,7 +146,9 @@ class Question implements
     AuditAdditionalFieldsInterface,
     ExtendEntityInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getAdditionalFields(): array
     {
         return ['subject' => $this->getSubject()];
@@ -143,18 +178,19 @@ To add new auditable types, register a new type in your bundle’s boot method:
 <?php
 
 // AcmeDemoBundle.php
-
 namespace Acme\Bundle\DemoBundle;
 
-use Acme\Bundle\DemoBundle\DependencyInjection\Compiler\AcmeExtendValidationPass;
-use Acme\Bundle\DemoBundle\DependencyInjection\Compiler\ImagePlaceholderProviderPass;
 use Oro\Bundle\DataAuditBundle\Model\AuditFieldTypeRegistry;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Acme\Bundle\DemoBundle\DependencyInjection\Compiler\ImagePlaceholderProviderPass;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Acme\Bundle\DemoBundle\DependencyInjection\Compiler\AcmeExtendValidationPass;
 
 class AcmeDemoBundle extends Bundle
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function build(ContainerBuilder $container): void
     {
         parent::build($container);
@@ -178,20 +214,30 @@ Next, create a migration that will add columns to the AuditField entity:
 
 namespace Acme\Bundle\DemoBundle\Migrations\Schema\v1_7;
 
-use Doctrine\DBAL\Schema\Schema;
+use Oro\Bundle\DataAuditBundle\Migration\Extension\AuditFieldExtension;
 use Oro\Bundle\DataAuditBundle\Migration\Extension\AuditFieldExtensionAwareInterface;
-use Oro\Bundle\DataAuditBundle\Migration\Extension\AuditFieldExtensionAwareTrait;
 use Oro\Bundle\MigrationBundle\Migration\Migration;
+use Doctrine\DBAL\Schema\Schema;
 use Oro\Bundle\MigrationBundle\Migration\QueryBag;
 
+/**
+ * New audit field type creation.
+ */
 class AddNewAuditFieldType implements Migration, AuditFieldExtensionAwareInterface
 {
-    use AuditFieldExtensionAwareTrait;
+    private AuditFieldExtension $auditFieldExtension;
 
-    #[\Override]
-    public function up(Schema $schema, QueryBag $queries): void
+    /**
+     * @inheritDoc
+     */
+    public function setAuditFieldExtension(AuditFieldExtension $extension)
     {
-        $this->auditFieldExtension->addType($schema, 'datetimetz', 'datetimenew');
+        $this->auditFieldExtension = $extension;
+    }
+
+    public function up(Schema $schema, QueryBag $queries)
+    {
+        $this->auditFieldExtension->addType($schema, $doctrineType = 'datetimetz', $auditType = 'datetimenew');
     }
 }
 ```

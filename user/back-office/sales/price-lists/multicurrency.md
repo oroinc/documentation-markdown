@@ -25,37 +25,26 @@ For detailed information on adding product prices in particular currencies, see 
 
 By default, prices in the OroCommerce storefront are shown in the default currency.
 
+![Display prices for the lumen headlamp in USD in the storefront](user/img/sales/pricelist/price_currency_change1.png)
+
 However, you may select a different currency with a currency selector on the top right.
 
 ![Switching between currencies in the storefront](user/img/sales/pricelist/currency_on_the_front_store.png)
 
 After the new currency is selected, product prices automatically adjust to show the unit prices in the selected currency.
-: When the price list does not contain the price for the product in the selected currency, the price information is absent. You can still add the product to the shopping list and request a quote to clarify the pricing in the specific currency.
 
-**Related Topics**:
+#### NOTE
+When the price list does not contain the price for the product in the selected currency, the price information is missing. You can still add the product to the shopping list and request a quote to clarify the pricing in the specific currency.
 
-* [Configure Currency Exchange Rate](../../system/configuration/system/general-setup/global-currency.md#sys-config-sysconfig-general-setup-currency)
-* [Configure Pricing Settings](../../system/configuration/commerce/catalog/global-pricing.md#sys-config-commerce-catalog-pricing)
+**Sample: Prices in Euro are Provided**
 
+![Display the prices in Euro for the lumen headlamp product](user/img/sales/pricelist/price_currency_change2.png)
+
+**Sample: Prices in Euro are Missing**
+
+![Display the lumen headlamp product without prices as it doesn't support prices in USD](user/img/sales/pricelist/price_currency_change_no_price_in_selected_currency.png)
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

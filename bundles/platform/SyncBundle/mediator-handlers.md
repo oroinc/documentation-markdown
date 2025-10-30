@@ -31,6 +31,6 @@ OroSyncBundle declares some mediator handlers.
 | changeUrl      | contentManager.changeUrl      | Changes the URL for the current page                                                                                                              |
 | changeUrlParam | contentManager.changeUrlParam | Updates the URL parameter for the current page                                                                                                    |
 
-See <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/SyncBundle/Resources/public/js/content-manager.js" target="_blank">orosync/js/content-manager</a> module for details.
+See <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/SyncBundle/Resources/public/js/content-manager.js" target="_blank">orosync/js/content-manager</a> module for details.
 
 <!-- Frontend -->

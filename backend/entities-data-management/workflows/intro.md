@@ -105,14 +105,14 @@ workflows:
                 triggers:                                                   # transition triggers
                     -
                         cron: '* * * * *'                                   # cron definition
-                        filter: "JSON_EXTRACT(e.serialized_data, 'auth_status') = 'auth_status.active'" # dql-filter
+                        filter: "e.auth_status = 'active'"                  # dql-filter
                     -
                         entity_class: Oro\Bundle\SaleBundle\Entity\Quote    # entity class
                         event: update                                       # event type
-                        field: serialized_data                              # updated field
+                        field: internal_status                              # updated field
                         queued: false                                       # handle trigger not in queue
                         relation: user                                      # relation to Workflow entity
-                        require: "entity.getInternalStatus().getInternalId() === 'pending'"     # expression language condition
+                        require: "entity.internal_status === 'pending'"     # expression language condition
         transition_definitions:                                   # list of all existing transition definitions
             set_name_definition: []                               # definitions for transition "set_name", no extra conditions or actions here
             add_email_definition:                                 # definition for transition "add_email"
@@ -185,11 +185,9 @@ Workflow consists of several related entities.
 
 * **Step** is an entity that shows the current status of the workflow. Before rendering each transitions, check if it is allowed for the current workflow item. It contains the name and the list of allowed transitions. The entity involved in the workflow has a relation to the current workflow step.
 * **Attribute** is an entity that represents one value in the workflow item, used to render the field value on a step form. Attribute knows about its type (string, object, entity etc.) and additional options. Attribute contains name.
-* **Transition** is an action that changes the current step of the workflow item (i.e., moves it from one step to another). The transition is allowed if its conditions are satisfied. Pre-actions are executed before the transition is performed and pre-conditions or conditions are checked; and Actions are executed after the transition is performed. A transition can be used as a start transition. It means that this transition starts the Workflow and creates a new instance of the workflow item. Transitions optionally can have a form. In this case, this form is shown to user when the transition button is clicked. The transition contains name and some additional options. Optionally, the transition can contain a form with a list of attributes.
-* **Pre-Actions** are assigned to the transition and executed before the transition button is rendered. This type of action is mainly used to predefine data used by Pre-Conditions, for example, to search for some data in the database.
-* **Pre-Condition** defines whether a particular transition is available with the specified input data. Conditions can be nested. This type of condition is used to check the availability of transition buttons.
-* **Condition** defines whether a specific transition is allowed and can be executed with the specified input data. Conditions can be nested.
-* **Actions** are assigned to the transition and executed when the transition is performed. Actions can be used to manage entities (create, find), manipulate attributes (e.g., assign values) and perform any other action.
+* **Transition** is an action that changes the current step of the workflow item (i.e., moves it from one step to another). The transition is allowed if its conditions are satisfied. Pre-actions are executed before the transition is performed; and Actions are executed after the transition is performed. A transition can be used as a start transition. It means that this transition starts the Workflow and creates a new instance of the workflow item. Transitions optionally can have a form. In this case, this form is shown to user when the transition button is clicked. The transition contains name and some additional options. Optionally, the transition can contain a form with a list of attributes.
+* **Condition** defines whether a specific transition is allowed with the specified input data. Conditions can be nested.
+* **Actions** are assigned to the transition and executed when the transition is performed. There are two kinds of actions: Pre-Actions and Actions. The difference between them is that Pre-Actions are executed before the Transition, and Actions are executed after the transition. Actions can be used to manage entities (create, find), manipulate attributes (e.g., assign values) and perform any other action.
 * **Workflow** aggregates steps, attributes, and transitions. A workflow is a model that does not have its own state but it can be referred by the workflow items.
 * **Workflow Data** container is aggregated by the workflow item where each value is associated with an attribute. Those values can be entered by the user directly or assigned via Actions.
 * **Workflow Item** is associated with the workflow and indirectly associated with Steps, Transitions and Attributes. It has its own state in the workflow data, the current step, and other data. The workflow item stores the entity identifier and the entity class that has an associated workflow.

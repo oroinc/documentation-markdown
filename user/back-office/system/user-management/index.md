@@ -43,10 +43,11 @@ The following topics describe the available access levels and explain the differ
 * [Field Level Permissions](roles/field-level-acl.md#user-guide-user-management-permissions-roles-field-level-acl)
 * [Entity and System Capabilities](roles/admin-capabilities.md#admin-capabilities)
 * [Create and Manage Roles](roles/create-manage-roles.md#user-guide-user-management-permissions-roles-actions)
+* [End-to-end Access Configuration in Context](roles/access-in-context.md#user-guide-user-management-permissions-roles-examples)
 
 ## OAuth Applications
 
-The section aggregates information on all OAuth applications created for users in the back-office. Here, you can view and manage the existing OAuth applications, create new ones, and get access tokens through the applications with client credentials and passwords grant types. Check out the [OAuth Applications](oauth-app.md#oauth-applications) topic for more details on how to add the application both from the Oro and third-party sides via various APIs (JSON:API, SCIM, Email Addon, or Smart Agent Integration).
+The section aggregates information on all OAuth applications created for users in the back-office. Here, you can view and manage the existing OAuth applications, create new ones, and get access tokens through the applications with client credentials and passwords grant types. Check out the [OAuth Applications](oauth-app.md#oauth-applications) topic for more details on how to add the application both from the Oro and third-party sides.
 
 ## Login Attempts
 
@@ -58,20 +59,3 @@ Check out the [Login Attempts](login-attempts/index.md#user-guide-user-managemen
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

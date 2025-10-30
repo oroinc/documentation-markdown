@@ -79,26 +79,13 @@ and task lists:
    * **Quick Create Actions** — Select the preferred way to display the quick creation buttons form. The buttons with quick actions appear on the customer, customer user, and customer group view pages. When clicked, the form can be displayed in a new browser tab, a popup dialog window, or replace the current page.
 
    ![Displaying quick action buttons on the customer view page](user/img/system/config_system/quick-creation-buttons.png)
+2. In the **Email Template Editor Settings** section, configure the following settings (available starting from OroCommerce v5.1.5):
+   * **Use Localization Names In Email Template Editor** — Select the option to enable the email template editor to use localization names instead of localization titles on the form tabs, which will allow users to easily distinguish localizations when there are more than one localization with the same title. It will become the default email editor behavior in future versions.
+
+   ![Displaying the difference between localization names and localization titles on the email template form tabs](user/img/system/config_system/localization-names-vs-titles.png)
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

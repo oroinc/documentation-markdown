@@ -22,7 +22,7 @@ To create a [consent](../../../glossary.md#term-Consent) in OroCommerce:
    * **Type** — Define whether the user can proceed without giving their consent. The mandatory consents must be accepted by customer users in the storefront to be able to register, proceed to the checkout and create an RFQ.
    * **Declined Consent Notification** — When the checkbox is enabled, a notification is created in the back-office as a [contact request](../../activities/contact-requests/index.md#user-guide-activities-requests) if a consent is declined by a customer user in the storefront.
    * **Web Catalog** — Select the web catalog where you intend to use this consent.
-   * **Content Node** — Content nodes are added to web catalogs as landing pages, and linked as content variants to the catalog nodes. The selected web catalog node can be configured to display different landing pages (content variants) in different languages. To link the consent to the required node, click on the required node in the tree to select it.
+   * **Content Node** — Content nodes are added to web catalogs as landing pages, and linked as content variants to the catalog nodes. The selected web сatalog node can be configured to display different landing pages (content variants) in different languages. To link the consent to the required node, click on the required node in the tree to select it.
 
      #### NOTE
      It is recommended to have the required web catalog and the node created prior to creating a new consent. Read more on catalogs in the [Web Catalogs](../../marketing/web-catalogs/index.md#user-guide-web-catalog) topic.
@@ -31,7 +31,7 @@ To create a [consent](../../../glossary.md#term-Consent) in OroCommerce:
 4. Click **Save and Close**.
 
 #### IMPORTANT
-Keep in mind that for the consents to be displayed in the storefront, you need to [add them to the list of enabled consents](../configuration/commerce/customer/global-interactions.md#admin-guide-commerce-configuration-customers-consents-enable-globally) in the system configuration.
+Keep in mind that for the consents to be displayed in the storefront, you need to [add them to the list of enabled consents](../configuration/commerce/customer/global-consents.md#admin-guide-commerce-configuration-customers-consents-enable-globally) in the system configuration.
 
 #### IMPORTANT
 Be aware that if a consent is accepted by at least one person in the OroCommerce storefront, it becomes uneditable and unremovable. The associated landing page becomes uneditable and unremovable as well.
@@ -44,7 +44,7 @@ You can view all consents accepted by your customer users in the **Consents** se
 **Related Topics**
 
 * [Data Protection in the OroCommerce Storefront](../../../storefront/account/my-profile/index.md#frontstore-guide-profile-consents)
-* [Configure Consents](../configuration/commerce/customer/global-interactions.md#configuration-guide-commerce-configuration-consents)
+* [Configure Consents](../configuration/commerce/customer/global-consents.md#configuration-guide-commerce-configuration-consents)
 * [Declined Consents as Contact Requests](../../activities/contact-requests/index.md#user-guide-activities-requests)
 * [Add a Consent Landing Page to a Web Catalog](../../../concept-guides/administration/consents/add-consent.md#user-guide-consents-add)
 * [View and Accept Consents in the Storefront](../../../storefront/account/my-profile/index.md#frontstore-guide-profile-consents)
@@ -58,20 +58,3 @@ You can view all consents accepted by your customer users in the **Consents** se
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

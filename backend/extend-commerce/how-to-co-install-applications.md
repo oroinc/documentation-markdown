@@ -6,7 +6,7 @@
 Before installing OroCommerce over OroCRM, you should change default parameter `web_backend_prefix` to some non-empty prefix that should start with “/” but do not finish with “/”, e.g., ‘/admin’.
 
 #### WARNING
-To avoid access permissions issues, please review the Symfony <a href="https://symfony.com/doc/6.4/setup/file_permissions.html" target="_blank">Setting up or Fixing File Permissions</a>  guide before running any commands. On top of that, consider running the command(s) below with sudo -u [web server user name] prefix.
+To avoid access permissions issues, please review the Symfony <a href="https://symfony.com/doc/5.4/setup/file_permissions.html" target="_blank">Setting up or Fixing File Permissions</a>  guide before running any commands. On top of that, consider running the command(s) below with sudo -u [web server user name] prefix.
 
 To install OroCommerce and OroCRM from scratch, please [install OroCommerce application](../setup/installation.md#installation) that has OroCRM capabilities embedded out-of the-box.
 

@@ -14,7 +14,7 @@ To create a contact reason:
    ![A contact reason creation page](user/img/system/contact_reasons/create_contact_reason.png)
 5. Click the <i class="fas fa-language" aria-hidden="true"></i> **Translations** icon to provide spelling for different languages. If [localization](../user-management/organizations/org-configuration/general-setup-org/organization-localization.md#config-guide-localization-organization-localization) is enabled in the system configuration, the corresponding translation of the contact reason is displayed in the storefront. Click the same icon again to return to the single-language view.
 6. Click **Save and Close**.
-7. Now you can edit the existing contact reasons or delete the unnecessary ones if necessary by clicking the <i class="fa fa-edit fa-lg" aria-hidden="true"></i> or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) icons respectively at the end of the selected reason’s row.
+7. Now you can edit the existing contact reasons or delete the unnecessary ones if necessary by clicking the <i class="fa fa-edit fa-lg" aria-hidden="true"></i> or <i class="fas fa-trash-alt" aria-hidden="true"></i> icons respectively at the end of the selected reason’s row.
 
 Once saved, the reason appears in the dropdown list of the corresponding section of the *Contact Us* form in the storefront.
 
@@ -35,20 +35,3 @@ For more details, see the [How to Create a Contact Request Manually](../../activ
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

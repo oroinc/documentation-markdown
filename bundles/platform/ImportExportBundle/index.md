@@ -2,7 +2,7 @@
 
 # OroImportExportBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ImportExportBundle" target="_blank">OroImportExportBundle</a> allows developers to enable UI for the application users to export entity records to files, import them back to the application, and configure the import/export options for entity fields in the entity management UI.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/ImportExportBundle" target="_blank">OroImportExportBundle</a> allows developers to enable UI for the application users to export entity records to files, import them back to the application, and configure the import/export options for entity fields in the entity management UI.
 
 ## Related Documentation
 

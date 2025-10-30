@@ -48,7 +48,6 @@ class AcmeExtendValidationPass implements CompilerPassInterface
         ]
     ];
 
-    #[\Override]
     public function process(ContainerBuilder $container): void
     {
         if (!$container->has('oro_entity_extend.validation_loader')) {
@@ -61,22 +60,24 @@ class AcmeExtendValidationPass implements CompilerPassInterface
             ['integer', [self::INTEGER_CONSTRAINT]]
         );
     }
+}
 ```
 
 Make sure to insert CompilerPass to the bundle root file.
 
 *src/Acme/Bundle/DemoBundle/AcmeDemoBundle.php*
 ```php
-
 namespace Acme\Bundle\DemoBundle;
-use Acme\Bundle\DemoBundle\DependencyInjection\Compiler\AcmeExtendValidationPass;
-use Oro\Bundle\DataAuditBundle\Model\AuditFieldTypeRegistry;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
+
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Acme\Bundle\DemoBundle\DependencyInjection\Compiler\AcmeExtendValidationPass;
 
 class AcmeDemoBundle extends Bundle
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function build(ContainerBuilder $container): void
     {
         parent::build($container);

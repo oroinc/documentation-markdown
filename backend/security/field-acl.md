@@ -18,9 +18,11 @@ The second parameter of this method should be an instance of <a href="https://gi
 
 *src/Acme/Bundle/DemoBundle/Controller/FavoriteController.php*
 ```php
-    #[Route(path: '/new-edit', name: 'new_edit')]
-    #[Template('@AcmeDemo/Favorite/index.html.twig')]
-    #[AclAncestor('acme_demo_favorite_new_edit')]
+    /**
+     * @Route("/new-edit", name="new_edit")
+     * @Template("@AcmeDemo/Favorite/index.html.twig")
+     * @AclAncestor("acme_demo_favorite_new_edit")
+     */
     public function newEditAction()
     {
         $entity = $this->getUser();
@@ -41,7 +43,7 @@ As a result, the $isGranted variable contains the *true* value if access is gran
 
 The $entity parameter should contain an instance of the entity you want to check.
 
-If you have no entity instance, but you know a class name, the ID of the record, the owner, and the organization IDs of this record, the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/SecurityBundle/Acl/Domain/DomainObjectReference.php" target="_blank">DomainObjectReference</a>] can be used as the domain object:
+If you have no entity instance, but you know a class name, the ID of the record, the owner, and the organization IDs of this record, the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/SecurityBundle/Acl/Domain/DomainObjectReference.php" target="_blank">DomainObjectReference</a>] can be used as the domain object:
 
 ```php
 // ....
@@ -85,32 +87,46 @@ namespace Acme\Bundle\DemoBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Oro\Bundle\EntityBundle\EntityProperty\DatesAwareInterface;
 use Oro\Bundle\EntityBundle\EntityProperty\DatesAwareTrait;
-use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\Config;
-use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\ConfigField;
-use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityInterface;
-use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityTrait;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\ConfigField;
 use Oro\Bundle\OrganizationBundle\Entity\OrganizationAwareInterface;
 use Oro\Bundle\UserBundle\Entity\Ownership\AuditableUserAwareTrait;
+use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityInterface;
+use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityTrait;
 
 /**
  * ORM Entity Favorite.
+ *
+ * @ORM\Entity(
+ *     repositoryClass="Acme\Bundle\DemoBundle\Entity\Repository\FavoriteRepository"
+ * )
+ * @ORM\Table(
+ *     name="acme_demo_favorite"
+ * )
+ * @Config(
+ *     defaultValues={
+ *         "ownership"={
+ *             "owner_type"="USER",
+ *             "owner_field_name"="owner",
+ *             "owner_column_name"="user_owner_id",
+ *             "organization_field_name"="organization",
+ *             "organization_column_name"="organization_id"
+ *         },
+ *          "grid"={
+ *             "default"="acme-demo-favorite-grid"
+ *         },
+ *         "security"={
+ *             "type"="ACL",
+ *             "permissions"="All",
+ *             "group_name"="",
+ *             "category"="",
+ *         },
+ *         "dataaudit"={
+ *             "auditable"=true
+ *         },
+ *     }
+ * )
  */
-#[ORM\Entity(repositoryClass: 'Acme\Bundle\DemoBundle\Entity\Repository\FavoriteRepository')]
-#[ORM\Table(name: 'acme_demo_favorite')]
-#[Config(
-    defaultValues: [
-        'ownership' => [
-            'owner_type' => 'USER',
-            'owner_field_name' => 'owner',
-            'owner_column_name' => 'user_owner_id',
-            'organization_field_name' => 'organization',
-            'organization_column_name' => 'organization_id'
-        ],
-        'grid' => ['default' => 'acme-demo-favorite-grid'],
-        'security' => ['type' => 'ACL', 'permissions' => 'All', 'group_name' => '', 'category' => ''],
-        'dataaudit' => ['auditable' => true]
-    ]
-)]
 class Favorite implements
     DatesAwareInterface,
     OrganizationAwareInterface,
@@ -137,7 +153,7 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
  */
 class TurnFieldAclSupportForFavorites implements Migration
 {
-    #[\Override]
+
     public function up(Schema $schema, QueryBag $queries): void
     {
         $queries->addQuery(
@@ -180,39 +196,65 @@ namespace Acme\Bundle\DemoBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Oro\Bundle\EntityBundle\EntityProperty\DatesAwareInterface;
 use Oro\Bundle\EntityBundle\EntityProperty\DatesAwareTrait;
-use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\Config;
-use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\ConfigField;
-use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityInterface;
-use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityTrait;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\ConfigField;
 use Oro\Bundle\OrganizationBundle\Entity\OrganizationAwareInterface;
 use Oro\Bundle\UserBundle\Entity\Ownership\AuditableUserAwareTrait;
+use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityInterface;
+use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityTrait;
 
 /**
  * ORM Entity Favorite.
+ *
+ * @ORM\Entity(
+ *     repositoryClass="Acme\Bundle\DemoBundle\Entity\Repository\FavoriteRepository"
+ * )
+ * @ORM\Table(
+ *     name="acme_demo_favorite"
+ * )
+ * @Config(
+ *     defaultValues={
+ *         "ownership"={
+ *             "owner_type"="USER",
+ *             "owner_field_name"="owner",
+ *             "owner_column_name"="user_owner_id",
+ *             "organization_field_name"="organization",
+ *             "organization_column_name"="organization_id"
+ *         },
+ *          "grid"={
+ *             "default"="acme-demo-favorite-grid"
+ *         },
+ *         "security"={
+ *             "type"="ACL",
+ *             "permissions"="All",
+ *             "group_name"="",
+ *             "category"="",
+ *         },
+ *         "dataaudit"={
+ *             "auditable"=true
+ *         },
+ *     }
+ * )
  */
-#[ORM\Entity(repositoryClass: 'Acme\Bundle\DemoBundle\Entity\Repository\FavoriteRepository')]
-#[ORM\Table(name: 'acme_demo_favorite')]
-#[Config(
-    defaultValues: [
-        'ownership' => [
-            'owner_type' => 'USER',
-            'owner_field_name' => 'owner',
-            'owner_column_name' => 'user_owner_id',
-            'organization_field_name' => 'organization',
-            'organization_column_name' => 'organization_id'
-        ],
-        'grid' => ['default' => 'acme-demo-favorite-grid'],
-        'security' => ['type' => 'ACL', 'permissions' => 'All', 'group_name' => '', 'category' => ''],
-        'dataaudit' => ['auditable' => true]
-    ]
-)]
 class Favorite implements
     DatesAwareInterface,
     OrganizationAwareInterface,
     ExtendEntityInterface
 {
-    #[ORM\Column(name: 'viewCount', type: 'integer', nullable: true)]
-    #[ConfigField(defaultValues: ['security' => ['permissions' => 'VIEW;CREATE']])]
+    /**
+     * @ORM\Column(
+     *     name="viewCount",
+     *     type="integer",
+     *     nullable=true
+     * )
+     * @ConfigField(
+     *      defaultValues={
+     *          "security"={
+     *              "permissions"="VIEW;CREATE",
+     *          },
+     *      }
+     * )
+     */
     private $viewCount;
 }
 ```

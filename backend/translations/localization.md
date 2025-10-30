@@ -134,11 +134,11 @@ $5,103.00
 
 In addition to backend formatters, the application also provides the following JavaScript-powered similar formatters on the frontend side, which can be accessed using JS modules aliases:
 
-- `orolocale/js/formatter/datetime` (<a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/LocaleBundle/Resources/public/js/formatter/datetime.js" target="_blank">datetime.js</a>)
+- `orolocale/js/formatter/datetime` (<a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/LocaleBundle/Resources/public/js/formatter/datetime.js" target="_blank">datetime.js</a>)
   : * `formatDate(value)`
     * `formatTime(value)`
     * `formatDateTime(value)`
-- `orolocale/js/formatter/number` (<a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/LocaleBundle/Resources/public/js/formatter/number.js" target="_blank">number.js</a>)
+- `orolocale/js/formatter/number` (<a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/LocaleBundle/Resources/public/js/formatter/number.js" target="_blank">number.js</a>)
   : * `formatDecimal(value)`
     * `formatInteger(value)`
     * `formatPercent(value)`

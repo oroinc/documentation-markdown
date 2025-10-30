@@ -34,9 +34,9 @@ To reach the workflow:
 
 As an illustration, we are going to proceed through the steps of the Alternative Checkout workflow in the default OroCommerce storefront.
 
-Several items have been added to a shopping list in the OroCommerce storefront. To proceed to the checkout, click **Create Order**.
+Several items have been added to a shopping list in the OroCommerce storefront. To proceed to the checkout, click **Create Order** on the bottom right of the shopping list page.
 
-![Shopping list with option to create order and proceed to checkout](user/img/system/workflows/checkout/CreateOrderButton.png)
+![Shopping list with option to create order and proceed to checkout](user/img/system/workflows/alternative_checkout/ACF_CreateOrderButton.png)
 
 #### NOTE
 The **Create Order** button is available if the following conditions are met:
@@ -48,17 +48,13 @@ The **Create Order** button is available if the following conditions are met:
 
 A warning message is shown if for some reason you are unable to start the checkout process.
 
-![Shopping list with option to create order and proceed to checkout](user/img/system/workflows/alternative_checkout/ACF_CreateOrderButton.png)
 <!-- check the conditions -->
 
 ### Step 1: Agreements
 
-At the Agreements step, you are required to accept all mandatory [consents](../../consent-management/index.md#system-consent-management) to process your personal data, if such consents have not been accepted previously. Keep in mind that if you leave the checkout after accepting a mandatory consent, this consent is considered accepted and can be revoked only through the [profile management](../../../../storefront/account/my-profile/index.md#frontstore-guide-profile-consents-revoke).
+At the Agreements step, you are required to accept all mandatory consents to process your personal data, if such consents have not been accepted previously. Keep in mind that if you leave the checkout after accepting a mandatory consent, this consent is considered accepted and can be revoked only through the [profile management](../../../../storefront/account/my-profile/index.md#frontstore-guide-profile-consents-revoke).
 
-#### IMPORTANT
-Keep in mind that for the Agreements section to be displayed in the checkout, you need to [add the necessary consents to the list of enabled consents](../../configuration/commerce/customer/global-interactions.md#admin-guide-commerce-configuration-customers-consents-enable-globally) in the system configuration.
-
-![The first step of the checkout is agreements where you are required to accept any available mandatory consents](user/img/system/workflows/alternative_checkout/storefront_step_agreements_alt.png)![Accept a mandatory consent on the agreements step](user/img/system/workflows/alternative_checkout/storefront_step_agreements_alt_accepted.png)
+> ![The first step of the checkout is agreements where you are required to accept any available mandatory consents](user/img/system/workflows/alternative_checkout/storefront_step_agreements_bluethooth.png)
 
 Once the consent is accepted, click **Continue** to proceed through the checkout.
 
@@ -108,28 +104,27 @@ Once all the necessary information has been provided, you can review the order a
 * Edit the Order
 * Edit the already provided information by clicking <i class="fas fa-pencil-alt" aria-hidden="true"></i> on the left side of the page
 
-To submit the order, click **Submit Order**.
+To submit the order, click **Submit Order** at the bottom of the page.
 
-If the order amount exceeds the predefined threshold, you will need to request a manager’s approval.
-
-![The order review step at the checkout (alternative checkout)](user/img/system/workflows/alternative_checkout/ACF_OrderReview.png)
+![The page of the order in the back-office, once the order is submitted](user/img/system/workflows/alternative_checkout/ACF_OrderReview.png)
 
 ### Step 7: Request Approval
 
-Since the order amount exceeds the threshold of $5000, manager approval is required.
+Since the order amount exceeds the threshold of $5000, manager approval is required to submit the order.
 
 ![image](user/img/system/workflows/alternative_checkout/ACF_RequestApproval.png)
 
 Order Approval will remain pending until the manager approves it.
 
 ![image](user/img/system/workflows/alternative_checkout/ACF_ApprovalPending.png)
+<!-- comment: currently alternative checkout wf works with customer users under customer with ID 4 -->
 
 ### Step 8: Approve Order
 
 The manager can approve the order by navigating to Orders, selecting the required order and clicking **Approve Order**.
 At this point, the manager can submit the order themselves, or let the employee handle the order:
 
-![image](user/img/system/workflows/alternative_checkout/ACF_ApproveOrder.png)![image](user/img/system/workflows/alternative_checkout/ACF_ApproveOrder(part2).png)
+![image](user/img/system/workflows/alternative_checkout/ACF_ApproveOrder.png)
 
 Once submitted, the order will be received and dealt with by the sales team.
 
@@ -138,20 +133,3 @@ Once submitted, the order will be received and dealt with by the sales team.
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

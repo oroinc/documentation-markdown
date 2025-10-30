@@ -44,7 +44,7 @@ Are you searching for the <a href="https://oroinc.com/b2b-ecommerce/b2b-ecommerc
      * <a href="https://www.jetbrains.com/help/phpstorm/using-php-mess-detector.html" target="_blank">Enable PHP Mess Detector</a>, making sure that:
        * **Cyclomatic complexity** DOES NOT exceed the limit of **15**.
        * The limit of the **NPath complexity** is set to **200** (the default PHPMD limit).
-     * <a href="https://www.jetbrains.com/help/phpstorm/using-php-cs-fixer.html" target="_blank">Enable PHP CS Fixer</a> (use <a href="https://github.com/oroinc/platform/blob/master/build/.php-cs-fixer.php" target="_blank">PHP CS Fixer settings</a> )
+     * <a href="https://www.jetbrains.com/help/phpstorm/using-php-cs-fixer.html" target="_blank">Enable PHP CS Fixer</a> (use <a href="https://github.com/oroinc/platform/blob/5.1/build/.php-cs-fixer.php" target="_blank">PHP CS Fixer settings</a> )
    * Configure xDebug
      * Integrate a debugging tool into your IDE that provides a range of features to improve the PHP development experience. See <a href="https://www.jetbrains.com/help/phpstorm/configuring-xdebug.html" target="_blank">how to set up integration between PhpStorm and xDebug</a> for more information.
    * Configure PhpUnit

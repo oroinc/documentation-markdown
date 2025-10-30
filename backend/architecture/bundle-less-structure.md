@@ -40,6 +40,9 @@ oro-application/
 |   |   |── api_frontend/                           # API frontend extending configuration.
 |   |   |   |── api_frontend_config.yml
 |   |   |   └── ...
+|   |   |── app/                                    # App extending configuration.
+|   |   |   |── app_config.yml
+|   |   |   └── ...
 |   |   |── cache_metadata/                         # Cache metadata configuration.
 |   |   |   |── cache_metadata.yml
 |   |   |   └── ...
@@ -237,15 +240,15 @@ In the bundle-less structure, documentation_resource path must be defined as a r
 For example:
 
 > ```yaml
-> # File placed `appRoot/doc/api/frontend/user.md`
+> # File placed `AppRootDir/doc/api/frontend/user.md`
 > api:
 >     entities:
 >         App\Entity\User:
->             documentation_resource: '/doc/api/frontend/user.md'
+>             documentation_resource: 'doc/api/frontend/user.md'
 >             ...
 > ```
 
-This feature is available as of OroPlatform version 6.0.3.
+This feature is available as of OroPlatform version 5.1.10.
 
 For more information, see [Documenting API Resources](../api/documentation.md#web-api-doc).
 
@@ -362,6 +365,9 @@ Templates:
 
 ### Cache Metadata
 
+#### NOTE
+This feature is available as of OroPlatform version 5.1.9.
+
 ```none
 {BundleDir}/Resources/config/oro/cache_metadata.yml  -> config/oro/cache_metadata/cache_metadata.yml
 ```
@@ -376,14 +382,18 @@ All application-level caching data must be registered in the /config/oro/cache_m
 ```php
 class YourExtension extends Extension
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function load(array $configs, ContainerBuilder $container): void
     {
         $config = $this->processConfiguration(new YourConfigurationClass(), $configs);
         $container->prependExtensionConfig($this->getAlias(), SettingsBuilder::getSettings($config));
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getAlias(): string
     {
         return YourConfigurationClass::ROOT_NODE;
@@ -394,7 +404,9 @@ class YourExtension extends Extension
 1. Register the extension in `AppKernel::build`.
 
 ```php
-#[\Override]
+/**
+ * {@inheritDoc}
+ */
 protected function build(ContainerBuilder $container)
 {
     $container->registerExtension(new YourExtension());
@@ -562,11 +574,6 @@ Once the asset is placed in the public folder, you can reference it within your 
 {# the image lives at "public/images/example.jpg" #}
 <img src="{{ asset('images/example.jpg') }}" alt="Example Image"/>
 ```
-
-### Placement of SVG Icons (Storefront)
-
-When working in bundle-less architecture, SVG icons for the storefront must be placed in the Resources directory at the root level: `Resources/public/{your_theme_dir}/svg-icons/`.
-For more information on SVG icons, see [Storefront Customization Guide: SVG Icons](../../frontend/storefront/svg-icons.md#frontend-svg-icons).
 
 ### JS Modules
 

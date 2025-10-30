@@ -2,11 +2,10 @@
 
 # Dom Relocation Global View
 
-Dom Relocation View is used when you need to move a dom element from one container to another on browser window resize or on scroll.
-For example, move a menu list from the top bar to the hamburger menu dropdown in cases when you cannot do this using сss @media queries
-or move an element from the main content to the sticky top bar on scroll.
+Dom Relocation View is used when you need to move a dom element from one container to another on browser window resize.
+For example: move a menu list from the top bar to the hamburger menu dropdown in cases when you cannot do this using css @media queries.
 
-## How to Use data-dom-relocation-options **on browser window resize**
+## How to Use
 
 To move an element from one container to another on window resize, add `data-dom-relocation-options` attributes to the corresponding element, as illustrated below:
 
@@ -16,8 +15,8 @@ To move an element from one container to another on window resize, add `data-dom
         responsive: [
             {
                 viewport: 'tablet',
-                moveTo: '#parent_container', // jQuery selector,
-                sibling: '#sibling_element', // jQuery selector,
+                moveTo: '#parent_container' // jQuery selector,
+                sibling: '#sibling_element' // jQuery selector,
                 prepend: true // Boolean,
                 endpointClass: 'some-class-add-after-move' // String
             }
@@ -29,6 +28,8 @@ To move an element from one container to another on window resize, add `data-dom
 ```
 
 ## Options
+
+### Responsive
 
 **Type:** Array
 
@@ -51,7 +52,7 @@ responsive: [
 ]
 ```
 
-It works with the same logic as css @media, so the last item of the array has higher priority.
+It works with same logic like css @media, so the last item of the array has higher priority.
 
 ### viewport
 
@@ -77,57 +78,10 @@ Indicate next to which element to insert another element.
 
 **Type:** Boolean
 
-Change behavior to append the element to the target parent. If set to true, the element will prepend the target element. If set to false, the element will append to the end of the parent.
+Change behavior to append the element to the target parent. If set to true, the element is going to prepend the target element. If set to false, the element is going to append to the end of the parent.
 
 ### endpointClass
 
 **Type:** String
 
 The css class added to an HTML element after it was moved.
-
-## How to Use data-dom-relocation-options **on scroll**
-
-To move an element on scroll, add `data-dom-relocation-options` attributes to the corresponding element, as illustrated below:
-
-```html
-<div class="element-to-move"
-     data-dom-relocation-options="{
-        scroll: [
-            {
-                viewport: 'mobile',
-                moveTo: #parent_selector'
-            }
-        ]
-     }"
->
-<!-- Other content -->
-</div>
-```
-
-## Options
-
-**Type:** Array
-
-```html
-moveOnScrollOptions: [
-    {
-        moveTo: #parent_container',
-        viewport: 'tablet-small'
-    }
-]
-```
-
-### moveTo
-
-**Type:** String
-
-Set the target selector where to move the element.
-
-### viewport
-
-**Type:** String
-
-The option describes what resolution is applicable to relocate the dom element
-
-#### NOTE
-Be aware that although possible, the approach to use `responsive` and `scroll` simultaneously is not recommended. It may cause conflicts during the relocating process.

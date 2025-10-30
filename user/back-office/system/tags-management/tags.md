@@ -9,7 +9,7 @@ See a short demo on <a href="https://academy.oroinc.com/media-library/tags-taxon
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RBY6dvZc55E" frameborder="0" allowfullscreen></iframe>
 
-## Enable Tags for Entity
+## Enable Tags
 
 Prior to starting your work with tags, ensure that tagging is enabled for the required *entity*.
 
@@ -28,47 +28,48 @@ To enable tags for entities:
 
 Tags can be created in a number of ways:
 
+1. From the Tag page under **System > Tags Management > Tags**.
+2. From the general page of an entity (ensure that tagging is enabled for the required entity).
+3. From the details page of an entity.
+
 ### From the Tag Page
 
-1. Navigate to the Tag page under **System > Tags Management > Tags**.
-2. Click **Create Tag** to create a new tag.
-3. Define the following fields:
+1. Click **Create Tag** to create a new tag.
+2. Define the following fields:
    * **Owner** — Limits the list of users who can manage the tag.
    * **Name** — Specify the name for your tag.
    * **Taxonomy** — Select the [taxonomy](taxonomies.md#user-guide-system-tags-management-taxonomies) to which the tag will be assigned.
-4. Click **Save and Close**.
+3. Click **Save and Close**.
 
-### From the Grid Page
+### From the General Page of an Entity
 
-1. Navigate to a grid page for an entity that supports tag creation. For example, open **Customers > Accounts** from the main menu. Tags will be available from the grid of that entity.
-2. Click ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) edit next to the selected entity record.
-3. Start typing in the tag name. If it does not yet exist in the system, (New Tag) will appear next to it in the drop down.
-   ![image](user/img/system/tags_management/new-tag.png)
-
-   Alternatively, select an existing tag from the list. You can add multiple tags.
+1. Navigate to **Customers > Accounts** in the main menu or select any other entity to create a tag for.
+2. Within the list of an entity, select the required entity and click <i class="fas fa-pencil-alt" aria-hidden="true"></i> edit.
+3. Specify tags for the entity. You can enter multiple tags for one entity.
    ![Select the required tags from the list](user/img/system/tags_management/entity_grid_inline_tag_12.png)
-4. Click <i class="fa fa-check fa-lg" aria-hidden="true"></i> to save the tag(s).
+4. Click <i class="fa fa-check fa-lg" aria-hidden="true"></i> to save the tags for the entity.
 
 ### From the Details Page of an Entity
 
-1. Navigate to a grid page for an entity that supports tag creation. For example, open **Customers > Accounts** in the main menu.
+1. Navigate to **Customers > Accounts** in the main menu or select any other entity to create a tag for.
 2. Click the required entity to open its details page.
 
-1. Click ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) edit in Tags.
+1. Click <i class="fas fa-pencil-alt" aria-hidden="true"></i> edit in Tags.
    ![Click the edit icon in the Tags field of the selected entity record](user/img/system/tags_management/entity_view_page_14.png)
-2. Specify one or more tags for the entity.
+2. Specify tags for the entity. You can enter multiple tags for one entity.
    ![Specify the tags for the entity in the field that opened](user/img/system/tags_management/entity_view_page_15.png)
-3. Click <i class="fa fa-check fa-lg" aria-hidden="true"></i> to save the tags.
+3. Click <i class="fa fa-check fa-lg" aria-hidden="true"></i> to save the tags for the entity.
+   ![The tags selected for the entity are saved successfully](user/img/system/tags_management/entity_view_page_17.png)
 
-## Manage Tags From the Grid
+### Manage Tags From the Grid
 
 Navigate to **System > Tags Management > Tags**.
 
 Within the tags list, you can:
 
-1. Search records by a tag: ![Search-SVG](_themes/sphinx_rtd_theme/static/svg-icons/search.svg)
+1. Search records by a tag: <i class="fa fa-search fa-lg" aria-hidden="true"></i>
 2. Edit the selected tag: <i class="fa fa-edit fa-lg" aria-hidden="true"></i>
-3. Delete a tag from the system:![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg)
+3. Delete a tag from the system:<i class="fas fa-trash-alt" aria-hidden="true"></i>
 4. Filter tags: <i class="fa fa-filter fa-lg" aria-hidden="true"></i>
 5. Configure grid settings for tags: <i class="fa fa-cog fa-lg" aria-hidden="true"></i>
 
@@ -106,20 +107,3 @@ You can create any reports of your choice and filter them by tag in a similar ma
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

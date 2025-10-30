@@ -1,7 +1,5 @@
 <!-- meta: description = Integrations documentation for the Oro application users -->
 
-<a id="business-users-integrations"></a>
-
 # Integrations
 
 At Oro, we understand that every business is unique, and that is why we offer a wide range of integration options to cater to your specific needs. Our integration capabilities are flexible, and can be customized to meet the requirements of your business.

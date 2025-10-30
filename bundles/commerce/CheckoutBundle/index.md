@@ -2,7 +2,7 @@
 
 # OroCheckoutBundle
 
-<a href="https://github.com/oroinc/orocommerce/tree/master/src/Oro/Bundle/CheckoutBundle" target="_blank">OroCheckoutBundle</a> enables checkout workflows in the OroCommerce storefront to collect all the necessary information from the customer when they are creating an order. For back-office administrators, this bundle provides the ability to switch between the single page and multi-step page checkout workflows using the system workflow management UI.
+<a href="https://github.com/oroinc/orocommerce/tree/5.1/src/Oro/Bundle/CheckoutBundle" target="_blank">OroCheckoutBundle</a> enables checkout workflows in the OroCommerce storefront to collect all the necessary information from the customer when they are creating an order. For back-office administrators, this bundle provides the ability to switch between the single page and multi-step page checkout workflows using the system workflow management UI.
 
 Checkout workflows provided by this bundle are:
 

@@ -11,7 +11,7 @@ Configuration of Operation declares all aspects related to a specific operation:
 * frontend configuration
 * operation dialog parameters
 
-Structure of configuration is declared in the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ActionBundle/Configuration/Configuration.php" target="_blank">configuration.php</a> file.
+Structure of configuration is declared in the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ActionBundle/Configuration/Configuration.php" target="_blank">configuration.php</a> file.
 
 ## Configuration File
 
@@ -72,7 +72,7 @@ A single operation configuration has the following properties:
 * **extends** - *string* - An operation name that is used by configuration as a basis for the current operation.
 * **label** - *string* - This value is shown in the UI.
 * **substitute_operation** - *string* - The name of the operation that can be replaced (e.g., substituted) by the current one.
-* **enabled** - *boolean or variable* - A flag that defines whether this operation is enabled. Disabled operations passed with variable value are used in applications. Boolean type is used when there is no preactions that determine operation status. If your operation status depends on preactions then use variable as value for the status. Take into account that disabled operations by variable value are slower, because there is need to execute all preactions before set and check the status value.
+* **enabled** - *boolean* - A flag that defines whether this operation is enabled. Disabled operations are used in applications.
 * **page_reload** - *boolean* - By default, it is set to *true*. A flag that defines whether this operation should reload the page after execution. It applies when redirect url or datagrid is not specified inside the *actions* block.
 * **entities** - *array* - An array of entity class names. Operation button is shown on the view/edit pages of the entities.
 * **for_all_entities** - *boolean* - The boolean flag that determines whether the current operation matches the selected entities if any.
@@ -103,7 +103,7 @@ operations: # root elements
         extends: acme_demo_operation_base               # (optional) parent operation if needed
         label: 'Acme demo operation'                    # this value will be shown in UI for operation button
         substitute_operation: some_operation            # configuration of 'some_operation' will be replaced by configuration of this operation
-        enabled: $variable                              # operation status will be determined later, means used in application, but button is disabled on front-end if status will be false
+        enabled: false                                  # operation is disabled, means not used in application
         entities: # on view/edit pages of this entities operation button will be shown
             - Acme\Bundle\DemoBundle\Entity\Question    # entity class name
         routes: # on pages with these routes operation button will be shown
@@ -115,7 +115,7 @@ operations: # root elements
         button_options:                                 # (optional) display options for operation button
             icon: fa-check                              # (optional) class of button icon
             class: btn                                  # (optional) class of button
-            group: acme.demo.operations.demogroup.label # (optional) group operation to drop-down on the label
+            group: aсme.demo.operations.demogroup.label # (optional) group operation to drop-down on the label
             template: '@OroAction/Operation/button.html.twig'   # (optional) custom button template
             data:                                               # custom data attributes which will be added to button
                 param: value
@@ -125,9 +125,9 @@ operations: # root elements
                 component_name: '[name$="[component]"]'
                 component_additional: '[name$="[additional]"]'
         frontend_options:                                                 # (optional) display options for operation button
-            confirmation: acme.demo.operations.operation_perform_confirm
+            confirmation: aсme.demo.operations.operation_perform_confirm
             template: '@OroAction/Operation/form.html.twig'               # (optional) custom template, can be used both for page or dialog
-            title: acme.demo.operations.dialog.title                      # (optional) custom title
+            title: aсme.demo.operations.dialog.title                      # (optional) custom title
             title_parameters:
                 '%%some_param%%': $.paramValue
             options:                                                      # (optional) modal dialog options
@@ -225,7 +225,7 @@ operations: # root elements
         button_options:                                 # (optional) display options for operation button
             icon: fa-check                              # (optional) class of button icon
             class: btn                                  # (optional) class of button
-            group: acme.demo.operations.demogroup.label # (optional) group operation to drop-down on the label
+            group: aсme.demo.operations.demogroup.label # (optional) group operation to drop-down on the label
             template: '@OroAction/Operation/button.html.twig'   # (optional) custom button template
             data:                                               # custom data attributes which will be added to button
                 param: value
@@ -256,9 +256,9 @@ Frontend Options configuration has the following options:
 operations: # root elements
     acme_demo_operation:                                # operation name
         frontend_options:                                                 # (optional) display options for operation button
-            confirmation: acme.demo.operations.operation_perform_confirm
+            confirmation: aсme.demo.operations.operation_perform_confirm
             template: '@OroAction/Operation/form.html.twig'               # (optional) custom template, can be used both for page or dialog
-            title: acme.demo.operations.dialog.title                      # (optional) custom title
+            title: aсme.demo.operations.dialog.title                      # (optional) custom title
             title_parameters:
                 '%%some_param%%': $.paramValue
             options:                                                      # (optional) modal dialog options
@@ -420,7 +420,6 @@ operations: # root elements
     acme_demo_operation:                                # operation name
         preactions:                                                       # (optional) any needed pre actions which will execute before pre conditions
             -   '@assign_value': [ $name, 'User Name' ]                   # action alias
-            -   '@assign_value': [ $variable, true ]                      # preaction that determines value for enabled
         form_init:                                                        # (optional) any needed actions which will execute before showing form dialog
             -   '@assign_value': [ $group, 'Group Name' ]                 # action alias
         actions:                                                          # (optional) any needed actions which will execute after click on th button

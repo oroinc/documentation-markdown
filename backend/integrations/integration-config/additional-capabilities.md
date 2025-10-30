@@ -16,7 +16,9 @@ and then methods `addStatusData` and `getStatusData` will be available.
 ```php
 // your connector class
 // ...
-#[\Override]
+/**
+ * {@inheritdoc}
+ */
 public function read()
 {
     $item = parent::read();
@@ -32,7 +34,7 @@ public function read()
 
 
 // retrieve data from status
-$status = $this->container->get('doctrine')->getRepository('Oro\Bundle\IntegrationBundle\Entity\Channel')
+$status = $this->container->get('doctrine')->getRepository('OroIntegrationBundle:Channel')
     ->getLastStatusForConnector($channel, $this->getType(), Status::STATUS_COMPLETED);
 /** @var array **/
 $data = $status->getData();

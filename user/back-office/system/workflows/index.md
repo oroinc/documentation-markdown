@@ -60,7 +60,7 @@ The **Designer** section consists of a table and an interactive chart representa
 
 - **Update** (clicking the transition name opens the **Edit Transition** form).
 - **Clone** (clicking the <i class="far fa-copy" aria-hidden="true"></i> **Clone** icon next to the transition name opens the **Clone Transition** dialog).
-- **Delete** (clicking the ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** icon next to the transition launches name **Delete Confirmation** dialog).
+- **Delete** (clicking the <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** icon next to the transition launches name **Delete Confirmation** dialog).
 
 ![image](user/img/system/workflows/designer_tab_transition.png)
 
@@ -69,7 +69,7 @@ The **Designer** section consists of a table and an interactive chart representa
 - **Add a transition to a step** (clicking the **+** icon opens the **Add New Transition** dialog).
 - **Update** (clicking the <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** icon opens the **Edit Step** dialog).
 - **Clone** (clicking the <i class="far fa-copy" aria-hidden="true"></i> **Clone** icon opens the **Clone Step** dialog).
-- **Delete** (clicking the ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** icon launches the **Delete Confirmation** dialog).
+- **Delete** (clicking the <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** icon launches the **Delete Confirmation** dialog).
 
 ![image](user/img/system/workflows/designer_tab.png)
 
@@ -87,7 +87,7 @@ The **Designer** section consists of a table and an interactive chart representa
 
 ![image](user/img/system/workflows/drag_transition.gif)
 - **Undo/Redo changes** (click the <i class="fa fa-reply fa-lg" aria-hidden="true"></i> **Undo** / <i class="fa fa-share fa-lg" aria-hidden="true"></i> **Redo** button at the top of the cart to revert or restore changes made to the chart).
-- **Edit/Clone/Delete** a step/transition (point to the step/transition button, and when the <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i> arrow appears, click it, and then click the <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** / <i class="far fa-copy" aria-hidden="true"></i> **Clone** / ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** icon.
+- **Edit/Clone/Delete** a step/transition (point to the step/transition button, and when the <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i> arrow appears, click it, and then click the <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** / <i class="far fa-copy" aria-hidden="true"></i> **Clone** / <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** icon.
 
 #### NOTE
 All actions available for transitions and steps in the table are available in the chart as well.
@@ -171,7 +171,7 @@ The sample Opportunity Support Flow has been configured the following way:
 
 To set a workflow configuration parameters:
 
-1. In the main menu, navigate to **System > Workflows**.
+1. In the main menu, navigate **System > Workflows**.
 2. On the workflow list, click the required workflow.
 3. If the workflow has configuration parameters, you can see the **Configuration** button on the top right of the workflow view page. Click this button.
    ![image](user/img/system/workflows/workflow_set_config_param.png)
@@ -315,20 +315,3 @@ Want to profit from the recent developments in digital commerce? Learn more abou
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

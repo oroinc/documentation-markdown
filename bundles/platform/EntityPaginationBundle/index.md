@@ -2,7 +2,7 @@
 
 # OroEntityPaginationBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/EntityPaginationBundle" target="_blank">OroEntityPaginationBundle</a> enables pagination UI for a collection of entities when these entities are part of a data set of a DataGrid.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/EntityPaginationBundle" target="_blank">OroEntityPaginationBundle</a> enables pagination UI for a collection of entities when these entities are part of a data set of a DataGrid.
 
 ## Related Documentation
 

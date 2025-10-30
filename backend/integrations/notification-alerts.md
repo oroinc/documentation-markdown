@@ -8,9 +8,9 @@ All the alerts are stored in the database and are available in the [application 
 
 ## Implementation Details
 
-The class that represents a notification alert for your resource type must implement <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/NotificationBundle/NotificationAlert/NotificationAlertInterface.php" target="_blank">NotificationAlertInterface</a>.
+The class that represents a notification alert for your resource type must implement <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/NotificationBundle/NotificationAlert/NotificationAlertInterface.php" target="_blank">NotificationAlertInterface</a>.
 
-You need to register your own notification alert manager to work with a particular integration and resource type in order to add your notification alerts. As an example, please see <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/NotificationBundle/NotificationAlert/NotificationAlertManager.php" target="_blank">NotificationAlertManager</a>.
+You need to register your own notification alert manager to work with a particular integration and resource type in order to add your notification alerts. As an example, please see <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/NotificationBundle/NotificationAlert/NotificationAlertManager.php" target="_blank">NotificationAlertManager</a>.
 
 The NotificationAlertManager should be registered as a service with the source type and resource names, as illustrated below:
 

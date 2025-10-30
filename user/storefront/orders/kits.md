@@ -2,10 +2,10 @@
 
 # Order a Product Kit in the Storefront
 
-#### HINT
-This section is part of the [Product Kits](../../concept-guides/catalog-promotions/product-management/kits-concept.md#concept-guides-product-management-kits) concept guide that provides a general understanding of the product kits concept in OroCommerce.
+#### NOTE
+Product Kits in the back-office are available as of 5.1LTS. Product Kits in the storefront are available as of 5.1.3. By default, the product kits feature is disabled for v.5.1 but you can enable it with developer assistance in the <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/ProductBundle/Resources/config/oro/app.yml" target="_blank">yaml file of the ProductBundle</a>.
 
-You can select which items to add to your product kit in the storefront. The items available as part of the kit are pre-configured in the back-office, but you can select optional items you would like to purchase.
+You can select which items to add to the product kit you are purchasing in the storefront. The items available as part of the kit are pre-configured in the back-office, but you can select optional items that you would like to purchase.
 
 To configure a product kit in the storefront, click **Configure and Add to Shopping List** on its product page.
 
@@ -15,19 +15,14 @@ Here, you can select which of the available items to select as part of the kit, 
 
 Once you have selected the items, click **Add to Shopping List**.
 
-You will be able to see the price of each item in the kit on the shopping list page before you create an order.
+You will be able to see the the price of each item in the kit on the shopping list page before you create an order.
 
 ![Kit in a shopping list](user/img/products/products/kits/kit-sl.png)
 
-As you proceed through the checkout, you will continue to see the product kit items and the breakdown of prices per item.
+As you proceed though the checkout, you will continue to see the product kit items and the breakdown of prices per item.
 
 ![Kit at payment step of the checkout](user/img/products/products/kits/kit-checkout.png)
 
-This information will be preserved in the order details under **Order History** in your storefront account.
+This information will be preserved in the details of the order under **Order History** in your storefront account.
 
 ![Order containing a product kit in the Order History](user/img/products/products/kits/kit-order-history.png)
-
-#### NOTE
-Remember that you will not be able to complete a [quick order form](../quick-order-form.md#frontstore-guide-orders-quick-order) if you have a product kit in your order, as product kits require configuration that the quick order form does not support. You can still proceed to the checkout via a shopping list or create a quote.
-
-![Display the disabled Create Order button when the product kit item](user/img/storefront/orders/product-kits-in-quick-order-form.png)

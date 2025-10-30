@@ -41,24 +41,33 @@ use Oro\Bundle\ProductBundle\Entity\Product;
 use Oro\Bundle\ProductBundle\Model\ProductHolderInterface;
 
 /**
- * Entity to product options value
+ * @ORM\Table(name="oro_bpe_prod_opts")
+ * @ORM\Entity
  */
-#[ORM\Entity]
-#[ORM\Table(name: 'oro_bpe_prod_opts')]
 class ProductOptions implements ProductHolderInterface
 {
     /**
      * @var integer
+     *
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
-    #[ORM\Id]
-    #[ORM\Column(type: 'integer')]
-    #[ORM\GeneratedValue(strategy: 'AUTO')]
     protected $id;
 
     /**
-     * @var string
+     * @var Product
+     *
+     * @ORM\ManyToOne(targetEntity="Oro\Bundle\ProductBundle\Entity\Product")
+     * @ORM\JoinColumn(name="product_id", referencedColumnName="id", nullable=false, onDelete="CASCADE")
      */
-    #[ORM\Column(name: 'value', type: 'text')]
+    protected $product;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="value", type="text")
+     */
     protected $value;
 
     // ..... Getters & Setters implementations .....
@@ -88,13 +97,17 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
 
 class OroBlogPostExampleBundleInstaller implements Installation
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getMigrationVersion()
     {
         return 'v1_0';
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         /** Tables generation **/
@@ -147,7 +160,9 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
 
 class OroBlogPostExampleBundle implements Migration
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         /** Tables generation **/
@@ -205,13 +220,17 @@ class ProductOptionsType extends AbstractType
 {
     const BLOCK_PREFIX = 'oro_blogpostexample_product_options';
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('value');
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(
@@ -221,7 +240,9 @@ class ProductOptionsType extends AbstractType
         );
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getBlockPrefix()
     {
         return self::BLOCK_PREFIX;
@@ -266,7 +287,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 
-abstract class ProductOptionsFormTypeExtension extends AbstractTypeExtension
+class ProductOptionsFormTypeExtension extends AbstractTypeExtension
 {
     const PRODUCT_OPTIONS_FIELD_NAME = 'productOptions';
 
@@ -278,12 +299,17 @@ abstract class ProductOptionsFormTypeExtension extends AbstractTypeExtension
         $this->registry = $registry;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getExtendedType()
     {
         return ProductType::class;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add(

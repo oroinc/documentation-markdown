@@ -29,9 +29,7 @@ To handle a big volume of data, use the page switcher, increase *View Per Page* 
 
 In the product tax codes list, you will find the information about the code (unique identifier), detailed description, and the dates when the product tax code was created and updated.
 
-Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the item and click <i class="fa fa-eye fa-lg" aria-hidden="true"></i> to open its details page, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> to edit, or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) to remove the product tax code.
-
-![The general page of all product tax codes](user/img/taxes/all_product_tax_codes.png)
+Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the item and click <i class="fa fa-eye fa-lg" aria-hidden="true"></i> to open its details page, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> to edit, or <i class="fas fa-trash-alt" aria-hidden="true"></i> to remove the product tax code.
 
 ### View Product Tax Code Details
 
@@ -44,7 +42,7 @@ To view product tax code details:
 > * View Change History — See the log of edits of this product tax code by clicking the **Change History** link to the top right of the page.
 >   ![The log of edits of this product tax code](user/img/taxes/MEDICAL_IDENTIFICATION_TAGS_View_ProductTaxCodes_Taxes_ChangeHistory.png)
 > * View details of the product linked to this product tax code — Click on the line with the customer account details.
-> * <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** the selected product tax code.
+> * <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** or <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** the selected product tax code.
 
 >   #### NOTE
 >   You can edit the product details to remove the link to this product tax code, if necessary.
@@ -95,20 +93,3 @@ Want to thoroughly assess leading <a href="https://oroinc.com/b2b-ecommerce/b2b-
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

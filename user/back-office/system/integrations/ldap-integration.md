@@ -59,11 +59,7 @@ To set up an integration with LDAP:
 7. If two-way synchronization is enabled, define the priority used for conflict resolution (e.g., if the same user details were edited from both Oro application and the target LDAP server):
    * **Remote wins**: the LDAP server data will be applied
    * **Local wins**: the Oro application data will be applied
-
-#### NOTE
-In the **Synchronization Settings** section, select the **Log Warnings** checkbox if you want all synchronization errors to be written into the application log.
-
-1. In the **Mapping Settings** section, define how the user attributes and role names of the Oro application and the target LDAP server will be mapped to each other.
+8. In the **Mapping Settings** section, define how the user attributes and role names of the Oro application and the target LDAP server will be mapped to each other.
    * Provide the following details:
 
    |                                           |                                                                                                                                                                  |

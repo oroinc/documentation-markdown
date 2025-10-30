@@ -45,6 +45,9 @@ Interactive status messages inform about the import progress, and once the impor
 
 ### Product Kit Data
 
+#### NOTE
+Product Kits in the back-office are available as of 5.1LTS. Product Kits in the storefront are available as of 5.1.3. By default, the product kits feature is disabled for v.5.1 but you can enable it with developer assistance in the <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/ProductBundle/Resources/config/oro/app.yml" target="_blank">yaml file of the ProductBundle</a>.
+
 The following formats of kitItems are possible (with or without the ID parameter):
 
 ```text

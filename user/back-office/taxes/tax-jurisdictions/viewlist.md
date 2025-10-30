@@ -11,7 +11,7 @@ To handle a big volume of data, use the page switcher, increase *View Per Page* 
 
 In the tax jurisdictions list, you will find the information about the code (unique identifier), detailed description, and the dates when the tax jurisdiction was created and updated.
 
-Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the item and click <i class="fa fa-eye fa-lg" aria-hidden="true"></i> to open its details page, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> to edit, or  ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) to remove the tax jurisdiction.
+Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the item and click <i class="fa fa-eye fa-lg" aria-hidden="true"></i> to open its details page, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> to edit, or  <i class="fas fa-trash-alt" aria-hidden="true"></i> to remove the tax jurisdiction.
 
 <!-- stop -->
 <!-- fa-bars = fa-navicon -->
@@ -19,20 +19,3 @@ Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More 
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

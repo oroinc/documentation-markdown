@@ -10,6 +10,6 @@ To export account details in a .csv file:
    ![Example of exported accounts](user/img/customers/accounts/sample_exported_account.png)
 
 #### NOTE
-Keep in mind that by clicking **Export** you download all account records regardless of the filters applied to the grid. To export only filtered records, use the **Export Grid** functionality.
+Keep in mind that by clicking **Export** you download all account records regardless of the filters applied to the grid. To export only the list of filtered records, use the **Export Grid** functionality.
 
 ![Highlight the export grid button](user/img/getting_started/export_import/export_grid_accounts.png)

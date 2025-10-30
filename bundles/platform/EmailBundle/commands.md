@@ -1,5 +1,3 @@
-<a id="bundle-docs-platform-email-bundle-commands"></a>
-
 # CLI Commands (EmailBundle)
 
 ## oro:email:update-associations

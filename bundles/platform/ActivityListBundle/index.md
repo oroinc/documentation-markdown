@@ -2,7 +2,7 @@
 
 # OroActivityListBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ActivityListBundle" target="_blank">OroActivityListBundle</a> adds a widget to the entity view page. The widget displays a list of activities related to the entity record in chronological order. It also enables widget configuration in the system configuration section.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/ActivityListBundle" target="_blank">OroActivityListBundle</a> adds a widget to the entity view page. The widget displays a list of activities related to the entity record in chronological order. It also enables widget configuration in the system configuration section.
 
 ## Related Documentation
 

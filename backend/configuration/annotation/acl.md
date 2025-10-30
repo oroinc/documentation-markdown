@@ -1,27 +1,29 @@
 <a id="acl"></a>
 
-# #[Acl]
+# @Acl
 
-The `#[Acl]` attribute is used to create a new access control list and to protect the controller
-that is attribute with this ACL accordingly:
+The `@Acl` annotation is used to create a new access control list and to protect the controller
+that is annotation with this ACL accordingly:
 
 ```php
 // ...
-use Oro\Bundle\SecurityBundle\Attribute\Acl;
+use Oro\Bundle\SecurityBundle\Annotation\Acl;
 
-#[Acl(
-    id="user_user_view",
-    type="entity",
-    class="Oro\Bundle\UserBundle\Entity\User",
-    permission="VIEW"
-)]
+/**
+ * @Acl(
+ *     id="user_user_view",
+ *     type="entity",
+ *     class="OroUserBundle:User",
+ *     permission="VIEW"
+ * )
+ */
 public function demoAction()
 {
     // ...
 }
 ```
 
-## Arguments
+## Options
 
 ### `class`
 
@@ -29,7 +31,10 @@ public function demoAction()
 
 When the [type]() option is set to `entity`, the fully qualified class name configured with the
 `class` option is used to decide whether or not the ACL has to be evaluated when checking if a
-user has access to a certain class.
+user has access to a certain class. If the given action is annotated with the <a href="https://symfony.com/doc/5.0/bundles/SensioFrameworkExtraBundle/annotations/converters.html" target="_blank">ParamConverter</a>
+parameter, and the class of this parameter is the same as the class parameter from the ACL
+annotation, the check will be done on the object level (check if the user has access to the given
+object).
 
 ### `group`
 
@@ -39,7 +44,7 @@ ACLs can optionally be grouped. A group is identified by its name.
 
 ### `id`
 
-A unique identifier that is used, for example, to reference an access control list with the [#[AclAncestor] attribute](acl-ancestor.md#acl-ancestor).
+A unique identifier that is used, for example, to reference an access control list with the [@AclAncestor annotation](acl-ancestor.md#acl-ancestor).
 
 ### `label`
 

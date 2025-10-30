@@ -4,15 +4,15 @@
 
 ## Create and Run Unit and Functional Tests to Test the Message Queue
 
-To test that a message was sent in unit and functional tests, you can use the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MessageQueueBundle/Test/Assert/AbstractMessageQueueAssertTrait.php" target="_blank">AbstractMessageQueueAssertTrait</a> trait.
+To test that a message was sent in unit and functional tests, you can use the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/MessageQueueBundle/Test/Assert/AbstractMessageQueueAssertTrait.php" target="_blank">AbstractMessageQueueAssertTrait</a> trait.
 There are two implementations of this trait, one for unit tests and the other one for functional tests:
 
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MessageQueueBundle/Test/Unit/MessageQueueExtension.php" target="_blank">Oro\\Bundle\\MessageQueueBundle\\Test\\Unit\\MessageQueueExtension</a> is for unit tests
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MessageQueueBundle/Test/Functional/MessageQueueExtension.php" target="_blank">Oro\\Bundle\\MessageQueueBundle\\Test\\Functional\\MessageQueueExtension</a> is for functional tests
+* <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/MessageQueueBundle/Test/Unit/MessageQueueExtension.php" target="_blank">Oro\\Bundle\\MessageQueueBundle\\Test\\Unit\\MessageQueueExtension</a> is for unit tests
+* <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/MessageQueueBundle/Test/Functional/MessageQueueExtension.php" target="_blank">Oro\\Bundle\\MessageQueueBundle\\Test\\Functional\\MessageQueueExtension</a> is for functional tests
 
 If you need a custom logic to manage sent messages, you can use the
-<a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MessageQueueBundle/Test/Unit/MessageQueueAssertTrait.php" target="_blank">Oro\\Bundle\\MessageQueueBundle\\Test\\Unit\\MessageQueueAssertTrait</a> or
-<a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MessageQueueBundle/Test/Functional/MessageProcessTrait.php" target="_blank">Oro\\Bundle\\MessageQueueBundle\\Test\\Functional\\MessageQueueAssertTrait</a> traits.
+<a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/MessageQueueBundle/Test/Unit/MessageQueueAssertTrait.php" target="_blank">Oro\\Bundle\\MessageQueueBundle\\Test\\Unit\\MessageQueueAssertTrait</a> or
+<a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/MessageQueueBundle/Test/Functional/MessageProcessTrait.php" target="_blank">Oro\\Bundle\\MessageQueueBundle\\Test\\Functional\\MessageQueueAssertTrait</a> traits.
 
 The following example shows how to test whether a message was sent.
 

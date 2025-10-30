@@ -2,6 +2,9 @@
 
 # Product Kits
 
+#### NOTE
+Product Kits in the back-office are available as of 5.1LTS. Product Kits in the storefront are available as of 5.1.3. By default, the product kits feature is disabled for v.5.1 but you can enable it with developer assistance in the <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/ProductBundle/Resources/config/oro/app.yml" target="_blank">yaml file of the ProductBundle</a>.
+
 A *product kit* is a product of type kit (a product entity `\Oro\Bundle\ProductBundle\Entity\Product` with a $type property that equals kit). To check if a product is a kit, you can call method `isKit()` on a `Product` entity:
 
 ```php
@@ -57,5 +60,5 @@ The availability of a *product kit* depends on its *product kit items* that rely
 
 ## Product Kit Search
 
-Products with the type kit can be found by values of searchable attributes of products with the type simple which are related to this Product Kit.
+Products with the type kit can be found by values of searchable attributes of products with the type simple which are related to this Product Kit (available starting from v5.1.4).
 The all_text field of the back-office and storefront indexes for Product Kits contains attribute values related to simple products.

@@ -70,23 +70,6 @@ Keep in mind that only those customer user roles that have been created in the c
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->
 <!-- Related Articles** -->
 <!-- `Understanding Roles and Permissions <user-guide-user-management-permissions>` -->
 <!-- `Create and Manage Roles <user-guide-user-management-permissions-roles--actions>` -->

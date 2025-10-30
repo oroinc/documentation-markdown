@@ -2,9 +2,6 @@
 
 # Configure Synonym Search Settings per Website
 
-#### HINT
-Read [Search Functions Concept Guide](../../../../../../concept-guides/catalog-promotions/search/index.md#user-guide-getting-started-search) to get a general understanding of the search functionality in OroCommerce.
-
 In OroCommerce Enterprise Edition, you can [create a synonym group](../../../../../marketing/search/index.md#user-guide-search-synonyms) where a search for one word from this group in the OroCommerce storefront would return results for all the synonyms in this group. Synonym management is enabled [globally](../../../../configuration/commerce/search/search-synonyms.md#configuration-guide-commerce-search-synonyms) and per website in the system configuration, and subsequently managed through **Marketing > Search > Search Synonyms** in the main menu.
 
 ![Configuration option on the website level to enable the use of synonyms in the storefront search](user/img/system/websites/web_configuration/synonyms-website-config.png)
@@ -34,20 +31,3 @@ For faster navigation between the configuration menu sections, use [Quick Search
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

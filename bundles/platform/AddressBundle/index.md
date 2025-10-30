@@ -2,7 +2,7 @@
 
 # OroAddressBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/AddressBundle" target="_blank">OroAddressBundle</a> introduces the base entity and interfaces for addresses and address-related entities such as a country, a region, a phone, and an email. It also provides a dictionary with country region codes and names.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/AddressBundle" target="_blank">OroAddressBundle</a> introduces the base entity and interfaces for addresses and address-related entities such as a country, a region, a phone, and an email. It also provides a dictionary with country region codes and names.
 
 <a id="bundle-docs-platform-address-bundle-address-type"></a>
 
@@ -23,11 +23,14 @@ It has the “types” property and methods to work with it, but you need to def
 ```php
 /**
  * @var Collection
+ *
+ * @ORM\ManyToMany(targetEntity="Oro\Bundle\AddressBundle\Entity\AddressType")
+ * @ORM\JoinTable(
+ *     name="orocrm_contact_address_to_address_type",
+ *     joinColumns={@ORM\JoinColumn(name="contact_address_id", referencedColumnName="id")},
+ *     inverseJoinColumns={@ORM\JoinColumn(name="type_name", referencedColumnName="name")}
+ * )
  **/
-#[ORM\ManyToMany(targetEntity: 'Oro\Bundle\AddressBundle\Entity\AddressType')]
-#[ORM\JoinTable(name: 'orocrm_contact_address_to_address_type')]
-#[ORM\JoinColumn(name: 'contact_address_id', referencedColumnName: 'id')]
-#[ORM\inverseJoinColumn(name: 'type_name', referencedColumnName: 'name')]
 protected $types;
 ```
 

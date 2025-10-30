@@ -18,10 +18,10 @@ To enable orders history per organization:
 2. For the **Show Open Orders** field, select whether to display or hide the open orders within the Order History menu in the storefront.
 3. For **Show Open Orders on a Separate Page** field:
 
-   **Yes** — If set to **Yes**, *Open Orders* are displayed as a separate menu item in the customer user Account in the storefront.
+   **Yes** — If set to *Yes*, *Open Orders* are displayed as a separate menu item in the customer user Account in the storefront.
    ![Open orders as a separate menu item in orocommerce storefront](user/img/system/config_commerce/sales/open_orders_separately.png)
 
-   **No** — If set to **No**, *Open Orders* are displayed as part of the *Order History* menu, on the same page with *Past Orders*.
+   **No** — If set to *No*, *Open Orders* are displayed as part of the *Order History* menu, on the same page with *Past Orders*.
    ![Open and past orders on the same page in orocommerce storefront](user/img/system/config_commerce/sales/open_orders_with_past_orders.png)
 4. Click **Save Settings**.
 
@@ -30,20 +30,3 @@ To enable orders history per organization:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

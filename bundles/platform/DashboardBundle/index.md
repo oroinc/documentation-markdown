@@ -2,7 +2,7 @@
 
 # OroDashboardBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/DashboardBundle" target="_blank">OroDashboardBundle</a> introduces different widget types and manages the configuration of user dashboards and dashboard widgets.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/DashboardBundle" target="_blank">OroDashboardBundle</a> introduces different widget types and manages the configuration of user dashboards and dashboard widgets.
 A dashboard is a default page you see after you log in. It is an adjustable view that contains many types of information blocks (widgets) and metrics, such as today’s calendar, recent calls and emails, quick launchpad, etc. You can have several dashboards that serve different purposes and switch between them.
 
 ## Configure a Dashboard
@@ -167,22 +167,25 @@ To add a new dashboard defined in the dashboards.yml file (as described above) t
 ```php
 namespace Oro\Bundle\DashboardBundle\Migrations\Data\ORM;
 
-use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
 use Oro\Bundle\DashboardBundle\Migrations\Data\ORM\AbstractDashboardFixture;
-use Oro\Bundle\UserBundle\Migrations\Data\ORM\LoadAdminUserData;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 
 class LoadDashboardData extends AbstractDashboardFixture implements DependentFixtureInterface
 {
-    #[\Override]
-    public function getDependencies(): array
+    /**
+     * {@inheritdoc}
+     */
+    public function getDependencies()
     {
         // we need admin user as a dashboard owner
-        return [LoadAdminUserData::class];
+        return ['Oro\Bundle\UserBundle\Migrations\Data\ORM\LoadAdminUserData'];
     }
 
-    #[\Override]
-    public function load(ObjectManager $manager): void
+    /**
+     * {@inheritdoc}
+     */
+    public function load(ObjectManager $manager)
     {
         // create new dashboard
         $dashboard = $this->createAdminDashboardModel(

@@ -69,7 +69,7 @@ With all of that in mind, let’s check the website-specific parameters you can 
 
 Each website has system settings that can be customized individually per website. The same set of settings are also available on the [global](../../../back-office/system/configuration/index.md#mc-system-configuration) and [organization](../../../back-office/system/user-management/organizations/org-configuration/index.md#doc-organization-configuration) levels. Provided that all levels have different configuration, the settings configured for a particular website will always be prioritized first.
 
-However, there are some settings that can be adjusted on the customer and customer group levels as well. This includes the configuration of [price lists](../../../back-office/customers/customers/customer-price-lists.md#customers-customers-edit-price-lists) and [storefront menus](../../../back-office/customers/customers/customer-frontend-menus.md#frontend-menus-customer).
+However, there are some settings that can be adjusted on the customer and customer group levels as well. This includes the configuration of [price lists](../../../back-office/customers/customers/customer-price-lists.md#customers-customers-edit-price-lists) and [frontend menus](../../../back-office/customers/customers/customer-frontend-menus.md#frontend-menus-customer).
 
 > ![Website-specific system configuration settings](user/img/concept-guides/websites/website_system_config.png)
 
@@ -115,13 +115,13 @@ One of the substantial capabilities offered by OroCommerce is the ability to con
 
 ## Website Navigation
 
-The storefront navigation is highly customizable via the [Storefront Menus](../../../back-office/system/frontend-menus/index.md#doc-system-menu-config-levels-frontend-menus) that can be set globally, per organization, per website, per customer, and per customer group.
+The storefront navigation is highly customizable via the [Frontend Menus](../../../back-office/system/frontend-menus/index.md#doc-system-menu-config-levels-frontend-menus) that can be set globally, per organization, per website, per customer, and per customer group.
 
-![A list of menu items in Storefront menu](user/img/concept-guides/websites/website_navigation.png)
+![A list of menu items in Frontend menu](user/img/concept-guides/websites/website_navigation.png)
 
 All the visuals represented in the storefront are specific to each website. Go through the available menus to adapt content to particular audience and localization. You can enable or disable menu items for a particular customer, website, or mobile device by setting related conditions.
 
-![Illustrate all available storefront menu items in the storefront](user/img/concept-guides/websites/frontend_menu_refreshing_teal.png)
+![Illustrate all available frontend menu items in the storefront](user/img/concept-guides/websites/frontend_menu.png)
 
 ## Web Catalogs per Website
 
@@ -169,4 +169,4 @@ Check out the Integrations guide to learn more on [payment and shipping method i
 * [Setup a Website Host](../../../../backend/setup/installation-in-sub-folder.md#system-websites-prepare-to-host-a-website-in-the-domain-sub-folder)
 * [Manage a Website](../../../back-office/system/websites/manage.md#user-guide-system-websites-manage-websites)
 * [Website Routing Configuration](../../../back-office/system/configuration/system/websites/global-routing.md#sys-config-sysconfig-websites-routing)
-* [Storefront Menu](../../../back-office/system/frontend-menus/index.md#backend-frontend-menus)
+* [Frontend Menu](../../../back-office/system/frontend-menus/index.md#backend-frontend-menus)

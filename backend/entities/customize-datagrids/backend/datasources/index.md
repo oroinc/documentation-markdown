@@ -32,13 +32,17 @@ class CustomDatasource implements DatasourceInterface
 
     protected array $arraySource = [];
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function process(DatagridInterface $grid, array $config)
     {
         $grid->setDatasource(clone $this);
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getResults()
     {
         $rows = [];

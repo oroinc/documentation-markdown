@@ -1,13 +1,15 @@
-# #[TitleTemplate]
+# @TitleTemplate
 
-This attribute is used to configure the template that is used to render the page title when the
-controller tagged with this attribute is accessed:
+This annotation is used to configure the template that is used to render the page title when the
+controller tagged with this annotation is accessed:
 
 ```php
 // ...
-use Oro\Bundle\NavigationBundle\Attribute\TitleTemplate;
+use Oro\Bundle\NavigationBundle\Annotation\TitleTemplate;
 
-#[TitleTemplate("The page title")]
+/**
+ * @TitleTemplate("The page title")
+ */
 public function demoAction()
 {
     // ...

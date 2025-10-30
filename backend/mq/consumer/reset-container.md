@@ -7,10 +7,10 @@
 As each consumer processes all messages in one thread but there are cases when some services have an internal state. This state can be changed when processing a message which can have an affect on processing the next message.
 
 To prevent this problem, after processing a message all services are removed from the dependency injection
-container by <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MessageQueueBundle/Consumption/Extension/ContainerResetExtension.php" target="_blank">ContainerResetExtension</a> extension. As a result, each message is processed by a *fresh* state of services. See [Persistent Processors]() and [Persistent Services]() sections, if you want to change this behavior.
+container by <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/MessageQueueBundle/Consumption/Extension/ContainerResetExtension.php" target="_blank">ContainerResetExtension</a> extension. As a result, each message is processed by a *fresh* state of services. See [Persistent Processors]() and [Persistent Services]() sections, if you want to change this behavior.
 
 If it is required to perform additional actions before the container reset, you can create a class implements
-<a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MessageQueueBundle/Consumption/Extension/ClearerInterface.php" target="_blank">ClearerInterface</a> and register it in the container with the **oro_message_queue.consumption.clearer** tag. The **priority** attribute can be used to change the execution order of your clearer. The higher the priority, the earlier the clearer is executed.
+<a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/MessageQueueBundle/Consumption/Extension/ClearerInterface.php" target="_blank">ClearerInterface</a> and register it in the container with the **oro_message_queue.consumption.clearer** tag. The **priority** attribute can be used to change the execution order of your clearer. The higher the priority, the earlier the clearer is executed.
 
 ## Persistent Processors
 
@@ -27,7 +27,7 @@ oro_message_queue:
         - 'oro_message_queue.client.noop_message_processor'
 ```
 
-This config file informs the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MessageQueueBundle/Consumption/Extension/ContainerResetExtension.php" target="_blank">ContainerResetExtension</a> that the container should not be cleared after executing the
+This config file informs the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/MessageQueueBundle/Consumption/Extension/ContainerResetExtension.php" target="_blank">ContainerResetExtension</a> that the container should not be cleared after executing the
 **oro_message_queue.client.noop_message_processor** processor.
 
 ## Persistent Services
@@ -65,18 +65,18 @@ acme.consumption.my_extension:
 ```
 
 Also, if an extension is marked as persistent but it is required to reset an internal state when resetting
-the container, the extension can implement <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MessageQueueBundle/Consumption/Extension/ResettableExtensionInterface.php" target="_blank">ResettableExtensionInterface</a>.
+the container, the extension can implement <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/MessageQueueBundle/Consumption/Extension/ResettableExtensionInterface.php" target="_blank">ResettableExtensionInterface</a>.
 
 ## Cache State
 
 Loading certain types of cache may be quite expensive. For this reason, some cache providers
 were added to the **persistent_services** list to prevent removing them from the container after processing of a message.
 
-To synchronize such caches between different processes, the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MessageQueueBundle/Consumption/CacheState.php" target="_blank">CacheState</a> service is used.
+To synchronize such caches between different processes, the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/MessageQueueBundle/Consumption/CacheState.php" target="_blank">CacheState</a> service is used.
 The **renewChangeDate** method should be called after a cache is changed. The **getChangeDate** method
 returns the last cache modification time.
 
-The <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MessageQueueBundle/Consumption/Extension/InterruptConsumptionExtension.php" target="_blank">InterruptConsumptionExtension</a> uses the **CacheState** service to check whether a cache is changed.
+The <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/MessageQueueBundle/Consumption/Extension/InterruptConsumptionExtension.php" target="_blank">InterruptConsumptionExtension</a> uses the **CacheState** service to check whether a cache is changed.
 If it is, the consumer is interrupted after processing the current message, so the new instance of the consumer will work with the correct cache.
 
 <!-- Frontend -->

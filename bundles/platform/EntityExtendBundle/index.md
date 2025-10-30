@@ -2,7 +2,7 @@
 
 # OroEntityExtendBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/EntityExtendBundle" target="_blank">OroEntityExtendBundle</a> enables the entities structure extension using UI or migration scripts without changing the entity definition class. The bundle also supports the creation of new entities (custom entities) using the UI.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/EntityExtendBundle" target="_blank">OroEntityExtendBundle</a> enables the entities structure extension using UI or migration scripts without changing the entity definition class. The bundle also supports the creation of new entities (custom entities) using the UI.
 
 ## Related Documentation
 

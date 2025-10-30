@@ -25,7 +25,6 @@ The Activities section introduces you to the following types of activities:
 * [Cases](cases/index.md#doc-activities-overview-cases)
 * [Calendar Events](calendar-events/index.md#doc-activities-events)
 * [Emails](emails/index.md#activities-emails)
-* [Conversations](conversations/index.md#doc-activities-conversations)
 
 **Related Content:**
 

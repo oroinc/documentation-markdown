@@ -6,9 +6,6 @@
 
 <!-- begin -->
 
-#### HINT
-This section is part of the [Guest Functions](../../../../../concept-guides/administration/guests/index.md#sys-conf-commerce-guest) topic that provides a general understanding of the guest access concept in OroCommerce.
-
 To prevent non-registered customers from accessing the OroCommerce storefront, you can disable website access by non-authenticated visitors. This can be done globally, [per organization](../../../user-management/organizations/org-configuration/commerce/guests/organization-guest-access.md#sys-conf-commerce-guest-access-org) and [per website](../../../websites/web-configuration/commerce/guests/website-guest-access.md#sys-conf-commerce-guest-access-website):
 
 When guest access is disabled:
@@ -40,20 +37,3 @@ To disable guest access globally, clear the **Enable Guest Access** checkbox.
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

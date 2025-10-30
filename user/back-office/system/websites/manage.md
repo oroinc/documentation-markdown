@@ -64,7 +64,7 @@ To customize a storefront menu for the website:
 1. Navigate to **System > Websites** using the main menu.
 2. Click the website you would like to edit a menu for (e.g., Australia).
    ![View the details of Australia website](user/img/system/websites/view_website_australia1.png)
-3. On the website details page, click <i class="fas fa-cog" aria-hidden="true"></i> **Edit Storefront Menu**.
+3. On the website details page, click <i class="fas fa-cog" aria-hidden="true"></i> **Edit Frontend Menu**.
 
    Now you are redirected to the list of OroCommerce storefront menus:
    ![The list of OroCommerce storefront menus](user/img/system/websites/front_menu.png)
@@ -74,7 +74,7 @@ To customize a storefront menu for the website:
    * Create new items and dividers if necessary by clicking **Create Menu Item** or **Create Divider** (in the button group on the top right of the page).
    * Click on the menu item to edit its details.
 
-Find more information on how to edit and customize the storefront menu in the [Storefront Menu Management](../frontend-menus/index.md#frontend-menus-overview) section.
+Find more information on how to edit and customize the storefront menu in the [Menu Management](../menus/index.md#doc-config-menus-menuspage) section.
 
 1. Once you are happy with the menu contents, click **Save**.
 
@@ -148,20 +148,3 @@ Also, refer to the [shipping configuration on the system level](../configuration
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

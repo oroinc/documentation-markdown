@@ -3,7 +3,7 @@
 OroPlatform-based application uses the Twig templating engine to render the content.
 
 See the detailed documentation in:
-: - <a href="https://symfony.com/doc/6.4/templating.html" target="_blank">Creating and Using Templates article in a Symfony Documentation</a>
+: - <a href="https://symfony.com/doc/5.4/templating.html" target="_blank">Creating and Using Templates article in a Symfony Documentation</a>
   - <a href="https://twig.symfony.com/" target="_blank">Twig official documentation</a>
 
 #### SEE ALSO

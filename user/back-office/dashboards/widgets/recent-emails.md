@@ -6,7 +6,7 @@
 
 The Recent Emails widget allows you to see the most recent additions to your inbox and outbox.
 
-![Configuring the Recent Emails widget](user/img/dashboards/recent_emails_config.png)
+![A sample of the Recent Emails widget](user/img/dashboards/recent_emails.png)
 
 #### NOTE
 For how to add widgets to the dashboard and manage them, see the relevant topics:
@@ -21,3 +21,5 @@ For how to add widgets to the dashboard and manage them, see the relevant topics
 You can adjust the following settings for the recent emails widget:
 
 * **Widget title** — the name displayed on the dashboard. To change the name, clear the **Use Default** checkbox and provide a new name.
+
+![Configuring the Recent Emails widget](user/img/dashboards/recent_emails_config.png)

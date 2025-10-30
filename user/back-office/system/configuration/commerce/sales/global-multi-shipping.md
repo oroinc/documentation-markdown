@@ -2,7 +2,7 @@
 
 # Configure Global Multiple Shipping Settings
 
-For standard [multi-step checkout](../../../../../concept-guides/administration/checkout/index.md#checkout-guide-multi-page), you can configure different line item grouping for the storefront checkout, as well as enable storefront customers to select different shipping methods for different line items or different groups of line items. In addition, you can enable sub-orders to be created for each group of line items.
+For standard [multi-step checkout](../../../../../concept-guides/administration/checkout/index.md#checkout-guide-multi-page), you can configure different line item grouping for the storefront checkout, as well as enable storefront customers to select different shipping methods for different line items. In addition, you can enable sub-orders to be created for each group of line items.
 
 ![Displaying order line items grouped by category at checkout](user/img/system/config_commerce/sales/multi-shipping-storefront.png)
 
@@ -16,18 +16,13 @@ To configure multi shipping globally:
    #### NOTE
    For faster navigation between the configuration menu sections, use [Quick Search](../../quick-search.md#user-guide-system-configuration-quick-search).
 3. To update any of the options, clear the **Use Default** checkbox first.
-4. In the **General Options**, select **Enable Shipping Method Selection Per Line Item** to enable selection of shipping method per line items.
-
-   #### NOTE
-   If the option is disabled, but the **Enable Grouping Of Line Items During Checkout** option is enabled, the selection of shipping method will be available per each group of line items.
+4. In the **General Options**, select **Enable Shipping Method Selection Per Line Item** to activate the multi-shipping functionality and display other related options.
 5. In the **Line Items Grouping Options**, configure the following options:
    ![Global multi shipping configuration settings](user/img/system/config_commerce/sales/multi-shipping-global.png)
-
-* **Enable Grouping Of Line Items During Checkout** — When enabled, line items during checkout are displayed in groups divided by specific criteria (e.g., ID, category, brand, organization etc). This option may affect shipping rules and discount calculations (see other configuration options).
-  > * *Group Line Items By* — Select if you want to group line items per ID, category, brand, or parent product.
-  > * *Create Sub-Orders For Each Group* — When enabled, in addition to the main order, the system will create respective sub-orders for each group of line items in the back-office. Storefront customers, however, will see only primary orders in their order history.
-
-1. In the **Order History Options** section, configure the following options:
-   * *Show Sub-Orders In Order History* — When enabled, customers can see only sub-orders in their order history. Primary orders will be hidden.
-   * *Show Main Orders In Order History* — When enabled, customers can see both the primary order and its sub-orders in their order history.
-2. Click **Save Settings**.
+   * **Enable Grouping Of Line Items During Checkout** — When enabled, line items during checkout are displayed in groups divided by specific criteria (e.g., ID, category, brand, organization etc). This option may affect shipping rules and discount calculations (see other configuration options).
+     * *Group Line Items By* — Select if you want to group line items per ID, category, brand, or parent product.
+     * *Create Sub-Orders For Each Group* — When enabled, in addition to the main order, the system will create respective sub-orders for each group of line items in the back-office. Storefront customers, however, will see only primary orders in their order history.
+6. In the **Order History Options** section, configure the following options:
+   > * *Show Sub-Orders In Order History* — When enabled, customers can see only sub-orders in their order history. Primary orders will be hidden.
+   > * *Show Main Orders In Order History* — When enabled, customers can see both the primary order and its sub-orders in their order history.
+7. Click **Save Settings**.

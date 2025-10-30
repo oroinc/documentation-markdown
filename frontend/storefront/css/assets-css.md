@@ -2,13 +2,6 @@
 
 # Styles Assets Organization
 
-Out-of-the-box, each theme contains three independent `CSS`` files with the same structure:
-
-* `critical.css` – minimal CSS needed for fast content rendering.
-* `styles.css` – the main CSS for the entire theme.
-* `styles-print.css` – CSS specific to the print version.
-* `stylebook.css` – CSS specific to the Style Book pages.
-
 Files structure with styles should be the following:
 
 ```none
@@ -18,17 +11,17 @@ MyBundle/
             my-theme/
                 scss/
                     components/
-                        input.scss
-                        button.scss
+                        input/input.scss
+                        button/button.scss
                     settings/
                         global-settings.scss
                     variables/
-                        input-config.scss
-                        button-config.scss
+                        input-config/input-config.scss
+                        button-config/button-config.scss
                     styles.scss
 ```
 
-All styles should be placed in `components` folder with the same file name as a block name. For example: `components/input.scss`:
+All styles should be placed in `components` folder with the same file name as a block name. For example: `components/input/input.scss`:
 
 ```none
 .input {
@@ -37,15 +30,16 @@ All styles should be placed in `components` folder with the same file name as a 
     font-size: $font-size;
     font-family: $input-font-family;
     line-height: $input-line-height;
-    border: $input-border;
+    border: $border;
     color: $input-color;
 }
 ```
 
-Another example: `components/button.scss`:
+Another example: `components/button/button.scss`:
 
 ```none
 .button {
+    display: inline-block;
     padding: $button-padding;
     font-size: $font-size;
     font-family: $button-font-family;
@@ -58,7 +52,7 @@ Another example: `components/button.scss`:
 Global settings should contain global variables for blocks. For example: `global-settings.scss`:
 
 ```css
-$font-size: $base-font-size--xs;
+$font-size: 12px;
 $font-family: 'Thamoma';
 $line-height: 1.1;
 ```
@@ -67,7 +61,7 @@ All block variables should be placed in `variables` folder. Files should contain
 For example, `input-config.scss`:
 
 ```css
-$input-padding: spacing('md') spacing('sm') !default;
+$input-padding: 8px 9px !default;
 $input-font-size: $font-size !default;
 $input-font-family: $font-family !default;
 $input-line-height: $line-height !default;
@@ -77,11 +71,18 @@ $input-color: blue !default;
 Another example: `button-config.scss`:
 
 ```css
-$button-padding: spacing('base') spacing('base') !default;
+$button-padding: 18px 9px !default;
 $button-font-size: $font-size !default;
 $button-font-family: $font-family !default;
 $button-line-height: $line-height !default;
 $button-color: yellow !default;
+```
+
+To add blocks to resulting `styles.css` file, include them into `styles.scss`:
+
+```none
+@import: './components/input/input';
+@import: './components/button/button';
 ```
 
 To include configs in the resulting `styles.css` file, add them  to the `assets.yml` file located in `MyBundle/Resources/views/layouts/my-theme/config/`:
@@ -92,24 +93,25 @@ css:
         - 'bundles/mybundle/my-theme/scss/settings/global-settings.scss'
         - 'bundles/mybundle/my-theme/scss/variables/button-config.scss'
         - 'bundles/mybundle/my-theme/scss/variables/input-config.scss'
-        - 'bundles/mybundle/my-theme/scss/components/input.scss'
-        - 'bundles/mybundle/my-theme/scss/components/button.scss'
+        - 'bundles/mybundle/my-theme/scss/styles.scss'
     output: 'css/styles.css'
 ```
 
 The resulting `styles.css` file is the following:
 
-```none
+```css
 .input {
-    padding: spacing('md') spacing('sm');
-    font-size: $base-font-size--xs;
+    display: inline-block;
+    padding: 8px 9px;
+    font-size: 12px;
     font-family: 'Thamoma';
     line-height: 1.1;
     color: blue;
 }
 .button {
-    padding: spacing('base');
-    font-size: $base-font-size--xs;
+    display: inline-block;
+    padding: 18px 9px;
+    font-size: 12px;
     font-family: 'Thamoma';
     line-height: 1.1;
     color: yellow;
@@ -120,7 +122,7 @@ The resulting `styles.css` file is the following:
 
 In custom themes you can change globals and settings for a particular component by changing the value of the variable under the same name. You can also make your own configs for new or existing components in the extended theme.
 
-We use styles from `my-theme` and configs from `my-custom-theme`. For example: `components/button.scss`:
+We use styles from `my-theme` and configs from `my-custom-theme`. For example: `components/input/input.scss`:
 
 ```none
 .button {
@@ -142,26 +144,18 @@ $font-family: 'Arial';
 Another example: `input-config.scss`:
 
 ```css
-$input-border: 1px solid get-var-color('destructive', 'main');
+$input-border: 1px solid red;
 $input-color: purple;
 ```
 
-One more example: `button-config.scss`:
-
-```css
-$button-color: yellow !default;
-```
-
-`assets.yml` for `my-custom-theme` should be the following:
+`Assets.yml` for `my-custom-theme` should be the following:
 
 ```css
 css:
     inputs:
         - 'bundles/mybundle/my-custom-theme/scss/settings/global-settings.scss'
         - 'bundles/mybundle/my-custom-theme/scss/variables/input-config.scss'
-        - 'bundles/mybundle/my-custom-them/scss/variables/button-config.scss'
-        - 'bundles/mybundle/my-custom-them/scss/components/button.scss'
-
+        - 'bundles/mybundle/my-custom-theme/scss/styles.scss'
     output: 'css/styles.css'
 ```
 
@@ -169,13 +163,21 @@ The resulting `styles.css` file are the following:
 
 ```css
 .input {
+    display: inline-block;
+    padding: 8px 9px;
+    font-size: 14px;
+    font-family: 'Arial';
+    line-height: 1.1;
     color: purple;
-    border: 1px solid #b50400;
-    /* The rest of the properties will be inherited from the parent theme if it is defined */
+    border: 1px solid red;
 }
 .button {
+    display: inline-block;
+    padding: 18px 9px;
+    font-size: 14px;
+    font-family: 'Arial';
+    line-height: 1.1;
     color: yellow;
-    /* The rest of the properties will be inherited from the parent theme if it is defined */
 }
 .button--full {
     width: 100%

@@ -2,7 +2,7 @@
 
 # OroDigitalAssetBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/DigitalAssetBundle" target="_blank">OroDigitalAssetBundle</a> bundle provides the Digital Asset Management (DAM) functionality and CRUD for digital assets. It can be enabled for fields of type File and Image both in the back-office UI via the entity management, and via the field configuration.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/DigitalAssetBundle" target="_blank">OroDigitalAssetBundle</a> bundle provides the Digital Asset Management (DAM) functionality and CRUD for digital assets. It can be enabled for fields of type File and Image both in the back-office UI via the entity management, and via the field configuration.
 
 The following example is an illustration of how to enable DAM for the Image field type:
 

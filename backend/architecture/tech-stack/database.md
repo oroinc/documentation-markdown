@@ -71,7 +71,7 @@ doctrine:
                     id:   doctrine.metadata.cache
 ```
 
-Read more on <a href="https://symfony.com/doc/6.4/reference/configuration/doctrine.html" target="_blank">DoctrineBundle Configuration</a> for more information.
+Read more on <a href="https://symfony.com/doc/5.4/reference/configuration/doctrine.html" target="_blank">DoctrineBundle Configuration</a> for more information.
 
 ## Scalability and Performance Recommendations
 
@@ -140,7 +140,7 @@ Enable PostgreSQL Slow query Logs for logging slow queries. This can help to det
 * <a href="https://www.percona.com/software/postgresql-distribution" target="_blank">Percona Distribution for PostgreSQL</a>
 * <a href="https://wiki.postgresql.org/wiki/Performance_Optimization" target="_blank">PostgreSQL Performance Optimization</a>
 * <a href="https://github.com/jfcoz/postgresqltuner" target="_blank">PostgreSQL Tuner</a>
-* <a href="https://symfony.com/doc/6.4/reference/configuration/doctrine.html" target="_blank">Symfony: DoctrineBundle Configuration</a>
+* <a href="https://symfony.com/doc/5.4/reference/configuration/doctrine.html" target="_blank">Symfony: DoctrineBundle Configuration</a>
 * [Logging Conventions](../../../community/contribute/code-logging.md#community-contribute-logging-conventions)
 
 <!-- Frontend -->

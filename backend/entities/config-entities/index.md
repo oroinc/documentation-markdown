@@ -2,32 +2,34 @@
 
 # Configure Entities
 
-So far, Doctrine offers a wide range of functionality to map your entities to the database, save your data, and retrieve them from the database. However, in an application based on the OroPlatform, you usually want to control how entities are presented to the user. OroPlatform includes the <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/EntityConfigBundle" target="_blank">EntityConfigBundle</a> that makes it easy to configure additional metadata of your entities, as well as the fields of your entities. For example, you can now configure icons and labels used when showing an entity in the UI, or you can set up access levels to control how entities can be viewed and modified.
+So far, Doctrine offers a wide range of functionality to map your entities to the database, save your data, and retrieve them from the database. However, in an application based on the OroPlatform, you usually want to control how entities are presented to the user. OroPlatform includes the <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/EntityConfigBundle" target="_blank">EntityConfigBundle</a> that makes it easy to configure additional metadata of your entities, as well as the fields of your entities. For example, you can now configure icons and labels used when showing an entity in the UI, or you can set up access levels to control how entities can be viewed and modified.
 
 ## Configure Entities and Their Fields
 
 Entities will not be configurable by default. They must be tagged as configurable entities to let the system apply entity config options to them:
 
-* The #[Config] attribute is used to enable entity-level configuration for an entity.
-* Use the #[ConfigField] attribute to enable config options for selected fields.
+* The @Config annotation is used to enable entity-level configuration for an entity.
+* Use the @ConfigField annotation to enable config options for selected fields.
 
 #### TIP
 The bundles from OroPlatform offer a large set of predefined options that you can use in your entities to configure them and control their behavior. Take a look at the `entity_config.yml` files that can be found in many bundles and read their dedicated documentation.
 
-### The `#[Config]` Attribute
+### The `@Config` Annotation
 
-To make the `Document` entity from the first part of the chapter configurable, import the `Oro\Bundle\EntityConfigBundle\Metadata\Attribute\Config` attribute and use it:
+To make the `Document` entity from the first part of the chapter configurable, import the `Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config` annotation and use it in the class docblock:
 
 *src/Acme/Bundle/DemoBundle/Entity/Document.php*
 ```php
  namespace Acme\Bundle\DemoBundle\Entity;
 
  use Doctrine\ORM\Mapping as ORM;
- use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\Config;
+ use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config;
 
- #[ORM\Entity]
- #[ORM\Table(name: 'acme_demo_document')]
- #[Config]
+ /**
+  * @ORM\Entity
+  * @ORM\Table(name="acme_demo_document")
+  * @Config
+  */
  class Document
  {
      // ...
@@ -41,28 +43,45 @@ You can also change the default value of each configurable option using the `def
 namespace Acme\Bundle\DemoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Oro\Bundle\EntityConfigBundle\Attribute\Entity\AttributeFamily;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config;
 
 /**
  * ORM Entity Document.
+ *
+ * @ORM\Table(
+ *     name="acme_demo_document"
+ * )
+ * @Config(
+ *     defaultValues={
+ *         "dataaudit"={
+ *             "auditable"=true
+ *         },
+ *     }
+ * )
  */
-#[ORM\Table(name: 'acme_demo_document')]
-#[Config(
-    defaultValues: [
-        'dataaudit' => ['auditable' => true],
-    ]
-)]
 ```
 
-### The `#[ConfigField]` Attribute
+### The `@ConfigField` Annotation
 
-Similar to the `#[Config]` attribute for entities, you can use the `Oro\Bundle\EntityConfigBundle\Metadata\Attribute\ConfigField` attribute to make properties of an entity configurable. Default values can be changed the same way as for the entity level:
+Similar to the `@Config` annotation for entities, you can use the `Oro\Bundle\EntityConfigBundle\Metadata\Annotation\ConfigField` annotation to make properties of an entity configurable. Default values can be changed the same way as for the entity level:
 
 *src/Acme/Bundle/DemoBundle/Entity/Document.php*
 ```php
     // ...
-    #[ORM\Column(name: 'subject', type: 'string', length: 255, nullable: false)]
-    #[ConfigField(defaultValues: ['dataaudit' => ['auditable' => true], 'importexport' => ['identity' => true]])]
+    /**
+     * @ORM\Column(
+     *     name="subject",
+     *     type="string",
+     *     length=255,
+     *     nullable=false
+     * )
+     * @ConfigField(
+     *     defaultValues={
+     *         "dataaudit"={
+     *             "auditable"=true
+     *         },
+     * )
+     */
     private $subject;
     // ...
 ```

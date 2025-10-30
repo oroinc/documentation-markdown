@@ -2,6 +2,9 @@
 
 # OpenAPI Specifications Management
 
+#### NOTE
+This feature is available as of OroCommerce version 5.1.8.
+
 This section describes how to create and manage OpenAPI specifications for different types of REST APIs provided by Oro applications.
 
 ## Create an OpenAPI Specification
@@ -25,7 +28,7 @@ Once saved, a request to create the specification is sent and the specification 
 
 ![A list of all OpenAPI specifications](user/img/system/integrations/openapi/grid.png)
 
-You can download <i class="fa fa-download fa-lg" aria-hidden="true"></i>, renew ![Reset-SVG](_themes/sphinx_rtd_theme/static/svg-icons/reset.svg), view <i class="fa fa-eye fa-lg" aria-hidden="true"></i>, edit <i class="fa fa-edit fa-lg" aria-hidden="true"></i>, clone <i class="far fa-copy" aria-hidden="true"></i>, and delete ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) specifications using the corresponding action icons.
+You can download <i class="fa fa-download fa-lg" aria-hidden="true"></i>, renew <i class="fas fa-sync-alt" aria-hidden="true"></i>, view <i class="fa fa-eye fa-lg" aria-hidden="true"></i>, edit <i class="fa fa-edit fa-lg" aria-hidden="true"></i>, clone <i class="far fa-copy" aria-hidden="true"></i>, and delete <i class="fas fa-trash-alt" aria-hidden="true"></i> specifications using the corresponding action icons.
 
 Once you have finished the configuration of a specification and want to make it read-only, click Publish <i class="fas fa-share-square" aria-hidden="true"></i>. Also, when the public slug is provided, a published specification will be available for unauthorized users to download.
 
@@ -34,20 +37,3 @@ Once you have finished the configuration of a specification and want to make it 
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

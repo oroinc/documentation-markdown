@@ -2,19 +2,33 @@
 
 # Create Account in the Storefront
 
-To create a new account:
+First things first, you need to create a new account to be able to work with the store:
 
-1. Click **Sign Up** in the top navigation bar. You can also click **Log In** and then **Sign Up** at the bottom of the form.
-   ![The Sign In page](user/img/storefront/sign_in/register_sign_in.png)
-2. Provide the following mandatory details in the form:
-   ![image](user/img/storefront/CreateAccForm.png)
+1. On the website landing page, click **Register** in the top left corner.
+   ![image](user/img/storefront/registration_link_1.png)
+
+#### NOTE
+In case there is no such link in the top left corner, which depends on the configuration, click **Sign In** instead. Then, click **Create an Account** at the bottom of the form.
+
+![image](user/img/storefront/navigation/registration_link_3.png)
+
+The following page opens:
+
+![image](user/img/storefront/CreateAccForm.png)
+
+1. Enter the required details in the provided fields. All fields are mandatory:
    * Company Name
    * First Name
    * Last Name
    * Email Address
-   * Password (must include an upper case letter and a number)
+   * Password
    * Confirm Password
-3. You may need to read and accept [mandatory (and/or optional) agreements](../account/my-profile/index.md#frontstore-guide-profile-consents) to process your personal data before you are allowed to register. Such consents are marked with a red asterisk. Select the checkbox next to the agreement or open the agreement link to view the full text of the agreement. Click **Accept** to confirm that you have read, understood and accept its conditions. You do not have to accept optional consents; these are not marked with a red asterisk.
-4. Once the form is filled in, click **Create an Account**. A sales representative will contact you to proceed with registration. Check your email to complete registration.
 
+   #### NOTE
+   The password must include an upper case letter and a number.
+2. Once the details have been provided, click **Create an Account**. A sales representative may contact you shortly to proceed with registration. Check your email to complete registration.
+
+You may need to read and accept [mandatory (and/or optional) agreements](../account/my-profile/index.md#frontstore-guide-profile-consents) to process your personal data before you are allowed to register. Such consents are marked with a red asterisk. Select the checkbox next to the agreement or open the agreement link to view the full text of the agreement. Click **Accept** to confirm that you have read, understood and accept its conditions. You do not have to accept optional consents; these are not marked with a red asterisk.
+
+![image](user/img/storefront/profile/registration_consent.png)
 <!-- finish -->

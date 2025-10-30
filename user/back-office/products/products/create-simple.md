@@ -39,7 +39,7 @@ The product details page appears.
         Select the **Sell** checkbox to enable selling the product in these units. Unless **Sell** is selected, the unit is considered a draft.
 
         You can delete the unnecessary unit of quantity by clicking the <i class="fas fa-times" aria-hidden="true"></i> **Delete** icon next to it.
-   8. In the **Tax Code** list, select the [product tax code](../../taxes/product-tax-codes/index.md#taxes-product-tax-code) that defines the percentage of tax that can be included in the purchase order during the checkout. Each product must have the related product tax code for proper tax calculation. In terms of product kits, taxes are applied to the product kit and all its kit line items individually.
+   8. In the **Tax Code** list, select the [product tax code](../../taxes/product-tax-codes/index.md#taxes-product-tax-code) that defines the percentage of tax that can be included in the purchase order during the checkout.
 
       The tax calculation process depends on the tax jurisdiction that you decided to use in OroCommerce and other tax calculation options.
 2. In the **Short Description** section, provide a short but meaningful default description that best positions the product for your target audience and will appear in the catalog listing. Move from tab to tab to localize the description by setting the required fallback option. You can select whether to fall back to the default value, parent localization, or a custom value from the dropdown. When selecting the custom value, provide the localized version of the short description in the text field.
@@ -47,8 +47,8 @@ The product details page appears.
 3. In the **Description** section, provide a long default product description that will appear on the product view page. Move from tab to tab to localize the description by setting the required fallback option. From the dropdown, you can select whether to fall back to the default value, parent localization, or a custom value. When selecting the custom value, provide the localized version of the long description in the WYSIWYG field. For more details on WYSIWYG management, see the [WYSIWYG Editor](../../../concept-guides/content-management/wysiwyg.md#getting-started-wysiwyg-editor-field) topic.
 4. In the **Image** section, add a new image to the product by clicking **+Add Image** and then **Choose Image**. You can either upload a new image or select the required one from the list of available [digital assets](../../marketing/digital-assets/index.md#digital-assets) records.
 
-> Then, select whether to show the image as *main* (the image is used in the product details view), *listing* (the image is shown in the catalog listing), or *additional* (additional product pictures displayed in the gallery on the product details page). All three categories can be selected at the same time for the main image. To remove the image, click the <i class="fas fa-times" aria-hidden="true"></i> **Delete** icon next to it.
-1. In the **Design** section, select the [page template](../../system/theme-configuration/index.md#back-office-theme-configuration) from the drop-down.
+> Then, select whether to show the image as *main* (the image is used in the product details view), *listing* (the image is shown in the catalog listing), or *additional* (additional product pictures). All three categories can be selected at the same time. To remove the image, click the <i class="fas fa-times" aria-hidden="true"></i> **Delete** icon next to it.
+1. In the **Design** section, select the [page template](page-templates.md#user-guide-page-templates) from the drop-down.
 
 > ![The list of available page templates in the dropdown of the Page Template field](user/img/products/products/SimpleProductDesign.png)
 1. In the **SEO** section, provide the following information:
@@ -69,19 +69,18 @@ The product details page appears.
 > | **Highlight Low Inventory**   | This option defines if low inventory for products is displayed in the storefront.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 > | **Inventory Threshold**       | A minimum quantity of the product treated as In stock. When a product quantity drops below this value, the product inventory status becomes Out Of Stock.                                                                                                                                                                                                                                                                                                                                                                                                          |
 > | **Low Inventory Threshold**   | The minimum stock level defined for the product. Reaching the defined level will trigger a warning message to the buyer in the storefront.                                                                                                                                                                                                                                                                                                                                                                                                                         |
-> | **Backorders**                | A flag that indicates whether OroCommerce accepts backorders (EE feature). When set to *Yes*, buyers and sale teams can order products in quantities not currently available in the warehouses. The remaining portion of the order will be sustained until the product is back in stock.                                                                                                                                                                                                                                                                           |
+> | **Backorders**                | A flag that indicates whether OroCommerce accepts backorders (EE feature). When set to *Yes*, buyers and salespeople can order products in quantities not currently available in the warehouses. The remaining portion of the order will be sustained until the product is back in stock.                                                                                                                                                                                                                                                                          |
 > | **Decrement Inventory**       | A flag that indicates whether OroCommerce decrements inventory upon order. A product quantity can become negative when both **Decrement Inventory** and **Backorders** are enabled.                                                                                                                                                                                                                                                                                                                                                                                |
 > | **Minimum Quantity to Order** | A minimum quantity that a buyer or salesperson can claim in the RFQ, customer order, quote, or a shopping list.                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 > | **Maximum Quantity to Order** | A maximum quantity that a buyer or salesperson can claim in the RFQ, customer order, [quote](../../sales/quotes/index.md#user-guide-sales-quotes), or a shopping list.                                                                                                                                                                                                                                                                                                                                                                                             |
-> | **Is Upcoming**               | This option informs a customer that the product of the selected category is not currently in stock but will be available later. When set to *Yes*, an additional **Availability Date** is displayed. To remove the upcoming products label, set the option to *No* or customize the required behavior in the [system configuration](../../system/configuration/commerce/inventory/product-options.md#upcoming-products-config).                                                                                                                                    |
-> | **Availability Date**         | The date which indicates the exact date and time when the selected product will be restocked.                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+> | **Is Upcoming**               | This option informs a customer that the product of the selected category is not in stock currently but will be available later. When set to *Yes*, an additional **Availability Date** is displayed. To remove the upcoming products label, set the option to *No* or customize the required behavior in the [system configuration](../../system/configuration/commerce/inventory/product-options.md#upcoming-products-config).                                                                                                                                    |
+> | **Availability Date**         | The date which indicates the exact date and time since the selected product will be available in stock.                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 > <!-- finish_inventory -->![The detailed settings of the inventory section](user/img/products/products/simple_product_inventory.png)
-1. Provide [price attributes](../price-attributes/index.md#user-guide-products-price-attributes) (if available), and fixed product prices in the **Product Price** section. Note that fixed prices override the automatically generated [price lists](../../../concept-guides/catalog-promotions/pricing/index.md#user-guide-pricing).
+1. Add fixed product prices in the **Product Price** section. Note that fixed prices override the automatically generated [price lists](../../../concept-guides/catalog-promotions/pricing/index.md#user-guide-pricing).
 
    Click **+Add**, select a price list, and specify quantity, units, price value, and currency.
    ![The product prices setting](user/img/products/products/SimpleProductPrices.png)
-2. In the **Shipping Options** section, click **+Add Options** and provide unit, weight, and weight measuring unit, dimensions (width, height, depth), and dimensions measuring unit and freight class. You can also provide shipping cost below, if necessary.
-   ![image](user/img/products/products/shipping-options.png)
+2. In the **Shipping Options** section, click **+Add Options** and provide unit, weight, and weight measuring unit, dimensions (width, height, depth), and dimensions measuring unit and freight class.
 3. Review translation rules for a product name, URL slug, long description, and short description.
 
    To enter translation manually, click <i class="fas fa-language" aria-hidden="true"></i>, clear the **Use <parent translation>** checkbox next to the required language, and provide your translation version.
@@ -111,7 +110,7 @@ To add related products to the product information:
    This will close the dialog and update the related items list with the products you have selected.
 
    #### NOTE
-   To delete a related item, click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete**  next to it.
+   To delete a related item, click <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete**  next to it.
 6. Once you add the related items, click **Save and Close**.
 
 Now, you can configure related products [globally](../../system/configuration/commerce/catalog/global-related-products.md#sys-commerce-catalog-relate-products), per [organization](../../system/user-management/organizations/org-configuration/commerce/catalog/organization-related-products.md#sys-users-organization-commerce-catalog-related-products), and per [website](../../system/websites/web-configuration/commerce/catalog/website-related-products.md#sys-websites-commerce-catalog-related-products) in the system configuration.
@@ -134,7 +133,7 @@ To add up-sell items to the product information:
    This will close the dialog and update the related items list with the products you have selected.
 
    #### NOTE
-   To delete a related item, click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete**  next to it.
+   To delete a related item, click <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete**  next to it.
 7. Once you add the related items, click **Save and Close**.
 
 Now, you can configure up-sell products [globally](../../system/configuration/commerce/catalog/global-related-products.md#sys-commerce-catalog-relate-products), per [organization](../../system/user-management/organizations/org-configuration/commerce/catalog/organization-related-products.md#sys-users-organization-commerce-catalog-related-products), and per [website](../../system/websites/web-configuration/commerce/catalog/website-related-products.md#sys-websites-commerce-catalog-related-products) in the system configuration.
@@ -145,20 +144,3 @@ Now, you can configure up-sell products [globally](../../system/configuration/co
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

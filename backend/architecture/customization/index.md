@@ -48,7 +48,7 @@ Running the application in development mode (via the `http://<oro-application-ba
 ### Implement the Customization
 
 #### NOTE
-We recommend that you follow <a href="https://symfony.com/doc/6.4/best_practices/index.html" target="_blank">Symfony Best Practices</a> for any custom application you build on top of the Oro applications. Please refer to the [Oro application structure](../structure/index.md#architecture-oro-php-application-structure) and <a href="https://symfony.com/doc/6.4/bundles.html" target="_blank">Symfony Bundle System</a> for more information.
+We recommend that you follow <a href="https://symfony.com/doc/5.4/best_practices/index.html" target="_blank">Symfony Best Practices</a> for any custom application you build on top of the Oro applications. Please refer to the [Oro application structure](../structure/index.md#architecture-oro-php-application-structure) and <a href="https://symfony.com/doc/5.4/bundles.html" target="_blank">Symfony Bundle System</a> for more information.
 
 Use the src directory in the root of your Oro application as a working directory for your custom project.
 
@@ -117,7 +117,7 @@ Use Symfony inheritance (e.g., override controllers, templates, routes of this p
 
 #### [Symfony] Replace Services
 
-Decorate existing services to change their default behavior. For more information, see <a href="https://symfony.com/doc/6.4/service_container/service_decoration.html" target="_blank">How to decorate services</a> topic in Symfony documentation.
+Decorate existing services to change their default behavior. For more information, see <a href="https://symfony.com/doc/5.4/service_container/service_decoration.html" target="_blank">How to decorate services</a> topic in Symfony documentation.
 
 #### [Symfony] Use Dependency Injection Tags
 
@@ -154,7 +154,7 @@ To get the list of listeners registered in the event dispatcher, use the followi
 
 ``php bin/console debug:event-dispatcher``
 
-See the <a href="https://symfony.com/doc/6.4/event_dispatcher.html" target="_blank">Event dispatcher</a> topic in the Symfony documentation for more information.
+See the <a href="https://symfony.com/doc/5.4/event_dispatcher.html" target="_blank">Event dispatcher</a> topic in the Symfony documentation for more information.
 
 #### [Oro] Customization via Configuration Files
 
@@ -166,7 +166,7 @@ Please, see the [System Configuration](../../configuration/yaml/system-configura
 
 #### [Oro] Customization Using Twig Placeholders
 
-In the Oro application, you can use a new Twig template {placeholder} token/tag that triggers an event-like behavior when the template is rendered. For example, you can add new markup to the existing template generated at the vendor level and keep other parts of the template intact. Please, see the <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/UIBundle#introduction-to-placeholders" target="_blank">Introduction to Placeholders</a> topic for more details.
+In the Oro application, you can use a new Twig template {placeholder} token/tag that triggers an event-like behavior when the template is rendered. For example, you can add new markup to the existing template generated at the vendor level and keep other parts of the template intact. Please, see the [Introduction to Placeholders](../../../bundles/platform/UIBundle/twig-placeholders.md#bundle-docs-platform-ui-bundle-twig-placeholders) topic for more details.
 
 #### [Oro] Customization by Modifying the Database Schema
 

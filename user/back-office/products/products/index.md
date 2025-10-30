@@ -31,6 +31,9 @@ Unlike a simple product, a configurable product is an item available in multiple
 
 A product kit is an assortment of products, each with their individual SKUs. Each product in this assortment bundle can be mandatory or optional for the buyers to buy in order to proceed though the checkout. An example of a product kit would be a lamp with a selection of optional accessories for it, such as spare bulbs of different wattage.
 
+#### NOTE
+Product Kits in the back-office are available as of 5.1LTS. Product Kits in the storefront are available as of 5.1.3. By default, the product kits feature is disabled for v.5.1 but you can enable it with developer assistance in the <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/ProductBundle/Resources/config/oro/app.yml" target="_blank">yaml file of the ProductBundle</a>.
+
 * [Create a simple product](create-simple.md#products-products-create-simple-product)
 * [Create a configurable product](create-complex.md#products-products-create-config-product)
 * [Set up a matrix form and variations of a configurable product](../../system/configuration/commerce/product/global-configurable-products.md#config-guide-landing-commerce-products-configurable-products)

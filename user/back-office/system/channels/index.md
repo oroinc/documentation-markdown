@@ -39,12 +39,12 @@ To create a channel:
 
    Other entities are added to channels of a specific type by default. However, they are optional and can be removed.
 
-   To delete an entity, click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete**. The action removes the entity from the channel’s list, but not from the system.
+   To delete an entity, click <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete**. The action removes the entity from the channel’s list, but not from the system.
 6. Click **Save and Close** to save the channel.
 
 ## Manage Channels
 
-From the channels grid, you can <i class="fa fa-eye fa-lg" aria-hidden="true"></i> view, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit, or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) delete the selected channel by hovering over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the item and clicking the required button.
+From the channels grid, you can <i class="fa fa-eye fa-lg" aria-hidden="true"></i> view, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit, or <i class="fas fa-trash-alt" aria-hidden="true"></i> delete the selected channel by hovering over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the item and clicking the required button.
 
 #### CAUTION
 Once a channel is deleted, the associated data is removed as well.
@@ -61,20 +61,3 @@ Note that you will receive an error message if you do not have the necessary per
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

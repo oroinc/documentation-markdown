@@ -37,7 +37,9 @@ class CSVFilePriceStorage implements ProductPriceStorageInterface
         $this->doctrineHelper = $doctrineHelper;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getPrices(
         ProductPriceScopeCriteriaInterface $scopeCriteria,
         array $products,
@@ -64,7 +66,9 @@ class CSVFilePriceStorage implements ProductPriceStorageInterface
         return $prices;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getSupportedCurrencies(ProductPriceScopeCriteriaInterface $scopeCriteria)
     {
         /**
@@ -104,7 +108,7 @@ ProductPriceScopeCriteriaInterface contains all information that may be needed f
 ## Replacing Default Storage
 
 To replace default storage implementation decorate oro_pricing.storage.prices service.
-Read more in the Symfony article on <a href="https://symfony.com/doc/6.4/service_container/service_decoration.html" target="_blank">How to decorate services</a>.
+Read more in the Symfony article on <a href="https://symfony.com/doc/5.4/service_container/service_decoration.html" target="_blank">How to decorate services</a>.
 
 Service definition example:
 
@@ -122,7 +126,7 @@ acme_pricing.storage.csv_file:
 Oro pricing is controlled by the oro_pricing feature. It may be disabled by switching off the appropriate system config option
 or by voting VoterInterface::FEATURE_DISABLED for the oro_pricing feature.
 
-For more information, see <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/FeatureToggleBundle/README.md" target="_blank">Feature Toggle Bundle</a>.
+For more information, see [Feature Toggle Bundle](../../platform/FeatureToggleBundle/index.md#bundle-docs-platform-feature-toggle-bundle).
 
 Voter example:
 
@@ -138,7 +142,9 @@ class PricingVoter implements VoterInterface
 {
     const PRICING_FEATURE_NAME = 'oro_pricing';
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function vote($feature, $scopeIdentifier = null)
     {
         if ($feature === self::PRICING_FEATURE_NAME) {

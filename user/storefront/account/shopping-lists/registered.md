@@ -8,7 +8,7 @@ Shopping lists can be created using several flows.
 
 **Flow 1**
 
-1. Click ![ChevronDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/chevron-down.svg) next to **Shopping Lists** on the top right of the page.
+1. Click <i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i> next to **Shopping Lists** on the top right of the page.
 2. Click **Create New List** on the bottom of the drop-down window.
 3. Give the list a name and click **Create**.
 
@@ -16,7 +16,7 @@ Shopping lists can be created using several flows.
 
 **Flow 2**
 
-1. Click on the drop-down icon ![ChevronDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/chevron-down.svg) located in the **Add to** button next to each product.
+1. Click on the drop-down icon <i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i> located in the **Add to** button next to each product.
 2. Select **Create New Shopping List**.
 3. Give the list a name and click **Create**.
 
@@ -33,30 +33,33 @@ Shopping lists can be created using several flows.
 **Flow 4**
 
 1. In the Quick Order Form, enter product SKU(s) and quantity.
-2. Open the dropdown next to the **Add to Shopping List** button.
-3. Select **+ Create New Shopping List**.
-4. Give the list a name and click **Create**.
+2. Click **Verify Order**.
+3. In the Verify Order window, Click **Add to** on the top.
+4. Select **Create New Shopping List**.
+5. Give the list a name and click **Create**.
 
 ![image](user/img/storefront/shopping_lists/CreateShoppingListQuickOrder.png)
 
 **Flow 5**
 
-Configurable products (products that have many variations) can be purchased either via an [inline or pop-up matrix form](../../../back-office/system/configuration/commerce/product/global-configurable-products.md#config-guide-landing-commerce-products-configurable-products). You can create a new shopping list next to **Add to Shopping Lst** by clicking on the drop-down icon ![ChevronDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/chevron-down.svg) and then **Create Shopping List**.
+1. Open [Matrix Ordering Form](../../orders/matrix-form.md#frontstore-guide-orders-matrix).
 
-Pop-up Matrix Form:
+![image](user/img/storefront/orders/HatProductPage.png)
+1. Enter the number of items for each category.
 
-![image](user/img/storefront/shopping_lists/pop-up-matrix.png)
+![image](user/img/storefront/orders/MatrixForm.png)
+1. Click on the drop-down icon <i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i> located in the **Add to** button next to each product.
+2. Select **Create New Shopping List**.
 
-Inline Matrix Form:
-
-![image](user/img/storefront/shopping_lists/inline-matrix.png)
+![image](user/img/storefront/orders/MatrixFormShoppngList.png)
+1. Give the list a name and click **Create**.
 
 **Flow 6**
 
 Duplicate the already existing shopping list to make multiple similar orders:
 
 1. Open a shopping list.
-2. Click the ![MoreHorizontal-SVG](_themes/sphinx_rtd_theme/static/svg-icons/more-horizontal.svg) **More Options** menu at the end of the list header row.
+2. Click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the list header row.
 3. Click **Duplicate** from the dropdown list.
 4. A copy of the shopping list will be created.
 
@@ -68,9 +71,14 @@ Duplicate the already existing shopping list to make multiple similar orders:
 
 Create a new shopping list when selecting multiple products using mass action on the product listing page.
 
-1. Select the required items one by one, or click **Select All on Page**.
-2. Click ![ChevronUp-SVG](_themes/sphinx_rtd_theme/static/svg-icons/chevron-up.svg) next to **Add to Shopping List** and click **Create New Shopping List** from the drop-down.
+1. Select the required items by clicking **Select Item**.
+
+   #### NOTE
+   **Select Item** can be placed under or next to the item depending on the [display options](../../getting-started/common-controls.md#frontstore-guide-navigation-display-options).
+2. Click **Choose Action** on the top left next to the **Sort by** option.
    ![image](user/img/storefront/navigation/MassActionProductListing.png)
+3. Click **Create New Shopping List**.
+4. Give the list a name and click **Create**.
 
 <a id="frontstore-guide-shopping-lists-view"></a>
 
@@ -95,7 +103,7 @@ Here you can add a note to the current shopping list, as well as each of the ite
 
 ## Manage Shopping Lists
 
-While adding a product to a shopping list, click ![ChevronDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/chevron-down.svg) to view a list of additional options available for the selected product.
+While adding a product to a shopping list, click <i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i> to view a list of additional options available for the selected product.
 
 > ![image](user/img/storefront/shopping_lists/shopping_list_dropdown_1.png)
 * To add the product to the current shopping list, click **Add to Shopping List X**.
@@ -106,40 +114,33 @@ While adding a product to a shopping list, click ![ChevronDown-SVG](_themes/sphi
 
 To edit the shopping list name from within its view page:
 
-1. Click the ![MoreHorizontal-SVG](_themes/sphinx_rtd_theme/static/svg-icons/more-horizontal.svg) **More Options** menu at the end of the list header row and then click ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) **Rename**.
+1. Click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the list header row and then click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Rename**.
 
 ![image](user/img/storefront/shopping_lists/SHEditName.png)
 1. Enter a new name and click **Save**.
 
+![image](user/img/storefront/shopping_lists/SHEditName2.png)
+
 To delete the shopping list:
 
-1. Click the ![MoreHorizontal-SVG](_themes/sphinx_rtd_theme/static/svg-icons/more-horizontal.svg) **More Options** menu at the end of the list header row and then ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) Delete.
+1. Click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the list header row and then <i class="fas fa-trash-alt" aria-hidden="true"></i> Delete.
 2. Confirm the deletion by clicking **Yes, Delete** in the confirmation window.
+
+![image](user/img/storefront/shopping_lists/SHDelete.png)
 
 To create an order from the shopping list:
 
-1. Click **Checkout** in the **Summary** section of the shopping list page.
+1. Click **Create Order** in the **Summary** section of the shopping list page.
 
 ![image](user/img/storefront/shopping_lists/SHCreateOrder.png)
 
 To create a request for quote from the shopping list:
 
-1. Click **Request Quote** in the **Summary** section of the shopping list page.
+1. Click <i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i> next to the **Create Order** button in the **Summary** section of the shopping list page.
+2. Click **Request Quote**.
 
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->
+<!-- fa-bars = fa-navicon -->
+<!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
+<!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
+<!-- Check mark in the square. -->
+<!-- SortDesc is also used as drop-down arrow -->

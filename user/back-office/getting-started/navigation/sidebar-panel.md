@@ -55,7 +55,7 @@ You can:
 
 - <i class="fas fa-sync-alt" aria-hidden="true"></i> Refresh the content (e.g., load the most current emails or tasks).
 - <i class="fa fa-cog fa-lg" aria-hidden="true"></i> Configure the widget settings.
-- ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) Remove the widget from the sidebar.
+- <i class="fas fa-trash-alt" aria-hidden="true"></i> Remove the widget from the sidebar.
 - **x** close the widget (appears when the panel is minimized).
 
 #### HINT
@@ -111,27 +111,10 @@ You can perform the following actions with the task list sidebar widget:
 * Refresh the list of tasks by clicking <i class="fas fa-sync-alt" aria-hidden="true"></i>.
 * Configure the parameters for a widget by clicking <i class="fa fa-cog fa-lg" aria-hidden="true"></i>.
 * Change a number of displayed tasks by entering the required value into the **Number of tasks to show** field. Click **OK**.
-* Remove the widget from a dashboard by clicking ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg).
+* Remove the widget from a dashboard by clicking <i class="fas fa-trash-alt" aria-hidden="true"></i>.
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

@@ -4,11 +4,11 @@
 
 Together with [Operations](index.md#bundle-docs-platform-action-bundle-operations), ActionBundle provides a helpful way for a developer to add specific User Interface Buttons for some context matches that are common in the OroPlatform-based applications.
 
-Mainly, those are entity (FQCN with optional id), routeName, grid (the datagrid name), referrer (a URL), group (any named type of a group), and everything that matches the <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ActionBundle/Button/ButtonSearchContext.php" target="_blank">ButtonSearchContext</a> model parameters.
+Mainly, those are entity (FQCN with optional id), routeName, grid (the datagrid name), referrer (a URL), group (any named type of a group), and everything that matches the <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/ActionBundle/Button/ButtonSearchContext.php" target="_blank">ButtonSearchContext</a> model parameters.
 
-Then, a developer can implement any ButtonProviderExtension <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ActionBundle/Extension/ButtonProviderExtensionInterface.php" target="_blank">by the interface</a> and send a list of buttons to the general button provider that allocates found buttons within a proper UI context.
+Then, a developer can implement any ButtonProviderExtension <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/ActionBundle/Extension/ButtonProviderExtensionInterface.php" target="_blank">by the interface</a> and send a list of buttons to the general button provider that allocates found buttons within a proper UI context.
 
-To add a new ButtonProvider to the system, implement the <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ActionBundle/Extension/ButtonProviderExtensionInterface.php" target="_blank">ButtonProviderExtensionInterface</a> and then register it as a service with the oro_action.provider.button tag.
+To add a new ButtonProvider to the system, implement the <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/ActionBundle/Extension/ButtonProviderExtensionInterface.php" target="_blank">ButtonProviderExtensionInterface</a> and then register it as a service with the oro_action.provider.button tag.
 
 For example, if Operations are implemented in an above-mentioned way, the button provider service looks as follows:
 
@@ -25,11 +25,11 @@ The provider returns an array of ButtonInterface implementations from the find m
 
 Additionally, if the button search context is not fully defined at find, the ButtonProviderExtensionInterface::isAvailable() method is called as a filtering mechanism.
 
-The <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ActionBundle/Button/ButtonInterface.php" target="_blank">\`ButtonInterface\`</a> implementation collects all the data required for rendering, mostly from ButtonSearchContext.
+The <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/ActionBundle/Button/ButtonInterface.php" target="_blank">\`ButtonInterface\`</a> implementation collects all the data required for rendering, mostly from ButtonSearchContext.
 You can control the button representation (view) through the ButtonInterface::getTemplate() template and its data (via ButtonInterface::getTemplateData()).
 
 ## Button Match Event
 
-You can rely on the oro_action.button_provider.on_buttons_matched event, which is dispatched with the general @event_dispatcher service and emits currently matched buttons collection connected to the <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ActionBundle/Provider/Event/OnButtonsMatched.php" target="_blank">\`OnButtonsMatched\`</a> event object.
+You can rely on the oro_action.button_provider.on_buttons_matched event, which is dispatched with the general @event_dispatcher service and emits currently matched buttons collection connected to the <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/ActionBundle/Provider/Event/OnButtonsMatched.php" target="_blank">\`OnButtonsMatched\`</a> event object.
 
 <!-- Frontend -->

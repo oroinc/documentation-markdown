@@ -5,7 +5,7 @@
 #### IMPORTANT
 Multi-organization management is only available in the Enterprise edition.
 
-From the page of the selected organization, you can edit its menu(s), access organization configuration settings, update the details for the selected organization, as well as manage its users. In OroCommerce, you can also edit the storefront menu for required organizations.
+From the page of the selected organization, you can edit its menu(s), access organization configuration settings, update the details for the selected organization, as well as manage its users. In OroCommerce, you can also edit the frontend menu for required organizations.
 
 To open the page of a specific organization:
 
@@ -14,7 +14,7 @@ To open the page of a specific organization:
    > ![Organization details page](user/img/system/user_management/organization_page_details.png)
    * To open [organization configuration settings](org-configuration/index.md#doc-organization-configuration), click <i class="fas fa-cog" aria-hidden="true"></i> **Configuration** on the top right.
    * To edit the [back-office menu](../../menus/index.md#doc-config-menus) for this organization, click <i class="fas fa-cog" aria-hidden="true"></i> **Edit Menu** on the top right.
-   * To edit the [storefront menu](../../frontend-menus/index.md#backend-frontend-menus) for this organization in OroCommerce, click <i class="fas fa-cog" aria-hidden="true"></i>  **Edit Storefront Menu**.
+   * To edit the [storefront menu](../../frontend-menus/index.md#backend-frontend-menus) for this organization in OroCommerce, click <i class="fas fa-cog" aria-hidden="true"></i>  **Edit Frontend Menu**.
    * To update organization details, such as it name or access level, click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit**.
    * To view who updated organization details, click the **Change History** link.
    * To disable users within the organization, click <i class="fa fa-ban fa-lg" aria-hidden="true"></i> in the table at the end of the row of the selected user.
@@ -28,20 +28,3 @@ Keep in mind that only those customer user roles that have been created in the c
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

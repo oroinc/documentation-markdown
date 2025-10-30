@@ -74,7 +74,7 @@ server {
 Make sure that the web server user has permissions for the `log` directory of the application.
 
 More details on the file permissions configuration are available
-<a href="https://symfony.com/doc/6.4/setup/file_permissions.html" target="_blank">in the official Symfony documentation</a>.
+<a href="https://symfony.com/doc/5.4/setup/file_permissions.html" target="_blank">in the official Symfony documentation</a>.
 
 #### BUSINESS TIP
 ## Business Tip

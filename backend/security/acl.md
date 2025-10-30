@@ -9,7 +9,7 @@ Each application user is granted access to a particular subset of your companyâ€
 
 ## Access Control Lists
 
-Access Control Lists are an essential part of the <a href="https://symfony.com/doc/6.4/components/security.html" target="_blank">Symfony Security Components</a>. The OroSecurityBundle leverages them to fulfill the requirements of companies in the business context.
+Access Control Lists are an essential part of the <a href="https://symfony.com/doc/5.4/components/security.html" target="_blank">Symfony Security Components</a>. The OroSecurityBundle leverages them to fulfill the requirements of companies in the business context.
 
 #### HINT
 You can find detailed information about <a href="https://github.com/symfony/acl-bundle/blob/main/src/Resources/doc/index.rst" target="_blank">Symfony ACL-based security model</a> in the Symfony documentation.
@@ -89,16 +89,20 @@ Remember that once the entity is created, you can no longer change its ownership
 
 ## Configuring Permissions for Entities
 
-To be able to protect access to your entities, you first have to configure which permissions can be granted to a user to them. Use the `security` scope in the `defaultValues` section of the `#[Config]` attribute:
+To be able to protect access to your entities, you first have to configure which permissions can be granted to a user to them. Use the `security` scope in the `defaultValues` section of the `@Config` annotation:
 
 *src/Acme/Bundle/DemoBundle/Entity/Favorite.php*
 ```php
-#[Config(
-    defaultValues: [
-        'security' => ['type' => 'ACL', 'permissions' => 'All', 'group_name' => '', 'category' => ''],
-        'dataaudit' => ['auditable' => true]
-    ]
-)]
+ * @Config(
+ *     defaultValues={
+ *         "security"={
+ *             "type"="ACL",
+ *             "permissions"="All",
+ *             "group_name"="",
+ *             "category"="",
+ *         },
+ *     }
+ * )
 ```
 
 #### NOTE
@@ -116,13 +120,15 @@ The **category** parameter is used to categorize an entity. It is used to split 
 By default (or when using the special `ALL` value for the `permissions` property as in the example above), any [available permission](#permissions) can be granted to a user on an entity. If you want to restrict the available permissions for an entity, you can list them separated. For example, you limit it to the `VIEW` and `EDIT` permissions:
 
 ```php-annotations
-...
-    'security' => [
-        'type' => 'ACL',
-        'permissions' => 'VIEW;EDIT',
-        'group_name' => 'DemoGroup',
-    ]
-...
+/**
+ * ...
+ *     "security"={
+ *       "type"="ACL",
+ *       "permissions"="VIEW;EDIT",
+ *       "group_name"="DemoGroup"
+ *     }
+ * ...
+ */
 ```
 
 Once an entity is marked as ACL-protected, you need to specify its ownership type. It is done with the help of the `ownership` scope in the `defaultValues` section.
@@ -133,49 +139,49 @@ For example, the config will be the following for the USER owner type:
 
 *src/Acme/Bundle/DemoBundle/Entity/Favorite.php*
 ```php
-#[Config(
-    defaultValues: [
-        'ownership' => [
-            'owner_type' => 'USER',
-            'owner_field_name' => 'owner',
-            'owner_column_name' => 'user_owner_id',
-            'organization_field_name' => 'organization',
-            'organization_column_name' => 'organization_id'
-        ],
-    ]
-)]
+ * @Config(
+ *     defaultValues={
+ *         "ownership"={
+ *             "owner_type"="USER",
+ *             "owner_field_name"="owner",
+ *             "owner_column_name"="user_owner_id",
+ *             "organization_field_name"="organization",
+ *             "organization_column_name"="organization_id"
+ *         },
+ *     }
+ * )
 ```
 
 For the business unit owner type:
 
 ```php-annotations
-#[Config(
-    defaultValues: [
-        ...
-        'ownership' => [
-            'owner_type' => 'BUSINESS_UNIT',
-            'owner_field_name' => 'owner',
-            'owner_column_name' => 'owner_id',
-            'organization_field_name' => 'organization',
-            'organization_column_name' => 'organization_id'
-        ]
-    ]
-)]
+/**
+ * @Config(
+ *   defaultValues={
+ *     ...
+ *     "ownership"={
+ *       "owner_type"="BUSINESS_UNIT",
+ *       "owner_field_name"="owner",
+ *       "owner_column_name"="owner_id",
+ *       "organization_field_name"="organization",
+ *       "organization_column_name"="organization_id"
+ *   }
+ * )
 ```
 
 For an Organization owner type, you can specify only the `owner_field_name` and `owner_column_name`:
 
 ```php-annotations
-#[Config(
-    defaultValues: [
-        ...
-        'ownership' => [
-            'owner_type' => 'ORGANIZATION',
-            'owner_field_name' => 'owner',
-            'owner_column_name' => 'owner_id'
-        ]
-    ]
-)]
+/**
+ * @Config(
+ *   defaultValues={
+ *     ...
+ *     "ownership"={
+ *       "owner_type"="ORGANIZATION",
+ *       "owner_field_name"="owner",
+ *       "owner_column_name"="owner_id"
+ *   }
+ * )
 ```
 
 #### IMPORTANT
@@ -191,7 +197,7 @@ After configuring which permissions a user can be granted to a particular entity
 
 Suppose you have configured an entity to be protectable via ACLs. You have granted some of its objects to a set of users. Now you can control who can enter specific resources through the controller method. Restricting access can be done in two different ways:
 
-1. Use the `#[Acl]` attribute on a controller method, providing the entity class name and the permission to check for:
+1. Use the `@Acl` annotation on a controller method, providing the entity class name and the permission to check for:
 
 *src/Acme/Bundle/DemoBundle/Controller/FavoriteController.php*
 ```php
@@ -200,26 +206,28 @@ Suppose you have configured an entity to be protectable via ACLs. You have grant
 namespace Acme\Bundle\DemoBundle\Controller;
 
 use Acme\Bundle\DemoBundle\Entity\Favorite;
-use Oro\Bundle\EntityBundle\ORM\DoctrineHelper;
-use Oro\Bundle\SecurityBundle\Attribute\Acl;
-use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
-use Oro\Bundle\SecurityBundle\Attribute\CsrfProtection;
+use Oro\Bundle\SecurityBundle\Annotation\Acl;
+use Oro\Bundle\SecurityBundle\Annotation\AclAncestor;
+use Oro\Bundle\SecurityBundle\Annotation\CsrfProtection;
 use Oro\Bundle\SecurityBundle\ORM\Walker\AclHelper;
-use Symfony\Bridge\Twig\Attribute\Template;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Acl\Voter\FieldVote;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 /**
  * Contains CRUD actions for Favorite
+ *
+ * @Route("/favorite", name="acme_demo_favorite_")
  */
-#[Route(path: '/favorite', name: 'acme_demo_favorite_')]
 class FavoriteController extends AbstractController
 {
-    #[Route(path: '/', name: 'index')]
-    #[Template('@AcmeDemo/Favorite/index.html.twig')]
-    #[AclAncestor('acme_demo_favorite_index')]
+    /**
+     * @Route("/", name="index")
+     * @Template
+     * @AclAncestor("acme_demo_favorite_index")
+     */
     public function indexAction(): array
     {
         return ['entity_class' => Favorite::class];
@@ -227,7 +235,7 @@ class FavoriteController extends AbstractController
 }
 ```
 
-1. When you need to perform a particular check repeatedly, write `#[Acl]` repeatedly. This, however, is tedious, especially when your requirements change and you have to change a lot of ACLs.
+1. When you need to perform a particular check repeatedly, write `@Acl` repeatedly. This, however, is tedious, especially when your requirements change and you have to change a lot of ACLs.
 
    The ACL configuration from the example above looks like this:
 
@@ -236,11 +244,11 @@ class FavoriteController extends AbstractController
 > acls:
 >     favorites_edit:
 >         type: entity
->         class: Acme\Bundle\DemoBundle\Entity\Favorite
+>         class: AcmeDemoBundle:Favorite
 >         permission: EDIT
 > ```
 
-Attribute #[AclAncestor] enables you to reuse ACL resources defined with the ACL attribute or described in the acls.yml file. The name of the ACL resource is used as the parameter of this attribute:
+Annotation @AclAncestor enables you to reuse ACL resources defined with the ACL annotation or described in the acls.yml file. The name of the ACL resource is used as the parameter of this annotation:
 
 > *src/Acme/Bundle/DemoBundle/Controller/FavoriteController.php*
 > ```php
@@ -249,26 +257,27 @@ Attribute #[AclAncestor] enables you to reuse ACL resources defined with the ACL
 > namespace Acme\Bundle\DemoBundle\Controller;
 
 > use Acme\Bundle\DemoBundle\Entity\Favorite;
-> use Oro\Bundle\EntityBundle\ORM\DoctrineHelper;
-> use Oro\Bundle\SecurityBundle\Attribute\Acl;
-> use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
-> use Oro\Bundle\SecurityBundle\Attribute\CsrfProtection;
+> use Oro\Bundle\SecurityBundle\Annotation\Acl;
+> use Oro\Bundle\SecurityBundle\Annotation\AclAncestor;
+> use Oro\Bundle\SecurityBundle\Annotation\CsrfProtection;
 > use Oro\Bundle\SecurityBundle\ORM\Walker\AclHelper;
-> use Symfony\Bridge\Twig\Attribute\Template;
+> use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 > use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-> use Symfony\Component\Routing\Attribute\Route;
+> use Symfony\Component\Routing\Annotation\Route;
 > use Symfony\Component\Security\Acl\Voter\FieldVote;
 > use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 > /**
 >  * Contains CRUD actions for Favorite
+>  *
+>  * @Route("/favorite", name="acme_demo_favorite_")
 >  */
-> #[Route(path: '/favorite', name: 'acme_demo_favorite_')]
 > class FavoriteController extends AbstractController
 > {
->     #[Route(path: '/new-edit', name: 'new_edit')]
->     #[Template('@AcmeDemo/Favorite/index.html.twig')]
->     #[AclAncestor('acme_demo_favorite_new_edit')]
+>      * @Route("/new-edit", name="new_edit")
+>      * @Template("@AcmeDemo/Favorite/index.html.twig")
+>      * @AclAncestor("acme_demo_favorite_new_edit")
+>      */
 >     public function newEditAction()
 >     {
 >         $entity = $this->getUser();
@@ -286,14 +295,14 @@ Attribute #[AclAncestor] enables you to reuse ACL resources defined with the ACL
 > }
 > ```
 
-Sometimes you want to protect a controller method from code you do not control. Therefore, you cannot add the `#[AclAncestor]` attribute to it. Use the bindings key in the YAML configuration of your ACL to define which method(s) should be protected:
+Sometimes you want to protect a controller method from code you do not control. Therefore, you cannot add the `@AclAncestor` annotation to it. Use the bindings key in the YAML configuration of your ACL to define which method(s) should be protected:
 
 > *src/Acme/Bundle/DemoBundle/Resources/config/oro/acls.yml*
 > ```yaml
 > acls:
 >     favorites_edit:
 >         type: entity
->         class: Acme\Bundle\DemoBundle\Entity\Favorite
+>         class: AcmeDemoBundle:Favorite
 >         permission: EDIT
 >         bindings:
 >             -   class: Acme\Bundle\DemoBundle\Controller\FavoritesController
@@ -335,32 +344,35 @@ When building custom DQL queries, reduce the result set being returned to the se
 namespace Acme\Bundle\DemoBundle\Controller;
 
 use Acme\Bundle\DemoBundle\Entity\Favorite;
-use Oro\Bundle\EntityBundle\ORM\DoctrineHelper;
-use Oro\Bundle\SecurityBundle\Attribute\Acl;
-use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
-use Oro\Bundle\SecurityBundle\Attribute\CsrfProtection;
+use Oro\Bundle\SecurityBundle\Annotation\Acl;
+use Oro\Bundle\SecurityBundle\Annotation\AclAncestor;
+use Oro\Bundle\SecurityBundle\Annotation\CsrfProtection;
 use Oro\Bundle\SecurityBundle\ORM\Walker\AclHelper;
-use Symfony\Bridge\Twig\Attribute\Template;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Acl\Voter\FieldVote;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 /**
  * Contains CRUD actions for Favorite
+ *
+ * @Route("/favorite", name="acme_demo_favorite_")
  */
-#[Route(path: '/favorite', name: 'acme_demo_favorite_')]
 class FavoriteController extends AbstractController
 {
-    #[Route(path: '/protected', name: 'protected')]
-    #[CsrfProtection]
-    #[Template('@AcmeDemo/Favorite/index.html.twig')]
-    #[Acl(id: 'acme_demo_favorite_protected_action', type: 'action')]
+    /**
+     * @Acl(
+     *   id="acme_demo_favorite_protected_action",
+     *   type="action"
+     * )
+     * @Route("/protected", name="protected")
+     * @Template("@AcmeDemo/Favorite/index.html.twig")
+     * @CsrfProtection()
+     */
     public function protectedAction()
     {
-        $repository = $this->container->get(DoctrineHelper::class)
-            ->getEntityManager(Favorite::class)
-            ->getRepository(Favorite::class);
+        $repository = $this->container->get('doctrine')->getRepository(Favorite::class);
         $queryBuilder = $repository
             ->createQueryBuilder('f')
             ->where('f.viewCount > :viewCount')
@@ -391,26 +403,28 @@ In this case, you can use the `isGranted` function:
 namespace Acme\Bundle\DemoBundle\Controller;
 
 use Acme\Bundle\DemoBundle\Entity\Favorite;
-use Oro\Bundle\EntityBundle\ORM\DoctrineHelper;
-use Oro\Bundle\SecurityBundle\Attribute\Acl;
-use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
-use Oro\Bundle\SecurityBundle\Attribute\CsrfProtection;
+use Oro\Bundle\SecurityBundle\Annotation\Acl;
+use Oro\Bundle\SecurityBundle\Annotation\AclAncestor;
+use Oro\Bundle\SecurityBundle\Annotation\CsrfProtection;
 use Oro\Bundle\SecurityBundle\ORM\Walker\AclHelper;
-use Symfony\Bridge\Twig\Attribute\Template;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Acl\Voter\FieldVote;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 /**
  * Contains CRUD actions for Favorite
+ *
+ * @Route("/favorite", name="acme_demo_favorite_")
  */
-#[Route(path: '/favorite', name: 'acme_demo_favorite_')]
 class FavoriteController extends AbstractController
 {
-    #[Route(path: '/new-edit', name: 'new_edit')]
-    #[Template('@AcmeDemo/Favorite/index.html.twig')]
-    #[AclAncestor('acme_demo_favorite_new_edit')]
+    /**
+     * @Route("/new-edit", name="new_edit")
+     * @Template("@AcmeDemo/Favorite/index.html.twig")
+     * @AclAncestor("acme_demo_favorite_new_edit")
+     */
     public function newEditAction()
     {
         $entity = $this->getUser();
@@ -422,15 +436,12 @@ class FavoriteController extends AbstractController
         if (!$authorizationChecker->isGranted('VIEW', new FieldVote($entity, '_field_name_'))) {
             throw new AccessDeniedException('Access denied');
         }
-
-        return ['entity_class' => Favorite::class];
-    }
 }
 ```
 
 If you need to carry out an ACL check on an object not in the controller, use the `isGranted` method of the security.authorization_checker service.
 
-The security.authorization_checker service is a public service used to check whether access to a resource is granted or denied. This service represents the <a href="https://symfony.com/doc/current/components/security/authorization.html#authorization-checker" target="_blank">Authorization Checker</a>. The implementation of the Platform specific attributes and objects is in <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/SecurityBundle/Authorization/AuthorizationChecker.php" target="_blank">AuthorizationChecker class</a>.
+The security.authorization_checker service is a public service used to check whether access to a resource is granted or denied. This service represents the <a href="https://symfony.com/doc/current/components/security/authorization.html#authorization-checker" target="_blank">Authorization Checker</a>. The implementation of the Platform specific attributes and objects is in <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/SecurityBundle/Authorization/AuthorizationChecker.php" target="_blank">AuthorizationChecker class</a>.
 
 The main entry point is the isGranted method:
 
@@ -480,8 +491,8 @@ The first ACL for $myEntity object is checked; if nothing is found, it checks th
 
 Two additional authorization checkers can also be helpful:
 
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/SecurityBundle/Authorization/ClassAuthorizationChecker.php" target="_blank">ClassAuthorizationChecker</a>
-* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/SecurityBundle/Authorization/RequestAuthorizationChecker.php" target="_blank">CRequestAuthorizationChecker</a>
+* <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/SecurityBundle/Authorization/ClassAuthorizationChecker.php" target="_blank">ClassAuthorizationChecker</a>
+* <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/SecurityBundle/Authorization/RequestAuthorizationChecker.php" target="_blank">CRequestAuthorizationChecker</a>
 
 ### Restricting Access to Non-Entity Resources
 
@@ -489,15 +500,18 @@ Sometimes, you only want to allow or deny access to a specific part of your appl
 
 *src/Acme/Bundle/DemoBundle/Controller/FavoriteController.php*
 ```php
-    #[Route(path: '/protected', name: 'protected')]
-    #[CsrfProtection]
-    #[Template('@AcmeDemo/Favorite/index.html.twig')]
-    #[Acl(id: 'acme_demo_favorite_protected_action', type: 'action')]
+    /**
+     * @Acl(
+     *   id="acme_demo_favorite_protected_action",
+     *   type="action"
+     * )
+     * @Route("/protected", name="protected")
+     * @Template("@AcmeDemo/Favorite/index.html.twig")
+     * @CsrfProtection()
+     */
     public function protectedAction()
     {
-        $repository = $this->container->get(DoctrineHelper::class)
-            ->getEntityManager(Favorite::class)
-            ->getRepository(Favorite::class);
+        $repository = $this->container->get('doctrine')->getRepository(Favorite::class);
         $queryBuilder = $repository
             ->createQueryBuilder('f')
             ->where('f.viewCount > :viewCount')
@@ -525,9 +539,11 @@ The developer can check access to the given entity field by passing the instance
 
 *src/Acme/Bundle/DemoBundle/Controller/FavoriteController.php*
 ```php
-    #[Route(path: '/new-edit', name: 'new_edit')]
-    #[Template('@AcmeDemo/Favorite/index.html.twig')]
-    #[AclAncestor('acme_demo_favorite_new_edit')]
+    /**
+     * @Route("/new-edit", name="new_edit")
+     * @Template("@AcmeDemo/Favorite/index.html.twig")
+     * @AclAncestor("acme_demo_favorite_new_edit")
+     */
     public function newEditAction()
     {
         $entity = $this->getUser();
@@ -567,7 +583,7 @@ For the security token to ignore the preferable organization, for example, an AP
 ```yaml
 oro_organization_pro:
     ignore_preferred_organization_tokens:
-        - Acme\Bundle\DemoBundle\Security\AcmeCustomToken
+        - cme\Bundle\DemoBundle\Security\AcmeWsseToken
 ```
 
 #### BUSINESS TIP

@@ -7,16 +7,19 @@
 This option is used to configure a custom column header. A field label is used by default.
 
 ```php
-use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\ConfigField;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\ConfigField;
 
 /**
  * @var string
+ *
+ * @ConfigField(
+ *      defaultValues={
+ *          "importexport"={
+ *              "header"="Custom field"
+ *          }
+ *      }
+ * )
  */
-#[ConfigField(
-    defaultValues: [
-        'importexport' => ['header' => 'Customfield']
-    ]
-)]
 protected $field;
 ```
 
@@ -25,16 +28,19 @@ protected $field;
 This option is used to configure a custom column order.
 
 ```php
-use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\ConfigField;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\ConfigField;
 
 /**
  * @var string
+ *
+ * @ConfigField(
+ *      defaultValues={
+ *          "importexport"={
+ *              "order"=100
+ *          }
+ *      }
+ * )
  */
-#[ConfigField(
-    defaultValues: [
-        'importexport' => ['order' => 100]
-    ]
-)]
 protected $field;
 ```
 
@@ -43,16 +49,19 @@ protected $field;
 The fields with this option are used to identify (search) the entity. It is possible to use multiple identity fields for one entity.
 
 ```php
-use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\ConfigField;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\ConfigField;
 
 /**
  * @var string
+ *
+ * @ConfigField(
+ *      defaultValues={
+ *          "importexport"={
+ *              "identity"=true
+ *          }
+ *      }
+ * )
  */
-#[ConfigField(
-    defaultValues: [
-        'importexport' => ['identity' => true]
-    ]
-)]
 protected $field;
 ```
 
@@ -61,16 +70,19 @@ protected $field;
 The fields with this option cannot be exported.
 
 ```php
-use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\ConfigField;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\ConfigField;
 
 /**
  * @var string
+ *
+ * @ConfigField(
+ *      defaultValues={
+ *          "importexport"={
+ *              "excluded"=true
+ *          }
+ *      }
+ * )
  */
-#[ConfigField(
-    defaultValues: [
-        'importexport' => ['excluded' => true]
-    ]
-)]
 protected $field;
 ```
 
@@ -80,15 +92,18 @@ All the fields of the related entity are exported. The fields with the [Excluded
 If **full** is set to *false* (the default value), only the fields with an identity will be exported.
 
 ```php
-use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\ConfigField;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\ConfigField;
 
 /**
  * @var string
+ *
+ * @ConfigField(
+ *      defaultValues={
+ *          "importexport"={
+ *              "full"=true
+ *          }
+ *      }
+ * )
  */
-#[ConfigField(
-    defaultValues: [
-        'importexport' => ['full' => true]
-    ]
-)]
 protected $field;
 ```

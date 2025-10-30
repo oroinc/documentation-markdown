@@ -147,7 +147,7 @@ $day = \date('l');
 
 **PHP code style continuous control**
 
-PHP code style is controlled by the <a href="https://github.com/squizlabs/PHP_CodeSniffer" target="_blank">PHP CodeSniffer tool</a> according to the rules defined <a href="https://github.com/oroinc/platform/blob/master/build/Oro/phpcs.xml" target="_blank">in the phpcs.xml file</a>.
+PHP code style is controlled by the <a href="https://github.com/squizlabs/PHP_CodeSniffer" target="_blank">PHP CodeSniffer tool</a> according to the rules defined <a href="https://github.com/oroinc/platform/blob/5.1/build/Oro/phpcs.xml" target="_blank">in the phpcs.xml file</a>.
 
 We highly recommended developers to configure appropriate code style inspections in the IDE or run these inspections manually before merging changes to the master branch. It prevents failures of the build that checks code standards.
 
@@ -156,7 +156,7 @@ Information on how to enable PHP CodeSniffer inspection with the custom set of r
 
 **PHP mess detector**
 
-PHP code quality is also checked by the <a href="http://phpmd.org/" target="_blank">PHP Mess Detector (PHPMD)</a> for potential problems according to the rules defined <a href="https://github.com/oroinc/platform/blob/master/build/phpmd.xml" target="_blank">in the phpmd.xml file</a>. It can detect possible bugs, suboptimal code, unused parameters, and helps to follow <a href="https://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29" target="_blank">SOLID</a> principles. In addition to these, PHPMD contains several rules that check for code complexity and can tell if the code could be refactored to improve future maintenance efforts.
+PHP code quality is also checked by the <a href="http://phpmd.org/" target="_blank">PHP Mess Detector (PHPMD)</a> for potential problems according to the rules defined <a href="https://github.com/oroinc/platform/blob/5.1/build/phpmd.xml" target="_blank">in the phpmd.xml file</a>. It can detect possible bugs, suboptimal code, unused parameters, and helps to follow <a href="https://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29" target="_blank">SOLID</a> principles. In addition to these, PHPMD contains several rules that check for code complexity and can tell if the code could be refactored to improve future maintenance efforts.
 
 **@SuppressWarnings**
 
@@ -180,22 +180,22 @@ In order to reduce time spent on the code style fixes <a href="https://github.co
 
 **JavaScript code style continuous control**
 
-JavaScript code style is controlled by the <a href="https://eslint.org/" target="_blank">ESLint</a> tool installed on the continuous integration server according to the rules defined in the development repository in the root folder (example: <a href="https://github.com/oroinc/platform-application/blob/master/.eslintrc.yml" target="_blank">.eslintrc.yml</a>).
+JavaScript code style is controlled by the <a href="https://eslint.org/" target="_blank">ESLint</a> tool installed on the continuous integration server according to the rules defined in the development repository in the root folder (example: <a href="https://github.com/oroinc/platform-application/blob/5.1/.eslintrc.yml" target="_blank">.eslintrc.yml</a>).
 
 It is highly recommended to configure appropriate code style inspections in the IDE or run these inspections manually before committing the changes and merging it to the project repository.
 
 #### IMPORTANT
-To enable the JavaScript code style checker in PHPStorm, navigate to **“Languages & Frameworks > JavaScript > Code Quality Tools > ESLint”** and select to use the configuration from <a href="https://github.com/oroinc/platform-application/blob/master/.eslintrc.yml" target="_blank">.eslintrc.yml</a>.
+To enable the JavaScript code style checker in PHPStorm, navigate to **“Languages & Frameworks > JavaScript > Code Quality Tools > ESLint”** and select to use the configuration from <a href="https://github.com/oroinc/platform-application/blob/5.1/.eslintrc.yml" target="_blank">.eslintrc.yml</a>.
 
 To run the check manually from the command line:
 
 1. First, you need to install the required js-modules in the application directory
    > ```none
-   > pnpm install
+   > npm install
    > ```
 2. Then, run <a href="https://eslint.org/" target="_blank">ESLint</a> to check JS files for code-style
    > ```none
-   > pnpm run eslint file.js [file.js] [dir] -- [options]
+   > npm run eslint file.js [file.js] [dir] -- [options]
    > ```
 
 ## .NET Code Style
@@ -208,22 +208,22 @@ There are no defined code styles for the HTML.
 
 ## CSS(SCSS) Code Style
 
-SCSS code style is controlled by the <a href="https://stylelint.io/" target="_blank">Stylelint</a> tool installed on the continuous integration server according to the rules defined in the development repository in the root folder (example: <a href="https://github.com/oroinc/platform-application/blob/master/.stylelintrc.yml" target="_blank">.stylelintrc.yml</a>).
+SCSS code style is controlled by the <a href="https://stylelint.io/" target="_blank">Stylelint</a> tool installed on the continuous integration server according to the rules defined in the development repository in the root folder (example: <a href="https://github.com/oroinc/platform-application/blob/5.1/.stylelintrc.yml" target="_blank">.stylelintrc.yml</a>).
 
 We highly recommended developers to configure appropriate code style inspections in the IDE or run these inspections manually before merging changes to the target branches.
 
 #### IMPORTANT
-To enable the CSS(SCSS) code style checker in PHPStorm, navigate to **“Languages & Frameworks > Style Sheets > Stylelint”**, enable it, and chose configuration file <a href="https://github.com/oroinc/platform-application/blob/master/.stylelintrc.yml" target="_blank">.stylelintrc.yml</a>, <a href="https://github.com/oroinc/platform-application/blob/master/.stylelintignore" target="_blank">.stylelintignore</a> from the root repository.
+To enable the CSS(SCSS) code style checker in PHPStorm, navigate to **“Languages & Frameworks > Style Sheets > Stylelint”**, enable it, and chose configuration file <a href="https://github.com/oroinc/platform-application/blob/5.1/.stylelintrc.yml" target="_blank">.stylelintrc.yml</a>, <a href="https://github.com/oroinc/platform-application/blob/5.1/.stylelintignore" target="_blank">.stylelintignore</a> from the root repository.
 
 To run the check manually from the command line:
 
 1. First, install the required js-modules in the application directory:
    ```none
-   pnpm install
+   npm install
    ```
 2. Then, run <a href="https://stylelint.io/" target="_blank">Stylelint</a> to check SCSS files for the code-style:
    ```none
-   pnpm run stylelint "**/*.scss" -- [options]
+   npm run stylelint "**/*.scss" -- [options]
    ```
 
 **See Also**

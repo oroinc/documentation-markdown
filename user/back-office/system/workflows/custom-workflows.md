@@ -10,7 +10,7 @@ You can perform the following actions for them:
 - **View**: <i class="fa fa-eye fa-lg" aria-hidden="true"></i> (go to the view page of the workflow).
 - **Activate/Deactivate**: <i class="fa fa-check fa-lg" aria-hidden="true"></i> / <i class="fa fa-times fa-lg" aria-hidden="true"></i> (activate/deactivate the workflow).
 - **Edit**: <i class="fa fa-edit fa-lg" aria-hidden="true"></i> (open the edit form of the workflow).
-- **Delete**: ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) (delete the workflow from the system).
+- **Delete**: <i class="fas fa-trash-alt" aria-hidden="true"></i> (delete the workflow from the system).
 
 ![image](user/img/system/workflows/28_manage_wf_1.png)
 <!-- fa-bars = fa-navicon -->
@@ -18,20 +18,3 @@ You can perform the following actions for them:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

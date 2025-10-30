@@ -12,11 +12,16 @@ Refer to the [Oro Frontend Stylebook](frontend-stylebook.md#dev-doc-frontend-css
 Oro applications use the <a href="http://sass-lang.com/" target="_blank">SCSS</a> extension and a preprocessor to define CSS.
 
 OroCommerce project is composed of bundles. Each bundle has its
-own set of CSS related to a particular bundle.
+own set of CSS related to a particular bundle. Additionally, OroCommerce
+project has two [themes](../theming.md#dev-doc-frontend-layouts-theming) which are **default**, and **custom**.
+
 SCSS files as other template assets (images as javascripts) and [layout update files](../layouts/index.md#dev-doc-frontend-layouts-layout-updates) are grouped into
-[themes](../theming.md#dev-doc-frontend-layouts-theming). Out-of-the-box, the OroCommerce application comes with one
-[theme](../theming.md#dev-doc-frontend-layouts-theming-orocommerce-themes), **default**. It is a fully developed theme and recommended for customizations, and
-has basic @mixins, @functions, variables, color palette, typography, settings and dependencies.
+[themes](../theming.md#dev-doc-frontend-layouts-theming). Out-of-the-box, the OroCommerce application comes with two
+[themes](../theming.md#dev-doc-frontend-layouts-theming-orocommerce-themes), **default**, and **custom**.
+
+1. **default** - a fully developed theme and recommended for customizations. It
+   has basic @mixins, @functions, variables, color palette, typography, settings and dependencies.
+2. **custom** - a modified **default** theme
 
 <a id="dev-doc-frontend-css-theme-structure"></a>
 
@@ -24,7 +29,7 @@ has basic @mixins, @functions, variables, color palette, typography, settings an
 
 Assets for each theme are located in a particular theme folder, e.g., `BundleName/Resources/public/{theme_name}/scss/`.
 
-Core styles are located in <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/UIBundle" target="_blank">UIBundle</a>: *UIBundle/Resources/public/default/scss/*.
+Core styles are located in <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/UIBundle" target="_blank">UIBundle</a>: *UIBundle/Resources/public/default/scss/*.
 
 CSS structure has three folders, **components**, **settings**, and **variables**:
 
@@ -53,19 +58,29 @@ variables/
     page-footer-config.scss
     page-header-config.scss
     page-title-config.scss
+styles.scss
+```
+
+*BundleName/Resources/views/layouts/{theme_name}/scss/styles.scss*
+```scss
+@import 'components/page-container';
+@import 'components/page-header';
+@import 'components/page-content';
+@import 'components/page-footer';
+@import 'components/page-title';
 ```
 
 *BundleName/Resources/views/layouts/{theme_name}/config/assets.yml*
 ```yaml
 css:
     inputs:
-        - 'bundles/{your_bundle}/{theme_name}/scss/settings/global-settings.scss'
-        - 'bundles/{your_bundle}/{theme_name}scss/variables/base-config.scss'
-        - 'bundles/{your_bundle}/{theme_name}/scss/variables/page-container-config.scss'
-        - 'bundles/{your_bundle}/{theme_name}/scss/variables/page-header-config.scss'
-        - 'bundles/{your_bundle}/{theme_name}scss/variables/page-content-config.scss'
-        - 'bundles/{your_bundle}/{theme_name}scss/variables/page-footer-config.scss'
-        - 'bundles/{your_bundle}/{theme_name}scss/variables/page-title-config.scss'
+        - 'bundles/orofrontend/default/scss/settings/global-settings.scss'
+        - 'bundles/orofrontend/default/scss/variables/base-config.scss'
+        - 'bundles/orofrontend/default/scss/variables/page-container-config.scss'
+        - 'bundles/orofrontend/default/scss/variables/page-header-config.scss'
+        - 'bundles/orofrontend/default/scss/variables/page-content-config.scss'
+        - 'bundles/orofrontend/default/scss/variables/page-footer-config.scss'
+        - 'bundles/orofrontend/default/scss/variables/page-title-config.scss'
         # You can import Sass modules from node_modules.
         # Just prepend them with a ~ to tell Webpack that this is not a relative import.
         # See: https://webpack.js.org/loaders/sass-loader/#resolving-import-at-rules
@@ -83,13 +98,14 @@ Example:
 
 *application/commerce/public/build/{theme_name}/css/styles.css.scss*
 ```scss
-@import "../bundles/{your_bundle}/{theme_name}/scss/settings/global-settings.scss";
-@import "../bundles/{your_bundle}/{theme_name}/scss/variables/base-config.scss";
-@import "../bundles/{your_bundle}/{theme_name}/css/variables/page-container-config.scss";
-@import "../bundles/{your_bundle}/{theme_name}/scss/variables/page-header-config.scss";
-@import "../bundles/{your_bundle}/{theme_name}/variables/page-content-config.scss";
-@import "../bundles/{your_bundle}/{theme_name}/variables/page-footer-config.scss";
-@import "../bundles/{your_bundle}/{theme_name}/variables/page-title-config.scss";
+@import "../bundles/orofrontend/default/scss/settings/global-settings.scss";
+@import "../bundles/orofrontend/default/scss/variables/base-config.scss";
+@import "../bundles/orofrontend/default/css/variables/page-container-config.scss";
+@import "../bundles/orofrontend/default/scss/variables/page-header-config.scss";
+@import "../bundles/orofrontend/default/scss/variables/page-content-config.scss";
+@import "../bundles/orofrontend/default/scss/variables/page-footer-config.scss";
+@import "../bundles/orofrontend/default/scss/variables/page-title-config.scss";
+@import "../bundles/orocms/default/scss/styles.scss";
 @import "~prismjs/themes/prism-coy.css";
 ```
 
@@ -154,7 +170,7 @@ css:
 In order to inherit one theme from another, define the parent
 theme in the [theme.yml](../theming.md#dev-doc-frontend-layouts-theming-definition) file.
 
-For example, if you need to inherit the **your_theme** theme from *default*, perform the following:
+For example, if you need to inherit the **custom** theme from *default*, perform the following:
 
 */theme.yml*
 ```yaml
@@ -164,7 +180,7 @@ parent: default
 It enables you to inherit all styles from the parent theme and have access to all mixins, variables, etc. from the parent one.
 
 Here is an example of using the **custom** theme. The aim is to change the global settings and the appearance of form elements. For this, we create theme folders and several scss files in the corresponding bundles
-(**FrontEndBundle**, **FormBundle**).
+(FrontEndBundle, FormBundle).
 
 *CustomThemeBundle/Resources/public/FrontendBundle/scss/*
 ```none
@@ -177,45 +193,71 @@ variables/
 *CustomThemeBundle/Resources/views/layouts/custom/config/assets.yml*
 ```yaml
     inputs:
-        - 'bundles/orocustomtheme/FrontendBundle/scss/settings/global-settings.scss'
+        - 'bundles/orocustomtheme/FrontendBundle/scss/settings/main/global-settings.scss'
 
-        - 'bundles/orocustomtheme/FrontendBundle/scss/variables/breadcrumbs-config.scss'
-
-        - 'bundles/orocustomtheme/Resources/public/FormBundle/Resources/public/custom/scss/header.scss'
+        - 'bundles/orocustomtheme/FrontendBundle/scss/variables/page-main-config.scss'
     output: 'css/styles.css'
 ```
 
-*CustomThemeBundle/Resources/public/FormBundle/Resources/public/custom/scss/*
+*FormBundle/Resources/public/default/scss/*
 ```none
 components/
     header.scss
-settings/
+settings/main/
     global-settings.scss
 variables/
     breadcrumbs-config.scss
+styles.scss
 ```
 
 Update and add new variables for this component
 
-*CustomThemeBundle/Resources/public/FormBundle/Resources/public/custom/scss/breadcrumbs-config.scss*
+*breadcrumbs-config.scss*
 ```scss
-$breadcrumbs-link-color: get-color('text', 'link'); // update the variable's value with custom one
+$breadcrumbs-offset: 12px 0; // update the variable's value with custom theme
 ```
 
 Add missing styles for this component
 
-*CustomThemeBundle/Resources/public/FormBundle/Resources/public/custom/scss/header.scss*
+*header.scss*
 ```none
 @include breakpoint('tablet') {
     .page-header {
-        padding: spacing('base');
+        .middlebar {
+            &__right {
+                display: block;
+            }
+        }
     }
 }
 ```
 
+*styles.scss*
+```scss
+    @import './components/header';
+```
+
+In the main file of the custom theme, we have:
+
+*application/commerce/public/build/default/styles.css.scss*
+```none
+@import "../bundles/oroui/default/scss/settings/global-settings";
+
+// Update global setting for main styles
+@import "../bundles/orocustomtheme/FrontendBundle/scss/settings/main/global-settings";
+
+*// Update setting from global components*
+@import "../bundles/orofrontend/default/scss/variables/page-main-config"
+@import "../bundles/orocustomtheme/FrontendBundle/scss/variables/page-main-config"
+
+*// Update styles for page-main component*
+@import "../bundles/orofrontend/default/scss/styles";
+@import "../bundles/orocustomtheme/FrontendBundle/scss/styles";
+```
+
 ## Themes Settings and Useful Recommendation
 
-1. Main styles for the **Refreshing Teal**:
+1. Main styles for the **default theme**:
    package/platform/src/Oro/Bundle/UIBundle/Resources/public/default/scss/
    - mixins:
      package/platform/src/Oro/Bundle/UIBundle/Resources/public/default/scss/settings/mixins/
@@ -225,7 +267,7 @@ Add missing styles for this component
      package/platform/src/Oro/Bundle/UIBundle/Resources/public/default/scss/settings/partials/_typography.scss
    - color pallet:
      package/platform/src/Oro/Bundle/UIBundle/Resources/public/default/scss/settings/_colors.scss
-2. Form styles for **Refreshing Teal**:
+2. Form styles for **default theme**:
    package/platform/src/Oro/Bundle/FormBundle/Resources/public/default/scss
 
 **Related Topics**

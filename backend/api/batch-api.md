@@ -48,25 +48,6 @@ oro_api:
         # The maximum number of included entities that can be saved in a chunk for a specific primary entity type.
         included_data_chunk_size_per_entity:
             Oro\Bundle\UserBundle\Entity\User: 20 # example
-
-        # The maximum number of seconds that API waits for a synchronous batch API operation finished. If the operation is not finished within this time interval it is processed as an asynchronous operation.
-        sync_processing_wait_timeout: 25
-
-        # The default maximum number of entities that can be processed by synchronous batch API.
-        sync_processing_limit: 100
-
-        # The maximum number of entities of a specific type that can be processed by synchronous batch API.
-        # The null value can be used to revert already configured limit for a specific entity type and use the default limit for it.
-        sync_processing_limit_per_entity:
-            Oro\Bundle\UserBundle\Entity\User: 10 # example
-
-        # The default maximum number of included entities that can be processed by synchronous batch API.
-        sync_processing_included_data_limit: 50
-
-        # The maximum number of included entities that can be processed by synchronous batch API for a specific primary entity type.
-        # The null value can be used to revert already configured limit for a specific entity type and use the default limit for it.
-        sync_processing_included_data_limit_per_entity:
-            Oro\Bundle\UserBundle\Entity\User: 20 # example
 ```
 
 Parameters `chunk_size_per_entity` and `included_data_chunk_size_per_entity` can be used to tuning of
@@ -140,7 +121,7 @@ knp_gaufrette:
                 directory: '%kernel.project_dir%/var/api_files'
 ```
 
-You can find more examples in <a href="https://github.com/KnpLabs/KnpGaufretteBundle/blob/master/README.md" target="_blank">KnpGaufretteBundle documentation</a>.
+You can find more examples in <a href="https://github.com/KnpLabs/KnpGaufretteBundle/blob/5.1/README.md" target="_blank">KnpGaufretteBundle documentation</a>.
 
 #### BUSINESS TIP
 ## Business Tip

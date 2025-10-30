@@ -66,7 +66,7 @@ Let’s elaborate on some of the options to clarify their distinctive features.
 
 Inventory threshold is the minimum quantity of product that you need to have on hand to take care of orders. You can define an inventory level that becomes the threshold to determine when an item needs to be marked as out-of-stock and/or reordered.
 
-Let’s say you have 10 items of Product A in stock. You set the Inventory Threshold option to `1` (in case you prefer avoiding an entirely dead stock). It means that when there is 1 item left in stock, the system will automatically change the product inventory status to Out of Stock. With such configuration, your customer is allowed to purchase up to 9 items only.
+Let’s say you have 10 items of Product A in stock. You set the Inventory Threshold option to `1` (in case you prefer avoiding an entirely dead stock). It means that when there is one item left in stock, the system will automatically change the product inventory status to Out of Stock. With such configuration, your customer is allowed to purchase up to 9 items only.
 
 ![Display inventory statuses in the storefront](user/img/concept-guides/inventory/productA_inventory_status.png)
 
@@ -102,7 +102,7 @@ It is vital for businesses to know the final count of their inventory, and that 
 
 To control the number of a product that a buyer can claim in the RFQ, quote, or purchase in a single order, you can set the related quantity limitations on different levels, [global](../../../back-office/system/configuration/commerce/inventory/limitations.md#configuration-guide-commerce-configuration-inventory-limitations), [per organization](../../../back-office/system/user-management/organizations/org-configuration/commerce/inventory/organization-limitations.md#inventory-limitations-org), [per website](../../../back-office/system/websites/web-configuration/commerce/inventory/website-limitations.md#inventory-limitations-website), [per product](../../../back-office/products/products/create-simple.md#create-simple-product-inventory), and [per master catalog category](../../../back-office/products/master-catalog/index.md#master-catalog-inventory)
 
-![Display the quantity limitations label in the storefront](user/img/concept-guides/inventory/quantity_limitations.png)
+![Global inventory limitations configuration settings](user/img/system/config_commerce/inventory/limitations.png)![Display the quantity limitations label in the storefront](user/img/concept-guides/inventory/quantity_limitations.png)
 
 ## Inventory Options Fallback
 

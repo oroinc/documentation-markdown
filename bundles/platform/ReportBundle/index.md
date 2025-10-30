@@ -2,7 +2,7 @@
 
 # OroReportBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ReportBundle" target="_blank">OroReportBundle</a> enables you to build custom reports for the application data in a table and a chart form and provides the ability to define report columns, grouping settings, and filter conditions using the UI or the datagrid YAML configuration.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/ReportBundle" target="_blank">OroReportBundle</a> enables you to build custom reports for the application data in a table and a chart form and provides the ability to define report columns, grouping settings, and filter conditions using the UI or the datagrid YAML configuration.
 
 ## Configure Dedicated Database Connection for Reports
 

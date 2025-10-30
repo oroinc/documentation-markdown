@@ -124,6 +124,13 @@ Lead
 Lifetime Sales Value
 : A metric that helps understand the [Customer](#term-Customer). It predicts the potential benefit that the selling organization can obtain from a relationship with the customer in the long-term perspective. Lifetime sales value measures the total amount of money received from the customer based on orders placed and registered in the Oro application. When calculating a lifetime sales value, OroCommerce takes into account an average order amount, purchase frequency, and an average retention period.
 
+<a id="term-Listed-Price"></a>
+
+Listed Price
+: The pricing assigned to the available product units and their variations of quantity.
+  <br/>
+  ![image](user/img/glossary/listed_price.png)
+
 <a id="term-Localization"></a>
 
 Localization
@@ -280,14 +287,12 @@ Tax Jurisdiction
 <a id="term-Tier-Price"></a>
 
 Tier Price
-: In OroCommerce, a price tier refers to a pricing structure that allows businesses to offer different prices for products based on the quantity of products purchased. For instance, customers may receive a lower price per unit if they buy in bulk. In this case, if product price per item is provided for the purchase of one item, ten items, and fifty items, and a buyer orders 20 items, the price per item applied will be based on the rate for ten items.
-  Price tiers for a selected product can be derived from the same price list, or from the different price lists if they allow price merge. For example, you set the following prices in the price list:
+: A price determined by the system for the specified product quantity. Price tiers for a selected product can be derived from the same price list, or from the different price lists if they allow price merge. For example, you set the following prices in the price list:
   <br/>
-  . image:: /user/img/glossary/price_per_tier.png
-  <br/>
-  > If you buy 9 or less item, it would cost you $44.99 for 1 item
-  > If you buy from 10 to 19 items, the price per item is lowered to $42.74 per item
-  > If you buy from 20 to 49 items, the price per item is lowered further to $40.49, and so on
+  ![image](user/img/glossary/price_per_tier.png)
+  * If you buy 9 or less item, it would cost you $44.99 for 1 item
+  * If you buy from 10 to 19 items, the price per item is lowered to $42.74 per item
+  * If you buy from 20 to 49 items, the price per item is lowered further to $40.49, and so on
 
 <a id="term-User"></a>
 
@@ -318,3 +323,10 @@ Workflow
 
 WYSIWYG (What You See Is What You Get)
 : The editor that enables to edit the content of a landing page, product page, and any other HTML-like web page, embed codes, media files, and widgets, and preview the results in the editor’s framework directly.
+
+<a id="term-Your-Price"></a>
+
+Your Price
+: The [Listed Price](#term-Listed-Price) under your current [tier pricing](#term-Tier-Price) configuration. When the product quantity is changed, Your Price is recalculated to match the tier pricing set for the selected quantity.
+  <br/>
+  ![image](user/img/glossary/your_price.png)

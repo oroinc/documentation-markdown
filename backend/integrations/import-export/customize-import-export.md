@@ -43,7 +43,9 @@ use Symfony\Component\DependencyInjection\Loader;
 
 class AcmeDemoExtension extends Extension
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function load(array $configs, ContainerBuilder $container): void
     {
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
@@ -121,25 +123,33 @@ use Oro\Bundle\ImportExportBundle\TemplateFixture\TemplateFixtureInterface;
 
 class TaskFixture extends AbstractTemplateRepository implements TemplateFixtureInterface
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     protected function createEntity($key): Task
     {
         return new Task($key);
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getEntityClass(): string
     {
         return Task::class;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getData()
     {
         return $this->getEntityData('example-task');
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function fillEntityData($key, $entity)
     {
         $entity->setId(1);

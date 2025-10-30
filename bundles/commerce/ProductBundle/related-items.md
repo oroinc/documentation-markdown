@@ -61,7 +61,7 @@ When viewing product B in the storefront, the buyer may or may not see the Produ
 | Product A | Product B       |
 | Product B | None            |
 
-For more information about configuration see <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ConfigBundle" target="_blank">OroConfigBundle</a>.
+For more information about configuration see <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/ConfigBundle" target="_blank">OroConfigBundle</a>.
 
 <a id="bundle-docs-commerce-product-bundle-related-strategies"></a>
 

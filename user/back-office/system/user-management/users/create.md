@@ -37,7 +37,8 @@ To create a new user in the Oro application:
    * **Primary Email** — The main email address of the user.
    * **Emails** — Click **Add Another Email** and type an additional email address in the field that appears. You can add as many email addresses as required. To delete an email address, click **x** next to the email field you want to delete.
    * **Phone** — The user’s phone number.
-4. In the **Groups and Roles** section, select the required system-wide [group](../groups/index.md#user-management-groups) and [role](../roles/index.md#user-guide-user-management-permissions) for the user you are creating. At least one role must be assigned to the user, otherwise, you will be unable to save their information.
+4. In the **Additional** section, provide more information about the user (e.g., a job title). When visible custom fields are added to the **User** entity, they appear in this section.
+5. In the **Groups and Roles** section, select the required system-wide [group](../groups/index.md#user-management-groups) and [role](../roles/index.md#user-guide-user-management-permissions) for the user you are creating. At least one role must be assigned to the user, otherwise, you will be unable to save their information.
 
    #### IMPORTANT
    If you have the Enterprise edition of the Oro application and wish to limit access of the user you are creating to a specific organization, select it in the **Access Settings** section. If the organization has organization-specific roles, these will appear on the list in the **Group and Roles** section once you select the required organization in **Access Settings**.
@@ -47,7 +48,7 @@ To create a new user in the Oro application:
 
    The following screenshot illustrates the organization-specific role added to the list once the organization is selected in **Access Settings**:
    ![image](user/img/system/user_management/groups_roles_organization.jpg)
-5. In **Access Settings**, select the checkboxes in front of the organization(s) you want the user to have access to.
+6. In **Access Settings** select the checkboxes in front of the organization(s) you want the user to have access to.
 
    #### CAUTION
    Please be aware that users must have an organization and a business unit selected, otherwise they will be unable to log into the system.
@@ -55,7 +56,6 @@ To create a new user in the Oro application:
    * In the **Organization Business Units** field, provide the business unit name, or select it from the list. On the list, you can see the business units of the organizations selected in the **Organizations** subsection.
    * You can select one or more business units. In this case, the data owned by the user will be considered as belonging to all these business units and users that have access to these business units and corresponding permissions will be able to access it.
    * When the user’s role includes division level permissions, the user will be able to access data of each business unit specified in these sections, as well as the data of the whole chain of business units subordinated to those selected in this section.
-6. In the **Additional** section, provide more information about the user (e.g., a job title). When visible custom fields are added to the **User** entity, they appear in this section.
 7. Click **Save**.
 
    #### NOTE
@@ -67,7 +67,7 @@ To create a new user in the Oro application:
 
 Once the user is created, it becomes available in the table of all users under **System > User Management > Users**:
 
-1. To view details of a specific user, click on the user name in the table to open their page.
+1. To view details of a specific user, click once on the user name in the table to open their page.
 2. To edit details of a specific user, click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> in the ellipsis menu at the end of the row of the selected user. Alternatively, open the page of the user and click **Edit** on the top right.
    ![image](user/img/system/user_management/user_edit.png)
 
@@ -92,20 +92,3 @@ For more information on the integration with LDAP, please see the topic on [LDAP
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

@@ -78,7 +78,9 @@ use Symfony\Component\Form\FormBuilderInterface;
  */
 class CopyrightContentWidgetType extends AbstractType
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add(
@@ -316,47 +318,3 @@ For example:
 ```twig
 {{ entity.content | oro_html_sanitize | render_content }}
 ```
-
-Also, it is possible to use the widget twig function.
-
-```twig
-{{ widget('widget_name') }}
-```
-
-## Display Label for Content Widget in Layout
-
-Make sure that you have completed the data for the labels field of the content widget. Then, in layout, you will have the next variables defaultLabel and labels.
-You can display these variables in the following ways:
-
-```xml
-layout:
-    actions:
-        - '@setOption':
-            id: layoutBlockId
-            optionName: label
-            optionValue:
-                '=data["defaultLabel"]'
-                # or
-                '=data["locale"].getLocalizedValue(data["labels"])'
-
-...
-```
-
-## Render a Content Widget in the Layout
-
-Content widgets can be rendered by unique name using the content_widget block type:
-
-```yaml
-layout:
-    actions:
-        - '@add':
-            id: marketing_widget # unique layout block id
-            parentId: page_content
-            blockType: content_widget
-            options:
-                name: marketing-widget # unique content widget name
-```
-
-**Note**
-
-An administrator can rename or delete a defined content widget. So if there is no content widget with a defined name, this may be caused by a typo in a widget name or the non-existence of the widget itself; nothing is rendered, and no errors are displayed. A notice message is written to the log.

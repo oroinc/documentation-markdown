@@ -12,9 +12,9 @@ This option is suitable for upgrades from all previous versions.
 Search index upgrade is part of the [application upgrade](../../../backend/setup/upgrade-to-new-version.md#upgrade-application).
 So, once you have turned on maintenance mode through `app/console lexik:maintenance:lock --env=prod`, you need to perform the following actions:
 
-1. <a href="https://www.elastic.co/guide/en/elasticsearch/reference/master/stopping-elasticsearch.html" target="_blank">Stop old Elasticsearch</a>
+1. <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.1/stopping-elasticsearch.html" target="_blank">Stop old Elasticsearch</a>
 2. Modify credentials for search engine configuration in the corresponding environment variables
-3. <a href="https://www.elastic.co/guide/en/elasticsearch/reference/master/starting-elasticsearch.html" target="_blank">Start the Elasticsearch</a> 8.\* service.
+3. <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.1/starting-elasticsearch.html" target="_blank">Start the Elasticsearch</a> 8.\* service.
 
 Proceed with the [standard upgrade procedure](../../../backend/setup/upgrade-to-new-version.md#upgrade-application).
 

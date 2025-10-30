@@ -5,7 +5,7 @@
 #### HINT
 This section is part of the [Promotion Management](../../../../concept-guides/catalog-promotions/promotions/index.md#concept-guides-promotion-management) topic that provides a general understanding of the promotions and coupons concept.
 
-As a promotional tool, coupons can be generated and distributed to customer users to be redeemed for a discount when purchasing goods online. In your Oro application, coupons are always linked to promotions, although they can be created separately and linked to a promotion when the need arises.
+As a promotional tool, coupons can be generated and distributed to customers to be redeemed for a discount when purchasing goods online. In your Oro application, coupons are always linked to promotions, although they can be created separately and linked to a promotion when the need arises.
 
 The following topics will explore how to create, generate, and manage coupons in your Oro application:
 
@@ -90,8 +90,8 @@ The page contains the list of all available coupons in your Oro application. Fro
 3. Export coupons: Click  **Export** on the top right.
 4. Import coupons: Click  **Import** on the top right.
 5. View coupon details: Click on the item from the list to open its details page.
-6. Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the necessary coupon and select either to <i class="fa fa-eye fa-lg" aria-hidden="true"></i> **View**, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit**, or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** the existing coupons from the system.
-7. Mass edit or mass delete coupons: Select the checkboxes on the left of the corresponding rows. Click <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> on the far right of the table header. Click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** to edit, or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** to delete the selected coupons.
+6. Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the necessary coupon and select either to <i class="fa fa-eye fa-lg" aria-hidden="true"></i> **View**, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit**, or <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** the existing coupons from the system.
+7. Mass edit or mass delete coupons: Select the checkboxes on the left of the corresponding rows. Click <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> on the far right of the table header. Click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** to edit, or <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** to delete the selected coupons.
    ![The illustration of a mass action](user/img/marketing/coupons/MassActionsCoupons.png)
 8. Filter a coupons grid to find the required records quicker: Click <i class="fa fa-filter fa-lg" aria-hidden="true"></i> above the table on the far right to display the filters. To apply a filter, click on its button in the bar, and specify your query in the control that appears.
 
@@ -102,10 +102,10 @@ The page contains the list of all available coupons in your Oro application. Fro
 9. Organize a coupons list to define which columns to show in the grid: Click <i class="fa fa-cog fa-lg" aria-hidden="true"></i> above the table on the far right.
    * To choose the columns to be displayed in the table, select the checkbox next to the required column under **Show**. Clear the checkbox to make the column disappear from the table.
    * To change the order of the columns, click <i class="fas fa-arrows-alt-v" aria-hidden="true"></i> next to the name of the column you wish to move, hold the mouse button, and drag the column to the required position.
+   * To refresh the coupon list, click <i class="fas fa-redo-alt" aria-hidden="true"></i>.
+   * To reset the coupon list, click <i class="fas fa-sync-alt" aria-hidden="true"></i> to clear list customization and return to default settings. Reset applies to all filters, records per page, and sorting changes you have made.
 
    ![Coupon grid settings](user/img/marketing/coupons/coupon_grid_settings.png)
-10. To refresh the coupon list, click <i class="fas fa-redo-alt" aria-hidden="true"></i>.
-11. To reset the coupon list, click <i class="fas fa-sync-alt" aria-hidden="true"></i> to clear list customization and return to default settings. Reset applies to all filters, records per page, and sorting changes you have made.
 
 <a id="user-guide-marketing-promotions-coupons-edit"></a>
 
@@ -119,7 +119,7 @@ The page contains the list of all available coupons in your Oro application. Fro
 
 In your Oro application, you can manage coupons from the page of the selected [order](../../../sales/orders/index.md#user-guide-sales-orders). Specifically, you can:
 
-1. View the coupon applied to the order under **Discounts** on the order page.
+1. View the coupon applied to the order under **Promotions and Discounts** on the order page.
 2. Add a coupon to the order manually.
 
 ### View Coupon Codes
@@ -127,8 +127,8 @@ In your Oro application, you can manage coupons from the page of the selected [o
 To view the coupon codes that apply to the selected order:
 
 1. Navigate to **Sales > Orders** in the main menu.
-2. Click to open the required order to open it.
-3. Click **Discounts** to open the section.
+2. Click once to open the required order to open it.
+3. Click **Promotions and Discounts** to open the section.
 4. Under **All Promotions** on the left of the section, click <i class="fa fa-eye fa-lg" aria-hidden="true"></i> at the end of the coupon code row.
    ![View the coupon applied to the order in the back-office](user/img/marketing/coupons/ViewCouponsIcon.png)
 5. In the popup that opens, you can view the details of the selected coupon, as illustrated below.
@@ -139,9 +139,9 @@ To view the coupon codes that apply to the selected order:
 To add a coupon code to the required order from its page:
 
 1. Navigate to **Sales > Orders** in the main menu.
-2. Click to open the required order to open it.
-3. Click **Add Coupon Code** in the **More Actions** menu on the top right of the order page.
-   ![More Actions menu options on the order page](user/img/marketing/coupons/more-actions-coupon.png)
+2. Click once to open the required order to open it.
+3. Click **Add Coupon Code** on the top right of the order page.
+   ![Highlight the Add Coupon Code button on the Order's page](user/img/marketing/coupons/AddCouponToOrder.png)
 4. In the popup that opens, choose a coupon code from the list:
    ![Selecting the coupon code from the list in the popup dialog](user/img/marketing/coupons/CouponCodesListOrder.png)
 
@@ -151,13 +151,13 @@ To add a coupon code to the required order from its page:
 
    #### NOTE
    Please keep in mind that you cannot apply two coupon codes to one order if they are related to the same promotion.
-7. The applied coupon code will be displayed under **All Promotions** in the **Discounts** section.
+7. The applied coupon code will be displayed under **All Promotions** in the **Promotions and Discounts** section.
 
 This way, you can apply as many coupons to the order as necessary as long as they belong to different promotions.
 
 ### Manage Coupons When Editing the Order
 
-When editing the selected order, you can perform the following actions with the coupons under **All Promotions** in the **Discounts** section:
+When editing the selected order, you can perform the following actions with the coupons under **All Promotions** in the **Promotions and Discounts** section:
 
 ![The actions you can perform with the coupons under All Promotions](user/img/marketing/coupons/AllPromotionsSectioninEditOrderForm.png)
 1. **Add Coupon Code** and follow the steps described in the [Add Coupons Through the Order Page](#user-guide-marketing-promotions-coupons-edit-on-order-page) page.
@@ -166,24 +166,24 @@ When editing the selected order, you can perform the following actions with the 
 
    #### NOTE
    When you deactivate the coupon code, its status is changed from active to inactive. It is not removed, and you can reactivate it when necessary.
-4. ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) Delete a coupon code.
+4. <i class="fas fa-trash-alt" aria-hidden="true"></i> Delete a coupon code.
 
 #### NOTE
 When you add, deactivate, or delete coupons when editing orders, the price totals, and the shipping cost may change. Please, review the order totals to ensure the cost is acceptable.
 
 ## Create a Sample Coupon
 
-As an illustration, let us create a sample promotion and generate 100 coupons. These coupons will be redeemed for orders placed by first-time customers. The promotion will offer a 20% discount for all orders between 1 March and 31 May 2026.
+As an illustration, let us create a sample promotion and generate 100 coupons. These coupons will be redeemed for orders placed by first-time customers. The promotion will offer a 50% discount for all orders between 18 and 22 May 2019.
 
 ### Create a Promotion
 
-As coupons must be linked to promotions, the first step is to create a new promotion:
+As coupons should always be linked to promotions, the first step is to create a new promotion:
 
 1. Navigate to **Marketing > Promotions > Promotions** in the main menu.
 2. Click **Coupons Actions > Create Promotion** on the top right.
 3. In the form that opens, specify the discount details and items, making sure that the **Triggered by** field is set to *Coupons and Conditions*.
-   The sample promotion is called **Spring Sale**, and the discount options are 20% off all orders.
-   ![image](user/img/marketing/coupons/coupon-promotion-20-off.png)
+
+   The sample promotion is called **Summer Sale**, and the discount options are 50% off all orders.
 4. Click **Save and Close**.
 
 ### Generate Coupons
@@ -192,11 +192,11 @@ Next, generate coupons for this promotion:
 
 1. Navigate to **Marketing > Promotions > Coupons** in the main menu.
 2. Click **Coupons Actions > Generate Multiple Coupons**.
-3. In the pop-up that opens, specify the details of the coupons, making sure that the coupons are linked to the newly created *Spring Sale* promotion.
+3. In the pop-up that opens, specify the details of the coupons, making sure that the **Coupon Quantity** is set to *100* and the coupons are linked to the newly created *Summer Sale* promotion.
    ![The popup dialog with the fields you need to fill to generate multiple coupons](user/img/marketing/coupons/SampleCoupons4.png)
 4. Click **Generate** once all the details are provided.
 
-### Add Coupons to an Order in the Back-Office
+### Add Coupons to an Order
 
 Now that the promotion has been created and coupons generated, we can add a coupon to the order that fits the conditions of the discount.
 
@@ -204,16 +204,10 @@ Now that the promotion has been created and coupons generated, we can add a coup
 2. Select the relevant order and click on it once to open.
 3. Click **Add Coupon Code** on the top right of the order page.
 4. Select the coupon from the list, click **Add** and then  **Apply**.
-5. The coupon for 20% off is now applied to the order.
-   ![The illustration of applying the coupon for 20% off to the order](user/img/marketing/coupons/SampleCoupons8.png)
+5. The coupon for 50% off is now applied to the order.
+   ![The illustration of applying the coupon for 50% off to the order](user/img/marketing/coupons/SampleCoupons8.png)
 6. In their storefront account, the customer can see the discount applied to their order in the **Order History** menu.
-   ![The illustration of a buyer's order with applied discount in their storefront account](user/img/marketing/coupons/SampleCoupons9.png)
-
-### Add Coupons to an Order in the Storefront
-
-Buyers in the storefront can add coupon codes to their storefront orders to receive the discount:
-
-![:alt: The illustration of applying the coupon for 20% off to the order in the storefront](user/img/marketing/coupons/coupon-storefront.png)
+   ![The illustration of applying the coupon for 50% off to the order in the storefront](user/img/marketing/coupons/SampleCoupons9.png)
 
 ## Export Coupons
 
@@ -223,8 +217,6 @@ To export the coupons in a .csv format:
 2. To export information on all coupons, click **Export** on the top right.
 3. Once the export is complete, you will receive an email to download the .csv file.
 
-![Export of coupons in the back-office](user/img/marketing/coupons/export-coupon.png)
-
 ## Import Coupons
 
 **Import File** option helps import large bulk of coupon information into the list of the coupons using the .csv file.
@@ -233,7 +225,7 @@ To export the coupons in a .csv format:
 
 |   Coupon Code |   Enabled |   Uses per Coupon |   Uses per Person | Valid From   | Promotion Name   | Owner Name   |
 |---------------|-----------|-------------------|-------------------|--------------|------------------|--------------|
-|           123 |         1 |                 1 |                 1 | 01-12-2028   | Discounts        | Owner Name   |
+|           123 |         1 |                 1 |                 1 | 01-12-2018   | Discounts        | Owner Name   |
 
 To import a bulk of coupons:
 
@@ -258,20 +250,3 @@ Want to dip your toe into the emerging digital commerce trend? Learn more about 
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

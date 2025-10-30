@@ -30,7 +30,6 @@ Find more information about Web API in the following topics:
 * [Enabling an API Feature](enabling-api-feature.md)
 * [API Sandbox](sandbox.md)
 * [Authentication](authentication/index.md)
-* [Checkout API](checkout-api.md)
 * [Schema](schema.md)
 * [Available HTTP Methods](http-methods.md)
 * [HTTP Header Specifics](http-header-specifics.md)
@@ -40,10 +39,8 @@ Find more information about Web API in the following topics:
 * [Filters](filters.md)
 * [Creating and Updating Related Resources with Primary API Resource](create-update-related-resources.md)
 * [Creating Resource or Updating Existing Resource via Single API Request](upsert-operation.md)
-* [Validating a Resource](validate-operation.md)
 * [Web API Client Requirements](client-requirements.md)
 * [Batch API](batch-api.md)
-* [Synchronous Batch API](sync-batch-api.md)
 
 The documentation for the server-side developers can be found in [API Developer Guide](../backend/api/index.md#web-api).
 

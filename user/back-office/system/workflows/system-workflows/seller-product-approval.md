@@ -3,7 +3,7 @@
 # Configure Seller Product Approval Workflow in the Back-Office
 
 #### HINT
-The workflow is only available in the Enterprise edition of the Oro application. It requires an extension, so visit Oro Extensions Store to download the <a href="https://extensions.oroinc.com/orocommerce/extension/seller-product-approval-workflow/" target="_blank">Seller Product Approval workflow extension</a> and then use the composer to [install the extension to your application](../../../../../backend/extension/install-extension.md#cookbook-extensions-composer).
+The workflow is only available in the Enterprise edition of the Oro application starting from v5.1.2. It requires an extension, so visit Oro Extensions Store to download the <a href="https://extensions.oroinc.com/orocommerce/extension/seller-product-approval-workflow/" target="_blank">Seller Product Approval workflow extension</a> and then use the composer to [install the extension to your application](../../../../../backend/extension/install-extension.md#cookbook-extensions-composer).
 
 The Seller Product Approval workflow is a powerful tool that enables global administrators to manage the review and publication of products from non-global organizations. Once the workflow extension is installed, it is initially disabled.
 
@@ -65,20 +65,3 @@ Products created within the global organization are exempt from this workflow an
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

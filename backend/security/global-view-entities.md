@@ -18,16 +18,20 @@ You can only view a global view entity from a non-global organization. It cannot
 ## Configuring an Entity as a Global View
 
 To see the data created from the global organization in a non-global organization for an ACL-protected entity, configure the chosen entity with the `global_view` parameter of the `ownership` scope in the
-`defaultValues` section of the `#[Config]` attribute, as illustrated below:
+`defaultValues` section of the `@Config` annotation, as illustrated below:
 
 ```php
-#[Config(
-    defaultValues: [
-        ...
-        'ownership' => ['global_view' => true]
-    ]
-)]
-class MyEntity
+/**
+ * @Config(
+ *  defaultValues={
+ *      "ownership"={
+            ...
+ *          "global_view"=true,
+ *      }
+ *  }
+ * )
+ */
+ class MyEntity
 ```
 
 If the entity already exists, create a migration to add the `global_view` parameter to the entity config:
@@ -45,7 +49,9 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
  */
 class MakeMyEntityGlobalView implements Migration
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $table = $schema->getTable('name_of_my_table');

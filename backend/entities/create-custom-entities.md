@@ -2,7 +2,7 @@
 
 # Create Custom Entities
 
-A custom entity is an entity that has no PHP class in any bundle. The definition of such an entity is created automatically in the Symfony cache. To create a custom entity, you can use <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityExtendBundle/Migration/Extension/ExtendExtension.php" target="_blank">ExtendExtension</a>, as illustrated below:
+A custom entity is an entity that has no PHP class in any bundle. The definition of such an entity is created automatically in the Symfony cache. To create a custom entity, you can use <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityExtendBundle/Migration/Extension/ExtendExtension.php" target="_blank">ExtendExtension</a>, as illustrated below:
 
 *src/Acme/Bundle/DemoBundle/Migrations/Schema/v1_6/AddCustomEntity.php*
 ```php
@@ -21,13 +21,17 @@ class AddCustomEntity implements Migration, ExtendExtensionAwareInterface
 {
     protected ExtendExtension $extendExtension;
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function setExtendExtension(ExtendExtension $extendExtension)
     {
         $this->extendExtension = $extendExtension;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $table = $this->extendExtension->createCustomEntityTable(

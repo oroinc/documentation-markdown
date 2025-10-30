@@ -10,10 +10,9 @@ For information on Storefront REST API, please see a dedicated [topic](../../../
 ## Related Documentation
 
 * [Frontend Sessions and Debug Routes](configuration.md)
-* [Email Templates](email-templates.md)
 * [Frontend Access](frontend-access.md)
 * [Set Up Mass Action in Datagrid](mass-action-grid-setup.md)
-* [Sticky Element View](sticky-panel-view.md)
+* [Sticky Panel View](sticky-panel-view.md)
 * [Dom Relocation Global View](dom-relocation-view.md)
 
 <!-- Frontend -->

@@ -44,11 +44,7 @@ create an API key. To do that:
    | **Enable Two Way Sync**      | Use this section to enable or disable two-way synchronization. By default, **Enable Two Way Sync** is unchecked. If it remains unchecked, unsubscribes    will pass from Mailchimp to Oro application. If enabled, subscription status can be passed from Oro application to MailCHimp and the other way around.                        |
    | **Sync Priority:**           | **Remote Wins** means that the Mailchimp will be considered the master and override conflicts with the Oro application. **Local Wins** means that local data will    be the master and override any conflicts with Mailchimp.                                                                                                           |
    ![image](user/img/system/integrations/mailchimp/choose_mc_integration.png)
-
-#### NOTE
-In the **Synchronization Settings** section, select the **Log Warnings** checkbox if you want all synchronization errors to be written into the application log.
-
-1. Click **Save and Close.**
+4. Click **Save and Close.**
 
 The integration has been successfully configured and will now appear in the integration grid.
 

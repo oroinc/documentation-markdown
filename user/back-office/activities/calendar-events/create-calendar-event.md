@@ -57,6 +57,13 @@ To add a calendar event when viewing a list of events:
 
      #### NOTE
      In the Oro applications, an event start time is displayed adjusted according to the recipient’s timezone settings both in notification emails and flash messages.  (That is, if the event is set to start at 7 a.m. in the organizational calendar that is run according to the New York time, the start time displayed in the reminder to the user in Tokio will be 8 p.m.)
+   * **Call via Hangout** — Enable this option to plan a Google Hangout meeting for the calendar event. When enabled, a button that starts Hangout call appears on the event card and view page when viewed by the guest.
+
+     #### IMPORTANT
+     For Hangouts calls to be possible, integration with Google services should be created. Contact your administrator or see [Google Integration Settings](../../system/configuration/system/integrations/google-settings/index.md#admin-configuration-integrations-google) for more information.
+
+     #### TIP
+     For more help on Hangouts calls, see <a href="https://support.google.com/hangouts#topic=6386410" target="_blank">Hangouts Help</a> on google.com.
    * **Context** — Select a record that has a meaningful relation to the event. Start entering a record name to quickly find the required user, and when the list of suggestions appears, click the required name to select it. The event is now linked to the selected item and is displayed in its **Activity** section.
    * **Start** — Specify day and time when the event starts. Click the day field to select a day in the calendar dialog. Click the time field to select a time from the list. Alternatively, you can type in date and time values.
 
@@ -102,7 +109,7 @@ To add calendar events on the **My Calendar** page or in the **Today’s Calenda
 
 To add an event to a system calendar from its page:
 
-1. Navigate to **System > System Calendars** in the main menu.
+1. Navigate **System > System Calendars** in the main menu.
 2. Click on the required calendar.
 3. On the page of the selected calendar, click **Create Calendar Event**.
 4. The **Create Calendar Event** page appears. Specify the event details.

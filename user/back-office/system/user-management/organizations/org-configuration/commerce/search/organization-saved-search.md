@@ -5,9 +5,6 @@
 #### NOTE
 The feature is only available in the Enterprise edition applications.
 
-#### HINT
-Read [Search Functions Concept Guide](../../../../../../../concept-guides/catalog-promotions/search/index.md#user-guide-getting-started-search) to get a general understanding of the search functionality in OroCommerce.
-
 You can configure the ability for registered customer users to save search queries, return to these saved search queries later, receive notifications when a new product falls under the search conditions and when products from the search query result are back in stock.
 
 By default, saved search is enabled if Elasticsearch is used as the search engine for the application. Please be aware that additional configuration of Elasticsearch may be required as the saved search feature uses percolate queries.
@@ -61,20 +58,3 @@ For faster navigation between the configuration menu sections, use [Quick Search
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

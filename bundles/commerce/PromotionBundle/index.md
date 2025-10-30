@@ -1,8 +1,8 @@
-<a id="bundle-docs-commerce-promotion-bundle"></a>
+<a id="bundle-docs-platform-promotion-bundle"></a>
 
 # OroPromotionBundle
 
-<a href="https://github.com/oroinc/orocommerce/tree/master/src/Oro/Bundle/PromotionBundle" target="_blank">OroPromotionBundle</a> adds coupon and promotion features to the OroCommerce application.
+<a href="https://github.com/oroinc/orocommerce/tree/5.1/src/Oro/Bundle/PromotionBundle" target="_blank">OroPromotionBundle</a> adds coupon and promotion features to the OroCommerce application.
 
 With this bundle, a back-office administrator can enable or disable these features in the system configuration UI. The bundle introduces UI in the back-office for sales representatives to create and manage coupons and promotions and apply promotions to the customer orders via special discounts and coupon codes. For the customer users in the storefront, it provides the ability to apply coupons to the orders and review the applied promotions and discounts.
 
@@ -92,7 +92,18 @@ The discount converter should return `Oro\Bundle\PromotionBundle\Discount\Discou
 
 ### Flow and Filter Types
 
-When promotions are calculated, the list of applicable promotions is received with the help of `Oro\Bundle\PromotionBundle\Provider\PromotionProvider`. To get only suitable promotions, filters that implement `Oro\Bundle\RuleBundle\RuleFiltration\RuleFiltrationServiceInterface` are used.
+When promotions are calculated, the list of applicable promotions is received with the help of `Oro\Bundle\PromotionBundle\Provider\PromotionProvider`. To get only suitable promotions, filters are used. By default, they are the following:
+
+- `Oro\Bundle\RuleBundle\RuleFiltration\EnabledRuleFiltrationServiceDecorator` - filters enabled promotions
+- `Oro\Bundle\PromotionBundle\RuleFiltration\DuplicateFiltrationService` - filters promotions that are already used to avoid duplications
+- `Oro\Bundle\PromotionBundle\RuleFiltration\ScopeFiltrationService` - filters promotions with appropriate scopes
+- `Oro\Bundle\RuleBundle\RuleFiltration\ExpressionLanguageRuleFiltrationServiceDecorator` - filters promotions if their expressions are evaluated as true
+- `Oro\Bundle\PromotionBundle\RuleFiltration\CurrencyFiltrationService` - filters promotions by currency
+- `Oro\Bundle\PromotionBundle\RuleFiltration\ScheduleFiltrationService` - filters promotions with actual schedules
+- `Oro\Bundle\PromotionBundle\RuleFiltration\CouponFiltrationService` - filters promotions that have the useCoupons flag by applied coupons from context
+- `Oro\Bundle\PromotionBundle\RuleFiltration\MatchingItemsFiltrationService` - filters promotions if some of their products match line items’ products given from context
+- `Oro\Bundle\PromotionBundle\RuleFiltration\ShippingFiltrationService` - filters shipping promotions by given shipping method from context
+- `Oro\Bundle\RuleBundle\RuleFiltration\StopProcessingRuleFiltrationServiceDecorator` - filters out successors of promotion with the Stop Further Rule Processing flag set, note that promotions are sorted by Sort Order
 
 ### Context Data Converters
 
@@ -136,11 +147,11 @@ As a result, filters should support skippability based on the option from the co
 
 To make your filters skippable, you may inherit AbstractSkippableFiltrationService or implement skipping logic on your own.
 
-To skip a filter during coupon application, the disableFilter method should be called for the oro_promotion.frontend_applied_coupon_manager service with the filter’s class name:
+To skip a filter during coupon application, the disableFilter method should be called for the oro_promotion.handler.frontend_coupon_handler service with the filter’s class name:
 
 ```yaml
 services:
-    oro_promotion.frontend_applied_coupon_manager:
+    oro_promotion.handler.frontend_coupon_handler:
         calls:
             - [disableFilter, ['Oro\Bundle\PromotionBundle\RuleFiltration\ShippingFiltrationService']]
 ```

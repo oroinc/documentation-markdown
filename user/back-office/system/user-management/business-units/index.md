@@ -22,11 +22,11 @@ To create a new business unit:
    * **Fax** — The fax number specified for the business unit record.
 
    ![image](user/img/system/user_management/users_bu_create.png)
-4. In the **Users** section, select the **HAS BUSINESS UNIT** checkbox next to the required users to add them to the business unit you are creating.
+4. In the **Additional** section, provide a short description of the business unit record.
+5. In the **Users** section, select the **Has Group** checkbox next to the required users to add them to the business unit you are creating.
 
    #### NOTE
    One user can belong to more than one business unit.
-5. In the **Additional** section, provide a short description of the business unit record.
 6. Click **Save and Close**.
 
 Once saved, the business unit is available on the list of all business units under **System > User Management > Business Units**, where you can filter business units by name, view, edit and delete them.

@@ -2,9 +2,9 @@
 
 # Change a Storefront Menu
 
-To update the storefront menu contents, navigate to **System > Storefront Menus** in the main menu and click the menu name or the <i class="fa fa-eye fa-lg" aria-hidden="true"></i> View icon in the corresponding row of the storefront menu list.
+To update the storefront menu contents, navigate to **System > Frontend Menus** in the main menu and click the menu name or the <i class="fa fa-eye fa-lg" aria-hidden="true"></i> View icon in the corresponding row of the storefront menu list.
 
-![A list of all available storefront menu items](user/img/concept-guides/menus/frontend_menu_list.png)
+![A lust of available storefront menu items](user/img/system/frontend_menu/frontend_menu_1.png)
 
 On the page that opens, the menu item tree is displayed in the left panel. The center is reserved for the menu item configuration.
 
@@ -13,8 +13,9 @@ On the page that opens, the menu item tree is displayed in the left panel. The c
 A storefront menu can be multi-level, and the child menu items are nested under parent menu items (e.g., **About**, **Customer Service**, **Privacy Policy**, and others are nested under **Information**).
 
 ![Configuration settings of the About menu under the commerce_footer_links storefront menu](user/img/system/frontend_menu/frontend_menu_2.png)
-1. To minimize or maximize the left menu panel, click the arrow on the top right of the panel.
-2. To expand / collapse a parent menu item, click an arrow in front of it.
+1. To minimize or maximize the left menu panel, click a double arrow on the top right of the panel.
+2. To expand / collapse all menu items, click the ellipses drop-down menu on the top right of the left panel and click **Expand All** or **Collapse All**.
+3. To expand / collapse a parent menu item, click an arrow in front of it.
 
 ![Numbers that define the actions you can do to storefront menu items described above](user/img/system/frontend_menu/frontend_menu_edit.png)
 
@@ -23,7 +24,7 @@ A storefront menu can be multi-level, and the child menu items are nested under 
    - If an arrow points to the place between items, that is where the moved item will be placed.
      ![Dragging the Catalog menu under Shopping Rules](user/img/system/frontend_menu/d&dsame.png)
    - If an arrow appears in front of a menu item, then the moved item will become a child of the item to which the arrow points.
-2. To update the target type of the root menu item of any storefront menu, click on the menu item, and select one of the three options from the dropdown:
+2. To update the target type of the root menu item of any frontend menu, click on the menu item, and select one of the three options from the dropdown:
    - **Category** — Select a master catalog category from the list.
    - **Content Node** — Select the [web catalog](../../marketing/web-catalogs/index.md#user-guide-web-catalog) from which you want to choose the content node and the [content node](../../marketing/web-catalogs/edit-content-tree/content-variants.md#user-guide-marketing-web-catalog-content-variant) itself.
    - **None** — No target type is required.
@@ -99,20 +100,14 @@ A storefront menu can be multi-level, and the child menu items are nested under 
   * The  *!is_logged_in()* function stands for the *non-registered users*. If entered, only the unregistered users are enabled to view the corresponding menu item.
   * The *config_value(‘some_identifier’)* function limits visibility of the corresponding menu item upon specifying certain value instead of  *‘some_identifier’*.
 
-#### NOTE
-The conditions use <a href="https://symfony.com/doc/6.4/components/expression_language/introduction.html" target="_blank">Symfony Expression Language</a>, so you can use `&&, II, and, or` and many other operators to combine several conditions.
+  As an example, let us make the **About** section in the storefront visible to customers with configured taxes. For this, we need to:
+  1. Customize the *config_value(‘some_identifier’)* function with the required value instead of *some_identifier*. In our case, it is the *oro_tax.tax_enable* value.
+  2. Click **Save** on the top right of the About menu page to save the changes.
+  3. Enable **Tax Calculation** in the system configuration. More information on tax configuration can be found in the relevant [Configure Tax Calculation](../configuration/commerce/taxation/tax-calculation.md#user-guide-taxes-tax-configuration) topic.
+  4. Click **Save** on the top right of the Tax Calculation configuration page.
 
-As an example, let us make the **About** section in the storefront visible to customers with configured taxes. For this, we need to:
-
-1. Customize the *config_value(‘some_identifier’)* function with the required value instead of *some_identifier*. In our case, it is the *oro_tax.tax_enable* value.
-2. Click **Save** on the top right of the About menu page to save the changes.
-3. Enable **Tax Calculation** in the system configuration. More information on tax configuration can be found in the relevant [Configure Tax Calculation](../configuration/commerce/taxation/tax-calculation.md#user-guide-taxes-tax-configuration) topic.
-4. Click **Save** on the top right of the Tax Calculation configuration page.
-
-The steps are illustrated below:
-
-![The steps you need to take to enable the About section to customers with configured taxes in the storefront](user/img/system/frontend_menu/frontend_menu_11.png)
-
+  The steps are illustrated below:
+  ![The steps you need to take to enable the About section to customers with configured taxes in the storefront](user/img/system/frontend_menu/frontend_menu_11.png)![The steps you need to take to disable the About section to customers with configured taxes in the storefront](user/img/system/frontend_menu/frontend_menu_12.png)
 * **Target Window** — determines the way to open the linked document or URI. Select *Same Window* option to open it in the current browser window. Select *New Window* to open it in a new browser tab.
 
 1. Click **Save** to save your changes. If you wish to start creating another menu item right away, click **Save and New** on the top right.
@@ -124,7 +119,7 @@ You need to reload the page to see the changes in the storefront.
 
 To edit an existing menu item, make sure you click on the required child menu item and update the field displayed for it on the right.
 
-![image](user/img/system/frontend_menu/edit-item1.png)
+![image](user/img/system/frontend_menu/edit-item.png)
 
 If you are editing a menu item with target type Content Node that you created previously, then you will be able to update all the existing fields for this menu item. If this menu item was created in the system previously and not by you, fields *Target Type, Web Catalog, Content Node* will be disabled, as illustrated below:
 
@@ -159,7 +154,7 @@ Some menus (or some menu levels) cannot display dividers. For example, if you ad
 
    #### NOTE
    If a menu item that you want to show has a parent, it will become visible too.
-3. **Find a Menu Item** —  To quickly find a menu item, enter its name into the search field and click the ![Search-SVG](_themes/sphinx_rtd_theme/static/svg-icons/search.svg) **Search** icon or press **Enter**.
+3. **Find a Menu Item** —  To quickly find a menu item, enter its name into the search field and click the <i class="fa fa-search fa-lg" aria-hidden="true"></i> **Search** icon or press **Enter**.
    ![Using the search tab to locate all references about sales](user/img/system/menus/menus_application_search.png)
 4. **Delete a Menu Item / Divider** — To delete a menu item or a divider, click the necessary item in the left panel. Click **Delete** on the top right. In the **Delete Confirmation** dialog box, click **Yes, Delete**. Reload the page to see changes.
 
@@ -173,20 +168,3 @@ Some menus (or some menu levels) cannot display dividers. For example, if you ad
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

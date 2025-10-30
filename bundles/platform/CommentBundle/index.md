@@ -2,7 +2,7 @@
 
 # OroCommentBundle
 
-<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/CommentBundle" target="_blank">OroCommentBundle</a> adds the Comments functionality which can be used with the application entities.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/CommentBundle" target="_blank">OroCommentBundle</a> adds the Comments functionality which can be used with the application entities.
 
 ## Enable Comments for an Entity
 
@@ -12,19 +12,39 @@ Usually, you do not need to provide a predefined set of associations between the
 namespace Acme\Bundle\DemoBundle\Migrations\Schema\v1_5;
 
 use Doctrine\DBAL\Schema\Schema;
+use Oro\Bundle\CommentBundle\Migration\Extension\CommentExtension;
 use Oro\Bundle\CommentBundle\Migration\Extension\CommentExtensionAwareInterface;
-use Oro\Bundle\CommentBundle\Migration\Extension\CommentExtensionAwareTrait;
 use Oro\Bundle\MigrationBundle\Migration\Migration;
 use Oro\Bundle\MigrationBundle\Migration\QueryBag;
 
-class AddCommentAssociation implements Migration, CommentExtensionAwareInterface
+class AddCommentAssociation  implements Migration, CommentExtensionAwareInterface
 {
-    use CommentExtensionAwareTrait;
+    protected CommentExtension $commentExtension;
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
+    public function setCommentExtension(CommentExtension $commentExtension): void
+    {
+        $this->commentExtension = $commentExtension;
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
-        $this->commentExtension->addCommentAssociation($schema, 'acme_demo_entity');
+        self::addComment($schema, $this->comment);
+    }
+
+    /**
+     * @param Schema $schema
+     * @param CommentExtension $commentExtension
+     * @return void
+     */
+    public static function addComment(Schema $schema, CommentExtension $commentExtension): void
+    {
+        $commentExtension->addCommentAssociation($schema, 'acme_demo_entity');
     }
 }
 ```
@@ -46,7 +66,9 @@ class SomeActivityListProvider implements ActivityListProviderInterface, Comment
 {
     // ...
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function isCommentsEnabled($entityClass)
     {
         return $this->configManager->hasConfig($entityClass)

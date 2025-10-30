@@ -39,7 +39,7 @@ Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More 
 
 1. Click <i class="fa fa-eye fa-lg" aria-hidden="true"></i> to view the localization details. Alternatively, click the corresponding item to open its details page.
 2. Click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> to edit the localization.
-3. Click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) to remove the localization from the list.
+3. Click <i class="fas fa-trash-alt" aria-hidden="true"></i> to remove the localization from the list.
 
 ![image](user/img/system/localization/localizations_more_options.png)
 
@@ -65,20 +65,3 @@ Once the localization is configured, you need to enable it in the system configu
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

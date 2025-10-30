@@ -39,22 +39,20 @@ To configure email settings globally:
    > * *Enable Attachment Sync* — Enable loading attachments on email sync.
    > * *Maximum Sync Attachment Size (Mb)* — Set the maximum sync attachment size in Mb. Attachments that exceed the defined size will not be downloaded. You can remove size limitations by setting the size to 0.
    > * *Remove Large Attachments* — Click the button to add a job to the queue to remove all attachments exceeding the defined size from the system.
-   > * *Attachments Preview Limit* — Set a limit to show a preview for attachments (a thumbnail for images and a big file icon for other files). Set the preview limit to 0 if you wish to see a list with file names only.
+   > * *Attachments Preview Limit* — Set a limit to show preview for attachments (a thumbnail for images and a big file icon for other files). Set the preview limit to 0 if you wish to see a list with file names only.
 7. Under **SMTP Settings**, configure the SMTP protocol that allows to send email messages. Click **Check SMTP Connection** once you provide the following details:
    > * *Host* — SMTP Host name, e.g. smtp.gmail.com
    > * *Port* — SMTP Port number, e.g. 465
    > * *Encryption* — Encryption type: None, SSL or TLS
    > * *Username* — Your email address
    > * *Password* — The password for your email address
-8. Under **HTML in templates**, configure the following:
-   > * **Enable HTML Purifier** — Enable or disable HTML Purifier. Disabling HTML Purifier allows you to paste any HTML code into a template or an email body editor without tag stripping.
-   > * **Enable WYSIWYG For Email Templates** — Enable or disable the WYSIWYG editor for [email templates](../../../emails/index.md#admin-guide-email-configuration). Remember that the WYSIWYG editor does not support variables provided by the default base email template. Enabling the WYSIWYG editor may break existing email templates.
-9. Under **Notification Rules**, define the rules that will be applied by default to a notification generated in the application. You can define the **Sender Email** and **Sender Name** to be used.
+8. Under **HTML in templates**, enable or disable HTML Purifier. Disabling HTML Purifier allows to paste any HTML code into a template or an email body editor without tag stripping.
+9. Under **Notification Rules**, defines the rules that will be applied by default to a notification generated in the application. You can define the **Sender Email** and **Sender Name** to be used.
 10. Under **Maintenance Notifications**, provide the following details to set up maintenance notifications:
     > * *Email Template* — Select the default template for maintenance notifications from the list.
     > * *Recipients* — Leave this field empty to send maintenance notification emails to all active users. To send notifications only to selected users, add their email addresses separated by semicolon (;).
 11. Under **Campaign**, define the rules that will be applied by default to emails generated as part of marketing campaigns in the application. You can define the **Sender Email** and **Sender Name**.
-12. Under **System Mailboxes**, configure your [system mailbox](#admin-configuration-system-mailboxes) that allows people who do not have access to the company mailbox addresses to write to the company. To add a new system mailbox, click **Add Mailbox**.
+12. Under **System Mailboxes**, configure your [system mailbox](#admin-configuration-system-mailboxes) that allows people who do not have access to the company mailbox addresses write to the company. To add a new system mailbox, click **Add Mailbox**.
 13. Click **Save Settings**.
 
 <a id="admin-configuration-system-mailboxes-global"></a>
@@ -65,11 +63,11 @@ To configure email settings globally:
 
 ## Configure a System Mailbox
 
-System mailbox allows people who do not have access to the company mailbox addresses to write to the company.
+System mailbox allows people who do not have access to the company mailbox addresses write to the company.
 
 You can create several system mailboxes. For example, this can be a mailbox for support requests, business proposals, or order requests.
 
-You can define and modify the list of Oro users who have access to each of these mailboxes, automatically turn letters into cases or leads, and set up auto-responses.
+You can define and modify the list of Oro users who have access to each of these mailboxes, automatically turn letters into cases or leads, and set-up auto-responses.
 
 You can create a system mailbox on two levels, globally and [per organization](../../../user-management/organizations/org-configuration/general-setup-org/organization-email-settings.md#admin-configuration-system-mailboxes-organization).
 
@@ -96,34 +94,35 @@ To configure a system mailbox globally:
    * **Account Type: Office 365** (is available when the application is integrated with [Microsoft 365 OAuth](../integrations/microsoft-settings/microsoft-oauth-azure.md#user-guide-integrations-azure-oauth))
      * *Connected Account* — The account connected to Microsoft 365. Click **Retrieve Folders** to load folders from the connected account.
 
-   <!-- .. image:: /user/img/system/integrations/microsoft/system-mailbox-365.png
-   :alt: Email synchronization settings for Microsoft 365 -->
-   * **Account Type: Other**:
-     * *Enable IMAP* — Select the checkbox to enable retrieving email messages
-     * *IMAP Host* — Provide the IMAP Host, e.g. imap.gmail.com
-     * *IMAP Port* — Provide the IMAP Port, e.g. 993
-     * *Encryption* — Select the encryption type, SSL or TLS.
-     * *Enable SMTP* — Select the checkbox to enable sending messages
-     * *SMTP Host* — Provide the SMTP host, e.g. smtp.gmail.com
-     * *SMTP Port* — Provide the SMTP port, e.g. 587
-     * *Encryption* — Select the encryption type, SSL or TLS.
-     * *User* — Provide your email address
-     * *Password* — Provide your password
+<br/>
+> ![Email synchronization settings for Microsoft 365](user/img/system/integrations/microsoft/system-mailbox-365.png)
+<br/>
+> * **Account Type: Other**:
+>   * *Enable IMAP* — Select the checkbox to enable retrieving email messages
+>   * *IMAP Host* — Provide the IMAP Host, e.g. imap.gmail.com
+>   * *IMAP Port* — Provide the IMAP Port, e.g. 993
+>   * *Encryption* — Select the encryption type, SSL or TLS.
+>   * *Enable SMTP* — Select the checkbox to enable sending messages
+>   * *SMTP Host* — Provide the SMTP host, e.g. smtp.gmail.com
+>   * *SMTP Port* — Provide the SMTP port, e.g. 587
+>   * *Encryption* — Select the encryption type, SSL or TLS.
+>   * *User* — Provide your email address
+>   * *Password* — Provide your password
 
-   > Click **Check Connection/Retrieve Folders**. After a successful connection, a list of available folders is displayed. Select the checkboxes next to the folders you wish to synchronize. In the example below, synchronization has been done for a Gmail mailbox. The INBOX folder will be synchronized.
+> > Click **Check Connection/Retrieve Folders**. After successful connection, a list of available folders is displayed. Select the checkboxes next to the folders you wish to synchronize. In the example below, synchronization has been done for a Gmail mailbox. The INBOX folder will be synchronized.
 
-   #### HINT
-   Detailed instructions on the way to set up IMAP and SMTP connection in Gmail are provided on the <a href="https://support.google.com/mail/troubleshooter/1668960?hl=en&rd=1#ts=1665018%2C1665144" target="_blank">Google support page</a>.
+> #### HINT
+> Detailed instructions on the way to set-up IMAP and SMTP connection in Gmail are provided on the <a href="https://support.google.com/mail/troubleshooter/1668960?hl=en&rd=1#ts=1665018%2C1665144" target="_blank">Google support page</a>.
 
-   #### HINT
-   To enable connection, select the checkbox next to <a href="https://support.google.com/accounts/answer/6010255?hl=en" target="_blank">Allow Access for Less Secure Apps Box</a>.
+> #### HINT
+> To enable connection, select the checkbox next to <a href="https://support.google.com/accounts/answer/6010255?hl=en" target="_blank">Allow Access for Less Secure Apps Box</a>.
 
-   ![An example of synchronization for a gmail mailbox](user/img/system/config_system/synchronize_mb.png)
-6. In the **Email Processing** section, choose what happens to all the emails received in the mailbox.
+> ![An example of synchronization for a gmail mailbox](user/img/system/config_system/synchronize_mb.png)
+1. In the **Email Processing** section, choose what happens to all the emails received in the mailbox.
    * *Do Nothing* — No actions are performed. Letters are saved in the mailbox.
    * *Convert To Lead* — Letters will be saved in the mailbox. Based on the first letter in the thread, a new Lead record will be created in the Oro application.
    * *Convert To Case* — Letters will be saved in the mailbox. Based on the first letter in the thread, a new Case record will be created in the Oro application.
-   * *Convert To Draft Order* — When [AI Smart Order](../../../../../concept-guides/ai/index.md#concept-guide-ai-smart-order) is configured in an OroCommerce Enterprise application, the system will scan the email box for any incoming POs and create a draft order using the information it captures from the email and or its attachment automatically. The purchase orders must be attached to the email in JPG, PNG, or PDF format. Please <a href="https://oroinc.com/contact-us/" target="_blank">contact our support team</a> to help with implementation.
+   * *Convert To Draft Order* — When [AI Smart Order](../../../../../concept-guides/ai/index.md#concept-guide-ai-smart-order) is configured in an OroCommerce Enterprise application, the system will scan the email box for any incoming POs and create a draft order using the information it captures from the email and or its attachment automatically. Please <a href="https://oroinc.com/contact-us/" target="_blank">contact our support team</a> to help with implementation. Please note that this feature is available as of OroCommerce version 5.1.14.
 
    As an example, we have selected the **Convert To Lead** option. Once the action has been selected, define which user will own the records and choose the source of your leads in the **Source** field.
    ![Selecting an owner and a source for processing the emails when the action is set to `convert to lead`](user/img/system/config_system/email_processing_2.png)
@@ -132,9 +131,9 @@ To configure a system mailbox globally:
    Options in the Source field should be defined in advance. This can be done through the entity manager in **System > Entities > Entity Management > Lead > Source**.
 
    ![Creating a source entity from the entity management menu](user/img/system/config_system/lead_source_field.png)
-7. In the **Access Management** section, define which users will have access to the system mailbox. You can select [roles](../../../user-management/roles/index.md#user-guide-user-management-permissions) and/or specific users. All the users with defined roles and all the specifically defined users will have access to this mailbox.
-8. In the **Autoresponse Rules** section, generate one or several auto-response rules. These rules determine which template is sent to the sender of the email.
-9. Click **Add Rule** to add a new auto-response rule and complete the following details in the dialog:
+2. In the **Access Management** section, define which users will have access to the system mailbox. You can select [roles](../../../user-management/roles/index.md#user-guide-user-management-permissions) and/or specific users. All the users with defined roles and all the specifically defined users will have access to this mailbox.
+3. In the **Autoresponse Rules** section, generate one or several auto-response rules. These rules determine which template is sent to the sender of the email.
+4. Click **Add Rule** to add a new auto-response rule and complete the following details in the dialog:
    ![Sample auto-response rule form](user/img/system/config_system/ar_rule.png)
    * *Status (Active/Inactive)* — Only rules with active statuses are applied.
    * *Name* — Select the name for the rule to be used within the system.
@@ -146,7 +145,7 @@ To configure a system mailbox globally:
    * *Save Response As Email Template* — Checking the box automatically saves the current email as a template.
 
    Click **Add** on the bottom to save the rule.
-10. Click **Save Settings**.
+5. Click **Save Settings**.
 
 #### BUSINESS TIP
 ## Business Tip

@@ -9,7 +9,7 @@ This section is part of the [Localization and Translation](../../../../../concep
 
 <!-- begin_1 -->
 
-In the system configuration, you can define the localization options, such as system locale, primary location, address formatting method, system timezone, calendar year settings, temperature and wind speed units on the map. Furthermore, you can set the default language of the UI elements displayed in the storefront and in the back-office.
+In the system configuration, you can define the localization options, such as system locale, primary location, address formatting method, system timezone, calendar year settings, temperature and wind speed units on the map. Furthermore, you can set the default language of the UI elements displayed in the storefront.
 
 #### HINT
 The system configuration of the localization settings are available on four levels: globally, [per organization](../../../user-management/organizations/org-configuration/general-setup-org/organization-localization.md#config-guide-localization-organization-localization), [per website](../../../websites/web-configuration/general-sys-config/general/website-localization.md#sys-websites-sysconfig-general-setup-localization), and [per user](../../../user-management/users/configuration/user-localization.md#config-guide-localization-user-localization).
@@ -49,7 +49,7 @@ To configure localization settings globally:
    * **Temperature Unit** and **Wind Speed Unit** to display the weather on the map. The default values are Fahrenheit and miles per hour (MPH).
      ![Weather on a map](user/img/system/config_system/localization_map.png)
 5. In the **Localization Settings**, provide:
-   * **Default Localization** — The default localization of the back-office and storefront UI. The list of available languages depends on the localizations added to the **Enabled Localizations** list.
+   * **Default Localization** — The default language of the back-office and storefront UI. The list of available languages depends on the localizations added to the **Enabled Localizations** list.
    * **Enabled Localizations** — The list of localizations is generated automatically based on the data preconfigured in the **System > Localization > Localizations** menu.
 
      All supported localizations added to this list are displayed in the language switcher in the storefront.
@@ -68,20 +68,3 @@ To configure localization settings globally:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

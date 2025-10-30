@@ -47,15 +47,15 @@ You can define the following attributes:
   </li>
   ```
 
-In the template, provide the `<li{{ oro_menu.attributes(itemAttributes) }}>` tag. If the template was not defined, the item is displayed the way it is presented in the <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Resources/views/Calendar/Menu/contextMenu.html.twig" target="_blank">context menu template</a>.
+In the template, provide the `<li{{ oro_menu.attributes(itemAttributes) }}>` tag. If the template was not defined, the item is displayed the way it is presented in the <a href="https://github.com/oroinc/OroCalendarBundle/blob/5.1/Resources/views/Calendar/Menu/contextMenu.html.twig" target="_blank">context menu template</a>.
 
 **Module** receives the following values from **options** into **initialize**:
 
 - **el** - context menu item.
-- **model** - a <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Resources/public/js/calendar/connection/model.js" target="_blank">Backbone model</a> represents a calendar connection .
-- **collection** - a <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Resources/public/js/calendar/connection/collection.js" target="_blank">Backbone collection</a>.
-- **colorManager** - <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Resources/public/js/calendar/color-manager.js" target="_blank">manager</a>.
-- **connectionsView** - a Backbone view represents a <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Resources/public/js/calendar/connection/view.js" target="_blank">calendar items list</a>.
+- **model** - a <a href="https://github.com/oroinc/OroCalendarBundle/blob/5.1/Resources/public/js/calendar/connection/model.js" target="_blank">Backbone model</a> represents a calendar connection .
+- **collection** - a <a href="https://github.com/oroinc/OroCalendarBundle/blob/5.1/Resources/public/js/calendar/connection/collection.js" target="_blank">Backbone collection</a>.
+- **colorManager** - <a href="https://github.com/oroinc/OroCalendarBundle/blob/5.1/Resources/public/js/calendar/color-manager.js" target="_blank">manager</a>.
+- **connectionsView** - a Backbone view represents a <a href="https://github.com/oroinc/OroCalendarBundle/blob/5.1/Resources/public/js/calendar/connection/view.js" target="_blank">calendar items list</a>.
 
 In the JavaScript module, you can use the default method **execute**. This method is called when a user clicks on your item menu, for example:
 
@@ -90,7 +90,7 @@ execute: function (model, actionSyncObject) {
 
 **Execute()** function must receive two parameters:
 
-- **model** is a <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Resources/public/js/calendar/connection/model.js" target="_blank">Backbone model</a> that consists of the calendar item property.
+- **model** is a <a href="https://github.com/oroinc/OroCalendarBundle/blob/5.1/Resources/public/js/calendar/connection/model.js" target="_blank">Backbone model</a> that consists of the calendar item property.
 - **actionSyncObject** is a jQuery deferred object that synchronizes the context menu action and the rendering calendar. If a custom action is performed successfully, the promise object should perform the **resolve()** function. In other cases, it should perform the **reject()** method.
 
 You can also use other events or functions to execute the context menu action in the module. In this case, the module should call method **\_initActionSyncObject()** of object **connectionsView** before starting the action so that a user cannot run other menu actions. After the action is performed, the module should execute **resolve()** or **reject()** functions of object **connectionsView._actionSyncObject**.

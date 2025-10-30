@@ -4,7 +4,7 @@
 
 You can edit records in your application in three ways:
 
-1. By using ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) [inline editing](index.md#doc-grids-actions-records-edit-inline) in [record tables](../../navigation/record-tables.md#doc-grids).
+1. By using <i class="fas fa-pencil-alt" aria-hidden="true"></i> [inline editing](index.md#doc-grids-actions-records-edit-inline) in [record tables](../../navigation/record-tables.md#doc-grids).
    ![Illustration of the inline editing in record tables](user/img/getting_started/records/inline_editing_example.png)
 2. By clicking  <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** in the ellipsis (or more options) menu located at the end of the row of the selected record in the [table](../../navigation/record-tables.md#doc-grids).
 3. By opening the page of the selected record and clicking **Edit**.
@@ -39,20 +39,3 @@ The Ellipsis menu (or the more options menu) is located on the page of all recor
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->
