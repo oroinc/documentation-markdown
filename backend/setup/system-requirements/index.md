@@ -55,10 +55,10 @@ CREATE EXTENSION "uuid-ossp";
 
 ### Optional recommendations
 
-* <a href="http://php.net/manual/en/book.tidy.php" target="_blank">Tidy PHP extension</a> should be installed to make sure that HTML is correctly converted into a text representation
-* <a href="https://redis.io/" target="_blank">Redis</a> - could be used for more efficient application caching. Supported versions of Redis: 7.2.x
-* <a href="https://pngquant.org" target="_blank">pngquant</a> and <a href="https://github.com/tjko/jpegoptim" target="_blank">jpegoptim</a> are used if it is necessary to optimize the image size in storage
-* <a href="https://gotenberg.dev" target="_blank">Gotenberg</a> is used for PDF generation. Supported versions of Gotenberg: 8.0.x
+* <a href="http://php.net/manual/en/book.tidy.php" target="_blank">Tidy PHP extension</a> should be installed to make sure that HTML is correctly converted into a text representation.
+* <a href="https://redis.io/" target="_blank">Redis</a> can be used for more efficient application caching. Supported versions of Redis: 7.2.x.
+* <a href="https://pngquant.org" target="_blank">pngquant</a> and <a href="https://github.com/tjko/jpegoptim" target="_blank">jpegoptim</a> are used if it is necessary to optimize the image size in storage.
+* <a href="https://gotenberg.dev" target="_blank">Gotenberg</a> is used for PDF generation. Supported versions of Gotenberg: >=8.5.x. It is recommended that you install the latest available version to benefit from frequent Chromium updates.
 
 ## Client-side Requirements
 
