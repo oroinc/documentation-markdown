@@ -9,6 +9,7 @@ Accounts aggregate information on all your customers and their activities. Here 
 * The date of account creation and its latest update.
 * Thd calculated amount of the account’s [Lifetime Sales Value](../../../glossary.md#term-Lifetime-Sales-Value).
 * General details of the account, such as its name, tags, description and all the contacts assigned to the account.
+  ![General information about account](user/img/customers/accounts/account_view_general_new.png)
 * Any [activities](../../activities/index.md#user-guide-activities) related to the account, such as attachments, calls, calendar events, notes, emails, or tasks (if available).
   ![The activity section on the account page, displaying assigned tasks, added notes and calendar events and logged calls](user/img/customers/accounts/accounts_view_activities.png)
 
@@ -32,6 +33,8 @@ Accounts aggregate information on all your customers and their activities. Here 
 
 You can manage the information collected within accounts. Below is an overview of what actions you can perform from the view page of any account:
 
+* Share an account by clicking **Share** and providing information in a pop up form (available for the Enterprise edition).
+  ![The sharing settings dialog displayed after clicking the share button on the account page](user/img/customers/accounts/accounts_view_actions_share.png)
 * Edit account information by clicking <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit**.
 * Delete an account from the system by clicking ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete**.
 * Perform a number of actions under the **More Actions** menu:
@@ -59,7 +62,7 @@ The key actions that you can do to selected accounts on the list are located und
 
 In addition to editing an account on the edit page, you can quickly amend the necessary information using inline editing for specific columns in the grid, such as account name, owner or tags. To edit within the grid, click ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg).
 
-![Inline editing for specific columns on the page of all accounts](user/img/customers/accounts/accounts_grid_inline_editing.png)
+![Inline editing for specific columns on the page of all accounts](user/img/customers/accounts/accounts_grid_inline_editing.gif)
 
 Aggregation capabilities of accounts extend even further, with the ability to merge as many accounts as you want should you need to accumulate information from several accounts. Click <i class="fa fa-random fa-lg" aria-hidden="true"></i> and follow the instructions on the screen to proceed with the merge.
 

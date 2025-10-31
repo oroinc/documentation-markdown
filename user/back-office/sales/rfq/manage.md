@@ -136,7 +136,7 @@ The internal status changes back to *Open*, and the customer status changes back
 
 To decline the RFQ,  click **Decline** on the RFQ page.
 
-This will change the internal status to *Declined* and the customer status to *Cancelled*.
+This will change the internal status to *Declined\*and the customer status to \*Cancelled*.
 
 ![Display the RFQ with the internal status Declined in the back-office](user/img/sales/rfq/rfq_17.png)
 

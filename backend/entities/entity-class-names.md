@@ -28,7 +28,9 @@ use Oro\Bundle\EntityBundle\Provider\EntityClassNameProviderInterface;
  */
 class AcmeClassNameProvider extends AbstractEntityClassNameProvider implements EntityClassNameProviderInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getEntityClassName(string $entityClass): ?string
     {
         // add your implementation here
@@ -39,7 +41,9 @@ class AcmeClassNameProvider extends AbstractEntityClassNameProvider implements E
         return "PRIORITY";
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getEntityClassPluralName(string $entityClass): ?string
     {
         // add your implementation here

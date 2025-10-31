@@ -244,7 +244,7 @@ Add `#[Layout]` attribute to the controller:
 
 ```diff
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Oro\Bundle\LayoutBundle\Attribute\Layout;
 
  class UserController extends AbstractController

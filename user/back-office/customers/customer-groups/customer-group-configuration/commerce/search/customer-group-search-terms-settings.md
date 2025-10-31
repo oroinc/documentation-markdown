@@ -6,7 +6,7 @@
 Read [Search Functions Concept Guide](../../../../../../concept-guides/catalog-promotions/search/index.md#user-guide-getting-started-search) to get a general understanding of the search functionality in OroCommerce.
 
 #### NOTE
-You can configure search history [globally](../../../../../system/configuration/commerce/search/search-terms.md#configuration-guide-commerce-configuration-search-history), [per organization](../../../../../system/user-management/organizations/org-configuration/commerce/search/org-search-terms.md#organization-commerce-configuration-search-history), [website](../../../../../system/websites/web-configuration/commerce/search/website-search-terms.md#configuration-website-commerce-search-history), customer group, or [customer](../../../../customers/customer-configuration/commerce/search/customer-search-settings.md#user-guide-customers-search-settings).
+You can configure search history globally, [per organization](../../../../../system/user-management/organizations/org-configuration/commerce/search/org-search-terms.md#organization-commerce-configuration-search-history), [website](../../../../../system/websites/web-configuration/commerce/search/website-search-terms.md#configuration-website-commerce-search-history), customer group, or [customer](../../../../customers/customer-configuration/commerce/search/customer-search-settings.md#user-guide-customers-search-settings).
 
 Search History enables users to view a history of all searches performed in the storefront.
 

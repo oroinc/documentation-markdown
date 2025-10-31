@@ -123,13 +123,17 @@ class FooPlaceholder extends AbstractPlaceholder
 {
     const NAME = 'FOO_ID';
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getPlaceholder(): string
     {
         return self::NAME;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getDefaultValue(): string
     {
         return '0';

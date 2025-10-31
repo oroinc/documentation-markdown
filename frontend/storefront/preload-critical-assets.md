@@ -46,7 +46,7 @@ You must explicitly define the fonts section for each theme, as it is not inheri
 The preload_fonts block type is designed to collect data from theme.yml and relies on its structure.
 
 #### NOTE
-It will be useful to define all fonts explicitly in theme.yml for your theme to have them in one place and know which will be preloaded, as it is done for the default theme.
+It will be useful to define all fonts explicitly in theme.yml for your theme to have them in one place and know which will be preloaded.
 Additionally, the defined fonts will be automatically available in SCSS via the $theme-fonts map variable,
 giving you full control over usage, as described in the [How to Change Fonts and Typography](how-to/how-to-change-fonts.md#dev-doc-frontend-storefront-css-fonts) article.
 

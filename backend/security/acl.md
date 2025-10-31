@@ -205,9 +205,9 @@ use Oro\Bundle\SecurityBundle\Attribute\Acl;
 use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
 use Oro\Bundle\SecurityBundle\Attribute\CsrfProtection;
 use Oro\Bundle\SecurityBundle\ORM\Walker\AclHelper;
-use Symfony\Bridge\Twig\Attribute\Template;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Acl\Voter\FieldVote;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
@@ -218,7 +218,7 @@ use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 class FavoriteController extends AbstractController
 {
     #[Route(path: '/', name: 'index')]
-    #[Template('@AcmeDemo/Favorite/index.html.twig')]
+    #[Template]
     #[AclAncestor('acme_demo_favorite_index')]
     public function indexAction(): array
     {
@@ -254,9 +254,9 @@ Attribute #[AclAncestor] enables you to reuse ACL resources defined with the ACL
 > use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
 > use Oro\Bundle\SecurityBundle\Attribute\CsrfProtection;
 > use Oro\Bundle\SecurityBundle\ORM\Walker\AclHelper;
-> use Symfony\Bridge\Twig\Attribute\Template;
+> use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 > use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-> use Symfony\Component\Routing\Attribute\Route;
+> use Symfony\Component\Routing\Annotation\Route;
 > use Symfony\Component\Security\Acl\Voter\FieldVote;
 > use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
@@ -340,9 +340,9 @@ use Oro\Bundle\SecurityBundle\Attribute\Acl;
 use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
 use Oro\Bundle\SecurityBundle\Attribute\CsrfProtection;
 use Oro\Bundle\SecurityBundle\ORM\Walker\AclHelper;
-use Symfony\Bridge\Twig\Attribute\Template;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Acl\Voter\FieldVote;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
@@ -396,9 +396,9 @@ use Oro\Bundle\SecurityBundle\Attribute\Acl;
 use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
 use Oro\Bundle\SecurityBundle\Attribute\CsrfProtection;
 use Oro\Bundle\SecurityBundle\ORM\Walker\AclHelper;
-use Symfony\Bridge\Twig\Attribute\Template;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Acl\Voter\FieldVote;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
@@ -567,7 +567,7 @@ For the security token to ignore the preferable organization, for example, an AP
 ```yaml
 oro_organization_pro:
     ignore_preferred_organization_tokens:
-        - Acme\Bundle\DemoBundle\Security\AcmeCustomToken
+        - cme\Bundle\DemoBundle\Security\AcmeWsseToken
 ```
 
 #### BUSINESS TIP

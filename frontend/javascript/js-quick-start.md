@@ -10,12 +10,12 @@ This section discusses correct approaches for implementing javascript components
 
 Make sure that you place all JS modules in the bundle’s public folder. If there is no bundle yet, create one following the instruction in the [Create a Bundle](../../backend/extension/create-bundle.md#dev-cookbook-framework-how-to-create-new-bundle) topic.
 
-Next, open your work folder  `cd userFolder/project/commerce-crm-ee/` in the terminal. To build the application after changes, run the `pnpm run build` command.  To rebuild the application automatically, run the `pnpm run watch` command.
+Next, open your work folder  `cd userFolder/project/commerce-crm-ee/` in the terminal. To build the application after changes, run the `npm run build` command.  To rebuild the application automatically, run the `npm run watch` command.
 
 Keep in mind that if you create a new bundle or fail to create symlinks when installing the application, you need to run the following command `bin/console assets:install --symlink`. For more information, please see [OroAssetBundle](../../bundles/platform/AssetBundle/index.md#bundle-docs-platform-asset-bundle) documentation.
 
 #### NOTE
-Before starting work, run the webpack in watch mode in the terminal using the\`\`pnpm run watch\`\` command.
+Before starting work, run the webpack in watch mode in the terminal using the\`\`npm run watch\`\` command.
 
 Make sure you also follow the **Naming Conventions** for public files outlined in the [JavaScript Architecture](index.md#dev-doc-frontend-javascript-naming-conventions) documentation.
 

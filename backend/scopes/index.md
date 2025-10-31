@@ -58,7 +58,9 @@ class OroCustomerBundleScopeRelations implements Migration, ScopeExtensionAwareI
 {
     use ScopeExtensionAwareTrait;
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function up(Schema $schema, QueryBag $queries): void
     {
         $this->scopeExtension->addScopeAssociation($schema, 'customer', 'oro_customer', 'name');
@@ -87,13 +89,17 @@ class ScopeUserCriteriaProvider implements ScopeCriteriaProviderInterface
         $this->tokenStorage = $tokenStorage;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getCriteriaField()
     {
         return self::USER;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getCriteriaValue()
     {
         $token = $this->tokenStorage->getToken();
@@ -107,7 +113,9 @@ class ScopeUserCriteriaProvider implements ScopeCriteriaProviderInterface
         return null;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getCriteriaValueType()
     {
         return User::class;

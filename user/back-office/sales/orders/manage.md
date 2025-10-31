@@ -64,7 +64,8 @@ To edit an order:
    Alternatively, click the order to open its details. On the order details page, click the **Edit** button on the top right.
 3. Update the required information. See [Create an Order from Scratch](create.md#user-guide-sales-orders-create) and [Manage Promotions in Orders](../../marketing/promotions/promotions/manage-discounts-in-orders.md#user-guide-sales-orders-promotions) topics for detailed information on the available options.
 
-   If the order contains [product kit(s)](../../products/products/create-kit.md#products-products-create-product-kit), you can add items that qualify for it to the order.
+   If the order contains [product kit(s)](../../products/products/create-kit.md#products-products-create-product-kit), you can add items that qualify for it to the order. Additionally, you can amend the price for kit items, as well as the kit on the whole. You can still reset the price back to the original value even if it has been overriden. For this, click on the **i** icon next to the price of the whole kit, and select **Reset Price**.
+   ![Illustration of how to override the price for product kits in orders](user/img/products/products/kits/override-kit-price-in-order.gif)
 4. Click **Save** on the top right of the page.
 
 <a id="user-guide-sales-orders-reorder"></a>

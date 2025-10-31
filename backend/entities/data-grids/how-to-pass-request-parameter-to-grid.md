@@ -53,7 +53,7 @@ The controller receives an entity “priority” and passes it to the view:
 class PriorityController extends AbstractController
 {
     #[Route(path: '/view/{id}', name: 'view', requirements: ['id' => '\d+'])]
-    #[Template('@AcmeDemo/Priority/view.html.twig')]
+    #[Template]
     public function viewAction(Priority $entity): array
     {
         return [

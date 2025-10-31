@@ -3,7 +3,7 @@
 # Add a Consent Landing Page to a Web Catalog
 
 #### NOTE
-To add the consents to a web catalog, make sure that consents are [enabled in the application](../../../back-office/system/configuration/commerce/customer/global-interactions.md#configuration-guide-commerce-configuration-consents).
+To add the consents to a web catalog, make sure that consents are [enabled in the application](../../../back-office/system/configuration/commerce/customer/global-consents.md#configuration-guide-commerce-configuration-consents).
 
 To be able to display the text of the consent to customers in the storefront, you need to create a consent landing page with the corresponding description and add it as a content variant for a specific node in a web catalog.
 
@@ -48,7 +48,7 @@ To add a consent landing page to a web catalog content node:
 Once the landing page with the consent description is added to a web catalog node, you can [create a new consent](../../../back-office/system/consent-management/index.md#user-guide-consents-create) under **System > Consent Management**, and link it to the required web catalog node.
 
 #### IMPORTANT
-Keep in mind that for the consents to be displayed in the storefront, you need to [add them to the list of enabled consents](../../../back-office/system/configuration/commerce/customer/global-interactions.md#admin-guide-commerce-configuration-customers-consents-enable-globally) in the system configuration.
+Keep in mind that for the consents to be displayed in the storefront, you need to [add them to the list of enabled consents](../../../back-office/system/configuration/commerce/customer/global-consents.md#admin-guide-commerce-configuration-customers-consents-enable-globally) in the system configuration.
 
 #### IMPORTANT
 You can view all consents accepted by your customer users in the **Consents** section of their pages under **Customers > Customer Users**.
@@ -61,7 +61,7 @@ Keep in mind that once a consent is accepted by at least one person in the OroCo
 **Related Topics**
 
 * [Data Protection in the OroCommerce Storefront](../../../storefront/account/my-profile/index.md#frontstore-guide-profile-consents)
-* [Configure Consents](../../../back-office/system/configuration/commerce/customer/global-interactions.md#configuration-guide-commerce-configuration-consents)
+* [Configure Consents](../../../back-office/system/configuration/commerce/customer/global-consents.md#configuration-guide-commerce-configuration-consents)
 * [Declined Consents as Contact Requests](../../../back-office/activities/contact-requests/index.md#user-guide-activities-requests)
 * [Create Consents](../../../back-office/system/consent-management/index.md#user-guide-consents-create)
 * [View and Accept Consents in the Storefront](../../../storefront/account/my-profile/index.md#frontstore-guide-profile-consents)

@@ -21,13 +21,17 @@ class AddCustomEntity implements Migration, ExtendExtensionAwareInterface
 {
     protected ExtendExtension $extendExtension;
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function setExtendExtension(ExtendExtension $extendExtension)
     {
         $this->extendExtension = $extendExtension;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $table = $this->extendExtension->createCustomEntityTable(

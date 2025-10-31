@@ -32,7 +32,9 @@ class YourMigration implements Migration, CustomerExtensionAwareInterface
 {
     use CustomerExtensionTrait;
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->customerExtension->addCustomerAssociation($schema, 'target_customer_table');
@@ -53,7 +55,9 @@ class CustomerIconProvider implements CustomerIconProviderInterface
 {
     const CUSTOMER_ICON_FILE = 'bundles/yourbundlename/img/customer-logo.png';
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getIcon($entity)
     {
         if (!$entity instanceof Customer) {

@@ -429,11 +429,7 @@ To configure a Google Tag Manager integration:
 5. In the **Container ID** field, provide the <a href="https://support.google.com/tagmanager/answer/6103696?hl=en" target="_blank">Google Tag Manager Container ID</a>. The Container ID is located in your Google Tag Manager account on the top right of the workspace page. It is formatted as *GTM-XXXXXX*.
 6. In the **Status** field, set the integration to *Active* to enable it. Should you need to disable it, select *Inactive* from the list.
 7. In the **Default Owner**, select the owner of the integration.
-
-#### NOTE
-In the **Synchronization Settings** section, select the **Log Warnings** checkbox if you want all synchronization errors to be written into the application log.
-
-1. Click **Save and Close**.
+8. Click **Save and Close**.
 
 ![Google tag manager integration creation form](user/img/system/integrations/gtm/gtm-configuration.png)
 

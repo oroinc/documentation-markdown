@@ -95,7 +95,9 @@ To be able to use the `content_restrictions_additional` and `content_restriction
 
 > class AcmeWysiwygValidationBundle extends Bundle
 > {
->     #[\Override]
+>     /**
+>      * {@inheritDoc}
+>      */
 >     public function build(ContainerBuilder $container): void
 >     {
 >         parent::build($container);

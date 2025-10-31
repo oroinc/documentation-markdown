@@ -47,16 +47,18 @@ Once a buyer submits their RFQ in the storefront, it gets immediately visible in
 
 To make the most of an RFQ-friendly store, make sure you enable all related features in the back-office either on the [global](../../../back-office/system/configuration/commerce/sales/rfq.md#configuration-guide-commerce-configuration-sales-rfq), [organization](../../../back-office/system/user-management/organizations/org-configuration/commerce/sales/organization-guest-rfq.md#user-guide-system-configuration-commerce-sales-rfq-organization), or [website](../../../back-office/system/websites/web-configuration/commerce/sales/website-guest-rfq.md#user-guide-system-configuration-commerce-sales-rfq-website) level:
 
-> ![Global RFQ configuration settings](user/img/concept-guides/rfq/RFQ_system_config.png)
 * **Request For Quote Configuration**
 
   The setting defines whether to enable or disable the RFQ feature for the back-office and the storefront. The configuration is convenient for businesses that run multiple websites (Enterprise edition only). This way, you can selectively enable the RFQ feature for certain websites and disable it for those that do not need it at all (for instance, if an RFQ is sent through emails and agreements).
+  ![Global RFQ configuration settings](user/img/concept-guides/rfq/RFQ_system_config.png)
 * **RFQ Notifications**
 
   These RFQ options enable you to determine the employee responsible for processing RFQs. They will receive all incoming email notifications every time a customer submits an RFQ.
+  ![Global RFQ notifications settings](user/img/concept-guides/rfq/RFQ_notifications.png)
 * **Guest RFQ**
 
   The option lets guest customers request quotes on the items they are interested in without registering an account. For this, make sure to enable [Guest Shopping List](../../../back-office/system/configuration/commerce/sales/global-shopping-list.md#user-guide-system-configuration-commerce-sales-shopping-list-mass-action) and [Guest Quick Order Form](../../../back-office/system/configuration/commerce/sales/guest-quick-order-global.md#user-guide-system-configuration-commerce-sales-quick-order-form-global) to display the RFQ button for unregistered visitors. As they do not have access to the Account menu, all the negotiations with sales reps are carried out via the email provided by the guest user in the RFQ form.
+  ![Global guest RFQ configuration settings](user/img/concept-guides/rfq/RFQ_guest.png)
 * **RFQ Management Flow Workflow**
 
   The default [RFQ Management Flow](../../../back-office/system/workflows/system-workflows/rfq-backoffice.md#system-workflows-rfq-backoffice-workflow) workflow activates additional capabilities to manage RFQs from the back-office, change the status of an RFQ as interaction with the customer progresses, decline, or delete it, and initiate communication process with the customer.

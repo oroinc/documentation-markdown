@@ -14,7 +14,7 @@ oro_embedded_form:
     # The number of seconds the CSRF token should live for.
     csrf_token_lifetime: 3600
     # The service id that is used to cache CSRF tokens.
-    # If not specified the oro_embedded_form.csrf_token_cache service
+    # If not specified the Oro\Bundle\SecurityBundle\Cache\WsseNoncePhpFileCache
     # will be used that stores data in %kernel.cache_dir%/security/embedded_form
     csrf_token_cache_service_id: ~
 ```

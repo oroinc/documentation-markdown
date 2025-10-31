@@ -18,7 +18,7 @@ There are quick guides to set up Docker and Symfony Server development stack:
 
 **Development Stack**
 
-- PHP, Composer, Node.js, NPM and PNPM should be installed locally for a better development experience.
+- PHP, Composer, Node.js, and NPM should be installed locally for a better development experience.
 - <a href="https://symfony.com/doc/current/setup/symfony_server.html" target="_blank">Symfony Local Web Server</a> is used to make you more productive while
   developing applications. This server is not intended for production
   use. It supports HTTP/2, TLS/SSL, automatic generation of security
@@ -120,10 +120,10 @@ You can have multiple versions of PHP versions locally. To use a
 specific PHP version for the project, go to the project root folder and run:
 
 ```none
-echo 8.4 > .php-version
+echo 8.3 > .php-version
 ```
 
-This will switch the php version to 8.4 for Symfony Server and all the
+This will switch the php version to 8.3 for Symfony Server and all the
 console commands wrapped with `symfony`.
 
 ### Run Message Consumer in the Background

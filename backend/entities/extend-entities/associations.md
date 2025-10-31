@@ -36,13 +36,17 @@ class AddDocument1RelationToUser implements Migration, ExtendExtensionAwareInter
 {
     protected ExtendExtension $extendExtension;
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function setExtendExtension(ExtendExtension $extendExtension)
     {
         $this->extendExtension = $extendExtension;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->addRelationsToUser($schema);
@@ -86,13 +90,17 @@ class AddDocument2RelationToUser implements Migration, ExtendExtensionAwareInter
 {
     protected ExtendExtension $extendExtension;
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function setExtendExtension(ExtendExtension $extendExtension)
     {
         $this->extendExtension = $extendExtension;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->addRelationsToUser($schema);
@@ -152,13 +160,17 @@ class AddDocument3RelationToUser implements Migration, ExtendExtensionAwareInter
 {
     protected ExtendExtension $extendExtension;
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function setExtendExtension(ExtendExtension $extendExtension)
     {
         $this->extendExtension = $extendExtension;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->addRelationsToUser($schema);
@@ -204,13 +216,17 @@ class AddDocument4RelationToUser implements Migration, ExtendExtensionAwareInter
 {
     protected ExtendExtension $extendExtension;
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function setExtendExtension(ExtendExtension $extendExtension)
     {
         $this->extendExtension = $extendExtension;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->addRelationsToUser($schema);
@@ -252,12 +268,16 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag; -->
 <!-- class AddDocumentRelationToUser implements Migration, ExtendExtensionAwareInterface
 {
     protected ExtendExtension $extendExtension;
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function setExtendExtension(ExtendExtension $extendExtension)
     {
         $this->extendExtension = $extendExtension;
     }
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->addRelationsToUser($schema);
@@ -314,12 +334,16 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag; -->
 <!-- class AddDocumentRelationToUser implements Migration, ExtendExtensionAwareInterface
 {
     protected ExtendExtension $extendExtension;
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function setExtendExtension(ExtendExtension $extendExtension)
     {
         $this->extendExtension = $extendExtension;
     }
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->addRelationsToUser($schema);
@@ -382,13 +406,17 @@ class AddDocument5RelationToUser implements Migration, ExtendExtensionAwareInter
 {
     protected ExtendExtension $extendExtension;
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function setExtendExtension(ExtendExtension $extendExtension)
     {
         $this->extendExtension = $extendExtension;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->addRelationsToUser($schema);
@@ -434,13 +462,17 @@ class AddDocument6RelationToUser implements Migration, ExtendExtensionAwareInter
 {
     protected ExtendExtension $extendExtension;
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function setExtendExtension(ExtendExtension $extendExtension)
     {
         $this->extendExtension = $extendExtension;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->addRelationsToUser($schema);
@@ -487,13 +519,17 @@ class AddDocument7RelationToUser implements Migration, ExtendExtensionAwareInter
 {
     protected ExtendExtension $extendExtension;
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function setExtendExtension(ExtendExtension $extendExtension)
     {
         $this->extendExtension = $extendExtension;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->addRelationsToUser($schema);
@@ -553,13 +589,17 @@ class AddDocument8RelationToUser implements Migration, ExtendExtensionAwareInter
 {
     protected ExtendExtension $extendExtension;
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function setExtendExtension(ExtendExtension $extendExtension)
     {
         $this->extendExtension = $extendExtension;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->addRelationsToUser($schema);

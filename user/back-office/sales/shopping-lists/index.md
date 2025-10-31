@@ -21,7 +21,7 @@ See a short demo on <a href="https://academy.oroinc.com/media-library/create-ord
 To view a specific shopping list in the back-office:
 
 1. Navigate to **Sales > Shopping Lists** in the main menu.
-   ![Shopping lists grid](user/img/sales/shopping_lists/SL_grid.png)
+   > ![Shopping lists grid](user/img/sales/shopping_lists/SL_grid.png)
 2. Find the required shopping list and click on it to open its details page.
 3. In the **General** section, you can find the shopping list ID, the customer user who has created the shopping list, and the comments, if any.
 4. In the **Shopping List Line Items** section, you can review the details of line items added to the shopping list (products, quantity, unit) and notes to the line items, if any.
@@ -35,6 +35,7 @@ To view a specific shopping list in the back-office:
    #### NOTE
    To handle a significant volume of data, use page switcher, increase *View Per Page*, or use filters to narrow down the list to the information you need.
 5. The **Totals** section displays the aggregated amounts, like subtotal, tax, discount, and the total amount due for payment of the items in the shopping list. OroCommerce automatically recalculates these amounts when new items are edited in, added to, or removed from the shopping list.
+   ![The shopping list amount details specified in the Totals section](user/img/sales/shopping_lists/ShoppingListsViewPageTotals.png)
 6. The **Sales Orders** section displays all orders converted from this shopping list. Click a required order to get redirected to the order details page.
    ![The shopping list orders details specified in the Sales Orders section](user/img/sales/shopping_lists/sl_sales_orders.png)
 7. The **Marketing Activity** section shows any marketing activity associated with the shopping list.

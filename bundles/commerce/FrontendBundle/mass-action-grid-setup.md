@@ -45,7 +45,9 @@ use Oro\Bundle\DataGridBundle\Extension\MassAction\DeleteMassActionHandler;
 
 class CustomersDeleteActionHandler extends DeleteMassActionHandler
 {
- #[\Override]
+ /**
+  * {@inheritdoc}
+  */
  protected function isDeleteAllowed($entity)
  {
      /** @var CustomerUser $entity */

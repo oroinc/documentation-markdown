@@ -22,12 +22,13 @@ available by default but depend on the order status:
 
 - **Shipping Tracking** — Click to add [shipping tracking](track-order.md#user-guide-shipping-order).
 - **Cancel** — Click to [cancel an order](control.md#doc-orders-actions-cancel). Available only for open orders.
-- **Close** — Click to [close an order](control.md#doc-orders-actions-close). Available only for open and canceled orders.
+- **Close** — Click to [close an order](control.md#doc-orders-actions-close). Available only for open, canceled, and shipped orders.
+- **Mark as Shipped** — Click to [mark an order as shipped](control.md#doc-orders-actions-mark-shipped). Available only for open orders.
+- **Archive** — Click to [archive an old order](control.md#doc-orders-actions-archive). Available only for closed orders.
 - **Add Special Discount** — Click to [add special discounts](../../marketing/promotions/promotions/manage-discounts-in-orders.md#user-guide-sales-orders-promotions-add-special-discount).
 - **Add Coupon Code** — Click to [provide a coupon code](../../marketing/promotions/coupons/index.md#user-guide-marketing-promotions-coupons-edit-on-order-page).
 - **Edit** — Click to [edit an order](manage.md#user-guide-sales-orders-edit).
 - **Delete** — Click to [delete an order](manage.md#doc-orders-actions-delete).
-- **Download** — Click to download a PDF of the current order. Each time you click, a new PDF is generated with an updated timestamp.
 - **More Actions** drop-down:
   - **Add Attachment** — Click to [attach a file to the order](../../getting-started/information-management/attachments.md#user-guide-activities-attachments).
   - **Add Note** — Click to [make a note regarding this order](../../getting-started/information-management/notes.md#user-guide-add-note).
@@ -44,26 +45,26 @@ This section is for order details, such as who created the order or to which web
 
 ![The General section of the order details page](user/img/sales/orders/order_details_general.png)
 
-| Field                      | Description                                                                                                                                                                                                                                                        |
-|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Order Number**           | The unique order reference number. It is generated automatically for new orders.                                                                                                                                                                                   |
-| **PO Number**              | Another order reference number. It is usually defined by the buyer and used by the buyer’s side to match invoice and received goods with purchase.                                                                                                                 |
-| **Currency**               | The currency in which the order is made.                                                                                                                                                                                                                           |
-| **Subtotal**               | The amount due for items in the order. Does not include additional costs, taxes, discounts.                                                                                                                                                                        |
-| **Customer**               | The customer that made the order.                                                                                                                                                                                                                                  |
-| **Customer User**          | The customer user that created an order on behalf of their customer.                                                                                                                                                                                               |
-| **Internal Status**        | The order status is managed only in the back-office. See the [description of internal statuses](statuses.md#doc-orders-statuses-internal).                                                                                                                         |
-| **Do Not Ship Later Than** | The date on which the order expires.                                                                                                                                                                                                                               |
-| **Source Document**        | If the order has been created from an RFQ, quote, or another order, this field contains a link to the corresponding record. If the order was created from scratch (in the back-office) or through the quick order form (in the storefront), the field shows ‘N/A’. |
-| **Created By**             | The name of the user who created an order on behalf of a customer user, either via the back-office or [customer user impersonation](../../customers/customer-users/index.md#user-guide-customers-customer-user-impersonate) in the storefront.                     |
-| **Payment Method**         | The payment method selected to pay for the order.                                                                                                                                                                                                                  |
-| **Payment Status**         | Whether the order is already paid in full, the payment for the order is authorized, etc.                                                                                                                                                                           |
-| **Website**                | The storefront website from which the order was made.                                                                                                                                                                                                              |
-| **Billing Address**        | The address where the buyer receives the payment statements. Some payment providers use a billing address to authorize payments and demand it to match the payment account holder’s current address.                                                               |
-| **Shipping Address**       | The address to deliver the ordered goods to.                                                                                                                                                                                                                       |
-| **Customer Notes**         | Any additional information or wishes provided by the buyer regarding the order.                                                                                                                                                                                    |
-| **Payment Term**           | The terms and conditions for order payment. For more information, see [Payment Terms Integration](../../system/integrations/payment-integration/payment-terms/index.md#sys-integrations-manage-integrations-payment-term).                                         |
-| **Warehouse**              | The warehouse from which the goods are shipped.                                                                                                                                                                                                                    |
+| Field                      | Description                                                                                                                                                                                                                                                                                             |
+|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Order Number**           | The unique order reference number. It is generated automatically for new orders.                                                                                                                                                                                                                        |
+| **PO Number**              | Another order reference number. It is usually defined by the buyer and used by the buyer’s side to match invoice and received goods with purchase.                                                                                                                                                      |
+| **Currency**               | The currency in which the order is made.                                                                                                                                                                                                                                                                |
+| **Subtotal**               | The amount due for items in the order. Does not include additional costs, taxes, discounts.                                                                                                                                                                                                             |
+| **Customer**               | The customer that made the order.                                                                                                                                                                                                                                                                       |
+| **Customer User**          | The customer user that created an order on behalf of their customer.                                                                                                                                                                                                                                    |
+| **Internal Status**        | The order status is managed only in the back-office. See the [description of internal statuses](statuses.md#doc-orders-statuses-internal).                                                                                                                                                              |
+| **Do Not Ship Later Than** | The date on which the order expires.                                                                                                                                                                                                                                                                    |
+| **Source Document**        | If the order has been created from an RFQ, quote, or another order, this field contains a link to the corresponding record. If the order was created from scratch (in the back-office) or through the quick order form (in the storefront), the field shows ‘N/A’.                                      |
+| **Created By**             | The name of the user who created an order on behalf of a customer user, either via the back-office or [customer user impersonation](../../customers/customer-users/index.md#user-guide-customers-customer-user-impersonate) in the storefront. The option is available as of OroCommerce version 6.0.3. |
+| **Payment Method**         | The payment method selected to pay for the order.                                                                                                                                                                                                                                                       |
+| **Payment Status**         | Whether the order is already paid in full, the payment for the order is authorized, etc.                                                                                                                                                                                                                |
+| **Website**                | The storefront website from which the order was made.                                                                                                                                                                                                                                                   |
+| **Billing Address**        | The address where the buyer receives the payment statements. Some payment providers use a billing address to authorize payments and demand it to match the payment account holder’s current address.                                                                                                    |
+| **Shipping Address**       | The address to deliver the ordered goods to.                                                                                                                                                                                                                                                            |
+| **Customer Notes**         | Any additional information or wishes provided by the buyer regarding the order.                                                                                                                                                                                                                         |
+| **Payment Term**           | The terms and conditions for order payment. For more information, see [Payment Terms Integration](../../system/integrations/payment-integration/payment-terms/index.md#sys-integrations-manage-integrations-payment-term).                                                                              |
+| **Warehouse**              | The warehouse from which the goods are shipped.                                                                                                                                                                                                                                                         |
 
 **Line Items**
 
@@ -90,7 +91,7 @@ If an order contains [product kit(s)](../../products/products/create-kit.md#prod
 
 This section displays details of shipping tracking and cost.
 
-**Discounts**
+**Promotions and Discounts**
 
 This section provides information about promotions and discounts applied to the order. The section is divided into **All Promotions** and **All Special Discounts**.
 
@@ -116,9 +117,9 @@ This section shows order costs, including any discounts (in all currencies, conf
 
 ![The Totals section of the order details page](user/img/sales/orders/order_details_totals.png)
 
-**Payments**
+**Payment History**
 
-This section provides information about payment transactions related to the order.
+This section provides information about payment transactions concerning the order.
 
 ![The Payment History section of the order details page](user/img/sales/orders/order_details_paymenthistory.png)
 
@@ -140,12 +141,6 @@ This section is visible only to the users with the corresponding permission.
 If you do not see this section, contact your administrator.
 
 If you are an administrator, find the Order entity and check the access level configured for the View Payment action.
-
-**Invoices**
-
-When the invoice functionality is [enabled in the system configuration](../../system/configuration/commerce/sales/global-invoices.md#configuration-guide-commerce-configuration-sales-invoices), you can view invoices associated with an order in the dedicated *Invoices* tab. Click on the invoice to open its view page.
-
-![Invoices tab on the order view page](user/img/sales/invoices/invoices-order-view-page.png)
 
 **Activity**
 

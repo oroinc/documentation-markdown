@@ -171,7 +171,7 @@ The sample Opportunity Support Flow has been configured the following way:
 
 To set a workflow configuration parameters:
 
-1. In the main menu, navigate to **System > Workflows**.
+1. In the main menu, navigate **System > Workflows**.
 2. On the workflow list, click the required workflow.
 3. If the workflow has configuration parameters, you can see the **Configuration** button on the top right of the workflow view page. Click this button.
    ![image](user/img/system/workflows/workflow_set_config_param.png)

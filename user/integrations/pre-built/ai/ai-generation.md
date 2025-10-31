@@ -5,7 +5,7 @@
 #### HINT
 Please <a href="https://oroinc.com/contact-us/" target="_blank">contact our support team</a> for more information on available integration options. You can also visit our <a href="https://extensions.oroinc.com/" target="_blank">extensions store</a> to explore other integrations and extensions.
 
-Oro offers an out-of-the-box integration with AI services to generate content for product descriptions, landing pages, content blocks, master catalog categories, and emails. Integration brings several benefits, including improved SEO with high-quality, unique content, significant time savings in content creation, and enhanced user experiences through more informative and engaging product descriptions on the website.
+As of version 6.0,  Oro offers an out-of-the-box integration with AI services to generate content for product descriptions, landing pages, content blocks, master catalog categories, and emails. Integration brings several benefits, including improved SEO with high-quality, unique content, significant time savings in content creation, and enhanced user experiences through more informative and engaging product descriptions on the website.
 
 ## Supported AI Clients and Models
 
@@ -42,7 +42,7 @@ Typical tasks and text tones may include the following:
 
 Sensitive information, such as the OpenAI token, is stored securely in encrypted form, safeguarding it from unauthorized access. No other information is kept on our servers except for the execution of requests, receipt of information, and presentation to the client. If approved by the client, the information is transferred to one of the text fields, which are then processed as usual.
 
-**Related Articles**
+**Related Topics**
 
-* [AI Integrations in the Back-Office](../../../back-office/system/integrations/ai/index.md#user-guide-ai-integrations)
+* [Configure AI Integrations in the Back-Office](../../../back-office/system/integrations/ai/index.md#user-guide-ai-integrations)
 * [Generate Content Using AI-Powered Content Assistant](../../../concept-guides/content-management/wysiwyg.md#getting-started-wysiwyg-editor-field-ai)

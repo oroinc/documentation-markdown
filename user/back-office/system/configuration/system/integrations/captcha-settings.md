@@ -2,6 +2,9 @@
 
 # Configure Global CAPTCHA Settings
 
+#### NOTE
+This feature is available as of OroCommerce version 6.0.3.
+
 CAPTCHA, which stands for Completely Automated Public Turing test to tell Computers and Humans Apart, is a type of challenge-response test used to verify whether the user is human. CAPTCHAs are crucial for maintaining the integrity, security, and usability of online systems. They ensure that interactions and transactions on websites are legitimate and performed by real users, protecting against malicious activities.
 
 In OroCommerce, you can configure CAPTCHA on global, [organization](../../../user-management/organizations/org-configuration/general-setup-org/integrations/organization-captcha.md#organization-configuration-captcha), and [website](../../../websites/web-configuration/general-sys-config/integrations/website-captcha.md#website-configuration-captcha-settings) levels using any of the tree supported service: Google reCAPTCHA, hCAPTCHA and Cloudflare Turnstile.
@@ -15,8 +18,9 @@ To configure CAPTCHA settings globally:
    To change the default settings, clear the **Use Default** option next to the required option.
 3. In the **General** section, you have the following options:
    * **Enable CAPTCHA Protection** — Enable or disable the CAPTCHA protection feature for the OroCommerce application.
+   * **Use CAPTCHA for Logged In User** — Enable or disable the CAPTCHA protection feature for authenticated users (available as of OroCommerce version 6.0.6).
    * **CAPTCHA Service** — Select the CAPTCHA service for the storefront. Available options are Google reCAPTCHA, hCAPTCHA and Cloudflare Turnstile.
-   * **Protect Forms** — Select which forms to enable the CAPTCHA protection for. Developers can add protection for custom forms via the DI Tag. For more information on how to do it, see [FormBundle documentation](../../../../../../bundles/platform/FormBundle/captcha-protection.md#bundle-docs-platform-form-bundle-captcha).
+   * **Protect Forms** — Select which forms to enable the CAPTCHA protection for. *User Reset Password Form*, *Customer User Reset Password Form*, *User Login Form*, and *Customer User Login Form* are available for the CAPTCHA protection as of OroCommerce version 6.0.6. Developers can add protection for custom forms via the DI Tag. For more information on how to do it, see [FormBundle documentation](../../../../../../bundles/platform/FormBundle/captcha-protection.md#bundle-docs-platform-form-bundle-captcha).
 4. In the **Google reCAPTCHA** section, provide the following information:
    * **Site Key** — Provide a site key generated in the Google admin console.
    * **Secret Key** —  Provide a secret key generated in the Google admin console.

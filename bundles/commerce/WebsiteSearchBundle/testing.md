@@ -15,7 +15,7 @@ class ReindexRequiredTest extends FrontendWebTestCase
 {
     use WebsiteSearchExtensionTrait;
 
-        #[\Override]
+     /** {@inheritdoc} */
         protected function setUp(): void
         {
             ...

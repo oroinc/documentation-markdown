@@ -157,12 +157,6 @@ To get all entities that support [the upsert operation](../../api/upsert-operati
 php bin/console oro:api:dump --upsert
 ```
 
-To get all entities that support [the validate operation](../../api/validate-operation.md#web-services-api-validate-operation), use the `--validate` option:
-
-```none
-php bin/console oro:api:dump --validate
-```
-
 <a id="oroapidebug"></a>
 
 ## oro:api:debug

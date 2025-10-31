@@ -23,7 +23,7 @@ To mark an entity as auditable:
    ![Setting the Auditable field of the entity to Yes](img/backend/architecture/auditable_field.png)
 
    #### HINT
-   For more information on entities, see the [Create an Entity](../entities/manage-entities.md#doc-entity-actions-create) topic.
+   For more information on entities, see the [Create an Entity](../entities/create-entities.md#doc-entity-actions-create) topic.
 4. Click **Save and Close**.
 
 ## View Entity Change History
@@ -41,7 +41,7 @@ Make sure that the entity field of the entity are also marked as auditable if yo
 To set an entity field as *Auditable*:
 
 1. Open its edit page.
-2. In the **Back-Office options** section, select **Yes** from the dropdown list for the *Auditable* field.
+2. In the **Backoffice options** section, select **Yes** from the dropdown list for the *Auditable* field.
    ![Set an entity field as auditable](img/backend/architecture/set_entity_field_to_auditable.png)
 
    For instance, once we made the *newArrival* field as auditable, any changes to this field have become traceable, as illustrated in the screenshot below:
@@ -66,7 +66,7 @@ First, make sure that the *Inventory Status* entity field is auditable.
 5. Set the following conditions:
    * Product > Inventory Status
    * Has been changed to > is any of > Discontinued
-   * Interval equals > today
+   * Interval between > 1.01.2018-31.12.2019
 
    > ![Data audit report](img/backend/architecture/data_audit_report.png)
 6. Add the following columns to the table:

@@ -8,4 +8,4 @@ Learn how to define how open orders should be displayed in the storefront.
 * [Order Creation](global-order-creation.md#configuration-commerce-orders-create)
 * [Purchase History](global-previously-purchased.md#sys-commerce-orders-previously-purchased-main)
 * [Order Status Management](global-order-status-management.md#sys-commerce-orders-status-management)
-* [External Order Import](global-external-order-import.md#system-configuration-orders-external-order-import)
+* [AI Smart Order](global-ai-smart-order.md#admin-configuration-orders-ai-smart-order-settings)

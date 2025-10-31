@@ -22,7 +22,9 @@ There are a few ways to define a custom form type and form options for a particu
 
    > class AcmeExtendGuesserPass implements CompilerPassInterface
    > {
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function process(ContainerBuilder $container)
    >     {
    >         $guesser = $container->findDefinition('oro_entity_extend.provider.extend_field_form_type');
@@ -42,7 +44,9 @@ There are a few ways to define a custom form type and form options for a particu
 
    > class ExtendFieldCustomFormOptionsProvider implements ExtendFieldFormOptionsProviderInterface
    > {
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function getOptions(string $className, string $fieldName): array
    >     {
    >         $options = [];
@@ -74,7 +78,9 @@ There are a few ways to define a custom form type and form options for a particu
 
    > class CustomTypeGuesser implements FormTypeGuesserInterface
    > {
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function guessType(string $class, string $property)
    >     {
    >         // some conditions here
@@ -88,19 +94,25 @@ There are a few ways to define a custom form type and form options for a particu
    >         return new ValueGuess(false, ValueGuess::LOW_CONFIDENCE);
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function guessRequired(string $class, string $property)
    >     {
    >         return new ValueGuess(false, ValueGuess::LOW_CONFIDENCE);
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function guessMaxLength(string $class, string $property)
    >     {
    >         return new ValueGuess(null, ValueGuess::LOW_CONFIDENCE);
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function guessPattern(string $class, string $property)
    >     {
    >         return new ValueGuess(null, ValueGuess::LOW_CONFIDENCE);

@@ -172,7 +172,9 @@ In most cases, the [built-in filters](../../../bundles/platform/FilterBundle/fil
 ```php
 class ProductPriceListsFilter extends EntityFilter
 {
-    #[\Override]
+    /**
+     * @inheritdoc
+     */
     public function apply(FilterDatasourceAdapterInterface $ds, $data)
     {
         /** @var array $data */

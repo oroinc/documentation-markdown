@@ -7,7 +7,6 @@
 ## Related Documentation
 
 * [Content Widgets](content-widgets/index.md#content-widgets)
-* [Content Widget Types](content-widget-types.md#bundle-docs-commerce-cms-bundle-content-widget-types)
 * [WYSIWYG Field](WYSIWYG-field/index.md#wysiwyg-field-dev-guide)
 * [Content Blocks](content-blocks.md#bundle-docs-commerce-cms-bundle-content-blocks)
 * [Editor Components](editor-components.md#bundle-docs-commerce-cms-bundle-editor-components)

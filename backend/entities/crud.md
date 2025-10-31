@@ -32,7 +32,6 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  */
 class QuestionType extends AbstractType
 {
-    #[\Override]
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
@@ -58,7 +57,6 @@ class QuestionType extends AbstractType
             );
     }
 
-    #[\Override]
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
@@ -86,11 +84,11 @@ use Acme\Bundle\DemoBundle\Form\Type\QuestionType;
 use Oro\Bundle\FormBundle\Model\UpdateHandlerFacade;
 use Oro\Bundle\SecurityBundle\Attribute\Acl;
 use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
-use Symfony\Bridge\Twig\Attribute\Template;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
@@ -100,7 +98,7 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class QuestionController extends AbstractController
 {
     #[Route(path: '/', name: 'index')]
-    #[Template('@AcmeDemo/Question/index.html.twig')]
+    #[Template]
     #[AclAncestor('acme_demo_question_view')]
     public function indexAction(): array
     {
@@ -110,13 +108,8 @@ class QuestionController extends AbstractController
     }
 
     #[Route(path: '/view/{id}', name: 'view', requirements: ['id' => '\d+'])]
-    #[Template('@AcmeDemo/Question/view.html.twig')]
-    #[Acl(
-        id: 'acme_demo_question_view',
-        type: 'entity',
-        class: 'Acme\Bundle\DemoBundle\Entity\Question',
-        permission: 'VIEW'
-    )]
+    #[Template]
+    #[Acl(id: 'acme_demo_question_view', type: 'entity', class: 'Acme\Bundle\DemoBundle\Entity\Question', permission: 'VIEW')]
     public function viewAction(Question $entity): array
     {
         return [
@@ -129,12 +122,7 @@ class QuestionController extends AbstractController
      */
     #[Route(path: '/create', name: 'create', options: ['expose' => true])]
     #[Template('@AcmeDemo/Question/update.html.twig')]
-    #[Acl(
-        id: 'acme_demo_question_create',
-        type: 'entity',
-        class: 'Acme\Bundle\DemoBundle\Entity\Question',
-        permission: 'CREATE'
-    )]
+    #[Acl(id: 'acme_demo_question_create', type: 'entity', class: 'Acme\Bundle\DemoBundle\Entity\Question', permission: 'CREATE')]
     public function createAction(Request $request): array|RedirectResponse
     {
         $createMessage = $this->container->get(TranslatorInterface::class)->trans(
@@ -148,13 +136,8 @@ class QuestionController extends AbstractController
      * Edit Question form
      */
     #[Route(path: '/update/{id}', name: 'update', requirements: ['id' => '\d+'])]
-    #[Template('@AcmeDemo/Question/update.html.twig')]
-    #[Acl(
-        id: 'acme_demo_question_update',
-        type: 'entity',
-        class: 'Acme\Bundle\DemoBundle\Entity\Question',
-        permission: 'EDIT'
-    )]
+    #[Template]
+    #[Acl(id: 'acme_demo_question_update', type: 'entity', class: 'Acme\Bundle\DemoBundle\Entity\Question', permission: 'EDIT')]
     public function updateAction(Question $entity, Request $request): array|RedirectResponse
     {
         $updateMessage = $this->container->get(TranslatorInterface::class)->trans(
@@ -178,7 +161,6 @@ class QuestionController extends AbstractController
         );
     }
 
-    #[\Override]
     public static function getSubscribedServices(): array
     {
         return array_merge(
@@ -199,7 +181,7 @@ which controller needs to be called for particular routes:
 ```yaml
 acme_demo:
     resource: "@AcmeDemoBundle/Controller"
-    type: attribute
+    type: annotation
     prefix: /demo
 ```
 

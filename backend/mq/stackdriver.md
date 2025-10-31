@@ -41,7 +41,9 @@ Create **StackdriverHandler** that uses GCloud SDK:
          parent::__construct($logger, Logger::NOTICE);
      }
 
-     #[\Override]
+     /**
+      * {@inheritDoc}
+      */
      public function handle(array $record)
      {
          $record['context']['extra'] = $record['extra'];

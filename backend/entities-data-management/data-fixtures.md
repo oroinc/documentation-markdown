@@ -21,7 +21,9 @@ use Oro\Bundle\OrganizationBundle\Entity\Organization;
  */
 class LoadQuestions implements FixtureInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function load(ObjectManager $manager)
     {
         $organization = $manager->getRepository(Organization::class)->getFirst();

@@ -45,7 +45,9 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
  */
 class MakeMyEntityGlobalView implements Migration
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $table = $schema->getTable('name_of_my_table');

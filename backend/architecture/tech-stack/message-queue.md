@@ -351,7 +351,9 @@ try {
 A processor receives a message with the entity id. It finds the entity and changes its status without creating any job.
 
 ```php
-#[\Override]
+/**
+ * {@inheritdoc}
+ */
 public function process(MessageInterface $message, SessionInterface $session)
 {
     $body = $message->getBody();

@@ -88,13 +88,17 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
 
 class OroBlogPostExampleBundleInstaller implements Installation
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getMigrationVersion()
     {
         return 'v1_0';
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         /** Tables generation **/
@@ -147,7 +151,9 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
 
 class OroBlogPostExampleBundle implements Migration
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         /** Tables generation **/
@@ -205,13 +211,17 @@ class ProductOptionsType extends AbstractType
 {
     const BLOCK_PREFIX = 'oro_blogpostexample_product_options';
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('value');
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(
@@ -221,7 +231,9 @@ class ProductOptionsType extends AbstractType
         );
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getBlockPrefix()
     {
         return self::BLOCK_PREFIX;
@@ -278,12 +290,17 @@ abstract class ProductOptionsFormTypeExtension extends AbstractTypeExtension
         $this->registry = $registry;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getExtendedType()
     {
         return ProductType::class;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add(

@@ -500,7 +500,7 @@ In this example, a user without sufficient permissions is trying to access a con
              $this->getUrl('oro_api_get_users'),
              ['limit' => 100],
              [],
-             $this->generateApiAuthHeader(LoadUserData::USER_NAME)
+             $this->generateWsseAuthHeader(LoadUserData::USER_NAME, LoadUserData::USER_API_KEY)
          );
          $result = $this->client->getResponse();
          $this->assertJsonResponseStatusCodeEquals($result, 403);
@@ -517,6 +517,7 @@ Here is an example of a fixture that adds a user without permissions:
  use Doctrine\Common\DataFixtures\AbstractFixture;
  use Doctrine\Persistence\ObjectManager;
  use Oro\Bundle\UserBundle\Entity\Role;
+ use Oro\Bundle\UserBundle\Entity\UserApi;
  use Symfony\Component\DependencyInjection\ContainerAwareInterface;
  use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 
@@ -528,7 +529,9 @@ Here is an example of a fixture that adds a user without permissions:
      public const USER_API_KEY = 'user_api_key';
      public const USER_PASSWORD = 'user_password';
 
-     #[\Override]
+     /**
+      * {@inheritDoc}
+      */
      public function load(ObjectManager $manager): void
      {
          /** @var \Oro\Bundle\UserBundle\Entity\UserManager $userManager */
@@ -542,6 +545,12 @@ Here is an example of a fixture that adds a user without permissions:
          // Creating new user
          $user = $userManager->createUser();
 
+         // Creating API entity for user, we will reference it in testGetUsersAPI method,
+         // if you are not going to test API you can skip it
+         $api = new UserApi();
+         $api->setApiKey(self::USER_API_KEY)
+             ->setUser($user);
+
          // Creating user
          $user
              ->setUsername(self::USER_NAME)
@@ -550,6 +559,7 @@ Here is an example of a fixture that adds a user without permissions:
              ->setLastName('User')
              ->addRole($role)
              ->setEmail('test@example.com')
+             ->setApi($api)
              ->setSalt('');
 
          // Handle password encoding

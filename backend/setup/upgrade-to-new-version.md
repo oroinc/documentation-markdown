@@ -9,7 +9,7 @@
 This guide explains how to upgrade Oro application to the next version in a development environment.
 
 #### TIP
-If you are looking for specific instructions on upgrading the source code itself, please refer to our detailed guide on [Upgrading the Source Code to v6.1](upgrade-source-code.md#upgrade-to-6).
+If you are looking for specific instructions on upgrading the source code itself, please refer to our detailed guide on [Upgrading the Source Code to v6.0](upgrade-source-code.md#upgrade-to-6).
 
 An absolute path to the directory where an application is installed will be used in the guide and will
 be referred to as **<application-root-folder>** further in this topic.
@@ -53,68 +53,63 @@ To retrieve a new version and upgrade your Oro application instance, execute the
    ```none
    rm -rf var/cache/prod/
    ```
-9. Remove old JS packages
+9. Set up your project source code with Composer.
    ```none
-   rm -rf ./node_modules
+   composer install --prefer-dist --no-dev
    ```
-10. Set up your project source code with Composer.
+10. Refer to the `UPGRADE.md` and `CHANGELOG.md` files in the application repository for a list of changes in the code that
+    may affect the upgrade of some customizations.
+11. Upgrade the platform.
+    ```none
+    php bin/console oro:platform:update --env=prod
+    ```
 
-> ```none
-> composer install --prefer-dist --no-dev
-> ```
-1. Refer to the `UPGRADE.md` and `CHANGELOG.md` files in the application repository for a list of changes in the code that
-   may affect the upgrade of some customizations.
-2. Upgrade the platform.
-   ```none
-   php bin/console oro:platform:update --env=prod
-   ```
+    To speed up the update process, consider using `--schedule-search-reindexation` or `--skip-search-reindexation` option:
+    * `--schedule-search-reindexation` — postpone search reindexation process until the message queue consumer is started (on step 12 below).
+    * `--skip-search-reindexation` — skip search reindexation. Later, you can start it manually using commands
+      : oro:search:reindex to update search index for the specified entities and oro:website-search:reindex to rebuild storefront search index.See [Search Index: Indexation Process](../architecture/tech-stack/search/index.md#search-index-overview-indexation-process) for more details.
 
-   To speed up the update process, consider using `--schedule-search-reindexation` or `--skip-search-reindexation` option:
-   * `--schedule-search-reindexation` — postpone search reindexation process until the message queue consumer is started (on step 12 below).
-   * `--skip-search-reindexation` — skip search reindexation. Later, you can start it manually using commands
-     : oro:search:reindex to update search index for the specified entities and oro:website-search:reindex to rebuild storefront search index. See [Search Index: Indexation Process](../architecture/tech-stack/search/index.md#search-index-overview-indexation-process) for more information.
+    When the following options are not provided, they are set up automatically for the `test` environment:
+    * –force
+    * –skip-translations
+    * –timeout=600
 
-   When the following options are not provided, they are set up automatically for the `test` environment:
-   * –force
-   * –skip-translations
-   * –timeout=600
+    The verbose mode is always set to debug in the `test` environment.
 
-   The verbose mode is always set to debug in the `test` environment.
+    #### IMPORTANT
+    **Search Reindexation for Different Upgrade Types**
+    * **For LTS migrations (major version upgrades):** Running the search reindexation is **required** to ensure proper indexing and prevent issues with search functionality.
+    * **For patch upgrades (minor updates within the same LTS):** While not mandatory, it is **highly recommended** to run search reindexation to ensure the Elasticsearch index structure remains correct.
+12. Remove the caches.
+    ```none
+    php bin/console cache:clear --env=prod
+    ```
 
-   #### IMPORTANT
-   **Search Reindexation for Different Upgrade Types**
-   * **For LTS migrations (major version upgrades):** Running the search reindexation is **required** to ensure proper indexing and prevent issues with search functionality.
-   * **For patch upgrades (minor updates within the same LTS):** While not mandatory, it is **highly recommended** to run search reindexation to ensure the Elasticsearch index structure remains correct.
-3. Remove the caches.
-   ```none
-   php bin/console cache:clear --env=prod
-   ```
+    or, as an alternative:
+    ```none
+    rm -rf var/cache/prod/
+    php bin/console cache:warmup --env=prod
+    ```
+13. Enable cron.
+    ```none
+    crontab -e
+    ```
 
-   or, as an alternative:
-   ```none
-   rm -rf var/cache/prod/
-   php bin/console cache:warmup --env=prod
-   ```
-4. Enable cron.
-   ```none
-   crontab -e
-   ```
+    Uncomment this line.
+    ```text
+    */1 * * * * /usr/bin/php <application-root-folder>/bin/console --env=prod oro:cron >> /dev/null
+    ```
+14. Switch your application back to the normal mode from the maintenance mode.
+    ```none
+    php bin/console lexik:maintenance:unlock --env=prod
+    ```
+15. Run the consumer(s).
+    ```none
+    php bin/console oro:message-queue:consume --env=prod
+    ```
 
-   Uncomment this line.
-   ```text
-   */1 * * * * /usr/bin/php <application-root-folder>/bin/console --env=prod oro:cron >> /dev/null
-   ```
-5. Switch your application back to the normal mode from the maintenance mode.
-   ```none
-   php bin/console lexik:maintenance:unlock --env=prod
-   ```
-6. Run the consumer(s).
-   ```none
-   php bin/console oro:message-queue:consume --env=prod
-   ```
-
-   #### NOTE
-   If PHP bytecode cache tools (e.g., opcache) are used, PHP-FPM (or Apache web server) should be restarted after the upgrade to flush cached bytecode from the previous installation.
+    #### NOTE
+    If PHP bytecode cache tools (e.g., opcache) are used, PHP-FPM (or Apache web server) should be restarted after the upgrade to flush cached bytecode from the previous installation.
 
 **See Also**
 

@@ -31,7 +31,9 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 class Configuration implements ConfigurationInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder('acme_demo');
@@ -249,30 +251,40 @@ To add a new config scope:
 
    > class TestScopeManager extends AbstractScopeManager
    > {
-   >     #[\Override]
+   >     /**
+   >      * {@inheritDoc}
+   >      */
    >     public function getScopedEntityName(): string
    >     {
    >         return 'test'; // scope entity name
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * {@inheritDoc}
+   >      */
    >     public function getScopeId(): int
    >     {
    >         return 0; // scope entity id (can be different for different cases)
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * {@inheritDoc}
+   >      */
    >     public function setScopeId(?int $scopeId): void
    >     {
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * {@inheritDoc}
+   >      */
    >     protected function isSupportedScopeEntity(object $entity): bool
    >     {
    >         return false;
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * {@inheritDoc}
+   >      */
    >     protected function getScopeEntityIdValue(object $entity): int
    >     {
    >         throw new \LogicException(sprintf('"%s" is not supported.', ClassUtils::getClass($entity)));
@@ -325,13 +337,17 @@ To add a new config scope:
    > {
    >     protected const TEST_TREE_NAME = 'test_configuration';
 
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     protected function getTreeName(): string
    >     {
    >         return $this->getTreeData(self::TEST_TREE_NAME, self::CORRECT_FIELDS_NESTING_LEVEL);
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     protected function getParentCheckboxLabel(): string
    >     {
    >         return $this->getJsTreeData(self::TEST_TREE_NAME, self::CORRECT_MENU_NESTING_LEVEL);
@@ -356,7 +372,7 @@ To add a new config scope:
    >     requirements: ['id' => '\d+'],
    >     defaults: ['activeGroup' => null, 'activeSubGroup' => null]
    > )]
-   > #[Template('@AcmeDemo/Config/testConfig.html.twig')]
+   > #[Template]
    > public function testConfigAction(Request $request, $activeGroup = null, $activeSubGroup = null)
    > {
    >     $provider = $this->get('acme_demo.provider.form_provider.test');
@@ -669,14 +685,18 @@ class DemoSearchProvider implements SearchProviderInterface
         $this->configBag = $configBag;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function supports($name): bool
     {
         // example of how the field can be determined
         return $this->configBag->getFieldsRoot($name) !== false;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getData($name): array
     {
         // example how to filter by `search_type`

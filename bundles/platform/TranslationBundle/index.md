@@ -35,7 +35,9 @@ class TranslationContextResolver implements TranslationContextResolverInterface
         $this->translator = $translator;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function resolve($id)
     {
         /**

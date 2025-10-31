@@ -6,6 +6,11 @@ In Oro application, embedded forms help create the code that may be added to a t
 
 Embedded forms may be used to collect requests of marketing, technical, commercial or any other nature.
 
+The fields of an embedded form depend on its type. The two out-of-the-box types of the embedded forms are:
+
+* Contact Request
+  > ![The contact request form](user/img/system/integrations/emb_form/cont_req.png)
+
 Additional embedded form types may be created in the course of integration with the Oro application, subject to your specific business needs.
 
 ## Create an Embedded Form
@@ -16,7 +21,7 @@ In order to create a new embedded form:
 2. Click **Create Embedded Form**.
 3. Provide the following details:
    * **Title** — The title used to refer to the form in the system. The field must be defined.
-   * **Form Type** — Choose one of the available form types.
+   * **Form Type** — Choose one of the form types described above.
    * **CSS** — Editable CSS. The default CSS corresponds to the initial form design, subject to its type. You can edit the CSS to change such settings as the border width, color, fonts etc.
    * **Success Message** — The message to be displayed on the website following the successful form submission. By default is set to *Form has been submitted successfully*.
    * **Allowed Domains** — Allowed cross origin domains where the form can be embedded. Supports wildcard, e.g., X.example.com.

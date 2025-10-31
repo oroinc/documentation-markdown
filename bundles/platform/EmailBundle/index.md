@@ -18,7 +18,6 @@ send emails from the application and use email templates.
 * [Email Templates Inheritance](email-templates-inheritance.md)
 * [Sending an Email Created from an Email Template](email-templates-send.md)
 * [Email Templates Migrations](email-templates-migrations.md)
-* [Email Templates Attachments](email-templates-attachments.md)
 * [System Mailboxes](mailboxes.md)
 * [Email Ownership](ownership.md)
 * [Sending Emails in Workflows and Actions (Operations)](transition-actions.md)

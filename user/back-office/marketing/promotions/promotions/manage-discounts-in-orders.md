@@ -2,7 +2,7 @@
 
 # Manage Discounts in Orders
 
-You can view discounts applied to a specific order under the dedicated **Discounts** section on the order page. This section is divided into **All Promotions** and **All Special Discounts**.
+You can view discounts applied to a specific order under the dedicated **Promotions and Discounts** section on the order page. This section is divided into **All Promotions** and **All Special Discounts**.
 
 Within **All Promotions**, you can view promotions and coupon codes.
 
@@ -28,8 +28,8 @@ You cannot use two coupon codes for one order if they are part of the same promo
 
 Promotion can be applied to the existing order in two ways:
 
-* **By creating a new promotion** — If there are no available promotions applicable to the items from the order, you need to [create a new promotion](create.md#user-guide-marketing-promotions-create) with the necessary products added to it. Once you open the order edit page, the created promotion will be added to the order automatically and will be displayed in the **Discounts** section under **All Promotions**.
-* **By applying an existing promotion** — If the promotion applicable to the order items was created after the order had been placed, it will be added automatically once you open the order edit page. This promotion will be displayed in the **Discounts** section under **All Promotions**.
+* **By creating a new promotion** — If there are no available promotions applicable to the items from the order, you need to [create a new promotion](create.md#user-guide-marketing-promotions-create) with the necessary products added to it. Once you open the order edit page, the created promotion will be added to the order automatically and will be displayed in the **Promotions and Discounts** section under **All Promotions**.
+* **By applying an existing promotion** — If the promotion applicable to the order items was created after the order had been placed, it will be added automatically once you open the order edit page. This promotion will be displayed in the **Promotions and Discounts** section under **All Promotions**.
 
 The following illustration is an example of multiple discounts applied to one order:
 
@@ -56,7 +56,7 @@ This way, you can apply one or more special discounts to selected orders.
 
 ## Manage Discounts When Editing the Order
 
-You can manage promotions, coupons and special discounts for the required order by opening its edit page and navigating to the **Discounts** section.
+You can manage promotions, coupons and special discounts for the required order by opening its edit page and navigating to the **Promotions and Discounts** section.
 
 ![Highlight the Add Special Discount button under the Promotions and Discounts section](user/img/marketing/promotions/AddSpecialDiscount4.png)
 

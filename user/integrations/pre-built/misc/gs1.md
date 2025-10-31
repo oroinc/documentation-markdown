@@ -2,8 +2,8 @@
 
 # Integration with GS1
 
-#### IMPORTANT
-This is a custom extension, not a core feature of OroCommerce, and is not covered by the Oro User License Agreement. Please <a href="https://oroinc.com/contact-us/" target="_blank">contact our support team</a> for more information on available integration options. You can also visit our <a href="https://extensions.oroinc.com/" target="_blank">extensions store</a> to explore other integrations and extensions.
+#### HINT
+Please <a href="https://oroinc.com/contact-us/" target="_blank">contact our support team</a> for more information on available integration options. You can also visit our <a href="https://extensions.oroinc.com/" target="_blank">extensions store</a> to explore other integrations and extensions.
 
 GS1 is a global organization that develops and maintains supply chain and business communication standards. Their standards are used for uniquely identifying products, services, and locations. GS1 standards include the GTIN (Global Trade Item Number) for products and GLN (Global Location Number) for locations. These standards help businesses ensure data accuracy, traceability, and efficiency.
 

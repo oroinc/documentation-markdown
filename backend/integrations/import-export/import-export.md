@@ -20,7 +20,9 @@ use Symfony\Component\DependencyInjection\Loader;
 
 class AcmeDemoExtension extends Extension
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function load(array $configs, ContainerBuilder $container): void
     {
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
@@ -80,25 +82,33 @@ use Oro\Bundle\ImportExportBundle\TemplateFixture\TemplateFixtureInterface;
 
 class TaskFixture extends AbstractTemplateRepository implements TemplateFixtureInterface
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     protected function createEntity($key): Task
     {
         return new Task($key);
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getEntityClass(): string
     {
         return Task::class;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getData()
     {
         return $this->getEntityData('example-task');
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function fillEntityData($key, $entity)
     {
         $entity->setId(1);
@@ -571,13 +581,17 @@ use Oro\Bundle\ContactBundle\ImportExport\Provider\ContactHeaderProvider;
 
 class GroupDataConverter extends AbstractTableDataConverter
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     protected function getHeaderConversionRules()
     {
         return ['ID' => 'id', 'Label' => 'label'];
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     protected function getBackendHeader()
     {
         return ['id', 'label'];
@@ -633,7 +647,9 @@ use Oro\Bundle\ImportExportBundle\Strategy\Import\ConfigurableAddOrReplaceStrate
 
 class ContactAddOrReplaceStrategy extends ConfigurableAddOrReplaceStrategy
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function process($entity)
     {
         $entity = parent::process($entity);
@@ -712,7 +728,9 @@ class ContactFixture implements TemplateFixtureInterface
         $this->userFixture = $userFixture;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getData()
     {
         $contact = new Contact();
@@ -841,9 +859,10 @@ class ProductImportExportConfigurationProvider implements ImportExportConfigurat
     }
 
     /**
+     * {@inheritDoc}
+     *
      * @throws \InvalidArgumentException
      */
-    #[\Override]
     public function get(): ImportExportConfigurationInterface
     {
         return new ImportExportConfiguration([
@@ -959,13 +978,17 @@ use Symfony\Component\Form\FormBuilderInterface;
 
 class CustomImportTypeExtension extends AbstractTypeExtension
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public static function getExtendedTypes(): iterable
     {
-        return [ImportType::class];
+        return [ImportType::NAME];
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         // Please add your custom implementation to generate the form
@@ -989,13 +1012,17 @@ use Symfony\Component\Form\FormBuilderInterface;
 
 class CustomExportTypeExtension extends AbstractTypeExtension
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public static function getExtendedTypes(): iterable
     {
         return [ExportType::NAME];
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         // Please add your custom implementation to generate the form

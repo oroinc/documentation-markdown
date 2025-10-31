@@ -2,8 +2,8 @@
 
 # Sage X3 Integration
 
-#### IMPORTANT
-This is a custom extension, not a core feature of OroCommerce, and is not covered by the Oro User License Agreement. Please <a href="https://oroinc.com/contact-us/" target="_blank">contact our support team</a> for more information on available integration options. You can also visit our <a href="https://extensions.oroinc.com/" target="_blank">extensions store</a> to explore other integrations and extensions.
+#### HINT
+Please <a href="https://oroinc.com/contact-us/" target="_blank">contact our support team</a> for more information on available integration options. You can also visit our <a href="https://extensions.oroinc.com/" target="_blank">extensions store</a> to explore other integrations and extensions.
 
 Sage ERP X3 is a comprehensive and fully integrated enterprise resource planning system offering many features and functionalities. This software provides robust accounting and management control capabilities that can assist businesses in streamlining their financial operations, managing their resources more efficiently, and making better-informed decisions. In addition, its advanced analytical and reporting tools enable businesses to analyze data and generate insightful reports. Sage ERP also includes financial and business management tools that offer greater control and visibility into critical business processes.
 

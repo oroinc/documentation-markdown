@@ -29,7 +29,9 @@ use Oro\Bundle\ApiBundle\PostProcessor\PostProcessorInterface;
 
 class SomePostProcessor implements PostProcessorInterface
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function process(mixed $value, array $options): mixed
     {
     }
@@ -57,7 +59,9 @@ use Symfony\Component\Config\Definition\Builder\NodeBuilder;
 
 class SomePostProcessorConfigExtension extends AbstractConfigExtension
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getConfigureCallbacks(): array
     {
         return [

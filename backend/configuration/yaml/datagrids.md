@@ -666,22 +666,6 @@ datagrids:
 
 See for more information [Frontend Datagrid](../../entities/customize-datagrids/frontend/index.md#customizing-data-grid-in-orocommerce-frontend).
 
-#### itemsCounter
-
-##### transTemplate
-
-type: `string`
-
-There is an option that allows setting of a translation template for the datagrid items counter.
-
-```yaml
-grid-name:
-    options:
-        toolbarOptions:
-            itemsCounter:
-                transTemplate: 'oro_frontend.datagrid.pagination.totalRecords.ordersPlural'
-```
-
 ### jsmodules
 
 ```yaml
@@ -862,7 +846,7 @@ The name of the route to the controller action that should be called.
 
 type: `string`
 
-Can be either `url` or `callable` to use a statically configured route or to dynamically generate a link.
+Can be either `route` or `callable` to use a statically configured route or to dynamically generate a link.
 
 ## sorters
 

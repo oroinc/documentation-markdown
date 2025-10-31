@@ -47,7 +47,7 @@ class SetWebsiteSearchRelevanceWeightListener
      */
     private function calculateRelevanceWeight(Product $product): float
     {
-        switch ($product->getInventoryStatus()->getInternalId()) {
+        switch ($product->getInventoryStatus()->getId()) {
             case Product::INVENTORY_STATUS_IN_STOCK:
                 return 1.0;
             case Product::INVENTORY_STATUS_OUT_OF_STOCK:

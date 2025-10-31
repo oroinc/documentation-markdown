@@ -2,10 +2,13 @@
 
 # Integration with CyberSource
 
-#### IMPORTANT
-This is a custom extension, not a core feature of OroCommerce, and is not covered by the Oro User License Agreement. For more details, see the <a href="https://extensions.oroinc.com/orocommerce/extension/cybersource-orocommerce-integration/" target="_blank">CyberSource</a> extension. Please <a href="https://oroinc.com/contact-us/" target="_blank">contact our support team</a> for more information on available integration options. You can also visit our <a href="https://extensions.oroinc.com/" target="_blank">extensions store</a> to explore other integrations and extensions.
+#### HINT
+Please <a href="https://oroinc.com/contact-us/" target="_blank">contact our support team</a> for more information on available integration options. You can also visit our <a href="https://extensions.oroinc.com/" target="_blank">extensions store</a> to explore other integrations and extensions.
 
 The OroCommerce and CyberSource integration facilitates the exchange of crucial data between the two platforms during the payment process. CyberSource acts as the payment gateway, handling secure payment processing, fraud detection, and payment authorization.
+
+#### NOTE
+This integration is currently supported up to version 5.0 LTS.
 
 ## Supported CyberSource Services
 

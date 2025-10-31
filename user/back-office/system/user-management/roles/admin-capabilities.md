@@ -26,12 +26,13 @@ Read on to learn more about the capabilities available for users in the back-off
 
 In the Account Management section, the following capabilities are available:
 
-> ![image](user/img/system/user_management/account-capabilities.png)
 * **Access System Information** — Enables a user to view the system information page under **System > System Information** in the main menu. This page contains the list of Oro packages and third-party packages that are installed, and is usually only used by system administrators and integrators.
   ![image](user/img/system/user_management/system_information_enabled.png)
 * **Enter The Billing Address Manually** — Enables a user to provide the billing address manually.
 * **Enter The Shipping Address Manually** — Enables a user to provide the shipping address manually.
-* **Override Customer Payment Term** — Enables to change the existing payment term for the customer and its customer users.
+* Override Customer Payment Term
+
+<!-- comment: Enables to change the existing payment term for the customer and its customer users. -->
 * **Login as Customer User** — Enables a back-office user to access and operate the OroCommerce storefront as if they were logged in as a specific customer user. Keep in mind that this feature is available in the Enterprise edition.
   ![User impersonation button](user/img/system/user_management/user-impersonation-button.png)
 * **Receive Notification Messages For The System Mailboxes That Were Configured Incorrectly** — Enable this option to receive an email notification if synchronization of the system mailbox is unsuccessful as the result of incorrect credentials.
@@ -48,7 +49,6 @@ In the Account Management section, the following capabilities are available:
 
 In the Catalog section, the following capabilities are available:
 
-![image](user/img/system/user_management/catalog-capabilities.png)
 * **[Product Attribute] Create Attribute** — Enables a user to create product attributes in the application.
   ![image](user/img/system/user_management/create_attribute_enabled.png)
 * **[Product Attribute] Edit Attribute** — Enables a user to edit product attributes in the application.
@@ -66,15 +66,14 @@ In the Catalog section, the following capabilities are available:
 
 In the Quotes section, the following capabilities are available:
 
-![image](user/img/system/user_management/quotes-capabilities.png)
 * **Add Free-Form Items** — Enables a user to provide product details (SKU, product name) using free-form entry when creating a quote in the back-office.
   ![image](user/img/system/user_management/free_form_entry.png)
 * **Enter The Shipping Address Manually** — Enables a user to provide the shipping address for quotes manually when creating or editing a quote in the back-office.
   ![image](user/img/system/user_management/shipping_address_quote.png)
-* **Override Customer Payment Term** — Enables to change the existing payment term for the customer and its customer users in quotes.
+* Override Customer Payment Term
 * **Override Quote Prices** — Enables a user to override prices in quotes. When disabled, the price fields on quote edit pages are inactive.
-  ![image](user/img/system/user_management/override_quote_price_enabled.png)
-* **Review And Approve Quotes** — Enables a user to manage quotes (e.g., sent to customer) without approval. When disabled, the user has to submit quotes for review first. This capability affects quotes when [Backoffice Quotes Flow with Approvals](../../workflows/system-workflows/backoffice-quote-flow-with-approvals.md#doc-workflows-backoffice-quote-flow-with-approvals) is enabled in the application.
+  ![image](user/img/system/user_management/override_quote_price_disabled.png)
+* **Review And Approve Quotes** — Enables a user to manage quotes (e.g. sent to customer) without approval. When disabled, the user has to submit quotes for review first. This capability affects quotes when [Backoffice Quotes Flow with Approvals](../../workflows/system-workflows/backoffice-quote-flow-with-approvals.md#doc-workflows-backoffice-quote-flow-with-approvals) is enabled in the application.
   ![image](user/img/system/user_management/approve_quotes_disabled.png)
 * **Use Any Shipping Address From The Customer Address Book** — Enables a user to select any shipping address available in the customer’s address book from the list.
 * **Use Any Shipping Address From The Customer User’s Address Book** — Enables a user to select any shipping address available in the customer user’s address book from the list.
@@ -111,8 +110,6 @@ In the Marketing section, the following capabilities are available:
 
 In the System Capabilities section, the following capabilities are available:
 
-![image](user/img/system/user_management/system-capabilities.png)
-
 ### Application
 
 * **Access Job Queue** — Enables a user to review jobs that have been started in the system, as well as view their current status and their performance log (by default, this information can be found by navigating to **System > Jobs** in the main menu).
@@ -120,6 +117,8 @@ In the System Capabilities section, the following capabilities are available:
   ![image](user/img/system/user_management/user_level_config.png)
 * **Access System Configuration** — Enables a user to access system configuration settings under **System > Configuration** in the main menu.
   ![image](user/img/system/user_management/sys_config.png)
+* **Debug Prices** – Enables a user to access the Price Calculation Details menu under Sales to understand how prices for a particular product are created, what the current prices are for a given customer and website, and what the prices will be for a specific date.
+  ![Illustration of the permission that enables Pricing Debug Menu](user/img/sales/prices-debug/prices-debug-ACL.png)
 * **Assign/Unassign Tags** — Enables a user to assign/unassign [tags](../../tags-management/index.md#admin-guide-tag-management) to records.
 * **Connect to Mailchimp** — Enables a user to map the contents of a marketing list in OroCommerce to use a segment of the subscribers list in [Mailchimp](../../../marketing/email-campaigns/sending-email-campaign-via-mailchimp.md#user-guide-mailchimp-campaign). When the capability is enabled, the **Connect to Mailchimp** button appears on the page of the selected marketing list. Make sure that the integration between OroCommerce and [Mailchimp is configured](../../integrations/mailchimp-integration.md#user-guide-mc-integration) for the capability to work.
 * **Export Grid View** — Enables a user to export the grid views that they have configured.
@@ -140,8 +139,6 @@ In the System Capabilities section, the following capabilities are available:
   This capability does not influence a user’s ability to edit their own password from the **My User** page.
 
   ![image](user/img/system/user_management/manage_passwords.png)
-* **Price Calculation Details** – Enables a user to access the Price Calculation Details menu under Sales to understand how prices for a particular product are created, what the current prices are for a given customer and website, and what the prices will be for a specific date.
-  ![Illustration of the permission that enables Pricing Debug Menu](user/img/sales/prices-debug/prices-debug-ACL.png)
 * **Share Data View** — Enables a user to [share and unshare the grid views](../../../getting-started/navigation/record-tables.md#doc-grids-actions-grid-views-share) that they have configured.
   ![image](user/img/system/user_management/grid_share.png)![image](user/img/system/user_management/grid_unshare.png)
 * **Update User Profile** — Enables a user to update their own profile regardless of which permission for the **Edit** action on the **User** entity the user’s role includes. That is, when the **Update User Profile** capability is included in the user’s role, even if the role has *None* selected for the **Edit** action on the **User** entity, the user will be able to update their profile.
@@ -188,3 +185,4 @@ In the System Capabilities section, the following capabilities are available:
 
 * [Introduction to Role Management](index.md#user-guide-user-management-permissions-roles)
 * [Field Level Permissions](field-level-acl.md#user-guide-user-management-permissions-roles-field-level-acl)
+* [End-to-end Access Configuration in Context](access-in-context.md#user-guide-user-management-permissions-roles-examples)

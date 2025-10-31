@@ -31,8 +31,6 @@ In the product tax codes list, you will find the information about the code (uni
 
 Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the item and click <i class="fa fa-eye fa-lg" aria-hidden="true"></i> to open its details page, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> to edit, or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) to remove the product tax code.
 
-![The general page of all product tax codes](user/img/taxes/all_product_tax_codes.png)
-
 ### View Product Tax Code Details
 
 To view product tax code details:

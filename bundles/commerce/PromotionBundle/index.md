@@ -1,4 +1,4 @@
-<a id="bundle-docs-commerce-promotion-bundle"></a>
+<a id="bundle-docs-platform-promotion-bundle"></a>
 
 # OroPromotionBundle
 
@@ -136,11 +136,11 @@ As a result, filters should support skippability based on the option from the co
 
 To make your filters skippable, you may inherit AbstractSkippableFiltrationService or implement skipping logic on your own.
 
-To skip a filter during coupon application, the disableFilter method should be called for the oro_promotion.frontend_applied_coupon_manager service with the filter’s class name:
+To skip a filter during coupon application, the disableFilter method should be called for the oro_promotion.handler.frontend_coupon_handler service with the filter’s class name:
 
 ```yaml
 services:
-    oro_promotion.frontend_applied_coupon_manager:
+    oro_promotion.handler.frontend_coupon_handler:
         calls:
             - [disableFilter, ['Oro\Bundle\PromotionBundle\RuleFiltration\ShippingFiltrationService']]
 ```

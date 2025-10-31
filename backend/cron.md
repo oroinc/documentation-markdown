@@ -62,19 +62,25 @@ class SomeCronCommand extends Command implements CronCommandScheduleDefinitionIn
 {
     protected static $defaultName = 'oro:cron:acme_demo_some';
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getDefaultDefinition(): string
     {
         return '5 0 * * *';
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     protected function configure()
     {
         // ...
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         // ...

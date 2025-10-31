@@ -27,7 +27,9 @@ For example, let us assume that acme asset package should use the dynamic versio
 
    class DemoBundle extends Bundle
    {
-       #[\Override]
+       /**
+        * {@inheritdoc}
+        */
        public function build(ContainerBuilder $container): void
        {
            parent::build($container);

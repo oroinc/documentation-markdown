@@ -453,7 +453,7 @@ api:
 ```
 
 #### NOTE
-Only one-to-one, many-to-one and many-to-many unidirectional associations are supported.
+Only many-to-one and many-to-many unidirectional associations are supported.
 
 #### NOTE
 This data type is not supported for models that replace ORM entities.
@@ -653,32 +653,6 @@ the [oro:api:dump](commands.md#oroapidump-command) command with `--upsert` optio
 php bin/console oro:api:dump --upsert
 ```
 
-<a id="configure-validate-operation"></a>
-
-## Configure Validate Operation
-
-By default, [the validate operation](../../api/validate-operation.md#web-services-api-validate-operation) is disabled for API resources.
-
-If the validate operation is disabled for an API resource by default, but you need to enable it, use
-the “enable_validation” configuration option in Resources/config/oro/api.yml :
-
-```yaml
-api:
-    entities:
-        Acme\Bundle\DemoBundle\Entity\SomeEntity:
-            enable_validation: true
-```
-
-#### NOTE
-Please be aware that when validation requests are processed, the `rollback_validated_request` event is dispatched instead of `post_flush_data` and `post_save_data`. Additionally, make sure that no extra actions, such as data indexing or sending emails, are performed when using validation requests. These extra actions can significantly impact the application’s performance. For example, if data is indexed but not stored in the database, or if an email is sent for a record that was not created or updated in the database.
-
-To check which entities support the validate operation, use
-the [oro:api:dump](commands.md#oroapidump-command) command with `--validate` option:
-
-```none
-php bin/console oro:api:dump --validate
-```
-
 <a id="using-a-non-primary-key-to-identify-an-entity"></a>
 
 ## Using a Non-Primary Key to Identify an Entity
@@ -786,7 +760,9 @@ The following steps describe how to create such API resources:
 
    > class RegisterAccount implements ProcessorInterface
    > {
-   >     #[\Override]
+   >     /**
+   >      * {@inheritDoc}
+   >      */
    >     public function process(ContextInterface $context): void
    >     {
    >         /** @var Account $account */
@@ -858,7 +834,9 @@ To do this, you need to perform the following:
    >     private const REQUEST_HEADER_VALUE = 'ERP';
    >     private const REQUEST_TYPE = 'erp';
 
-   >     #[\Override]
+   >     /**
+   >      * {@inheritDoc}
+   >      */
    >     public function process(ContextInterface $context): void
    >     {
    >         /** @var Context $context */
@@ -960,7 +938,9 @@ To implement this approach, you need to perform the following:
    >         $this->tokenAccessor = $tokenAccessor;
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * {@inheritDoc}
+   >      */
    >     public function getDescription(): string
    >     {
    >         return <<<MARKDOWN
@@ -968,7 +948,9 @@ To implement this approach, you need to perform the following:
    > MARKDOWN;
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * {@inheritDoc}
+   >      */
    >     public function resolve(): mixed
    >     {
    >         $user = $this->tokenAccessor->getUser();
@@ -1027,7 +1009,9 @@ For example, imagine that a “price” field need to be added to a product API.
 
    > class ComputeProductPriceField implements ProcessorInterface
    > {
-   >     #[\Override]
+   >     /**
+   >      * {@inheritDoc}
+   >      */
    >     public function process(ContextInterface $context): void
    >     {
    >         /** @var CustomizeLoadedDataContext $context */
@@ -1139,7 +1123,9 @@ class SetAccountContactsAssociationQuery implements ProcessorInterface
         $this->doctrineHelper = $doctrineHelper;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function process(ContextInterface $context): void
     {
         /** @var ConfigContext $context */
@@ -1199,7 +1185,9 @@ services:
   >         $this->doctrineHelper = $doctrineHelper;
   >     }
 
-  >     #[\Override]
+  >     /**
+  >      * {@inheritDoc}
+  >      */
   >     public function process(ContextInterface $context): void
   >     {
   >         /** @var SubresourceContext $context */
@@ -1263,7 +1251,9 @@ use Symfony\Component\Validator\Constraints\NotBlank;
 
 class ValidateLabelField implements ProcessorInterface
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function process(ContextInterface $context): void
     {
         /** @var CustomizeFormDataContext $context */

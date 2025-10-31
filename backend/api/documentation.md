@@ -100,31 +100,35 @@ Example:
 ### get
 
 In this example, the documentation for an action is "get" action.
-It may contain any formatting, e.g., request or response examples, links, text in bold or italic, etc.
+It may contain any formatting, e.g., ordered or unordered lists,
+ request or response examples, links, text in bold or italic, etc.
 
 ## FIELDS
 
 ### name
 
 The description for the "name" field.
-May contain any formatting, e.g., links, text in bold or italic, etc.
+May contain any formatting, e.g., ordered or unordered lists,
+ request or response examples, links, text in bold or italic, etc.
 
 #### get
 
 The description for the "name" field for the "get" action.
-It may contain any formatting, e.g., links, text in bold or italic, etc.
+It may contain any formatting, e.g., ordered or unordered lists,
+ request or response examples, links, text in bold or italic, etc.
 
 #### create, update
 
 The description for "name" field for "create" and "update" actions.
-It may contain any formatting, e.g., links, text in bold or italic, etc.
+It may contain any formatting, e.g., ordered or unordered lists,
+ request or response examples, links, text in bold or italic, etc.
 
 ## FILTERS
 
 ### name
 
 The description for a filter by "name" field.
-It may contain any formatting, e.g., links, text in bold or italic, etc.
+The formatting is not allowed here.
 
 ## SUBRESOURCES
 
@@ -133,7 +137,8 @@ It may contain any formatting, e.g., links, text in bold or italic, etc.
 #### get_subresource
 
 In this example, the documentation for a sub-resource for the "get_subresource" action for the "contacts" sub-resource.
-It may contain any formatting, e.g., request or response examples, links, text in bold or italic, etc.
+It may contain any formatting, e.g., ordered or unordered lists,
+ request or response examples, links, text in bold or italic, etc.
 ```
 
 Use the `{@inheritdoc}` placeholder to get the common documentation for an action, a field, or a filter. This placeholder works only for the **ACTIONS**, **FIELDS**, and **FILTERS** sections.

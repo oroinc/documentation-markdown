@@ -64,7 +64,9 @@ class AcmeDemoBundle extends Bundle
         TransactionWatcherConfigurator::registerConnectionProxies($kernel->getCacheDir());
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function build(ContainerBuilder $container): void
     {
         parent::build($container);

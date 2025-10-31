@@ -26,16 +26,8 @@ Within the table you have the following [action buttons](../getting-started/comm
 3. Manage ![Columns-SVG](_themes/sphinx_rtd_theme/static/svg-icons/columns.svg) table settings to define which columns to show in the table.
 4. Manage [filters](../getting-started/common-controls.md#frontstore-guide-navigation-filters) ![Settings-SVG](_themes/sphinx_rtd_theme/static/svg-icons/settings.svg).
 
-If a quote is related to an RFQ, you can navigate to its page via a dedicated link on the quote page.
-
-![image](user/img/storefront/quotes/quote-to-rfq-link.png)
-
-If a quote has any relevant documents uploaded for the customer user, these will be visible on the quote page:
-
-![Illustration of the documents uploaded via back-office on the customer side in the storefront](user/img/sales/quotes/quotes-customer-documents.png)
-
 #### NOTE
-For more information on how to accept an offered quote or submit a guest quote, see [Quotes in the Storefront](../quotes/index.md#frontstore-guide-quotes).
+More details on how to accept an offered quote or submit a guest quote are described in the other [Quotes](../quotes/index.md#frontstore-guide-quotes) topic of the Storefront guide.
 
 <!-- A -->
 <!-- B -->

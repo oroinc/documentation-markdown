@@ -126,13 +126,17 @@ class AddFieldsWithSanitizingRulesMigration implements Migration, SerializedFiel
 {
     protected SerializedFieldsExtension $serializedFieldsExtension;
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function setSerializedFieldsExtension(SerializedFieldsExtension $serializedFieldsExtension)
     {
         $this->serializedFieldsExtension = $serializedFieldsExtension;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $table = $schema->getTable('acme_demo_sms');
@@ -166,7 +170,7 @@ class AddFieldsWithSanitizingRulesMigration implements Migration, SerializedFiel
 
         // adding sanitizing options to existing field
         $queries->addQuery(
-            new UpdateEntityConfigFieldValueQuery(Sms::class, 'fromContact', 'sanitize', 'rule', 'str_reverse')
+            new UpdateEntityConfigFieldValueQuery(Sms::class, 'fromContact', 'sanitize', 'rule','str_reverse')
         );
     }
 }
@@ -285,13 +289,14 @@ class KeepLastRowsProcessor implements ProcessorInterface
     {
     }
 
-    #[\Override]
     public static function getProcessorName(): string
     {
         return 'keep_last_rows';
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getSqls(ClassMetadata $metadata, array $sanitizeRuleOptions = []): array
     {
         try {
@@ -366,13 +371,11 @@ class ReverseProcessor implements ProcessorInterface
     ) {
     }
 
-    #[\Override]
     public static function getProcessorName(): string
     {
         return 'str_reverse';
     }
 
-    #[\Override]
     public function getIncompatibilityMessages(
         string $fieldName,
         ClassMetadata $metadata,
@@ -390,7 +393,9 @@ class ReverseProcessor implements ProcessorInterface
         return [];
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getSqls(
         string $fieldName,
         ClassMetadata $metadata,

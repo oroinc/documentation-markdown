@@ -33,11 +33,7 @@ To enable payments using InfinitePay:
    * **Shipping Duration (In Days)** — the unified timeframe reserved for shipping. It is taken into account to estimate the payment due date.
    * **Status**  — Set the status to **Active** to enable the integration.
    * **Default Owner** — A user who is responsible for this integration and manages it.
-
-#### NOTE
-In the **Synchronization Settings** section, select the **Log Warnings** checkbox if you want all synchronization errors to be written into the application log.
-
-1. Click **Save and Close**.
+4. Click **Save and Close**.
 
 Next, set up a payment rule that enables this payment method for all or some customer orders via the [Payment Rules Configuration](../../../payment-rules/index.md#sys-payment-rules) page.
 

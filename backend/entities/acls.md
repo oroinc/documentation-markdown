@@ -60,8 +60,8 @@ namespace Acme\Bundle\DemoBundle\Controller;
 use Acme\Bundle\DemoBundle\Entity\Favorite;
 use Oro\Bundle\SecurityBundle\Attribute\Acl;
 use Oro\Bundle\SecurityBundle\Attribute\CsrfProtection;
-use Symfony\Bridge\Twig\Attribute\Template;
-use Symfony\Component\Routing\Attribute\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * Contains CRUD actions for Favorite
@@ -108,8 +108,8 @@ acls:
 > use Acme\Bundle\DemoBundle\Entity\Favorite;
 > use Oro\Bundle\SecurityBundle\Attribute\Acl;
 > use Oro\Bundle\SecurityBundle\Attribute\CsrfProtection;
-> use Symfony\Bridge\Twig\Attribute\Template;
-> use Symfony\Component\Routing\Attribute\Route;
+> use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+> use Symfony\Component\Routing\Annotation\Route;
 > 
 > /**
 >  * Contains CRUD actions for Favorite

@@ -41,7 +41,7 @@ You can also change the default value of each configurable option using the `def
 namespace Acme\Bundle\DemoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Oro\Bundle\EntityConfigBundle\Attribute\Entity\AttributeFamily;
+use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\Config;
 
 /**
  * ORM Entity Document.

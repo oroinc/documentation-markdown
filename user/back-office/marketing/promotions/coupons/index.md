@@ -102,10 +102,10 @@ The page contains the list of all available coupons in your Oro application. Fro
 9. Organize a coupons list to define which columns to show in the grid: Click <i class="fa fa-cog fa-lg" aria-hidden="true"></i> above the table on the far right.
    * To choose the columns to be displayed in the table, select the checkbox next to the required column under **Show**. Clear the checkbox to make the column disappear from the table.
    * To change the order of the columns, click <i class="fas fa-arrows-alt-v" aria-hidden="true"></i> next to the name of the column you wish to move, hold the mouse button, and drag the column to the required position.
+   * To refresh the coupon list, click <i class="fas fa-redo-alt" aria-hidden="true"></i>.
+   * To reset the coupon list, click <i class="fas fa-sync-alt" aria-hidden="true"></i> to clear list customization and return to default settings. Reset applies to all filters, records per page, and sorting changes you have made.
 
    ![Coupon grid settings](user/img/marketing/coupons/coupon_grid_settings.png)
-10. To refresh the coupon list, click <i class="fas fa-redo-alt" aria-hidden="true"></i>.
-11. To reset the coupon list, click <i class="fas fa-sync-alt" aria-hidden="true"></i> to clear list customization and return to default settings. Reset applies to all filters, records per page, and sorting changes you have made.
 
 <a id="user-guide-marketing-promotions-coupons-edit"></a>
 
@@ -119,7 +119,7 @@ The page contains the list of all available coupons in your Oro application. Fro
 
 In your Oro application, you can manage coupons from the page of the selected [order](../../../sales/orders/index.md#user-guide-sales-orders). Specifically, you can:
 
-1. View the coupon applied to the order under **Discounts** on the order page.
+1. View the coupon applied to the order under **Promotions and Discounts** on the order page.
 2. Add a coupon to the order manually.
 
 ### View Coupon Codes
@@ -128,7 +128,7 @@ To view the coupon codes that apply to the selected order:
 
 1. Navigate to **Sales > Orders** in the main menu.
 2. Click to open the required order to open it.
-3. Click **Discounts** to open the section.
+3. Click **Promotions and Discounts** to open the section.
 4. Under **All Promotions** on the left of the section, click <i class="fa fa-eye fa-lg" aria-hidden="true"></i> at the end of the coupon code row.
    ![View the coupon applied to the order in the back-office](user/img/marketing/coupons/ViewCouponsIcon.png)
 5. In the popup that opens, you can view the details of the selected coupon, as illustrated below.
@@ -141,7 +141,7 @@ To add a coupon code to the required order from its page:
 1. Navigate to **Sales > Orders** in the main menu.
 2. Click to open the required order to open it.
 3. Click **Add Coupon Code** in the **More Actions** menu on the top right of the order page.
-   ![More Actions menu options on the order page](user/img/marketing/coupons/more-actions-coupon.png)
+   ![More Actions menu options on the order page](user/img/marketing/promotions/more-actions-discount.png)
 4. In the popup that opens, choose a coupon code from the list:
    ![Selecting the coupon code from the list in the popup dialog](user/img/marketing/coupons/CouponCodesListOrder.png)
 
@@ -151,13 +151,13 @@ To add a coupon code to the required order from its page:
 
    #### NOTE
    Please keep in mind that you cannot apply two coupon codes to one order if they are related to the same promotion.
-7. The applied coupon code will be displayed under **All Promotions** in the **Discounts** section.
+7. The applied coupon code will be displayed under **All Promotions** in the **Promotions and Discounts** section.
 
 This way, you can apply as many coupons to the order as necessary as long as they belong to different promotions.
 
 ### Manage Coupons When Editing the Order
 
-When editing the selected order, you can perform the following actions with the coupons under **All Promotions** in the **Discounts** section:
+When editing the selected order, you can perform the following actions with the coupons under **All Promotions** in the **Promotions and Discounts** section:
 
 ![The actions you can perform with the coupons under All Promotions](user/img/marketing/coupons/AllPromotionsSectioninEditOrderForm.png)
 1. **Add Coupon Code** and follow the steps described in the [Add Coupons Through the Order Page](#user-guide-marketing-promotions-coupons-edit-on-order-page) page.
@@ -173,7 +173,7 @@ When you add, deactivate, or delete coupons when editing orders, the price total
 
 ## Create a Sample Coupon
 
-As an illustration, let us create a sample promotion and generate 100 coupons. These coupons will be redeemed for orders placed by first-time customers. The promotion will offer a 20% discount for all orders between 1 March and 31 May 2026.
+As an illustration, let us create a sample promotion and generate 100 coupons. These coupons will be redeemed for orders placed by first-time customers. The promotion will offer a 20% discount for all orders between 1 March and 31 May 2024.
 
 ### Create a Promotion
 
@@ -183,7 +183,7 @@ As coupons must be linked to promotions, the first step is to create a new promo
 2. Click **Coupons Actions > Create Promotion** on the top right.
 3. In the form that opens, specify the discount details and items, making sure that the **Triggered by** field is set to *Coupons and Conditions*.
    The sample promotion is called **Spring Sale**, and the discount options are 20% off all orders.
-   ![image](user/img/marketing/coupons/coupon-promotion-20-off.png)
+   ![image](user/img/marketing/promotions/coupon-promotion-20-off.png)
 4. Click **Save and Close**.
 
 ### Generate Coupons
@@ -233,7 +233,7 @@ To export the coupons in a .csv format:
 
 |   Coupon Code |   Enabled |   Uses per Coupon |   Uses per Person | Valid From   | Promotion Name   | Owner Name   |
 |---------------|-----------|-------------------|-------------------|--------------|------------------|--------------|
-|           123 |         1 |                 1 |                 1 | 01-12-2028   | Discounts        | Owner Name   |
+|           123 |         1 |                 1 |                 1 | 01-12-2018   | Discounts        | Owner Name   |
 
 To import a bulk of coupons:
 

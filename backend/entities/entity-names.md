@@ -54,7 +54,9 @@ use Oro\Bundle\EntityBundle\Provider\EntityNameProviderInterface;
 
 class FullNameProvider implements EntityNameProviderInterface
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getName($format, $locale, $entity)
     {
         if ($format === self::FULL && $this->isFullFormatSupported(get_class($entity))) {
@@ -64,7 +66,9 @@ class FullNameProvider implements EntityNameProviderInterface
         return false;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getNameDQL($format, $locale, $className, $alias)
     {
         if ($format === self::FULL && $this->isFullFormatSupported($className)) {

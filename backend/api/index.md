@@ -36,7 +36,6 @@ By default, only custom entities, dictionaries, and enumerations are accessible 
 * [Post Processors](post-processors.md)
 * [How to](how-to.md)
 * [CORS Configuration](cors.md)
-* [CORS Configuration for Published OpenAPI Specifications](cors-open-api.md)
 * [Testing REST API](testing.md)
 * [Storefront REST API](storefront.md)
 * [Storefront Routes](storefront-routes.md)

@@ -9,7 +9,7 @@ To view the system information,
 1. Navigate to **System > System Information** in the main menu.
 
 ![The default product options details page](user/img/system/system_info/system_information.png)
-1. **Application Usage** displays the following details:
+1. The **Application Usage** section is available as of OroCommerce version 6.0.2 and displays the following details:
    * **Products** — The total number of products in the database (for single-organization applications) or the total number of products within the selected organization (for multi-organization applications).
    * **Back-Office Users** — The total number of back-office users in the database (for single-organization applications) or the total number of back-office users within the selected organization (for multi-organization applications). The number is calculated based on the organization that the user belongs to, determined by entity ownership.
    * **Revenue** — The table with information about orders revenue grouped by order statuses and order currency. Data limited from the license start date (or from the start of the year if license start was not specified) to current date.

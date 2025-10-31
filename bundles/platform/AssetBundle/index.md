@@ -138,36 +138,6 @@ checkout:                                               # Another entry point na
 #### NOTE
 SCSS is the recommended format, CSS format is deprecated by sass-loader npm module.
 
-#### Twig Functions
-
-- `oro_external_link` — Returns a link to an external asset resource stored in the “oro_asset.external_resources” configuration. For more details, see: [Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity).
-
-**Example:**
-
-```twig
-<script async src="{{ oro_external_link('oro_google_analytics') }}"></script>
-```
-
-Expected output:
-
-```html
-<script async src="https://www.google-analytics.com/analytics.js" rel="dns-prefetch">
-```
-
-- `oro_integrity` — provides Subresource Integrity hash for local asset resources.
-
-**Example:**
-
-```twig
-<script src="{{ '/build/default/app.js' }}" {{ oro_integrity('/build/default/app.js') }}></script>
-```
-
-Expected output:
-
-```html
-<script src="/build/default/app.js?v=e61610e4" integrity="sha384-DAILU17u6emSxfVg8atEESVcx0aMd5gHIbhmP9vx2BlXfdWSaQeRrRdVoXhnOwAQ" crossorigin="anonymous"></script>
-```
-
 ### Load JS modules from the Bundle
 
 JS modules are defined within jsmodules.yml configuration files.
@@ -182,7 +152,7 @@ Detailed information about JS modules configuration is available in the [JS Modu
 
 ## Configuration Reference
 
-AssetBundle defines the configuration for NodeJs and PNPM executable.
+AssetBundle defines the configuration for NodeJs and NPM executable.
 
 All these options are configured under the oro_asset key in your application configuration.
 
@@ -201,11 +171,11 @@ All these options are configured under the oro_asset key in your application con
 
 Path to NodeJs executable.
 
-### pnpm_path
+### npm_path
 
 **type: \`string\` required, default: found dynamically**
 
-Path to PNPM executable.
+Path to NPM executable.
 
 ### build_timeout
 
@@ -213,11 +183,11 @@ Path to PNPM executable.
 
 Assets build timeout in seconds, null to disable the timeout.
 
-### pnpm_install_timeout
+### npm_install_timeout
 
 **type: \`integer\` required, default: \`null\`**
 
-PNPM installation timeout in seconds, null to disable the timeout.
+Npm installation timeout in seconds, null to disable the timeout.
 
 ### webpack_dev_server
 
@@ -268,19 +238,6 @@ To fix the error, remove an application cache and warm it up:
 ```none
 rm -rf var/cache/*
 php bin/console cache:warmup
-```
-
-**PNPM not found**
-
-Appears after migration to PNPM.
-
-To fix the error, install pnpm, remove the existing node modules and re-build the assets:
-
-```none
-npm install -g pnpm
-rm -rf ./node_modules
-php bin/console cache:clear
-php bin/console oro:assets:build
 ```
 
 **Error: “output” for “assets” group in theme “oro” is not defined**

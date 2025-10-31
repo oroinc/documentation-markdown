@@ -162,6 +162,8 @@ OroCommerce supports line charts. To create a line chart for the report, define 
 | **Category (X Axis)** | Select the fields with the values which will form the X Axis of the report chart. |
 | **Value (Y Axis)**    | Choose the fields with the values which will form the Y Axis of the report chart. |
 
+For more details, see the [chart example](reports-examples.md#user-guide-business-intelligence-reports-chart-examples).
+
 ## View a Custom Report
 
 ### From the Custom Reports List
@@ -236,6 +238,7 @@ You can delete multiple custom reports at a time.
 **Related Topics**
 
 * [Use System Reports](system-reports.md#user-guide-business-intelligence-reports-use-system-reports)
+* [Reports Examples](reports-examples.md#user-guide-business-intelligence-reports-reports-examples)
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->

@@ -2,7 +2,7 @@
 
 <!-- begin -->
 
-To view all tax rates, navigate to **Taxes > Taxes** in the main menu.
+To view all tax rates, navigate to **Taxes > Tax Rates** in the main menu.
 
 ![The page of all available tax rates](user/img/taxes/tax_rates_all.png)
 

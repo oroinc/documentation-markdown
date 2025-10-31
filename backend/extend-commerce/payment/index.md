@@ -1,5 +1,3 @@
-<a id="dev-extend-commerce-payment-create-payment-method"></a>
-
 # Create Payment Method Integrations
 
 This topic describes how to add a custom payment method to your OroCommerce-based store.
@@ -171,7 +169,6 @@ class CollectOnDeliverySettings extends Transport
     /**
      * @return ParameterBag
      */
-    #[\Override]
     public function getSettingsBag()
     {
         if (null === $this->settings) {
@@ -253,7 +250,9 @@ class CollectOnDeliverySettingsType extends AbstractType
 {
     const BLOCK_PREFIX = 'acme_collect_on_delivery_setting_type';
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
@@ -277,7 +276,9 @@ class CollectOnDeliverySettingsType extends AbstractType
             );
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(
@@ -287,7 +288,9 @@ class CollectOnDeliverySettingsType extends AbstractType
         );
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getBlockPrefix()
     {
         return self::BLOCK_PREFIX;
@@ -315,7 +318,9 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 class AcmeCollectOnDeliveryExtension extends Extension
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function load(array $configs, ContainerBuilder $container): void
     {
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
@@ -355,13 +360,17 @@ class CollectOnDeliveryChannelType implements ChannelInterface, IconAwareIntegra
 {
     const TYPE = 'collect_on_delivery';
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getLabel()
     {
         return 'acme.collect_on_delivery.channel_type.label';
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getIcon()
     {
         return 'bundles/oromoneyorder/img/money-order-icon.png';
@@ -400,24 +409,32 @@ use Oro\Bundle\IntegrationBundle\Provider\TransportInterface;
  */
 class CollectOnDeliveryTransport implements TransportInterface
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function init(Transport $transportEntity)
     {
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getLabel()
     {
         return 'acme.collect_on_delivery.settings.transport.label';
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getSettingsFormType()
     {
         return CollectOnDeliverySettingsType::class;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getSettingsEntityFQCN()
     {
         return CollectOnDeliverySettings::class;
@@ -495,13 +512,17 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
  */
 class AcmeCollectOnDeliveryBundleInstaller implements Installation
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getMigrationVersion()
     {
         return 'v1_0';
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         /** Tables generation **/
@@ -662,7 +683,9 @@ class CollectOnDeliveryConfigFactory implements CollectOnDeliveryConfigFactoryIn
         $this->identifierGenerator = $identifierGenerator;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function create(CollectOnDeliverySettings $settings)
     {
         $params = [];
@@ -777,7 +800,9 @@ class CollectOnDeliveryConfigProvider implements CollectOnDeliveryConfigProvider
         $this->configFactory = $configFactory;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getPaymentConfigs()
     {
         $configs = [];
@@ -793,7 +818,9 @@ class CollectOnDeliveryConfigProvider implements CollectOnDeliveryConfigProvider
         return $configs;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getPaymentConfig($identifier)
     {
         $paymentConfigs = $this->getPaymentConfigs();
@@ -805,7 +832,9 @@ class CollectOnDeliveryConfigProvider implements CollectOnDeliveryConfigProvider
         return $paymentConfigs[$identifier];
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function hasPaymentConfig($identifier)
     {
         return null !== $this->getPaymentConfig($identifier);
@@ -935,7 +964,9 @@ use Acme\Bundle\CollectOnDeliveryBundle\PaymentMethod\View\CollectOnDeliveryView
  */
 class CollectOnDeliveryViewFactory implements CollectOnDeliveryViewFactoryInterface
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function create(CollectOnDeliveryConfigInterface $config)
     {
         return new CollectOnDeliveryView($config);
@@ -980,7 +1011,9 @@ class CollectOnDeliveryViewProvider extends AbstractPaymentMethodViewProvider
         parent::__construct();
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     protected function buildViews()
     {
         $configs = $this->configProvider->getPaymentConfigs();
@@ -1029,38 +1062,47 @@ class CollectOnDeliveryView implements PaymentMethodViewInterface
         $this->config = $config;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getOptions(PaymentContextInterface $context)
     {
         return [];
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getBlock()
     {
         return '_payment_methods_collect_on_delivery_widget';
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getLabel()
     {
         return $this->config->getLabel();
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getShortLabel()
     {
         return $this->config->getShortLabel();
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getAdminLabel()
     {
         return $this->config->getAdminLabel();
     }
 
-
-    #[\Override]
+    /** {@inheritdoc} */
     public function getPaymentMethodIdentifier()
     {
         return $this->config->getPaymentMethodIdentifier();
@@ -1130,7 +1172,9 @@ use Acme\Bundle\CollectOnDeliveryBundle\PaymentMethod\Config\CollectOnDeliveryCo
  */
 class CollectOnDeliveryPaymentMethodFactory implements CollectOnDeliveryPaymentMethodFactoryInterface
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function create(CollectOnDeliveryConfigInterface $config)
     {
         return new CollectOnDelivery($config);
@@ -1179,7 +1223,9 @@ class CollectOnDeliveryMethodProvider extends AbstractPaymentMethodProvider
         $this->factory = $factory;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     protected function collectMethods()
     {
         $configs = $this->configProvider->getPaymentConfigs();
@@ -1230,7 +1276,9 @@ class CollectOnDelivery implements PaymentMethodInterface
         $this->config = $config;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function execute($action, PaymentTransaction $paymentTransaction)
     {
         $paymentTransaction->setAction(PaymentMethodInterface::INVOICE);
@@ -1240,19 +1288,25 @@ class CollectOnDelivery implements PaymentMethodInterface
         return [];
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getIdentifier()
     {
         return $this->config->getPaymentMethodIdentifier();
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function isApplicable(PaymentContextInterface $context)
     {
         return true;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function supports($actionName)
     {
         return $actionName === self::PURCHASE;
@@ -1273,9 +1327,6 @@ Pay attention to the lines:
 This is where you define which transaction types are associated with the payment method. To keep it simple, for Collect On Delivery a single transaction is defined. Thus, it will work the following way: when a user submits an order, the “purchase” transaction takes place, and the order status becomes “purchased”.
 
 Check <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/PaymentBundle/Method/PaymentMethodInterface.php" target="_blank">PaymentMethodInterface</a> for more information on other predefined transactions.
-
-#### NOTE
-You can additionally implement the OroBundlePaymentBundleMethodPaymentMethodGroupAwareInterface to restrict the payment method to a specific group of payment methods. You can get the list of available payment methods in a specific group via OroBundlePaymentBundleMethodProviderPaymentMethodGroupAwareProvider.
 
 ### Add the Payment Method Factory and Provider to the Services Container
 

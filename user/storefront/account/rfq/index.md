@@ -55,10 +55,6 @@ You can print the selected RFQ by clicking **Print RFQ**  on the top right of th
 If an RFQ was previously cancelled, you can resubmit the RFQ by clicking ![Resubmit-SVG](_themes/sphinx_rtd_theme/static/svg-icons/resubmit.svg) **Resubmit** on the top right of the view page.
 
 ![image](user/img/storefront/rfq/RFQResubmitNew.png)
-
-If an RFQ is related to quote, you can navigate to its page via a dedicated link on the RFQ page.
-
-![image](user/img/storefront/quotes/quote-to-rfq-link.png)
 <!-- A -->
 <!-- B -->
 <!-- C -->

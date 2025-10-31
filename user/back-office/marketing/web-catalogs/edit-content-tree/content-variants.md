@@ -13,7 +13,7 @@ The first content variant added to the node is marked as the default variant. Sp
 
 ## Add a System Page
 
-The system page is one of the standard pre-designed pages of the OroCommerce storefront (e.g., Requests for Quotes, Open Orders).
+The system page is one of the standard pre-designed pages of the OroCommerce storefront (e.g., Homepage, Requests for Quotes, Open Orders).
 
 To add a system page to the menu in the OroCommerce storefront:
 

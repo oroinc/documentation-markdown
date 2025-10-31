@@ -36,7 +36,7 @@ services:
     acme_demo.my_data_cache.service:
         class: Acme\Bundle\DemoBundle\Provider\CacheService
         arguments:
-            - '@acme_demo.data.cache'
+            - '@acme.data.cache'
 ```
 
 <a id="bundle-docs-platform-cache-bundle-caching-static-configs"></a>
@@ -71,7 +71,9 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 class MyConfiguration implements ConfigurationInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder('my_config');
@@ -100,13 +102,17 @@ class MyConfigurationProvider extends PhpArrayConfigProvider  implements Configu
 {
     private const CONFIG_FILE = 'Resources/config/oro/my_config.yml';
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getConfiguration(): array
     {
         return $this->doGetConfig();
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     protected function doLoadConfig(ResourcesContainerInterface $resourcesContainer)
     {
         $configs      = [];

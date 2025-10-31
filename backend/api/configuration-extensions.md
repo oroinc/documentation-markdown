@@ -65,7 +65,9 @@ use Oro\Bundle\ApiBundle\Config\Extension\AbstractConfigExtension;
 
 class MyConfigExtension extends AbstractConfigExtension
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getConfigureCallbacks(): array
     {
         return [
@@ -75,7 +77,9 @@ class MyConfigExtension extends AbstractConfigExtension
         ];
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getPreProcessCallbacks(): array
     {
         return [
@@ -86,7 +90,9 @@ class MyConfigExtension extends AbstractConfigExtension
         ];
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getPostProcessCallbacks(): array
     {
         return [
@@ -117,7 +123,9 @@ use Symfony\Component\Config\Definition\Builder\NodeBuilder;
 
 class MyConfiguration extends AbstractConfigurationSection
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function configure(NodeBuilder $node): void
     {
         $node->scalarNode('some_option');
@@ -136,7 +144,9 @@ use Symfony\Component\Config\Definition\Builder\NodeBuilder;
 
 class MyConfiguration extends AbstractConfigurationSection
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function configure(NodeBuilder $node): void
     {
         $sectionName = 'my_section';
@@ -162,7 +172,9 @@ use Oro\Bundle\ApiBundle\Config\Loader\AbstractConfigLoader;
 
 class MyConfigLoader extends AbstractConfigLoader
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function load(array $config): mixed
     {
         $result = new MyConfigSection();
@@ -186,13 +198,17 @@ use Oro\Bundle\ApiBundle\Config\Extension\AbstractConfigExtension;
 
 class MyConfigExtension extends AbstractConfigExtension
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getEntityConfigurationSections(): array
     {
         return ['my_section' => new MyConfiguration()];
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getEntityConfigurationLoaders(): array
     {
         return ['my_section' => new MyConfigLoader()];

@@ -2,9 +2,6 @@
 
 <a id="cloud-security"></a>
 
-#### IMPORTANT
-You are viewing the upcoming documentation for OroCloud, scheduled for release later in 2025. For accurate and up-to-date information, please refer only to the documentation of <a href="https://doc.oroinc.com/cloud/" target="_blank">the latest LTS version</a>.
-
 # Security
 
 ## Network Segmentation
@@ -88,4 +85,3 @@ Please check the respective links for more details.
 * Technical [support](../support.md#cloud-support) service details (exclusions, priorities, SLA, etc).
 
 * [Shared Security Responsibility and Best Practices](best-practices.md)
-* [Understanding the Shared Responsibility Model in PCI DSS v4.0.1](shared-responsibility-model.md)

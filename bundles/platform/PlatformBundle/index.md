@@ -115,7 +115,9 @@ use Symfony\Component\Console\Input\InputOption;
 
 class MyNewGlobalOptionsProvider implements GlobalOptionsProviderInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function addGlobalOptions(Command $command)
     {
         // Create a new option and add it to the definitions
@@ -124,7 +126,9 @@ class MyNewGlobalOptionsProvider implements GlobalOptionsProviderInterface
         $command->getDefinition()->addOption($option);
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function resolveGlobalOptions(InputInterface $input)
     {
         // Get the option's value and do something with it

@@ -41,7 +41,7 @@ In the storefront, an order starts from a shopping list.
 Buyers in B2B tend to work on numerous and varied projects that need different products for different business units within the organization, at the same time. It means that there is often a necessity to have more than one shopping cart for different needs. OroCommerce’s shopping lists are enhanced B2C shopping carts explicitly built for B2B interactions and enable buyers to work with multiple shopping lists at the same time, when necessary.
 
 #### HINT
-OroCommerce enables sellers to control how many shopping lists to make available. For some businesses, setting up several shopping lists is not essential, and they can work with just one. One of the common use cases is when a seller configures the website to have one shopping list for unsigned-in buyers. Once they sign in, they get access to the multiple shopping lists functionality.
+OroCommerce enables sellers to control how many shopping lists to make available. For some businesses, setting up several shopping lists is not essential, and they can absolutely work with one. One of the common use cases is when a seller configures the website to have one shopping list for unsigned-in buyers. Once they sign in, they get access to the multiple shopping lists functionality.
 
 ![image](user/img/concept-guides/orders/un-signed-in.png)
 
@@ -167,7 +167,7 @@ Depending on the [payment method](../../../back-office/system/integrations/payme
 For instance, when the order is paid for by using a credit or a debit card, the payment status depends on the **payment action** selected for the credit/debit card payment method when configuring a [payment integration](../../../back-office/system/integrations/payment-integration/index.md#sys-integrations-manage-integrations-payment-methods). If such payment action is set to **pre-authorization** or **final authorization**, the order payment status will stay in the **payment authorized** status until the sales manager manually captures payment (i.e., clicks **capture**) in the OroCommerce back-office to complete the transaction. When the payment is captured, the payment status changes to **paid in full**.
 
 #### NOTE
-Payment Status is based on the payment transaction status and is not linked to [the status of an actual order](../../../back-office/sales/orders/statuses.md#doc-orders-statuses-internal) in any way.
+Payment Status is based on the payment transaction status and is not linked to [the status of an actual order](../../../back-office/sales/orders/statuses.md#doc-orders-statuses-internal) (i.e., open, shipped, archived, etc.) in any way.
 
 There are several types of payment transactions that can be displayed on the order page, for example:
 

@@ -32,6 +32,5 @@ The manufacturing industry is one of the key sectors fully embracing digitizatio
 * [OroCommerce Render Caching](render-cache.md)
 * [Frontend Developer Tools](debugging.md)
 * [Preload Critical Assets](preload-critical-assets.md)
-* [Subresource Integrity (SRI)](subresource-integrity.md)
 * [Icons (SVG)](svg-icons.md)
 * [Optimize Assets Build](optimize-build.md)

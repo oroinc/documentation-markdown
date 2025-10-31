@@ -142,6 +142,12 @@ For example:
 * Select which products to add to a product collection content variant in a web catalog
 
 ![image](user/img/getting_started/records/grids/web-catalog.png)
+* Select what products qualify for a promotion
+
+![image](user/img/getting_started/records/grids/grid-promotions.png)
+* Choose what products to include in a master catalog category.
+
+![image](user/img/getting_started/records/grids/master-catalog-grid.png)
 
 #### NOTE
 These checkboxes are for mass actions only, and **do not affect records during export**.

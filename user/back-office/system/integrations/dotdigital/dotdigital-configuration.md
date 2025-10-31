@@ -9,9 +9,9 @@
 To configure integration with an Oro application on the Dotdigital side, create **an API managed user**:
 
 1. Log in to Dotdigital.
-2. Navigate to **Settings > Access > API users**.
+2. Navigate to **Settings > Access**.
    ![Open the Access menu to create a new user](user/img/marketing/marketing/dotdigital/access.png)
-3. Click the *Add New API User\** button.
+3. Click the **New User** button.
 
    Your unique email address is generated in the **Email Address** field. You need this email address to configure Oro integration with Dotdigital.
 4. Create and confirm your **Password**. The **Description** field is optional. Mark your user **Enabled** and click **Save** to proceed.
@@ -36,20 +36,16 @@ To configure integration with an Oro application on the Dotdigital side, create 
    | **Client Secret key**   | The pre-shared client secret, used to authenticate your application when making token request.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
    | **Custom OAuth Domain** | Enter custom domain if it is used in Dotdigital. By default <a href="https://r1-app.dotdigital.com/" target="_blank">https://r1-app.dotdigital.com/</a> is used.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
    | **Default Owner**       | Select the owner of the integration. The selected user will be defined as the owner for all the records imported within the integration.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-
-#### NOTE
-In the **Synchronization Settings** section, select the **Log Warnings** checkbox if you want all synchronization errors to be written into the application log.
-
-1. Once all the details of the integration have been specified, click **Save and Close**.
+4. Once all the details of the integration have been specified, click **Save and Close**.
 
    As soon as the integration is successfully configured, it will appear in the integration grid.
 
    In addition, **dotdigital menu group** will become available under **Marketing** in the main menu.
 
    The Dotdigital menu group contains the following sections:
+   - **Email Studio** (see [Configure Single Sign-on guide](dotdigital-single-sign-on.md#user-guide-dotmailer-single-sign-on))
    - **Data Fields** (see [Manage Dotdigital Data Fields and Mappings guide](../../../marketing/email-campaigns/dotdigital-data-fields-mappings.md#user-guide-dotmailer-data-fields))
    - **Data Field Mappings** (see [Manage Dotdigital Data Fields and Mappings guide](../../../marketing/email-campaigns/dotdigital-data-fields-mappings.md#user-guide-dotmailer-data-fields))
-   - **Email Studio** (see [Configure Single Sign-on guide](dotdigital-single-sign-on.md#user-guide-dotmailer-single-sign-on))
 
    ![The dotdigital menu under the Marketing main menu](user/img/marketing/marketing/dotdigital/dotdigital-menu.png)
 

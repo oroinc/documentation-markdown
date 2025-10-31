@@ -19,3 +19,4 @@ See the following sections for more information:
 
 * [Use System Reports](system-reports.md)
 * [Use Custom Reports](custom-reports.md)
+* [Reports in Use](reports-examples.md)

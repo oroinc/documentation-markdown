@@ -100,6 +100,7 @@ Dictionary entities are responsible for storing a predefined set of values of a 
 * **virtual_fields** *string[]* - specifies the list of fields for which the virtual fields can be created. If it is not specified, the virtual fields are created for all fields, except for the identifier ones.
 * **search_fields** *string[]* - specifies the list of fields used for searching in the reports filter.
 * **representation_field** *string* - specifies the representation field used to render titles for search items in the reports filter.
+* **activity_support** *boolean* - enables the “activity_support” functionality.
 
 #### `draft`
 
@@ -128,7 +129,7 @@ This attribute is only used for Enum parameters. For more information, see [Opti
 * **code** *string* - a unique identifier of this enum.
 * **public** *boolean* - indicates whether this enum is public. Public enums can be used in any extendable entity, which means that you can create a field of this enum type in any entity. Private enums cannot be reused.
 * **multiple** *boolean* - Indicates whether several options can be selected for this enum or it supports only one selected option.
-* **immutable** *boolean or array* - is used to prohibit changing the list of enum options and a public flag. This means that values cannot be added or deleted, but it is still possible to update the names of existing values, reorder them and change the default values. Below are examples of possible values:
+* **immutable** *boolean or array* - is used to prohibit changing the list of enum values and a public flag. This means that values cannot be added or deleted, but it is still possible to update the names of existing values, reorder them and change the default values. Below are examples of possible values:
   > - false or empty array - no any restrictions
   > - true - means that all constraints are applied, so it will not be allowed to add/delete options and change ‘public’ flag
   > - ‘add’, ‘delete’, ‘public’ - the same as true; it will not be allowed to add/delete options and change ‘public’ flag
@@ -143,7 +144,7 @@ This attribute sets default settings for [Extend Entities](../../entities/extend
   > - `ExtendScope::OWNER_CUSTOM` - The property is user-defined, and the core system should handle how the property appears in grids, forms, etc. (if not configured otherwise).
   > - `ExtendScope::OWNER_SYSTEM` - Nothing is rendered automatically, and you must explicitly specify how to show the property in different parts of the system (grids, forms, views, etc.).
 * **table** *string* - is the table name for a custom entity. This is optional attribute. If it is not specified, the table name is generated automatically.
-* **inherit** *string* - is the parent class name. You are not usually requires to specify this attribute as it is calculated automatically for regular extend and custom entities. An example of an entity where this attribute is used is EnumOption.
+* **inherit** *string* - is the parent class name. You are not usually requires to specify this attribute as it is calculated automatically for regular extend and custom entities. An example of an entity where this attribute is used is EnumValue.
 * **pending_changes** - when a user changes something that requires schema update, this change is not applied to the configuration, but is stored into “pending_changes” as changeset. The format of changeset is [‘scope’ => [‘field’ => [‘oldValue’, ‘newValue’], …], …].
   > Let’s assume that a user has an active activity email and changes it to a task. In this case, the value of pending changes would be the following:
   > ```none

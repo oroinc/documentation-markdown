@@ -142,19 +142,25 @@ use Oro\Bundle\GaufretteBundle\DependencyInjection\Factory\ConfigurationFactoryI
 
 class SomeAdapterConfigurationFactory implements ConfigurationFactoryInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getAdapterConfiguration(string $configString): array
     {
         // implement logic here
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getKey(): string
     {
         // implement logic here
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getHint(): string
     {
         // implement logic here
@@ -172,7 +178,9 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class AcmeDemoBundle extends Bundle
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function build(ContainerBuilder $container): void
     {
         parent::build($container);
@@ -316,7 +324,9 @@ use Symfony\Component\DependencyInjection\Reference;
  */
 class MigrateFileStorageCommandCompilerPass implements CompilerPassInterface
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function process(ContainerBuilder $container)
     {
         $container->getDefinition(MigrateFileStorageCommand::class)

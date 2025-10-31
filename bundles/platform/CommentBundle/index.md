@@ -21,7 +21,9 @@ class AddCommentAssociation implements Migration, CommentExtensionAwareInterface
 {
     use CommentExtensionAwareTrait;
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->commentExtension->addCommentAssociation($schema, 'acme_demo_entity');
@@ -46,7 +48,9 @@ class SomeActivityListProvider implements ActivityListProviderInterface, Comment
 {
     // ...
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function isCommentsEnabled($entityClass)
     {
         return $this->configManager->hasConfig($entityClass)

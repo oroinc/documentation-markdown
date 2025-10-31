@@ -78,7 +78,7 @@ When at least one consent to process personal data has been accepted by a custom
 
 You can read more information on consent management in the following related topics:
 
-* [Configure Consents](../../system/configuration/commerce/customer/global-interactions.md#configuration-guide-commerce-configuration-consents)
+* [Configure Consents](../../system/configuration/commerce/customer/global-consents.md#configuration-guide-commerce-configuration-consents)
 * [Create Consents](../../system/consent-management/index.md#user-guide-consents-create)
 * [Add a Consent Landing Page to a Web Catalog](../../../concept-guides/administration/consents/add-consent.md#user-guide-consents-add)
 * [View and Accept Consents in the Storefront](../../../storefront/account/my-profile/index.md#frontstore-guide-profile-consents)

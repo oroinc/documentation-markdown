@@ -295,7 +295,9 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class AcmeDemoBundle extends Bundle
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function build(ContainerBuilder $container): void
     {
         parent::build($container);
@@ -320,7 +322,9 @@ use Symfony\Component\Form\FormBuilderInterface;
 
 class SomeType extends AbstractType
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add(

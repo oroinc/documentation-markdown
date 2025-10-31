@@ -105,14 +105,14 @@ workflows:
                 triggers:                                                   # transition triggers
                     -
                         cron: '* * * * *'                                   # cron definition
-                        filter: "JSON_EXTRACT(e.serialized_data, 'auth_status') = 'auth_status.active'" # dql-filter
+                        filter: "e.auth_status = 'active'"                  # dql-filter
                     -
                         entity_class: Oro\Bundle\SaleBundle\Entity\Quote    # entity class
                         event: update                                       # event type
-                        field: serialized_data                              # updated field
+                        field: internal_status                              # updated field
                         queued: false                                       # handle trigger not in queue
                         relation: user                                      # relation to Workflow entity
-                        require: "entity.getInternalStatus().getInternalId() === 'pending'"     # expression language condition
+                        require: "entity.internal_status === 'pending'"     # expression language condition
         transition_definitions:                                   # list of all existing transition definitions
             set_name_definition: []                               # definitions for transition "set_name", no extra conditions or actions here
             add_email_definition:                                 # definition for transition "add_email"

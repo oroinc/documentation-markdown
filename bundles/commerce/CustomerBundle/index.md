@@ -115,11 +115,20 @@ If the authentication of `AnonymousCustomerUserToken` object is successful, you 
 By default, this param is 30 days, and it is accessible through the [System > Configuration > Commerce > Customer > Customer User](../../../user/back-office/system/configuration/commerce/customer/global-customer-users.md#sys-config-configuration-commerce-customers-customer-users) section on the global and organization levels:
 
 ```php
-// $cookieFactory is an instance of Oro\Bundle\CustomerBundle\Security\Firewall\CustomerVisitorCookieFactory
+const COOKIE_ATTR_NAME = '_security_customer_visitor_cookie';
+const COOKIE_NAME = 'customer_visitor';
+
+$cookieLifetime = $this->configManager->get('oro_customer.customer_visitor_cookie_lifetime_days');
+
+$cookieLifetime = $cookieLifetime * Configuration::SECONDS_IN_DAY;
 
 $request->attributes->set(
-    AnonymousCustomerUserAuthenticator::COOKIE_ATTR_NAME,
-    $cookieFactory->getCookie($visitor->getSessionId())
+    self::COOKIE_ATTR_NAME,
+    new Cookie(
+        self::COOKIE_NAME,
+        base64_encode(json_encode([$visitor->getId(), $visitor->getSessionId()])),
+        time() + $cookieLifetime
+    )
 );
 ```
 

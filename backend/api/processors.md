@@ -26,7 +26,9 @@ use Oro\Component\ChainProcessor\ProcessorInterface;
  **/
 class DoSomething implements ProcessorInterface
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function process(ContextInterface $context): void
     {
         /** @var Context $context */
@@ -143,7 +145,7 @@ services:
 services:
     acme.api.do_something:
         tags:
-            - { name: oro.api.processor, action: get_list, group: initialize, requestType: '!rest' }
+            - { name: oro.api.processor, action: get_list, group: initialize, requestType: !rest }
 ```
 
 - A processor is executed only for REST requests that conform to the <a href="http://jsonapi.org/" target="_blank">JSON:API</a> specification.
@@ -309,7 +311,9 @@ class LoadEntityByEntitySerializer implements ProcessorInterface
         $this->entitySerializer = $entitySerializer;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function process(ContextInterface $context): void
     {
         /** @var Context $context */
@@ -370,7 +374,9 @@ use Oro\Bundle\ApiBundle\Request\Constraint;
  */
 class ValidateEntityIdExists implements ProcessorInterface
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function process(ContextInterface $context): void
     {
         /** @var SingleItemContext $context */

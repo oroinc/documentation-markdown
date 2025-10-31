@@ -32,7 +32,7 @@ lineItems.all(lineItem.quantity > 500)
 
 ![A promotion with two expressions](user/img/marketing/promotions/promotion_with_conditions.png)
 
-Once the promotion is saved, the customer user of Company A, Amanda Cole, should be able to receive the discount when placing her order at the checkout when purchasing more than 500 items of eligible products.
+Once the promotion is saved, the customer user of Company A Amanda Cole should be able to receive the discount when placing her order at the checkout when purchasing more than 500 items of eligible products.
 
 ![The discount applied at checkout for customers with the required customer level](user/img/marketing/promotions/expression-applied.png)
 

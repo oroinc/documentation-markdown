@@ -174,14 +174,18 @@ use Oro\Bundle\UserBundle\Migrations\Data\ORM\LoadAdminUserData;
 
 class LoadDashboardData extends AbstractDashboardFixture implements DependentFixtureInterface
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getDependencies(): array
     {
         // we need admin user as a dashboard owner
         return [LoadAdminUserData::class];
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function load(ObjectManager $manager): void
     {
         // create new dashboard

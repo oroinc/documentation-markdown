@@ -36,14 +36,11 @@ To set up a payment method integration with Apruve, perform the following steps:
 6. In the **Other** section, provide the following information:
    * **Status**  — Set the status to **Active** to enable the integration.
    * **Default Owner** — A user who is responsible for this integration and manages it.
-
-#### NOTE
-In the **Synchronization Settings** section, select the **Log Warnings** checkbox if you want all synchronization errors to be written into the application log.
-
-1. Click **Save and Close**.
+7. Click **Save and Close**.
 
    Once the Apruve Integration is saved, the **Webhook URL** becomes available. You can check it by loading the Apruve page again. If necessary, the **Webhook URL** can be regenerated to prevent any attempted fraud.
-2. Copy the webhook URL to your clipboard and paste it into the **Notifications** section in the Apruve system. It enables Apruve to send you notifications regarding any activity performed via Apruve.
+   ![image](user/img/system/integrations/apruve/apruve_integration_3.png)
+8. Copy the webhook URL to your clipboard and paste it into the **Notifications** section in the Apruve system. It enables Apruve to send you notifications regarding any activity performed via Apruve.
    ![image](user/img/system/integrations/apruve/apruve_integration_3.1.png)
 
 Next, set up a payment rule that enables this payment method for all or some customer orders via the [Payment Rules Configuration](../../../payment-rules/index.md#sys-payment-rules) page.

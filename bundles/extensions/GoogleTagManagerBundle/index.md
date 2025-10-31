@@ -23,7 +23,9 @@ use Oro\Bundle\GoogleTagManagerBundle\DataLayer\Collector\CollectorInterface;
 
 class CustomCollector implements CollectorInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function handle(Collection $data): void
     {
         $data->add([

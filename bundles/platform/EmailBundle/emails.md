@@ -56,13 +56,17 @@ UserBundle/Entity/Provider/EmailOwnerProvider.php
 
  class EmailOwnerProvider implements EmailOwnerProviderInterface
  {
-     #[\Override]
+     /**
+      * {@inheritdoc}
+      */
      public function getEmailOwnerClass(): string
      {
          return User::class;
      }
 
-     #[\Override]
+     /**
+      * {@inheritdoc}
+      */
      public function findEmailOwner(EntityManagerInterface $em, string $email): ?EmailOwnerInterface
      {
          /** @var User|null $user */
@@ -78,7 +82,9 @@ UserBundle/Entity/Provider/EmailOwnerProvider.php
          return $user;
      }
 
-     #[\Override]
+     /**
+      * {@inheritdoc}
+      */
      public function getOrganizations(EntityManagerInterface $em, string $email): array
      {
          $result = [];
@@ -115,7 +121,9 @@ UserBundle/Entity/Provider/EmailOwnerProvider.php
          return $result;
      }
 
-     #[\Override]
+     /**
+      * {@inheritdoc}
+      */
      public function getEmails(EntityManagerInterface $em, int $organizationId): iterable
      {
          $qb = $em->createQueryBuilder()
@@ -187,13 +195,17 @@ use Oro\Bundle\EmailBundle\Provider\EmailBodyLoaderInterface;
 
 class SomeEmailBodyLoader implements EmailBodyLoaderInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function supports(EmailOrigin $origin)
     {
         return $origin instanceof SomeEmailOrigin;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function loadEmailBody(EmailFolder $folder, Email $email, EntityManager $em)
     {
         // implementation

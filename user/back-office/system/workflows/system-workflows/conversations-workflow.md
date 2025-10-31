@@ -2,6 +2,9 @@
 
 # Configure Backoffice Conversations Workflow in the Back-Office
 
+#### NOTE
+The conversations feature is available as of OroCommerce version 6.0.4 as a <a href="https://extensions.oroinc.com/orocommerce/extension/oro-conversations/" target="_blank">Conversations extension</a>, which you can download from the Oro Extensions Store. Next, use the composer to [install it on your application](../../../../../backend/extension/install-extension.md#cookbook-extensions-composer).
+
 Oro offers a [conversation feature](../../../activities/conversations/index.md#doc-activities-conversations) for easy communication between back-office and storefront users. Conversations allow back-office staff to share information and communicate with other back-office users or customer users in the storefront. The Conversations Workflow is a system workflow that provides the following default statuses for the conversation feature: Active, Inactive, Closed.
 
 ![Illustration of the workflow transition on a view page of a conversation](user/img/system/workflows/conversations/activities-conversations-view.png)

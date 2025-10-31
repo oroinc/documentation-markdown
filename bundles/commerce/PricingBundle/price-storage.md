@@ -37,7 +37,9 @@ class CSVFilePriceStorage implements ProductPriceStorageInterface
         $this->doctrineHelper = $doctrineHelper;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getPrices(
         ProductPriceScopeCriteriaInterface $scopeCriteria,
         array $products,
@@ -64,7 +66,9 @@ class CSVFilePriceStorage implements ProductPriceStorageInterface
         return $prices;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getSupportedCurrencies(ProductPriceScopeCriteriaInterface $scopeCriteria)
     {
         /**
@@ -138,7 +142,9 @@ class PricingVoter implements VoterInterface
 {
     const PRICING_FEATURE_NAME = 'oro_pricing';
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function vote($feature, $scopeIdentifier = null)
     {
         if ($feature === self::PRICING_FEATURE_NAME) {

@@ -197,11 +197,11 @@ datagrids:
 
 ### Problem 4
 
-Let’s take the previous problem but fill the selector in addiction to enum options.
+Let’s take the previous problem but fill the selector in addiction to enum values.
 
 **Solution**:
 
-To solve this problem, use `@oro_entity_extend.enum_options_provider->getEnumChoicesByCode('enum_code')` instead of the choice the array is using.
+To solve this problem, use `@oro_entity_extend.enum_value_provider->getEnumChoicesByCode('enum_code')` instead of the choice the array is using.
 
 ```yaml
 choices:
@@ -222,7 +222,7 @@ datagrids:
                 label: oro.user.enabled.label
                 frontend_type: select
                 editable: true
-                choices: "@oro_entity_extend.enum_options_provider->getEnumChoicesByCode('user_status')"
+                choices: "@oro_entity_extend.enum_value_provider->getEnumChoicesByCode('user_status')"
                 translatable_options: false
 ```
 
@@ -464,20 +464,6 @@ The “There are no users” message is shown for an empty grid and “No users 
   >     my_custom_empty_grid_message: 'There are no users'
   >     my_custom_empty_filtered_grid_message: 'No users were found to match your search. Try modifying your search criteria...'
   > ```
-
-### Problem 12
-
-*I want to hide the workflow step column that is rendered in the grid.*
-
-**Solution**:
-
-> ```yaml
-> services:
->     oro_rfp.datagrid.listener.column:
->         class: 'Oro\Bundle\WorkflowBundle\Datagrid\HideWorkflowStepColumnListener'
->         tags:
->             - { name: kernel.event_listener, event: oro_datagrid.datagrid.build.before.rfp-requests-grid, method: onBuildBefore }
-> ```
 
 **Related Articles**
 

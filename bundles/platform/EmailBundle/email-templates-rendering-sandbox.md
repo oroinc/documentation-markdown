@@ -101,7 +101,9 @@ An example:
 
    > class MyExtension extends AbstractExtension
    > {
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function getFunctions(): array
    >     {
    >         return [new TwigFunction('some_function', [$this, 'getSomeVariableValue'])];
@@ -141,7 +143,9 @@ An example:
 
    > class TwigSandboxConfigurationPass extends AbstractTwigSandboxConfigurationPass
    > {
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     protected function getFunctions(): array
    >     {
    >         return [
@@ -149,19 +153,25 @@ An example:
    >         ];
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     protected function getFilters(): array
    >     {
    >         return [];
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     protected function getTags(): array
    >     {
    >         return [];
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     protected function getExtensions(): array
    >     {
    >         return [
@@ -180,7 +190,9 @@ An example:
 
    > class AcmeDemoBundle extends Bundle
    > {
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function build(ContainerBuilder $container): void
    >     {
    >         parent::build($container);

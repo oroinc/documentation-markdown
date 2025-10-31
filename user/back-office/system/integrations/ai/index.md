@@ -2,6 +2,9 @@
 
 # Configure AI Integrations in the Back-Office
 
+#### NOTE
+This feature is available as of OroCommerce version 6.0.2.
+
 In OroCommerce, you can integrate AI solutions to simplify the generation of content for product descriptions, landing pages, content blocks, master catalog categories, and emails. Integrating AI clients provides several key benefits, including saving time and resources by quickly creating high-quality, engaging content. This allows your team to focus on strategic tasks. It also improves consistency and creativity across all marketing materials, ensuring a unified brand voice.
 
 ## Supported Clients
@@ -34,10 +37,6 @@ To create an integration with OpenAI as the AI content generator of choice:
    | **Default Owner** | Select the owner of the integration.                                                                                                                                                                          |
 
 ![OpenAI integration settings page](user/img/system/integrations/ai/open-ai.png)
-
-#### NOTE
-In the **Synchronization Settings** section, select the **Log Warnings** checkbox if you want all synchronization errors to be written into the application log.
-
 1. Click **Save and Close**.
 
 ## Create Integration with Vertex AI
@@ -59,10 +58,6 @@ To create and integration with Vertex AI as the AI content generator of choice:
    | **Default Owner** | Select the owner of the integration.                                                                                                                                                                          |
 
 ![Vertex AI integration settings page](user/img/system/integrations/ai/vertex-ai.png)
-
-#### NOTE
-In the **Synchronization Settings** section, select the **Log Warnings** checkbox if you want all synchronization errors to be written into the application log.
-
 1. Click **Save and Close**.
 
 ## Configure AI Content Generation in the System Configuration

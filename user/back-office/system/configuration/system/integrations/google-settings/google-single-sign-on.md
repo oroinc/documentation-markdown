@@ -11,38 +11,47 @@ Oro application supports Google Single Sign-On. This means that for a user that 
 To configure single sign-on on the Google side:
 
 1. Open <a href="https://console.developers.google.com/start" target="_blank">Google API Console</a>.
-2. Click **My Project** selector in the top left corner to open a popup form.
-3. Click **New Project** at the top right.
+2. Navigate to **My Project** selector in the top left corner and click **Create Project**.
    ![Create a project in the Google API console](user/img/google/create_project.png)
-4. Define the **Project Name** and select the **Location**.
-5. Click **Create**.
-   ![A new project page](user/img/google/new_project.png)
+3. Define the **Project Name** and click **Create**.
+   ![A new project page](user/img/google/new_project.jpg)
 
 ### Create Credentials
 
-1. Navigate to **API & Services > Credentials** in the menu on the left.
-2. Click **+ Create Credentials** and then click **0Auth client ID.**
-   ![The Credentials menu details](user/img/google/create_credentials.png)
-3. To create an OAuth client ID, set the **Application Type** to **Web Application** to load more settings depending on the selected type.
-4. Enter the **Name** of your OAuth client.  This name is only used to identify the client in the console and will not be shown to end users.
-5. For **Authorized JavaScript Origins**, enter the URL of the Oro application instance for which single sign-on is being enabled.
-6. **Authorized Redirect URIs** are unified resource names used for the interaction between Google and the Oro application instance. It is recommended to add the following two values:
+1. Click **Credentials** in the menu on the left and open the **Credentials** tab.
+   ![The Credentials tab details](user/img/google/create_credentials.jpg)
+2. Click **Create Credentials** and select **0Auth client ID.**
+   ![A list of available credential options](user/img/google/create_credentials_2.jpg)
+3. To create an OAuth client ID, first set a product name on the consent screen.
+
+### Configure Consent Form
+
+1. Click **Configure Consent Screen**.
+   ![Settings under the Credentials menu](user/img/google/consent_form.jpg)
+2. Complete the form by providing the following details:
+
+> - Your email address
+> - Project name
+> - Homepage URL
+> - Product logo
+> - Private Policy URL
+> - Terms of Service URL
+
+> ![The details you need to provide to configure the consent form](user/img/google/complete_form.jpg)
+1. Click **Save** to launch the **Create Client ID** page.
+2. Set the **Application Type** to **Web Application**.
+3. For **Authorized JavaScript Origins**, enter the URL of the Oro application instance for which single sign-on is being enabled.
+4. **Authorized Redirect URIs** are unified resource names used for the interaction between Google and the Oro application instance. It is recommended to add the following two values:
    * [Oro application instance URL]/admin/login/check-google
    * [Oro application instance URL]/index.php/admin/login/check-google
-
-![The details you need to provide to configure to create OAuth client ID](user/img/google/create_credentials_form.png)
+5. Click **Create Client ID**.
+   ![The Create Client ID page](user/img/google/create_id.jpg)
 
 #### NOTE
 Please pay attention to the **Authorized Redirect URIs**, the value from the **System > Configuration > Integrations > Google Settings > Google Integration Settings > Redirect URI** must be added in Authorized Redirect URIs configuration.
 
-1. Click **Create**.
-2. Your **Client ID** and **Client Secret** are generated. For security reasons, the Client Secret is displayed only once – immediately after you have created a new OAuth client. You cannot view the Client Secret anywhere in the application once you close this dialog, so make sure you save it somewhere safe to access it later.
-
-![OAuth client ID and secret](user/img/google/id_secret.png)
-
-The client ID can always be accessed from the **Google Auth Platform > Clients** main menu.
-
-![OAuth client ID under Google Auth Platform > Clients menu](user/img/google/clients_id_secret.png)
+1. Your client ID is generated.
+   ![OAuth client ID and secret](user/img/google/id_secret.jpg)![A new client ID is added to the list of all IDs](user/img/google/id_secret_2.jpg)
 
 ## Oro Application Side
 
@@ -55,7 +64,7 @@ To configure the integration with Google Single Sign-On in your Oro application:
 3. Define the following fields for **Google Sign-On:**
    * **Enable** — Check **Enable** to activate Google Single Sign-on.
    * **Domains** — Enter a comma-separated list of email domains allowed to use Google SSO (e.g., domains associated with your company). It limits Google SSO access to users with email addresses matching these domains. Leave the field empty to allow any domain.
-   * **Disable Non-SSO Login for Listed Domains** — When enabled, users with email addresses matching the domains specified in the *Domains* field will be required to sign in using **Google SSO only**. Username and password login will be restricted for these users.
+   * **Disable Non-SSO Login for Listed Domains** (available as of OroCommerce version 6.0.7) — When enabled, users with email addresses matching the domains specified in the *Domains* field will be required to sign in using **Google SSO only**. Username and password login will be restricted for these users.
 
 ![Global Google integration settings](user/img/system/config_system/google_integration_new.png)
 
@@ -63,7 +72,7 @@ To configure the integration with Google Single Sign-On in your Oro application:
 
 When a user opens the login page of the instance with the enabled single sign-on capability, the **Login Using Google** link is displayed.
 
-![The login page with the link to log in via google](user/img/google/login_using_google.png)
+![The login page with the link to log in via google](user/img/google/login_using_google.jpg)
 
 If the user is not logged into their Google account, then clicking the button triggers opening a usual Google login page.
 

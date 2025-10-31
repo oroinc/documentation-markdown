@@ -138,7 +138,9 @@ use Oro\Component\MessageQueue\Consumption\Context;
 
 class CustomExtension extends AbstractExtension
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function onPostReceived(Context $context)
     {
         // ... own logic

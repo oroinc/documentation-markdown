@@ -257,9 +257,9 @@ If you need to load your part of the configuration directly from the file, use t
 
 ### Imports With Conditions
 
-The `import_condition` option lets you import resources or workflows when certain conditions are met. If this option is available, the expression is checked early in the import process. If the conditions aren’t met, the import is ignored.
+The `import_condition` option enables you to import resources or workflows when certain conditions are met. If this option is available, the expression is checked early in the import process. If the conditions are not met, the import is ignored.
 
-`import_condition` uses Expression Language syntax like the Symfony DI component. It also has the `parameter_or_null` function, which works like `parameter` but returns `null` if the parameter doesn’t exist.
+`import_condition` uses Expression Language syntax like the Symfony DI component. It also has the `parameter_or_null` function, which works like `parameter` but returns `null` if the parameter does not exist.
 
 ```yaml
 imports:

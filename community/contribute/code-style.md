@@ -191,11 +191,11 @@ To run the check manually from the command line:
 
 1. First, you need to install the required js-modules in the application directory
    > ```none
-   > pnpm install
+   > npm install
    > ```
 2. Then, run <a href="https://eslint.org/" target="_blank">ESLint</a> to check JS files for code-style
    > ```none
-   > pnpm run eslint file.js [file.js] [dir] -- [options]
+   > npm run eslint file.js [file.js] [dir] -- [options]
    > ```
 
 ## .NET Code Style
@@ -219,11 +219,11 @@ To run the check manually from the command line:
 
 1. First, install the required js-modules in the application directory:
    ```none
-   pnpm install
+   npm install
    ```
 2. Then, run <a href="https://stylelint.io/" target="_blank">Stylelint</a> to check SCSS files for the code-style:
    ```none
-   pnpm run stylelint "**/*.scss" -- [options]
+   npm run stylelint "**/*.scss" -- [options]
    ```
 
 **See Also**

@@ -49,7 +49,9 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
 
 class AddTeaserField implements Migration
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function up(Schema $schema, QueryBag $queries): void
     {
         if (!$schema->hasTable('acme_blog_post')) {
@@ -120,7 +122,6 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
 
 class AddExtraContentField implements Migration
 {
-    #[\Override]
     public function up(Schema $schema, QueryBag $queries): void
     {
         if (!$schema->hasTable('acme_blog_post')) {

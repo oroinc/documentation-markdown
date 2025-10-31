@@ -28,7 +28,9 @@ To set the shopping list globally:
    #### NOTE
    To update any of the options, clear *Use Default* checkbox first.
 3. In the **Shopping List Limit** section, set the number of shopping lists allowed per customer. The default value is zero. This means that no limit of shopping lists is applied.
-4. In the **Guest Shopping List** section, set whether guests are allowed to create and manage shopping lists. By default, guest shopping lists are disabled. In addition, only 1 shopping list is available for guest customers.
+4. In the **Guest Shopping List** section, define the following options:
+   * **Enable Guest Shopping List** — Set whether guests are allowed to create and manage shopping lists. By default, guest shopping lists are disabled. In addition, only 1 shopping list is available for guest customers.
+   * **Create Guest Shopping Lists Immediately** — Enable this option to automatically create shopping lists for all guest users once they access the storefront. By default, this option is disabled and shopping lists are created only when guest users add at least one item to their shopping list.
 5. In the **Guest Shopping List Owner Settings** section, select the user who will be the default owner of all guest shopping lists. Depending on the roles and permissions of the owner, guest shopping lists may or may not be viewed and managed by the users who are subordinated to the owner.
 
    #### NOTE

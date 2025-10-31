@@ -34,7 +34,9 @@ class MyMessageFilter implements MessageFilterInterface
         $this->topic = $topic;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function apply(MessageBuffer $buffer): void
     {
         if (!$buffer->hasMessagesForTopic($this->topic)) {

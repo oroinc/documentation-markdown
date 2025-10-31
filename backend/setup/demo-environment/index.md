@@ -6,6 +6,7 @@
 * [AWS Cloud Platform](aws.md)
 * [Google Cloud Platform](gcp.md)
 * [Azure Cloud Platform](azure.md)
+* [Vagrant Provision](vagrant.md)
 
 #### BUSINESS TIP
 # Business Tip

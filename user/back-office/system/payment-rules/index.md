@@ -75,7 +75,7 @@ To enable several shipping rules at the same time:
 1. Select the checkboxes on the left of the corresponding rows. The selected payment rules will be highlighted in yellow.
 2. Click <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> on the far right of table header.
 3. Click <i class="fa fa-check fa-lg" aria-hidden="true"></i> **Enable**.
-   ![image](user/img/system/payment_rules/mass_action_payment_rule.png)
+   > ![image](user/img/system/payment_rules/mass_action_payment_rule.png)
 
 ### Filter a Payment Rule List
 

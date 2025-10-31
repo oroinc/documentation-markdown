@@ -4,6 +4,10 @@
 
 # Emails
 
+Once the ORO application is installed, you can access it at the following link
+
+<a id="index-0"></a>
+
 ## Email Templates
 
 Communicating with customers is an integral part of every business. In OroPlatform, an email address is represented by the `Oro\Bundle\EmailBundle\Entity\EmailAddress` class.
@@ -20,7 +24,9 @@ To provide mail templates, create Twig templates for the desired format (namely 
 
  class EmailTemplatesFixture extends AbstractEmailFixture
  {
-     #[\Override]
+     /**
+      * {@inheritDoc}
+      */
      public function getEmailsDir(): string
      {
          return $this->container
@@ -198,7 +204,9 @@ To be notified of such an event, you have to create an `Oro\Bundle\NotificationB
 
  class CreateCommentNotification extends AbstractFixture
  {
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function load(ObjectManager $manager)
      {
          $notification = new EmailNotification();
@@ -275,25 +283,33 @@ Sample `Email` entity:
      #[ORM\ManyToOne(targetEntity: 'Applicant', inversedBy: 'emails')]
      private $applicant;
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getEmailField()
      {
          return 'email';
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getId()
      {
          return $this->id;
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getEmail()
      {
          return $this->email;
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getEmailOwner()
      {
          return $this->applicant;
@@ -349,19 +365,25 @@ For the `Applicant` entity, the implementation should be similar to the followin
      private $lastName;
      private $lastName;
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getClass()
      {
          return 'Acme\Bundle\DemoBundle\Entity\Applicant';
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getEmailFields()
      {
          return ['email'];
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getId()
      {
          return $this->id;
@@ -375,13 +397,17 @@ For the `Applicant` entity, the implementation should be similar to the followin
          return $this->emails;
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getFirstName()
      {
          return $this->firstName;
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getLastName()
      {
          return $this->lastName;
@@ -418,13 +444,17 @@ The provider class should then look like this:
 
  class EmailOwnerProvider implements EmailOwnerProviderInterface
  {
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getEmailOwnerClass(): string
      {
          return Applicant::class;
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function findEmailOwner(EntityManagerInterface $em, string $email): ?EmailOwnerInterface
      {
          /** @var ApplicantEmail|null $emailEntity */
@@ -436,7 +466,9 @@ The provider class should then look like this:
          return $emailEntity->getEmailOwner();
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getOrganizations(EntityManagerInterface $em, string $email): array
      {
          $rows = $em->createQueryBuilder()
@@ -456,7 +488,9 @@ The provider class should then look like this:
          return $result;
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getEmails(EntityManagerInterface $em, int $organizationId): iterable
      {
          $qb = $em->createQueryBuilder()

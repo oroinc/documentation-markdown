@@ -7,7 +7,6 @@
 The following software is required to run JS tests:
 
 > - <a href="https://nodejs.org/en/" target="_blank">Node.js</a> (JavaScript Engine)
-> - <a href="https://pnpm.io/" target="_blank">PNPM</a> (Disk Space Efficient Package Manager)
 > - <a href="http://karma-runner.github.io/4.0/index.html" target="_blank">Karma</a> (Test Runner for JavaScript)
 > - <a href="https://jasmine.github.io/api/3.5/global" target="_blank">Jasmine 3.5</a> (Behavior-Driven Development Testing Framework)
 
@@ -17,7 +16,7 @@ For instructions on how to install **Node.js**, navigate to the <a href="https:/
 Once the node is installed, install several modules using <a href="https://npmjs.org/" target="_blank">Node Packaged Modules</a> manager by executing the following command from the root folder of your application:
 
 ```none
-pnpm install
+npm install
 ```
 
 ## Configuration
@@ -34,7 +33,7 @@ It can be useful to create a separate configuration file by copying the karma.co
 To run tests, call the following command:
 
 ```none
-pnpm run test
+npm run test
 ```
 
 To run testsuite with a custom configuration, you can use the command line parameters which overwrite the parameters in the configuration file.
@@ -49,7 +48,7 @@ There are few custom options added for preparing karma config:
 To keep tests continuously running and re-executing when any watched file is modified, use the following command:
 
 ```none
-pnpm run test-watch
+npm run test-watch
 ```
 
 To debug unit test:
@@ -63,13 +62,7 @@ Any modification of the source or test file will lead to reassembly, after which
 To run specific test, use the –spec “<path/to/someSpec.js>” parameter:
 
 ```none
-pnpm run test-watch --spec vendor/oro/platform/src/Oro/Bundle/UIBundle/Tests/JS/mediatorSpec.js
-```
-
-To run without watching, use the –single-run –spec “<path/to/someSpec.js>” parameter:
-
-```none
-pnpm run test-watch --single-run --spec vendor/oro/platform/src/Oro/Bundle/UIBundle/Tests/JS/mediatorSpec.js
+npm run test-watch -- --spec vendor/oro/platform/src/Oro/Bundle/UIBundle/Tests/JS/mediatorSpec.js
 ```
 
 The following extensions can be useful if you use PHPStorm:

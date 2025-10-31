@@ -14,6 +14,11 @@ To configure the product image settings globally:
 
    ![Global product image watermark configuration settings](user/img/system/config_commerce/product/ProductImages.png)
 3. To customize the option configuration, clear the **Use Default** checkbox next to the option and select the required value.
+4. In the **General** section, configure the following options:
+
+   **Enable Original File Names** — When enabled, the original image file name will be appended to the system-generated hash value. All non-alphanumeric characters (e.g., “:”, “)”, “,”, “~”) will be replaced with “-” (dash).
+
+   For example, the name of the file is **coffee_maker/bosch_#RND123.jpg**, the system-generated hash value is “media/cache/attachment/product_gallery_main/5bae287538.jpg”. If the option is enabled, the file name will be displayed in the storefront as follows “media/cache/attachment/product_gallery_main/5bae287538-coffee-maker-bosch-RND123.jpg”
 
 <a id="sys-commerce-product-product-images"></a>
 1. In the **Product Image Watermark** section, you can control the watermark that will appear on top of every image uploaded as part of product details.
@@ -23,8 +28,9 @@ To configure the product image settings globally:
 
 <a id="sys-commerce-product-product-images-image-preview-global"></a>
 1. In the **Image Gallery Options** section, enable or disable product preview on product listing pages in the storefront.
-   * **Enable Image Preview on Product Listing** - Enable the option to add the <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> icon to the product image on the product listing page in the storefront which will open a pop up image gallery once clicked.
+   ![Global image gallery options configuration settings](user/img/system/config_commerce/product/ImagePreviewGlobal.png)
 
+   **Enable Image Preview on Product Listing** - Enable the option to add the <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> icon to the product image on the product listing page in the storefront which will open a pop up image gallery once clicked.
    > ![Illustration of the Enable Image Preview on Product Listing option in the storefront being enabled and disabled](user/img/system/config_commerce/product/ImagePreviewStorefront.png)
 2. Click **Save Settings**.
 

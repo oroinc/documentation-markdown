@@ -25,11 +25,7 @@ The following categories of settings are available for system configuration at o
   * Websites
     * [Routing Settings](general-setup-org/organization-routing.md#organization-config-website-routing)
   * Integrations
-    * [Google Settings](general-setup-org/integrations/organization-google.md#organization-google-settings)
     * [Microsoft Settings](general-setup-org/integrations/organization-microsoft.md#organization-configuration-microsoft)
-    * [AI Content Generation](general-setup-org/integrations/organization-ai-settings.md#organization-ai-settings)
-    * [AI Agent](general-setup-org/integrations/organization-ai-agent.md#organization-ai-agent-settings)
-    * [AI Smart Order](general-setup-org/integrations/organization-ai-smart-order.md#organization-ai-smart-order-settings)
     * [CAPTCHA Settings](general-setup-org/integrations/organization-captcha.md#organization-configuration-captcha)
 * **Commerce**
   * Guests
@@ -37,7 +33,7 @@ The following categories of settings are available for system configuration at o
     * [SEO](commerce/guests/organization-seo.md#sys-conf-commerce-guest-seo-org)
   * Customer
     * [Customer Users](commerce/customers/organization-customer-users.md#system-user-mngm-organization-configuration-commerce-customers-customer-users)
-    * [Interactions](commerce/customers/organization-interactions.md#sys-conf-commerce-customer-interactions-organization)
+    * [Customer Requests](commerce/customers/organization-contact-us.md#sys-conf-commerce-customer-contact-request-organization)
   * Design
     * [Theme](commerce/design/organization-theme.md#configuration-commerce-design-theme-theme-settings-organization)
   * Product
@@ -62,7 +58,6 @@ The following categories of settings are available for system configuration at o
     * [Order Creation](commerce/orders/organization-order-creation.md#configuration-commerce-orders-order-creation-organization)
     * [Purchase History](commerce/orders/organization-previously-purchased.md#sys-commerce-orders-previously-purchased-org)
     * [Order Status Management](commerce/orders/organization-order-status-management.md#sys-commerce-orders-status-management-org)
-    * [External Order Import](commerce/orders/organization-external-order-import.md#configuration-commerce-orders-external-order-import-org)
   * Search
     * [Saved Search](commerce/search/organization-saved-search.md#organization-commerce-configuration-saved-search)
     * [Search Terms](commerce/search/org-search-terms.md#organization-commerce-configuration-search-history)
@@ -76,11 +71,6 @@ The following categories of settings are available for system configuration at o
     * [Warehouses](commerce/inventory/organization-warehouses.md#warehouses-organization)
     * [Product Options](commerce/inventory/organization-product-options.md#sys-conf-commerce-inventory-product-options-organization)
     * [Limitations](commerce/inventory/organization-limitations.md#inventory-limitations-org)
-    * [Allowed Statuses](commerce/inventory/organization-allowed-statuses.md#inventory-allowed-statuses-org)
-  * Shipping
-    * [Address Validation](commerce/shipping/address-validation-org.md#organization-commerce-configuration-shipping-address-validation)
-  * Contacts
-    * [Seller Info](commerce/contacts/seller-info-org.md#org-commerce-configuration-contacts-seller-info)
   * Marketplace
     * [General Marketplace Settings](commerce/marketplace/organization-marketplace-general.md#configuration-commerce-marketplace-seller-organization)
 * **CRM**

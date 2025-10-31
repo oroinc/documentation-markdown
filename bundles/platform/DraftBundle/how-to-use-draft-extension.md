@@ -66,7 +66,9 @@ class DateTimeExtension extends AbstractDuplicatorExtension
         return new PropertyTypeMatcher(\DateTime::class);
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function isSupport(DraftableInterface $source): bool
     {
         return $this->getContext()->offsetGet('action') === DraftManager::ACTION_CREATE_DRAFT;
@@ -141,7 +143,9 @@ class PropertiesNameMatcher implements Matcher
         $this->properties = $properties;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function matches($object, $property): bool
     {
         return in_array($property, $this->properties);

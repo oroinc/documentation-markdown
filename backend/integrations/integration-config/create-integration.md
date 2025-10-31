@@ -25,7 +25,9 @@ use Oro\Bundle\IntegrationBundle\Provider\ChannelInterface;
 
 class TaskChannel implements ChannelInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getLabel(): string
     {
         return 'acme.task_channel.label';
@@ -49,13 +51,17 @@ use Oro\Bundle\IntegrationBundle\Provider\IconAwareIntegrationInterface;
 
 class TaskChannel implements ChannelInterface, IconAwareIntegrationInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getLabel(): string
     {
         return 'acme.task_channel.label';
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getIcon(): string
     {
         return 'icons/task.png';
@@ -145,25 +151,33 @@ Your final step is to implement the `Oro\Bundle\IntegrationBundle\Provider\Conne
 
  class TaskConnector implements ConnectorInterface
  {
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getLabel(): string
      {
          return 'acme.connector.task.label';
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getImportEntityFQCN(): string
      {
          return 'Acme\Bundle\DemoBundle\Entity\Task';
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getImportJobName()
      {
          return 'acme_task_import';
      }
 
-     #[\Override]
+     /**
+      * @inheritDoc
+      */
      public function getType(): string
      {
          return 'task';

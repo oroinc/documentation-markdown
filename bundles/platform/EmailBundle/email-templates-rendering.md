@@ -98,7 +98,4 @@ class Sample
 }
 ```
 
-#### NOTE
-Email renderer also compiles the email template attachments (if any) to make it possible to convert them into email attachments. For more details, see [Email Templates Attachments](email-templates-attachments.md#bundle-docs-platform-email-bundle-templates-attachments).
-
 <!-- Frontend -->

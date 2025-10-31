@@ -8,7 +8,7 @@ from a predefined set of options. The OroPlatform provides two different data ty
 * `enum` (named **Select** on UI) - only one option can be selected
 * `multiEnum` (named **Multi-Select** on UI) - several options can be selected
 
-The option sets are quite complex. Both the `enum` and `multiEnum` types are based on [serialized fields](serialized-fields.md#book-entities-extended-entities-serialized-fields). The main difference between them is that the `enum` type is based on a virtual many-to-one association, while the `multiEnum` type is based on a virtual many-to-many association.
+The option sets are quite complex. Both the `enum` and `multiEnum` types are based on regular <a href="http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/association-mapping.html" target="_blank">Doctrine associations</a>. The main difference between them is that the `enum` type is based on <a href="https://www.doctrine-project.org/projects/doctrine-orm/en/latest/reference/association-mapping.html#many-to-one-unidirectional" target="_blank">many-to-one association</a>, while the `multiEnum` type is based on <a href="https://www.doctrine-project.org/projects/doctrine-orm/en/latest/reference/association-mapping.html#many-to-many-unidirectional" target="_blank">many-to-many association</a>.
 
 To add the option set field to an entity, you can use <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityExtendBundle/Migration/Extension/ExtendExtension.php" target="_blank">ExtendExtension</a>.
 
@@ -31,13 +31,17 @@ class AddEnumFieldOroUser implements Migration, ExtendExtensionAwareInterface
 {
     protected ExtendExtension $extendExtension;
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function setExtendExtension(ExtendExtension $extendExtension)
     {
         $this->extendExtension = $extendExtension;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $table = $schema->getTable('oro_user');
@@ -70,14 +74,11 @@ To load a list of options, use data fixtures, for example:
 namespace Acme\Bundle\DemoBundle\Migrations\Data\ORM;
 
 use Doctrine\Common\DataFixtures\AbstractFixture;
-use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
-use Oro\Bundle\EntityExtendBundle\Entity\EnumOption;
-use Oro\Bundle\EntityExtendBundle\Entity\Repository\EnumOptionRepository;
+use Oro\Bundle\EntityExtendBundle\Entity\Repository\EnumValueRepository;
 use Oro\Bundle\EntityExtendBundle\Tools\ExtendHelper;
-use Oro\Bundle\TranslationBundle\Migrations\Data\ORM\LoadLanguageData;
 
-class LoadUserInternalRatingData extends AbstractFixture implements DependentFixtureInterface
+class LoadUserInternalRatingData extends AbstractFixture
 {
     protected array $data = [
         '1' => true,
@@ -87,56 +88,49 @@ class LoadUserInternalRatingData extends AbstractFixture implements DependentFix
         '5' => false
     ];
 
-    #[\Override]
-    public function load(ObjectManager $manager): void
+    /**
+     * @inheritDoc
+     */
+    public function load(ObjectManager $manager)
     {
-        /** @var EnumOptionRepository $enumRepo */
-        $enumRepo = $manager->getRepository(EnumOption::class);
+        $className = ExtendHelper::buildEnumValueClassName('user_internal_rating');
+
+        /** @var EnumValueRepository $enumRepo */
+        $enumRepo = $manager->getRepository($className);
+
         $priority = 1;
         foreach ($this->data as $name => $isDefault) {
-            $enumOption = $enumRepo->createEnumOption(
-                'user_internal_rating',
-                ExtendHelper::buildEnumInternalId($name),
-                $name,
-                $priority++,
-                $isDefault,
-            );
+            $enumOption = $enumRepo->createEnumValue($name, $priority++, $isDefault);
             $manager->persist($enumOption);
         }
 
         $manager->flush();
     }
-
-    #[\Override]
-    public function getDependencies(): array
-    {
-        return [LoadLanguageData::class];
-    }
 }
 ```
 
-<a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityExtendBundle/Tools/ExtendHelper.php" target="_blank">ExtendHelper</a> class which can be helpful when you work with option sets:
+As you can see in this example, we use the **buildEnumValueClassName()** method to convert the option set code
+to the class name of an entity responsible for storing all options of this option set. It is important because
+such entities are generated automatically by the OroPlatform and you should not use the class name directly.
+There are also other functions in the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityExtendBundle/Tools/ExtendHelper.php" target="_blank">ExtendHelper</a> class which can be helpful when you work with option sets:
 
 * **buildEnumCode()** - Builds an option set code based on its name.
 * **generateEnumCode()** - Generates an option set code based on a field for which this option set is created.
-* **isEnumerableType()** - Checks if the passed type is one of the enumerable.
-* **isSingleEnumType()** - Checks if the passed type is ‘enum’, (named **Select** on UI)
-* **isMultiEnumType()** - Checks if the passed type is ‘multiEnum’, (named **Multi-Select** on UI)
-* **buildEnumInternalId()** - Builds an option identifier based on the option name The option internal identifier is a
+* **buildEnumValueId()** - Builds an option identifier based on the option name. The option identifier is a
   32 characters length string.
-* **buildEnumOptionId()** - Builds an option identifier based on the option name and enum code. The option identifier is a
-  100 characters length string.
+* **buildEnumValueClassName()** - Builds the class name of an entity responsible for storing all options of the option set
+  by the option set code.
+* **getMultiEnumSnapshotFieldName()** - Builds the name of a field that is used to store a snapshot of selected values
+  for option sets that allows to select several options. We use this data to avoid GROUP BY clause.
 * **getEnumTranslationKey()** - Builds label names for option set related translations.
-* **buildEnumOptionTranslationKey()** - Builds enum option translation key (symfony translation).
-* **extractEnumCode()** - Extracts the enum code from the enum option identifier.
 
-As mentioned above, each option set has its own table to store available options. But translations for all options of all option sets are stored in one table. You can find more details in <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityExtendBundle/Entity/EnumOptionTranslation.php" target="_blank">EnumOptionTranslation</a> and <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityExtendBundle/Entity/EnumOptionInterface.php" target="_blank">EnumOptionInterface</a>.
-The EnumOptionTranslation class is used to store translations. The EnumOptionInterface is the base interface for all option set entities.
+As mentioned above, each option set has its own table to store available options. But translations for all options of all option sets are stored in one table. You can find more details in <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityExtendBundle/Entity/EnumValueTranslation.php" target="_blank">EnumValueTranslation</a> and <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityExtendBundle/Entity/AbstractEnumValue.php" target="_blank">AbstractEnumValue</a>.
+The EnumValueTranslation class is used to store translations. The AbstractEnumValue is the base class for all option set entities.
 
 If for some reason you create system option sets and you have to render them manually, the following components can be helpful:
 
 * <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityExtendBundle/Twig/EnumExtension.php" target="_blank">TWIG extension</a> to sort and translate options. It can be used the following way:
-  `optionIds|sort_enum`, `optionId|trans_enum`.
+  `optionIds|sort_enum(enumCode)`, `optionId|trans_enum(enumCode)`.
 * Symfony form types that can be used to build forms contain option set fields: <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityExtendBundle/Form/Type/EnumChoiceType.php" target="_blank">EnumChoiceType</a> and <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityExtendBundle/Form/Type/EnumSelectType.php" target="_blank">EnumSelectType</a>.
 * Grid filters: <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/FilterBundle/Filter/EnumFilter.php" target="_blank">EnumFilter</a> and <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/FilterBundle/Filter/MultiEnumFilter.php" target="_blank">MultiEnumFilter</a>. Check out how to use these filters in datagrids.yml. You can learn
   how to configure datagrid formatters for option sets in <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityExtendBundle/Grid/ExtendColumnOptionsGuesser.php" target="_blank">ExtendColumnOptionsGuesser</a>. Keep in mind that the backend datagrid is configured in the `/config/oro/datagrids.yml` file, while the frontend datagrid is configured in the `/views/layouts/<theme>/config/datagrids.yml` file within the configuration directory of your bundle.

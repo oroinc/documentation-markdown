@@ -45,8 +45,7 @@ Won Opportunities by Period report shows:
 - The total close revenue of all the opportunities won within the period.
 - The total number of opportunities won, regardless of the period when they we won (grand total) and their close revenue.
 
-<!-- .. image:: /user/img/sales/opportunities/won_opp_by_period.png
-:alt: Won opportunities by period report -->
+![Won opportunities by period report](user/img/sales/opportunities/won_opp_by_period.png)
 
 <a id="user-guide-opportunities-reports-forecast"></a>
 

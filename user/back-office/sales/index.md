@@ -16,7 +16,6 @@ You can find more in-depth information on all Oro sales tools below:
 * [Request for Quote (RFQ)](rfq/index.md)
 * [Quotes](quotes/index.md)
 * [Orders](orders/index.md)
-* [Invoices](invoices/index.md)
 * [Price Lists](price-lists/index.md)
 * [Payment Terms](payment-terms/index.md)
 * [Sales Territories](sales-territories.md)

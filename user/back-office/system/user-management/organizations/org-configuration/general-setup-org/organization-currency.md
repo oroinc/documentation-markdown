@@ -21,10 +21,10 @@ The following sections become available within the **Currency** tab:
 
 ![image](user/img/system/user_management/org_configuration/general/currency_org.png)
 
-| **Name**               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Allowed currencies** | **Allowed currencies** list allows you to select some of all available currencies to enable them in your<br/>Oro application.<br/><br/>To add the allowed currency, select it from the list and click **Add**.<br/><br/>The new row is added to the allowed currencies options table, where you can configure the exchange rates<br/>for the newly added currency and may set it as a base currency.<br/><br/>**Note:** You cannot add the currency that is not set at the system level.<br/>See [Allowed Currencies Options for Organization]() for more information. |
-| **Display format**     | This setting controls how the currencies will be displayed within the system, as a 3-letter ISO code<br/>(e.g. GBP) or as the currency symbol (e.g. £).<br/><br/>To customize the **Display Format**:<br/><br/>1. Clear the **Use System** checkbox next to the option.<br/>2. Select the new option value (either *Currency Code* or *Currency Symbol*).<br/><br/>**Note:** Not all currencies might have symbols. For such currencies, ISO codes are used instead.<br/><br/>![image](user/img/system/config_system/currency_code.png)                                |
+| **Name**               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Allowed currencies** | **Allowed currencies** list allows you to select some of all available currencies to enable them in your<br/>Oro application.<br/><br/>To add the allowed currency, select it from the list and click **Add**.<br/><br/>The new row is added to the allowed currencies options table, where you can configure the exchange rates<br/>for the newly added currency and may set it as a base currency.<br/><br/>**Note:** You cannot add the currency that is not set at the system level.<br/>See [Allowed Currencies Options for Organization]() for more information.                                                                                                                                                                                                                                                               |
+| **Display format**     | This setting controls how the currencies will be displayed within the system, as a 3-letter ISO code<br/>(e.g. GBP) or as the currency symbol (e.g. £).<br/><br/>To customize the **Display Format**:<br/><br/>1. Clear the **Use System** checkbox next to the option.<br/>2. Select the new option value (either *Currency Code* or *Currency Symbol*).<br/><br/>**Note:** Not all currencies might have symbols. For such currencies, ISO codes are used instead.<br/><br/>The order subtotal when the display format is set to *Currency Code*:<br/><br/>![image](user/img/system/user_management/org_configuration/general/currency_code.png)<br/><br/>The order subtotal when the display format is set to *Currency Symbol*:<br/><br/>![image](user/img/system/user_management/org_configuration/general/currency_symbol.png) |
 
 ## Allowed Currencies Options for Organization
 
@@ -44,26 +44,25 @@ This feature is only available in the Enterprise edition.
 1. To change the base currency, click the **Base** option in the corresponding row. This will lead to reconversion of all multi-currency data to the new base currency, and all values will be re-converted according to the current rates. Keep in mind that multi-currency is only available in the Enterprise edition.
 
    Before:
-   ![Global currency configuration table with US dollar as a base currency](user/img/system/config_system/currency_base2.png)
+   ![image](user/img/system/user_management/org_configuration/general/currency_base1.png)
 
    After:
-   ![Re-converted global currency configuration table with Euro as a base currency](user/img/system/config_system/currency_base4.png)
+   ![image](user/img/system/user_management/org_configuration/general/currency_base3.png)
 
    #### IMPORTANT
    Changing base currency requires manual update of the money values (budgets, totals, revenues, etc.). You will be prompted to confirm the change.
 
-In the example below, the base currency is British pounds but the budget of the opportunity deal is in US dollars.
+   In the example below, the base currency is British pounds but the budget of the opportunity deal is in US dollars.
+   ![image](user/img/system/user_management/org_configuration/general/example_base_and_us_budget.png)
 
-![The list of all open opportunities with two budget columns in US and GBP](user/img/system/config_system/example_base_and_us_budget1.png)
+   When you close a deal (determined by opportunity status), the exchange rate for it becomes locked and will no longer take rate changes into account.
 
-When you close a deal (determined by opportunity status), the exchange rate for it becomes locked and will no longer take rate changes into account.
+   Dashboard widgets with monetary values (e.g. Forecast) and monetary metrics work in the base currency irrespective of the currency that the deals were made in.
 
-Dashboard widgets with monetary values (e.g. Forecast) and monetary metrics work in the base currency irrespective of the currency that the deals were made in.
-
-![Sample of dashboard widgets that provide metrics in US](user/img/system/config_system/widgets_base_currency.png)
+> ![image](user/img/system/user_management/org_configuration/general/widgets_base_currency.png)
 1. To modify the currency exchange rate to and from the base currency, edit the **Rate To** and **Rate From** values in the corresponding row.
 
-   For example, if the rate of US dollar to British pound is 1:0.74, enter 0.74 in the empty Rate From field for US Dollar. The system will automatically calculate the Rate To value for US Dollar which will constitute 1.351351.
+   For example, if the rate of US dollar to British pound is 1:0.76, enter 0.76 in the empty Rate From field for US Dollar. The system will automatically calculate the Rate To value for US Dollar which will constitute 1.315789.
    ![image](user/img/system/user_management/org_configuration/general/rate_recalculation.png)
 
    #### NOTE

@@ -249,10 +249,10 @@ This service implements <a href="https://github.com/oroinc/orocommerce/blob/mast
 
 ```php
 /**
- * @param EnumOptionInterface|null $status
+ * @param AbstractEnumValue|null $status
  * @return bool
  */
-protected function isAllowedStatus(EnumOptionInterface $status = null)
+protected function isAllowedStatus(AbstractEnumValue $status = null)
 {
     // statusProvider implements OrderStatusesProviderInterface
     $availableStatuses = $this->statusesProvider->getAvailableStatuses();

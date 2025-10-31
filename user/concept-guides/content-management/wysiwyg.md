@@ -61,7 +61,6 @@ WYSIWYG enables you to do the following:
 >   * [Adapt Text](#adapt-text)
 >   * [Adapt Tiles and Columns](#adapt-tiles-and-columns)
 >   * [Adapt Images](#adapt-images)
->   * [Adapt Image Resolution](#adapt-image-resolution)
 >   * [Hide Content](#hide-content)
 >   * [Hide Columns and Tiles](#hide-columns-and-tiles)
 >   * [Display Hidden Content](#display-hidden-content)
@@ -126,7 +125,7 @@ If H2, H3, or any other formatting is applied to the text, then you have several
 
 ### Insert Multimedia
 
-To embed YouTube or Vimeo URLs to your content, you need to drag the **Video** block to the canvas. Set the video provider (HTML5 Source, vimeo) in the **Settings** section under Style Manager and add the direct link to the **Source** field. The permissions to add videos depend on the restrictions set in the configuration file.
+To embed YouTube or Vimeo URLs to your content, you need to drag the video block to the canvas. Set the video provider (HTML5 Source, vimeo) in the **Settings** section under Style Manager and add the direct link to the **Source** field. The permissions to add videos depend on the restrictions set in the configuration file.
 
 ![Setting the video provider (HTML5 Source, vimeo) in the Settings section](user/img/concept-guides/content-management/embed_video.png)
 
@@ -201,9 +200,9 @@ To insert an image to your content, you need to drag the image block to the canv
 
 ### Insert Clickable Images
 
-To add a clickable image to your content, you must first insert the Link Block (1,2). Then, place the image block inside the link block (3,4).
+To add a clickable image to your content, you must first insert the link block (1,2). Then, place the image block inside the link block (3,4).
 
-![The steps you need to expose to add the link block to your content](user/img/concept-guides/content-management/insert_clickable_image_1.png)
+![The steps you need to expose to add the link block to your content](user/img/concept-guides/content-management/insert_clickable_image_1.png)![The steps you need to expose to add the image block to the link block](user/img/concept-guides/content-management/insert_clickable_image_2.png)
 
 Click the link block again to display the **Style Manager** menu settings. In the **Settings** section, input the link for the image to direct people to the necessary website, once they click the image in the storefront.
 
@@ -282,7 +281,7 @@ To insert/delete the rows and columns inside the table, click the required cell 
 
 To add a content block to your web page, you need to drag the content block to your canvas and select the required one from the list of available content block that you have previously created and saved.
 
-![A sample of the Terms and Conditions landing page](user/img/concept-guides/content-management/add_content_block_to_wysiwyg.png)
+![A sample of the Terms and Conditions landing page](user/img/concept-guides/content-management/add_content_block.png)
 
 Once the landing page is added as a content variant to the content node of a web catalog, the content block should then become visible in the storefront.
 
@@ -414,6 +413,8 @@ There are several rules on how to adapt the content.
 
 You can change the text alignment, font size, letter spacing, color of the text, and its background under the **Typography** and **Decorations** style manager menu of a particular screen size.
 
+Be aware that you **cannot** change the original text, font, or font style (bold, italics). You can hide the irrelevant text and show the appropriate one instead.
+
 ![Illustrating different text formats and styles for the desktop and tablet breakpoints](user/img/concept-guides/content-management/adapt-text-to-screen-size.png)
 
 #### Adapt Tiles and Columns
@@ -442,19 +443,6 @@ To set a different image per breakpoint:
 
 ![Small video tutorial on how to change the image per breakpoint](user/img/concept-guides/content-management/adapt-images-per-screen-size.gif)
 
-#### Adapt Image Resolution
-
-To adapt an image resolution per breakpoint:
-
-1. Choose the breakpoint where you want to upload a high-resolution image or adapt an existing image resolution.
-2. Click the image to display its menu settings. Click <i class="fas fa-cog" aria-hidden="true"></i> to open the **Picture Sources Manager** menu to view all images assigned to different breakpoints.
-3. Enable the **HI-RES** option for the selected breakpoint.
-4. Once enabled, options for **2x, 3x, or 4x resolution** images will appear.
-5. Select the appropriate resolution and choose an image from the available [DA records](../../back-office/marketing/digital-assets/index.md#digital-assets) to ensure proper display across different screen sizes.
-6. After adding the high-resolution image, click **Save** to apply the updates.
-
-![High-resolution option enabled with the additional options to upload 2x and 3x resolution images](user/img/concept-guides/content-management/high-resolution.png)
-
 #### Hide Content
 
 To hide a particular fragment of content:
@@ -463,9 +451,8 @@ To hide a particular fragment of content:
 2. Open the **Layer Manager** menu with a list of all available blocks for your canvas.
 3. Click the block to hide (text, content, quote, image, div, table, etc.), except for the tiles and columns.
 
-Alternatively, click the required block on your canvas to open the Style Manager menu. Make sure you select the highest parent block, otherwise the block may not be hidden fully, and may break the content view.
-
-1. Open **General > Display** and select the **none** option to hide the block.
+   Alternatively, click the required block on your canvas to open the Style Manager menu. Make sure you select the highest parent block, otherwise the block may not be hidden fully, and may break the content view.
+4. Open **General > Display** and select the **none** option to hide the block.
 
 ![Illustrating a three-column table and a two-column table for the desktop and tablet breakpoints respectively](user/img/concept-guides/content-management/adapt-table-per-screen-size.png)
 
@@ -496,9 +483,14 @@ To uncover the blocks of content, images, or columns that were hidden for a part
 5. Change **none** to **block** to reveal the content for the breakpoint.
 6. The changes are applied to all screens with a smaller resolution, while higher resolution screens remain unaffected.
 
+![Steps that you need to perform to uncover the hidden block of content](user/img/concept-guides/content-management/display-hidden-content.png)
+
 <a id="getting-started-wysiwyg-editor-field-ai"></a>
 
 ## Generate Content Using AI
+
+#### NOTE
+This feature is available as of OroCommerce version 6.0.2.
 
 When OroCommerce is integrated with AI clients such as OpenAI or Vertex AI, you can use an AI-Powered Content Assistant widget in the WYSIWYG editor to generate content for product descriptions, landing pages, content blocks, master catalog categories, and emails.
 

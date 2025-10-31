@@ -117,13 +117,11 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
 class AcmeDemoBundleInstaller implements
     Installation
 {
-    #[\Override]
     public function getMigrationVersion()
     {
         return 'v1_0';
     }
 
-    #[\Override]
     public function up(Schema $schema, QueryBag $queries)
     {
         /** Tables generation **/
@@ -139,7 +137,7 @@ class AcmeDemoBundleInstaller implements
     {
         $table = $schema->createTable('acme_demo_priority');
         $table->addColumn('id', 'integer', ['autoincrement' => true]);
-        $table->addColumn('label', 'string', ['length' => 255]);
+        $table->addColumn('organization_id', 'integer', ['notnull' => false]);
         $table->setPrimaryKey(['id']);
         $table->addUniqueIndex(['label'], 'uidx_label_doc');
     }
@@ -165,7 +163,6 @@ class AcmeDemoBundleInstaller implements
             ['onUpdate' => null, 'onDelete' => 'SET NULL']
         );
     }
-}
 ```
 
 ### Create Versioned Schema Migrations
@@ -198,7 +195,9 @@ Below is an example of a migration file:
 
  class AddTmpTestTable implements Migration
  {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
      public function up(Schema $schema, QueryBag $queries)
      {
          $table = $schema->createTable('tmp_test_table');

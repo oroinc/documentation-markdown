@@ -42,7 +42,7 @@ As an illustration let us go through the sample flow to see the Single Page Chec
    * Order Summary (including *Agreements*)
 
    #### IMPORTANT
-   Keep in mind that for the Agreements section to be displayed in the checkout, you need to [add the necessary consents to the list of enabled consents](../../configuration/commerce/customer/global-interactions.md#admin-guide-commerce-configuration-customers-consents-enable-globally) in the system configuration.
+   Keep in mind that for the Agreements section to be displayed in the checkout, you need to [add the necessary consents to the list of enabled consents](../../configuration/commerce/customer/global-consents.md#admin-guide-commerce-configuration-customers-consents-enable-globally) in the system configuration.
 
    ![Illustration of single page checkout in the storefront](user/img/system/workflows/single_page_checkout/SampleFlow2.png)
 3. In the **Billing Information** section, provide your address and select a payment method.

@@ -135,13 +135,12 @@ class CommentEntityFieldExtension extends AbstractAssociationEntityFieldExtensio
 {
     protected function isApplicable(EntityFieldProcessTransport $transport): bool
     {
-        return $transport->getClass() === Comment::class
-            && AssociationNameGenerator::extractAssociationKind($transport->getName()) === $this->getRelationKind();
+        return $transport->getClass() === Comment::class;
     }
 
     protected function getRelationKind(): ?string
     {
-        return 'comment';
+        return null;
     }
 
     protected function getRelationType(): string
@@ -231,13 +230,17 @@ use Oro\Bundle\EntityExtendBundle\Tools\DumperExtensions\AssociationEntityConfig
 
 class CommentEntityConfigDumperExtension extends AssociationEntityConfigDumperExtension
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     protected function getAssociationEntityClass()
     {
         return 'Oro\Bundle\CommentBundle\Entity\Comment';
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     protected function getAssociationScope()
     {
         return 'comment';

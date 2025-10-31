@@ -2,7 +2,7 @@
 
 # Azure Cloud Platform
 
-Azure Marketplace enables you to deploy pre-configured demo instances of the latest LTS releases of OroCommerce Community Edition with demo data.
+Azure Marketplace enables you to deploy pre-configured demo instances of the latest LTS releases of OroCRM and OroCommerce Community Editions with or without demo data.
 
 To proceed with the installation, make sure you have registered with Azure marketplace and have a valid <a href="https://portal.azure.com" target="_blank">Azure portal account</a>.
 
@@ -10,17 +10,18 @@ To proceed with the installation, make sure you have registered with Azure marke
 
 To deploy the solution, follow the steps below:
 
-1. Navigate to <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/" target="_blank">Azure Marketplace</a> and search for OroCommerce VM in the search bar.
+1. Navigate to <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/" target="_blank">Azure Marketplace</a> and search for the required Oro application (OroCRM VM or OroCommerce VM) in the search bar.
    ![OroCRM VM or OroCommerce VM in Azure Marketplace search dropdown](img/backend/setup/azure/search.png)
 2. Once you select the application type to deploy, click **GET IT NOW** under the application logo on your left.
-3. In the pop-up dialog, select the software plan with demo data. This provides all the necessary information for you to test the application, such as a preconfigured list of customers, products, submitted orders, quotes, the structured master, and web catalogs.
+3. In the pop-up dialog, select the software plan – an instance with or without demo data. The application with demo data provides all the necessary information for you to test the application, such as a preconfigured list of customers, products, submitted orders, quotes, the structured master, and web catalogs.
+   ![Select the software plan pop-up dialog](img/backend/setup/azure/software-plan.png)
 4. Click **Continue**.
 
    You are redirected to Azure Portal to complete the installation.
    At this point, you are asked to log into Azure Portal if you have not already done so.
 5. Once again, select the type of application to deploy.
 6. Click **Create**.
-   ![Select the software plan pop-up dialog](img/backend/setup/azure/software-plan.png)
+   ![Create a virtual machine of the selected type](img/backend/setup/azure/create-vm.png)
 7. Complete the required fields in the **Basics** tab:
    > ![Creating a VM - Basics tab](img/backend/setup/azure/basics-1.png)
    * *Subscription* - Select your subscription type.
@@ -55,11 +56,13 @@ To deploy the solution, follow the steps below:
    ![OroCommerce startup page](img/backend/setup/azure/admin-startup.png)
 
    #### IMPORTANT
-   **OroCommerce VM Demo Data**: Use *AmandaRCole@example.org* both as your login and password to access the storefront (http://<DNSprefix>.cloudapp.azure.com). To access the back-office of the application (http://<DNSprefix>.cloudapp.azure.com/admin/admin), use *admin* as login and password. To access the application via SSH, specify your username and password or a public key, and restart services (systemctl restart oro\*).
+   **OroCRM VM Demo Data**: If you have deployed OroCRM VM with demo data, use **admin** as login and the password to access the back-office of the application. To access the application via SSH, specify your username and password/public key, and restart services (systemctl restart oro\*).
+
+   **OroCommerce VM Demo Data**: If you have deployed OroCommerce VM with demo data, use *AmandaRCole@example.org* both as your login and password to access the storefront (http://<DNSprefix>.cloudapp.azure.com). To access the back-office of the application (http://<DNSprefix>.cloudapp.azure.com/admin/admin), use *admin* as login and password. To access the application via SSH, specify your username and password or a public key, and restart services (systemctl restart oro\*).
 
 ## Configure Application URL
 
-For the demo application to work correctly, you need to configure the application URL, Secure URL, and URL.
+For the demo applications to work correctly, you need to configure the application URL (for OroCRM and OroCommerce), and Secure URL and URL (for OroCommerce).
 
 1. Navigate to **System Configuration > General Setup > Application Settings** in the application back-office, and provide the *Application URL* (e.g., http://<DNSprefix>.cloudapp.azure.com, or a different domain).
    ![Change application URL in the configuration settings](img/backend/setup/azure/change-app-url.png)

@@ -64,11 +64,7 @@ To set up integration with Authorize.Net, complete the following:
 2. In the **Other** section, provide the following information:
    * **Status**  — Set the status to **Active** to enable the integration.
    * **Default Owner** — A user who is responsible for this integration and manages it.
-
-#### NOTE
-In the **Synchronization Settings** section, select the **Log Warnings** checkbox if you want all synchronization errors to be written into the application log.
-
-1. Click **Save and Close**.
+3. Click **Save and Close**.
 
 <!-- finish -->
 <!-- fa-bars = fa-navicon -->

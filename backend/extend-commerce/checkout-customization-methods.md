@@ -8,7 +8,7 @@ This document provides details on the most common checkout workflow customizatio
 ```yaml
 imports:
     -
-        resource: '@OroCheckoutBundle/Resources/config/oro/workflows/b2b_flow_checkout.yml'
+        resource: '@OroCheckoutBundle/Resources/config/oro/workflows/b2b_flow_checkout_with_services.yml'
         workflow: b2b_flow_checkout
         as: acme_demo_checkout
         replace: []
@@ -229,7 +229,7 @@ This scenario covers the following aspects:
    ```yaml
    imports:
        -
-           resource: '@OroCheckoutBundle/Resources/config/oro/workflows/b2b_flow_checkout.yml'
+           resource: '@OroCheckoutBundle/Resources/config/oro/workflows/b2b_flow_checkout_with_services.yml'
            workflow: b2b_flow_checkout
            as: acme_demo_checkout
            replace: []

@@ -67,7 +67,9 @@ class EmailEntityAliasProvider implements EntityAliasProviderInterface
         $this->emailAddressProxyClass = $emailAddressManager->getEmailAddressProxyClass();
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getEntityAlias($entityClass)
     {
         if ($entityClass === $this->emailAddressProxyClass) {

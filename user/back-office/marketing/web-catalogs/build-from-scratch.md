@@ -12,6 +12,7 @@ A website that distributes beauty and skincare products to shops worldwide is to
 2. Beauty and Skincare
 3. Fragrance
 4. Baby and Child
+5. Toiletries
 
 These sections will serve as the first level of the storefront’s main menu. In the back-office, they will be called the root nodes.
 
@@ -19,9 +20,9 @@ To set up root content nodes in the back-office, we:
 
 1. Navigate to **Marketing > Web Catalogs**.
 2. Click **Create Web Catalog**
-3. Name the catalog *Skincare Web Catalog* and save it.
+3. Name the catalog *Web Catalog 2017* and save it.
 4. Click **Edit Content Tree**.
-5. Name the first node *Skincare Web Catalog*. Root nodes will be linked to it.
+5. Name the first node *Web Catalog 2017*. Root nodes will be linked to it.
 6. Fill in the SEO section.
 7. Set the necessary restrictions.
 8. Add a landing page in the content variants section that would be linked to the menu.
@@ -35,9 +36,9 @@ To set up root content nodes in the back-office, we:
 This way, we create all the required first-level menus.
 
 #### NOTE
-Make sure you create first-level nodes from Skincare Web Catalog in the nodes section on the left of the page.
+Make sure you create first-level nodes from Web Catalog 2017 in the nodes section on the left of the page.
 
-![The details of the Skincare Web Catalog](user/img/marketing/web_catalogs/Create1RootNode.png)
+![The details of the Web Catalog 2017](user/img/marketing/web_catalogs/use_case/Create1RootNode.png)
 
 ## Create Sub-level Menu
 
@@ -45,10 +46,11 @@ Once all first-level nodes have been created, we can create the sub-menu nodes (
 
 Each of the main menu sections will have the following second-level menus:
 
-1. Health and Pharmacy: Vitamins and Supplements, Lifestyle and Wellbeing, Baby and Child Health.
+1. Health and Pharmacy: Vitamins and Supplements, Lifestyle and Wellbeing, Women’s Health, Men’s Health, Baby and Child Health.
 2. Beauty and Skincare: Makeup, Nails, Facial Skincare, Body Skincare, Hair, Fashion Accessories.
 3. Fragrance: Perfume, Aftershave.
 4. Baby and Child: Pregnancy and Maternity, Feeding, Bathing, and Changing.
+5. Toiletries: Hair, Dental, Washing, and Bathing.
 
 To set up content nodes in the back-office:
 
@@ -59,7 +61,7 @@ To set up content nodes in the back-office:
 5. Set the necessary restrictions (or inherit parent restrictions).
 6. Add a product collection to *Vitamins and Supplements*.
 
-![View the Skincare Web Catalog content tree with the first and second-level menus](user/img/marketing/web_catalogs/Create1SubMenuNode.png)
+![View the Web Catalog 2017 content tree with the first and second-level menus](user/img/marketing/web_catalogs/use_case/Create1SubMenuNode.png)
 
 This way, we create all the required second-level menus.
 
@@ -71,6 +73,9 @@ Once the catalog is enabled ([globally](../../system/configuration/system/websit
 You can drag the existing content nodes to a different position within the content tree on the left of the page, as illustrated below:
 
 ![Dragging the existing content nodes to a different position within the content tree](user/img/marketing/web_catalogs/DragDropNode.png)
+
+<!-- .. image:: /user/img/marketing/web_catalogs/use_case/NodesFrontStore.gif
+:alt: Illustrating all content nodes created under the Web Catalog 2017 in the storefront -->
 
 **Related Articles**
 

@@ -2,9 +2,6 @@
 
 # Configure Customer User Settings per Organization
 
-#### NOTE
-Customer User settings can be configured [globally](../../../../../configuration/commerce/customer/global-customer-users.md#sys-config-configuration-commerce-customers-customer-users), per organization, and [per website](../../../../../websites/web-configuration/commerce/customers/website-customer-users.md#system-website-configuration-commerce-customers-customer-users).
-
 To change the default customer user configuration settings for an organization:
 
 1. Navigate to **System > User Management > Organization** in the main menu.
@@ -28,6 +25,9 @@ To change the default customer user configuration settings for an organization:
    * **Registration Instructions Text** — If *Show Registration Instructions* is enabled, the text provided in the field is displayed in the storefront login page.
 6. In the **Customer Visitor** section, configure the options for the anonymous users:
    * **Customer Visitor Cookie Lifetime (Days)** — Once the provided period expires, active customer visitor (anonymous user) sessions will be reset. Keep in mind that the uniqueness of email addresses and personal data is checked only for the registered users. It means that no two users can have identical personal information unless they are customer visitors (guest users). Multiple guest customers are allowed to have exactly the same data, including email addresses.
+   * **Create Customer Visitors Immediately** (available starting from OroCommerce version 6.0.7.) — This feature controls whether customer visitor accounts are automatically created for all guest users who access the storefront.
+     > * When enabled, visitor accounts are created automatically for every guest user, regardless of whether they interact with the website.
+     > * When disabled, visitor accounts are only created for users who perform meaningful actions (e.g., adding items to the shopping list or proceeding to checkout). This reduces database load by avoiding unnecessary data storage for bots, idle visitors, or users who quickly leave without interacting.
 
 <a id="organization-user-impersonation"></a>
 1. In the **Login as Customer User** section (available in the Enterprise edition), you can enable user impersonation for a specific organization. User impersonation allows back-office users with the **Login as Customer User** [role capability](../../../../roles/admin-capabilities.md#admin-capabilities) to access and operate the OroCommerce storefront as if they were logged in as a specific customer user.
@@ -36,18 +36,14 @@ To change the default customer user configuration settings for an organization:
    * **Max Login Attempts** — The number of attempts within the login failure lockout interval that a user has to authenticate before they are locked out.
    * **Login Failure Lockout Interval** — The time in minutes in which failed login attempts are counted. If one failed login attempt is followed by the second failed attempt within this lockout interval, the failed login count starts. The user will be locked out if they reach the maximum number of failed login attempts. Set zero (0) to count failed login attempts globally.
    * **Account Lockout Time** — The time in minutes that indicates how long the user has before they are locked out of the system if they reach the maximum number of failed login attempts. Set zero (0) to disable automatic unlock.
-3. In the **Login Redirect** section, configure the following option:
-   * **Do Not Leave Checkout** — Enable this option to redirect a user back to the checkout page after a successful login. This overrides the *Redirect After Login* setting on the [website configuration level](../../../../../websites/web-configuration/commerce/customers/website-customer-users.md#system-website-configuration-commerce-customers-customer-users) that may specify a different target page.
-4. In the **Cookies Banner** section, enable a cookie consent banner. A cookie consent banner is the cookie warning that pops up on websites when a user visits the site for the first time.
+3. In the **Cookies Banner** section, enable a cookie consent banner. A cookie consent banner is the cookie warning that pops up on websites when a user visits the site for the first time.
+   ![Cookie banner section](user/img/system/user_management/org_configuration/customers/cookie-banner-organization.png)
 
-> ![Cookie banner section](user/img/system/user_management/org_configuration/customers/cookie-banner-organization.png)
-
-> To configure cookie consent banner on the organization level, take the following steps:
-
-> * **Show Banner** — Select the checkbox to display the cookie consent banner to the website’s visitor.
-> * **Cookies Banner Text** — Provide the message of the cookie banner. To edit the text for a specific language, click the language button and edit the text for the needed language.
-> * **Landing Page** - Select the landing page with cookie policy of the application, if any. This landing page will be highlighted as a link on the banner. To translate the landing page title to the specific language, click the language button and edit the title as required.
-1. Click **Save Settings**.
+   To configure cookie consent banner on the organization level, take the following steps:
+   * **Show Banner** — Select the checkbox to display the cookie consent banner to the website’s visitor.
+   * **Cookies Banner Text** — Provide the message of the cookie banner. To edit the text for a specific language, click the language button and edit the text for the needed language.
+   * **Landing Page** - Select the landing page with cookie policy of the application, if any. This landing page will be highlighted as a link on the banner. To translate the landing page title to the specific language, click the language button and edit the title as required.
+4. Click **Save Settings**.
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->

@@ -35,11 +35,7 @@ To expose payment terms as a payment method for OroCommerce orders and quotes, e
    * **Short label** — The payment method name/label that is shown in the order details in the OroCommerce back-office and storefront after the order is submitted. To translate the label into other languages, click on the <i class="fas fa-language" aria-hidden="true"></i> icon next to the field.
    * **Status**  — Set the status to **Active** to enable the integration.
    * **Default Owner** — A user who is responsible for this integration and manages it.
-
-#### NOTE
-In the **Synchronization Settings** section, select the **Log Warnings** checkbox if you want all synchronization errors to be written into the application log.
-
-1. Click **Save and Close**.
+4. Click **Save and Close**.
 
 Next, set up a [payment rule](../../../payment-rules/index.md#sys-payment-rules) that enables this payment method for all or some customer orders, create individual payment terms based on the sales agreement with your customers to cover all the agreed payment terms/options, and bind your customers to their respective payment term. You may use only one payment term per customer.
 

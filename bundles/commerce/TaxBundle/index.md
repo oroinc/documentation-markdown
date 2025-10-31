@@ -25,37 +25,49 @@ class DemoTaxProvider implements TaxProviderInterface
 {
     const LABEL = 'acme.demo.providers.demo.label';
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getLabel()
     {
         return self::LABEL;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function isApplicable()
     {
         return true;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function loadTax($object)
     {
         // implement your loadTax() method.
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getTax($object)
     {
         // implement your getTax() method.
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function saveTax($object)
     {
         // implement your saveTax() method.
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function removeTax($object)
     {
         // implement your removeTax() method.

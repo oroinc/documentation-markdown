@@ -405,7 +405,9 @@ use Oro\Bundle\TestFrameworkBundle\Behat\Element\Element;
 
 class PaymentMethodConfigType extends Element
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function setValue($value)
     {
         $values = is_array($value) ? $value : [$value];
@@ -475,7 +477,9 @@ use Oro\Bundle\TestFrameworkBundle\Behat\Element\Page;
 
 class UserProfileView extends Page
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function open(array $parameters = [])
     {
         $userMenu = $this->elementFactory->createElement('UserMenu');

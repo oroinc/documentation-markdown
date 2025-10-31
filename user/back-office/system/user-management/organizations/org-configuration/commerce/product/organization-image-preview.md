@@ -17,16 +17,17 @@ In the Product Images section of Commerce configuration settings, you can contro
 4. Clear the **Use System** checkbox to change the system-wide setting.
 5. In the **General** section, configure the following options:
 
-   #### NOTE
-   The option appears only when the [Enable Original File Names](../../general-setup-org/organization-upload-settings.md#configuration-guide-system-configuration-general-setup-sysconfig-upload-settings-organization) setting for Upload Settings is disabled.
-
    **Enable Original File Names** — When enabled, the original image file name will be appended to the system-generated hash value. All non-alphanumeric characters (e.g., “:”, “)”, “,”, “~”) will be replaced with “-” (dash).
 
    For example, the name of the file is **coffee_maker/bosch_#RND123.jpg**, the system-generated hash value is “media/cache/attachment/product_gallery_main/5bae287538.jpg”. If the option is enabled, the file name will be displayed in the storefront as follows “media/cache/attachment/product_gallery_main/5bae287538-coffee-maker-bosch-RND123.jpg”
 6. In the **Image Gallery Options** section, enable or disable product preview on product listing pages in the storefront.
+   ![Global image gallery options configuration settings](user/img/system/config_commerce/product/ImagePreviewGlobal.png)
 
    **Enable Image Preview on Product Listing** - Enable the option to add the <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> icon to the product image on the product listing page in the storefront which will open a pop up image gallery once clicked.
    > ![Illustration of the Enable Image Preview on Product Listing option in the storefront being enabled and disabled](user/img/system/config_commerce/product/ImagePreviewStorefront.png)
+
+   > #### NOTE
+   > When **Use System** checkbox is enabled, system settings are applied.
 7. Click **Save**.
 
 <!-- finish -->

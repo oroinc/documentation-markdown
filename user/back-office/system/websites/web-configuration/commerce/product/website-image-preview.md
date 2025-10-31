@@ -29,6 +29,7 @@ You can update the product watermark settings, enable image preview and configur
    * **Size** – The size of the watermark in percentage compared to the whole image.
    * **Position** – The watermark position on the image (e.g, top left, top, top right, left, right, center, bottom left, bottom, and bottom right).
 4. In the **Image Gallery Options** section, enable or disable product preview on product listing pages in the storefront.
+   ![Global image gallery options configuration settings](user/img/system/config_commerce/product/ImagePreviewGlobal.png)
 
    **Enable Image Preview on Product Listing** - Enable the option to add the <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> icon to the product image on the product listing page in the storefront which will open a pop up image gallery once clicked.
    > ![Illustration of the Enable Image Preview on Product Listing option in the storefront being enabled and disabled](user/img/system/config_commerce/product/ImagePreviewStorefront.png)

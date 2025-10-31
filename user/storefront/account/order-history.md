@@ -35,23 +35,11 @@ Information displayed in the tables depends on the columns selected in the ![Col
 * Adjust (to define which columns to show in the table).
 * Filter the displayed orders (see more in [Filters](../getting-started/common-controls.md#frontstore-guide-navigation-filters)).
 
-## Order View Page
-
-If the order was created on behalf of the buyer, this will be indicated on the order view page with the following note: *This order was created on your behalf by a member of our staff.*
+If the order was created on behalf of the buyer, this will be reflected on the order view page with the following note: *This order was created on your behalf by a member of our staff.*
 
 ![An order view page with a note saying "This order was created on your behalf by a member of our staff".](user/img/storefront/orders/order-impersonated.png)
 
-Any documents uploaded for the customer user will also be visible directly on the order page:
-
-![Illustration of the documents uploaded via back-office on the customer side in the storefront](user/img/sales/orders/order-customer-documents.png)
-
-Customers can start a [conversation](../conversations/index.md#storefront-guide-conversations) by clicking Ask a question on the order view page.
-
-There is also an option download a PDF version of any placed order directly from the order view page, if the [Order PDF download feature](../../back-office/system/configuration/commerce/orders/global-order-creation.md#configuration-commerce-orders-order-creation-global) is enabled in the back-office. Each download generates a fresh PDF with an updated timestamp.
-
-![Illustration of the Order Download Button in the storefront](user/img/system/config_commerce/order/order-pdf.png)
-
-To print an order, click on the **Print** button on the top right and follow the instructions on your device.
+You can also start a [conversation](../conversations/index.md#storefront-guide-conversations) by clicking **Ask a question** on the order view page.
 
 #### NOTE
 More details on how to review ordered items, billing and shipping information, and re-order products from the previous orders are described in the [Orders](../orders/index.md#frontstore-guide-orders) section of the Storefront guide.

@@ -39,13 +39,17 @@ use Oro\Bundle\OrganizationBundle\Entity\Organization;
  */
 class LoadFavoritesData extends AbstractFixture implements VersionedFixtureInterface
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getVersion(): string
     {
         return '1.0';
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function load(ObjectManager $manager)
     {
         $organization = $manager->getRepository(Organization::class)->getFirst();
@@ -88,18 +92,24 @@ class LoadVersionedFavoriteData extends AbstractFixture implements
     VersionedFixtureInterface,
     LoadedFixtureVersionAwareInterface
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getVersion(): string
     {
         return '2.0';
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function setLoadedVersion($version = null): void
     {
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function load(ObjectManager $manager): void
     {
         $newFavorite = new Favorite();
@@ -138,7 +148,9 @@ use Oro\Bundle\OrganizationBundle\Entity\Organization;
  */
 class LoadRenamedFavoritesData extends AbstractFixture implements RenamedFixtureInterface
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function load(ObjectManager $manager)
     {
         $organization = $manager->getRepository(Organization::class)->getFirst();
@@ -153,7 +165,9 @@ class LoadRenamedFavoritesData extends AbstractFixture implements RenamedFixture
         $manager->flush();
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getPreviousClassNames(): array
     {
         return [
