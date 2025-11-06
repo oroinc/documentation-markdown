@@ -265,8 +265,15 @@ ORO_PNGQUANT_BINARY=
 
 ### Web Backend Prefix
 
-The web_backend_prefix is now hardcoded in the config/config.yml and
-committed to git.
+By default, Oro applications use the /admin path as the backend prefix.
+
+To override this default value, you can define a custom prefix in the config/config.yml file.
+
+For example:
+
+```yaml
+web_backend_prefix: '/my_admin_prefix'
+```
 
 ### Deployment Type
 
