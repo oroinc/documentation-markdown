@@ -8,7 +8,7 @@
 This section is part of the [Localization and Translation](../../../concept-guides/administration/localization/index.md#concept-guide-localization-translation) concept guide that provides a general understanding of the localization and translation processes in OroCommerce.
 
 #### NOTE
-The Localization configuration is accessible from the Global organization only. Find more on working with organizations in the [Company Structure and Organization Selector](../../getting-started/navigation/org-selector.md#user-guide-getting-started-company-structure).
+The Localization configuration is accessible from the **Global organization only**. Find more on working with organizations in the [Company Structure and Organization Selector](../../getting-started/navigation/org-selector.md#user-guide-getting-started-company-structure).
 
 [Localization](../../../glossary.md#term-Localization) is the process of translating and adapting a product for a specific country or region. Oro application allows a user to customize the format of date and time, numeric, percent, and monetary values as well as the format of names and addresses.
 

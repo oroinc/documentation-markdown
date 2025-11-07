@@ -5,6 +5,9 @@
 #### HINT
 This section is part of the [Localization and Translation](../../../../concept-guides/administration/localization/index.md#concept-guide-localization-translation) concept guide that provides a general understanding of the localization and translation processes in OroCommerce.
 
+#### NOTE
+The Languages settings are accessible from the **Global organization only**. Find more on working with organizations in the [Company Structure and Organization Selector](../../../getting-started/navigation/org-selector.md#user-guide-getting-started-company-structure).
+
 <!-- begin -->
 
 In the Oro applications, language is a core component of system localization and content translation. It performs the following functions:
