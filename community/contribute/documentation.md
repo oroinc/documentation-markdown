@@ -23,11 +23,15 @@ For large volume of  updates, fixes, and enhancements please use the following p
 1. <a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo" target="_blank">Fork</a> a documentation repository.
 2. <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository" target="_blank">Clone</a> the forked repository.
 3. Update your local copy of documentation (see [Update Documentation]() for more information on the process and formatting).
-4. Build and test the documentation before submitting a pull request to be sure you haven’t accidentally introduced any layout or formatting issues.
-   - To build documentation, set up a local build environment by installing <a href="https://www.docker.com/" target="_blank">Docker</a> and <a href="https://docs.docker.com/compose/" target="_blank">Docker Compose</a>.
-   - To test your changes before you commit them, run `docker compose up` in the documentation folder.
+4. Build and test the documentation before submitting a pull request to be sure you have not accidentally introduced any layout or formatting issues.
+   - Set up a local build environment by installing <a href="https://www.docker.com/" target="_blank">Docker</a>.
+   - Run the following command to generate the documentation in `./_build/html` and create a Docker image:
+     ```bash
+     docker bake --load
+     ```
 
-   Check the generated documentation in the `_build/html` directory.
+     #### HINT
+     By default, this command builds only the current branch. To build documentation as it appears on the website, including version selection in the index, set the appropriate variables MAINTENANCE_BRANCHES=5.1|6.0|6.1|master. To generate the documentation in **Markdown** format instead of HTML, set the `BUILDER="markdown"` variable.
 
 ## Update Documentation
 
