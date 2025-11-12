@@ -5,6 +5,9 @@
 #### HINT
 This section is part of the [Localization and Translation](../../../../concept-guides/administration/localization/index.md#concept-guide-localization-translation) concept guide that provides a general understanding of the localization and translation processes in OroCommerce.
 
+#### NOTE
+The Localizations settings are accessible from the **Global organization only**. Find more on working with organizations in the [Company Structure and Organization Selector](../../../getting-started/navigation/org-selector.md#user-guide-getting-started-company-structure).
+
 <!-- begin -->
 
 Localization helps to bind the language and locale-specific formatting for smooth localization of the Oro system elements and messages visible to the user.

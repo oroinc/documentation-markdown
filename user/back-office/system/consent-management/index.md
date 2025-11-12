@@ -31,12 +31,13 @@ To create a [consent](../../../glossary.md#term-Consent) in OroCommerce:
 4. Click **Save and Close**.
 
 #### IMPORTANT
-Keep in mind that for the consents to be displayed in the storefront, you need to [add them to the list of enabled consents](../configuration/commerce/customer/global-interactions.md#admin-guide-commerce-configuration-customers-consents-enable-globally) in the system configuration.
+To make consents visible in the storefront, you must [add them to the list of enabled consents](../configuration/commerce/customer/global-interactions.md#admin-guide-commerce-configuration-customers-consents-enable-globally) in the system configuration.
 
 #### IMPORTANT
-Be aware that if a consent is accepted by at least one person in the OroCommerce storefront, it becomes uneditable and unremovable. The associated landing page becomes uneditable and unremovable as well.
+After a consent is accepted by at least one user in the OroCommerce storefront, it cannot be edited or deleted.
+The same restriction applies to the associated landing page.
 
-#### IMPORTANT
+#### HINT
 You can view all consents accepted by your customer users in the **Consents** section of their pages under **Customers > Customer Users**.
 
 ![Consents section under a customer user record](user/img/system/consents/consents_section_customer_user_page.png)
