@@ -34,7 +34,7 @@ To create a new product kit:
    You can also drag and drop products in the kit section to a different position:
    <br/>
    ![Dragging and dropping products in the kit](user/img/products/products/kits/drag-drop.gif)
-9. In the **Shipping Options** section, define how fixed shipping costs should be calculated for the selected product kit. The field is available for product kits and is only applied when calculating [Fixed Product Shipping](../../system/integrations/shipping-integration/fixed-shipping.md#doc-integration-fixed-shipping-cost) costs for product kits. The field has the following options:
+9. In the **Shipping Options** section, define how fixed shipping costs should be calculated for the selected product kit (available starting from OroCommerce v6.0.4). The field is only applied when calculating [Fixed Product Shipping](../../system/integrations/shipping-integration/fixed-shipping.md#doc-integration-fixed-shipping-cost) costs for product kits. The field has the following options:
    * **Kit product and kit items** (Default) — Shipping costs are calculated based on the combined shipping parameters of both the main product kit and its individual items.
    * **Only kit product itself** — Shipping costs are calculated exclusively on the shipping parameters of the main product kit, ignoring the individual items within the kit.
    * **Only kit items** — Shipping costs are calculated exclusively based on the shipping parameters of the individual items within the kit, ignoring the main kit product itself.

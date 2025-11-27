@@ -37,8 +37,8 @@ This example sets the `auditable` option from the `dataaudit` scope to `true` fo
 #### `attachment`
 
 * **is_stored_externally** *boolean* - indicates whether the file referenced by this field is stored externally on a third party service. If enabled, the external URL text input is displayed instead of the file upload input. The URLs of the external files should be publicly available. The system will not process, resize or modify the files that are stored externally. By default `false`.
-* **acl_protected** *boolean* - indicates whether acl check should be applied when loading or displaying attachments.
-* **file_applications** - the list of all allowed file applications. Supported value: `default`.
+* **acl_protected** *boolean* - indicates whether acl check should be applied when loading or displaying attachments. Each ACL-protected entity must have an ownership type. Various entities can act as one, such as a user, a business unit, an organization. By default `false`.
+* **file_applications** - the list of all allowed file applications. Possible values are: ‘file’, ‘image’, ‘wysiwyg’, ‘wysiwyg_styles’, ‘multiFile’, ‘multiImage’,’default’. By default `default`.
 * **use_dam** *boolean* - indicates whether to use DAM (Digital Asset Management) to upload a file. OroDigitalAssetBundle bundle provides the Digital Asset Management (DAM) functionality and CRUD for digital assets. It can be enabled for fields of type File and Image  in the back-office UI both via the entity management and field configuration.
 * **maxsize** *integer* - sets the max size of an uploaded file in megabytes.
 * **width** *integer* - sets width for a picture thumbnail in pixels.
@@ -124,9 +124,9 @@ The enum functionality is described in [Option Set Fields](../../entities/extend
 
 * **enum_code** *string* - sets the code name of the options list to the field.
 * **enum_locale** *string* - the locale name in which an enum name and options labels are entered. This is a temporary attribute used to allow creating an enum on a field edit page. As part of the schema update procedure, the value of this attribute is removed.
-* **enum_name** *string* - the name of an enum linked to a field. This is a temporary attribute used to allow creating an enum on a field edit page. The value of this attribute is used as a label for an entity that is used to store enum options, and then as part of the field reference update procedure, it is removed.
+* **enum_name** *string* - the name of an enum linked to a field. This is a temporary attribute used to allow creating an enum on a field edit page. The value of this attribute is used as a label for an entity that is used to store enum values, and then as part of the field reference update procedure, it is removed.
 * **enum_public** *boolean* - indicates whether an enum is public or not. This temporary attribute is used to create/edit an enum on a field edit page. As part of the schema update procedure, the value of this attribute is moved to the entity.enum.public attribute. This flag cannot be changed for system enums (owner=’system’).
-* **enum_options** *array* - the list of enum options. This temporary attribute is used to create/edit an enum on a field edit page. As part of the schema update procedure, the value of this attribute is moved to a table that is used to store enum values.
+* **enum_options** *array* - the list of enum values. This temporary attribute is used to create/edit an enum on a field edit page. As part of the schema update procedure, the value of this attribute is moved to a table that is used to store enum values.
 * **immutable** *boolean* - is used to prohibit changing the enum association state (regardless of whether it is enabled or not) for the entity. If TRUE, then the current state cannot be changed.
 
 <a id="annotation-config-field-extend"></a>

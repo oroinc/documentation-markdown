@@ -56,7 +56,7 @@ A warning message is shown if for some reason you are unable to start the checko
 At the Agreements step, you are required to accept all mandatory [consents](../../consent-management/index.md#system-consent-management) to process your personal data, if such consents have not been accepted previously. Keep in mind that if you leave the checkout after accepting a mandatory consent, this consent is considered accepted and can be revoked only through the [profile management](../../../../storefront/account/my-profile/index.md#frontstore-guide-profile-consents-revoke).
 
 #### IMPORTANT
-Keep in mind that for the Agreements section to be displayed in the checkout, you need to [add the necessary consents to the list of enabled consents](../../configuration/commerce/customer/global-interactions.md#admin-guide-commerce-configuration-customers-consents-enable-globally) in the system configuration.
+Keep in mind that for the Agreements section to be displayed in the checkout, you need to [add the necessary consents to the list of enabled consents](../../configuration/commerce/customer/global-consents.md#admin-guide-commerce-configuration-customers-consents-enable-globally) in the system configuration.
 
 ![The first step of the checkout is agreements where you are required to accept any available mandatory consents](user/img/system/workflows/alternative_checkout/storefront_step_agreements_alt.png)![Accept a mandatory consent on the agreements step](user/img/system/workflows/alternative_checkout/storefront_step_agreements_alt_accepted.png)
 

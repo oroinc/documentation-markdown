@@ -2,7 +2,7 @@
 
 # OroPlatformBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/PlatformBundle" target="_blank">OroPlatformBundle</a> provides adjustments to the Symfony framework that enable you to configure the application settings in bundles’ YAML configuration files, switch the application to the maintenance mode, and define the global command options, etc.
+<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/PlatformBundle" target="_blank">OroPlatformBundle</a> provides adjustments to the Symfony framework that enable you to configure the application settings in bundles’ YAML configuration files, switch the application to the maintenance mode, and define the global command options, etc.
 
 ## Lazy Services
 
@@ -115,7 +115,9 @@ use Symfony\Component\Console\Input\InputOption;
 
 class MyNewGlobalOptionsProvider implements GlobalOptionsProviderInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function addGlobalOptions(Command $command)
     {
         // Create a new option and add it to the definitions
@@ -124,7 +126,9 @@ class MyNewGlobalOptionsProvider implements GlobalOptionsProviderInterface
         $command->getDefinition()->addOption($option);
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function resolveGlobalOptions(InputInterface $input)
     {
         // Get the option's value and do something with it

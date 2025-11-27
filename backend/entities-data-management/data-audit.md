@@ -2,7 +2,7 @@
 
 # Data Audit
 
-The <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/DataAuditBundle" target="_blank">OroDataAuditBundle</a> leverages the Loggable <a href="https://github.com/Atlantic18/DoctrineExtensions" target="_blank">Doctrine extension</a>
+The <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/DataAuditBundle" target="_blank">OroDataAuditBundle</a> leverages the Loggable <a href="https://github.com/Atlantic18/DoctrineExtensions" target="_blank">Doctrine extension</a>
 (<a href="https://github.com/stof/StofDoctrineExtensionsBundle" target="_blank">StofDoctrineExtension</a>) to provide changelogs for your entities.
 
 ## Entity Configuration
@@ -29,10 +29,10 @@ use Oro\Bundle\EntityBundle\EntityProperty\DatesAwareInterface;
 use Oro\Bundle\EntityBundle\EntityProperty\DatesAwareTrait;
 use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\Config;
 use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\ConfigField;
-use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityInterface;
-use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityTrait;
 use Oro\Bundle\OrganizationBundle\Entity\OrganizationAwareInterface;
 use Oro\Bundle\UserBundle\Entity\Ownership\AuditableUserAwareTrait;
+use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityInterface;
+use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityTrait;
 
 /**
  * ORM Entity Question.
@@ -113,7 +113,9 @@ class Question implements
     AuditAdditionalFieldsInterface,
     ExtendEntityInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getAdditionalFields(): array
     {
         return ['subject' => $this->getSubject()];
@@ -143,18 +145,19 @@ To add new auditable types, register a new type in your bundle’s boot method:
 <?php
 
 // AcmeDemoBundle.php
-
 namespace Acme\Bundle\DemoBundle;
 
-use Acme\Bundle\DemoBundle\DependencyInjection\Compiler\AcmeExtendValidationPass;
-use Acme\Bundle\DemoBundle\DependencyInjection\Compiler\ImagePlaceholderProviderPass;
 use Oro\Bundle\DataAuditBundle\Model\AuditFieldTypeRegistry;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Acme\Bundle\DemoBundle\DependencyInjection\Compiler\ImagePlaceholderProviderPass;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Acme\Bundle\DemoBundle\DependencyInjection\Compiler\AcmeExtendValidationPass;
 
 class AcmeDemoBundle extends Bundle
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function build(ContainerBuilder $container): void
     {
         parent::build($container);
@@ -188,7 +191,9 @@ class AddNewAuditFieldType implements Migration, AuditFieldExtensionAwareInterfa
 {
     use AuditFieldExtensionAwareTrait;
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function up(Schema $schema, QueryBag $queries): void
     {
         $this->auditFieldExtension->addType($schema, 'datetimetz', 'datetimenew');

@@ -14,11 +14,14 @@ For example, when your OroCommerce store sells TVs and T-shirts, these items sha
 #### NOTE
 You can manage product attributes per organization. Any changes made to product attributes within one organization do not affect the attributes of others. You can use the attributes created in the global organization in other organizations, but only a system administrator of the global organization can edit them.
 
-Product attributes in OroCommerce fall into two categories: custom attributes, which you create yourself, and system (global) attributes, which are provided out-of-the box. System attributes are shared across all product families and cannot be removed. However, you can reorganize how they are grouped within a family. By default, OroCommerce includes the following system product attributes:
+By default, OroCommerce comes with the following system product attributes:
 
 ![The list of the default system product attributes](user/img/products/product_attributes/ProductAttributes_oob.png)
 
-When you create a new product attribute, you add custom parameters to your product details. These attributes can be included in one or multiple product families and placed into a new or existing attribute group.
+Add new product attributes to introduce new custom parameters in your product details. Include product attributes in one or multiple product families into the new or existing attribute group.
+
+#### NOTE
+System attributes are shared among all product families. You can reorganize the way system attributes are grouped, but you cannot remove a product attribute from the product family.
 
 #### HINT
 Instead of using one general-purpose attribute (e.g., color), create multiple specific attributes (e.g., car_color, laptop_color, table_color). This prevents loading all attributes as filters on all product pages and as a result, reduces the load on the database and improves the overall application performance.
@@ -111,11 +114,12 @@ Please note that if the option is not applicable to attributes of the selected t
 ![The settings available in the storefront options section](user/img/products/product_attributes/product_attributes_create_frontend.png)
 1. In the **Back-Office options** section, fill in the **Import & Export** subsection to configure details of the product attribute’s import/export:
 
-| **Column Position**   | Type a number that corresponds to the position of the attribute in a CSV file.                                                                                                                                                                                                                     |
-|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Use As Identity**   | Specify whether this column should be used as an identifier of the entity record. Select *No*, *Only when not empty*, or *Always*. If set to *Only when not empty*, the field may be omitted in the identity when it has no value.                                                                 |
-| **Exclude Column**    | Select *No*, if you want this field available for export, or *Yes* if you wish to exclude the column.                                                                                                                                                                                              |
-| **Export Fields**     | If the attribute is of the relation type, this option defines which fields of the related entity record to export:<br/><br/>* **Identity only** – Export only the field that serves as an identifier of the related entity record.<br/>* **All** – Export all fields of the related entity record. |
+| **Column Name**     | Enter the name of the column (in a CSV file) that would represent the attribute you are creating. If left blank, a label will be used.                                                                                                                                                             |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Column Position** | Type a number that corresponds to the position of the attribute in a CSV file.                                                                                                                                                                                                                     |
+| **Use As Identity** | Specify whether this column should be used as an identifier of the entity record. Select *No*, *Only when not empty*, or *Always*. If set to *Only when not empty*, the field may be omitted in the identity when it has no value.                                                                 |
+| **Exclude Column**  | Select *No*, if you want this field available for export, or *Yes* if you wish to exclude the column.                                                                                                                                                                                              |
+| **Export Fields**   | If the attribute is of the relation type, this option defines which fields of the related entity record to export:<br/><br/>* **Identity only** – Export only the field that serves as an identifier of the related entity record.<br/>* **All** – Export all fields of the related entity record. |
 1. In the **Back-Office options** section, fill in the **Other** subsection, specifying the configuration options for the product attribute view, search and use in the back-office and storefront.
 
 #### NOTE
@@ -124,6 +128,7 @@ Please note that available options depend on the type selected for the attribute
 | **Contact Information**          | Labels the product attribute as contact information that may be used in the marketing lists. The contact information may be:<br/><br/>> - *Empty* — In this case, the product attribute will not be treated as contact information.<br/>> - *Email* — When this option is selected, the product attribute value is treated by marketing lists as email addresses.<br/>> - *Phone* — When this option is selected, the product attribute value is treated by marketing lists as a phone number.                                                                                                                                                                                           |
 |----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Show on Form**                 | In this field, select *Yes* if you wish to have the product attribute displayed and be editable on record and page edits.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Applicable Organization**      | This checkbox determines whether you want the product attribute to be available throughout all organizations.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | **Available in Email Templates** | Select *Yes* if you wish the product attribute to be available in email templates. To use the product attribute value in the email template:<br/><br/>> 1. When creating an attribute, mark it as *Available in Email Templates*.<br/>> 2. Navigate to **System > Emails > Templates** and click **Create Email Template**.<br/>> 3. In the template, select *Product* as the entity that the template should relate to.<br/>> 4. On the entity variables list on the right, find the attribute and click on it to add to the template.<br/>>    ![Add the attribute from the entity variables list to the email template](user/img/products/product_attributes/AttributeInTemplate.png) |
 | **Add To Grid Settings**         | The option controls the availability and display of the product attribute in the products grid:<br/><br/>* By default, *Yes and Display* is selected which makes the product attribute available and visible in the grid.<br/>* The *Yes and do not display* option means that the product attribute is hidden by default, but the visibility may be toggled in the grid settings.<br/>* The *Yes as Mandatory* option adds it permanently to all grid views and disables visibility toggle.<br/>* *No* – The product attribute visibility and appearance order cannot be toggled in the grid settings                                                                                   |
 | **Show Grid Filter**             | Select *Yes* to display the filter for the product attribute on the user interface.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -141,6 +146,56 @@ The product attribute [storage type](../../system/entities/entity-fields/entity-
 
 > You can check an attribute’s storage type on the page with the attributes list:
 ![The list of all product attributes](user/img/products/product_attributes/AttributeStorageType.png)
+
+#### WARNING
+Schema changes are permanent and cannot be easily rolled back. We recommend that developers back up data before any database schema change if changes have to be rolled back.
+
+## Import Product Attributes
+
+**Import File** option helps import a large bulk of product attributes information into the product attributes list using the .csv file.
+
+**Example of product attributes bulk import template**
+
+| fieldName   | type   | entity.label   | entity.description   | entity.contact_information   | form.is_enabled   | importexport.header   |   importexport.order | importexport.identity   | attachment.mimetypes   |
+|-------------|--------|----------------|----------------------|------------------------------|-------------------|-----------------------|----------------------|-------------------------|------------------------|
+| field_money | money  | label_value    | description_value    | marketinglist.entity_config. | yes               | header_value          |                   12 | no                      | mimetypes_value        |
+
+#### NOTE
+Keep in mind that multi-select attribute type doesn’t support the sorting option, so make sure to set this option to “0” or “No” when preparing the corresponding file for importing.
+
+To import a bulk of product attributes:
+
+1. In the main menu, navigate to **Products > Product Attributes**.
+2. Click **Import File** on the top right.
+
+#### HINT
+You may receive the following warning message which notifies you about the limits for the number of attributes that can be imported, which can effect the future export of entities.
+
+| The number of attributes stored as columns in the X table (the attributes that are relations or that have ever been marked<br/>as “A”, “B”, “C”) is approaching the limit after which it will no longer be possible to export Y with the standard X export.<br/>Remaining number of attributes - approximately Z.   |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+Pay attention that the maximum number of columns in the row must fit in a single 8192-byte heap page. For example, if all the columns are simple fields, such as integer values, then the quantity of columns can reach 1,600. The number of fields or attributes in the exporting entity must be within the bespoke limit; otherwise, this may impose a restriction on export functionality.
+
+Once 90% of the limit is reached, you will receive a flash message with the related warning.
+
+Reaching 100% of the limit triggers a warning message on a potential inactive export when clicking the Export button.
+
+1. **Prepare data for import**: Create your bulk information in the .csv format. Once your file is ready, click **Choose File**, select the prepared comma-separated values (.csv) file, and click **Import File**.
+
+#### NOTE
+Ensure that your .csv file is saved in the Unicode (UTF-8) encoding. Otherwise, the content of the file can be rendered improperly.
+
+![The steps that are necessary to perform to import the product attributes successfully](user/img/products/product_attributes/import_product_attributes.png)
+1. **Validate import results**: Click **Validate** to check your import results. If there are any *Records with errors*, fix them in the .csv file before starting the import.
+2. **Launch import:** After successful validation, click **Import File**.
+3. Click **Cancel** to decline the import.
+
+#### IMPORTANT
+Interactive status messages inform about the import progress, and once the import is complete, the changes are reflected in the list upon refresh. Additionally, an email message with the import status is delivered to your mailbox.
+
+Follow the on-screen guidance for any additional actions. For example, for the inventory template, select one of the options: a) inventory statuses only or b) detailed inventory levels.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p5HrsdMUB7A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 **Related Topics**
 

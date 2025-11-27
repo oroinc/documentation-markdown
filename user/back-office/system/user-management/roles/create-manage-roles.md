@@ -14,29 +14,28 @@ To create a new role in:
 2. Click **Create Role** on the top right.
 3. In the **General** section, provide the role name.
    ![image](user/img/system/user_management/create_new_role_from_scratch.png)
-4. In the **Entities** section, you can set three types of permissions - **entity-level**, **field-level** and **system capabilities**:
-   * To specify access levels for entity-level permissions, click on the arrow icon next to the required permission (e.g., create or assign), and select the access level from the list. By default, access levels for each permission are set to **None**.
-     ![image](user/img/system/user_management/single_entity_level_permissions.png)
-
-     To set the same access level for all actions on entity, select the required access level from the ellipsis menu at the end of the entity row.
-     ![image](user/img/system/user_management/entity_level_permissions.png)
-   * To specify access levels for [field-level permissions](field-level-acl.md#user-guide-user-management-permissions-roles-field-level-acl), click **+** to the left of the entity name. Click on the arrow icon next to the required permission, and select the access level from the list. Read more on how to enable field-level permissions in the [Apply Permissions to Entity Fields](field-level-acl.md#user-guide-user-management-permissions-roles-apply-field-level-acl) topic.
-     > ![image](user/img/system/user_management/roles_permissions_fields_general_ex.png)
-   * To set system capabilities, enable or disable the checkbox next to the required options.
-     ![image](user/img/system/user_management/cloned_role_system_capabilities.png)
-5. In the **Workflows** section, specify access levels for workflows and workflow transitions. There are two permissions for workflows, **View Workflow** and **Perform transitions**. By default, all workflow access levels are set to **None**. Choose the workflow or the transition to which you want to assign different permissions, click on the action name and select the required access level from the list.
-
-   #### TIP
-   If you do not see individual transitions of the workflow, click the **+** **Expand** icon in front of the workflow name to expand the list of transitions.
-
-   ![image](user/img/system/user_management/create_role_workflow_permissions.png)
-6. In the **Users** section, select checkboxes in front of the users to whom you want to assign this role.
-7. In the **Additional** section, specify the following:
+4. In the **Additional** section, specify the following:
    * **Description** — Use the built-in text editor to format the provided description.
    * **Organization** — Select the organization that the user role belongs to.
 
      #### NOTE
      If you want this role to be applicable for all organizations defined in the system, do not specify any organization. In this case, the field value becomes **System-wide**. If there is only one organization defined in the system or you do not have global access rights, there is no option for selecting an organization.
+5. In the **Entities** section, you can set three types of permissions - entity-level, field-level and system capabilities:
+   * To specify access levels for entity-level permissions, click on the arrow icon next to the required permission (e.g. create or assign), and select the access level from the list. By default, access levels for each permission are set to **None**.
+     ![image](user/img/system/user_management/single_entity_level_permissions.png)
+
+     To set the same access level for all actions on entity, select the required access level from the ellipsis menu at the end of the entity row.
+     ![image](user/img/system/user_management/entity_level_permissions.png)
+   * To specify access levels for [field-level permissions](field-level-acl.md#user-guide-user-management-permissions-roles-field-level-acl), click **+** to the left of the entity name. Click on the arrow icon next to the required permission, and select the access level from the list. Read more on how to enable field-level permissions in the [Apply Permissions to Entity Fields](field-level-acl.md#user-guide-user-management-permissions-roles-apply-field-level-acl) topic.
+   * To set system capabilities, enable or disable the checkbox next to the required options.
+     ![image](user/img/system/user_management/cloned_role_system_capabilities.png)
+6. In the **Workflows** section, specify access levels for workflows and workflow transitions. There are two permissions for workflows, **view** and **perform transitions**. By default, all workflow access levels are set to **None**. Choose the workflow or the transition to which you want to assign different permissions, click on the action name and select the required access level from the list.
+
+   #### TIP
+   If you do not see individual transitions of the workflow, click the **+** **Expand** icon in front of the workflow name to expand the list of transitions.
+
+   ![image](user/img/system/user_management/create_role_workflow_permissions.png)
+7. In the **Users** section, select checkboxes in front of the users to whom you want to assign this role.
 8. Click **Save**.
 
 <a id="user-guide-user-management-permissions-roles-clone"></a>
@@ -52,7 +51,30 @@ You can create a role by cloning the existing one:
    Alternatively, you can clone the role from the page of the selected role by clicking <i class="far fa-copy" aria-hidden="true"></i> **Clone** on the top right.
    ![image](user/img/system/user_management/clone_role_from_role_page.png)
 3. The page that opens has all of the settings as the original role. Modify the settings as required.
-4. Click **Save**.
+4. In the **General** section, update the role name.
+5. In the **Additional** section, provide the following information:
+   * **Description** — Use the built-in text editor to format the provided description.
+   * **Organization** — Select the organization that the user role belongs to.
+
+     #### NOTE
+     If you want this role to be applicable for all organizations defined in the system, do not specify any organization. In this case the field value becomes **System-wide**. If there is only one organization defined in the system or you do not have global access rights, there is no option for selecting an organization.
+6. In the **Entities** section, you can set 3 types of permissions, entity-level, field-level and system capabilities:
+   * To specify access levels for entity-level permissions, click on the arrow icon next to the required permission, and select the access level from the list.
+     ![image](user/img/system/user_management/single_entity_level_permissions.png)
+
+     To set the same access level for all actions on entity, select the required access level from the ellipsis menu at the end of the entity row.
+     ![image](user/img/system/user_management/entity_level_permissions.png)
+   * To specify access levels for [field-level permissions](field-level-acl.md#user-guide-user-management-permissions-roles-field-level-acl), click **+** to the left of the entity name. Click on the arrow icon next to the required permission, and select the access level from the list. Read more on how to enable field-level permissions in the [Apply Permissions to Entity Fields](field-level-acl.md#user-guide-user-management-permissions-roles-apply-field-level-acl) topic.
+   * To set system capabilities, enable or disable the checkbox next to the required options.
+     ![image](user/img/system/user_management/cloned_role_system_capabilities.png)
+7. In the **Workflows** section, specify access levels for workflows and workflow transitions. There are two permissions for workflows, **view** and **perform transitions**. Choose the workflow or the transition to which you want to assign different permissions, click on the action name, and select the required access level from the list.
+
+   #### TIP
+   If you do not see individual transitions of the workflow, click the **+** **Expand** icon in front of the workflow name to expand the list of transitions.
+
+   ![image](user/img/system/user_management/create_role_workflow_permissions.png)
+8. In the **Users** section, select checkboxes in front of the users to whom you want to assign this role.
+9. Click **Save**.
 
 <a id="user-guide-user-management-permissions-roles-edit"></a>
 
@@ -87,6 +109,7 @@ To delete an existing role:
 
 * [Introduction to Role Management](index.md#user-guide-user-management-permissions-roles)
 * [Field Level Permissions](field-level-acl.md#user-guide-user-management-permissions-roles-field-level-acl)
+* [End-to-end Access Configuration in Context](access-in-context.md#user-guide-user-management-permissions-roles-examples)
 * [Entity and System Capabilities](admin-capabilities.md#admin-capabilities)
 
 <!-- fa-bars = fa-navicon -->

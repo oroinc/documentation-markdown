@@ -15,4 +15,3 @@ To learn more about import and export capabilities and how to use them, please s
 * [Extend Entities to Support Bulk Import and Export](customize-import-export.md)
 * [Accelerate Import](accelerate-import.md)
 * [Postponing Rows](rows-postponing.md)
-* [Import Custom Format File Via Batch API](import-with-custom-format-via-batch-api.md)

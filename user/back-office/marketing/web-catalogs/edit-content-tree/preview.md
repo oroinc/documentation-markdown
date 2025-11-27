@@ -19,11 +19,11 @@ To start previewing a selected node, follow the steps outlined below:
    ![Configuration panel in the storefront](user/img/marketing/web_catalogs/preview_mode.png)
 5. If you want to adjust any settings and preview the results, you need to save these settings first.
 
-To illustrate the example, let’s consider the case where you run two businesses in the US and Canada selling various medical products. While the US warehouse is all packed with the necessary products, the warehouse in Canada is only expecting the delivery. You have created a dedicated landing page to notify the wholesale customers that the products are on the way. This way, your restrictions for the *Medical* node can be configured the following way:
+To illustrate the example, let’s consider the case where you run two businesses in the US and Canada selling various lighting products. While the US warehouse is all packed with the necessary products, the warehouse in Canada is only expecting the delivery. You have created a dedicated landing page to notify the wholesale customers that the products are on the way. This way, your restrictions for the *Lighting Products* node can be configured the following way:
 
-* The Medical category page is visible for all customers, customer groups, and localizations of the US website.
+* The Lighting Products category page is visible for all customers, customer groups, and localizations of the US website.
 * The related landing page is visible for all wholesale customers of the Canada website.
-  ![Restrictions set fot the medical products content node](user/img/marketing/web_catalogs/medical_restrictions.png)
+  ![Restrictions set fot the lighting products content node](user/img/marketing/web_catalogs/lighting_products_restrictions.png)
 
 When previewing this page, you need to set the same restrictions in the configuration panel to see how the page will be rendered in the storefront:
 

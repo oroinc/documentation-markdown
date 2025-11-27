@@ -6,8 +6,8 @@ This section describes the Web API development framework for the application dat
 
 The Web API development framework is implemented by [OroApiBundle](../../bundles/platform/ApiBundle/index.md#bundle-docs-platform-api-bundle) and based on the following components:
 
-* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/ChainProcessor" target="_blank">ChainProcessor</a> — Organizes data processing flow.
-* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/EntitySerializer" target="_blank">EntitySerializer</a> — Provides fast access to entities data.
+* <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Component/ChainProcessor" target="_blank">ChainProcessor</a> — Organizes data processing flow.
+* <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Component/EntitySerializer" target="_blank">EntitySerializer</a> — Provides fast access to entities data.
 * <a href="https://github.com/symfony/form" target="_blank">Symfony Form</a> — Provides a flexible way to map request data to the entity object.
 
 <a href="https://github.com/FriendsOfSymfony/FOSRestBundle" target="_blank">FOSRestBundle</a> and <a href="https://github.com/nelmio/NelmioApiDocBundle" target="_blank">NelmioApiDocBundle</a> are also used for REST API.
@@ -36,7 +36,6 @@ By default, only custom entities, dictionaries, and enumerations are accessible 
 * [Post Processors](post-processors.md)
 * [How to](how-to.md)
 * [CORS Configuration](cors.md)
-* [CORS Configuration for Published OpenAPI Specifications](cors-open-api.md)
 * [Testing REST API](testing.md)
 * [Storefront REST API](storefront.md)
 * [Storefront Routes](storefront-routes.md)

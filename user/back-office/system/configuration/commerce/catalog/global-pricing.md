@@ -20,9 +20,11 @@ The price list settings (i.e., price list assignment and fallback) are configure
 To change the default global pricing settings:
 
 1. Navigate to **System > Configuration > Commerce > Catalog > Pricing** in the main menu.
-2. To customize the option configuration, clear the **Use Default** checkbox next to the option and select or type in the new option value.
-3. Click **Reset** at the top right to roll back any changes to the pricing settings.
-4. Click **Save Settings** to save the changes.
+
+![Pricing system configuration page](user/img/system/config_commerce/catalog/pricing_sys_config.png)
+1. To customize the option configuration, clear the **Use Default** checkbox next to the option and select or type in the new option value.
+2. Click **Reset** at the top right to roll back any changes to the pricing settings.
+3. Click **Save Settings** to save the changes.
 
 ## Oro Pricing
 
@@ -175,7 +177,7 @@ In the **Display Currencies** section, enable all or some currencies from the al
 
 ## Minimum Sellable Quantity
 
-In the **Minimum Sellable Quantity**, you can enable the following options:
+In the **Minimum Sellable Quantity** (available starting from OroCommerce version 6.0.4.), you can enable the following options:
 
 * **Allow fractional quantity price calculation on quantities smaller than the minimum quantity priced in a price list(s)** — Applicable only to the product units that allow fractional quantity input (unit precision > 0). The implied minimum sellable quantity is 1 (one whole unit). The *Allow fractional quantity price calculation on quantity less than 1 whole unit* configuration option can be enabled to go lower than 1  unit. The *Minimum quantity to order* for specific products can be used to prevent purchases of fractional quantities smaller than the desired sellable quantity either way.
 * **Allow fractional quantity price calculation on quantity less than 1 whole unit** — Applicable only to the product units that allow fractional quantity input (unit precision > 0). The *Minimum quantity to order* for specific products can be set to 1 to prevent purchases of fractional quantities smaller than 1 whole unit.

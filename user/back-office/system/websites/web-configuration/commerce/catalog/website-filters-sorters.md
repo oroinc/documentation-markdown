@@ -36,27 +36,7 @@ To configure filters and sorting options per website:
 
    #### HINT
    To specify how to display the multi-select filter options, refer to the [theme-related settings](../../../../configuration/commerce/design/theme-global.md#configuration-commerce-design-theme).
-6. In the **Product Sorting** section, configure the options that enable you to override the default product sorting behavior in the storefront, which is typically based on a product sort order (if specified) and by relevance score.
-   > #### NOTE
-   > The product sorting feature was introduced in OroCommerce Enterprise versions 6.1.3 and 6.1.4.
-
-   > #### HINT
-   > Before enabling the options, ensure to:
-   > 1. Define the options for the [inventory_status](../../../../../products/product-attributes/index.md#products-product-attributes) product attribute under the Products > Product Attributes back-office menu. Drag and drop statuses to arrange them by priority (e.g., *In Stock, Out Of Stock, Discontinued*). Products with higher-priority statuses will be displayed first. Please note that the inventory_status attribute is a system product attribute, so only a system administrator of the global organization can edit it.
-   >    > ![The details page of the Inventory status product attribute](user/img/system/config_commerce/catalog/inventory-status-attribute.png)
-   > 2. Check the [visibility of the inventory statuses](../../../../configuration/commerce/inventory/allowed-statuses.md#configuration-guide-commerce-configuration-inventory-allowed-statuses) under System > Configuration > Commerce > Inventory > Allowed Statuses to ensure that products with the specified status can be visible in the storefront.
-   >    > ![The config page of the Allowed Statuses commerce system menu](user/img/system/config_commerce/catalog/inventory-status-visibility-config.png)
-
-* **Sort Category Products by Inventory Status** — When enabled, the items on product listing (master catalog category) pages in the storefront will be sorted by their inventory status, as configured under the Products > Product Attributes back-office menu. Products with higher-priority statuses (e.g., *In Stock*) will appear first, followed by others in the defined order. Within the same inventory status group, products are further sorted by the sort order number assigned to them in the category.
-
-![The master catalog category details page with the products with different inventory statuses and sort order, and the storefront page that reflects the enabled sorting behavior](user/img/system/config_commerce/catalog/category-products-sorting.png)
-* **Sort Search Results by Inventory Status** — When enabled, the items on the search results page in the storefront will be sorted by their inventory status, as configured under the Products > Product Attributes back-office menu. Products with higher-priority statuses (e.g., *In Stock*) will appear first, followed by others in the defined order.
-
-![The storefront page that reflects the enabled sorting behavior, where the products with higher-priority status *In Stock* appear first](user/img/system/config_commerce/catalog/search-results-sorting.png)
-* **Sort Product Collection by Inventory Status** — When enabled, the items in product collections in the storefront will be sorted by their inventory status, as configured under the Products > Product Attributes back-office menu. Products with higher-priority statuses (e.g., *In Stock*) will appear first, followed by others in the defined order. Within the same inventory status group, products are further sorted by the sort order number assigned to them in the product collection.
-
-![The web catalog content node details page with the assigned product collection and the storefront page that reflects the enabled sorting behavior](user/img/system/config_commerce/catalog/product-collection-sorting.png)
-1. Click **Save Settings**.
+6. Click **Save Settings**.
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->

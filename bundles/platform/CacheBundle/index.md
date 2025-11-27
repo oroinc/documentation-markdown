@@ -4,7 +4,7 @@
 
 # OroCacheBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/CacheBundle" target="_blank">OroCacheBundle</a> introduces the configuration of the application data cache storage used by the application bundles
+<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/CacheBundle" target="_blank">OroCacheBundle</a> introduces the configuration of the application data cache storage used by the application bundles
 for different cache types.
 
 <a id="bundle-docs-platform-cache-bundle-data-cache-service"></a>
@@ -71,7 +71,9 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 class MyConfiguration implements ConfigurationInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder('my_config');
@@ -100,13 +102,17 @@ class MyConfigurationProvider extends PhpArrayConfigProvider  implements Configu
 {
     private const CONFIG_FILE = 'Resources/config/oro/my_config.yml';
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getConfiguration(): array
     {
         return $this->doGetConfig();
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     protected function doLoadConfig(ResourcesContainerInterface $resourcesContainer)
     {
         $configs      = [];
@@ -249,7 +255,7 @@ there until the process ends. With HTTP request this would work perfectly well, 
 after every change with Localizations. Missing cache clearing for any of these cases leads
 to outdated data in `LocalizationManager`.
 
-The <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/CacheBundle/Provider/MemoryCache.php" target="_blank">MemoryCache</a> class can be used when you need fast implementation of a memory cache.
+The <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/CacheBundle/Provider/MemoryCache.php" target="_blank">MemoryCache</a> class can be used when you need fast implementation of a memory cache.
 
 <a id="bundle-docs-platform-cache-bundle-persistent-or-shared-cache"></a>
 
@@ -257,7 +263,7 @@ The <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/CacheBun
 
 Let us have a look at our example once again. Since `LocalizationManager` is used in the CLI and we do not have
 the shared memory, we would not be able to invalidate the cache between different processes. We probably would go for
-some more persistent (shared) way of caching, for example, <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/CacheBundle/Provider/FilesystemCache.php" target="_blank">FilesystemCache</a>. Now, we are able to share cache
+some more persistent (shared) way of caching, for example, <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/CacheBundle/Provider/FilesystemCache.php" target="_blank">FilesystemCache</a>. Now, we are able to share cache
 between processes, but this approach causes performance degradation. In general, the memory cache is much faster than
 the persistent one.
 

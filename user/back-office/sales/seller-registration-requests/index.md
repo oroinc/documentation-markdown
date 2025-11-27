@@ -41,11 +41,7 @@ You can perform the following actions for requests from the grid:
 
 ![Grid actions for seller registration requests](user/img/sales/seller-registration-requests/grid-actions-seller-request.png)
 
-Two grid views are available for seller registration requests: **Open Seller Registration Requests** and **All Seller Registration Requests**.
-
-![Illustration of the two grid views](user/img/sales/seller-registration-requests/two-grid-views.png)
-
-You can filter the grid with all requests and then save the filtered page as another grid view.
+Two grid views are available for seller registration requests: **Open Seller Registration Requests** and **All Seller Registration Requests**. You can filter the grid with all requests and then save the filtered page as another grid view.
 
 ![Illustration of how to add a new grid page.](user/img/sales/seller-registration-requests/new-grid-for-seller-request.png)
 
@@ -61,7 +57,6 @@ On the view page of a request, you can transition it through the steps of the [S
 
 For more information, see [Information Management](../../getting-started/information-management/index.md#user-guide-data-management-basics-entities).
 
-![Action available for a seller registration request from its view page](user/img/sales/seller-registration-requests/request-view-page.png)
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
@@ -83,4 +78,4 @@ For more information, see [Information Management](../../getting-started/informa
 <!-- S -->
 <!-- T -->
 <!-- U -->
-<!-- Z -->
+<!-- Z -->![Action available for a seller registration request from its view page](user/img/sales/seller-registration-requests/request-view-page.png)

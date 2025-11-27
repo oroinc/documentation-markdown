@@ -32,7 +32,6 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  */
 class QuestionType extends AbstractType
 {
-    #[\Override]
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
@@ -58,7 +57,6 @@ class QuestionType extends AbstractType
             );
     }
 
-    #[\Override]
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
@@ -163,7 +161,6 @@ class QuestionController extends AbstractController
         );
     }
 
-    #[\Override]
     public static function getSubscribedServices(): array
     {
         return array_merge(
@@ -363,7 +360,7 @@ You can delete an entity through the [DELETE operation](../entities-data-managem
 )]
 ```
 
-See the sample configuration of the default `DELETE` operation in the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ActionBundle/Resources/config/oro/actions.yml" target="_blank">Actions</a> topic.
+See the sample configuration of the default `DELETE` operation in the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ActionBundle/Resources/config/oro/actions.yml" target="_blank">Actions</a> topic.
 
 If the default configuration is not valid for your particular case, create your own operation that would inherit from the default one, following the example:
 

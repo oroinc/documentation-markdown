@@ -85,4 +85,3 @@ Please check the respective links for more details.
 * Technical [support](../support.md#cloud-support) service details (exclusions, priorities, SLA, etc).
 
 * [Shared Security Responsibility and Best Practices](best-practices.md)
-* [Understanding the Shared Responsibility Model in PCI DSS v4.0.1](shared-responsibility-model.md)

@@ -13,7 +13,6 @@
 * [Product Variant Search](product-variant-search.md)
 * [Related Items](related-items.md)
 * [Externally Stored Product Images](external-product-images.md)
-* [Quick Order Form Validation](quick-order-form-validation.md)
 * [Product Customization Using Layouts](customize-products/index.md)
 
 <!-- Frontend -->

@@ -25,6 +25,9 @@ For faster navigation between the configuration menu sections, use [Quick Search
    * **Enable Search History Collection** — depends on the Enable Search History Reporting option above. When Enable Search History Collection is enabled, all search queries are logged into the database. This option allows enabling/disabling certain groups of visitors. For example, you can choose not to log requests from anonymous users by turning off this option at customer group level for Anonymous customers. Exercise care when enabling this option on popular websites as it may result in a large number of records saved to the database.
 2. In the **Special Pages** section, clear the *Use System* checkbox to configure the empty search results page:
    * **Empty Search Result Page** — You can configure an Empty Search Results Page, if the product search produced an empty result and there is no custom page configured for that specific combination of a [search term](../../../../../../marketing/search/index.md#user-guide-search-search-terms) and additional search criteria. The web-node selected for this configuration option should be available for all users and cannot have restrictions.
+
+   #### NOTE
+   This option is available starting from OroCommerce version 6.0.2.
 3. Click **Save Settings**.
 
 **Related Topics**

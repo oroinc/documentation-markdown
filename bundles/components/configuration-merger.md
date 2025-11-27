@@ -18,7 +18,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 class ConfigurationPass implements CompilerPassInterface
 {
-    #[\Override]
+    /** {@inheritDoc} */
     public function process(ContainerBuilder $container)
     {
        ...
@@ -43,7 +43,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 class ConfigurationPass implements CompilerPassInterface
 {
-    #[\Override]
+    /** {@inheritDoc} */
     public function process(ContainerBuilder $container)
     {
        ...

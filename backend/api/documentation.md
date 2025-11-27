@@ -8,7 +8,7 @@ OroPlatform collects documentation for API resources from several sources:
 
 - Documentation in a [configuration file](configuration.md#web-api-configuration).
 - A <a href="https://daringfireball.net/projects/markdown/" target="_blank">Markdown</a> document. You can find detailed information further below.
-- System-wide descriptions of <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityConfigBundle/README.md" target="_blank">configurable entities and fields</a>.
+- System-wide descriptions of <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityConfigBundle/README.md" target="_blank">configurable entities and fields</a>.
 
 The source with the highest priority is the configuration file. The documentation provided there overrides all other sources. However, as it is a YAML file, it is not entirely suitable for extensive multi-line texts. A more appropriate place for the documentation is a separate <a href="https://daringfireball.net/projects/markdown/" target="_blank">Markdown</a> file. To use a custom markdown file, provide a link to it in the configuration file, as illustrated below:
 
@@ -100,31 +100,35 @@ Example:
 ### get
 
 In this example, the documentation for an action is "get" action.
-It may contain any formatting, e.g., request or response examples, links, text in bold or italic, etc.
+It may contain any formatting, e.g., ordered or unordered lists,
+ request or response examples, links, text in bold or italic, etc.
 
 ## FIELDS
 
 ### name
 
 The description for the "name" field.
-May contain any formatting, e.g., links, text in bold or italic, etc.
+May contain any formatting, e.g., ordered or unordered lists,
+ request or response examples, links, text in bold or italic, etc.
 
 #### get
 
 The description for the "name" field for the "get" action.
-It may contain any formatting, e.g., links, text in bold or italic, etc.
+It may contain any formatting, e.g., ordered or unordered lists,
+ request or response examples, links, text in bold or italic, etc.
 
 #### create, update
 
 The description for "name" field for "create" and "update" actions.
-It may contain any formatting, e.g., links, text in bold or italic, etc.
+It may contain any formatting, e.g., ordered or unordered lists,
+ request or response examples, links, text in bold or italic, etc.
 
 ## FILTERS
 
 ### name
 
 The description for a filter by "name" field.
-It may contain any formatting, e.g., links, text in bold or italic, etc.
+The formatting is not allowed here.
 
 ## SUBRESOURCES
 
@@ -133,7 +137,8 @@ It may contain any formatting, e.g., links, text in bold or italic, etc.
 #### get_subresource
 
 In this example, the documentation for a sub-resource for the "get_subresource" action for the "contacts" sub-resource.
-It may contain any formatting, e.g., request or response examples, links, text in bold or italic, etc.
+It may contain any formatting, e.g., ordered or unordered lists,
+ request or response examples, links, text in bold or italic, etc.
 ```
 
 Use the `{@inheritdoc}` placeholder to get the common documentation for an action, a field, or a filter. This placeholder works only for the **ACTIONS**, **FIELDS**, and **FILTERS** sections.

@@ -31,7 +31,7 @@ For faster navigation between the configuration menu sections, use [Quick Search
      * Request based – tolerance depends on the length of the word. One error for short words (up to 5 characters) and two errors for long words (6+ characters).
    * **Tolerance Starts From** — sets a threshold for error-tolerant search usage. The default value is *4*, which means that the application uses the exact match search for words with 1-3 characters and an error-tolerant search for words with 4+ characters.
    * **Tolerance Exclusions** — allows setting regular expression for words that must not use error-tolerant search; the exact match search is used instead. This option is beneficial for SKUs, manufacturer IDs, and other identifiers that may have similar values and lead to false-positive results when the error-tolerant search is used.
-   * **Prefix Length** — defines how many initial characters of the search term must be exactly matched before the fuzzy matching is allowed to take place on the remainder of the term. This is critical for ensuring that the matches are relevant while still accounting for possible errors in the remaining characters of the term.
+   * **Prefix Length** — defines how many initial characters of the search term must be exactly matched before the fuzzy matching is allowed to take place on the remainder of the term. This is critical for ensuring that the matches are relevant while still accounting for possible errors in the remaining characters of the term. This option is available as of OroCommerce version 6.0.3.
 2. Click **Save settings**.
 
 <!-- fa-bars = fa-navicon -->

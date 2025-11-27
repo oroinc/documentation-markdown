@@ -46,7 +46,7 @@ $localizations = $localizationManager->getLocalizations([1, 3, 5, 7]);
 
 `Oro\Bundle\LocaleBundle\Manager::getDefaultLocalization(\[$useCache = true\])`
 
-Gets the default Localization. The default Localization is obtained from the system configuration (see <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ConfigBundle" target="_blank">OroConfigBundle</a> for more information).
+Gets the default Localization. The default Localization is obtained from the system configuration (see <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ConfigBundle" target="_blank">OroConfigBundle</a> for more information).
 
 An example of usage:
 

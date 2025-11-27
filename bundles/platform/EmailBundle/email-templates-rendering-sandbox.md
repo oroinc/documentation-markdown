@@ -13,11 +13,11 @@ Only a limited set of variables is allowed in email templates:
 
 The list of these variables is provided on the Email Template edit page of the admin UI (on the System > Emails > Templates menu item).
 
-Also, additional Twig functions, filters, and tags are registered and allowed to be used in Email Templates. You can find the complete list of these functions, filters, and tags by searching classes inherited from <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EmailBundle/DependencyInjection/Compiler/AbstractTwigSandboxConfigurationPass.php" target="_blank">AbstractTwigSandboxConfigurationPass</a>. You can also check out the topic on [Email](../../../user/back-office/system/emails/email-templates.md#user-guide-email-template).
+Also, additional Twig functions, filters, and tags are registered and allowed to be used in Email Templates. You can find the complete list of these functions, filters, and tags by searching classes inherited from <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EmailBundle/DependencyInjection/Compiler/AbstractTwigSandboxConfigurationPass.php" target="_blank">AbstractTwigSandboxConfigurationPass</a>. You can also check out the topic on [Email](../../../user/back-office/system/emails/email-templates.md#user-guide-email-template).
 
 ## Extend Available Data in Email Templates
 
-To extend the available data (variables) in email templates, you can create your own variable provider and processor. The variable provider must implement <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Twig/Sandbox/EntityVariablesProviderInterface.php" target="_blank">EntityVariablesProviderInterface</a> and be registered in the DI container with the oro_email.emailtemplate.variable_provider tag. The variable processor must implement <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Twig/Sandbox/VariableProcessorInterface.php" target="_blank">VariableProcessorInterface</a> and be registered in the DI container with the oro_email.emailtemplate.variable_processor tag.
+To extend the available data (variables) in email templates, you can create your own variable provider and processor. The variable provider must implement <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityBundle/Twig/Sandbox/EntityVariablesProviderInterface.php" target="_blank">EntityVariablesProviderInterface</a> and be registered in the DI container with the oro_email.emailtemplate.variable_provider tag. The variable processor must implement <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityBundle/Twig/Sandbox/VariableProcessorInterface.php" target="_blank">VariableProcessorInterface</a> and be registered in the DI container with the oro_email.emailtemplate.variable_processor tag.
 
 An example:
 
@@ -101,7 +101,9 @@ An example:
 
    > class MyExtension extends AbstractExtension
    > {
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function getFunctions(): array
    >     {
    >         return [new TwigFunction('some_function', [$this, 'getSomeVariableValue'])];
@@ -141,7 +143,9 @@ An example:
 
    > class TwigSandboxConfigurationPass extends AbstractTwigSandboxConfigurationPass
    > {
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     protected function getFunctions(): array
    >     {
    >         return [
@@ -149,19 +153,25 @@ An example:
    >         ];
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     protected function getFilters(): array
    >     {
    >         return [];
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     protected function getTags(): array
    >     {
    >         return [];
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     protected function getExtensions(): array
    >     {
    >         return [
@@ -180,7 +190,9 @@ An example:
 
    > class AcmeDemoBundle extends Bundle
    > {
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function build(ContainerBuilder $container): void
    >     {
    >         parent::build($container);

@@ -8,6 +8,11 @@ Instead, each request should come with some authentication credentials.
 Out-of-the-box, OroPlatform provides the following authentication mechanism:
 
 * [OAuth Authentication](oauth.md)
+* [WSSE Authentication](wsse.md)
+
+#### IMPORTANT
+Please note that WSSE authentication is deprecated and will be removed in one of the future LTS releases.
+Use [OAuth authentication](oauth.md#web-services-api-authentication-oauth) instead.
 
 #### BUSINESS TIP
 # Business Tip

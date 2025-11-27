@@ -98,7 +98,9 @@ The processor creates a set of delayed jobs, each of them sends
 `DoSmallJobTopic` message.
 
 ```php
-#[\Override]
+/**
+ * {@inheritdoc}
+ */
 public function process(MessageInterface $message, SessionInterface $session)
 {
     $bigJobParts = $message->getBody();
@@ -132,7 +134,9 @@ The processor subscribes to the `DoSmallJobTopic` and runs the
 created delayed job.
 
 ```php
-#[\Override]
+/**
+ * {@inheritdoc}
+ */
 public function process(MessageInterface $message, SessionInterface $session)
 {
     $payload = $message->getBody();
@@ -386,7 +390,9 @@ namespace Oro\Component\MessageQueue\Provider;
 
 class NullJobConfigurationProvider implements JobConfigurationProviderInterface
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getTimeBeforeStaleForJobName($jobName)
    {
         return null;

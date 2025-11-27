@@ -7,7 +7,7 @@ For some types of REST API requests, you can retrieve additional information lik
 The following example shows how to get the total number of accounts:
 
 ```none
-curl "http://orocrm.loc/index_dev.php/api/accounts?page=1&limit=2" -v --header="X-Include:totalCount" --header="..."
+curl "http://orocrm.loc/index_dev.php/api/accounts?page=1&limit=2" -v --header="X-Include:totalCount" --header="X-WSSE:..."
 ```
 
 The corresponding response:
@@ -18,6 +18,9 @@ The corresponding response:
 < X-Include-Total-Count: 67
 ...
 ```
+
+#### HINT
+To generate a WSSE header, run: `php bin/console oro:wsse:generate-header YOUR_API_KEY`.
 
 <a id="existing-x-include-keys"></a>
 
@@ -53,7 +56,9 @@ To add a custom key to the `X-Include` header:
    >     public const RESPONSE_HEADER_NAME = 'X-Include-Deleted-Count';
    >     public const REQUEST_HEADER_VALUE = 'deletedCount';
 
-   >     #[\Override]
+   >     /**
+   >      * {@inheritDoc}
+   >      */
    >     public function process(ContextInterface $context): void
    >     {
    >         /** @var DeleteListContext $context */
@@ -96,7 +101,9 @@ use Oro\Component\ChainProcessor\ProcessorInterface;
  */
 class RemoveDeletedCountHeader implements ProcessorInterface
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function process(ContextInterface $context): void
     {
         /** @var DeleteListContext $context */

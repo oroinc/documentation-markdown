@@ -16,7 +16,9 @@ and then methods `addStatusData` and `getStatusData` will be available.
 ```php
 // your connector class
 // ...
-#[\Override]
+/**
+ * {@inheritdoc}
+ */
 public function read()
 {
     $item = parent::read();

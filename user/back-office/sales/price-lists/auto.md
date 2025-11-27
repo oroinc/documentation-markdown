@@ -360,7 +360,7 @@ pricelist[1].prices.value * 1.1
 The currency rates management is only available in the Enterprise edition.
 
 #### NOTE
-The price list recalculation based on the currency rate is available as of OroCommerce version 6.1.1.
+The price list recalculation based on the currency rate is available as of OroCommerce version 6.0.7.
 
 To simplify price management in multiple currencies, price calculation rules can directly use the [currency conversion rates](../../system/configuration/system/general-setup/global-currency.md#sys-config-sysconfig-general-setup-currency) defined in the system configuration. However, currency rates are not updated automatically. If you need to recalculate prices due to a change in exchange rates, you must manually update the currency conversion rate in the system configuration. This update will trigger a full recalculation of all price lists that depend on that currency.
 
@@ -405,7 +405,7 @@ The filtering expression for the product assignment rule and the price calculati
   > + **Category properties**: product.category.id, product.category.left, product.category.right, product.category.level, product.category.root, product.category.createdAt, and product.category.updatedAt
   > + Any **custom properties** added to the product entity (e.g., product.awesomeness), or the product children entity (e.g., product.category.priority and product.price.season)
 * **Price properties**: pricelist[N].prices.currency, pricelist[N].prices.productSku, pricelist[N].prices.quantity, and pricelist[N].prices.value, where N is the ID of the pricelist that the product belongs to.
-* **Exchange rate properties** (is available as of OroCommerce Enterprise version 6.1.1): rate.<SourceCurrencyCode_TargetCurrencyCode> (e.g., rate.USD_EUR, rate.EUR_USD. Virtual field generated for each possible currency pair enabled in [the system configuration](../../system/configuration/system/general-setup/global-currency.md#sys-config-sysconfig-general-setup-currency))
+* **Exchange rate properties** (is available as of OroCommerce Enterprise version 6.0.7): rate.<SourceCurrencyCode_TargetCurrencyCode> (e.g., rate.USD_EUR, rate.EUR_USD. Virtual field generated for each possible currency pair enabled in [the system configuration](../../system/configuration/system/general-setup/global-currency.md#sys-config-sysconfig-general-setup-currency))
 * **Relations** (for example, product.owner, product.organization, product.primaryUnitPrecision, product.category, and any virtual relations created in OroCommerce for entities of product and its children.
 
 #### NOTE

@@ -68,6 +68,9 @@ case, entity data will be in the JSON format. Find more information on this form
 The **Curl Command Line** section contains an example of the CLI command to perform the request
 with <a href="https://curl.haxx.se/" target="_blank">Curl</a>. This command may help emulate the real request to the API.
 
+#### IMPORTANT
+When performing Curl requests and using WSSE authentication, please ensure that your **X-WSSE** header is up to date for each request.
+
 *Edit a Record*
 
 To edit a record for a particular resource record with JSON:API, perform the PATCH method with the specified id parameter:

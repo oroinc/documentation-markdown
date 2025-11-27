@@ -2,7 +2,7 @@
 
 # Configure Entities
 
-So far, Doctrine offers a wide range of functionality to map your entities to the database, save your data, and retrieve them from the database. However, in an application based on the OroPlatform, you usually want to control how entities are presented to the user. OroPlatform includes the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityConfigBundle" target="_blank">EntityConfigBundle</a> that makes it easy to configure additional metadata of your entities, as well as the fields of your entities. For example, you can now configure icons and labels used when showing an entity in the UI, or you can set up access levels to control how entities can be viewed and modified.
+So far, Doctrine offers a wide range of functionality to map your entities to the database, save your data, and retrieve them from the database. However, in an application based on the OroPlatform, you usually want to control how entities are presented to the user. OroPlatform includes the <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/EntityConfigBundle" target="_blank">EntityConfigBundle</a> that makes it easy to configure additional metadata of your entities, as well as the fields of your entities. For example, you can now configure icons and labels used when showing an entity in the UI, or you can set up access levels to control how entities can be viewed and modified.
 
 ## Configure Entities and Their Fields
 
@@ -41,7 +41,7 @@ You can also change the default value of each configurable option using the `def
 namespace Acme\Bundle\DemoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Oro\Bundle\EntityConfigBundle\Attribute\Entity\AttributeFamily;
+use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\Config;
 
 /**
  * ORM Entity Document.

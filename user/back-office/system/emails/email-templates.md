@@ -19,29 +19,18 @@ With the Oro applications, you can easily send numerous personalized emails usin
    * **Owner** — Limits the list of users that can manage the template, subject to the [access and permission settings](../user-management/roles/index.md#user-guide-user-management-permissions).
    * **Template Name** — Name used to refer to the template in the system.
    * **Type** — Use html or plain text.
-   * **Entity Name** — The field is optional and is used to define an [entity](../entities/index.md#entities-management), variables whereof can be used in the template. If no entity name is defined, only system variables are available.
+   * **Entity Name** — The field is optional and is used to define an [entity](../../../glossary.md#term-Entity), variables whereof can be used in the template. If no entity name is defined, only system variables are available.
 
      #### IMPORTANT
      If you want to use the template for [autoresponses](../configuration/system/general-setup/global-email.md#admin-configuration-system-mailboxes-autoresponse), the **Entity Name** field value should be **Email**.
    * **Website** — Choose a website for which this template applies, or leave it blank if the template should be applicable to all websites. To apply this template customization to a different website, clone the template and define the necessary website. Ensure the original template name remains unchanged for the template to work correctly.
-4. Under **Template Data**, define the email template.
-   * **Subject** — Provide the subject for the email template. Click on the necessary system or entity variable from the right to add it to the text box.
-   * **Content** — Provide the content for the email template. Click on the necessary system or entity variable from the right to add it to the text box.
-
+4. Under **Template Data**, define the email template. Click on the necessary variable to add it to the text box.
    ![A sample of an email template](user/img/system/emails/templates/email_template_ex.png)
 
    #### NOTE
-   If you prefer working with email templates via the WYSIWYG editor, you can enable it [globally](../configuration/system/general-setup/global-email.md#admin-configuration-email-configuration-global) or [per organization](../user-management/organizations/org-configuration/general-setup-org/organization-email-settings.md#admin-configuration-email-configuration-organization). However, remember that the WYSIWYG editor is incompatible with the default base email template. Enabling it may break existing email templates and prevent them from being saved. Therefore, it is disabled by default.
-
-<a id="email-templates-attachments"></a>
-> * **Attachments** — The field enables you to include files or images in email templates. The ability to add these files or images depends on the entity you select when creating the template (e.g., Order, User, Quote, etc). The selected entity must contain one of the following [entity field types](../entities/entity-fields/entity-fields-basic-properties.md#admin-guide-create-entity-fields-basic): *File, Image, Multiple Files*, *Multiple Images*.
->   > * If the entity already has predefined files or images, you can select them directly from the **Attachments** field. If several files or images are uploaded into the entity field and you select it in the **Attachments** field, then all the uploaded files will be attached to the email.
->   > * If there are no predefined files, you can upload your own file or image manually to be sent with the email template.
-
-> ![Attachments field view with the Orders selected as entity](user/img/system/emails/templates/order-entity-multi-file.png)
-1. Once the email template is ready, move from tab to tab to localize the template by setting the required fallback option. You can select whether to fall back to the default value, parent localization, or provide a custom template per localization. To create a custom template, uncheck the checkbox and enter the new details for the template.
-2. Click **Save and Close** to apply the changes.
-3. You can delete ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg), edit <i class="fa fa-edit fa-lg" aria-hidden="true"></i>, and clone <i class="far fa-copy" aria-hidden="true"></i> email templates on the page of all templates.
+   If you prefer working with email templates via the WYSIWYG editor, you can enable it [globally](../configuration/system/general-setup/global-email.md#admin-configuration-email-configuration-global) or [per organization](../user-management/organizations/org-configuration/general-setup-org/organization-email-settings.md#admin-configuration-email-configuration-organization). However, remember that the WYSIWYG editor is incompatible with the email template inheritance feature. Enabling it may break existing email templates and prevent them from being saved. Therefore, it is disabled by default.
+5. Click **Save** to apply the changes.
+6. You can delete ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg), edit <i class="fa fa-edit fa-lg" aria-hidden="true"></i>, and clone <i class="far fa-copy" aria-hidden="true"></i> email templates on the page of all templates.
    ![View a list of templates with three options available: edit, clone, delete](user/img/system/emails/templates/email_template_actions.png)
 
 #### IMPORTANT
@@ -50,6 +39,9 @@ Keep in mind that the ability to view, edit, clone, or delete email templates de
 <a id="reuse-base-email-template"></a>
 
 ## Inherit Base Email Template
+
+#### NOTE
+Email Templates Inheritance feature is available as of OroCommerce version 6.0.3.
 
 Email template inheritance allows developers to maintain common styles and foundational markup in a single **base template**, which can then be extended or modified for different email types without repetitive copying and pasting. This base template includes common styles, headers, footers, and foundational markup, ensuring consistency across different emails. Users or frontend developers can manage the base template; the system will first search for it by name among user-managed templates, and if not found, will check the storefront theme.
 
@@ -93,7 +85,7 @@ No tags, text or code are allowed
 ```
 
 #### NOTE
-The WYSIWYG editor is incompatible with the inherited email templates. Enabling it may break existing email templates and prevent them from being saved. Therefore, it is disabled by default.
+The WYSIWYG editor is incompatible with the email template inheritance feature. Enabling it may break existing email templates and prevent them from being saved. Therefore, it is disabled by default.
 
 <a id="user-guide-view-emails-template-variables"></a>
 
@@ -588,15 +580,15 @@ On top of functions, you can use filters in email templates. The full set of the
 * <a href="https://twig.symfony.com/doc/2.x/filters/trim.html" target="_blank">trim</a>
 * <a href="https://twig.symfony.com/doc/2.x/filters/upper.html" target="_blank">upper</a>
 * [oro_html_sanitize](../../../../bundles/platform/UIBundle/twig-filters.md#bundle-docs-platform-ui-bundle-twig-filters)
-* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/UIBundle/Twig/FormatExtension.php#L76" target="_blank">oro_format</a>
+* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBundle/Twig/FormatExtension.php#L76" target="_blank">oro_format</a>
 * [oro_format_address](../../../../bundles/platform/LocaleBundle/address-formatting.md#bundle-docs-platform-locale-bundle-oro-format-address)
-* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/LocaleBundle/Twig/DateTimeExtension.php#L122" target="_blank">oro_format_date</a>
-* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/LocaleBundle/Twig/DateTimeExtension.php#L174" target="_blank">oro_format_time</a>
-* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/LocaleBundle/Twig/DateTimeExtension.php#L92" target="_blank">oro_format_datetime</a>
+* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/LocaleBundle/Twig/DateTimeExtension.php#L122" target="_blank">oro_format_date</a>
+* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/LocaleBundle/Twig/DateTimeExtension.php#L174" target="_blank">oro_format_time</a>
+* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/LocaleBundle/Twig/DateTimeExtension.php#L92" target="_blank">oro_format_datetime</a>
 * oro_format_datetime_organization
 * [oro_format_name](../../../../bundles/platform/LocaleBundle/name-formatting.md#bundle-docs-platform-locale-bundle-format-name)
-* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/CurrencyBundle/Twig/CurrencyExtension.php#L111" target="_blank">oro_format_price</a>
-* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/LocaleBundle/Twig/NumberExtension.php#L212" target="_blank">oro_format_currency</a>
+* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/CurrencyBundle/Twig/CurrencyExtension.php#L111" target="_blank">oro_format_price</a>
+* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/LocaleBundle/Twig/NumberExtension.php#L212" target="_blank">oro_format_currency</a>
 * [oro_format_short_product_unit_value](../../../../bundles/commerce/ProductBundle/product-unit-formatting.md#product-bundle-short-formatting)
 * <a href="https://twig.symfony.com/doc/2.x/filters/join.html" target="_blank">join</a>
 

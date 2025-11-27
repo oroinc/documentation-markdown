@@ -158,9 +158,9 @@ The following table summarizes the difference between a master catalog and a web
 
 #### Value Fallback
 
-| Master Catalog   | Web Catalog   | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-|------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Yes              | No            | Some product settings — like inventory options — can automatically inherit values from the master catalog. For example, in the *Inventory* section on a product edit page, you can either enter a custom value to inventory options, choose to use the category’s default setting, or follow the configuration set at the website level. Let’s say your product belongs to the *Lighting Products* master category, and this category has **Is Upcoming** set to *Yes*. If the product is set to use **Category Defaults**, it will also have **Is Upcoming** set to *Yes* by default, because it inherits that value from its master category. |
+| Master Catalog   | Web Catalog   | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|------------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Yes              | No            | Product-related values fall back to the master catalog settings. Let’s take inventory as an example. In the *Inventory* section on a product edit page, you can either provide a custom value to most inventory options, choose to fall back to category defaults, or follow the configuration determined on the website level. If in the master catalog, *Paper and Mailing* has **Is Upcoming** set to *Yes*, then *PPR1 - Copier Paper White A4 500 Sheets* that belongs to *Paper and Mailing* will have the option *Is Upcoming* set to *Yes* whenever the product falls back to *Category Defaults* (i.e. falls back to the value set for *Is Upcoming* on category level in the master catalog). |
 ![Value Fallback illustration](user/img/products/master_catalog/value_fallback.png)
 
 <a id="concept-guide-web-catalog-change-storefront-menu"></a>
@@ -177,7 +177,7 @@ Commerce_main_menu is located under **System > Storefront Menus**.
 
 Here, categories in the tree to your left constitute the main menu your customers see on the website.
 
-When no [web catalog is connected](../../back-office/system/configuration/system/websites/global-routing.md#sys-config-sysconfig-websites-routing), **commerce_main_menu** is populated with the structure of the *master catalog*, and the target type of the system items is set to **Category**. When you connect a web catalog and define the navigation root, system menu items in the menu is set to Content Node.
+When no [web catalog is connected](../../back-office/system/configuration/system/websites/global-routing.md#sys-config-sysconfig-websites-routing), **commerce_main_menu** is populated with the structure of the master catalog, and the target type of the system items is set to Category. When you connect a web catalog and define the navigation root, system menu items in the menu is set to Content Node.
 
 ![The difference between the way commerce_main_menu looks when either the master or web catalog is connected](user/img/concept-guides/web-catalog/master-vs-webcatalog-frontend-menu.png)
 
@@ -188,17 +188,17 @@ Keep in mind that, initially, the system takes the default values from the [rout
 
 ![Illustrating that the navigation root configured from the Storefront menu supersedes the one set under system configuration.](user/img/concept-guides/web-catalog/nav-root-options.png)
 
-You can also add promo images to the menu and add links to them. In the screenshot below, the image is created as a new menu item with target type URI and placed **2 levels deep in the tree**.
+You can also add promo images to the menu and add links to them. In the screenshot below, the image is created as a new menu item with target type URI and placed 2 levels deep in the tree.
 
 ![Promo image at the bottom of the mega menu](user/img/concept-guides/web-catalog/promo-image.png)
 
-However, if you place such an image **higher or lower than level 2**, it will be displayed as a menu item, which means that you will only see the title of the menu item but not the image. This is the default behavior, and [customization is required](../../../bundles/commerce/CommerceMenuBundle/menu-templates.md#bundle-docs-commerce-commerce-menu-bundle-menu-templates) if it needs changing for your business needs.
+However, if you place such an image higher or lower than level 2, it will be displayed as a menu item, which means that you will only see the title of the menu item but not the image. This is the default behavior, and [customization is required](../../../bundles/commerce/CommerceMenuBundle/menu-templates.md#bundle-docs-commerce-commerce-menu-bundle-menu-templates) if it needs changing for your business needs.
 
 ![Promo image as a link without preview](user/img/concept-guides/web-catalog/promo-image-no-preview.png)
 
 You can use the nodes excluded from the main menu. For example, create a category or content node (e.g., Promotions) with a number of discounted items and with the product listing page not be part of the main menu. Then add it to the [featured menu](../administration/menus/index.md#menu-management-concept-guide) block and place it anywhere in the storefront header under the [theme configuration](../../back-office/system/theme-configuration/index.md#back-office-theme-configuration).
 
-![A segment of web catalog added to featured menu in the storefront](user/img/concept-guides/web-catalog/featured-menu-navigation-root.png)
+![A segment of web catalog added to featured menu in the storefront](user/img/concept-guides/web-catalog/featured-menu-nav-root.png)
 
 ### Synchronization with Original Web Catalog
 

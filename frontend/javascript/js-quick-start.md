@@ -633,9 +633,9 @@ To create a page component with a dynamic view and two-way binding:
 
 **References:**
 
-* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/UIBundle/Resources/public/js/app/components/base/component.js" target="_blank">oroui/js/app/components/base/component</a>
-* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/UIBundle/Resources/public/js/app/views/base/view.js" target="_blank">oroui/js/app/views/base/view</a>
-* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/UIBundle/Resources/public/js/app/modules/input-widgets.js" target="_blank">oroui/js/app/modules/input-widgets</a>
+* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBundle/Resources/public/js/app/components/base/component.js" target="_blank">oroui/js/app/components/base/component</a>
+* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBundle/Resources/public/js/app/views/base/view.js" target="_blank">oroui/js/app/views/base/view</a>
+* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBundle/Resources/public/js/app/modules/input-widgets.js" target="_blank">oroui/js/app/modules/input-widgets</a>
 * <a href="http://backbonejs.org/#View" target="_blank">Backbone View</a>
 
 <!-- Frontend -->

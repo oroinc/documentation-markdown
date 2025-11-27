@@ -16,7 +16,7 @@ For the frontend clients, the authentication ticket can be received by calling t
 route. The response to this request is the JSON object with a ticket field containing a one-time authentication
 ticket.
 
-If the client is a backend client, the authentication ticket can be received by calling the **generateTicket** method of the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/SyncBundle/Authentication/Ticket/TicketProvider.php" target="_blank">oro_sync.authentication.ticket_provider</a> service.
+If the client is a backend client, the authentication ticket can be received by calling the **generateTicket** method of the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/SyncBundle/Authentication/Ticket/TicketProvider.php" target="_blank">oro_sync.authentication.ticket_provider</a> service.
 
 A ticket can be of two types:
 

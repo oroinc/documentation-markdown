@@ -40,7 +40,6 @@ class Document implements
     /**
      * @param AttributeFamily $attributeFamily
      */
-    #[\Override]
     public function setAttributeFamily(AttributeFamily $attributeFamily): self
     {
         $this->attributeFamily = $attributeFamily;
@@ -48,7 +47,6 @@ class Document implements
         return $this;
     }
 
-    #[\Override]
     public function getAttributeFamily(): ?AttributeFamily
     {
         return $this->attributeFamily;
@@ -66,7 +64,9 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
 
 class AddAttributeFamilyField implements Migration
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->addAttributeFamilyField($schema);

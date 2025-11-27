@@ -7,6 +7,5 @@
 ## Related Documentation
 
 * [Shopping List in the Storefront](shopping-list-on-storefront.md)
-* [Shopping List Page Validation](shopping-list-page-validation.md)
 
 <!-- Frontend -->

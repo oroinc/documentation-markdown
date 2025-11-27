@@ -40,6 +40,8 @@ To set up the new arrivals icons and segment per organization:
 
    #### NOTE
    For faster navigation between the configuration menu sections, use [Quick Search](../../../../../configuration/quick-search.md#user-guide-system-configuration-quick-search).
+
+   ![New arrivals configuration per organization](user/img/system/user_management/org_configuration/products/NewArrivalsBlockOrg.png)
 4. In the **New Arrivals** section provide the following information:
    * **Product Segment** – Select the segment that will include the items to be featured in the **New Arrivals** block.
 

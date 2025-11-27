@@ -36,6 +36,7 @@ To change the default global routing settings:
 
 > * **Homepage** - When no web catalog is available, you can choose any of the available landing pages as your homepage. Please note that on clean installations of Oro applications, the default homepage is blank.
 1. In the **Direct URLs** section, configure the following settings:
+   ![Global Direct URLs settings](user/img/system/config_system/routing_direct_url.png)
    * **Enable Direct URLs** - when enabled, the page URL is built using the page slug (e.g., /500-watt-work-light). When disabled, the system path to the item and its ID is used (e.g., /product/view/4).
    * **Product URL Prefix** - the prefix that is appended to the product slug in the URL.
    * **Brand URL Prefix** - the prefix that is appended to the product brand slug in the URL.
@@ -44,6 +45,7 @@ To change the default global routing settings:
 
 <a id="routing-website-matchers-global"></a>
 1. In the **Canonical URLs** section, configure the following parameters:
+   ![Global Canonical URLs settings](user/img/system/config_system/routing_canonical_url.png)
    * **Canonical URL Type** - this option defines whether the *System URL* or *Direct URL* should be used as a canonical link in the meta keywords in the page source code.
      * When *System URL* is selected, the page URL is built using the system path to the item and its ID (e.g. /product/view/4).
      * When *Direct URL* is selected, the page URL is built using the page slug (e.g. /500-watt-work-light).

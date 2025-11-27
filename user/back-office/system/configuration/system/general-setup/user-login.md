@@ -11,7 +11,7 @@ To apply user login-related options in your Oro application instance:
 ## Configure User Login Form
 
 #### NOTE
-The feature is available as of OroCommerce version 6.1.5.
+The feature is available as of OroCommerce version 6.0.8.
 
 In the User Login Form section, configure the ability for a user to sign in to the back-office with a username and password.
 

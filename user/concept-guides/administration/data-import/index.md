@@ -63,7 +63,6 @@ There are seven mandatory steps in the product data upload sequence and some opt
 8. [Import Price Lists](../../../back-office/sales/price-lists/import.md#import-price-lists)
 9. [Import Product Images](../../../back-office/products/products/import-products.md#user-guide-import-product-images)
 10. [Import Inventory](../../../back-office/inventory/import.md#import-inventory-levels)
-11. [Import External Orders in JSON Format](../../../back-office/sales/orders/external-orders-import.md#user-guide-sales-orders-external-orders-import)
 
 ![Product Import Sequence](user/img/concept-guides/import/product-import-sequence.png)
 
@@ -200,4 +199,3 @@ Pay attention that URLs to files or images exported from the ACL protected field
 * [Import Opportunities](../../../back-office/sales/opportunities/import.md#import-opportunities)
 * [Import Accounts](../../../back-office/customers/accounts/import.md#mc-customers-accounts-import)
 * [Import Contacts](../../../back-office/customers/contacts/import-contacts.md#import-contacts)
-* [Import External Orders in JSON Format](../../../back-office/sales/orders/external-orders-import.md#user-guide-sales-orders-external-orders-import)

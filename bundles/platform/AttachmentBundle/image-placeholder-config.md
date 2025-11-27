@@ -12,7 +12,7 @@ There are three services that enable you to set a placeholder for the image that
 
 ## Default Image Placeholder Provider
 
-Take a look at the <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/ProductBundle/Resources/config/image_placeholder.yml" target="_blank">image_placeholder.yml</a> file on Github.
+Take a look at the <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/ProductBundle/Resources/config/image_placeholder.yml" target="_blank">image_placeholder.yml</a> file on Github.
 
 Perform the following steps to override DefaultImagePlaceholderProvider that is located at the very bottom of this chain:
 
@@ -30,7 +30,6 @@ Perform the following steps to override DefaultImagePlaceholderProvider that is 
 2. Add your newly created service to the `oro_product.provider.product_image_placeholder` chain service.  You can do it via DI CompilerPass.
    > ```php
    > // DependencyInjection/Compiler/ImagePlaceholderProviderPass.php
-
    > namespace Acme\Bundle\DemoBundle\DependencyInjection\Compiler;
 
    > use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
@@ -42,20 +41,16 @@ Perform the following steps to override DefaultImagePlaceholderProvider that is 
    >  */
    > class ImagePlaceholderProviderPass implements CompilerPassInterface
    > {
-   >     #[\Override]
    >     public function process(ContainerBuilder $container)
    >     {
    >         if (!$container->hasDefinition('oro_product.provider.product_image_placeholder')) {
-   >             return;
    >         }
+
    >         $definition->setMethodCalls(array_merge(
    >             [['addProvider', [new Reference('acme_demo.provider.demo_image_placeholder.config')]]],
    >             [['addProvider', [new Reference('acme_demo.provider.demo_image_placeholder.theme')]]],
    >             [['addProvider', [new Reference('acme_demo.provider.demo_image_placeholder.default')]]],
    >             $definition->getMethodCalls()
-   >         ));
-   >     }
-   > }
    > ```
 
 Pay attention to the way the chain works. It gets the first suitable value from providers, so we have put our own provider to the very top of the chain via `ContainerBuilder::setMethodCalls` and `array_merge`. You can locate your own provider where required.
@@ -66,18 +61,19 @@ Make sure to insert CompilerPass to the bundle root file.
 > <?php
 
 > // AcmeDemoBundle.php
-
 > namespace Acme\Bundle\DemoBundle;
 
-> use Acme\Bundle\DemoBundle\DependencyInjection\Compiler\AcmeExtendValidationPass;
-> use Acme\Bundle\DemoBundle\DependencyInjection\Compiler\ImagePlaceholderProviderPass;
 > use Oro\Bundle\DataAuditBundle\Model\AuditFieldTypeRegistry;
-> use Symfony\Component\DependencyInjection\ContainerBuilder;
 > use Symfony\Component\HttpKernel\Bundle\Bundle;
+> use Acme\Bundle\DemoBundle\DependencyInjection\Compiler\ImagePlaceholderProviderPass;
+> use Symfony\Component\DependencyInjection\ContainerBuilder;
+> use Acme\Bundle\DemoBundle\DependencyInjection\Compiler\AcmeExtendValidationPass;
 
 > class AcmeDemoBundle extends Bundle
 > {
->     #[\Override]
+>     /**
+>      * {@inheritdoc}
+>      */
 >     public function build(ContainerBuilder $container): void
 >     {
 >         parent::build($container);
@@ -115,14 +111,10 @@ To do this, perform the following:
    > // DependencyInjection/Compiler/ImagePlaceholderProviderPass.php
    >         if (!$container->hasDefinition('oro_product.provider.product_image_placeholder')) {
    >             return;
-   >         }
 
    >         $definition = $container->getDefinition('oro_product.provider.product_image_placeholder');
-   >         $definition = $container->getDefinition('oro_product.provider.product_image_placeholder');
-   >         $definition->setMethodCalls(array_merge(
    >             [['addProvider', [new Reference('acme_demo.provider.demo_image_placeholder.config')]]],
    >             [['addProvider', [new Reference('acme_demo.provider.demo_image_placeholder.theme')]]],
-   >         // ...
    > ```
 3. Create `theme.yml`
    > ```yaml
@@ -157,12 +149,10 @@ To do this, perform the following:
    > // DependencyInjection/Compiler/ImagePlaceholderProviderPass.php
    >         if (!$container->hasDefinition('oro_product.provider.product_image_placeholder')) {
    >             return;
-   >         }
 
    >         // ...
    >             [['addProvider', [new Reference('acme_demo.provider.demo_image_placeholder.config')]]],
    >             [['addProvider', [new Reference('acme_demo.provider.demo_image_placeholder.theme')]]],
-   >         // ...
    > ```
 
 ## TwigExtension and template examples
@@ -171,7 +161,6 @@ To use the providers we have created previously, we need to create TwigExtension
 
 > ```php
 > // Twig/ProductImageExtension.php
-
 > namespace Acme\Bundle\DemoBundle\Twig;
 
 > use Oro\Bundle\AttachmentBundle\Entity\File;
@@ -196,7 +185,9 @@ To use the providers we have created previously, we need to create TwigExtension
 >         $this->container = $container;
 >     }
 
->     #[\Override]
+>     /**
+>      * {@inheritdoc}
+>      */
 >     public function getFunctions()
 >     {
 >         return [
@@ -219,7 +210,9 @@ To use the providers we have created previously, we need to create TwigExtension
 >         return $this->getImagePlaceholderProvider()->getPath($filter);
 >     }
 
->     #[\Override]
+>     /**
+>      * {@inheritdoc}
+>      */
 >     public static function getSubscribedServices()
 >     {
 >         return [

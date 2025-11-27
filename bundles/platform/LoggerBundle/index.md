@@ -2,7 +2,7 @@
 
 # OroLoggerBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/LoggerBundle" target="_blank">OroLoggerBundle</a> extends the MonologBundle functionality and provides:
+<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/LoggerBundle" target="_blank">OroLoggerBundle</a> extends the MonologBundle functionality and provides:
 
 * Error logs email notifications
 * Ability to temporarily decrease log level
@@ -49,6 +49,6 @@ You can also decrease the log level system-wide by skipping the `--user` option.
 
 ## Logging Console Commands
 
-All console commands are logged automatically on **ConsoleEvents::COMMAND** and **ConsoleEvents::EXCEPTION**. See <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/LoggerBundle/EventSubscriber/ConsoleCommandSubscriber.php" target="_blank">ConsoleCommandSubscriber</a> for more information.
+All console commands are logged automatically on **ConsoleEvents::COMMAND** and **ConsoleEvents::EXCEPTION**. See <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/LoggerBundle/EventSubscriber/ConsoleCommandSubscriber.php" target="_blank">ConsoleCommandSubscriber</a> for more information.
 
 <!-- Frontend -->

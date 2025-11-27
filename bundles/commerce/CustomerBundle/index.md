@@ -64,7 +64,7 @@ Anonymous customer user functionality consists of the sections below.
 
 ### AnonymousCustomerUserToken
 
-<a href="https://github.com/oroinc/customer-portal/tree/6.1/src/Oro/Bundle/CustomerBundle/Security/Token/AnonymousCustomerUserToken.php" target="_blank">Oro\\Bundle\\CustomerBundle\\Security\\Token\\AnonymousCustomerUserToken</a> is the token class that is extended from `AnonymousToken`. It is tied with the `CustomerVisitor` entity class which persisted anonymous customer user data for later use. Besides it, the token stores the info taken from the `visitor_id` and `session_id` cookies.
+<a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/CustomerBundle/Security/Token/AnonymousCustomerUserToken.php" target="_blank">Oro\\Bundle\\CustomerBundle\\Security\\Token\\AnonymousCustomerUserToken</a> is the token class that is extended from `AnonymousToken`. It is tied with the `CustomerVisitor` entity class which persisted anonymous customer user data for later use. Besides it, the token stores the info taken from the `visitor_id` and `session_id` cookies.
 
 ```php
 $token = new AnonymousCustomerUserToken(
@@ -74,11 +74,11 @@ $token = new AnonymousCustomerUserToken(
 );
 ```
 
-The `AnonymousCustomerUserToken` is created in the `createToken` method of <a href="https://github.com/oroinc/customer-portal/tree/6.1/src/Oro/Bundle/CustomerBundle/Security/AnonymousCustomerUserAuthenticator.php" target="_blank">Oro\\Bundle\\CustomerBundle\\Security\\AnonymousCustomerUserAuthenticationListener</a>.
+The `AnonymousCustomerUserToken` is created in the `createToken` method of <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/CustomerBundle/Security/AnonymousCustomerUserAuthenticator.php" target="_blank">Oro\\Bundle\\CustomerBundle\\Security\\AnonymousCustomerUserAuthenticationListener</a>.
 
 ### CustomerVisitor Entity
 
-The <a href="https://github.com/oroinc/customer-portal/tree/6.1/src/Oro/Bundle/CustomerBundle/Entity/CustomerVisitor.php" target="_blank">Oro\\Bundle\\CustomerBundle\\Entity\\CustomerVisitor</a> class has the following properties:
+The <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/CustomerBundle/Entity/CustomerVisitor.php" target="_blank">Oro\\Bundle\\CustomerBundle\\Entity\\CustomerVisitor</a> class has the following properties:
 
 * id
 * lastVisit - tracks guest last visit datetime
@@ -98,7 +98,7 @@ $this->sessionId = bin2hex(random_bytes(10));
 #### NOTE
 See <a href="https://symfony.com/doc/current/security/custom_authenticator.html" target="_blank">How to Write a Custom Authenticator</a> for more details on the custom authenticator.
 
-The <a href="https://github.com/oroinc/customer-portal/tree/6.1/src/Oro/Bundle/CustomerBundle/Security/AnonymousCustomerUserAuthenticator.php" target="_blank">Oro\\Bundle\\CustomerBundle\\Security\\AnonymousCustomerUserAuthenticationListener</a> class represents a significant evolution in the authentication process of the storefront’s anonymous users in Symfony 6.4. This class replaces the traditional combination of a Listener and an Authentication Provider, streamlining the process with advanced techniques and new methodologies.
+The <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/CustomerBundle/Security/AnonymousCustomerUserAuthenticator.php" target="_blank">Oro\\Bundle\\CustomerBundle\\Security\\AnonymousCustomerUserAuthenticationListener</a> class represents a significant evolution in the authentication process of the storefront’s anonymous users in Symfony 6.4. This class replaces the traditional combination of a Listener and an Authentication Provider, streamlining the process with advanced techniques and new methodologies.
 
 ### Functionality and Workflow
 
@@ -115,19 +115,28 @@ If the authentication of `AnonymousCustomerUserToken` object is successful, you 
 By default, this param is 30 days, and it is accessible through the [System > Configuration > Commerce > Customer > Customer User](../../../user/back-office/system/configuration/commerce/customer/global-customer-users.md#sys-config-configuration-commerce-customers-customer-users) section on the global and organization levels:
 
 ```php
-// $cookieFactory is an instance of Oro\Bundle\CustomerBundle\Security\Firewall\CustomerVisitorCookieFactory
+const COOKIE_ATTR_NAME = '_security_customer_visitor_cookie';
+const COOKIE_NAME = 'customer_visitor';
+
+$cookieLifetime = $this->configManager->get('oro_customer.customer_visitor_cookie_lifetime_days');
+
+$cookieLifetime = $cookieLifetime * Configuration::SECONDS_IN_DAY;
 
 $request->attributes->set(
-    AnonymousCustomerUserAuthenticator::COOKIE_ATTR_NAME,
-    $cookieFactory->getCookie($visitor->getSessionId())
+    self::COOKIE_ATTR_NAME,
+    new Cookie(
+        self::COOKIE_NAME,
+        base64_encode(json_encode([$visitor->getId(), $visitor->getSessionId()])),
+        time() + $cookieLifetime
+    )
 );
 ```
 
-The <a href="https://github.com/oroinc/customer-portal/tree/6.1/src/Oro/Bundle/CustomerBundle/Security/Listener/CustomerVisitorCookieResponseListener.php" target="_blank">Oro\\Bundle\\CustomerBundle\\Security\\Listener\\CustomerVisitorCookieResponseListener</a> listens `kernel.response` events. If the request has an `_security_customer_visitor_cookie` attribute, it sets a cookie to it.
+The <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/CustomerBundle/Security/Listener/CustomerVisitorCookieResponseListener.php" target="_blank">Oro\\Bundle\\CustomerBundle\\Security\\Listener\\CustomerVisitorCookieResponseListener</a> listens `kernel.response` events. If the request has an `_security_customer_visitor_cookie` attribute, it sets a cookie to it.
 
 ### AnonymousCustomerUserFactory
 
-The <a href="https://github.com/oroinc/customer-portal/tree/6.1/src/Oro/Bundle/CustomerBundle/DependencyInjection/Security/AnonymousCustomerUserFactory.php" target="_blank">Oro\\Bundle\\CustomerBundle\\DependencyInjection\\Security\\AnonymousCustomerUserFactory</a> class ties <a href="https://github.com/oroinc/customer-portal/tree/6.1/src/Oro/Bundle/CustomerBundle/Security/AnonymousCustomerUserAuthenticator.php" target="_blank">Oro\\Bundle\\CustomerBundle\\Security\\AnonymousCustomerUserAuthenticationListener</a>.
+The <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/CustomerBundle/DependencyInjection/Security/AnonymousCustomerUserFactory.php" target="_blank">Oro\\Bundle\\CustomerBundle\\DependencyInjection\\Security\\AnonymousCustomerUserFactory</a> class ties <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/CustomerBundle/Security/AnonymousCustomerUserAuthenticator.php" target="_blank">Oro\\Bundle\\CustomerBundle\\Security\\AnonymousCustomerUserAuthenticationListener</a>.
 Also, it defines the `update_latency` configuration option. It helps prevent sending too many requests to the database when updating the `lastVisit` datetime of the `AnonymousCustomerUser` entity. Its default value is set in the DI container and is expressed in seconds:
 
 ```yaml
@@ -155,7 +164,7 @@ Guest Customer User is a customer user with the following DB properties:
 > * `enabled` = `false`
 > * `is_guest` = `true`
 
-The <a href="https://github.com/oroinc/customer-portal/tree/6.1/src/Oro/Bundle/CustomerBundle/Entity/GuestCustomerUserManager.php" target="_blank">Oro\\Bundle\\CustomerBundle\\Entity\\GuestCustomerUserManager</a> class has a logic of creation `Guest Customer User`.
+The <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/CustomerBundle/Entity/GuestCustomerUserManager.php" target="_blank">Oro\\Bundle\\CustomerBundle\\Entity\\GuestCustomerUserManager</a> class has a logic of creation `Guest Customer User`.
 
 It is used for creating some business products under Anonymous Customer, like RFQ or Order, in the storefront.
 For example, when creating one of the mentioned products, we can tie it with Guest Customer info taken from `AnonymousCustomerUserToken` token:
@@ -185,7 +194,7 @@ if ($token instanceof AnonymousCustomerUserToken) {
 
 ### Ownership
 
-When using guest functionality for some business products, you should specify their owner. With <a href="https://github.com/oroinc/customer-portal/tree/6.1/src/Oro/Bundle/CustomerBundle/Entity/CustomerVisitorOwnerAwareInterface.php" target="_blank">Oro\\Bundle\\CustomerBundle\\Entity\\CustomerVisitorOwnerAwareInterface</a> and <a href="https://github.com/oroinc/customer-portal/tree/6.1/src/Oro/Bundle/CustomerBundle/Owner/AnonymousOwnershipDecisionMaker.php" target="_blank">Oro\\Bundle\\CustomerBundle\\Owner\\AnonymousOwnershipDecisionMaker</a>, you can do it using the following conditions:
+When using guest functionality for some business products, you should specify their owner. With <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/CustomerBundle/Entity/CustomerVisitorOwnerAwareInterface.php" target="_blank">Oro\\Bundle\\CustomerBundle\\Entity\\CustomerVisitorOwnerAwareInterface</a> and <a href="https://github.com/oroinc/customer-portal/blob/master/src/Oro/Bundle/CustomerBundle/Owner/AnonymousOwnershipDecisionMaker.php" target="_blank">Oro\\Bundle\\CustomerBundle\\Owner\\AnonymousOwnershipDecisionMaker</a>, you can do it using the following conditions:
 
 > * entity should implement `CustomerVisitorOwnerAwareInterface`
 > * token should be instance of `AnonymousCustomerUserToken`

@@ -2,6 +2,9 @@
 
 # Manage Conversations in the Back-Office
 
+#### NOTE
+The conversations feature is available as of OroCommerce version 6.0.4 as a <a href="https://extensions.oroinc.com/orocommerce/extension/oro-conversations/" target="_blank">Conversations extension</a>, which you can download from the Oro Extensions Store. Next, use the composer to [install it on your application](../../../../backend/extension/install-extension.md#cookbook-extensions-composer).
+
 Oro provides a conversation tool designed for communication both within the back-office and storefront environments. This tool enables communication between back-office and customer users, creating a cohesive and integrated environment for all stakeholders.
 
 Each conversation consists of a set of messages that can be exchanged by back-office users and [customer users](../../../storefront/conversations/index.md#storefront-guide-conversations).
@@ -61,55 +64,15 @@ You can view, update, delete the existing conversations, and add context or a ne
   By default, the conversation displays the last 5 messages, but you can navigate through them by using the **<Older** or **Newer>** buttons. Use the Refresh <i class="fas fa-sync-alt" aria-hidden="true"></i> button to synchronize it with the latest messages that may have been added.
 * From the page of all conversations under **Activities > Conversations** in the main menu, where you can perform the necessary actions for a conversation.
   ![The actions available for conversations on the view conversation page](user/img/activities/ConversationViewPage.png)
-* From the **Conversations Indicator** at the top of the page. The speech bubble icon will show the number of new conversations with new messages, if there are any. Clicking on the title will redirect you to the view page of a relevant conversation.
+* From the **Conversations Indicator** at the top of the page (available starting from OroCommerce version 6.0.6.). The speech bubble icon will show the number of new conversations with new messages, if there are any. Clicking on the title will redirect you to the view page of a relevant conversation.
   ![Conversations indicator, showing one new message, in the navigation bar in the Oro back-office](user/img/activities/conversations-indicator.png)
-* From **My Conversations** in the user menu. Clicking on this menu item will redirect you to the page of the conversations you initiated or are involved in. If you are an admin or a user with permission to view conversations of other users, clear the *My Conversation* filter.
+* From **My Conversations** in the user menu (available starting from OroCommerce version 6.0.6.). Clicking on this menu item will redirect you to the page of the conversations you initiated or are involved in. If you are an admin or a user with permission to view conversations of other users, clear the *My Conversation* filter.
   ![My conversations menu and view page](user/img/activities/my-conversations.png)
-
-<a id="doc-activities-conversations-email-notifications"></a>
-
-## Set Up Email Notifications for Conversations
-
-In OroCommerce, you can configure email notifications to alert users about new conversations and new messages within existing conversations.
-To set up email notifications, you need to create an email template and notification rules to send the templates when conversation events occur.
-
-#### NOTE
-Email notifications are sent regardless of who starts the conversation or sends a message, a back-office or a storefront user.
-
-To create new email templates:
-
-1. In the back-office, navigate to **System > Emails > Templates**.
-2. Click **Create Template**.
-3. Fill in the required fields.
-4. From the Entity Name list, select *Conversation*.
-5. Define the template details for each of the two templates you are creating (separately):
-   * For a new conversation: Create a subject and body, using `entity variables` or free-form text as needed.
-   * For a new message in a conversation: Create a separate template for message events.
-
-> ![Illustration of email templates for a new conversation and a new conversation message](user/img/activities/conversation-email-templates.png)
-1. Save both templates for use in the next step.
-
-To create two notification rules:
-
-1. In the back-office, go to **System > Emails > Notification Rules**.
-2. Click **Create Notification Rule**.
-3. Define the rule details for each of the two rules you are creating (separately):
-   * In the *Entity Name* field, select the Conversation entity.
-   * For the *Event Name* field, select *Entity Create* for the new conversation and *Entity Update* for a new conversation message.
-   * In the *Template* field, choose one of the previously created templates. Make sure you select the template you created for a new conversation if you selected *Entity Create* even name and a template for a new conversation message of you selected *Entity Update*.
-4. Define the recipients. You can select specific users or email addresses depending on your business requirements.
-   ![Illustration of two new notification rules, one for a new conversation and the other one for a new conversation message](user/img/activities/conversation-notification-rule.png)
-5. Save the new notification rules.
-
-Once templates and notification rules are configured, relevant users should automatically receive email alerts for new conversations and new messages within existing conversations.
-
-![Example mailbox showing received email notifications for a newly created conversation and a new message in an existing conversation](user/img/activities/conversations-email-notifications-received.png)
 
 **Related Topics**
 
 * [Conversations Workflow](../../system/workflows/system-workflows/conversations-workflow.md#system-workflows-conversations-backoffice-workflow)
 * [Enable the Conversations Feature](../../system/configuration/commerce/customer/global-interactions.md#configuration-guide-commerce-configuration-interactions)
-* [Configure Emails in the Back-Office](../../system/emails/index.md#admin-guide-email-configuration)
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->

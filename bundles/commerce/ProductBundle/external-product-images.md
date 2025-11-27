@@ -25,7 +25,9 @@ Below you can find an example of how to switch to the externally stored product 
 
    class EnableIsStoredExternallyForProductImage implements Migration
    {
-       #[\Override]
+       /**
+        * @inheritDoc
+        */
        public function up(Schema $schema, QueryBag $queries)
        {
            $queries->addPostQuery(
@@ -50,13 +52,17 @@ This code works with the upgrade only. If you need it to work with installation,
 
    class ProductImageExtension extends AbstractTypeExtension
    {
-       #[\Override]
+       /**
+        * @inheritDoc
+        */
        public static function getExtendedTypes(): iterable
        {
            return [ProductImageType::class];
        }
 
-       #[\Override]
+       /**
+        * @inheritDoc
+        */
        public function buildForm(FormBuilderInterface $builder, array $options): void
        {
            $builder->add('image', ImageType::class, ['allowDelete' => false, 'isExternalFile' => true]);

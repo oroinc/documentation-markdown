@@ -24,7 +24,9 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
 
 class CustomMigration implements Migration
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         // ...
@@ -52,7 +54,9 @@ use Doctrine\Persistence\ObjectManager;
 
 class CustomFixture implements FixtureInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function load(ObjectManager $manager)
     {
         // ...

@@ -8,7 +8,7 @@ This section is part of the [Content Management Concept Guide](../../../concept-
 Content Blocks are the foundation of your site, and they can help create a custom layout. You can modify the existing content blocks in Oro applications or create your own.
 
 #### NOTE
-Creating a new content block requires developers’ assistance.
+Creating a new content block requires developers’ assistance. As a sample, use the Home Page Slider content block, <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/CMSBundle/Resources/views/layouts/default/oro_frontend_root/home_page_slider.yml" target="_blank">configuration</a> in the yaml file that helps embed it into the website homepage.
 
 To edit a defined content block:
 

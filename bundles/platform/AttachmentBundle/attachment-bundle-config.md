@@ -168,7 +168,9 @@ class AcmeDemoBundle implements Migration, AttachmentExtensionAwareInterface
 {
     use AttachmentExtensionAwareTrait;
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->attachmentExtension->addImageRelation(
@@ -199,7 +201,9 @@ class AcmeDemoBundle implements Migration, AttachmentExtensionAwareInterface
 {
     use AttachmentExtensionAwareTrait;
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->attachmentExtension->addAttachmentAssociation(
@@ -228,7 +232,9 @@ class AcmeDemoBundle implements Migration, AttachmentExtensionAwareInterface
 {
     use AttachmentExtensionAwareTrait;
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->attachmentExtension->addMultiImageRelation(

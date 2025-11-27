@@ -22,13 +22,11 @@ use Symfony\Component\Config\Definition\Builder\NodeBuilder;
  */
 class AcmeEntityConfiguration implements EntityConfigInterface
 {
-    #[\Override]
     public function getSectionName(): string
     {
         return 'acme';
     }
 
-    #[\Override]
     public function configure(NodeBuilder $nodeBuilder): void
     {
         $nodeBuilder
@@ -98,7 +96,7 @@ If you want to set a value different than the default one for some entity, write
 namespace Acme\Bundle\DemoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Oro\Bundle\EntityConfigBundle\Attribute\Entity\AttributeFamily;
+use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\Config;
 
 /**
  * ORM Entity Document.

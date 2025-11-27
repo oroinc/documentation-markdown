@@ -35,7 +35,9 @@ update.html.twig
 ```php
 class UserType extends AbstractType
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('name', TextType::class, ['block' => 'first']);
@@ -43,7 +45,9 @@ class UserType extends AbstractType
         $builder->add('email', EmailType::class, ['block' => 'second']);
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(

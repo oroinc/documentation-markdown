@@ -23,7 +23,12 @@ To configure the product search settings globally:
      ![Illustration of 4 products and 2 categories in the autocomplete search field](user/img/concept-guides/search/storefront-autocomplete.png)
    * **Allow Partial Product Search** — When enabled, the customer can find a product in the global search and on quick order form using a substring inside a word. This means that even if users do not have the exact product name or spelling memorized, they can still find what they need. Enabling this option may have a performance impact on search behaviour. This is due to the system’s need to process and match substrings within product names or descriptions, potentially requiring additional computational resources.
      ![Partial Product Search illustration](user/img/concept-guides/search/partial-product-search.png)
-5. Click **Save Settings**.
+5. In the **Automatic Phrase Suggestions** section (available starting from OroCommerce v6.0.1), configure the following options:
+   * **Enable Automatic Phrase Suggestions in Search Autocomplete** — Select the checkbox to enable displaying suggestions in the storefront.
+   * **Number Of Automatically Suggested Phrases In Search Autocomplete** — The maximum number of suggestions displayed in the storefront autocomplete dropdown.
+
+   ![Automatic Phrase Suggestions illustration](user/img/concept-guides/search/phrase-suggestions.png)
+6. Click **Save Settings**.
 
 **Related Topics**
 

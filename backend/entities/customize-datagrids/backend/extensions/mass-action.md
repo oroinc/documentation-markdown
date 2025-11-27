@@ -87,7 +87,9 @@ class UserUnlockHandler implements MassActionHandlerInterface
         $this->errorMessage   = $errorMessage;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function handle(MassActionHandlerArgs $args)
     {
         $token = $this->tokenStorage->getToken();
@@ -270,7 +272,9 @@ class CustomTypeAction extends AbstractMassAction
     /** @var array */
     protected $requiredOptions = ['handler'];
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function setOptions(ActionConfiguration $options)
     {
         if (empty($options['frontend_handle'])) {
@@ -292,13 +296,17 @@ class CustomTypeAction extends AbstractMassAction
         return parent::setOptions($options);
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     protected function getAllowedRequestTypes(): array
     {
         return [Request::METHOD_POST];
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     protected function getRequestType(): string
     {
         return Request::METHOD_POST;

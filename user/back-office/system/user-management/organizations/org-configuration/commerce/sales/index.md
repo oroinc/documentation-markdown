@@ -9,4 +9,3 @@
 * [Multi Shipping Options](organization-multi-shipping.md)
 * [Quotes](organization-quote.md)
 * [Promotions](organization-promotions.md)
-* [Invoices](organization-invoices.md)

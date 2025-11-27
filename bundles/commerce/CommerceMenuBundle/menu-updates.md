@@ -7,7 +7,7 @@ OroCommerceMenuBundle reuses and extends the [Menu Updates](../../platform/Navig
 1. Menu Updates for customer scope backed by `oro_commerce_menu.scope_criteria_provider.customer` service.
 2. Menu Update for customer group scope backed by `oro_commerce_menu.scope_criteria_provider.customer_group` service.
 
-While using the same code from <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/NavigationBundle" target="_blank">OroNavigationBundle</a>, OroCommerceMenuBundle declares its own stack of classes and services to work with menu updates:
+While using the same code from <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/NavigationBundle" target="_blank">OroNavigationBundle</a>, OroCommerceMenuBundle declares its own stack of classes and services to work with menu updates:
 
 1. Entity class `Oro\Bundle\CommerceMenuBundle\Entity\MenuUpdate` to store the changes made to menu items.
 2. Menu builder `Oro\Bundle\NavigationBundle\Menu\MenuUpdateBuilder`: `oro_commerce_menu.menu.menu_update_builder` that applies menu updates for the current scope.

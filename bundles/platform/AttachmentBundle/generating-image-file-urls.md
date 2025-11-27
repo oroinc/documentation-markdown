@@ -48,19 +48,25 @@ class CustomUrlProvider implements FileUrlProviderInterface
         $this->innerFileUrlProvider = $innerFileUrlProvider;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getFileUrl(File $file, string $action = self::FILE_ACTION_GET, int $referenceType = UrlGeneratorInterface::ABSOLUTE_PATH): string
     {
         return 'custom url here';
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getResizedImageUrl(File $file, int $width, int $height, string $format = '', int $referenceType = UrlGeneratorInterface::ABSOLUTE_PATH): string
     {
         return 'custom url here';
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getFilteredImageUrl(File $file, string $filterName, string $format = '', int $referenceType = UrlGeneratorInterface::ABSOLUTE_PATH): string
     {
         if (/* custom condition here */) {
@@ -125,7 +131,9 @@ class CustomFileNameProvider implements FileNameProviderInterface
         $this->doctrineHelper = $doctrineHelper;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getFileName(File $file): string
     {
         if (!$this->isApplicable($file)) {
@@ -135,7 +143,9 @@ class CustomFileNameProvider implements FileNameProviderInterface
         return $this->getNameWithFormat($file);
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getFilteredImageName(File $file, string $filterName, string $format = ''): string
     {
         if (!$this->isApplicable($file)) {
@@ -145,7 +155,9 @@ class CustomFileNameProvider implements FileNameProviderInterface
         return $this->getNameWithFormat($file, $format);
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getResizedImageName(File $file, int $width, int $height, string $format = ''): string
     {
         if (!$this->isApplicable($file)) {

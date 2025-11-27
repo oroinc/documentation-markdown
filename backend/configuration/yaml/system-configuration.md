@@ -10,8 +10,8 @@
 The `system_configuration.yml` file defines all the configuration options a bundle exposes which
 can be modified by the user in the system settings menu.
 
-The following example shows a complete working configuration taken from the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ActivityListBundle/Resources/config/oro/system_configuration.yml" target="_blank">system_configuration.yml file</a>
-of the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ActivityListBundle" target="_blank">ActivityListBundle</a> from OroPlatform:
+The following example shows a complete working configuration taken from the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ActivityListBundle/Resources/config/oro/system_configuration.yml" target="_blank">system_configuration.yml file</a>
+of the <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ActivityListBundle" target="_blank">ActivityListBundle</a> from OroPlatform:
 
 *src/Oro/Bundle/ActivityListBundle/Resources/config/oro/system_configuration.yml*
 ```yaml

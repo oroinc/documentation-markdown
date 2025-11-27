@@ -1,6 +1,6 @@
 <a id="user-guide-business-intelligence-widgets-leads-statistics"></a>
 
-# Lead Statistics
+# Leads Statistics
 
 The Leads Statistics widget displays a set of metrics that indicate the performance of your lead pipeline. You can configure the widget to show only leads in certain conditions, e.g., only open leads owned by the current user.
 

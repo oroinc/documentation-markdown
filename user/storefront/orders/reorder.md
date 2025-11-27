@@ -19,7 +19,7 @@ To proceed with re-ordering:
    Alternatively, click **View** to check the details of the selected order, and then click **Re-Order** directly from its view page.
    ![image](user/img/storefront/orders/reorder_3.png)
 2. The **Checkout** page incorporates billing, shipping, and payment information provided by the customer in the original order.
-3. In case any personal information has been changed, the customer can easily update it from the checkout page when using the multistep checkout.
+3. In case any personal information has been changed, the customer can easily update it from the checkout page.
    ![image](user/img/storefront/orders/reorder_4.png)
 
    #### NOTE

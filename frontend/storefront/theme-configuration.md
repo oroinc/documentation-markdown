@@ -28,21 +28,8 @@ The theme configuration has the following option types:
 | radio                      | A single radio button is used to<br/>choose one defined option from group.                                                                                             |
 | menu_selector              | A single field is used to choose one<br/>menu name from a list. The menu names<br/>are provided dynamically.                                                           |
 | content_block_selector     | A single field is used to choose one<br/>content block from a list. The block<br/>names are provided dynamically.<br/>Previews keys depend on content block<br/>alias. |
-| content_widget_selector    | A single field is used to choose one<br/>content widget from a list. The names<br/>are provided dynamically. Previews<br/>keys depend on content widget names.         |
 | product_page_template      | A single field is used to choose one<br/>page template from a list (static<br/>values: default, tabs, wide).                                                           |
 | quick_access_button_config | A multi-purpose field is used to<br/>represent QuickAccessButton settings.<br/>Previews depend on type field values<br/>(menu, web_catalog_node).                      |
-| css_background             | A multi field is used to<br/>represent CssBackgroundConfigBuilder<br/>settings.                                                                                        |
-| css_border_radius          | A multi field is used to represent<br/>CssBorderRadiusConfigBuilder<br/>settings.                                                                                      |
-| css_box_shadow             | A multi field is used to<br/>represent CssBoxShadowConfigBuilder<br/>settings.                                                                                         |
-| css_color                  | A multi field is used to<br/>represent CssColorConfigBuilder<br/>settings.                                                                                             |
-| css_font_size              | A multi field is used to<br/>represent CssFontSizeConfigBuilder<br/>settings.                                                                                          |
-| css_gap                    | A multi field is used to<br/>represent CssGapConfigBuilder<br/>settings.                                                                                               |
-| css_background             | A multi field is used to<br/>represent CssBackgroundConfigBuilder<br/>settings.                                                                                        |
-| css_length                 | A multi field is used to<br/>represent CssLengthConfigBuilder<br/>settings.                                                                                            |
-| css_line_height            | A multi field is used to<br/>represent CssLineHeightConfigBuilder<br/>settings.                                                                                        |
-| css_min_height             | A multi field is used to<br/>represent CssMinHeightConfigBuilder<br/>settings.                                                                                         |
-| css_outline                | A multi field is used to<br/>represent CssOutlineConfigBuilder<br/>settings.                                                                                           |
-| css_padding                | A multi field is used to<br/>represent CssPaddingConfigBuilder<br/>settings.                                                                                           |
 | integer                    | An input field looks like a text box<br/>and accepts only integer numbers.                                                                                             |
 | number                     | An input field looks like a text box<br/>and accepts numbers. This type has<br/>options for the scale and rounding.                                                    |
 | text                       | An input field represents the most<br/>basic text field.                                                                                                               |
@@ -116,25 +103,3 @@ To validate theme configuration options, use the following command:
 ```none
 bin/console oro:theme:configuration:validate
 ```
-
-## How-To Guides
-
-### Problem 1
-
-*I want to forbid deleting entities that are stored in the theme configuration as a value of option.*
-
-**Solution**:
-
-> ```yaml
-> services:
->     oro_cms.acl.voter.content_widget:
->         class: Oro\Bundle\ThemeBundle\Acl\Voter\ThemeConfigurationDependencyDeleteVoter
->         arguments:
->             - '@oro_entity.doctrine_helper'
->             - '@oro_theme.provider.theme_configuration'
->             - 'content_widget_selector'
->         calls:
->             - [setClassName, ['Oro\Bundle\CMSBundle\Entity\ContentWidget']]
->         tags:
->             - { name: security.voter }
-> ```

@@ -16,7 +16,6 @@ Want to comprehensively evaluate your <a href="https://oroinc.com/b2b-ecommerce/
 
 <ul class="tag-cloud">
 
-  <li><a class="tag-very-important" href="field-sales-app/">Field Sales App</a></li>
   <li><a class="tag-important" href="business-models/marketplace/">OroMarketplace</a></li>
   <li><a class="" href="catalog-promotions/master-catalog/">Master Catalog Management</a></li>
   <li><a class="tag-very-important" href="content-management/web-catalog/">Web Catalog Management</a></li>
@@ -36,7 +35,6 @@ Want to comprehensively evaluate your <a href="https://oroinc.com/b2b-ecommerce/
   <li><a class="tag-important" href="customers-sales/rfq-quotes/">RFQ and Quote Management</a></li>
   <li><a class="tag-very-important" href="customers-sales/orders/">Order Management</a></li>
   <li><a class="" href="administration/menus/">Storefront and Back-Office Menu Management</a></li>
-  <li><a class="tag-very-important" href="ai/">AI and Automation</a></li>
   <li><a class="tag-important" href="administration/localization/">Storefront Localization</a></li>
   <li><a class="tag-very-important" href="administration/taxes/">Tax Management</a></li>
   <li><a class="" href="administration/localization/label-translation/">Translation of Product Attribute Labels</a></li>

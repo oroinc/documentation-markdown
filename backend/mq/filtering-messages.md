@@ -7,7 +7,7 @@ Together with the [buffering of messages](buffering-messages.md#dev-guide-mq-buf
 combining several messages in one message or even removing messages on the client side and, as a result,
 sending an optimized set of messages to the message queue.
 
-To create a new message filter, you need to create a class that implements <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/MessageQueueBundle/Client/MessageFilterInterface.php" target="_blank">MessageFilterInterface</a>
+To create a new message filter, you need to create a class that implements <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MessageQueueBundle/Client/MessageFilterInterface.php" target="_blank">MessageFilterInterface</a>
 and register it in the dependency injection container with the `oro_message_queue.message_filter` tag.
 This tag has the topic attribute that is used to specify a topic to which a filter should be applied.
 When the topic is not specified, the filter is applied to messages from all topics.
@@ -34,7 +34,9 @@ class MyMessageFilter implements MessageFilterInterface
         $this->topic = $topic;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function apply(MessageBuffer $buffer): void
     {
         if (!$buffer->hasMessagesForTopic($this->topic)) {
@@ -66,7 +68,7 @@ services:
 ```
 
 #### NOTE
-- The filtering is not executed after filters made changes in the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/MessageQueueBundle/Client/MessageBuffer.php" target="_blank">message buffer</a>.
-- All messages represented by <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/MessageQueue/Client/MessageBuilderInterface.php" target="_blank">message builders</a> are resolved before the filtering is executed.
+- The filtering is not executed after filters made changes in the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/MessageQueueBundle/Client/MessageBuffer.php" target="_blank">message buffer</a>.
+- All messages represented by <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/MessageQueue/Client/MessageBuilderInterface.php" target="_blank">message builders</a> are resolved before the filtering is executed.
 
 <!-- Frontend -->

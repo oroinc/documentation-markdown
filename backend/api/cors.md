@@ -41,12 +41,6 @@ oro_api:
 ```
 
 #### NOTE
-The CORS for Storefront REST API resources is configured as described in [Storefront REST API](storefront.md#web-api-storefront).
-
-#### NOTE
 The CORS for OAuth 2.0 token endpoint is configured as described in [OroOAuth2ServerBundle](../../bundles/platform/OAuth2ServerBundle/index.md#bundle-docs-platform-oauth2-server-bundle-configuration).
-
-#### NOTE
-The CORS for downloading published OpenAPI specifications is configured as described in [CORS Configuration for Published OpenAPI Specifications](cors-open-api.md#openapi-cors-config).
 
 <!-- Frontend -->

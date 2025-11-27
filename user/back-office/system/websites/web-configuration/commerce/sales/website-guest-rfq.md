@@ -18,16 +18,12 @@ To configure the request for quote settings per website:
    #### NOTE
    For faster navigation between the configuration menu sections, use [Quick Search](../../../../configuration/quick-search.md#user-guide-system-configuration-quick-search).
 
-   ![RFQ configuration options per website](user/img/system/websites/web_configuration/website_rfq_config.png)
-4. Clear the **Use Organization** checkbox to override the organization-wide configuration options.
-5. In the **General** section, customize the following options:
-   * **Enable RFQ (Storefront)** — the option enables the OroCommerce-driven RFQ functionality for the storefront. Your customers will be able to submit RFQs from the storefront.
+![RFQ configuration options per website](user/img/system/websites/web_configuration/website_rfq_config.png)
+1. Clear the **Use Organization** checkbox to override the organization-wide configuration options.
+2. In the **General** section, customize the following options:
 
-   #### NOTE
-   The Enable RFQ Project Name feature was introduced in OroCommerce versions 6.1.3 and 6.1.4.
-
-   * **Enable RFQ Project Name** — this option enables project name management for RFQs in the storefront. In the back-office, the feature is enabled automatically if it is turned on for an organization or for at least one website within that organization. Once active, a Project Name field appears on RFQ edit pages, and a Project Name column is added to the RFQ grid in the back-office. The project name serves as an optional identifier that helps users search for and track RFQs by name, particularly when records originate from external systems or third parties.
-6. In the **Notifications** section, configure notifications for all the parties concerned, namely:
+   **Enable RFQ (Store Front)** — the option enables the OroCommerce-driven RFQ functionality for the storefront. Your customers will be able to submit RFQs from the storefront.
+3. In the **Notifications** section, configure notifications for all the parties concerned, namely:
    * an assigned sales representatives of the customer
    * the owner of the customer user
    * the owner of the customer

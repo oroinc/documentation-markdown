@@ -14,7 +14,7 @@ The bundle also provides an interface that enables developers to implement integ
 
 You can add your own custom tax logic with custom tax provider.
 
-1. Create tax provider that implements <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/TaxBundle/Provider/TaxProviderInterface.php" target="_blank">TaxProviderInterface</a> interface:
+1. Create tax provider that implements <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/TaxBundle/Provider/TaxProviderInterface.php" target="_blank">TaxProviderInterface</a> interface:
 
 ```php
 namespace Acme\Bundle\DemoBundle\Provider;
@@ -25,37 +25,49 @@ class DemoTaxProvider implements TaxProviderInterface
 {
     const LABEL = 'acme.demo.providers.demo.label';
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getLabel()
     {
         return self::LABEL;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function isApplicable()
     {
         return true;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function loadTax($object)
     {
         // implement your loadTax() method.
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getTax($object)
     {
         // implement your getTax() method.
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function saveTax($object)
     {
         // implement your saveTax() method.
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function removeTax($object)
     {
         // implement your removeTax() method.

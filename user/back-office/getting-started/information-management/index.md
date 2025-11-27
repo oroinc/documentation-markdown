@@ -22,7 +22,7 @@ The workflows define actions and transitions available for your records in the a
 * [Import Records](import.md)
 * [Export Records](export.md)
 * [Add Notes](notes.md)
-* [Create and View Comments](comments.md)
+* [How to Create and View Comments](comments.md)
 * [Add Attachments](attachments.md)
 
 <!-- fa-bars = fa-navicon -->

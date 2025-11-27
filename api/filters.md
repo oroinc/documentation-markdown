@@ -142,10 +142,6 @@ are not allowed by default and should be enabled by a developer who creates API 
 | **not_ends_with**   | Not ends with a text                                                                                                                                                                                                                                                                                                       | GET /api/users?filter[id][not_ends_with]=test HTTP/1.1<br/><br/>                                                     |
 | **empty**           | Empty or is null,<br/>e.g. an empty string<br/>or null, an empty<br/>array or null                                                                                                                                                                                                                                         | GET /api/users?filter[id][empty]=yes HTTP/1.1<br/><br/><br/>GET /api/users?filter[id][empty]=no HTTP/1.1<br/><br/>   |
 
-#### NOTE
-It is possible to use a filter by the same field several times with different operators. For example:
-GET /api/users?filter[id][gte]=5&filter[id][lte]=7.
-
 **Example of Using Operators to Filter Data**
 
 *Request*

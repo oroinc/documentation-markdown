@@ -76,12 +76,11 @@ The product details page appears.
 > | **Is Upcoming**               | This option informs a customer that the product of the selected category is not currently in stock but will be available later. When set to *Yes*, an additional **Availability Date** is displayed. To remove the upcoming products label, set the option to *No* or customize the required behavior in the [system configuration](../../system/configuration/commerce/inventory/product-options.md#upcoming-products-config).                                                                                                                                    |
 > | **Availability Date**         | The date which indicates the exact date and time when the selected product will be restocked.                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 > <!-- finish_inventory -->![The detailed settings of the inventory section](user/img/products/products/simple_product_inventory.png)
-1. Provide [price attributes](../price-attributes/index.md#user-guide-products-price-attributes) (if available), and fixed product prices in the **Product Price** section. Note that fixed prices override the automatically generated [price lists](../../../concept-guides/catalog-promotions/pricing/index.md#user-guide-pricing).
+1. Add fixed product prices in the **Product Price** section. Note that fixed prices override the automatically generated [price lists](../../../concept-guides/catalog-promotions/pricing/index.md#user-guide-pricing).
 
    Click **+Add**, select a price list, and specify quantity, units, price value, and currency.
    ![The product prices setting](user/img/products/products/SimpleProductPrices.png)
-2. In the **Shipping Options** section, click **+Add Options** and provide unit, weight, and weight measuring unit, dimensions (width, height, depth), and dimensions measuring unit and freight class. You can also provide shipping cost below, if necessary.
-   ![image](user/img/products/products/shipping-options.png)
+2. In the **Shipping Options** section, click **+Add Options** and provide unit, weight, and weight measuring unit, dimensions (width, height, depth), and dimensions measuring unit and freight class.
 3. Review translation rules for a product name, URL slug, long description, and short description.
 
    To enter translation manually, click <i class="fas fa-language" aria-hidden="true"></i>, clear the **Use <parent translation>** checkbox next to the required language, and provide your translation version.

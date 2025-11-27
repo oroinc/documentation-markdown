@@ -2,7 +2,7 @@
 
 # OroAssetBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/AssetBundle" target="_blank">OroAssetBundle</a> adds the possibility to install project assets using webpack.
+<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/AssetBundle" target="_blank">OroAssetBundle</a> adds the possibility to install project assets using webpack.
 
 ## Architecture
 
@@ -138,36 +138,6 @@ checkout:                                               # Another entry point na
 #### NOTE
 SCSS is the recommended format, CSS format is deprecated by sass-loader npm module.
 
-#### Twig Functions
-
-- `oro_external_link` — Returns a link to an external asset resource stored in the “oro_asset.external_resources” configuration. For more details, see: [Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity).
-
-**Example:**
-
-```twig
-<script async src="{{ oro_external_link('oro_google_analytics') }}"></script>
-```
-
-Expected output:
-
-```html
-<script async src="https://www.google-analytics.com/analytics.js" rel="dns-prefetch">
-```
-
-- `oro_integrity` — provides Subresource Integrity hash for local asset resources.
-
-**Example:**
-
-```twig
-<script src="{{ '/build/default/app.js' }}" {{ oro_integrity('/build/default/app.js') }}></script>
-```
-
-Expected output:
-
-```html
-<script src="/build/default/app.js?v=e61610e4" integrity="sha384-DAILU17u6emSxfVg8atEESVcx0aMd5gHIbhmP9vx2BlXfdWSaQeRrRdVoXhnOwAQ" crossorigin="anonymous"></script>
-```
-
 ### Load JS modules from the Bundle
 
 JS modules are defined within jsmodules.yml configuration files.
@@ -272,7 +242,7 @@ php bin/console cache:warmup
 
 **Error: “output” for “assets” group in theme “oro” is not defined**
 
-Please follow <a href="https://github.com/oroinc/platform/tree/6.1/CHANGELOG.md#assetbundle-1" target="_blank">upgrade documentation</a> to update assets.yml files according to new requirements.
+Please follow <a href="https://github.com/oroinc/platform/blob/master/CHANGELOG.md#assetbundle-1" target="_blank">upgrade documentation</a> to update assets.yml files according to new requirements.
 
 **Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID**
 

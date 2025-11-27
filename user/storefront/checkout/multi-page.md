@@ -54,7 +54,7 @@ If the **Ship to this address** checkbox has been selected in the Billing Inform
    * **Do not ship later than** — Click the field to select the date on which the order expires.
    * **PO Number** — Enter the purchase order number for reference.
    * **Notes** — Provide any additional information regarding the order.
-   * **Delete this shopping list after ordering** — Select this checkbox to remove the shopping list after the order is completed.
+   * **Delete this shopping list after submitting order** — Select this checkbox to remove the shopping list after the order is completed.
 2. To submit the order, click **Submit Order** at the bottom of the page.
    ![image](user/img/system/workflows/checkout/Order_Review.png)
 

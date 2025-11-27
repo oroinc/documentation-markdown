@@ -14,12 +14,19 @@ Such tables represent aggregated views of data and store records, making it easy
 
 <a id="frontstore-guide-navigation-location-trail"></a>
 
-## Breadcrumbs
+## Location Trail (Breadcrumbs)
 
-Breadcrumbs displayed under the top navigation bar show the hierarchical path to the current page, based on the product catalog structure (as of OroCommerce 6.1.2).
+You can trace where the current page is located in the menu in the breadcrumbs under the top navigation bar.
 
-- The current page is not included in the breadcrumbs on all pages.
-- Breadcrumbs that contain only one item are not shown.
+Breadcrumbs are generated based on the current catalog structure and may include the full path from the main menu to the current product or category.
+
+You can configure the breadcrumbs behavior in the back-office via:
+
+- *Exclude Current Page in Breadcrumbs on Product View*
+- *Exclude Current Page in Breadcrumbs on All Pages*
+- *Hides the breadcrumbs block entirely when it contains a single item*
+
+These options are available under **System > Configuration > Commerce > Product > SEO**.
 
 ![image](user/img/storefront/navigation/GridLocationName.png)
 
@@ -68,6 +75,8 @@ Tables can be viewed, saved as new ones, shared, renamed, set as default and del
    * **Add**: Click **Add** to add a new saved view table.
    * **Cancel**: Click **Cancel** to exit.
 
+   ![image](user/img/storefront/navigation/SaveViewAsDefault.png)
+
    The following actions are available for saved view:
    * share the selected saved view: ![Bookmark-SVG](_themes/sphinx_rtd_theme/static/svg-icons/bookmark.svg)
    * unshare the selected saved view: ![BookmarkFilled-SVG](_themes/sphinx_rtd_theme/static/svg-icons/bookmark-filled.svg)
@@ -108,24 +117,32 @@ The following actions are available for filters:
 1. To show/hide filters, click the filter toggle icon ![Sliders-SVG](_themes/sphinx_rtd_theme/static/svg-icons/sliders.svg).
    ![image](user/img/storefront/navigation/Filters.png)
 
-#### NOTE
-Note that not all filters may be visible by default.
-
-1. To apply a filter, click on its button in the bar and select the required option from the dropdown list.
+   #### NOTE
+   Note that not all filters may be visible by default.
+2. To apply a filter, click on its button in the bar and select the required option from the dropdown list.
    ![image](user/img/storefront/navigation/FiltersSelect.png)
 
+   #### NOTE
+   The dropdown list displays all the attributes available for the products on the page you are currently viewing. If there no products related to the searching attributes, the attributes may be hidden from the dropdown list
+   <!-- .. image:: /user/img/storefront/navigation/FiltersSelectOneAttribute.png -->
+
+   or remain visible but disabled [depending on the website configuration](../../back-office/system/configuration/commerce/catalog/global-filters-sorters.md#configuration-guide-commerce-configuration-catalog-filters-sorters) when no items matching selected attributes in filters were found.
+   <!-- .. image:: /user/img/storefront/navigation/dont_change_initial_filter_state.png -->
+
+1. Another way to apply a filter is to click on its button and specify your query in the control that appears. Note that filter controls might look different depending on the type of data you are going to filter — whether it is textual, numeric, date or option set. After the filter is applied, its query will appear in the control, so you can easily recall how you have filtered the data.
+   ![image](user/img/storefront/navigation/FiltersApplied.png)
+
+<!-- Filter controls may be hidden at all if there are no related products on the displayed page.
+
+.. .. image:: /user/img/storefront/navigation/FiltersDisabled.png -->
+1. To remove a filter, click on a cross **x** after the query.
+
+   If you wish to reset all applied filters, click **x Clear All Filters**.
+
 #### NOTE
-The dropdown list displays all the attributes available for the products on the page you are currently viewing. If there no products related to the searching attributes, the attributes may be hidden from the dropdown list or remain visible but disabled [depending on the website configuration](../../back-office/system/configuration/commerce/catalog/global-filters-sorters.md#configuration-guide-commerce-configuration-catalog-filters-sorters) when no items matching selected attributes in filters were found.
+Filter in the storefront can be displayed either at the top (default) or in the left sidebar.
 
-The appearance of filter controls may vary based on the type of data being filtered, such as text, numbers, dates, or options. Applied filters are displayed under the filter controls.
-
-1. To remove a filter, click on a cross **x** after the query. To reset all applied filters, click **x Clear All Filters**.
-   ![Applied storefront filters](user/img/storefront/navigation/applied-filters.png)
-
-#### HINT
-Filter in the storefront can be displayed either at the top (default) or in the left sidebar, depending on the **Filter Position** configuration applied in the [back-office theme configuration](../../back-office/system/theme-configuration/index.md#back-office-theme-configuration).
-
-![Three representations of filter panel positions in the storefront](user/img/system/theme-configuration/filter-panel-position.png)
+![The storefront product page illustrating the filter in the left sidebar](user/img/system/config_commerce/catalog/filters_panel_position_sidebar.png)
 
 <a id="frontstore-guide-navigation-table-options"></a>
 

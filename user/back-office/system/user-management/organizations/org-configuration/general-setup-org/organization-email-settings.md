@@ -40,7 +40,7 @@ To configure email settings per organization:
    > * *Password* — The password for your email address
 6. Under **HTML in templates**, configure the following:
    > * **Enable HTML Purifier** — Enable or disable HTML Purifier. Disabling HTML Purifier allows you to paste any HTML code into a template or an email body editor without tag stripping.
-   > * **Enable WYSIWYG For Email Templates** — Enable or disable the WYSIWYG editor for [email templates](../../../../emails/index.md#admin-guide-email-configuration). Remember that the WYSIWYG editor does not support variables provided by the default base email template. Enabling the WYSIWYG editor may break existing email templates.
+   > * **Enable WYSIWYG For Email Templates** — Enable or disable the WYSIWYG editor for [email templates](../../../../emails/index.md#admin-guide-email-configuration). Remember that the WYSIWYG editor does not support variables provided by the default base email template. Enabling the WYSIWYG editor may break existing email templates. This feature is available as of OroCommerce version 6.0.3.
 7. Under **System Mailboxes**, configure a [system mailbox](../../../../configuration/system/general-setup/global-email.md#admin-configuration-system-mailboxes) that allows people who do not have access to the company mailbox addresses to write to the company. To add a new system mailbox, click **Add Mailbox**.
 8. Click **Save Settings**.
 

@@ -47,7 +47,7 @@ To learn how to create and manage email templates, see [Configure Email Template
 
 ## Automation and Triggers
 
-Notification rules in OroCommerce are predefined conditions that trigger automatic notifications or emails based on specific events or changes within the system. These rules are designed to keep users informed in real time. For instance, when the order status changes to “closed,” a notification rule can automatically email the customer about this. Whenever an automatic email notification is sent out, it has to follow a specific [notification template](../../system/emails/email-templates.md#user-guide-using-emails-create-template) created beforehand that gives it style and content.
+Notification rules in OroCommerce are predefined conditions that trigger automatic notifications or emails based on specific events or changes within the system. These rules are designed to keep users informed in real time. For instance, when the order status changes to “shipped,” a notification rule can automatically email the customer with tracking information. Whenever an automatic email notification is sent out, it has to follow a specific [notification template](../../system/emails/email-templates.md#user-guide-using-emails-create-template) created beforehand that gives it style and content.
 
 To learn how to work with notification rules, see [Configure Email Notification Rules](../../system/emails/notification-rules.md#user-guide-using-emails-notifications).
 

@@ -29,8 +29,6 @@ The way the menu looks and behaves on your website depends on the customization 
 
 Let’s check each of the available menu items individually.
 
-<a id="menu-management-concept-guide-storefront"></a>
-
 ## Storefront Menu Components
 
 [Storefront menu](../../../back-office/system/frontend-menus/index.md#backend-frontend-menus) in OroCommerce allows users to orient themselves within your website and easily access their account, shopping cart, and other essential information through the links distributed in different places: next to the main menu, in the footer, in the featured menu, etc.
@@ -46,14 +44,6 @@ You can configure each of the following menu elements on five different levels: 
 Once you have configured the menu items, you can add them to the selected [theme configuration](../../../back-office/system/theme-configuration/index.md#back-office-theme-configuration) of your website, placing them anywhere in the storefront header.
 
 ![Selecting a menu item under Theme configuration](user/img/concept-guides/menus/theme-configurations.png)
-
-<a id="menu-management-concept-guide-storefront-quick-access"></a>
-
-### Oro_customer_dashboard_quick_access_menu
-
-**Oro_customer_dashboard_quick_access_menu** refers to a customizable quick access menu that appears on the customer user’s [Dashboard](../../../storefront/account/dashboard/index.md#storefront-dashboard) page in their **My Account** section. If enabled in the [theme configuration](../../../back-office/system/theme-configuration/index.md#back-office-theme-configuration), this menu provides customer users with shortcuts to key sections of their account, such as orders, shopping lists, RFQs, quotes, or other important pages. You can edit the menu to include the necessary links, helping customer users navigate their account more efficiently.
-
-![Illustrating the enabled storefront quick access menu on the customer user’s Dashboard page](user/img/concept-guides/menus/oro-customer-dashboard-quick-access-menu1.png)
 
 ### Frontend_menu
 
@@ -123,7 +113,7 @@ The **commerce_footer_links** menu defines the structure of the links located in
 
 You can use the nodes excluded from the main menu. For example, create a category or content node (e.g., Promotions) with a number of discounted items and with the product listing page not be part of the main menu. Then add it to **featured menu** and place it anywhere in the storefront header under the [theme configuration](../../../back-office/system/theme-configuration/index.md#back-office-theme-configuration).
 
-![A segment of web catalog added to featured menu in the storefront](user/img/concept-guides/web-catalog/featured-menu-navigation-root.png)
+![A segment of web catalog added to featured menu in the storefront](user/img/concept-guides/web-catalog/featured-menu-nav-root.png)
 
 #### NOTE
 Keep in mind that **featured_menu** is different from the [featured products segment](../../catalog-promotions/product-management/index.md#concept-guides-product-management-featured-products). While the featured products segment is intended to store only the products and categories that are marked as featured, the featured menu is designed to offer any other information that you want to emphasize.

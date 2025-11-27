@@ -666,22 +666,6 @@ datagrids:
 
 See for more information [Frontend Datagrid](../../entities/customize-datagrids/frontend/index.md#customizing-data-grid-in-orocommerce-frontend).
 
-#### itemsCounter
-
-##### transTemplate
-
-type: `string`
-
-There is an option that allows setting of a translation template for the datagrid items counter.
-
-```yaml
-grid-name:
-    options:
-        toolbarOptions:
-            itemsCounter:
-                transTemplate: 'oro_frontend.datagrid.pagination.totalRecords.ordersPlural'
-```
-
 ### jsmodules
 
 ```yaml
@@ -862,7 +846,7 @@ The name of the route to the controller action that should be called.
 
 type: `string`
 
-Can be either `url` or `callable` to use a statically configured route or to dynamically generate a link.
+Can be either `route` or `callable` to use a statically configured route or to dynamically generate a link.
 
 ## sorters
 
@@ -1235,7 +1219,7 @@ datagrids:
 ```
 
 #### NOTE
-By default, all datagrids that use ORM datasource are marked by the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/DoctrineUtils/README.md#preciseorderbywalker-class" target="_blank">HINT_PRECISE_ORDER_BY</a> query hint. This guarantees that rows are sorted the same way independently of the state of the SQL server and the values of OFFSET and LIMIT clauses.
+By default, all datagrids that use ORM datasource are marked by the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/DoctrineUtils/README.md#preciseorderbywalker-class" target="_blank">HINT_PRECISE_ORDER_BY</a> query hint. This guarantees that rows are sorted the same way independently of the state of the SQL server and the values of OFFSET and LIMIT clauses.
 
 If you need to disable this behavior for your datagrid, use the following configuration:
 

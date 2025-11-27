@@ -47,7 +47,6 @@ The **allowed options in the theme configuration** file are the following:
 | icon              | The icon is displayed<br/>in the UI.                                                                                                        | no         | no         |
 | favicons_path     | The path to favicons                                                                                                                        | no         | no         |
 | svg_icons_support | Defines whether Theme<br/>supports SVG icons. Default<br/>value will be inherited from<br/>the parent themes if any,<br/>otherwise - false. | no         | yes        |
-| pdf_document      | Defines paths to Twig<br/>templates used to generate<br/>PDF documents (e.g. invoice)                                                       | no         | yes        |
 | fonts             | Defines fonts for theme                                                                                                                     | no         | no         |
 | configuration     | Defines theme configuration<br/>options that give theme<br/>developers more possibility<br/>for configurable storefront                     | no         | no         |
 
@@ -60,12 +59,6 @@ logo:   bundles/demo/themes/images/logo.png
 parent: default
 groups: [ commerce ]
 rtl_support: true
-config:
-    pdf_document:
-        invoice_default:
-            content_template: '@@Acme/layouts/first_theme/twig/pdf_document/invoice_default/content.html.twig'
-            header_template: '@@Acme/layouts/first_theme/twig/pdf_document/invoice_default/header.html.twig'
-            footer_template: '@@Acme/layouts/first_theme/twig/pdf_document/invoice_default/footer.html.twig'
 configuration:
     sections:
         header:
@@ -80,7 +73,7 @@ configuration:
                         unchecked: 'path/to/image/unchecked.png'
 ```
 
-The pdf_document option allows developers to override PDF templates per document type (e.g. invoice_default) within the theme, making it easier to customize branding and layout for downloadable documents.
+where `first_name` is a unique theme identifier.
 
 #### SEE ALSO
 [theme configuration](theme-configuration.md#dev-doc-frontend-theme-configuration) reference for more detailed information.

@@ -183,13 +183,17 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
  */
 class AcmeCMSBundleInstaller implements Installation
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getMigrationVersion()
     {
         return 'v1_0';
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         /** Tables updates **/
@@ -333,7 +337,9 @@ class BlockController extends AbstractController
         );
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public static function getSubscribedServices(): array
     {
         return array_merge(
@@ -485,7 +491,6 @@ class BlockType extends AbstractType
 {
     public const NAME = 'acme_cms_block';
 
-    #[\Override]
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
@@ -507,7 +512,9 @@ class BlockType extends AbstractType
             );
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
@@ -525,7 +532,9 @@ class BlockType extends AbstractType
         return $this->getBlockPrefix();
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getBlockPrefix()
     {
         return self::NAME;
@@ -565,7 +574,6 @@ class UniqueTitleFilter implements Filter
      * @param string $property
      * @param callable $objectCopier
      */
-    #[\Override]
     public function apply($object, $property, $objectCopier): void
     {
         $resolvedField = sprintf('%s_%s', $object->getTitle(), uniqid());
@@ -597,7 +605,6 @@ class BlockTitleMatcher implements Matcher
      *
      * @return bool
      */
-    #[\Override]
     public function matches($object, $property): bool
     {
         return 'title' === $property;
@@ -628,19 +635,16 @@ use Oro\Bundle\DraftBundle\Manager\DraftManager;
  */
 class BlockTitleExtension extends AbstractDuplicatorExtension
 {
-    #[\Override]
     public function getFilter(): Filter
     {
         return new UniqueTitleFilter();
     }
 
-    #[\Override]
     public function getMatcher(): Matcher
     {
         return new BlockTitleMatcher();
     }
 
-    #[\Override]
     public function isSupport(DraftableInterface $source): bool
     {
         return

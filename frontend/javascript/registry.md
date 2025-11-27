@@ -104,6 +104,6 @@ disable: function() {
 ```
 
 #### HINT
-See other methods documentation in <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/UIBundle/Resources/public/js/app/services/registry/registry.js" target="_blank">registry.js</a>
+See other methods documentation in <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBundle/Resources/public/js/app/services/registry/registry.js" target="_blank">registry.js</a>
 
 <!-- Frontend -->

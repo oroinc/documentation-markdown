@@ -2,6 +2,9 @@
 
 # Configure AI Content Generation Settings per Organization
 
+#### NOTE
+This feature is available as of OroCommerce version 6.0.2.
+
 Oro offers integration with AI services such as OpenAI and Vertex AI to create content for product descriptions, landing pages, content blocks, master catalog categories, and emails.
 
 Once the [integration with the chosen AI client](../../../../../integrations/ai/index.md#user-guide-ai-integrations) is created and established, you can configure AI integration settings in the system configuration [globally](../../../../../configuration/system/integrations/ai-settings.md#admin-configuration-ai-integration-settings) and per organization:

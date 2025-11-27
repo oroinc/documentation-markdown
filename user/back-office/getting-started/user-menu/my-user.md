@@ -37,9 +37,24 @@ Several practical tools and actions are available on your user profile page, fro
    #### NOTE
    Non-default buttons can be added to **More Actions** menu. If you see non-default buttons such as Add Task, Add Event, or Add Attachment, please refer to the [Activities](../../activities/index.md#user-guide-activities) guide for more information.
 5. **View your profile details aggregated under 3 sections: general information, activity, and additional information.**
-   * In the **General Information** section, you can view the details of your profile.
+   * In the **General Information** section, you can view the details of your profile, [create an API key](#doc-my-user-actions-api).
    * In the **Activity** section, you can see the emails you sent and the calls you logged. If a user mentions you as a context for their activity, this activity also appears on the list. See the [Activities](../../activities/index.md#user-guide-activities) topic for more information on activities available in the Oro application.
    * In the **Additional Information** section, you can view and manage tasks and cases related to you. See the [Activities](../../activities/index.md#user-guide-activities) topic for more information on activities available in the Oro application.
+
+<a id="doc-my-user-actions-api"></a>
+
+## Generate an API Key
+
+When a third-party software requires an API key to integrate with your Oro application, you can generate it on your profile page.
+
+1. Click on your user name on the top right of the screen.
+2. Click **My User**.
+3. In the **General Information section**, click **Generate Key** next to the API Key label.
+   ![The Generate key button](user/img/getting_started/user_menu/My_User_Create_Api.png)
+4. Copy the generated key and use it where required.
+
+#### CAUTION
+One user can have only one API key at a time. When you generate a new key, the old key becomes invalid.
 
 <a id="user-guide-getting-started-profile-password"></a>
 

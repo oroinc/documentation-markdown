@@ -1,4 +1,4 @@
-<a id="bundle-docs-commerce-redirect-bundle"></a>
+<a id="bundle-docs-commerce-redireect-bundle"></a>
 
 # OroRedirectBundle
 

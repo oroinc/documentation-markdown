@@ -70,9 +70,11 @@ To add a new configurable product and make it available in the master catalog (f
 > ![The list of available page templates in the dropdown of the Page Template field](user/img/products/products/SimpleProductDesign.png)
 1. In the **Product Variants** section, select the configurable product variants by ticking the **Is Variant** checkbox next to the product. Ensure the configurable product has the same product unit as its product variants.
 
-> ![Selecting the configurable product variants](user/img/products/products/SampleProductVariantsForConfigProduct.png)![Selecting the default product variant to be displayed in the storefront](user/img/products/products/select-default-variant.png)
+> ![Selecting the configurable product variants](user/img/products/products/SampleProductVariantsForConfigProduct.png)
 
-Once all variants are selected, you can choose the default variant to be displayed in the storefront.
+Once all variants are selected, you can choose the default variant to be displayed in the storefront by selecting it from the **Default Variant** dropdown list. The setting is available as of OroCommerce version 6.0.6.
+
+> ![Selecting the default product variant to be displayed in the storefront](user/img/products/products/select-default-variant.png)
 
 The default variant is only possible if **No Matrix Form** is selected for configurable products in the [system configuration](../../system/configuration/commerce/product/global-configurable-products.md#config-guide-landing-commerce-products-configurable-products).
 
@@ -99,46 +101,55 @@ Once the core product information is saved, you may add related products and up-
 
 The sample flow below shows all the steps required to create a configurable product.
 
-*Product: External Hard Drive, memory capacity 1 TB and 2 TB.*
+*Product: Red and green hats, sizes S and M.*
 
 **Step 1. Create Attributes.**
 
 1. Navigate to **Products > Product Attributes** in the main menu.
-2. Click **Create Attribute** on the top right, and proceed to creating attribute memory.
-3. Choose select as the attribute type.
+2. Click **Create Attribute** on the top right.
 
-   #### IMPORTANT
-   The only attribute types available for configurable attributes are *Select* and *Boolean*.
-4. Click **Add** to provide attribute options 1 TB and 2 TB.
-   > ![Product attribute Memory with options 1TB and 2TB](user/img/products/products/sample-product-attribute.png)
-5. Click **Save**.
+   We will create two attributes, one after another: ‘hatcolor’ and ‘hatsize’.
+3. Select the type of attribute.
+
+   Currently, *Select* and *Boolean* types are available for configurable attributes. We will use *Select* for both attributes.
+4. Fill in the required information and add the necessary options for the attributes by clicking **+Add**.
+
+   For ‘hatcolor’, attribute options will be ‘Red’ and ‘Green’.
+   ![Create the HatColor product attribute with the red and green options](user/img/products/products/SampleHatColor.png)
+
+   For ‘hatsize’, attribute options will be ‘S’ and ‘M’.
+   ![Create the HatSize product attribute with the s and m options](user/img/products/products/SampleHatSize.png)
+5. Click **Save** to save the attributes.
+
+![Newly created attributes are displayed in the list of all product attributes](user/img/products/products/SampleHatColorSizeGrid.png)
 
 **Step 2. Create a Product Family.**
 
 1. Navigate to **Products > Product Families** in the main menu.
 2. Click **Create Product Family** in the top right corner.
-3. Fill in the required information for the product family (e.g., name Tech).
-4. Click  **Add** to create a new attribute group (e.g., Memory Capacity) and add attribute memory to it.
-   ![Add new product attributes to separate groups when creating a product family](user/img/products/products/SampleProductFamily.png)
+3. Fill in the required information and add attributes ‘HatColor’ and ‘HatSize’ to the attribute group by clicking **+Add**.
 
-1. Click **Save** to save the product family.
+   Each attribute must have a separate group in our case.
+   ![Add new product attributes to separate groups when creating a product family](user/img/products/products/SampleProductFamily.png)
+4. Click **Save** to save the product family.
 
 **Step 3. Create Configurable Product Variants.**
 
-Next, create two simple products, Hard Drive 1 TB and Hard Drive 2 TB, and select the corresponding memory attribute to each. These simple products will subsequently be added to the configurable product as its product variants.
+We now need to create one configurable product variant (simple product) per each variant we would like to have available in the configurable product. Since we have two attributes, ‘HatSize’ and ‘HatColor’, and each attribute has two options (‘S’/’M’ for the first and ‘Red’/’Green’ for the second), we need to create four simple products.
 
 1. Navigate to **Products > Products** in the main menu.
 2. Click **Create Product** in the top right corner.
-3. Set the product type to *Simple*, select the new product family (Tech).
+3. Set the product type to *Simple*, select the ‘HATS’ product family.
 4. Fill in the required information and add the attributes required for this particular product.
-
-   #### NOTE
-   Make sure that the simple product is *enabled*.
-
    ![Illustrate a simple product creation based on the provided parameters](user/img/products/products/SampleSimpleProduct1.png)
 5. Click **Save**.
 
-Repeat step 3 and 4 for the second product.
+Perform step 3 for all four simple products.
+
+#### NOTE
+Make sure that all your simple products are *enabled*.
+
+![Display all created simple products in the products' grid](user/img/products/products/SampleSimpleProductsGrid.png)
 
 **Step 4. Create a Configurable Product.**
 
@@ -163,7 +174,6 @@ Repeat step 3 and 4 for the second product.
 
 The product should now be available on the website in the category we previously assigned it to.
 
-> ![Display the default product variant in the storefront](user/img/products/products/default-variant-storefront.png)
 <!-- stop_product_create_configurable -->
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->

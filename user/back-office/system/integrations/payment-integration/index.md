@@ -33,7 +33,6 @@ You integrate OroCommerce with the following systems and services:
 
 * [Check/Money Order](check-money-order/index.md#user-guide-payment-check-money-order)
 * [Payment Terms](payment-terms/index.md#user-guide-payment-payment-providers-overview-payment-term-config)
-* [OroPay](oropay/index.md#user-guide-payment-oropay)
 * [PayPal Payflow Gateway / PayPal Payment Pro](paypal-services/gateway-pro/index.md#sys-integrations-manage-integrations-paypal-payflow-gateway)
 * [PayPal Express](paypal-services/express/index.md#config-guide-payment-paypal-express)
 * [Apruve](apruve/index.md#user-guide-payment-payment-providers-overview-apruve)

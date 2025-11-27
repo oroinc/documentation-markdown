@@ -58,7 +58,7 @@ ORO_WEBSOCKET_FRONTEND_DSN=//*:443/ws
 ORO_WEBSOCKET_BACKEND_DSN=tcp://127.0.0.1:8080
 ```
 
-For more information on these parameters, see <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/SyncBundle" target="_blank">OroSyncBundle documentation</a>.
+For more information on these parameters, see <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/SyncBundle" target="_blank">OroSyncBundle documentation</a>.
 
 ## Configure File Storages
 
@@ -212,37 +212,7 @@ oro_web_socket                                 RUNNING   pid 5163, uptime 0:00:0
 
 ### Configure OAuth Bundle
 
-If you use an OAuth Bundle to authenticate with OAuth2 protocol to API resources, please follow the [OroOAuth2ServerBundle documentation](../../bundles/platform/OAuth2ServerBundle/index.md#bundle-docs-platform-oauth2-server-bundle-configuration) to learn how to configure the bundle.
-
-OAuth 2.0 authorization requires generating RSA private and public keys and placing them in the appropriate locations specified in the authorization_server / private_key and resource_server / public_key options.
-
-You can generate these keys using the following command:
-
-```none
-php bin/console oro:oauth-server:generate-keys``
-```
-
-Alternatively, keys can be created manually:
-
-1. To generate the private key, run:
-   ```none
-   openssl genrsa -out private.key 2048
-   ```
-2. To provide a passphrase for the private key, run this command instead:
-   ```none
-   openssl genrsa -aes128 -passout pass:_passphrase_ -out private.key 2048
-   ```
-3. Extract the public key from the private key:
-   ```none
-   openssl rsa -in private.key -pubout -out public.key
-   ```
-
-   or use the passphrase if provided on private key generation:
-   ```none
-   openssl rsa -in private.key -passin pass:_passphrase_ -pubout -out public.key
-   ```
-
-The private key should remain confidential and must not be stored within the web-accessible directories of the authorization server. The authorization server also needs access to the corresponding public key. If a passphrase was used during the generation of the private key, it must be supplied to the authorization server. The public key should be shared with any services responsible for validating access tokens.
+If you use an OAuth Bundle to authenticate with OAuth2 protocol to API resources, please follow the [OroOAuth2ServerBundle documentation](../../bundles/platform/OAuth2ServerBundle/index.md#bundle-docs-platform-oauth2-server-bundle-configuration) to learn how to configure the bundle and generate the encryption, private, and public keys.
 
 ### Congratulations! You’ve Successfully Installed Your Oro Application
 

@@ -36,11 +36,12 @@ More information about the options available for each of the two categories is a
     * [Website Localization](general-sys-config/general/website-localization.md#sys-websites-sysconfig-general-setup-localization)
     * [Email Configuration for the Website](general-sys-config/general/website-email-settings.md#admin-configuration-system-mailboxes-website)
     * [Display Settings for the Website](general-sys-config/general/website-display-settings.md#display-settings-website)
-    * [Upload Settings for the Website](general-sys-config/general/website-upload-settings.md#upload-settings-website)
+    * [Upload Settings](general-sys-config/general/website-upload-settings.md#upload-settings-website)
 * **Commerce Configuration**
   * Customer
+    * [Contact Requests](commerce/customers/website-contact-us.md#sys-conf-commerce-customer-contact-request-website)
     * [Customer Users](commerce/customers/website-customer-users.md#system-website-configuration-commerce-customers-customer-users)
-    * [Interactions](commerce/customers/website-interactions.md#system-website-configuration-commerce-customers-interactions)
+    * [Consents](commerce/customers/website-consents.md#admin-guide-commerce-configuration-customers-consents-enable-website)
   * [Guests](../../../../concept-guides/administration/guests/index.md#sys-conf-commerce-guest)
     * [Website Access](commerce/guests/website-guest-access.md#sys-conf-commerce-guest-access-website)
     * [SEO](commerce/guests/website-seo.md#sys-conf-commerce-guest-seo-website)
@@ -75,16 +76,11 @@ More information about the options available for each of the two categories is a
     * [Related Products](commerce/catalog/website-related-products.md#sys-websites-commerce-catalog-related-products)
     * [Special Pages (All Products Page)](commerce/catalog/website-all-products.md#sys-conf-commerce-catalog-special-pages-website)
   * Search
-    * [Search Terms](commerce/search/website-search-terms.md#configuration-website-commerce-search-history)
     * [Saved Search](commerce/search/website-saved-search.md#configuration-website-commerce-search-saved-search)
     * [Fuzzy Search](commerce/search/website-fuzzy-search.md#configuration-website-commerce-search-fuzzy-search)
     * [Search Synonyms](commerce/search/website-search-synonyms.md#configuration-website-commerce-search-synonyms)
-    * [Stop Words](commerce/search/website-stop-words.md#configuration-website-commerce-search-stop-words)
     * [Customer Recommendations](commerce/search/website-customer-recom.md#website-configuration-commerce-search-customer-recommendation)
-  * Shipping
-    * [Address Validation](commerce/shipping/address-validation-website.md#website-commerce-configuration-shipping-address-validation)
-  * Contacts
-    * [Seller Info](commerce/contacts/seller-info-website.md#system-website-configuration-commerce-contacts-seller-info)
+    * [Search Terms](commerce/search/website-search-terms.md#configuration-website-commerce-search-history)
   * Orders
     * [Order Creation](commerce/orders/website-order-creation.md#configuration-commerce-orders-order-creation-website)
     * [Purchase History](commerce/orders/website-previously-purchased.md#sys-commerce-orders-previously-purchased-website)

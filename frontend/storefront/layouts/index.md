@@ -2,7 +2,7 @@
 
 # Layout
 
-OroPlatform incorporates <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/Layout" target="_blank">Oro Layout component</a> and <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/LayoutBundle" target="_blank">OroLayoutBundle</a> to enable the layouts system  in derivative applications for building the front public appearance.
+OroPlatform incorporates <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Component/Layout" target="_blank">Oro Layout component</a> and <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/LayoutBundle" target="_blank">OroLayoutBundle</a> to enable the layouts system  in derivative applications for building the front public appearance.
 
 Unlike traditional Symfony templating, the layout system has a number of advantages for building the front UI. These include the ability to make themeable UI and allow unlimited changes and extensions of the vendor themes by third-party additions.
 
@@ -130,7 +130,7 @@ The **layout update** file
 **Actions** is an array node with a set of actions to execute.
 
 #### NOTE
-Each action is usually compiled as a separate call to the corresponding method of the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/Layout/LayoutManipulatorInterface.php" target="_blank">LayoutManipulatorInterface</a>.
+Each action is usually compiled as a separate call to the corresponding method of the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/Layout/LayoutManipulatorInterface.php" target="_blank">LayoutManipulatorInterface</a>.
 
 Here is the list of the available actions:
 
@@ -308,7 +308,7 @@ it would be reasonable to put the product type in the layout context.
 #### Types of Data in the Context
 
 The layout context can hold any types of data, including scalars, arrays and objects. But any object you want to put in the context
-must implement the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/Layout/ContextItemInterface.php" target="_blank">ContextItemInterface</a>.
+must implement the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/Layout/ContextItemInterface.php" target="_blank">ContextItemInterface</a>.
 
 #### Accessing Context
 
@@ -334,7 +334,7 @@ Context can be accessed using the <a href="https://symfony.com/doc/6.4/component
 It might be required to configure the context based on the current application state, client setting, or to define the
 default values, etc. In order to prevent copypasting of the boilerplate code, **context configurators** have been introduced.
 
-Each configurator should implement the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/Layout/ContextConfiguratorInterface.php" target="_blank">ContextConfiguratorInterface</a>,
+Each configurator should implement the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/Layout/ContextConfiguratorInterface.php" target="_blank">ContextConfiguratorInterface</a>,
 and be registered as a service in the DI container with the layout.context_configurator tag.
 
 For debugging purposes, use the bin/console oro:debug:layout command. It helps monitor the way the context data-resolver will
@@ -348,7 +348,7 @@ be configured by the **context configurators**.
 
 You can provide data for layouts in two ways:
 
-* By adding them to the data collection of the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/Layout/ContextInterface.php" target="_blank">layout context</a>. This method can be used for page-specific data or the data retrieved from the HTTP request.
+* By adding them to the data collection of the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/Layout/ContextInterface.php" target="_blank">layout context</a>. This method can be used for page-specific data or the data retrieved from the HTTP request.
 * By creating a standalone data provider. This method is useful if data is used on many pages, and the data source is a database, HTTP session, external web service, etc.
 
 #### Data Providers Reference
@@ -383,7 +383,7 @@ class ProductDataProvider
 }
 ```
 
-You can also implement the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/LayoutBundle/Layout/DataProvider/AbstractFormProvider.php" target="_blank">AbstractFormProvider</a> if you use forms.
+You can also implement the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/LayoutBundle/Layout/DataProvider/AbstractFormProvider.php" target="_blank">AbstractFormProvider</a> if you use forms.
 
 #### IMPORTANT
 The DataProvider provider method should begin with get, has, or is.
@@ -426,8 +426,8 @@ a standalone data provider registry, the standalone data provider will be used.
 
 #### Using the Layout Context as Data Provider
 
-If you want to add some data to the layout context, you can use the data method of <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/Layout/ContextInterface.php" target="_blank">layout context</a>.
-This method returns an instance of <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/Layout/ContextDataCollection.php" target="_blank">ContextDataCollection</a>. Use the set method of this collection to add data:
+If you want to add some data to the layout context, you can use the data method of <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/Layout/ContextInterface.php" target="_blank">layout context</a>.
+This method returns an instance of <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/Layout/ContextDataCollection.php" target="_blank">ContextDataCollection</a>. Use the set method of this collection to add data:
 
 ```php
 $context->data()->set(
@@ -571,7 +571,7 @@ Also, you can provide a template for the block by the layout block id in the lay
 
 When you need the imported block to be rendered without a direct reference to its template name, you can use the TWIG variable block_type_widget_id which refers to the twig widget ID for current block type, like container_widget, menu_widget, etc.
 
-For example, here is the customized toolbar element defined in the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/DataGridBundle" target="_blank">DataGridBundle</a> on the product page ([ProductBundle](../../../bundles/commerce/ProductBundle/index.md#bundle-docs-commerce-product-bundle)) in the OroCommerce application:
+For example, here is the customized toolbar element defined in the <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/DataGridBundle" target="_blank">DataGridBundle</a> on the product page ([ProductBundle](../../../bundles/commerce/ProductBundle/index.md#bundle-docs-commerce-product-bundle)) in the OroCommerce application:
 
 ```twig
 {% block _datagrid_toolbar_mass_actions_widget %}

@@ -91,6 +91,7 @@ Keep in mind that as soon as the entity is created, its ownership type cannot be
 * [Field Level Permissions](field-level-acl.md#user-guide-user-management-permissions-roles-field-level-acl)
 * [Entity and System Capabilities](admin-capabilities.md#admin-capabilities)
 * [Create and Manage Roles](create-manage-roles.md#user-guide-user-management-permissions-roles-actions)
+* [End-to-end Access Configuration in Context](access-in-context.md#user-guide-user-management-permissions-roles-examples)
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->

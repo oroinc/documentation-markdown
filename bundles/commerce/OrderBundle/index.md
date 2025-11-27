@@ -11,6 +11,5 @@
 * [Reindex Listeners](previously-purchased-products.md#previously-purchased-products-reindex-listeners)
 * [Managers](previously-purchased-products.md#previously-purchased-products-managers)
 * [Providers](previously-purchased-products.md#previously-purchased-products-providers)
-* [Order PDF Documents](order-pdf-documents.md#bundle-docs-commerce-order-pdf-documents)
 
 <!-- Frontend -->

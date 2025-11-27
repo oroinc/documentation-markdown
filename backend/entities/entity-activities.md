@@ -24,7 +24,9 @@ class AcmeDemoBundle implements Migration, ActivityExtensionAwareInterface
 {
     use ActivityExtensionAwareTrait;
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function up(Schema $schema, QueryBag $queries): void
     {
         $this->activityExtension->addActivityAssociation($schema, 'oro_email', 'acme_demo_document', true);
@@ -76,7 +78,7 @@ The widget can be displayed on the view and/or update pages. The list of allowed
 class Priority implements
     ExtendEntityInterface
 {
-    //    ...
+//    ...
 }
 ```
 
@@ -131,12 +133,12 @@ If you select more than one activity type in the filter, you can filter based on
 {
     /** @var ActivityListExtension */
     protected $activityListExtension;
-    #[\Override]
+    /** {@inheritdoc} */
     public function setActivityListExtension(ActivityListExtension $activityListExtension)
     {
         $this->activityListExtension = $activityListExtension;
     }
-    #[\Override]
+    /** {@inheritdoc} */
     public function up(Schema $schema, QueryBag $queries)
     {
         $activityListExtension->addInheritanceTargets($schema, 'orocrm_account', 'orocrm_contact', ['accounts']);

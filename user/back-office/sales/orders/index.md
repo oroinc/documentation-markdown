@@ -18,8 +18,6 @@ You can create a new order in the following ways:
 * [From scratch](create.md#user-guide-sales-orders-create)
 * [Based on shopping lists](create.md#user-guide-sales-orders-create-from-shopping-lists)
 * [Based on requests for quotes](create.md#user-guide-sales-orders-create-from-rfq)
-* [Import external orders in JSON format](external-orders-import.md#user-guide-sales-orders-external-orders-import)
-* [Via AI Smart Order Automation](create.md#user-guide-sales-orders-create-from-ai-smart-order)
 
 ## Manage Existing Orders
 
@@ -45,8 +43,9 @@ When running sales promotions:
 You can control the order lifecycle and:
 
 * [Cancel orders](control.md#doc-orders-actions-cancel)
-* [Track order shipping](track-order.md#user-guide-shipping-order)
+* [Mark orders as shipped](control.md#doc-orders-actions-mark-shipped) and [track order shipping](track-order.md#user-guide-shipping-order)
 * [Close orders that lost relevance](control.md#doc-orders-actions-close)
+* [Archive old orders](control.md#doc-orders-actions-archive)
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->

@@ -26,4 +26,3 @@ See a short demo on <a href="https://academy.oroinc.com/media-library/create-man
 **Related Topics**
 
 * [Configure an Integration with Google](../configuration/system/integrations/google-settings/google-integration.md#system-configuration-integrations-google)
-* [Email Notifications for Conversations](../../activities/conversations/index.md#doc-activities-conversations-email-notifications)

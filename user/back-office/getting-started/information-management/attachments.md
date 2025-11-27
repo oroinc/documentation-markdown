@@ -9,7 +9,7 @@ See a short demo on <a href="https://academy.oroinc.com/media-library/add-attach
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TyG001xOw3U" frameborder="0" allowfullscreen></iframe>
 
 #### IMPORTANT
-By default, the list of activities available for each entity is determined by what is most commonly used by businesses. However, if your company’s work process requires it, you can always turn the desirable activity on for almost any entity (except technical ones). If you need particular activities to be enabled for an entity, contact your administrator, or see steps 4 and 5 in the [Create an Entity](../../system/entities/manage-entities.md#doc-entity-actions-create) action description.
+By default, the list of activities available for each entity is determined by what is most commonly used by businesses. However, if your company’s work process requires it, you can always turn the desirable activity on for almost any entity (except technical ones). If you need particular activities to be enabled for an entity, contact your administrator, or see steps 4 and 5 in the [Create an Entity](../../system/entities/create-entities.md#doc-entity-actions-create) action description.
 
 ## How to Add Attachments
 

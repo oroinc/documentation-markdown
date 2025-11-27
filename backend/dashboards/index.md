@@ -101,13 +101,17 @@ class MyDashboardTypeConfigProvider implements DashboardTypeConfigProviderInterf
 {
     public const TYPE_NAME = 'my_type';
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function isSupported(?string $dashboardType): bool
     {
         return self::TYPE_NAME === $dashboardType;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getConfig(Dashboard $dashboard): array
     {
         return ['twig' => '@AcmeDemo/Index/default.html.twig'];
@@ -139,13 +143,17 @@ use Oro\Bundle\DashboardBundle\Migrations\Data\ORM\AbstractDashboardTypeFixture;
  */
 class AddMyDashboardTypeFixture extends AbstractDashboardTypeFixture
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     protected function getDashboardTypeIdentifier(): string
     {
         return 'my_type';
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     protected function getDashboardTypeLabel(): string
     {
         return 'My type';

@@ -46,7 +46,7 @@ In scenario one, the system creates a Marketplace seller admin, inventory and wa
 
 Prospective sellers looking to sell via the marketplace can submit a registration form online on the marketplace website.
 
-![Seller registration button in the storefront](user/img/concept-guides/marketplace/seller-registration.png)
+![Seller registration button in the storefront](user/img/concept-guides/marketplace/seller-registration-storefront.png)
 
 The details provided in the registration form are immediately displayed in the OroMarketplace back-office under **Sales > Seller Registration Requests**, where you can view every such request and transition it through the corresponding workflow.
 
@@ -96,11 +96,10 @@ In OroMarketplace, price lists are managed per organization so that sellers can 
 
 Marketplace owners can configure shipping integrations and shipping rules for all sellers and per seller so proper [shipping fees are calculated](../../../back-office/system/configuration/commerce/sales/global-multi-shipping.md#user-guide-system-configuration-commerce-sales-multi-shipping) based on seller needs and warehouse data. The default shipping methods are *Fixed Product Shipping Cost* and *Flat Rate Shipping* with 0 value, which are created automatically after seller’s registration. Sellers can then adjust the amount as needed.
 
-When a buyer submits an order with items sold by different sellers with different shipping options, their order is split into one parent order and sub-orders in the back-office. Each respective seller receives their portion of the order and is responsible for shipping the items sold to the buyer. The marketplace owner organization has the record of the source main order containing information about its suborders per seller, line items, payment details, etc.
+When a buyer submits an order with items sold by different sellers with different shipping options, their order is split into one parent order and sub-orders in the back-office. Each respective seller receives their portion of the order and is responsible for shipping the items sold to the buyer. The marketplace owner organization has the record of the source parent order containing information about its suborders per seller, line items, payment details, etc.
 
 ![Orders split by seller in the back-office](user/img/concept-guides/marketplace/orders-split-by-sellers.png)
 
-#### NOTE
 For the orders to be split by seller (i.e., organization), a person responsible for permissions from the global marketplace organization’s owner must [enable this capability in the global organization’s configuration settings](../../../back-office/system/user-management/organizations/org-configuration/commerce/sales/organization-multi-shipping.md#user-guide-system-configuration-commerce-sales-multi-shipping-org).
 
 ![Organization Settings of the Global Marketplace Organization](user/img/concept-guides/marketplace/split-by-seller-config-in-global-org.png)

@@ -114,7 +114,6 @@ class FastShippingSettings extends Transport
         return $this;
     }
 
-    #[\Override]
     public function getSettingsBag(): ParameterBag
     {
         if (null === $this->settings) {
@@ -161,7 +160,9 @@ class FastShippingTransportSettingsType extends AbstractType
 {
     private const BLOCK_PREFIX = 'acme_fast_shipping_settings';
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
@@ -176,7 +177,9 @@ class FastShippingTransportSettingsType extends AbstractType
             );
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
@@ -184,7 +187,9 @@ class FastShippingTransportSettingsType extends AbstractType
         ]);
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getBlockPrefix()
     {
         return self::BLOCK_PREFIX;
@@ -225,13 +230,17 @@ use Oro\Bundle\IntegrationBundle\Provider\IconAwareIntegrationInterface;
  */
 class FastShippingChannelType implements ChannelInterface, IconAwareIntegrationInterface
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getLabel(): string
     {
         return 'acme.fast_shipping.channel_type.label';
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getIcon(): string
     {
         return 'bundles/acmefastshipping/img/fast-shipping-logo.png';
@@ -274,25 +283,30 @@ class FastShippingTransport implements TransportInterface
     /** @var ParameterBag */
     protected $settings;
 
-    #[\Override]
     public function init(Transport $transportEntity)
     {
         $this->settings = $transportEntity->getSettingsBag();
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getSettingsFormType(): string
     {
         return FastShippingTransportSettingsType::class;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getSettingsEntityFQCN(): string
     {
         return FastShippingSettings::class;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getLabel(): string
     {
         return 'acme.fast_shipping.transport.label';
@@ -340,7 +354,9 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 class AcmeFastShippingExtension extends Extension
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function load(array $configs, ContainerBuilder $container): void
     {
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
@@ -391,13 +407,17 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
  */
 class FastShippingBundleInstaller implements Installation
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getMigrationVersion()
     {
         return 'v1_0';
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         /** Tables generation **/
@@ -512,61 +532,78 @@ class FastShippingMethod implements ShippingMethodInterface, ShippingMethodIconA
         $this->types = $types;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getIdentifier(): string
     {
         return $this->identifier;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function isGrouped(): bool
     {
         return true;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function isEnabled(): bool
     {
         return $this->enabled;
     }
 
-    #[\Override]
     public function getName(): string
     {
         return $this->name;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getLabel(): string
     {
         return $this->label;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getIcon(): ?string
     {
         return $this->icon;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getTypes(): array
     {
         return $this->types;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getType(string $identifier): ?ShippingMethodTypeInterface
     {
         return $this->types[$identifier] ?? null;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getOptionsConfigurationFormType(): ?string
     {
         return HiddenType::class;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getSortOrder(): int
     {
         return 150;
@@ -644,7 +681,9 @@ class FastShippingMethodFromChannelFactory implements IntegrationShippingMethodF
         $this->integrationIconProvider = $integrationIconProvider;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function create(Channel $channel): ShippingMethodInterface
     {
         /** @var FastShippingSettings $transport */
@@ -744,31 +783,41 @@ class FastShippingMethodType implements ShippingMethodTypeInterface
         $this->isWithPresent = $isWithPresent;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getIdentifier(): string
     {
         return $this->isWithPresent ? self::WITH_PRESENT_TYPE : self::WITHOUT_PRESENT_TYPE;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getLabel(): string
     {
         return $this->label;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getSortOrder(): int
     {
         return 0;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getOptionsConfigurationFormType(): ?string
     {
         return FastShippingMethodOptionsType::class;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function calculatePrice(
         ShippingContextInterface $context,
         array $methodOptions,
@@ -850,7 +899,9 @@ class FastShippingMethodOptionsType extends AbstractType
         $this->roundingService = $roundingService;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $priceOptions = [
@@ -869,7 +920,6 @@ class FastShippingMethodOptionsType extends AbstractType
     /**
      * @throws AccessException
      */
-    #[\Override]
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
@@ -877,7 +927,9 @@ class FastShippingMethodOptionsType extends AbstractType
         ]);
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getBlockPrefix()
     {
         return self::BLOCK_PREFIX;

@@ -24,18 +24,11 @@ To change the default inventory statuses:
 
    #### HINT
    This configuration is also available [on the website level](../../../websites/web-configuration/commerce/inventory/website-allowed-statuses.md#allowed-statuses-website).
-5. In the **Inventory Filter**, you can allow storefront users to filter products by the Inventory statuses, while allowing administrators to prevent revealing unwanted inventory details:
-   * **Enable For Guests** - enable or disable the ability to show the inventory filter to unauthenticated visitors.
-   * **Inventory Filter Type** - select the type of inventory filter to display. The *Multi-Select* filter type enables users to filter by any combination of individual inventory statuses. The *Simple* type will allow to filter only by predefined inventory statuses when the filter is applied. For this type, select the statuses that will be considered as *In Stock* in the storefront in the *In Stock Statuses For Simple Filter* field below.
-
-   #### HINT
-   This configuration is also available on the [organization](../../../user-management/organizations/org-configuration/commerce/inventory/organization-allowed-statuses.md#inventory-allowed-statuses-org) and [website](../../../websites/web-configuration/commerce/inventory/website-allowed-statuses.md#allowed-statuses-website) levels.
-6. In the **Management Console** section, the following options are available:
+5. In the **Back-Office** section, the following options are available:
    * **Can Be Added To Quotes** - A sales person can add products with the selected inventory statuses to the Quotes using OroCommerce back-office.
    * **Can Be Added To RFQs** - A sales person can add products with the selected inventory statuses to the RFQs using OroCommerce back-office.
    * **Can Be Added To Orders** - A sales person can add products with the selected inventory statuses to the Orders using OroCommerce back-office.
    * **Can Be Added To Shopping Lists** - A sales person can add products with the selected inventory statuses to the Shopping Lists using OroCommerce back-office.
-
-1. Click **Save Settings**.
+6. Click **Save Settings**.
 
 Once the default statuses are defined, you can then change the status manually directly from the [all inventory levels page](../../../../inventory/manage-levels.md#user-guide-inventory-manage-levels) or [per each product](../../../../products/products/create-simple.md#create-simple-product-inventory) individually.

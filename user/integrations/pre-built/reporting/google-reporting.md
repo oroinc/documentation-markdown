@@ -2,8 +2,8 @@
 
 # Integration with Google Looker Studio
 
-#### IMPORTANT
-This is a custom extension, not a core feature of OroCommerce, and is not covered by the Oro User License Agreement. For more details, see the <a href="https://extensions.oroinc.com/orocommerce/extension/embedded-google-data-studio-dashboard/" target="_blank">Google Looker Studio</a> extension. Please <a href="https://oroinc.com/contact-us/" target="_blank">contact our support team</a> for more information on available integration options. You can also visit our <a href="https://extensions.oroinc.com/" target="_blank">extensions store</a> to explore other integrations and extensions.
+#### HINT
+Please <a href="https://oroinc.com/contact-us/" target="_blank">contact our support team</a> for more information on available integration options. You can also visit our <a href="https://extensions.oroinc.com/" target="_blank">extensions store</a> to explore other integrations and extensions.
 
 Oro offers integration with Google Looker (former Google Data Studio), a data visualization tool that allows you to compile reports from different sources in one place.
 

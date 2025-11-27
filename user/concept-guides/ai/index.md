@@ -5,6 +5,9 @@
 #### NOTE
 Please <a href="https://oroinc.com/contact-us/" target="_blank">contact our support team</a> to learn more about OroCommerce AI features, discuss how they can meet your business needs, and get started with implementation.
 
+#### NOTE
+These features are available as of OroCommerce version 6.0.7.
+
 Artificial Intelligence (AI) is rapidly transforming industries, and B2B eCommerce is no exception. In today’s highly competitive market, businesses need tools that enable smarter decision-making, improve operational efficiency, and provide exceptional customer experiences. OroCommerce is at the forefront of this transformation, introducing AI-powered tools such as AI Smart Agent and AI Smart Order, tailored specifically to the complex needs of B2B eCommerce to help you enhance business operations and customer experiences.
 
 <a id="concept-guide-ai-smart-agent"></a>
@@ -22,7 +25,7 @@ With the Oro AI Smart Agent, buyers can efficiently complete essential e-commerc
 * **Shopping Lists** – Manage shopping lists, add products, and create orders from them.
 * And more.
 
-The Smart Agent also supports multi-website environments. Responses, product data, and links are always generated for the specific website a buyer is currently using (available as of OroCommerce version 6.1.5).
+The Smart Agent also supports multi-website environments. Responses, product data, and links are always generated for the specific website a buyer is currently using (available as of OroCommerce version 6.0.7).
 
 Once integrated by the Oro team and configured via the [back-office](../../back-office/system/configuration/system/integrations/ai-agent.md#admin-configuration-ai-agent-settings), any logged-in buyer can access the Oro AI Smart Agent by clicking its icon in the storefront. The agent interface includes three sections:
 
@@ -54,18 +57,14 @@ The Smart Order dashboard [widget](../../back-office/dashboards/widgets/ai-smart
 
 ![Illustration of the dashboard with a Smart Order widget](user/img/concept-guides/ai/ai-smart-order-flow.png)
 
-### Smart Order Automation
+For businesses seeking full [automation](../../back-office/system/configuration/system/general-setup/global-email.md#admin-configuration-system-mailboxes), OroCommerce can be configured to scan incoming emails for purchase order attachments in JPG, PNG and PDF format, extract relevant details, and automatically generate orders in pending status. This eliminates the need for manual uploads and data entry, significantly improving efficiency, reducing processing time, and minimizing the risk of errors.
 
-For businesses aiming to fully [automate](../../back-office/system/configuration/system/general-setup/global-email.md#admin-configuration-system-mailboxes) purchase order processing, OroCommerce provides the AI Smart Order functionality. It can scan incoming emails with attached purchase orders in JPG, PNG, or PDF format, extract relevant data, and automatically create a draft order in the back-office. This reduces manual uploads and data entry and minimizes the risk of errors.
+![image](user/img/concept-guides/ai/convert-to-draft-order.png)
 
-For more information on how to set up Smart Order automation, see [Create an Order via AI Smart Order Automation](../../back-office/sales/orders/create.md#user-guide-sales-orders-create-from-ai-smart-order).
-
-![image](user/img/concept-guides/ai/so-illustration.png)
+By integrating AI-powered recognition, validation, and automation, the AI Smart Order tool transforms purchase order management, creating a faster, error-free, and seamless purchasing experience for both buyers and businesses.
 
 **Related Articles:**
 
 * [OroCommerce AI Content Generation Widget](../content-management/wysiwyg.md#getting-started-wysiwyg-editor-field-ai)
 * [Integration with AI Clients: OpenAI and Vertex AI](../../integrations/pre-built/ai/ai-generation.md#integrations-ai-generation)
 * [Product recommendations with AI](../../integrations/pre-built/ai/google-retail.md#integrations-misc-google-retail-recommendations)
-* [Create an Order via AI Smart Order Automation](../../back-office/sales/orders/create.md#user-guide-sales-orders-create-from-ai-smart-order)
-* [AI Smart Order Widget](../../back-office/dashboards/widgets/ai-smart-order.md#user-guide-dashboards-widgets)

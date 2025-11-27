@@ -19,7 +19,7 @@ composer config extra.patches-file composer.patches.json
 composer require cweagans/composer-patches:~1.0 --no-scripts
 ```
 
-Regarding the previous block of commands, the plugin is configured to use the list of patches declared in the separate composer.patches.json file. If you move this file or the patches declaration block from the project root, be aware that the relative paths used to apply patches will also change (see below).
+Regarding the previous block of commands, the plugin is configured to use the list of patches declared in the separate composer.patches.json file.
 
 The contents of the commonly used patch list file look like this:
 

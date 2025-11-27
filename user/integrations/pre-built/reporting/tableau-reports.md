@@ -2,9 +2,6 @@
 
 # Tableau Integration
 
-#### IMPORTANT
-This is a custom extension, not a core feature of OroCommerce, and is not covered by the Oro User License Agreement. Please <a href="https://oroinc.com/contact-us/" target="_blank">contact our support team</a> for more information on available integration options. You can also visit our <a href="https://extensions.oroinc.com/" target="_blank">extensions store</a> to explore other integrations and extensions.
-
 Tableau is a platform that provides business intelligence and data visualization services. It enables users to connect to diverse data sources, visualize and analyze data, and share insights interactively and meaningfully. The integration of Tableau with OroCommerce enhances the Oro application’s back-office reporting capabilities. Users can seamlessly embed Tableau reports within Oro Dashboards, which creates a comprehensive analytical environment.
 
 ## Integration Features

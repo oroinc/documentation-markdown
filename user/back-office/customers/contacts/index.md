@@ -55,7 +55,7 @@ If the ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) **Edi
 
 ## Create an Address
 
-For customers, customer users, and contacts in the Oro application, the address book allows to enter and view account/customer address details.
+For customers, customer users, and contacts in the Oro application, the address book allows to enter and view account address details.
 
 To add an address to the address book:
 

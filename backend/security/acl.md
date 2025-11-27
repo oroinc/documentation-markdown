@@ -430,7 +430,7 @@ class FavoriteController extends AbstractController
 
 If you need to carry out an ACL check on an object not in the controller, use the `isGranted` method of the security.authorization_checker service.
 
-The security.authorization_checker service is a public service used to check whether access to a resource is granted or denied. This service represents the <a href="https://symfony.com/doc/current/components/security/authorization.html#authorization-checker" target="_blank">Authorization Checker</a>. The implementation of the Platform specific attributes and objects is in <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/SecurityBundle/Authorization/AuthorizationChecker.php" target="_blank">AuthorizationChecker class</a>.
+The security.authorization_checker service is a public service used to check whether access to a resource is granted or denied. This service represents the <a href="https://symfony.com/doc/current/components/security/authorization.html#authorization-checker" target="_blank">Authorization Checker</a>. The implementation of the Platform specific attributes and objects is in <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/SecurityBundle/Authorization/AuthorizationChecker.php" target="_blank">AuthorizationChecker class</a>.
 
 The main entry point is the isGranted method:
 
@@ -480,8 +480,8 @@ The first ACL for $myEntity object is checked; if nothing is found, it checks th
 
 Two additional authorization checkers can also be helpful:
 
-* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/SecurityBundle/Authorization/ClassAuthorizationChecker.php" target="_blank">ClassAuthorizationChecker</a>
-* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/SecurityBundle/Authorization/RequestAuthorizationChecker.php" target="_blank">CRequestAuthorizationChecker</a>
+* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/SecurityBundle/Authorization/ClassAuthorizationChecker.php" target="_blank">ClassAuthorizationChecker</a>
+* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/SecurityBundle/Authorization/RequestAuthorizationChecker.php" target="_blank">CRequestAuthorizationChecker</a>
 
 ### Restricting Access to Non-Entity Resources
 
@@ -567,7 +567,7 @@ For the security token to ignore the preferable organization, for example, an AP
 ```yaml
 oro_organization_pro:
     ignore_preferred_organization_tokens:
-        - Acme\Bundle\DemoBundle\Security\AcmeCustomToken
+        - cme\Bundle\DemoBundle\Security\AcmeWsseToken
 ```
 
 #### BUSINESS TIP

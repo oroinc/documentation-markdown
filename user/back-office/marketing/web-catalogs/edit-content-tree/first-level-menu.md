@@ -12,7 +12,13 @@ The homepage that is shown when a buyer navigates to the web store is configured
 
 The first level of the main menu in the storefront is represented by **root content nodes** in the back-office.
 
-![The homepage node displayed in the storefront and in the back-office](user/img/marketing/web_catalogs/FirstLevelMenuFrontStore.png)
+Storefront:
+
+![The homepage node displayed in the storefront](user/img/marketing/web_catalogs/FirstLevelMenuFrontStore.png)
+
+Back-Office:
+
+![The homepage node configured in the back-office](user/img/marketing/web_catalogs/RootNodesManagementConsole.png)
 
 **Root content nodes** are nested under the **homepage node**.
 

@@ -5,6 +5,9 @@
 #### HINT
 Please <a href="https://oroinc.com/contact-us/" target="_blank">contact our support team</a> to learn more about OroCommerce AI features, discuss how they can meet your business needs, and get started with implementation.
 
+#### NOTE
+This feature is available as of OroCommerce version 6.0.7.
+
 The [AI Smart Agent](../../../../../concept-guides/ai/index.md#concept-guide-ai) is a virtual assistant designed to simplify and enhance the B2B buying experience in the OroCommerce Enterprise application. It uses natural spoken or written language input to enable buyers to perform a variety of ecommerce-related activities via the OroCommerce storefront.
 
 ![AI Smart Agent global config and illustration on the AI Agent chat in the storefront](user/img/system/config_system/ai-agent-config.png)
@@ -16,6 +19,4 @@ Once the agent is installed in the Oro application, you can enable it in the sys
 3. In the **AI Agent** section:
    * Clear the **Use Default** checkbox, and select the checkbox next to *Enable AI Agent* to enable the feature for the storefront.
    * Provide **Agent API Key** and **Agent URL** to connect the agent tool.
-
-<!-- comment: was advised that Debug Enabled option will be removed, so not including it. -->
-1. Click **Save Settings**.
+4. Click **Save Settings**.

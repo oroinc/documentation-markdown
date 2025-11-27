@@ -16,7 +16,6 @@ in the `/src` directory. We need to create the corresponding directory structure
 
 *src/Acme/Bundle/DemoBundle/AcmeDemoBundle.php*
 ```php
-
 namespace Acme\Bundle\DemoBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
@@ -34,7 +33,6 @@ For a load configuration files you need to create Service Container Extension. S
 
 *src/Acme/Bundle/DemoBundle/DependencyInjection/AcmeDemoExtension.php*
 ```php
-
 namespace Acme\Bundle\DemoBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
@@ -44,13 +42,13 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 class AcmeDemoExtension extends Extension
 {
-    #[\Override]
     public function load(array $configs, ContainerBuilder $container)
     {
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         // register services configuration
         $loader->load('services.yml');
         // register other configurations in the same way
+        $loader->load('services_checkout.yml');
     }
 }
 ```

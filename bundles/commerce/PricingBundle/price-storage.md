@@ -37,7 +37,9 @@ class CSVFilePriceStorage implements ProductPriceStorageInterface
         $this->doctrineHelper = $doctrineHelper;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getPrices(
         ProductPriceScopeCriteriaInterface $scopeCriteria,
         array $products,
@@ -64,7 +66,9 @@ class CSVFilePriceStorage implements ProductPriceStorageInterface
         return $prices;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getSupportedCurrencies(ProductPriceScopeCriteriaInterface $scopeCriteria)
     {
         /**
@@ -122,7 +126,7 @@ acme_pricing.storage.csv_file:
 Oro pricing is controlled by the oro_pricing feature. It may be disabled by switching off the appropriate system config option
 or by voting VoterInterface::FEATURE_DISABLED for the oro_pricing feature.
 
-For more information, see <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/FeatureToggleBundle/README.md" target="_blank">Feature Toggle Bundle</a>.
+For more information, see <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/FeatureToggleBundle/README.md" target="_blank">Feature Toggle Bundle</a>.
 
 Voter example:
 
@@ -138,7 +142,9 @@ class PricingVoter implements VoterInterface
 {
     const PRICING_FEATURE_NAME = 'oro_pricing';
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function vote($feature, $scopeIdentifier = null)
     {
         if ($feature === self::PRICING_FEATURE_NAME) {

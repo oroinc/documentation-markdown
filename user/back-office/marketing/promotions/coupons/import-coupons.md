@@ -10,7 +10,7 @@
 
 |   Coupon Code |   Enabled |   Uses per Coupon |   Uses per Person | Valid From   | Promotion Name   | Owner Name   |
 |---------------|-----------|-------------------|-------------------|--------------|------------------|--------------|
-|           123 |         1 |                 1 |                 1 | 01-12-2028   | Discounts        | Owner Name   |
+|           123 |         1 |                 1 |                 1 | 01-12-2018   | Discounts        | Owner Name   |
 
 To import a bulk of coupons:
 

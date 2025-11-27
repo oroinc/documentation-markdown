@@ -74,10 +74,10 @@ The URL parameter and the push code provide you with different options to log a 
 The first option is a URL parameter:
 
 ```html
-?pk_campaign=buy_2_get_1_free
+?pk_campaign=btwogonefree
 ```
 
-It is used when you have a tracking website, and you want to calculate the events for multiple campaigns and from different sources, such as an email link, Youtube, social media, paid ads or organic search visits. It should be added to the URL of the website you want to monitor. The event is logged only when a user reaches the website via the specific link with this parameter (for example, *sample-site.net?pk_campaign=buy_2_get_1_free*).
+It is used when you have a tracking website, and you want to calculate the events for multiple campaigns and from different sources, such as an email link, Youtube, social media, paid ads or organic search visits. It should be added to the URL of the website you want to monitor. The event is logged only when a user reaches the website via the specific link with this parameter (for example, *sample-site.net?pk_campaign=btwogonefree*).
 
 In the **Events** section on the campaign’s page, you will see all the events logged under this campaign.
 
@@ -90,7 +90,7 @@ The idea behind the URL parameter is that each campaign is assigned its own uniq
 The second option is a push code:
 
 ```html
-_paq.push(['setCampaignName', 'buy_2_get_1_free']);
+_paq.push(['setCampaignName', 'btwogonefree']);
 ```
 
 This code is used when you run only one marketing campaign on your website, so all user interactions within your website should be uniquely assigned to this particular campaign regardless of the source the visitors used to reach your website.
@@ -101,15 +101,14 @@ In this case, you need to insert this push code into the javascript code of your
 <script type="text/javascript">
     var _paq = _paq || [];
     _paq.push(['setUserId', 'guest' ]);
-    _paq.push(['setCampaignName', 'buy_2_get_1_free']);
+    _paq.push(['setCampaignName', 'btwogonefree']);
 ```
 
 No matter which code you choose, a URL Parameter or a Push Code, the results will be displayed in the report.
 
 You can export this report at any time by clicking the **Export Grid** button.
 
-<!-- .. image:: /user/img/marketing/marketing/export_grid.png
-:alt: Click the export grid button -->
+![Click the export grid button](user/img/marketing/marketing/export_grid.png)
 
 <a id="user-guide-marketing-campaigns-actions"></a>
 

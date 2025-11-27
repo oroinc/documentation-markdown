@@ -2,7 +2,7 @@
 
 # OroSegmentBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/SegmentBundle" target="_blank">OroSegmentBundle</a> provides GUI for application users to create named sets of entity records called Segments. It also enables the application of existing segments as filtering conditions in query designers.
+<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/SegmentBundle" target="_blank">OroSegmentBundle</a> provides GUI for application users to create named sets of entity records called Segments. It also enables the application of existing segments as filtering conditions in query designers.
 
 ## Related Documentation
 

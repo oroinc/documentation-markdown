@@ -76,16 +76,16 @@ By default, consents are disabled in OroCommerce.
 
 To enable and configure consents in OroCommerce, take the following steps:
 
-* Enable consents in the [system configuration](../../../back-office/system/configuration/commerce/customer/global-interactions.md#configuration-guide-commerce-configuration-consents).
+* Enable consents in the [system configuration](../../../back-office/system/configuration/commerce/customer/global-consents.md#configuration-guide-commerce-configuration-consents).
 * Create a [landing page](add-consent.md#user-guide-consents-add) with the text of the consent, and add it as a content variant of a content tree node.
 * Create a [new consent](../../../back-office/system/consent-management/index.md#user-guide-consents-create) under **System > Consent Management**, define its properties, and link it to the content tree node.
-* Add the consent to the list of enabled user consents in the [system configuration](../../../back-office/system/configuration/commerce/customer/global-interactions.md#configuration-guide-commerce-configuration-consents) to display consents in the storefront.
+* Add the consent to the list of enabled user consents in the [system configuration](../../../back-office/system/configuration/commerce/customer/global-consents.md#configuration-guide-commerce-configuration-consents) to display consents in the storefront.
 
 Consents can be configured on [two levels](../../../back-office/system/index.md#configuration-guide-config-levels), [global](../../../back-office/system/index.md#doc-system-configuration) and [website](../../../back-office/system/websites/web-configuration/index.md#doc-website-configuration). However, you can add consents to the storefront on the website level only when consents are enabled globally.
 
 Learn more on the configuration and localization of consents in OroCommerce in the following topics:
 
-* [Configure Consents](../../../back-office/system/configuration/commerce/customer/global-interactions.md#configuration-guide-commerce-configuration-consents)
+* [Configure Consents](../../../back-office/system/configuration/commerce/customer/global-consents.md#configuration-guide-commerce-configuration-consents)
 * [Create Consents](../../../back-office/system/consent-management/index.md#user-guide-consents-create)
 * [Add a Consent Landing Page to a Web Catalog](add-consent.md#user-guide-consents-add)
 * [Localize Consents](localize-consents.md#user-guide-consents-localizing-consents)

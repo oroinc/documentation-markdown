@@ -82,7 +82,7 @@ class FavoriteController extends AbstractController
     {
         return ['entity_class' => Favorite::class];
     }
-    }
+}
 ```
 
 Using the `#[Acl]` attribute does not only create new access control lists to which you can refer in other parts of your code, it also triggers the access decision manager when your actions are accessed by users and thus protect them from being accessed without the needed permissions.
@@ -138,7 +138,7 @@ acls:
 >             'data' => $query->getResult()
 >         ];
 >     }
->     }
+> }
 > ```
 > 
 > When configuring the ACL using the YAML config format, you also have to set the controller to use the `bindings` option to bind the ACL:

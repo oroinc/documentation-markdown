@@ -31,13 +31,12 @@ To create a [consent](../../../glossary.md#term-Consent) in OroCommerce:
 4. Click **Save and Close**.
 
 #### IMPORTANT
-To make consents visible in the storefront, you must [add them to the list of enabled consents](../configuration/commerce/customer/global-interactions.md#admin-guide-commerce-configuration-customers-consents-enable-globally) in the system configuration.
+Keep in mind that for the consents to be displayed in the storefront, you need to [add them to the list of enabled consents](../configuration/commerce/customer/global-consents.md#admin-guide-commerce-configuration-customers-consents-enable-globally) in the system configuration.
 
 #### IMPORTANT
-After a consent is accepted by at least one user in the OroCommerce storefront, it cannot be edited or deleted.
-The same restriction applies to the associated landing page.
+Be aware that if a consent is accepted by at least one person in the OroCommerce storefront, it becomes uneditable and unremovable. The associated landing page becomes uneditable and unremovable as well.
 
-#### HINT
+#### IMPORTANT
 You can view all consents accepted by your customer users in the **Consents** section of their pages under **Customers > Customer Users**.
 
 ![Consents section under a customer user record](user/img/system/consents/consents_section_customer_user_page.png)
@@ -45,7 +44,7 @@ You can view all consents accepted by your customer users in the **Consents** se
 **Related Topics**
 
 * [Data Protection in the OroCommerce Storefront](../../../storefront/account/my-profile/index.md#frontstore-guide-profile-consents)
-* [Configure Consents](../configuration/commerce/customer/global-interactions.md#configuration-guide-commerce-configuration-consents)
+* [Configure Consents](../configuration/commerce/customer/global-consents.md#configuration-guide-commerce-configuration-consents)
 * [Declined Consents as Contact Requests](../../activities/contact-requests/index.md#user-guide-activities-requests)
 * [Add a Consent Landing Page to a Web Catalog](../../../concept-guides/administration/consents/add-consent.md#user-guide-consents-add)
 * [View and Accept Consents in the Storefront](../../../storefront/account/my-profile/index.md#frontstore-guide-profile-consents)

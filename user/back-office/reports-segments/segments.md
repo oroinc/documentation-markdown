@@ -33,6 +33,7 @@ To create a new segment:
    5. Optionally, specify the records limit. The segment shows the first X results in case the limit is provided.
    6. Select the segment owner - a business unit, members of which can manage the segment, subject to the roles defined in the system.
 4. In the *Designer > Columns* section, define the set of the fields of the entity records to be shown in the segment.
+   ![Illustrate the Designer section on the create segment page](user/img/reports/list_columns.png)
 
    To add a column to the grid:
    > 1. Choose a field from the drop-down in the **Column** section.

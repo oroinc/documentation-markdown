@@ -25,7 +25,7 @@ php.ini).
 
 Import from the UI is good for relatively small amount of data (up to 1000 entities), but if you need to import thousands
 or millions of entities the command line is your best choice. OroPlatform provides the CLI command `oro:import:file`
-that allows to import records from the specified file.
+that allows to import records from the specified CSV file.
 
 ```none
 $ php bin/console oro:import:file --help
@@ -35,7 +35,7 @@ Usage:
     oro:import:file --validation --email=<email> --jobName=<job> --processor=<processor> <file>
 
 Arguments:
-    file                   File name
+    file                   CSV file name
 
 Options:
     --jobName=JOBNAME      Import job name

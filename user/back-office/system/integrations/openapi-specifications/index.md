@@ -2,6 +2,9 @@
 
 # OpenAPI Specifications Management
 
+#### NOTE
+This feature is available as of OroCommerce version 6.0.2.
+
 This section describes how to create and manage OpenAPI specifications for different types of REST APIs provided by Oro applications.
 
 ## Create an OpenAPI Specification

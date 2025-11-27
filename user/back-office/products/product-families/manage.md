@@ -14,11 +14,9 @@ From the product families page, you can:
 - Filter existing product families
 - Manage product family grid settings (<i class="fa fa-eye fa-lg" aria-hidden="true"></i> **View** or <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** product family details by clicking the required icon at the end of a product family row)
 
-Additionally, you can edit the details of a product family on the product families details page by clicking <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** on the top right of its page.
-
-You can delete a product family if it was created within your organization and your [user role](../../system/user-management/roles/index.md#user-guide-user-management-permissions) has the necessary permissions. Product families created in other organizations cannot be deleted unless you are operating from the [global organization](../../system/user-management/organizations/index.md#user-management-organizations) and your role has the appropriate permission to perform this action. Note that system product family(ies) cannot be deleted under any circumstances.
-
 ![The actions available for product families from their general page](user/img/products/product_families/ProductFamiliesView.png)
+
+Additionally, you can edit the details of a product family on the product families details page by clicking <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** on the top right of its page.
 
 <a id="product-product-families-edit"></a>
 

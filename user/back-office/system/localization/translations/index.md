@@ -7,9 +7,6 @@
 #### HINT
 This section is part of the [Localization and Translation](../../../../concept-guides/administration/localization/index.md#concept-guide-localization-translation) concept guide that provides a general understanding of the localization and translation processes in OroCommerce.
 
-#### NOTE
-The Translations settings are accessible from the **Global organization only**. Find more on working with organizations in the [Company Structure and Organization Selector](../../../getting-started/navigation/org-selector.md#user-guide-getting-started-company-structure).
-
 <!-- begin -->
 
 Translations are a collection of visual elements in the Oro application, like labels, information massages, notifications, alerts, workflow statuses, etc.
@@ -26,6 +23,7 @@ The following information about the translations is available in the All Transla
 | TRANSLATED          | The status indicates whether the text items are translated to the target language (Yes/No).                                                                                                                        |
 | ENGLISH TRANSLATION | The column contains the english translation of the text items.                                                                                                                                                     |
 | TRANSLATED VALUE    | The translation value of the text item to the target language.                                                                                                                                                     |
+| CURRENT VALUE       | The translation of the system element currently displayed to the user on the UI of the Oro application.                                                                                                            |
 | KEY                 | A coded text string that identifies the text system element and is used to find its translation to the target language<br/>(e.g. oro.ui.updated_at) in Oro applications.                                           |
 | DOMAIN              | The logical affiliation to a particular functionality that organises linguistic sources by domain (e.g. security, entities<br/>jsmessages, maintenance, install, workflows, messages, validators, HWIOAuthBundle). |
 | CONTEXT             | The detailed location of the translated functional component (e.g., Workflow “Checkout” -> Name).                                                                                                                  |
@@ -33,7 +31,7 @@ The following information about the translations is available in the All Transla
 #### IMPORTANT
 Remember a rule of thumb:
 
-The translations which are currently displayed to the user in the Oro application are located in the **Translated Value** column. This column inherits the values from the **English Translation** column upon update. If there is no translation provided for a specific language, then the **Key** value is used for the system element.
+The translations which are currently displayed to the user in the Oro application are located in the **Current value** column. This column inherits the values from the **Translated value** column upon update. If there is no translation provided for a specific language, the **Current value** column is populated with the default English translation mentioned in the **English translation** column. If the system element doesn’t have the English equivalent, the **Current value** column takes the value from the **Key** column.
 
 ![image](user/img/system/localization/translations_rule_of_thumb.png)
 

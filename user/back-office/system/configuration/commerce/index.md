@@ -10,6 +10,8 @@ Learn how to set up product and category visibility restrictions, customer user 
 
 * [Visibility](customer/visibility.md#user-guide-customers-configuration-visibility)
 * [Customer Users](customer/global-customer-users.md#sys-config-configuration-commerce-customers-customer-users)
+* [Contact Requests](customer/global-contact-us.md#sys-conf-commerce-customer-contact-request-global)
+* [Consents](customer/global-consents.md#configuration-guide-commerce-configuration-consents)
 * [Interactions](customer/global-interactions.md#configuration-guide-commerce-configuration-interactions)
 
 ## [Guests](guests/index.md#configuration-guide-commerce-configuration-guests)
@@ -85,12 +87,6 @@ Learn how to define the merchant country.
 
 * [General](payment/payment-configuration.md#sys-conf-commerce-payment-general)
 
-## [Contacts](contacts/index.md#sys-conf-commerce-contacts)
-
-Learn how to configure and manage your company’s business details.
-
-* [Seller Info](contacts/seller-info-global.md#sys-conf-commerce-contacts-seller-info)
-
 ## [Search](search/index.md#configuration-guide-commerce-configuration-search)
 
 * [Saved Search](search/saved-search.md#configuration-guide-commerce-configuration-saved-search)
@@ -107,8 +103,6 @@ Learn how to define how open orders should be displayed in the storefront.
 * [Order Creation](orders/global-order-creation.md#configuration-commerce-orders-create)
 * [Purchase History](orders/global-previously-purchased.md#sys-commerce-orders-previously-purchased-main)
 * [Order Status Management](orders/global-order-status-management.md#sys-commerce-orders-status-management)
-* [AI Smart Order](../system/integrations/global-ai-smart-order.md#admin-configuration-orders-ai-smart-order-settings)
-* [External Order Import](orders/global-external-order-import.md#system-configuration-orders-external-order-import)
 
 ## [Shipping](shipping/index.md#configuration-guide-commerce-configuration-shipping)
 
@@ -116,7 +110,6 @@ Learn how to provide your shipping origin address and shipping options.
 
 * [Shipping Origin](shipping/shipping-origin.md#sys-conf-commerce-shipping-shipping-origin)
 * [Shipping Options](shipping/shipping-options.md#sys-conf-commerce-shipping-shipping-options)
-* [Address Validation](shipping/address-validation.md#sys-conf-commerce-shipping-address-validation)
 
 ## [Marketplace](marketplace/index.md#configuration-guide-commerce-marketplace)
 
