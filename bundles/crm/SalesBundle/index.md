@@ -2,7 +2,7 @@
 
 # OroSalesBundle
 
-<a href="https://github.com/oroinc/crm/tree/6.1/src/Oro/Bundle/SalesBundle" target="_blank">OroSalesBundle</a> adds sales leads and sales opportunities entities to enable sales representative activities in Oro applications.
+<a href="https://github.com/oroinc/crm/tree/5.1src/Oro/Bundle/SalesBundle" target="_blank">OroSalesBundle</a> adds sales leads and sales opportunities entities to enable sales representative activities in Oro applications.
 
 The bundle provides UI to manage these records and allows back-office administrators to enable and disable the functionality in the system configuration UI.
 
@@ -32,7 +32,9 @@ class YourMigration implements Migration, CustomerExtensionAwareInterface
 {
     use CustomerExtensionTrait;
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->customerExtension->addCustomerAssociation($schema, 'target_customer_table');
@@ -53,7 +55,9 @@ class CustomerIconProvider implements CustomerIconProviderInterface
 {
     const CUSTOMER_ICON_FILE = 'bundles/yourbundlename/img/customer-logo.png';
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getIcon($entity)
     {
         if (!$entity instanceof Customer) {
@@ -83,15 +87,20 @@ If you want to create an option to enable for type component, add the `routeCrea
 Example:
 
 ```bash
-#[ORM\Entity]
-#[ORM\Table(name: 'your_customer')]
-#[Config(
-    routeCreate: 'your_customer_entity_create',
-    defaultValues: [
-        'grid' => ['default' => 'your-customer-select-grid']
-        ...
-    ]
-)]
+/**
+ * @ORM\Entity()
+ * @ORM\Table(name="your_customer")
+ *
+ * @Config(
+ *      routeCreate="your_customer_entity_create",
+ *      defaultValues={
+ *          "grid"={
+ *              "default"="your-customer-select-grid"
+ *          },
+...
+ *      }
+ * )
+ */
 class Customer implements ExtendEntityInterface
 ...
 ```

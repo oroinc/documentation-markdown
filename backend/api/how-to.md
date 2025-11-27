@@ -189,7 +189,7 @@ api:
 
 ## Change the Maximum Number of Entities that Can Be Deleted by One Request
 
-By default, the `delete_list` action can delete not more than 100 entities, see the `max_delete_entities` option in [General Configuration](configuration-general.md#web-api-configuration-general). This limit is set by the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Processor/DeleteList/SetDeleteLimit.php" target="_blank">SetDeleteLimit</a> processor.
+By default, the `delete_list` action can delete not more than 100 entities, see the `max_delete_entities` option in [General Configuration](configuration-general.md#web-api-configuration-general). This limit is set by the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ApiBundle/Processor/DeleteList/SetDeleteLimit.php" target="_blank">SetDeleteLimit</a> processor.
 
 If your want to use another limit, set it using the `max_results` option in Resources/config/oro/api.yml:
 
@@ -453,7 +453,7 @@ api:
 ```
 
 #### NOTE
-Only one-to-one, many-to-one and many-to-many unidirectional associations are supported.
+Only many-to-one and many-to-many unidirectional associations are supported.
 
 #### NOTE
 This data type is not supported for models that replace ORM entities.
@@ -462,7 +462,7 @@ This data type is not supported for models that replace ORM entities.
 
 ## Add a Custom Controller
 
-By default, all REST API resources are handled by <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Controller/RestApiController.php" target="_blank">RestApiController</a> that handles [get_list](actions.md#get-list-action), [get](actions.md#get-action), [delete](actions.md#delete-action), [delete_list](actions.md#delete-list-action), [create](actions.md#create-action), [update](actions.md#update-action), [get_subresource](actions.md#get-subresource-action), [get_relationship](actions.md#get-relationship-action), [update_relationship](actions.md#update-relationship-action), [add_relationship](actions.md#add-relationship-action) and [delete_relationship](actions.md#delete-relationship-action) actions.
+By default, all REST API resources are handled by <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ApiBundle/Controller/RestApiController.php" target="_blank">RestApiController</a> that handles [get_list](actions.md#get-list-action), [get](actions.md#get-action), [delete](actions.md#delete-action), [delete_list](actions.md#delete-list-action), [create](actions.md#create-action), [update](actions.md#update-action), [get_subresource](actions.md#get-subresource-action), [get_relationship](actions.md#get-relationship-action), [update_relationship](actions.md#update-relationship-action), [add_relationship](actions.md#add-relationship-action) and [delete_relationship](actions.md#delete-relationship-action) actions.
 
 If this controller cannot handle the implementation of your REST API resources, you can register a custom controller. Please note that this is not recommended and should be used only in very special cases. Having a custom controller implies that many processes should be implemented from scratch, including:
 
@@ -566,10 +566,10 @@ Use the [oro:api:doc:cache:clear](commands.md#oroapidoccacheclear-command) comma
 
 ## Add a Custom Route
 
-As described in [Add a Custom Controller](), <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Controller/RestApiController.php" target="_blank">RestApiController</a> handles all registered REST API resources, and in most cases you do not need to change this.
+As described in [Add a Custom Controller](), <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ApiBundle/Controller/RestApiController.php" target="_blank">RestApiController</a> handles all registered REST API resources, and in most cases you do not need to change this.
 But sometimes you need to change the default mapping between URI and an action of this controller for some
 REST API resources.
-For example, imagine that URI of the REST API resource for the registered user’s profile is `/api/userprofile`. If you take a look at <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Resources/config/oro/routing.yml" target="_blank">routing.yml</a>, you will see that this URI is matched by the `/api/{entity}` pattern, but the action that handles this
+For example, imagine that URI of the REST API resource for the registered user’s profile is `/api/userprofile`. If you take a look at <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/ApiBundle/Resources/config/oro/routing.yml" target="_blank">routing.yml</a>, you will see that this URI is matched by the `/api/{entity}` pattern, but the action that handles this
 pattern works with a list of entities, not with a single entity. The challenge is to map `/api/userprofile` to the `Oro\Bundle\ApiBundle\Controller\RestApiController::itemAction` action that works with a single entity and to remove handling of
 `/api/userprofile/{id}`. This can be achieved using own route definition with the `override_path` option.
 
@@ -651,32 +651,6 @@ the [oro:api:dump](commands.md#oroapidump-command) command with `--upsert` optio
 
 ```none
 php bin/console oro:api:dump --upsert
-```
-
-<a id="configure-validate-operation"></a>
-
-## Configure Validate Operation
-
-By default, [the validate operation](../../api/validate-operation.md#web-services-api-validate-operation) is disabled for API resources.
-
-If the validate operation is disabled for an API resource by default, but you need to enable it, use
-the “enable_validation” configuration option in Resources/config/oro/api.yml :
-
-```yaml
-api:
-    entities:
-        Acme\Bundle\DemoBundle\Entity\SomeEntity:
-            enable_validation: true
-```
-
-#### NOTE
-Please be aware that when validation requests are processed, the `rollback_validated_request` event is dispatched instead of `post_flush_data` and `post_save_data`. Additionally, make sure that no extra actions, such as data indexing or sending emails, are performed when using validation requests. These extra actions can significantly impact the application’s performance. For example, if data is indexed but not stored in the database, or if an email is sent for a record that was not created or updated in the database.
-
-To check which entities support the validate operation, use
-the [oro:api:dump](commands.md#oroapidump-command) command with `--validate` option:
-
-```none
-php bin/console oro:api:dump --validate
 ```
 
 <a id="using-a-non-primary-key-to-identify-an-entity"></a>
@@ -786,7 +760,9 @@ The following steps describe how to create such API resources:
 
    > class RegisterAccount implements ProcessorInterface
    > {
-   >     #[\Override]
+   >     /**
+   >      * {@inheritDoc}
+   >      */
    >     public function process(ContextInterface $context): void
    >     {
    >         /** @var Account $account */
@@ -858,7 +834,9 @@ To do this, you need to perform the following:
    >     private const REQUEST_HEADER_VALUE = 'ERP';
    >     private const REQUEST_TYPE = 'erp';
 
-   >     #[\Override]
+   >     /**
+   >      * {@inheritDoc}
+   >      */
    >     public function process(ContextInterface $context): void
    >     {
    >         /** @var Context $context */
@@ -939,7 +917,7 @@ to use such identifier in a resource path, filters and request data.
 
 To implement this approach, you need to perform the following:
 
-1. Create a class that implements <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Request/EntityIdResolverInterface.php" target="_blank">EntityIdResolverInterface</a>, e.g.:
+1. Create a class that implements <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ApiBundle/Request/EntityIdResolverInterface.php" target="_blank">EntityIdResolverInterface</a>, e.g.:
    > ```php
    > namespace Oro\Bundle\UserBundle\Api;
 
@@ -960,7 +938,9 @@ To implement this approach, you need to perform the following:
    >         $this->tokenAccessor = $tokenAccessor;
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * {@inheritDoc}
+   >      */
    >     public function getDescription(): string
    >     {
    >         return <<<MARKDOWN
@@ -968,7 +948,9 @@ To implement this approach, you need to perform the following:
    > MARKDOWN;
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * {@inheritDoc}
+   >      */
    >     public function resolve(): mixed
    >     {
    >         $user = $this->tokenAccessor->getUser();
@@ -1027,7 +1009,9 @@ For example, imagine that a “price” field need to be added to a product API.
 
    > class ComputeProductPriceField implements ProcessorInterface
    > {
-   >     #[\Override]
+   >     /**
+   >      * {@inheritDoc}
+   >      */
    >     public function process(ContextInterface $context): void
    >     {
    >         /** @var CustomizeLoadedDataContext $context */
@@ -1073,27 +1057,37 @@ Let’s use the following schema of entities to illustrate how to use a custom q
 - Account entity
 
 ```php
-#[ORM\OneToMany(mappedBy: 'account', targetEntity: 'AccountContactLink')]
+/**
+ * @ORM\OneToMany(targetEntity="AccountContactLink", mappedBy="account")
+ */
 private $contactLinks;
 ```
 
 - Contact entity
 
 ```php
-#[ORM\OneToMany(mappedBy: 'contact', targetEntity: 'AccountContactLink')]
+/**
+ * @ORM\OneToMany(targetEntity="AccountContactLink", mappedBy="contact")
+ */
 private $accountLinks;
 ```
 
 - AccountContactLink entity
 
 ```php
-#[ORM\ManyToOne(targetEntity: 'Account', inversedBy: 'contactLinks')]
+/**
+ * @ORM\ManyToOne(targetEntity="Account", inversedBy="contactLinks")
+ */
 private $account;
 
-#[ORM\ManyToOne(targetEntity: 'Contact', inversedBy: 'accountLinks')]
+/**
+ * @ORM\ManyToOne(targetEntity="Contact", inversedBy="accountLinks")
+ */
 private $contact;
 
-#[ORM\Column(type: 'boolean', nullable: false, options: ['default' => true])]
+/**
+ * @ORM\Column(type="boolean", nullable=false, options={"default"=true})
+ */
 private $enabled = true;
 ```
 
@@ -1139,7 +1133,9 @@ class SetAccountContactsAssociationQuery implements ProcessorInterface
         $this->doctrineHelper = $doctrineHelper;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function process(ContextInterface $context): void
     {
         /** @var ConfigContext $context */
@@ -1199,7 +1195,9 @@ services:
   >         $this->doctrineHelper = $doctrineHelper;
   >     }
 
-  >     #[\Override]
+  >     /**
+  >      * {@inheritDoc}
+  >      */
   >     public function process(ContextInterface $context): void
   >     {
   >         /** @var SubresourceContext $context */
@@ -1263,7 +1261,9 @@ use Symfony\Component\Validator\Constraints\NotBlank;
 
 class ValidateLabelField implements ProcessorInterface
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function process(ContextInterface $context): void
     {
         /** @var CustomizeFormDataContext $context */

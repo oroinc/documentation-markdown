@@ -33,7 +33,7 @@ To handle a considerable volume of data, use the page switcher, increase *View P
 
 In the customer tax codes list, you will find the information about the code (unique identifier), a detailed description, and the dates when the customer tax code was created and updated.
 
-Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the item and click <i class="fa fa-eye fa-lg" aria-hidden="true"></i> to open its details page, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> to edit, or  ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) to remove the customer tax code.
+Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the item and click <i class="fa fa-eye fa-lg" aria-hidden="true"></i> to open its details page, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> to edit, or  <i class="fas fa-trash-alt" aria-hidden="true"></i> to remove the customer tax code.
 
 ### View Customer Tax Code Details
 
@@ -46,7 +46,7 @@ To view customer tax code details:
 > * View Change History — See the log of edits of this customer tax code by clicking the **Change History** link to the top right of the page.
 >   ![The log of edits of the selected customer](user/img/taxes/CustomerTaxCodeChangeHistory.png)
 > * View details of the customer who is linked to this customer tax code — Click the line with the customer account details.
-> * <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** the selected customer tax code.
+> * <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** or <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** the selected customer tax code.
 
 >   #### NOTE
 >   You can edit the customer details to remove the link to this customer tax code, if necessary.
@@ -108,20 +108,3 @@ You can edit the association of the customer tax code with the tax when [editing
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

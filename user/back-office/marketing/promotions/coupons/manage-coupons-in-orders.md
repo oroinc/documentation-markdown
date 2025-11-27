@@ -6,7 +6,7 @@
 
 In your Oro application, you can manage coupons from the page of the selected [order](../../../sales/orders/index.md#user-guide-sales-orders). Specifically, you can:
 
-1. View the coupon applied to the order under **Discounts** on the order page.
+1. View the coupon applied to the order under **Promotions and Discounts** on the order page.
 2. Add a coupon to the order manually.
 
 ## View Coupon Codes
@@ -14,8 +14,8 @@ In your Oro application, you can manage coupons from the page of the selected [o
 To view the coupon codes that apply to the selected order:
 
 1. Navigate to **Sales > Orders** in the main menu.
-2. Click to open the required order to open it.
-3. Click **Discounts** to open the section.
+2. Click once to open the required order to open it.
+3. Click **Promotions and Discounts** to open the section.
 4. Under **All Promotions** on the left of the section, click <i class="fa fa-eye fa-lg" aria-hidden="true"></i> at the end of the coupon code row.
    ![View the coupon applied to the order in the back-office](user/img/marketing/coupons/ViewCouponsIcon.png)
 5. In the popup that opens, you can view the details of the selected coupon, as illustrated below.
@@ -26,9 +26,9 @@ To view the coupon codes that apply to the selected order:
 To add a coupon code to the required order from its page:
 
 1. Navigate to **Sales > Orders** in the main menu.
-2. Click to open the required order to open it.
-3. Click **Add Coupon Code** in the **More Actions** menu on the top right of the order page.
-   ![More Actions menu options on the order page](user/img/marketing/coupons/more-actions-coupon.png)
+2. Click once to open the required order to open it.
+3. Click **Add Coupon Code** on the top right of the order page.
+   ![Highlight the Add Coupon Code button on the Order's page](user/img/marketing/coupons/AddCouponToOrder.png)
 4. In the popup that opens, choose a coupon code from the list:
    ![Selecting the coupon code from the list in the popup dialog](user/img/marketing/coupons/CouponCodesListOrder.png)
 
@@ -38,13 +38,13 @@ To add a coupon code to the required order from its page:
 
    #### NOTE
    Please keep in mind that you cannot apply two coupon codes to one order if they are related to the same promotion.
-7. The applied coupon code will be displayed under **All Promotions** in the **Discounts** section.
+7. The applied coupon code will be displayed under **All Promotions** in the **Promotions and Discounts** section.
 
 This way, you can apply as many coupons to the order as necessary as long as they belong to different promotions.
 
 ## Manage Coupons When Editing the Order
 
-When editing the selected order, you can perform the following actions with the coupons under **All Promotions** in the **Discounts** section:
+When editing the selected order, you can perform the following actions with the coupons under **All Promotions** in the **Promotions and Discounts** section:
 
 ![The actions you can perform with the coupons under All Promotions](user/img/marketing/coupons/AllPromotionsSectioninEditOrderForm.png)
 1. **Add Coupon Code** and follow the steps described in the [Add Coupons Through the Order Page](index.md#user-guide-marketing-promotions-coupons-edit-on-order-page) page.
@@ -53,7 +53,7 @@ When editing the selected order, you can perform the following actions with the 
 
    #### NOTE
    When you deactivate the coupon code, its status is changed from active to inactive. It is not removed, and you can reactivate it when necessary.
-4. ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) Delete a coupon code.
+4. <i class="fas fa-trash-alt" aria-hidden="true"></i> Delete a coupon code.
 
 #### NOTE
 When you add, deactivate, or delete coupons when editing orders, the price totals, and the shipping cost may change. Please, review the order totals to ensure the cost is acceptable.
@@ -64,20 +64,3 @@ When you add, deactivate, or delete coupons when editing orders, the price total
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

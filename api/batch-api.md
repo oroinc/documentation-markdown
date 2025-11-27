@@ -7,15 +7,6 @@ The Batch API provides a way to create or update a list of entities of the same 
 The request is processed asynchronously. The server may process records in any order regardless of the order
 in which they are specified in the request.
 
-#### NOTE
-It is also possible to process several entities synchronously.
-For details, see [Synchronous Batch API](sync-batch-api.md#web-services-api-sync-batch-api).
-
-## Endpoint URL
-
-The Batch API data should be sent via the `PATCH` HTTP method to the `/api/{entity}` endpoint.
-Where the `{entity}` is an entity type, e.g. `/api/accounts`.
-
 ## Input Data Format
 
 The input data for each record are the same as for API resources to create or update a single account record:

@@ -10,26 +10,40 @@ The following example illustrates how to do it:
 
 *src/Acme/Bundle/DemoBundle/Migrations/Schema/v1_10/AcmeDemoBundle.php*
 ```php
-<?php
-
 namespace Acme\Bundle\DemoBundle\Migrations\Schema\v1_10;
 
 use Doctrine\DBAL\Schema\Schema;
-use Oro\Bundle\ActivityBundle\Migration\Extension\ActivityExtensionAwareInterface;
-use Oro\Bundle\ActivityBundle\Migration\Extension\ActivityExtensionAwareTrait;
 use Oro\Bundle\MigrationBundle\Migration\Migration;
 use Oro\Bundle\MigrationBundle\Migration\QueryBag;
+use Oro\Bundle\ActivityBundle\Migration\Extension\ActivityExtension;
+use Oro\Bundle\ActivityBundle\Migration\Extension\ActivityExtensionAwareInterface;
 
 class AcmeDemoBundle implements Migration, ActivityExtensionAwareInterface
 {
-    use ActivityExtensionAwareTrait;
+    protected ActivityExtension $activityExtension;
 
-    #[\Override]
-    public function up(Schema $schema, QueryBag $queries): void
+    /**
+     * {@inheritdoc}
+     */
+    public function setActivityExtension(ActivityExtension $activityExtension)
     {
-        $this->activityExtension->addActivityAssociation($schema, 'oro_email', 'acme_demo_document', true);
-        $this->activityExtension->addActivityAssociation($schema, 'acme_demo_sms', 'acme_demo_document', true);
-        $this->activityExtension->addActivityAssociation($schema, 'orocrm_call', 'acme_demo_priority');
+        $this->activityExtension = $activityExtension;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function up(Schema $schema, QueryBag $queries)
+    {
+        self::addActivityAssociations($schema, $this->activityExtension);
+    }
+
+    /**
+     * Enables Email activity for Document entity
+     */
+    public static function addActivityAssociations(Schema $schema, ActivityExtension $activityExtension)
+    {
+        $activityExtension->addActivityAssociation($schema, 'oro_email', 'acme_demo_document', true);
     }
 }
 ```
@@ -68,15 +82,19 @@ The widget can be displayed on the view and/or update pages. The list of allowed
 
 *src/Acme/Bundle/DemoBundle/Entity/Priority.php*
 ```php
-#[Config(
-    defaultValues: [
-        'activity' => ['show_on_page' => \Oro\Bundle\ActivityBundle\EntityConfig\ActivityScope::UPDATE_PAGE]
-    ]
-)]
+/**
+ * @Config(
+ *     defaultValues={
+ *         "activity"={
+ *             "show_on_page"="\Oro\Bundle\ActivityBundle\EntityConfig\ActivityScope::UPDATE_PAGE"
+ *         }
+ *     }
+ * )
+ */
 class Priority implements
     ExtendEntityInterface
 {
-    //    ...
+//    ...
 }
 ```
 
@@ -131,12 +149,12 @@ If you select more than one activity type in the filter, you can filter based on
 {
     /** @var ActivityListExtension */
     protected $activityListExtension;
-    #[\Override]
+    /** {@inheritdoc} */
     public function setActivityListExtension(ActivityListExtension $activityListExtension)
     {
         $this->activityListExtension = $activityListExtension;
     }
-    #[\Override]
+    /** {@inheritdoc} */
     public function up(Schema $schema, QueryBag $queries)
     {
         $activityListExtension->addInheritanceTargets($schema, 'orocrm_account', 'orocrm_contact', ['accounts']);

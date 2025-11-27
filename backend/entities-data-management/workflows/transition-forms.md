@@ -191,8 +191,8 @@ First, make sure you are familiar with the type of interface build, so that you 
 
 There are several major imports that can handle the next types of transition forms:
 
-- <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/WorkflowBundle/Resources/views/layouts/default/imports/oro_workflow_transition_form" target="_blank"> oro_workflow_transition_form</a>
-- <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/WorkflowBundle/Resources/views/layouts/default/imports/oro_workflow_start_transition_form" target="_blank">oro_workflow_start_transition_form</a>
+- <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/WorkflowBundle/Resources/views/layouts/default/imports/oro_workflow_transition_form" target="_blank"> oro_workflow_transition_form</a>
+- <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/WorkflowBundle/Resources/views/layouts/default/imports/oro_workflow_start_transition_form" target="_blank">oro_workflow_start_transition_form</a>
 
 Please consider adding them to your custom transition form controller.
 
@@ -203,9 +203,9 @@ The following layout context variables are available for the transition forms:
 - workflowName - the name of a workflow
 - transitionName - the name of a transition
 - transitionFormView - the form view instance (used in rendering)
-- transition - the instance of <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/WorkflowBundle/Model/Transition.php" target="_blank">Transition</a> class that current transit corresponds to
-- workflowItem - the instance of <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/WorkflowBundle/Entity/WorkflowItem.php" target="_blank">WorkflowItem</a> - current workflow record representation
-- formRouteName - the route that should be populated by LayoutTransitionContext processor in <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/WorkflowBundle/Processor/Context/TransitionContext.php" target="_blank">TransitionContext</a>
+- transition - the instance of <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/WorkflowBundle/Model/Transition.php" target="_blank">Transition</a> class that current transit corresponds to
+- workflowItem - the instance of <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/WorkflowBundle/Entity/WorkflowItem.php" target="_blank">WorkflowItem</a> - current workflow record representation
+- formRouteName - the route that should be populated by LayoutTransitionContext processor in <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/WorkflowBundle/Processor/Context/TransitionContext.php" target="_blank">TransitionContext</a>
 
 ### Limitations
 

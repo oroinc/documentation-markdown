@@ -1,6 +1,6 @@
 <a id="quote-create-from-rfq"></a>
 
-# Create a Quote on Customer Request
+# Create a Quote on the Customer Request
 
 <!-- begin_create_from_rqf -->
 
@@ -52,14 +52,7 @@ To create a new quote from the customer request for quote (RFQ):
    1. Optionally, enter the **Overridden Shipping Cost Amount, USD** - a custom shipping cost that will be used instead of the one that is dynamically generated based on the selected shipping method.
    2. To enforce using only the default Shipping method selected earlier, enable the **Shipping Method Locked** flag. When the shipping method is locked, the buyer does not see any other payment options but the default one.
    3. Tick the **Allow Unlisted Shipping Methods** box to allow using the shipping method already selected as a default one, even if the shipping rule configuration disables it.
-8. In the **Customer Documents** section, add files related to the customer’s quote. These files will be visible to the customer user in their storefront account:
-   * To add a new file, click *Choose File*.
-   * To remove a file, click on the bin icon.
-   * To add another file, click *Add File*.
-   * To adjust the order of files displayed to customers in the storefront, modify the number in the sort order input box. For example, files with a sort order of 1 will appear first on the list.
+8. Optionally, select a **Payment Term** as an available payment method.
+9. Click **Save**.
 
-   ![Illustration of the documents uploaded via back-office on the customer side in the storefront](user/img/sales/quotes/quotes-customer-documents.png)
-9. Optionally, select a **Payment Term** as an available payment method.
-10. Click **Save and Close**.
-
-After creating the quote, you can send it to the customer from the view page by clicking the appropriate button. This allows you to negotiate the quote further or convert it into an order.er.
+Once the quote is created, you can send it to the customer, who can further negotiate or convert it to order and proceed to the checkout.

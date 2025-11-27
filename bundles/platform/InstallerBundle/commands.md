@@ -12,7 +12,7 @@ The oro:install command is the application installer. It installs the applicatio
 php bin/console oro:install
 ```
 
-The `--application-url` option can be used to specify the URL at which the back-office of the application will be available.
+The `--application-url` option can be used to specify the URL at which the management console (back-office) of the application will be available.
 Please make sure that you web-server is [configured properly](../../../backend/setup/dev-environment/web-server-config.md#installation-web-server-configuration).
 
 ```none
@@ -73,12 +73,6 @@ php bin/console oro:install --skip-download-translations
 
 ```none
 php bin/console oro:install --skip-translations
-```
-
-The `--default-currency` option can be used to specify default currency:
-
-```none
-php bin/console oro:install --default-currency=EUR
 ```
 
 The `--drop-database` option should be provided when reinstalling the application from scratch on top of the existing database that needs to be wiped out first, or otherwise the installation will fail:

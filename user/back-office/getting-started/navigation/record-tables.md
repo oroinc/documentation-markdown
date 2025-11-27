@@ -56,7 +56,7 @@ The tables not only display record data but also contain links to the pages of t
 1. **Export Data** — Use to export the data in the table to a file either in .csv or .xlxs format (available formats may vary). Import results are sent to your email.
 2. **Sort Data** — By default, data in tables is sorted in ascending order by the first column. To sort a field, click the column header. When sorting is ascending, an upward arrow appears next to the column name. When sorting is descending, a downward arrow appears.
 3. <i class="fas fa-redo-alt" aria-hidden="true"></i> **Refresh** — Use to refresh the data displayed in the table and retrieve the latest details
-4. ![Reset-SVG](_themes/sphinx_rtd_theme/static/svg-icons/reset.svg) **Reset** — Use to clear the table customization and return to default settings. Reset applies to all filters, records per page, and sorting changes you have made.
+4. <i class="fas fa-sync-alt" aria-hidden="true"></i> **Reset** — Use to clear the table customization and return to default settings. Reset applies to all filters, records per page, and sorting changes you have made.
 5. <i class="fa fa-cog fa-lg" aria-hidden="true"></i> **Grid Settings** — Use to define which columns to show in the table.
    * You can manually select the columns by clicking on the checkbox next to the required field.
    * To show all columns in the table, click **Select All**.
@@ -142,6 +142,12 @@ For example:
 * Select which products to add to a product collection content variant in a web catalog
 
 ![image](user/img/getting_started/records/grids/web-catalog.png)
+* Select what products qualify for a promotion
+
+![image](user/img/getting_started/records/grids/grid-promotions.png)
+* Choose what products to include in a master catalog category.
+
+![image](user/img/getting_started/records/grids/master-catalog-grid.png)
 
 #### NOTE
 These checkboxes are for mass actions only, and **do not affect records during export**.
@@ -183,20 +189,3 @@ To manage saved views, click **Options** next to the view name. The following is
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

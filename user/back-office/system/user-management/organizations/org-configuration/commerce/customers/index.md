@@ -2,5 +2,5 @@
 
 # Configure Customer Settings per Organization
 
+* [Contact Requests](organization-contact-us.md)
 * [Customer Users](organization-customer-users.md)
-* [Interactions](organization-interactions.md)

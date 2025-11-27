@@ -9,9 +9,9 @@ Infrastructure-related environment variable defaults are stored in the  *.env-ap
 * The `ORO_WEBSOCKET_` environment variables define settings for the web UI.
 * The `ORO_SEARCH_ENGINE_DSN` environment variable is used to connect to the search engine.
 * The `ORO_WEBSITE_SEARCH_ENGINE_DSN` environment variable is used to connect to the website search engine.
-* The `ORO_SESSION_DSN` value specifies the PHP <a href="https://symfony.com/doc/6.4/components/http_foundation/session_configuration.html#save-handlers" target="_blank">session handler</a> to be used.
+* The `ORO_SESSION_DSN` value specifies the PHP <a href="https://symfony.com/doc/5.4/components/http_foundation/session_configuration.html#save-handlers" target="_blank">session handler</a> to be used.
 * The `ORO_MQ_DSN` environment variable is used to connect to the message queue transport.
-* The `ORO_SECRET` value is used to generate <a href="https://symfony.com/doc/6.4/security/csrf.html" target="_blank">CSRF tokens</a>.
+* The `ORO_SECRET` value is used to generate <a href="https://symfony.com/doc/5.4/security/csrf.html" target="_blank">CSRF tokens</a>.
 * The `ORO_ENTERPRISE_LICENCE` value defines the project enterprise license.
 * The `ORO_ENTERPRISE_LICENCE_START` value defines the project enterprise license start date in UTC timezone. The value format is YYYY-MM-DD, f.e. 2022-02-24. All other formats will be taken as January 1st of the current year.
 * The `ORO_JPEGOPTIM_BINARY` path to the <a href="https://github.com/liip/LiipImagineBundle/blob/afa4193c7fde027426ebb19e73878cd026438bbd/Resources/doc/post-processors/jpeg-optim.rst" target="_blank">LiipImagineBundle: JpegOptimPostProcessor</a> library.
@@ -48,7 +48,6 @@ parameters:
     maintenance_lock_file_path: '%env(resolve:ORO_MAINTENANCE_LOCK_FILE_PATH)%'
     oauth2_public_key: '%env(resolve:ORO_OAUTH_PUBLIC_KEY_PATH)%'
     oauth2_private_key: '%env(resolve:ORO_OAUTH_PRIVATE_KEY_PATH)%'
-    log_path: '%env(resolve:ORO_LOG_PATH)%'
     log_stacktrace_level: '%env(resolve:ORO_LOG_STACKTRACE_LEVEL)%' # The minimum log message level for which an exception stacktrace should be logged. To disable the stacktrace logging an empty string or "none" value can be used.
 
     env(ORO_SECRET): ThisTokenIsNotSoSecretChangeIt
@@ -71,10 +70,9 @@ parameters:
     env(ORO_REDIS_DOCTRINE_DSN): '%env(ORO_REDIS_URL)%/2'
     env(ORO_REDIS_LAYOUT_DSN): '%env(ORO_REDIS_URL)%/3'
     env(ORO_TRACKING_DATA_FOLDER): null
-    env(ORO_MAINTENANCE_LOCK_FILE_PATH): '%kernel.project_dir%/var/maintenance/maintenance_lock'
+    env(ORO_MAINTENANCE_LOCK_FILE_PATH): '%kernel.project_dir%/var/cache/maintenance_lock'
     env(ORO_OAUTH_PUBLIC_KEY_PATH): '%kernel.project_dir%/var/oauth_public.key'
     env(ORO_OAUTH_PRIVATE_KEY_PATH): '%kernel.project_dir%/var/oauth_private.key'
-    env(ORO_LOG_PATH): "%kernel.logs_dir%/%kernel.environment%.log"
     env(ORO_LOG_STACKTRACE_LEVEL): 'error'
 ```
 

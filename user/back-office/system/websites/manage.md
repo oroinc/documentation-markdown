@@ -29,7 +29,7 @@ OroCommerce redirects anonymous users to the default website. Logged in customer
 
 To set a website as default:
 
-1. Navigate to **System > Websites** using the main menu of the [global organization](../user-management/organizations/index.md#user-management-organizations).
+1. Navigate to **System > Websites** using the main menu.
 2. Click on the website you would like to use as default (e.g., Australia).
    ![View the details of Australia website](user/img/system/websites/view_website_australia.png)
 3. On the website details page, click <i class="fa fa-flag fa-lg" aria-hidden="true"></i> **Set Default**.
@@ -51,7 +51,7 @@ A B2C website can be configured in two ways, either [during creation](create.md#
    ![View the details of Australia website](user/img/system/websites/view_website_australia_B2C.png)
 3. On the website details page, click <i class="fas fa-shopping-bag" aria-hidden="true"></i> **Configure for B2C**.
 4. The popup confirmation dialog displays the list of options that will be modified by this configuration.
-   ![The list of options that are modified for the B2C website](user/img/system/websites/B2C_settings.png)
+   ![The list of options that are modified for the B2C website](user/img/system/websites/B2C_settings2.png)
 5. Click **Yes** to confirm.
 6. The changes apply automatically. You can view them in the system configuration and update if required.
 
@@ -64,7 +64,7 @@ To customize a storefront menu for the website:
 1. Navigate to **System > Websites** using the main menu.
 2. Click the website you would like to edit a menu for (e.g., Australia).
    ![View the details of Australia website](user/img/system/websites/view_website_australia1.png)
-3. On the website details page, click <i class="fas fa-cog" aria-hidden="true"></i> **Edit Storefront Menu**.
+3. On the website details page, click <i class="fas fa-cog" aria-hidden="true"></i> **Edit Frontend Menu**.
 
    Now you are redirected to the list of OroCommerce storefront menus:
    ![The list of OroCommerce storefront menus](user/img/system/websites/front_menu.png)
@@ -74,7 +74,7 @@ To customize a storefront menu for the website:
    * Create new items and dividers if necessary by clicking **Create Menu Item** or **Create Divider** (in the button group on the top right of the page).
    * Click on the menu item to edit its details.
 
-Find more information on how to edit and customize the storefront menu in the [Storefront Menu Management](../frontend-menus/index.md#frontend-menus-overview) section.
+Find more information on how to edit and customize the storefront menu in the [Menu Management](../menus/index.md#doc-config-menus-menuspage) section.
 
 1. Once you are happy with the menu contents, click **Save**.
 
@@ -148,20 +148,3 @@ Also, refer to the [shipping configuration on the system level](../configuration
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

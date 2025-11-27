@@ -14,7 +14,7 @@ Here, you can perform the following actions:
 * **Filter** — Click <i class="fa fa-filter fa-lg" aria-hidden="true"></i> to show filters per column. You can limit displayed items to those that match the filtering criteria provided.
 * **Sort** — To sort the items by the values in a particular column (e.g., RFQ#, Submitted by, etc.), click the respective column header. When sorting is ascending, an upward arrow appears next to the column name. When sorting is descending, a downward arrow appears.
 * **Refresh** — Click <i class="fas fa-redo-alt" aria-hidden="true"></i> to reload the information about the items. If another user recently updated the item details, these changes are reflected upon the refresh.
-* **Reset** — Click ![Reset-SVG](_themes/sphinx_rtd_theme/static/svg-icons/reset.svg) to roll back the view per page, filters, and columns configuration to the default values.
+* **Reset** — Click <i class="fas fa-sync-alt" aria-hidden="true"></i> to roll back the view per page, filters, and columns configuration to the default values.
 * **Manage columns** — Open the **Grid Settings** by clicking <i class="fa fa-cog fa-lg" aria-hidden="true"></i> to see the list of columns that organize the item details. To reorder the columns, click and hold the column name, then drag it to the new location. To show / hide a column, select / clear the **Show** checkbox next to it.
 
 Choose the required RFQ in the list, hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu, and perform one of the following:
@@ -33,20 +33,3 @@ Choose the required RFQ in the list, hover over the <i class="fa fa-ellipsis-h f
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

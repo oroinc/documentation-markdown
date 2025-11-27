@@ -3,31 +3,29 @@
 # Entity Fallback Values
 
 You can set up an entity field to fall back to a different entity’s field value.
-To set up such a field, add it to the entity as a property (or create a migration for adding it), and add a #[ConfigField] attribute and Doctrine association to <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Entity/EntityFieldFallbackValue.php" target="_blank">EntityFieldFallbackValue</a> (or array configuration in migration) like the following configuration:
+To set up such a field, add it to the entity as a property (or create a migration for adding it), and add a @ConfigField annotation and Doctrine association to <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityBundle/Entity/EntityFieldFallbackValue.php" target="_blank">EntityFieldFallbackValue</a> (or array configuration in migration) like the following configuration:
 
 ```php
 /**
  * @var EntityFieldFallbackValue
+ *
+ * @ORM\OneToOne(targetEntity="Oro\Bundle\EntityBundle\Entity\EntityFieldFallbackValue", cascade={"All"})
+ * @ORM\JoinColumn(name="some_field_name_fallback_id", referencedColumnName="id", onDelete="SET NULL")
+ * @ConfigField(
+ *     defaultValues={
+ *          "fallback": {
+ *              "fallbackList": {
+ *                  "someFallbackId" : {
+ *                      "fieldName": "someFieldName"
+ *                  },
+ *                  "systemConfig": {
+ *                      "configName": "oro_entity.some_configuration_name"
+ *                  }
+ *              }
+ *          }
+ *     }
+ * )
  */
-#[ORM\OneToOne(
-    targetEntity: 'Oro\Bundle\EntityBundle\Entity\EntityFieldFallbackValue',
-    cascade: ['All']
-)]
-#[ORM\JoinColumn(
-    name: 'some_field_name_fallback_id',
-    referencedColumnName: 'id',
-    onDelete: 'SET NULL'
-)]
-#[ConfigField(
-    defaultValues: [
-        'fallback' => [
-            'fallbackList' => [
-                'someFallbackId' => ['fieldName' => 'someFieldName'],
-                'systemConfig' => ['configName' => 'oro_entity.some_configuration_name']
-            ]
-        ]
-    ]
-)]
 protected $someFieldName;
 ```
 
@@ -77,15 +75,15 @@ system_configuration:
             type: choice
 ```
 
-You can find possible values for the fallbackType in <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Fallback/EntityFallbackResolver.php" target="_blank">EntityFallbackResolver</a>::$allowedTypes.
+You can find possible values for the fallbackType in <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityBundle/Fallback/EntityFallbackResolver.php" target="_blank">EntityFallbackResolver</a>::$allowedTypes.
 
 The fallbackList contains a list of possible fallback entities. The **systemConfig** fallback is a predefined ID for falling
-back to a system configuration <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ConfigBundle/Entity/ConfigValue.php" target="_blank">ConfigValue</a> value, for which the `configName` fallback configuration is mandatory (which refers to the form type name defined in `system_configuration.yml`). There is a predefined fallback provider for `systemConfig` in <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Fallback/Provider/SystemConfigFallbackProvider.php" target="_blank">SystemConfigFallbackProvider</a>.
+back to a system configuration <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ConfigBundle/Entity/ConfigValue.php" target="_blank">ConfigValue</a> value, for which the `configName` fallback configuration is mandatory (which refers to the form type name defined in `system_configuration.yml`). There is a predefined fallback provider for `systemConfig` in <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityBundle/Fallback/Provider/SystemConfigFallbackProvider.php" target="_blank">SystemConfigFallbackProvider</a>.
 
 If a field configured as a fallback field has a null value (no EntityFieldFallbackValue set at all), the resolver would try to automatically read the fallback value from the defined fallbackList, in the order of definition. In the example above, first, try the
 someFallbackId, then the systemConfig fallback.
 
-To fallback to a new entity field, you need to create a new fallback provider, extending <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Fallback/Provider/AbstractEntityFallbackProvider.php" target="_blank">AbstractEntityFallbackProvider</a>, with a service definition in `Resources/config/fallbacks.yml` like:
+To fallback to a new entity field, you need to create a new fallback provider, extending <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityBundle/Fallback/Provider/AbstractEntityFallbackProvider.php" target="_blank">AbstractEntityFallbackProvider</a>, with a service definition in `Resources/config/fallbacks.yml` like:
 
 ```yaml
 oro_entity.fallback.provider.system_config_provider:
@@ -98,17 +96,17 @@ oro_entity.fallback.provider.system_config_provider:
 ```
 
 Extend the parent `oro_entity.fallback.provider.abstract_provider` service, inject some dependencies, and tag it with
-oro_entity.fallback_provider as tag name, and systemConfig as id (this id will go into the #[ConfigField] fallbackList configuration as fallback name.
+oro_entity.fallback_provider as tag name, and systemConfig as id (this id will go into the @ConfigField fallbackList configuration as fallback name.
 The provider will then need to implement getFallbackHolderEntity, which defines how to access the parent fallback entity, getFallbackLabel, which is used for translating the fallback name,
 and optionally, the function isFallbackSupported, which can add some conditions on whether the fallback should appear as an option on the UI for a specific instance.
 
-Next, render the field in the main object’s class type by embedding the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Form/Type/EntityFieldFallbackValueType.php" target="_blank">EntityFieldFallbackValueType</a> in the main form type:
+Next, render the field in the main object’s class type by embedding the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityBundle/Form/Type/EntityFieldFallbackValueType.php" target="_blank">EntityFieldFallbackValueType</a> in the main form type:
 
 ```php
 $builder->add('someFieldName', EntityFieldFallbackValueType::class);
 ```
 
-This type defines three fields: scalarValue (which will hold the entity’s own value if no fallback is wanted), useFallback (checkbox for the UI to select/deselect fallback possibility) and fallback (which by default will render a dropdown with the fallback list and which will map to the fallback field of <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Entity/EntityFieldFallbackValue.php" target="_blank">EntityFieldFallbackValue</a> holding the fallback ID (like systemConfig).
+This type defines three fields: scalarValue (which will hold the entity’s own value if no fallback is wanted), useFallback (checkbox for the UI to select/deselect fallback possibility) and fallback (which by default will render a dropdown with the fallback list and which will map to the fallback field of <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityBundle/Entity/EntityFieldFallbackValue.php" target="_blank">EntityFieldFallbackValue</a> holding the fallback ID (like systemConfig).
 The options and types of those three fields can be overridden with value_options, fallback_options, use_fallback_options, value_type and fallback_type. Internally, the submitted own value will be saved in scalarValue, if it is scalar, or arrayValue, if it’s an array.
 
 ## Examples
@@ -123,7 +121,7 @@ The options and types of those three fields can be overridden with value_options
 
 If the fallback column contains a value, it means the entity uses the fallback value. If it is null and the scalar_value or array_value column contains data, it means that the entity has its own value
 
-The bundle also exposes a twig function to get the fallback compatible value of a field, which internally uses the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Fallback/EntityFallbackResolver.php" target="_blank">EntityFallbackResolver</a>.
+The bundle also exposes a twig function to get the fallback compatible value of a field, which internally uses the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityBundle/Fallback/EntityFallbackResolver.php" target="_blank">EntityFallbackResolver</a>.
 
 ```twig
 {{ oro_entity_fallback_value(entity, 'someFieldName') }}

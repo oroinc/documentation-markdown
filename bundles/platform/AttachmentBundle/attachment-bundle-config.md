@@ -125,7 +125,7 @@ knp_gaufrette:
 Based on the default configuration, it stores files in a private storage
 (`var/data/attachment` directory of your project if the local filesystem is used as storage).
 Users can reconfigure these settings. You can find more information on the KnpGaufretteBundle configuration
-in <a href="https://github.com/KnpLabs/KnpGaufretteBundle/blob/master/README.md" target="_blank">KnpGaufretteBundle documentation</a>.
+in <a href="https://github.com/KnpLabs/KnpGaufretteBundle/blob/5.1/README.md" target="_blank">KnpGaufretteBundle documentation</a>.
 
 Image thumbnail files are created from <a href="https://github.com/liip/LiipImagineBundle" target="_blank">LiipImagineBundle</a> and are stored in the public storage
 (`public/media/cache/attachment` directory if the local filesystem is used as storage).
@@ -159,16 +159,27 @@ namespace Acme\Bundle\DemoBundle\Migrations\Schema\v1_0;
 
 use Doctrine\DBAL\Schema\Schema;
 
+use Oro\Bundle\AttachmentBundle\Migration\Extension\AttachmentExtension;
 use Oro\Bundle\AttachmentBundle\Migration\Extension\AttachmentExtensionAwareInterface;
-use Oro\Bundle\AttachmentBundle\Migration\Extension\AttachmentExtensionAwareTrait;
 use Oro\Bundle\MigrationBundle\Migration\Migration;
 use Oro\Bundle\MigrationBundle\Migration\QueryBag;
 
 class AcmeDemoBundle implements Migration, AttachmentExtensionAwareInterface
 {
-    use AttachmentExtensionAwareTrait;
+    /** @var AttachmentExtension */
+    protected $attachmentExtension;
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
+    public function setAttachmentExtension(AttachmentExtension $attachmentExtension)
+    {
+        $this->attachmentExtension = $attachmentExtension;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->attachmentExtension->addImageRelation(
@@ -190,16 +201,26 @@ Also, you can enable attachments for an entity, e.g.,:
 namespace Acme\Bundle\DemoBundle\Migrations\Schema\v1_0;
 
 use Doctrine\DBAL\Schema\Schema;
-use Oro\Bundle\AttachmentBundle\Migration\Extension\AttachmentExtensionAwareInterface;
-use Oro\Bundle\AttachmentBundle\Migration\Extension\AttachmentExtensionAwareTrait;
 use Oro\Bundle\MigrationBundle\Migration\Migration;
 use Oro\Bundle\MigrationBundle\Migration\QueryBag;
+use Oro\Bundle\AttachmentBundle\Migration\Extension\AttachmentExtension;
+use Oro\Bundle\AttachmentBundle\Migration\Extension\AttachmentExtensionAwareInterface;
 
 class AcmeDemoBundle implements Migration, AttachmentExtensionAwareInterface
 {
-    use AttachmentExtensionAwareTrait;
+    protected AttachmentExtension $attachmentExtension;
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
+    public function setAttachmentExtension(AttachmentExtension $attachmentExtension)
+    {
+        $this->attachmentExtension = $attachmentExtension;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->attachmentExtension->addAttachmentAssociation(
@@ -219,16 +240,27 @@ namespace Acme\Bundle\DemoBundle\Migrations\Schema\v1_1;
 
 use Doctrine\DBAL\Schema\Schema;
 
+use Oro\Bundle\AttachmentBundle\Migration\Extension\AttachmentExtension;
 use Oro\Bundle\AttachmentBundle\Migration\Extension\AttachmentExtensionAwareInterface;
-use Oro\Bundle\AttachmentBundle\Migration\Extension\AttachmentExtensionAwareTrait;
 use Oro\Bundle\MigrationBundle\Migration\Migration;
 use Oro\Bundle\MigrationBundle\Migration\QueryBag;
 
 class AcmeDemoBundle implements Migration, AttachmentExtensionAwareInterface
 {
-    use AttachmentExtensionAwareTrait;
+    /** @var AttachmentExtension */
+    protected $attachmentExtension;
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
+    public function setAttachmentExtension(AttachmentExtension $attachmentExtension)
+    {
+        $this->attachmentExtension = $attachmentExtension;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->attachmentExtension->addMultiImageRelation(

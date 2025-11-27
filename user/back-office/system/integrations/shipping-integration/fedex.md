@@ -86,11 +86,7 @@ Click the <i class="fas fa-language" aria-hidden="true"></i> **Translations** ic
 6. Click **Check FedEx Connection** to ensure FedEx API is accessible.
 7. Set the status to **Active** to enable the integration.
 8. The **Default Owner** field is prepopulated with the user creating the integration. You can change this value to a different user, if necessary.
-
-#### NOTE
-In the **Synchronization Settings** section, select the **Log Warnings** checkbox if you want all synchronization errors to be written into the application log.
-
-1. Click **Save and Close**.
+9. Click **Save and Close**.
 
 Next, set up a shipping rule via the [Shipping Rules Configuration](../../shipping-rules/index.md#sys-shipping-rules) page to enable this shipping method for all or some customer orders.
 
@@ -128,20 +124,3 @@ That is why, when you check or update the existing integration, you will see the
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

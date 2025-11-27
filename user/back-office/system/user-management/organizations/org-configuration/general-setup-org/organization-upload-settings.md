@@ -16,6 +16,7 @@ To configure **MIME types** per organization:
 5. Select a set of mime types that will be supported for the file and image attachments in the system.
 6. Add any MIME type by writing the required file or image format in the text box.
 7. In the **File Names** section, you can control whether to use original file names. By default, the setting is enabled.
+   ![File names section on organization level](user/img/system/user_management/org_configuration/general/upload_settings_3.png)
 
    #### HINT
    The **File Names** settings can be configured [globally](../../../../configuration/system/general-setup/upload.md#admin-configuration-upload-settings), per organization and [per website](../../../../websites/web-configuration/general-sys-config/general/website-upload-settings.md#upload-settings-website).
@@ -25,30 +26,13 @@ To configure **MIME types** per organization:
    For example, the name of the file is **coffee_maker/bosch_#RND123.jpg**, the system-generated hash value is `media/cache/attachment/filter/product_gallery_main/b6d3b12a2194f276376d682d2e7e6bd1/1/5bae287538.jpg`. If the option is enabled, the file name is displayed in the storefront as follows `media/cache/attachment/filter/product_gallery_main/623364376a0e8125036727/1/5bae287538-coffee-maker-bosch-RND123.jpg`
 
    #### NOTE
-   When this option is enabled, the [Enable Original File Names](../commerce/product/organization-image-preview.md#sys-commerce-product-product-images-image-preview-organization) setting for Product Images is hidden from the system configuration page.
+   When this option is enabled, the **Enable Original File Names** setting for Product Images is hidden from the system configuration page.
 8. Click **Save Settings**.
 
-If [attachments are enabled for an entity](../../../../entities/manage-entities.md#doc-entity-actions-create), the configuration of the entity will prevail and override the corresponding settings configured both globally and per organization.
+If [attachments are enabled for an entity](../../../../entities/create-entities.md#doc-entity-actions-create), the configuration of the entity will prevail and override the corresponding settings configured both globally and per organization.
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

@@ -10,7 +10,7 @@ Study the example below:
 
 ```php
  /**
- * #[Route("/sample_not_found_page_code")
+ * @Route("/sample_not_found_page_code")
  *
  * @return Response
  */

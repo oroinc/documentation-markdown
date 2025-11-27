@@ -30,7 +30,7 @@ To create a campaign in the Oro application, create a [Marketing List](../market
    #### IMPORTANT
    You can add multiple columns to your marketing list in Oro, but only First Name, Last Name, and Email details are synced over to Mailchimp.
 3. Add email information to the marketing list to send an email campaign via Mailchimp.
-   ![Add the contact information field to the columns](user/img/marketing/marketing/mailchimp/o_marketing_list_email.png)
+   ![Add email field to the columns](user/img/marketing/marketing/mailchimp/o_marketing_list_email.png)
 4. Click **Save and Close**.
 
 ## Sync Oro Marketing List Data with a Mailchimp Audience
@@ -157,7 +157,7 @@ wish to promote your email in social media, select **Connect to Twitter** or **C
 
 1. Review campaign details and click **Send** on the top right.
    ![Review campaign details before sending](user/img/marketing/marketing/mailchimp/review_campaign_content.png)
-2. Click **Send Now**.
+2. Click **Send Now**
    ![Send the email campaign from mailchimp](user/img/marketing/marketing/mailchimp/prepare_for_launch.png)
 3. To look at your campaign statistics in the Mailchimp mobile app, click **Track Performance in Our Mobile App** on the same page.
    ![A message informing that the email campaign is sent](user/img/marketing/marketing/mailchimp/campaign_sent.png)
@@ -179,7 +179,7 @@ you will be able to see subscriber activity statistics, such as the number of cl
 #### NOTE
 Please note that sometimes Mailchimp’s summary information may not match the Oro application summary in the same report. This may happen because one set of statistics comes from Mailchimp directly. The other is generated as we receive specific reporting data back about recipients.
 
-For instance, if you need to exclude customers who did not open your email from a certain campaign, go to **Marketing > Marketing List> Create New Marketing List.** Fill in the mandatory fields, remembering to include at least one contact column below.
+For instance, if you need to exclude customers who did not open your email from the next campaign, go to **Marketing > Marketing List> Create New Marketing List.** Fill in the mandatory fields, remembering to include at least one contact column below.
 
 In the [Filters](../../reports-segments/filters.md#user-guide-getting-started-filters) section:
 

@@ -20,10 +20,8 @@ To create a new quote from scratch:
    5. Select an order fulfillment officer in the **Assigned To** box.
    6. Select the assigned customer user that will receive the order delivery in the **Assigned Customer** box.
    7. Select a **Website** to make this quote visible only on the specified website.
-
-   #### HINT
-   If option [Project Name](../../../system/configuration/commerce/sales/guest-quote.md#sys-conf-commerce-guest-enable-guest-quotes) is enabled in the configuration, you will be able to provide an identifier to help users search and track quotes by name, especially when records originate from external systems or third-parties.
 2. In the **Line Items** section:
+   ![The details of the Line Items section](user/img/sales/quotes/create_quote_line_items.png)
    1. Add products as quote line items.
 
       Use Select Product and Free-form entry link to switch between the following product entry modes:
@@ -67,15 +65,8 @@ To create a new quote from scratch:
    1. Optionally, enter the **Overridden Shipping Cost Amount, USD** - a custom shipping cost that will be used instead of the one that is dynamically generated based on the selected shipping method.
    2. To enforce using only the default Shipping method selected earlier, enable the **Shipping Method Locked** flag. When the shipping method is locked, the buyer does not see any other payment options but the default one.
    3. Tick the **Allow Unlisted Shipping Methods** box to allow using the shipping method already selected as a default one, even if the shipping rule configuration disables it.
-5. In the **Customer Documents** section, add files related to the customer’s quote. These files will be visible to the customer user in their storefront account:
-   * To add a new file, click *Choose File*.
-   * To remove a file, click on the bin icon.
-   * To add another file, click *Add File*.
-   * To adjust the order of files displayed to customers in the storefront, modify the number in the sort order input box. For example, files with a sort order of 1 will appear first on the list.
-
-   ![Illustration of the documents uploaded via back-office on the customer side in the storefront](user/img/sales/quotes/quotes-customer-documents.png)
-6. Optionally, select a **Payment Term** as an available payment method.
+5. Optionally, select a **Payment Term** as an available payment method.
 
    #### NOTE
    Be aware that although opportunity relation can be displayed on the quote page, it is not possible to manage it. When no opportunity relation is available for a quote, the inactive **Opportunity** field is displayed. More information on the relationship between opportunities and quotes is available in the [OroCommerce Opportunity Flow](../../opportunities/flows.md#mc-sales-opportunities-quote) topic.
-7. Click **Save**.
+6. Click **Save**.

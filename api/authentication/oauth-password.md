@@ -51,7 +51,7 @@ Response Body
     "token_type": "Bearer",
     "expires_in": 3600,
     "access_token": "your access token",
-    "refresh_token": "your refresh token"
+    "refresh_token" "your refresh token"
 }
 ```
 
@@ -65,30 +65,6 @@ Accept: application/vnd.api+json
 Authorization: Bearer your access token
 ```
 
-According to <a href="https://www.rfc-editor.org/rfc/rfc6750" target="_blank">Rfc6750</a>, an access token can be included as a body parameter in requests.
-
-#### NOTE
-When sending the access token as a body parameter, the request must include a Content-Type header set to application/vnd.api+json.
-
-Here is an example of how to send the access token as a body parameter:
-
-```http
-POST /api/users HTTP/1.1
-Accept: application/vnd.api+json
-Content-Type: application/vnd.api+json
-
-{
-    "access_token": "your_access_token",
-    "data": {
-      "type": "contacts",
-      "attributes": {
-        "firstName": "Jerry12",
-        "lastName": "Coleman2"
-      }
-    }
-}
-```
-
 #### NOTE
 Access tokens for back-office and storefront API are not interchangeable. If you attempt to request data for the storefront API with a token generated for the back-office application, access will be denied.
 
@@ -97,22 +73,3 @@ For the storefront API a customer user email address should be used as username.
 
 #### NOTE
 To get the access token for a visitor for the storefront API, use `guest` as username and password in the request to the authorization server. A new customer visitor is created for each created access token.
-
-#### NOTE
-When you need to transfer a visitor’s shopping list to a user, you must include the visitor’s access token in the access token generation request for that user. This visitor access token should be specified using the visitor_access_token parameter. For example:
-
-```http
-POST /oauth2-token HTTP/1.1
-Content-Type: application/json
-
-{
-    "grant_type": "password",
-    "client_id": "your client identifier",
-    "client_secret": "your client secret",
-    "username": "your user username",
-    "password": "your user password",
-    "visitor_access_token": "visitor's access token"
-}
-```
-
-<!-- Frontend -->

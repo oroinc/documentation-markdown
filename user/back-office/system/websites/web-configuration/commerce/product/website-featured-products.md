@@ -1,9 +1,6 @@
 <a id="sys-websites-commerce-products-featured-products"></a>
 
-# Configure Settings for Featured Products per Website (Version 5.1 and Below)
-
-#### IMPORTANT
-The configuration applies to OroCommerce version 5.1 and below and is retained in the current version only for legacy backward compatibility. For v6.0 and above, please configure this option via the product segment content widget under Marketing > Content Widgets following the [new configuration logic](../../../../../../concept-guides/catalog-promotions/product-management/index.md#concept-guides-product-management-featured-products).
+# Configure Settings for Featured Products per Website
 
 You can control which segment is used to store featured products [globally](../../../../configuration/commerce/product/global-featured-products.md#products-featured-products), [per organization](../../../../user-management/organizations/org-configuration/commerce/product/organization-featured-products.md#sys-users-organization-commerce-products-featured-products), and per website.
 
@@ -31,20 +28,3 @@ For faster navigation between the configuration menu sections, use [Quick Search
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

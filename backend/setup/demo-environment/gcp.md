@@ -1,5 +1,8 @@
 <a id="demo-environment-gcp"></a>
 
+#### WARNING
+OroCommerce VM for version 5.1 is no longer available on Google Marketplace. You can now deploy an image of the latest LTS version, as illustrated below.
+
 # Google Cloud Platform
 
 Google Cloud Platform enables you to deploy your Oro application instance in one click without manually configuring the software and settings. OroCommerce VM images comes with demo data and provides all the necessary information for you to test the application, such as a preconfigured list of customers, products, submitted orders, quotes, the structured master, and web catalogs. You can also explore the storefront using one of the pre-configured demo user roles. Sign in either as a guest user, a buyer (use *BrandaJSanborn@example.org* as your login and password), or a manager (use *AmandaRCole@example.org* as your login and password).

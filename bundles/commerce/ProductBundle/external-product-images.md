@@ -25,7 +25,9 @@ Below you can find an example of how to switch to the externally stored product 
 
    class EnableIsStoredExternallyForProductImage implements Migration
    {
-       #[\Override]
+       /**
+        * @inheritDoc
+        */
        public function up(Schema $schema, QueryBag $queries)
        {
            $queries->addPostQuery(
@@ -38,7 +40,7 @@ Below you can find an example of how to switch to the externally stored product 
 #### NOTE
 This code works with the upgrade only. If you need it to work with installation, update these metadata with the data migration.
 
-1. Create the <a href="https://symfony.com/doc/6.4/form/create_form_type_extension.html" target="_blank">form type extension</a> for the `Oro\Bundle\ProductBundle\Form\Type\ProductImageType` form type to toggle the isExternalFile form option:
+1. Create the <a href="https://symfony.com/doc/5.4/form/create_form_type_extension.html" target="_blank">form type extension</a> for the `Oro\Bundle\ProductBundle\Form\Type\ProductImageType` form type to toggle the isExternalFile form option:
    *src/Acme/Bundle/DemoBundle/Form/Extension/ProductImageExtension.php*
    ```php
    namespace Acme\Bundle\DemoBundle\Form\Extension;
@@ -50,13 +52,17 @@ This code works with the upgrade only. If you need it to work with installation,
 
    class ProductImageExtension extends AbstractTypeExtension
    {
-       #[\Override]
+       /**
+        * @inheritDoc
+        */
        public static function getExtendedTypes(): iterable
        {
            return [ProductImageType::class];
        }
 
-       #[\Override]
+       /**
+        * @inheritDoc
+        */
        public function buildForm(FormBuilderInterface $builder, array $options): void
        {
            $builder->add('image', ImageType::class, ['allowDelete' => false, 'isExternalFile' => true]);

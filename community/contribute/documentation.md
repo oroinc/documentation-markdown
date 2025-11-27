@@ -10,7 +10,7 @@ If you are willing to contribute — you are totally welcome. The information be
 
 ## Before You Begin
 
-The use of the documentation is subject to the <a href="https://github.com/oroinc/documentation/blob/master/LICENSE" target="_blank">CC-BY-NC-SA 4.0</a> license.
+The use of the documentation is subject to the <a href="https://github.com/oroinc/documentation/blob/5.1/LICENSE" target="_blank">CC-BY-NC-SA 4.0</a> license.
 
 Before submitting your documentation changes in a pull request, please sign our <a href="https://www.oroinc.com/orocommerce/contributor-license-agreement" target="_blank">Contributor License Agreement</a> (CLA). The CLA must be signed for any code or documentation changes to be accepted.
 
@@ -67,7 +67,7 @@ Sample file structure:
         - email.rst
         - LDAP.rst
     + api
-        -firewall-authenticators.rst
+        -firewall-listeners.rst
         -request-types.rst
 
 - index.rst

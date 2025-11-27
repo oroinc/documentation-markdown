@@ -2,6 +2,9 @@
 
 # Global Configuration Settings
 
+#### NOTE
+OroCommerce version 4.2.5 saw the addition of two new configuration levels - customer group and customer. Please see the diagram below for reference.
+
 Settings under the **System > Configuration** menu enable you set up your Oro application specifically to your business needs. Settings located here are [system-wide (or global)](../index.md#doc-system-configuration). Configuring these settings globally means that they are by default applied throughout all organizations, websites and users in your system. This is the base configuration level and you can customize some of its options [per organization](../user-management/organizations/org-configuration/index.md#doc-organization-configuration), [website](../websites/web-configuration/index.md#doc-website-configuration), or [user](../user-management/users/configuration/index.md#doc-my-user-configuration) later on. Selected settings are also available on [customer group](../../customers/customer-groups/customer-group-configuration/commerce/product/customer-group-product-customer-settings.md#user-guide-customer-groups-customer-settings) and [customer](../../customers/customers/customer-configuration/commerce/product/customer-product-settings.md#user-guide-customers-customer-settings) levels.
 
 Based on the level where configuration has taken place, settings can fall back to other levels following the pattern below:

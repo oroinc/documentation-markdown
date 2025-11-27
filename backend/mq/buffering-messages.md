@@ -29,7 +29,7 @@ rolled back the buffer is cleared up without sending them.
 
 ## Implementation Details
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/MessageQueueBundle/Client/BufferedMessageProducer.php" target="_blank">BufferedMessageProducer</a> implements the buffering of messages and it is used as a decorator over other types of producers. It works in the following way:
+<a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/MessageQueueBundle/Client/BufferedMessageProducer.php" target="_blank">BufferedMessageProducer</a> implements the buffering of messages and it is used as a decorator over other types of producers. It works in the following way:
 
 - when the buffering is enabled, the producer stores messages in the internal buffer; the messages from the buffer
   are send to the queue only when flushBuffer method is called; in case if clearBuffer method is called all
@@ -38,7 +38,7 @@ rolled back the buffer is cleared up without sending them.
 
 By default the buffering is disabled.
 
-* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/MessageQueueBundle/Client/DbalTransactionWatcher.php" target="_blank">DbalTransactionWatcher</a> watches the default DBAL transaction in order to enable the buffering mode of <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/MessageQueueBundle/Client/BufferedMessageProducer.php" target="_blank">BufferedMessageProducer</a> when the root transaction starts (call enableBuffering method of the producer) and send all collected messages when the root transaction is committed (call flushBuffer and then disableBuffering methods of the producer) or remove all collected messages from the buffer without sending them when the root transaction is rolled back (call clearBuffer and then disableBuffering methods of the producer).
+* <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/MessageQueueBundle/Client/DbalTransactionWatcher.php" target="_blank">DbalTransactionWatcher</a> watches the default DBAL transaction in order to enable the buffering mode of <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/MessageQueueBundle/Client/BufferedMessageProducer.php" target="_blank">BufferedMessageProducer</a> when the root transaction starts (call enableBuffering method of the producer) and send all collected messages when the root transaction is committed (call flushBuffer and then disableBuffering methods of the producer) or remove all collected messages from the buffer without sending them when the root transaction is rolled back (call clearBuffer and then disableBuffering methods of the producer).
 
 The watcher service is tagged by oro.doctrine.connection.transaction_watcher tag. OroPlatform handles
 this tag out of the box. But if you use the MessageQueue bundle without OroPlatform, you need to register the
@@ -64,7 +64,9 @@ class AcmeDemoBundle extends Bundle
         TransactionWatcherConfigurator::registerConnectionProxies($kernel->getCacheDir());
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function build(ContainerBuilder $container): void
     {
         parent::build($container);

@@ -10,7 +10,7 @@ To display a list of tasks on the dashboard with the most recent tasks:
 
 1. [Create a data grid](#cookbook-entities-dashboard-grid) that collects and displays the tasks’ data while ensuring that the most recent tasks are displayed on top.
 2. [Create a Twig template](#cookbook-entities-dashboard-template) that renders the grid.
-3. [Configure](#cookbook-entities-dashboard-config) the dashboard widget by telling it which template to render.
+3. [Сonfigure](#cookbook-entities-dashboard-config) the dashboard widget by telling it which template to render.
 
 <a id="cookbook-entities-dashboard-grid"></a>
 
@@ -101,13 +101,17 @@ class MyDashboardTypeConfigProvider implements DashboardTypeConfigProviderInterf
 {
     public const TYPE_NAME = 'my_type';
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function isSupported(?string $dashboardType): bool
     {
         return self::TYPE_NAME === $dashboardType;
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getConfig(Dashboard $dashboard): array
     {
         return ['twig' => '@AcmeDemo/Index/default.html.twig'];
@@ -139,13 +143,17 @@ use Oro\Bundle\DashboardBundle\Migrations\Data\ORM\AbstractDashboardTypeFixture;
  */
 class AddMyDashboardTypeFixture extends AbstractDashboardTypeFixture
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     protected function getDashboardTypeIdentifier(): string
     {
         return 'my_type';
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     protected function getDashboardTypeLabel(): string
     {
         return 'My type';

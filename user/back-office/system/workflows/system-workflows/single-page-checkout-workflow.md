@@ -9,7 +9,7 @@ This section is part of the [Checkout Configuration Concept Guide](../../../../c
 
 In your Oro application, you can control the way the checkout is displayed to customers in the storefront. By default, each checkout step is displayed on a new page. However, by activating the Single Page Checkout workflow in the back-office, you can make all steps fit one page. This will make the checkout process easier and quicker for customers, since they will be able to see how far along in the checkout they are, and how many fields are left to complete it.
 
-![Illustration of single page checkout in the storefront](user/img/system/workflows/single_page_checkout/SampleFlow.png)
+![Illustration of single page checkout in the storefront](user/img/system/workflows/single_page_checkout/SampleFlow2.png)
 
 To reach the Single Page Checkout workflow:
 
@@ -41,9 +41,6 @@ As an illustration let us go through the sample flow to see the Single Page Chec
    * Shipping Information
    * Order Summary (including *Agreements*)
 
-   #### IMPORTANT
-   Keep in mind that for the Agreements section to be displayed in the checkout, you need to [add the necessary consents to the list of enabled consents](../../configuration/commerce/customer/global-interactions.md#admin-guide-commerce-configuration-customers-consents-enable-globally) in the system configuration.
-
    ![Illustration of single page checkout in the storefront](user/img/system/workflows/single_page_checkout/SampleFlow2.png)
 3. In the **Billing Information** section, provide your address and select a payment method.
 4. In the **Shopping Information** section:
@@ -70,20 +67,3 @@ As an illustration let us go through the sample flow to see the Single Page Chec
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

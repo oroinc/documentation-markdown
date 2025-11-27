@@ -12,7 +12,7 @@ The following table shows all post processors provided out-of-the-box:
 |--------|--------------------------|--------------------------------------------------------|
 | twig   | Applies a TWIG template. | **template** *string* - The name of the TWIG template. |
 
-All post processors are registered in <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/PostProcessor/PostProcessorRegistry.php" target="_blank">PostProcessorRegistry</a>. You can use it when you need to get a specific post processor in your code.
+All post processors are registered in <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ApiBundle/PostProcessor/PostProcessorRegistry.php" target="_blank">PostProcessorRegistry</a>. You can use it when you need to get a specific post processor in your code.
 
 <a id="web-api-post-processors-create"></a>
 
@@ -20,7 +20,7 @@ All post processors are registered in <a href="https://github.com/oroinc/platfor
 
 To create a new post processor, you need to do the following:
 
-1. Create a class that implements <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/PostProcessor/PostProcessorInterface.php" target="_blank">PostProcessorInterface</a>.
+1. Create a class that implements <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ApiBundle/PostProcessor/PostProcessorInterface.php" target="_blank">PostProcessorInterface</a>.
 
 ```php
 namespace Acme\Bundle\DemoBundle\Api\PostProcessor;
@@ -29,7 +29,9 @@ use Oro\Bundle\ApiBundle\PostProcessor\PostProcessorInterface;
 
 class SomePostProcessor implements PostProcessorInterface
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function process(mixed $value, array $options): mixed
     {
     }
@@ -57,7 +59,9 @@ use Symfony\Component\Config\Definition\Builder\NodeBuilder;
 
 class SomePostProcessorConfigExtension extends AbstractConfigExtension
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function getConfigureCallbacks(): array
     {
         return [

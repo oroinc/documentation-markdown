@@ -2,7 +2,7 @@
 
 # OroChannelBundle
 
-<a href="https://github.com/oroinc/crm/tree/6.1/src/Oro/Bundle/ChannelBundle" target="_blank">OroChannelBundle</a> adds the Channel entity that represents the source of customer data into Oro applications and allows developers to define Channels types and specify the channel-related features in bundles YAML configuration files. It also provides UI for admin users to create and manage channels of the types defined by developers.
+<a href="https://github.com/oroinc/crm/tree/5.1src/Oro/Bundle/ChannelBundle" target="_blank">OroChannelBundle</a> adds the Channel entity that represents the source of customer data into Oro applications and allows developers to define Channels types and specify the channel-related features in bundles YAML configuration files. It also provides UI for admin users to create and manage channels of the types defined by developers.
 
 ## Entity Data Block
 

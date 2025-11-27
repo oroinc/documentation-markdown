@@ -30,31 +30,37 @@ use Oro\Bundle\DraftBundle\Entity\DraftableInterface;
 use Oro\Bundle\DraftBundle\Entity\DraftableTrait;
 use Oro\Bundle\EntityBundle\EntityProperty\DatesAwareInterface;
 use Oro\Bundle\EntityBundle\EntityProperty\DatesAwareTrait;
-use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\Config;
-use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\ConfigField;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\ConfigField;
 use Oro\Bundle\UserBundle\Entity\Ownership\UserAwareTrait;
 
 /**
  * Represents Acme Block
+ *
+ * @ORM\Table(name="acme_cms_block")
+ * @ORM\Entity()
+ * @Config(
+ *      routeName="acme_cms_block_index",
+ *      routeView="acme_cms_block_view",
+ *      routeUpdate="acme_cms_block_update",
+ *      defaultValues={
+ *          "entity"={
+ *              "icon"="fa-book"
+ *          },
+ *          "ownership"={
+ *              "owner_type"="USER",
+ *              "owner_field_name"="owner",
+ *              "owner_column_name"="user_owner_id",
+ *              "organization_field_name"="organization",
+ *              "organization_column_name"="organization_id"
+ *          },
+ *          "security"={
+ *              "type"="ACL",
+ *              "group_name"=""
+ *          }
+ *      }
+ * )
  */
-#[ORM\Entity]
-#[ORM\Table(name: 'acme_cms_block')]
-#[Config(
-    routeName: 'acme_cms_block_index',
-    routeView: 'acme_cms_block_view',
-    routeUpdate: 'acme_cms_block_update',
-    defaultValues: [
-        'entity' => ['icon' => 'fa-book'],
-        'ownership' => [
-            'owner_type' => 'USER',
-            'owner_field_name' => 'owner',
-            'owner_column_name' => 'user_owner_id',
-            'organization_field_name' => 'organization',
-            'organization_column_name' => 'organization_id'
-        ],
-        'security' => ['type' => 'ACL', 'group_name' => '']
-    ]
-)]
 class Block implements DraftableInterface, DatesAwareInterface
 {
     use DraftableTrait;
@@ -63,24 +69,39 @@ class Block implements DraftableInterface, DatesAwareInterface
 
     /**
      * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
-    #[ORM\Column(name: 'id', type: 'integer')]
-    #[ORM\Id]
-    #[ORM\GeneratedValue(strategy: 'AUTO')]
     protected $id;
 
     /**
      * @var string
+     *
+     * @ORM\Column(type="string", nullable=false, length=255, unique=true)
+     * @ConfigField(
+     *      defaultValues={
+     *          "draft"={
+     *              "draftable"=true
+     *          }
+     *      }
+     * )
      */
-    #[ORM\Column(type: 'string', nullable: false, length: 255, unique: true)]
-    #[ConfigField(defaultValues: ['draft' => ['draftable' => true]])]
     protected $title;
 
     /**
      * @var string
+     *
+     * @ORM\Column(type="text", nullable=true)
+     * @ConfigField(
+     *      defaultValues={
+     *          "draft"={
+     *              "draftable"=true
+     *          }
+     *      }
+     * )
      */
-    #[ORM\Column(type: 'text', nullable: true)]
-    #[ConfigField(defaultValues: ['draft' => ['draftable' => true]])]
     protected $content;
 
     /**
@@ -133,18 +154,33 @@ Then, add the entity configuration to the **title** and **content** fields. The 
 Follow the instructions provided in the [Configure Entities](../../../backend/entities/config-entities/index.md#book-entities-entity-configuration) topic.
 
 ```php
+
     /**
      * @var string
+     *
+     * @ORM\Column(type="string", nullable=false, length=255, unique=true)
+     * @ConfigField(
+     *      defaultValues={
+     *          "draft"={
+     *              "draftable"=true
+     *          }
+     *      }
+     * )
      */
-    #[ORM\Column(type: 'string', nullable: false, length: 255, unique: true)]
-    #[ConfigField(defaultValues: ['draft' => ['draftable' => true]])]
     protected $title;
 
     /**
      * @var string
+     *
+     * @ORM\Column(type="text", nullable=true)
+     * @ConfigField(
+     *      defaultValues={
+     *          "draft"={
+     *              "draftable"=true
+     *          }
+     *      }
+     * )
      */
-    #[ORM\Column(type: 'text', nullable: true)]
-    #[ConfigField(defaultValues: ['draft' => ['draftable' => true]])]
     protected $content;
 ```
 
@@ -183,13 +219,17 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
  */
 class AcmeCMSBundleInstaller implements Installation
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getMigrationVersion()
     {
         return 'v1_0';
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         /** Tables updates **/
@@ -276,8 +316,8 @@ namespace Acme\Bundle\CMSBundle\Controller;
 use Acme\Bundle\CMSBundle\Entity\Block;
 use Acme\Bundle\CMSBundle\Form\Type\BlockType;
 use Oro\Bundle\FormBundle\Model\UpdateHandlerFacade;
-use Oro\Bundle\SecurityBundle\Attribute\Acl;
-use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
+use Oro\Bundle\SecurityBundle\Annotation\Acl;
+use Oro\Bundle\SecurityBundle\Annotation\AclAncestor;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -289,25 +329,41 @@ use Symfony\Contracts\Translation\TranslatorInterface;
  */
 class BlockController extends AbstractController
 {
-    #[Route(path: '/', name: 'acme_cms_block_index')]
-    #[Template]
-    #[AclAncestor('acme_cms_block_view')]
+    /**
+     * @Route("/", name="acme_cms_block_index")
+     * @Template
+     * @AclAncestor("acme_cms_block_view")
+     */
     public function indexAction(): array
     {
         return ['entity_class' => Block::class];
     }
 
-    #[Route(path: '/view/{id}', name: 'acme_cms_block_view', requirements: ['id' => '\d+'])]
-    #[Template]
-    #[Acl(id: 'acme_cms_block_view', type: 'entity', class: 'Acme\Bundle\CMSBundle\Entity\Block', permission: 'VIEW')]
+    /**
+     * @Route("/view/{id}", name="acme_cms_block_view", requirements={"id"="\d+"})
+     * @Template
+     * @Acl(
+     *      id="acme_cms_block_view",
+     *      type="entity",
+     *      class="AcmeCMSBundle:Block",
+     *      permission="VIEW"
+     * )
+     */
     public function viewAction(Block $block): array
     {
         return ['entity' => $block];
     }
 
-    #[Route(path: '/create', name: 'acme_cms_block_create')]
-    #[Template('@AcmeCMS/Block/update.html.twig')]
-    #[Acl(id: 'acme_cms_block_create', type: 'entity', class: 'Acme\Bundle\CMSBundle\Entity\Block', permission: 'CREATE')]
+    /**
+     * @Route("/create", name="acme_cms_block_create")
+     * @Template("@AcmeCMS/Block/update.html.twig")
+     * @Acl(
+     *      id="acme_cms_block_create",
+     *      type="entity",
+     *      class="AcmeCMSBundle:Block",
+     *      permission="CREATE"
+     * )
+     */
     public function createAction(): array|RedirectResponse
     {
         $block = new Block();
@@ -315,9 +371,16 @@ class BlockController extends AbstractController
         return $this->update($block);
     }
 
-    #[Route(path: '/update/{id}', name: 'acme_cms_block_update', requirements: ['id' => '\d+'])]
-    #[Template]
-    #[Acl(id: 'acme_cms_block_update', type: 'entity', class: 'Acme\Bundle\CMSBundle\Entity\Block', permission: 'EDIT')]
+    /**
+     * @Route("/update/{id}", name="acme_cms_block_update", requirements={"id"="\d+"})
+     * @Template
+     * @Acl(
+     *      id="acme_cms_block_update",
+     *      type="entity",
+     *      class="AcmeCMSBundle:Block",
+     *      permission="EDIT"
+     * )
+     */
     public function updateAction(Block $block): array|RedirectResponse
     {
         return $this->update($block);
@@ -326,14 +389,16 @@ class BlockController extends AbstractController
     protected function update(Block $block): array|RedirectResponse
     {
 
-        return $this->container->get(UpdateHandlerFacade::class)->handleUpdate(
+        return $this->get(UpdateHandlerFacade::class)->handleUpdate(
             $block,
             $this->createForm(BlockType::class, $block),
-            $this->container->get(TranslatorInterface::class)->trans('acme.cms.controller.saved.message')
+            $this->get(TranslatorInterface::class)->trans('acme.cms.controller.saved.message')
         );
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public static function getSubscribedServices(): array
     {
         return array_merge(
@@ -485,7 +550,6 @@ class BlockType extends AbstractType
 {
     public const NAME = 'acme_cms_block';
 
-    #[\Override]
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
@@ -507,7 +571,9 @@ class BlockType extends AbstractType
             );
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
@@ -525,7 +591,9 @@ class BlockType extends AbstractType
         return $this->getBlockPrefix();
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getBlockPrefix()
     {
         return self::NAME;
@@ -565,7 +633,6 @@ class UniqueTitleFilter implements Filter
      * @param string $property
      * @param callable $objectCopier
      */
-    #[\Override]
     public function apply($object, $property, $objectCopier): void
     {
         $resolvedField = sprintf('%s_%s', $object->getTitle(), uniqid());
@@ -597,7 +664,6 @@ class BlockTitleMatcher implements Matcher
      *
      * @return bool
      */
-    #[\Override]
     public function matches($object, $property): bool
     {
         return 'title' === $property;
@@ -628,19 +694,16 @@ use Oro\Bundle\DraftBundle\Manager\DraftManager;
  */
 class BlockTitleExtension extends AbstractDuplicatorExtension
 {
-    #[\Override]
     public function getFilter(): Filter
     {
         return new UniqueTitleFilter();
     }
 
-    #[\Override]
     public function getMatcher(): Matcher
     {
         return new BlockTitleMatcher();
     }
 
-    #[\Override]
     public function isSupport(DraftableInterface $source): bool
     {
         return

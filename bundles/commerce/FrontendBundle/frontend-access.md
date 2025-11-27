@@ -20,6 +20,12 @@ acme_frontend.guest_access.provider.guest_access_urls_provider:
     tags: ['oro_frontend.guest_access_urls_provider']
 ```
 
-## Frontend Datagrid
+## Frontend Datagrids
 
-The frontend datagrid configuration controls the display of the back-office datagrids in the storefront. The frontend datagrid is configured in the `Resources/views/layouts/<theme>/config/datagrids.yml` file within the configuration directory of your bundle.
+The frontend option in the datagrid configuration controls the display of the back-office datagrids in the storefront. By default, it is suggested that all datagrids are intended to be used in the back-office. To allow a datagrid to be visible in the storefront, the frontend option should be set to true.
+
+```yaml
+acme_frontend.frontend_customers_users:
+    options:
+        frontend: true
+```

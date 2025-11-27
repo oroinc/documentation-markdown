@@ -166,7 +166,7 @@ Some menus (or some menu levels) cannot display dividers. For example, if you ad
 
    #### NOTE
    If a menu item that you want to show has a parent, it will become visible too.
-3. **Find a Menu Item** —  To quickly find a menu item, enter its name into the search field and click the ![Search-SVG](_themes/sphinx_rtd_theme/static/svg-icons/search.svg) **Search** icon, or press **Enter**.
+3. **Find a Menu Item** —  To quickly find a menu item, enter its name into the search field and click the <i class="fa fa-search fa-lg" aria-hidden="true"></i> **Search** icon, or press **Enter**.
    ![image](user/img/system/menus/menus_application_search.png)
 4. **Delete a Menu Item / Divider** — To delete a menu item or a divider, click the necessary item in the left panel. Click **Delete** on the top right. In the **Delete Confirmation** dialog box, click **Yes, Delete**. Reload the page to see changes.
 
@@ -181,20 +181,3 @@ Some menus (or some menu levels) cannot display dividers. For example, if you ad
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

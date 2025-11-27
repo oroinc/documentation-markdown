@@ -4,7 +4,7 @@
 
 <a id="frontstore-guide-navigation-tables"></a>
 
-## Tables (Grids)
+## Tables
 
 Views in the form of tables can be considered the most commonly used UI elements in Oro applications. They are interactive, as they not only display data about specific store records but contain links to these records’ pages. Views are also configurable – so you can adjust the appearance and contents of the tables to your taste and needs.
 
@@ -14,12 +14,19 @@ Such tables represent aggregated views of data and store records, making it easy
 
 <a id="frontstore-guide-navigation-location-trail"></a>
 
-## Breadcrumbs
+## Location Trail
 
-Breadcrumbs displayed under the top navigation bar show the hierarchical path to the current page, based on the product catalog structure (as of OroCommerce 6.1.2).
+In the top left corner of the view page, you can see where the current page is located in the menu. The name of the selected view table is usually located in the row below.
 
-- The current page is not included in the breadcrumbs on all pages.
-- Breadcrumbs that contain only one item are not shown.
+Location Trail is generated based on the current catalog structure and may include the full path from the main menu to the current product or category.
+
+You can configure the Location Trail behavior in the back-office via:
+
+- *Exclude Current Page in Breadcrumbs on Product View*
+- *Exclude Current Page in Breadcrumbs on All Pages*
+- *Hides the breadcrumbs block entirely when it contains a single item*
+
+These options are available under **System > Configuration > Commerce > Product > SEO**.
 
 ![image](user/img/storefront/navigation/GridLocationName.png)
 
@@ -27,21 +34,29 @@ Breadcrumbs displayed under the top navigation bar show the hierarchical path to
 
 ## Display Options
 
-**Views**
-
-When browsing the website, buyers have the flexibility to choose how they view content, with three distinct options available: gallery view ![Grid-SVG](_themes/sphinx_rtd_theme/static/svg-icons/grid.svg), list view ![List-SVG](_themes/sphinx_rtd_theme/static/svg-icons/list.svg), or compact view ![CompactList-SVG](_themes/sphinx_rtd_theme/static/svg-icons/compact-list.svg).
-
 ![image](user/img/storefront/navigation/GridPages.png)
 
 **Sorting**
 
-Buyers can sort records alphabetically, by price, relevance, or other attributes related to the products displayed on the page you are viewing.
+Sorting options are located on the left of the view page under the view table name below the [filter](#frontstore-guide-navigation-filters). They allow sorting records alphabetically, by price, relevance, or other attributes related to the products displayed on the page you are viewing.
 
 ![image](user/img/storefront/navigation/DispayOptionsSorting.png)
 
+**Layout**
+
+Layout options are located on the far right under the view table name.
+
+![image](user/img/storefront/navigation/DispayLayoutOptions.png)
+
+The following layout options are available:
+
+* Tiles: <i class="fa fa-th" aria-hidden="true"></i>
+* Details: <i class="fa fa-th-list" aria-hidden="true"></i>
+* Compact Details: <i class="fa fa-list fa-lg" aria-hidden="true"></i>
+
 **Page Navigation**
 
-If you have many records, they all may not fit on one data page. In this case, use the pager block in the center above the view table.
+If you have a lot of records, they all may not fit on one data page. In this case, use the pager block in the center above the view table.
 
 In the pager block, you can see the page that you are currently on, the total number of data pages and the total number of records in the view table.
 
@@ -60,22 +75,21 @@ The **default table view** is what you see when you open a view page, it shows u
 
 Tables can be viewed, saved as new ones, shared, renamed, set as default and deleted:
 
-1. To view the list of available tables: click on the ![ChevronDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/chevron-down.svg) arrow next to the table name.
-   ![image](user/img/storefront/navigation/SavedView.png)
-2. To save a table as a new one: click **Save as New**.
-   * **Enter New List Name**: Define a name of the new view table.
-   * **Set as Default**: Select this checkbox to set the new table as the default one.
-   * **Add**: Click **Add** to add a new saved view table.
-   * **Cancel**: Click **Cancel** to exit.
+1. To view the list of available tables: click on the <i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i> arrow next to the table name.
 
-   The following actions are available for saved view:
-   * share the selected saved view: ![Bookmark-SVG](_themes/sphinx_rtd_theme/static/svg-icons/bookmark.svg)
-   * unshare the selected saved view: ![BookmarkFilled-SVG](_themes/sphinx_rtd_theme/static/svg-icons/bookmark-filled.svg)
-   * set the selected saved view as default: ![Grid-SVG](_themes/sphinx_rtd_theme/static/svg-icons/grid.svg)
-   * rename the selected saved view: ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg)
-   * delete the selected saved view: ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg)
+> ![image](user/img/storefront/navigation/SavedView.png)
+1. To save a table as a new one: click **Save as New**.
+   > * **Enter New List Name**: Define a name of the new view table.
+   > * **Set as Default**: Select this checkbox to set the new table as the default one.
+   > * **Add**: Click **Add** to add a new saved view table.
+   > * **Cancel**: Click **Cancel** to exit.
 
-   ![image](user/img/storefront/navigation/saved-view-actions.png)
+   > ![image](user/img/storefront/navigation/SaveViewAsDefault.png)
+2. To share the selected saved view: click <i class="fa fa-reply-all fa-lg" aria-hidden="true"></i>
+3. To unshare the selected saved view: click <i class="fa fa-share fa-lg" aria-hidden="true"></i>
+4. To set the selected saved view as default: click <i class="fa fa-th" aria-hidden="true"></i>
+5. To rename the selected saved view: click <i class="fas fa-pencil-alt" aria-hidden="true"></i>
+6. To delete the selected saved view: click <i class="fas fa-trash-alt" aria-hidden="true"></i>
 
 <a id="frontstore-guide-navigation-action-buttons"></a>
 
@@ -87,15 +101,15 @@ Action buttons are on the right of the view page. They enable you to perform a n
 
 The following action buttons can be available:
 
-1. Refresh the view table: click ![Refresh-SVG](_themes/sphinx_rtd_theme/static/svg-icons/refresh.svg) to update the view table.
-2. Reset the view table: click ![Reset-SVG](_themes/sphinx_rtd_theme/static/svg-icons/reset.svg) to clear view table customization and return to default settings. Reset applies to all filters, records per page and sorting changes that you have made.
-3. Table settings: click ![Columns-SVG](_themes/sphinx_rtd_theme/static/svg-icons/columns.svg) to define which columns to show in the table:
+1. Refresh the view table: click <i class="fa fa-undo fa-lg" aria-hidden="true"></i> to update the view table.
+2. Reset the view table: click <i class="fas fa-sync-alt" aria-hidden="true"></i> to clear view table customization and return to default settings. Reset applies to all filters, records per page and sorting changes that you have made.
+3. Table settings: click <i class="fa fa-cog fa-lg" aria-hidden="true"></i> to define which columns to show in the table:
    ![image](user/img/storefront/navigation/TableSettings.png)
    * You can manually select the columns by clicking on the checkbox next to the required field.
    * To show/hide all columns in the table, click **Select All**/**Deselect All**.
-   * To clear customization, click ![Reset-SVG](_themes/sphinx_rtd_theme/static/svg-icons/reset.svg) **Reset**.
+   * To clear customization, click <i class="fas fa-sync-alt" aria-hidden="true"></i> **Reset**.
    * To change the order of the columns, click on the ellipsis icon next to the name of the column you wish to move, hold the mouse button, and drag the column to the required position.
-4. Filters: click ![Settings-SVG](_themes/sphinx_rtd_theme/static/svg-icons/settings.svg) to show/hide filters to select specific items to be shown in the table. More information on filters is provided in the Filters section below.
+4. Filters: click <i class="fa fa-filter fa-lg" aria-hidden="true"></i> to show/hide filters to select specific items to be shown in the table. More information on filters is provided in the Filters section below.
 
 <a id="frontstore-guide-navigation-filters"></a>
 
@@ -105,27 +119,43 @@ Filters are used when you need to quickly pick out the records you need from the
 
 The following actions are available for filters:
 
-1. To show/hide filters, click the filter toggle icon ![Sliders-SVG](_themes/sphinx_rtd_theme/static/svg-icons/sliders.svg).
+1. To show/hide filters, click <i class="fa fa-filter fa-lg" aria-hidden="true"></i>
    ![image](user/img/storefront/navigation/Filters.png)
 
-#### NOTE
-Note that not all filters may be visible by default.
-
-1. To apply a filter, click on its button in the bar and select the required option from the dropdown list.
+   #### NOTE
+   Note that not all filters may be visible by default.
+2. To add, remove, search or reset filters, click <i class="fa fa-plus fa-lg" aria-hidden="true"></i> and perform the required action.
+   ![image](user/img/storefront/navigation/FiltersAdd.png)
+3. To apply a filter, click on its button in the bar and select the required option from the dropdown list.
    ![image](user/img/storefront/navigation/FiltersSelect.png)
 
+   #### NOTE
+   The dropdown list displays all the attributes available for the products on the page you are currently viewing. If there no products related to the searching attributes, the attributes may be hidden from the dropdown list
+   ![image](user/img/storefront/navigation/FiltersSelectOneAttribute.png)
+
+   or remain visible but disabled [depending on the website configuration](../../back-office/system/configuration/commerce/catalog/global-filters-sorters.md#configuration-guide-commerce-configuration-catalog-filters-sorters) when no items matching selected attributes in filters were found.
+   ![image](user/img/storefront/navigation/dont_change_initial_filter_state.png)
+4. Another way to apply a filter is to click on its button and specify your query in the control that appears. Note that filter controls might look different depending on the type of data you are going to filter — whether it is textual, numeric, date or option set.
+   ![image](user/img/storefront/navigation/FilterExample.png)
+
+   After the filter is applied, its query will appear in the control, so you can easily recall how you have filtered the data.
+   ![image](user/img/storefront/navigation/FiltersApplied.png)
+
+Filter controls may be hidden at all if there are no related products on the displayed page.
+
+> ![image](user/img/storefront/navigation/FiltersDisabled.png)
+1. To remove a filter, click on a cross **x** after the query.
+
+   If you wish to reset all applied filters, click **x Clear All Filters**.
+
 #### NOTE
-The dropdown list displays all the attributes available for the products on the page you are currently viewing. If there no products related to the searching attributes, the attributes may be hidden from the dropdown list or remain visible but disabled [depending on the website configuration](../../back-office/system/configuration/commerce/catalog/global-filters-sorters.md#configuration-guide-commerce-configuration-catalog-filters-sorters) when no items matching selected attributes in filters were found.
+Filter in the storefront can be displayed either at the top (default) or in the left sidebar.
 
-The appearance of filter controls may vary based on the type of data being filtered, such as text, numbers, dates, or options. Applied filters are displayed under the filter controls.
+![The storefront product page illustrating the filter in the left sidebar](user/img/system/config_commerce/catalog/filters_panel_position_sidebar.png)
 
-1. To remove a filter, click on a cross **x** after the query. To reset all applied filters, click **x Clear All Filters**.
-   ![Applied storefront filters](user/img/storefront/navigation/applied-filters.png)
+The following example is an illustration of filters in action:
 
-#### HINT
-Filter in the storefront can be displayed either at the top (default) or in the left sidebar, depending on the **Filter Position** configuration applied in the [back-office theme configuration](../../back-office/system/theme-configuration/index.md#back-office-theme-configuration).
-
-![Three representations of filter panel positions in the storefront](user/img/system/theme-configuration/filter-panel-position.png)
+![Illustration of how to work with filters in the storefront](user/img/storefront/navigation/Filters.gif)
 
 <a id="frontstore-guide-navigation-table-options"></a>
 
@@ -148,7 +178,23 @@ In the storefront, mass delete action is available in the **Address book** and *
 
 ![image](user/img/storefront/mass_actions/mass_actions_1.png)
 
-To use mass delete action in the storefront, you need to [be logged into the storefront account](../register/sign-in.md#frontstore-guide-getting-started-overview-sign-in).
+To use mass delete action in the storefront, you need to [sign into the account](../register/sign-in.md#frontstore-guide-getting-started-overview-sign-in) and proceed with the next steps:
+
+1. Navigate to the account page by clicking **Account** at the top.
+
+![image](user/img/storefront/mass_actions/mass_actions_3.png)
+1. Click the **Address book** section.
+
+   The following page with the list of customer addresses displays:
+   ![image](user/img/storefront/mass_actions/mass_actions_4.png)
+2. To select multiple customer addresses, click <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i> in the left corner of the list header.
+   * The **All** option enables to select all the addresses available under this section.
+   * The **All visible** option enables to select only the addresses visible on the page you are currently viewing.
+   * The **None** option enables to deselect all the addresses which were selected previously.
+
+   ![image](user/img/storefront/mass_actions/mass_actions_5.png)
+3. Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the list header and click <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** to delete multiple addresses at a time.
+   ![image](user/img/storefront/mass_actions/mass_actions_6.png)
 
 <a id="frontstore-guide-navigation-search"></a>
 
@@ -156,7 +202,7 @@ To use mass delete action in the storefront, you need to [be logged into the sto
 
 Search is the fastest way to find a specific product:
 
-1. Click the ![Search-SVG](_themes/sphinx_rtd_theme/static/svg-icons/search.svg) search icon at the top of the screen.
+1. Click the <i class="fa fa-search fa-lg" aria-hidden="true"></i> search icon at the top of the screen.
 2. Type in the search key into the text field.
 3. Click **Enter**.
 
@@ -174,58 +220,53 @@ Customer users can save search queries, return to these saved search queries lat
 To save a search result:
 
 1. Use the search bar to look for a product name, SKU, keyword, etc.
-2. When the search results are displayed, click the **Save This Search** icon on the top right.
+2. When the search results are displayed, click the **Save** icon on the top right. Make sure that the panel with filters is open.
+   ![Saved search icon in the Filters panel](user/img/storefront/navigation/saved-search.png)
 3. Select the checkboxes for *New Product* and/or *Inventory Status* if you want to receive notifications.
-4. Click **Save**. Your search query is now saved under **My Account > Saved Search**.
+4. Click **Add**. Your search query is now saved under **My Account > Saved Search**.
    ![Saved search in the customer user account](user/img/storefront/navigation/saved-search-acc.png)
 
 <a id="frontstore-guide-navigation-product-data-export"></a>
 
 ## Product Data Export
 
-Registered customer users can export products, their prices, and price tiers into a .csv file from the storefront product collection and search results pages, if option *Product Grid Export* is enabled in the [back-office settings](../../back-office/system/configuration/commerce/product/global-customer-settings.md#sys-commerce-product-customer-settings).
+Registered customer users can export products, their prices, and price tiers into a .csv file from the storefront product collection and search results pages.
 
 To download a product data .csv file:
 
-1. Click on the download icon on the top right of the product grid.
+1. Click on the download icon on the right next to the items per page and filters.
    ![Export product data from the storefront product collection page](user/img/storefront/navigation/export.png)
 2. Check your inbox for instructions on how to download the file.
+   ![Download export results](user/img/storefront/navigation/export-download.png)
 
 <a id="frontstore-guide-navigation-product-price"></a>
 
-## Product Price
+## Your Price and Listed Price
 
-In the storefront, price per item may change depending on the number of items you want to purchase where in the [price tier](../../back-office/sales/price-lists/manual.md#user-guide-pricing-price-list-manual) the quantity falls.
+Products in the storefront have two types of price displayed, Your Price and Listed Price.
+
+![Your price and listed price are the same in the storefront](user/img/products/products/your_listed_pricing_equal.png)
+
+Listed Price is the price set for each available product unit and their variation of quantity (tiers). Your Price is Listed price under your current tier pricing configuration.
 
 Suppose we have one product in the default price list with the following price tiers set in the back-office:
 
-* 1 item - $76.79
-* 10 items - $72.95
-* 20 items - $69.11
-* 50 items - $65.2
-* 100 items - $61.43
+* 1 item - $1
+* 10 items - $0.80
+* 100 items - $0.50
+* 1000 items - $0.30
 
 ![Illustration of price tiers for one product](user/img/storefront/navigation/product-tiers-df-pl.png)
 
 This means that product price per 1 item will change depending on how many items a buyer wants to purchase. The more they purchase, the cheaper the price per item is going to be in this scenario. The following image illustrates how price tiers are going to be displayed for a user in the storefront.
 
-When a buyer tries to  change the quantity of the items, this triggers change in the price per item.
+![Illustration of price tiers in the storefront](user/img/storefront/navigation/price-tiers-product-listing.png)
+
+When a buyer tries to  change the quantity of the items, this triggers change in Your Price.
 
 ![Illustration of the price change after when a user changes product quantity](user/img/storefront/navigation/your-listed-price.gif)
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->
+<!-- fa-bars = fa-navicon -->
+<!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
+<!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
+<!-- Check mark in the square. -->
+<!-- SortDesc is also used as drop-down arrow -->

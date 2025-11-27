@@ -19,7 +19,7 @@ To enable the workflow:
 2. Hover over the more options menu at the end of the workflow row in the table of all workflows, and click <i class="fa fa-check fa-lg" aria-hidden="true"></i> **Activate**.
    ![Activate unqualified sales lead workflow from the table of all workflows](user/img/system/workflows/unqualified_sales_lead_activate_from_grid.png)
 
-   Alternatively, click on the workflow to open its page, and on the workflow page click <i class="fa fa-check fa-lg" aria-hidden="true"></i> **Activate** on the top right.
+   Alternatively, click once on the workflow to open its page, and on the workflow page click <i class="fa fa-check fa-lg" aria-hidden="true"></i> **Activate** on the top right.
    ![Unqualified sales lead workflow screen under system > workflows in the main menu](user/img/system/workflows/unqualified_sales_lead_wf.png)
 
 When the workflow is enabled, the following transitions are available on the lead page:
@@ -36,7 +36,7 @@ To deactivate the workflow:
 2. Hover over the more options menu at the end of the workflow row in the table of all workflows, and click <i class="fa fa-times fa-lg" aria-hidden="true"></i> **Deactivate**.
    ![Deactivate unqualified sales lead workflow from the table of all workflows](user/img/system/workflows/unqualified_sales_lead_deactivate_from_grid.png)
 
-   Alternatively, click on the workflow to open its page, and on the workflow page click <i class="fa fa-times fa-lg" aria-hidden="true"></i> **Deactivate** on the top right.
+   Alternatively, click once on the workflow to open its page, and on the workflow page click <i class="fa fa-times fa-lg" aria-hidden="true"></i> **Deactivate** on the top right.
    ![Deactivate unqualified sales lead workflow from its page](user/img/system/workflows/deactivate_unqualified_sales_lead_workflow_wf_page.png)
 
 When the workflow is disabled, the workflow transitions are absent from the lead page. Instead, the following action buttons are available:
@@ -53,20 +53,3 @@ Converting a lead into an opportunity means that you are qualifying it as a pote
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

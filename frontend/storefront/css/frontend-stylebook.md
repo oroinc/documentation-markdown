@@ -2,24 +2,36 @@
 
 # Oro Frontend Stylebook
 
-OroCommerce 6.1 LTS has introduced brand new Golden Carbon and Refreshing Teal storefront themes that give a modern and fresh look. These themes include a fully editable homepage with configurable content templates and widgets, an improved and retina-optimized slider, product segment widgets and more. The new themes have been designed to improve accessibility and internationalization, making navigation, search, and checkout experiences better, while also ensuring optimal performance.
+<a href="https://b2b-demo.orocommerce.com/desktop/style-book/" target="_blank">Oro StyleBook</a> is a UI elements and components library that helps developers and designers use the recommended templates to build or customize the Oro application pages. The information in the UI library may be used in two different ways.
 
-To help you create your custom Storefront theme design, we compiled two files, the <a href="https://static.oroinc.com/doc/Storefront_Style_Guide-6.1-Public_Files-November_2025.fig" target="_blank">Style Guide</a> and <a href="https://static.oroinc.com/doc/Design_Mockups_6.1-November_2025.fig" target="_blank">Design Mockups</a>. To access these files, you need a <a href="https://www.figma.com/signup" target="_blank">Figma account</a> with a Professional, Organization, or Enterprise plan. This will allow you to connect the library file to your working design files.
+> * When you modify your Oro application layout, you can copy the element\`s source code to your custom form or page in the Oro application to preserve the overall look and feel consistency.
+> * After you have modified your Oro application styles or layout, you can use the <a href="https://b2b-demo.orocommerce.com/desktop/style-book/" target="_blank">StyleBook</a> to check how updated styles affect the UI elements (see [Oro Styles Architecture](index.md#dev-doc-frontend-css), [Styles Organization](assets-css.md#dev-doc-frontend-css-frontend-styles-assets), and [Customization](../how-to/index.md#storefront-customization-guide) for more information on the UI customization).
 
-#### NOTE
-These Figma files use the new <a href="https://github.com/oroinc/storefront-themes/" target="_blank">Golden Carbon theme</a>, which is the recommended and most actively maintained theme for OroCommerce version 6.1.
+Most of the OroCommerce back-office and storefront UI elements are included and grouped into the following categories:
 
-The *Refreshing Teal* theme is still available in version 6.1 and is pre-installed by default. To sew how *Refreshing Teal* looks on the storefront, please refer to the version 6.0 Figma files: <a href="https://static.oroinc.com/doc/storefront-style-guide-6.0.fig" target="_blank">Style Guide 6.0</a> and <a href="https://static.oroinc.com/doc/design-mockups-6.0.fig" target="_blank">Design Mockups 6.0</a>.
+## General Look and Feel
 
-This <a href="https://static.oroinc.com/doc/Storefront_Style_Guide-6.1-Public_Files-November_2025.fig" target="_blank">Style Guide</a> contains:
+![The general look and feel section of the frontend stylebook](img/frontend/stylebook/general_look_feel.png)
 
-* **Styles** with instructions on how to use them (colors, shadows and typography). You can change the styles to fit your company identity, publish library updates to your design work Figma file, and these styles will automatically be updated in every instance on every page that uses them.
-* **Ready-to-go UI components**, from the simple ones (e.g., <a href="https://github.com/feathericons/feather" target="_blank">Feather Icons</a>, buttons) to the compound ones (e.g., product cards) that are built with auto layouts and according to [the atomic approach](../../storefront-style-guide/index.md#frontend-design-atomic-approach).
+## Form Elements
 
-<a href="https://static.oroinc.com/doc/Design_Mockups_6.1-November_2025.fig" target="_blank">Design Mockups</a> encompass all primary screens and page components, allowing for customizable design alterations.
+![The form elements section of the frontend stylebook](img/frontend/stylebook/form_elements.png)
 
-![Color palette in style guide](img/frontend/storefront-design/Colors.png)
+## Grid Elements
 
-For more information, see the [Storefront Design: Style Guide](../../storefront-style-guide/index.md#frontend-design-customization).
+![The grid elements section of the frontend stylebook](img/frontend/stylebook/grid_elements.png)
+
+## JS Components
+
+![The JS components section of the frontend stylebook](img/frontend/stylebook/js_component.png)
+
+#### HINT
+* Use the tabs at the top of the page to switch between the categories.
+* In the category, use the elements navigation tree on the left to jump to the element\`s description, preview, and a code sample.
+
+#### BUSINESS TIP
+## Business Tip
+
+If you want to get more insights into <a href="https://oroinc.com/b2b-ecommerce/what-is-b2b-ecommerce/" target="_blank">B2B commerce</a> and its differences to B2C, check out our comprehensive guide on this topic.
 
 <!-- Frontend -->

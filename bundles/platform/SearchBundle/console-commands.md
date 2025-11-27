@@ -14,7 +14,7 @@ This command updates the search index for specified entities. The command requir
 Single entity indexation:
 
 ```bash
-php bin/console oro:search:index "Acme\Bundle\DemoBundle\Entity\Question" 1
+php bin/console oro:search:index AcmeDemoBundle:Question 1
 Started index update for entities.
 ```
 
@@ -41,8 +41,8 @@ Started reindex task for all mapped entities
 Reindexation of one entity:
 
 ```bash
-php bin/console oro:search:reindex "Acme\Bundle\DemoBundle\Entity\Question"
-Started reindex task for "Acme\Bundle\DemoBundle\Entity\Question" entity
+php bin/console oro:search:reindex AcmeDemoBundle:Question
+Started reindex task for "AcmeDemoBundle:Question" entity
 ```
 
 ## oro:search:reindex –scheduled
@@ -63,7 +63,7 @@ Please use the following parameter to enable it:
 php bin/console oro:search:reindex --scheduled
 ```
 
-You can limit the reindexation to a specific entity with the `--class` option. The FQCN (Acme\\Bundle\\DemoBundle\\Entity\\Question) class names are accepted:
+You can limit the reindexation to a specific entity with the `--class` option. Both the FQCN (Acme\\Bundle\\DemoBundle\\Entity\\Question) and short (AcmeDemoBundle:Question) class names are accepted:
 
 ```none
 php bin/console oro:search:reindex --class=<entity>

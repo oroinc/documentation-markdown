@@ -22,13 +22,11 @@ use Symfony\Component\Config\Definition\Builder\NodeBuilder;
  */
 class AcmeEntityConfiguration implements EntityConfigInterface
 {
-    #[\Override]
     public function getSectionName(): string
     {
         return 'acme';
     }
 
-    #[\Override]
     public function configure(NodeBuilder $nodeBuilder): void
     {
         $nodeBuilder
@@ -69,7 +67,7 @@ entity_config:
             priority: 100
 ```
 
-This configuration adds the ‘demo_attr’ attribute with the ‘Demo’ value to all configurable entities. The configurable entity is an entity marked with the #[Config] attribute. This code also automatically adds a service named **oro_entity_config.provider.acme** into the DI container. You can use this service to get the value of a particular entity’s ‘demo_attr’ attribute.
+This configuration adds the ‘demo_attr’ attribute with the ‘Demo’ value to all configurable entities. The configurable entity is an entity marked with the @Config annotation. This code also automatically adds a service named **oro_entity_config.provider.acme** into the DI container. You can use this service to get the value of a particular entity’s ‘demo_attr’ attribute.
 
 To apply this change, execute the **oro:entity-config:update** command that updates configuration data for entities:
 
@@ -91,24 +89,28 @@ $acmeConfigProvider = $container->get('oro_entity_config.provider.acme');
 $demoAttr = $acmeConfigProvider->getConfig('Acme\Bundle\DemoBundle\Entity\Document')->get('demo_attr');
 ```
 
-If you want to set a value different than the default one for some entity, write it in the #[Config] attribute for this entity. For example:
+If you want to set a value different than the default one for some entity, write it in the @Config annotation for this entity. For example:
 
 *src/Acme/Bundle/DemoBundle/Entity/Document.php*
 ```php
 namespace Acme\Bundle\DemoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Oro\Bundle\EntityConfigBundle\Attribute\Entity\AttributeFamily;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config;
 
 /**
  * ORM Entity Document.
+ * @ORM\Table(
+ *     name="acme_demo_document"
+ * )
+ * @Config(
+ *     defaultValues={
+ *         "acme"={
+ *             "demo_attr"="MyValue"
+ *         },
+ *     }
+ * )
  */
-#[ORM\Table(name: 'acme_demo_document')]
-#[Config(
-    defaultValues: [
-        'acme' => ['demo_attr' => 'MyValue'],
-    ]
-)]
 ```
 
 The result is demonstrated in the following code:

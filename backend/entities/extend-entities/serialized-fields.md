@@ -7,18 +7,13 @@ This package provides a possibility to avoid schema update when you create custo
 
 However, these fields have some restrictions. Their data is stored in the serialized_data column as a serialized array but the serialized_data field is hidden from the UI on entity config page.
 
-#### SERIALIZED ENUM FIELDS
-# Serialized Enum Fields
-
-Serialized fields have different restrictions than enum fields (select, multiselect), which are also stored in the serialized_data column. The Enum fields functionality is described in [Option Set Fields](enums.md#book-entities-extended-entities-enums).
-
 Not supported features:
 
 - grid filtering and sorting
 - segments and reports
 - charts
 - search
-- relations, and option set field types
+- relations, enums, and option set field types
 - data audit
 - usage of such fields in Doctrine query builder
 
@@ -38,8 +33,6 @@ The Serialized Fields bundle adds a new field called Storage Type within New fie
   > - Decimal
   > - Float
   > - Integer
-  > - Select
-  > - Multi-select
   > - Money
   > - Percent
   > - SmallInt
@@ -49,7 +42,7 @@ The Serialized Fields bundle adds a new field called Storage Type within New fie
 
 ![Basic properties available when creating a new field for an entity](user/img/system/entity_management/new_entity_field.png)
 
-To create a serialized field via migration, use <a href="https://github.com/oroinc/OroEntitySerializedFieldsBundle/tree/6.1/Migration/Extension/SerializedFieldsExtension.php" target="_blank">SerializedFieldsExtension</a>. For example:
+To create a serialized field via migration, use <a href="https://github.com/oroinc/OroEntitySerializedFieldsBundle/blob/5.1/Migration/Extension/SerializedFieldsExtension.php" target="_blank">SerializedFieldsExtension</a>. For example:
 
 *src/Acme/Bundle/DemoBundle/Migrations/Schema/v1_4/AddSerializedFieldMigration.php*
 ```php
@@ -68,13 +61,17 @@ class AddSerializedFieldMigration implements Migration, SerializedFieldsExtensio
 {
     protected SerializedFieldsExtension $serializedFieldsExtension;
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function setSerializedFieldsExtension(SerializedFieldsExtension $serializedFieldsExtension)
     {
         $this->serializedFieldsExtension = $serializedFieldsExtension;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $this->serializedFieldsExtension->addSerializedField(

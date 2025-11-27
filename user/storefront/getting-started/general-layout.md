@@ -2,43 +2,64 @@
 
 # Manage General Layout in the Storefront
 
-The screenshots in this guide are provided for illustration purposes only and use the default demo design. The layout, design and functionality of your application may be different. Elements, such as the way product menu is displayed, the availability of the quick access menu, and quick links are configured in the back-office [theme configuration](../../back-office/system/theme-configuration/index.md#back-office-theme-configuration) settings.
+#### NOTE
+The screenshots in this guide are provided for illustration purposes only, as layouts and available functionality may vary as the result of customization.
+
+The key elements of the storefront menu are represented below.
 
 <a id="frontstore-guide-navigation-top"></a>
 
 ## Top Navigation
 
-Top navigation may includes access to the product catalog menu, quick order form, the search bar, quick access button (Sale Now On in the illustration), language switcher, and quick links. If the user is registered and logged in, links to the user menu and shopping lists will be included. Unauthenticated users will have the ability to log in or sign up for an account. The ability to use guest shopping list and the quick order form is controlled [by the back-office settings](../../back-office/system/configuration/commerce/sales/guest-quick-order-global.md#user-guide-system-configuration-commerce-sales-quick-order-form).
+Links are placed at the top right of the page.
 
-![image](user/img/storefront/navigation/top-bar.png)
+![image](user/img/storefront/navigation/GeneralLayoutTopLinks.png)
 
 <a id="frontstore-guide-navigation-footer"></a>
 
 ## Footer Links
 
-Footer links are placed at the bottom of the storefront page and can be configured [in the back-office](../../concept-guides/administration/menus/index.md#menu-management-concept-guide).
+Footer links are placed at the bottom of the page.
 
 ![image](user/img/storefront/navigation/GeneralLayoutFooterLinks.png)
 
 #### NOTE
-Contact details of the assigned sales representative in the footer of the storefront page are configured in the [sales contacts settings in the back-office](../../back-office/system/configuration/commerce/sales/contacts.md#sys-conf-commerce-sales-contacts).
+You may find contact details of the assigned sales representative in the footer of the storefront page.
 
 <a id="frontstore-guide-navigation-user-menu"></a>
 
-## My Account
+## User Menu
 
-[My Account](../account/index.md#my-account) menu is displayed for authenticated users only, and provides quick access to a variety of pages, such as their profile, role management, address book, orders, saved searches, etc.
+User Menu is located on the top left of the page and contains the following sections:
 
-> ![image](user/img/storefront/navigation/user-menu.png)
+**For non-authenticated users (guests):**
 
-Unauthenticated users will have an option to either log in or sign up for an account instead.
+1. The **Sign In** and **Register** buttons.
+   ![image](user/img/storefront/navigation/registration_link_2.png)
 
-![image](user/img/storefront/orders/GuestQuickOrderButton.png)
+**For a user that has signed in:**
+
+1. The name of the signed in user, e.g. *Signed in as: Amanda Cole*.
+2. A link to the user account.
+3. The **Sign Out** button.
+   ![image](user/img/storefront/navigation/GeneralLayoutUserMenu.png)
+
+<a id="frontstore-guide-navigation-quick-access-menu"></a>
+
+## Quick Access Menu
+
+Quick access menu provides quick access to the most frequent or important actions:
+
+1. [Orders](../orders/index.md#frontstore-guide-orders)
+2. [Quotes](../quotes/index.md#frontstore-guide-quotes)
+3. [Quick Order Form](../quick-order-form.md#frontstore-guide-orders-quick-order)
+
+![image](user/img/storefront/navigation/GeneralLayoutQuickAccess.png)
 
 <a id="frontstore-guide-navigation-main-menu"></a>
 
-## Product Catalog (Main Menu)
+## Main Menu
 
-The main navigation menu can either be rendered separately to provide easy access to its top level items on the devices with sufficient screen width, or it can be combined with other navigational elements in the “hamburger” menu. This is configured in the back-office [theme configuration](../../back-office/system/theme-configuration/index.md#back-office-theme-configuration) settings.
+The main menu is the key navigation bar that contains items for sale, important information, and [shopping lists](../account/shopping-lists/index.md#frontstore-guide-shopping-lists).
 
 ![image](user/img/storefront/navigation/GeneralLayoutMainMenu.png)

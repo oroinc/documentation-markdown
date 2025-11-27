@@ -36,7 +36,7 @@ You can see the product name on the top left of the page. Next to it, there is t
 
 In the next row, you can see when the product was created and updated.
 
-Additionally, you can <i class="fa fa-copy" aria-hidden="true"></i> duplicate, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit, or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) delete the product by clicking the corresponding button.
+Additionally, you can <i class="fa fa-copy" aria-hidden="true"></i> duplicate, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit, or <i class="fas fa-trash-alt" aria-hidden="true"></i> delete the product by clicking the corresponding button.
 
 In the **More Actions** drop-down, you can:
 
@@ -52,18 +52,18 @@ Click the **Change History** link to see who, how, and when modified the product
 
 ![The general section of the product](user/img/products/products/products_review_general.png)
 
-| Field                 | Description                                                                                                                                                                                                                                                                                                                                                    |
-|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Category**          | The category under which the product is listed.                                                                                                                                                                                                                                                                                                                |
-| **SKU**               | The [stock keeping unit](../../../../glossary.md#term-Stock-keeping-unit-SKU) that helps identify the product and track it in inventory.                                                                                                                                                                                                                       |
-| **Name**              | The product’s name as it appears in the user interface.                                                                                                                                                                                                                                                                                                        |
-| **Type**              | Whether it is a simple product or product that has variants (configurable) — i.e., unites several simple products. An example of a configurable product is a pair of scissors with either red or green handles.                                                                                                                                                |
-| **Is Featured**       | Select whether the product is featured. The field is mandatory. To add the featured products block with all the products marked as featured to the website’s storefront, please refer to the [featured products](../../../../concept-guides/catalog-promotions/product-management/index.md#concept-guides-product-management-featured-products) documentation. |
-| **New Arrival**       | Whether the product is included in the listing of new arrivals. When set to *Yes*, the product is highlighted in the storefront.                                                                                                                                                                                                                               |
-| **Brand**             | The [brand](../../product-brands/index.md#user-guide-product-brands) that the product belongs to.                                                                                                                                                                                                                                                              |
-| **Tax Code**          | The code that helps identify what taxes to apply to the product.                                                                                                                                                                                                                                                                                               |
-| **Description**       | A detailed information about the product. It appears in the product details.                                                                                                                                                                                                                                                                                   |
-| **Short Description** | A short but meaningful product description. It is displayed in the catalog listing.                                                                                                                                                                                                                                                                            |
+| Field                 | Description                                                                                                                                                                                                     |
+|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Category**          | The category under which the product is listed.                                                                                                                                                                 |
+| **SKU**               | The [stock keeping unit](../../../../glossary.md#term-Stock-keeping-unit-SKU) that helps identify the product and track it in inventory.                                                                        |
+| **Name**              | The product’s name as it appears in the user interface.                                                                                                                                                         |
+| **Type**              | Whether it is a simple product or product that has variants (configurable) — i.e., unites several simple products. An example of a configurable product is a pair of scissors with either red or green handles. |
+| **Is Featured**       | Whether the product is included in the featured products listing.                                                                                                                                               |
+| **New Arrival**       | Whether the product is included in the listing of new arrivals. When set to *Yes*, the product is highlighted in the storefront.                                                                                |
+| **Brand**             | The [brand](../../product-brands/index.md#user-guide-product-brands) that the product belongs to.                                                                                                               |
+| **Tax Code**          | The code that helps identify what taxes to apply to the product.                                                                                                                                                |
+| **Description**       | A detailed information about the product. It appears in the product details.                                                                                                                                    |
+| **Short Description** | A short but meaningful product description. It is displayed in the catalog listing.                                                                                                                             |
 
 If the product’s family contains the group with the code “general”, all attributes from the group also appear in this section.
 
@@ -208,7 +208,7 @@ Click the activity to see detailed information about it.
 
 To edit the activity, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the row and click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Update Note**. In the dialog that appears, make required changed and then click **Save**.
 
-To delete the activity, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the row and click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete Note**. In the confirmation dialog, click **Yes, Delete**.
+To delete the activity, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the row and click <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete Note**. In the confirmation dialog, click **Yes, Delete**.
 
 You can add and delete an activity context.
 
@@ -222,7 +222,7 @@ In the **Add Comment** dialog, type your message.
 Use the built-in text editor to format your comment. You can also attach a file to your comment.
 For this, click the **Upload** link in the dialog and locate the required file. When the comment is ready, click **Add**.
 
-To edit or delete a comment, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu next to it and click the <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** icon correspondingly.
+To edit or delete a comment, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu next to it and click the <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** or <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** icon correspondingly.
 
 For more information about activities, see the [Activities](../../../activities/index.md#user-guide-productivity-tools) guide.
 
@@ -234,9 +234,9 @@ To view or download an attachment, click the file name.
 
 To edit an attachment, click the <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** icon at the end of the row.
 
-To delete an attachment, click the ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** icon at the end of the row.
+To delete an attachment, click the <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** icon at the end of the row.
 
-To delete multiple attachments, select checkboxes in front of the files you want to delete, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the list header and then click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete**.
+To delete multiple attachments, select checkboxes in front of the files you want to delete, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the list header and then click <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete**.
 
 #### BUSINESS TIP
 ### Business Tip
@@ -248,20 +248,3 @@ Searching for <a href="https://oroinc.com/b2b-ecommerce/blog/digital-transformat
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

@@ -91,26 +91,10 @@ Keep in mind that as soon as the entity is created, its ownership type cannot be
 * [Field Level Permissions](field-level-acl.md#user-guide-user-management-permissions-roles-field-level-acl)
 * [Entity and System Capabilities](admin-capabilities.md#admin-capabilities)
 * [Create and Manage Roles](create-manage-roles.md#user-guide-user-management-permissions-roles-actions)
+* [End-to-end Access Configuration in Context](access-in-context.md#user-guide-user-management-permissions-roles-examples)
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

@@ -12,7 +12,7 @@ Creating a basic datagrid to display the data of all tasks involves three steps:
 
 ## Configure the Grid
 
-The backend datagrid is configured in the `/config/oro/datagrids.yml` file, while the frontend datagrid is configured in the `/views/layouts/<theme>/config/datagrids.yml` file within the configuration directory of your bundle, and is divided into the sections below.
+The datagrid configuration happens in the `datagrids.yml` file in the configuration directory of your bundle and is divided into sections below.
 
 ### Datasource
 
@@ -60,7 +60,7 @@ datagrids:
                 label: acme.demo.question.priority.label
 ```
 
-Keep in mind that the frontend datagrid is configured in the `Resources/views/layouts/<theme>/config/datagrids.yml` file within the configuration directory of your bundle.
+For each column, you can use the `frontend_type` option to customize how data will be displayed (by default, the data will be shown as is).
 
 ### Column Sorters
 
@@ -197,11 +197,16 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route(path: '/question', name: 'acme_demo_question_')]
+/**
+ *
+ * @Route("/question", name="acme_demo_question_")
+ */
 class QuestionController extends AbstractController
 {
-    #[Route(path: '/', name: 'index')]
-    #[Template]
+    /**
+     * @Route("/", name="index")
+     * @Template
+     */
     public function indexAction(): array
     {
         return [

@@ -27,6 +27,6 @@ Reaching 100% of the limit triggers a warning message on a potential inactive ex
 1. Once the export is complete, you will receive an email to download the .csv file.
 
 #### NOTE
-Keep in mind that by clicking **Export** you download all records of the selected entity regardless of the filters applied to the grid. To export only filtered records, use the **Export Grid** functionality where it is available.
+Keep in mind that by clicking **Export** you download all records of the selected entity regardless of the filters applied to the grid. To export only the list of filtered records, use the **Export Grid** functionality where it is available.
 
 ![Highlight the Export Grid button](user/img/getting_started/export_import/export_grid_leads.png)

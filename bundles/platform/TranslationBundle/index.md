@@ -2,7 +2,7 @@
 
 # OroTranslationBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/TranslationBundle" target="_blank">OroTranslationBundle</a> enables a translation framework in the Oro applications and an integration with third-party translation services. Out-of-the-box, it provides integration with CrowdIn.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/TranslationBundle" target="_blank">OroTranslationBundle</a> enables a translation framework in the Oro applications and an integration with third-party translation services. Out-of-the-box, it provides integration with CrowdIn.
 
 The bundle enables developers to define translation strings in the YAML configuration files and provides the translation management UI for users to manage languages and translations strings, synchronize translations between the Oro application and third-party services.
 
@@ -35,7 +35,9 @@ class TranslationContextResolver implements TranslationContextResolverInterface
         $this->translator = $translator;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function resolve($id)
     {
         /**
@@ -146,7 +148,7 @@ translation fallbacks.
 
 ## Dependency Injection Tags
 
-* **oro_translation.extension.translation_strategy** - Registers strategy for providing translation locale fallbacks. Strategy must implement <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/TranslationBundle/Strategy/TranslationStrategyInterface.php" target="_blank">TranslationStrategyInterface</a>.
+* **oro_translation.extension.translation_strategy** - Registers strategy for providing translation locale fallbacks. Strategy must implement <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/TranslationBundle/Strategy/TranslationStrategyInterface.php" target="_blank">TranslationStrategyInterface</a>.
 
 **Related Documentation**
 

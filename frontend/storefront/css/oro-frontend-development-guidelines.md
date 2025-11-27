@@ -500,12 +500,12 @@ styles only for a specific type of device in the future.
 ```none
 .block {
     width: 50%;
-    padding: spacing('md');
+    padding: 10px;
 
-    background-color: get-var-color('neutral', 'dark');
+    background-color: get-color('additional', 'middle');
 
     &__element {
-        font-size: $base-font-size--xs;
+        font-size: 12px;
     }
 }
 
@@ -517,10 +517,10 @@ styles only for a specific type of device in the future.
 
 @include breakpoint('mobile') {
     .block {
-        padding: spacing('sm');
+        padding: 15px;
 
         &__element {
-            font-size: $base-font-size--large;
+            font-size: 15px;
         }
     }
 }
@@ -531,24 +531,24 @@ styles only for a specific type of device in the future.
 ```none
 .block {
     width: 50%;
-    padding: spacing('md');
+    padding: 10px;
 
-    background-color: get-var-color('neutral', 'dark');;
+    background-color: get-color('additional', 'middle');
 
     @include breakpoint('tablet') {
         width: 100%;
     }
 
     @include breakpoint('mobile') {
-        padding: spacing('sm');
+        padding: 15px;
     }
 
     &__element {
-        font-size: $base-font-size--large;
+        font-size: 12px;
 
         // STOP!
         @include breakpoint('mobile') {
-            font-size: $base-font-size;
+            font-size: 15px;
         }
     }
 }
@@ -556,32 +556,26 @@ styles only for a specific type of device in the future.
 
 ### Work with Colors
 
-To work with a color, use:
-: * **get-color($color-palette, $color-key)**: returns a color from a predefined color scheme;
-  * **get-var-color($color-palette, $color-key)**: returns a color from a predefined color scheme with CSS variable syntax. This allows you to easily change the color for different themes, such as a dark theme.
+To work with a color, use the **get-color()** function which returns a color
+from a predefined color scheme.
 
 Example:
 
 ```none
 .block {
-    border-color: get-color('neutral', 'white-50');
-    color: get-var-color('neutral', 'dark');
+    border-color: get-color('additional', 'light');
+    color: get-color('primary', 'main');
 }
 ```
 
-If you need darker, lighter or more transparent color, use the native <a href="https://sass-lang.com/documentation/modules/color/" target="_blank">sass:color functions</a>
-**color.scale()**, **color.adjust()**, etc.
+If you need darker, lighter or more transparent color, use the native Sass
+functions: **darken()**, **lighten()**, **transparentize()**, etc.
 
 ```none
-@use 'sass:color';
-
 .block {
-    // Makes color more transparent
-    background-color: color.scale(get-color('neutral', 'focus'), $alpha: -60%);
-    // Makes color more darken
-    border-color: color.adjust(get-var-color('neutral', 'dark'), $lightness: -10%);
-    // Makes color more lighten
-    color: color.adjust(get-var-color('neutral', 'dark'), $lightness: 10%);
+    background-color: transparentize(get-color('primary', 'main'), .8);
+    border-color: darken(get-color('additional', 'light'), 10%);
+    color: lighten(get-color('primary', 'main'), 10%);
 }
 ```
 
@@ -609,12 +603,9 @@ transform.
 
 ```none
 // variables
-$element-color: get-var-color('text', 'primary'); !default;
-$element-border: 10px solid get-var-color('neutral', 'grey2') !default;
-$element-background: get-var-color('neutral', 'dark') !default;
-$element-color: get-var-color('text', 'inverse'); !default;
-$element-font: $base-font-size--xs !default;
-$element-line-height: $base-line-height !default;
+$element-color: #000 !default;
+$element-font: 12px !default;
+$element-line-height: 1.2 !default;
 ```
 
 ```none
@@ -628,8 +619,8 @@ $element-line-height: $base-line-height !default;
     // block model
     width: 100px;
     height: 100px;
-    margin: spacing('sm');
-    padding: spacing('md') spacing('sm');
+    margin: 10px;
+    padding: 10px 20px;
 
     // typography
     font-size: $element-font;
@@ -637,8 +628,8 @@ $element-line-height: $base-line-height !default;
     text-align: center;
 
     // visualization
-    border: $element-border;
-    background: $element-background;
+    border: 10px solid #333;
+    background: red;
     color: $element-color;
 
     // other
@@ -647,7 +638,7 @@ $element-line-height: $base-line-height !default;
 
     // mixins
     // grouping @includes at the end makes it easier to read the entire selector.
-    @include ellipsis();
+    @include clearfix;
 }
 ```
 
@@ -677,9 +668,9 @@ $element-line-height: $base-line-height !default;
 
 ```none
 $default-size: 400px !default;
-$default-offset: spacing('sm') auto !default;
-$default-inner-offset: spacing('base') !default;
-$default-background: get-var-color('neutral', 'dark') !default;
+$default-offset: 10px auto !default;
+$default-inner-offset: 15px !default;
+$default-background: #dadada !default;
 
 %dialog {
     width: $default-size;
@@ -758,91 +749,141 @@ Use the logical number of modifiers for the element.
 
 ## The Main Mixins and Functions
 
-Out-of-the-box, OroCommerce offers offers a wide range of helper utilities to handle common layout challenges, including clearing **floats**,
-positioning **pseudo-elements**, managing **z-index** stacking, and applying styles based on **media** queries, rtc.
-The entire list of available mixins and functions see in <a href="https://b2b-demo.orocommerce.com/desktop/style-book/configs/" target="_blank">StyleBook General Look and Feel</a>.
-
-Using the helper to clear **inner floats**.
+Helper to clear inner floats.
 
 ```none
+@mixin clearfix {
+    &:after {
+        content: '';
+
+        display: block;
+
+        clear: both;
+    }
+}
+
+// use
 .block {
     @include clearfix;
 }
 ```
 
-Using the helper for the positioning of **pseudo-elements**.
+Helper for the positioning of pseudo-elements.
 
 ```none
-.block::after {
-    @include after;
+@mixin after {
+    content: '';
+
+    position: absolute;
+
+    display: block;
+}
+
+// use
+.block {
+    //...
+
+    &:after {
+        @include after;
+    }
 }
 ```
 
-Using the helper function for managing **z-index** stacking
+Helper function for organizing z-index
 
 ```none
+@function z($layer) {
+    $layers: (
+        'base': 1,
+        'fixed': 50,
+        'dropdown': 100,
+        'popup': 150,
+        'hidden': -1
+    );
+
+    $z-index: map-get($layers, $layer);
+    @return $z-index;
+}
+
+// use
 .dialog {
+    //...
+
     z-index: z('popup') + 1;
 
-    &-overlay {
+    &-overley {
+        //...
+
         z-index: z('popup');
     }
 }
 ```
 
-Using the helper mixin for organizing **media** queries
+Helper mixin for organizing @media rules
 
 ```none
+@mixin breakpoint($type) {
+    $breakpoints: (
+        'large': '(max-width: ' + #{$breakpoint-large} + ')',
+        'tablet': '(max-width: ' + #{$breakpoint-tablet} + ')',
+        'mobile': '(max-width: ' + #{$breakpoint-mobile} + ')'
+    );
+
+    @media #{map-get($breakpoints, $type)} {
+        @content;
+    }
+}
+// use
+
 @include breakpoint('tablet') {
     // styles for tablet version
-}
-
-@include breakpoint('mobile') {
-    // styles for mobile version
 }
 ```
 
 ## Best Practices
 
 ```none
-$block-font-title: get-font-name('main'),'helvetica', arial, sans-serif !default;
-$block-offset: spacing('md') !default;
+$block-font-title: Tahoma, sans-serif; !default;
+$block-offset: 10px !default;
 ```
 
 ```none
 .block {
-    display: flex;
-    flex-wrap: wrap;
+    @include clearfix;
 
     &:hover {
-        background-color: get-color('secondary', 'c1');
+        background-color: get-color('secondary', 'light');
     }
 
     &__element {
+        float: left;
         width: 25%;
-        padding-left: $base-ui-element-offset * 2;
+        padding-left: $list-offset * 2;
 
-        font-size: $base-font-size--s;
+        font-size: 14px;
 
         @extend %transition;
 
         &:hover {
-            border-color: get-color('additional', 'c2');
+            border-color: get-color('additional', 'middle');
         }
 
         // compound class
         &-title {
-            font-size: $base-font-size--large;
+            margin-bottom: $list-offset;
+
+            font-family: $list-font-title;
+            font-size: 22px;
             line-height: 1.1;
         }
 
         &--first {
-            padding-left: inset;
+            padding-left: 0;
         }
     }
 
     &__content {
-        padding: $base-ui-element-offset;
+        padding: $list-offset ($list-offset * 2);
     }
 
     // State written &. (the active state of the menu item, for example).
@@ -857,9 +898,9 @@ $block-offset: spacing('md') !default;
         width: 100%;
 
         &__content {
-            padding: spacing('md');
+            padding: $list-offset * 2;
 
-            font-size: $base-font-size--large;
+            font-size: 15px;
         }
     }
 }
@@ -872,7 +913,7 @@ $block-offset: spacing('md') !default;
             &-title {
                 margin-bottom: 0;
 
-                font-size: $base-font-size--large * 1.5;
+                font-size: 25px;
             }
         }
     }

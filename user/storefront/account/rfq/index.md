@@ -4,9 +4,14 @@
 
 To negotiate with the sales person (e.g. on a better price, more convenient quantities and additional services), you can request a quote. Both registered and guest users can create [RFQs](../../../glossary.md#term-Request-for-Quote) in the Oro storefront.
 
-Registered users can view all existing Requests for Quote or create new ones in their storefront account by clicking Requests for Quote in the user menu in the top navigation bar.
+To reach RFQ menu:
+
+1. Navigate to **Account** in the [user menu](../../getting-started/general-layout.md#frontstore-guide-navigation-user-menu).
+2. Click **Request for Quote** in the menu on the left.
 
 ![image](user/img/storefront/rfq/RFQ.png)
+
+On the All Requests for Quote page, you can view the existing RFQs, or create new ones.
 
 ## RFQ Grid
 
@@ -15,7 +20,7 @@ The RFQ grid shows the following data:
 1. RFQ#
 2. Status
 3. PO Number
-4. Ship by
+4. DNSLT (Do not ship later than)
 5. Create At
 6. Owner
 7. Step
@@ -23,10 +28,10 @@ The RFQ grid shows the following data:
 
 Within the table you have the following [action buttons](../../getting-started/common-controls.md#frontstore-guide-navigation-action-buttons) available:
 
-1. Refresh ![Refresh-SVG](_themes/sphinx_rtd_theme/static/svg-icons/refresh.svg) the view table.
-2. Reset ![Reset-SVG](_themes/sphinx_rtd_theme/static/svg-icons/reset.svg) the view table to clear view table customization and return to default settings. Reset applies to all filters, records per page and sorting changes that you have made.
-3. Manage ![Columns-SVG](_themes/sphinx_rtd_theme/static/svg-icons/columns.svg) table settings to define which columns to show in the table.
-4. Manage [filters](../../getting-started/common-controls.md#frontstore-guide-navigation-filters) ![Settings-SVG](_themes/sphinx_rtd_theme/static/svg-icons/settings.svg).
+1. Refresh the view table: click <i class="fas fa-sync-alt" aria-hidden="true"></i> to update the view table.
+2. Reset the view table: click <i class="fas fa-sync-alt" aria-hidden="true"></i> to clear view table customization and return to default settings. Reset applies to all filters, records per page and sorting changes that you have made.
+3. Table settings: click <i class="fa fa-cog fa-lg" aria-hidden="true"></i> to define which columns to show in the table.
+4. [Filters](../../getting-started/common-controls.md#frontstore-guide-navigation-filters) <i class="fa fa-filter fa-lg" aria-hidden="true"></i>.
 
 ## RFQ View Page
 
@@ -48,31 +53,15 @@ The Customer User View Page has the number of the selected RFQ in the page heade
 * Notes
 * Line Items (item name, requested quantity, target price).
 
-You can print the selected RFQ by clicking **Print RFQ**  on the top right of the view page, or ask a question, as part of the [conversations feature](../../conversations/index.md#storefront-guide-conversations).
+You can print the selected RFQ by clicking **Print RFQ**  on the top right of the view page.
 
 ![image](user/img/storefront/rfq/PrintRFQ.png)
 
-If an RFQ was previously cancelled, you can resubmit the RFQ by clicking ![Resubmit-SVG](_themes/sphinx_rtd_theme/static/svg-icons/resubmit.svg) **Resubmit** on the top right of the view page.
+You can resubmit the RFQ by clicking <i class="fas fa-redo-alt" aria-hidden="true"></i> **Resubmit** on the top right of the view page.
 
 ![image](user/img/storefront/rfq/RFQResubmitNew.png)
-
-If an RFQ is related to quote, you can navigate to its page via a dedicated link on the RFQ page.
-
-![image](user/img/storefront/quotes/quote-to-rfq-link.png)
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->
+<!-- fa-bars = fa-navicon -->
+<!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
+<!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
+<!-- Check mark in the square. -->
+<!-- SortDesc is also used as drop-down arrow -->

@@ -13,6 +13,9 @@ For more information on available configuration options for search, see our [Sea
 
 ## Manage Search Terms
 
+#### NOTE
+Search Terms are available starting from OroCommerce version 5.1.8. By default, the feature is disabled and must be enabled in the [system configuration](../../system/configuration/commerce/search/search-terms.md#configuration-guide-commerce-configuration-search-empty-search-results-global).
+
 OroCommerce administrators can use the search terms functionality to dynamically respond to specific search phrases with tailored actions. When a designated search term is detected, the administrator can choose from the following responses:
 
 * Automatically direct users to a predetermined page that best matches their search intent, ensuring they find the most relevant information or product.
@@ -98,7 +101,7 @@ To create a new synonym group:
    * **Synonyms** — a list of comma-separated synonyms, for example, good, excellent. Arrow notation can be used to define unidirectional synonyms: excellent => good.
 4. Click **Save**.
 
-![Search synonyms illustration](user/img/concept-guides/search/search-synonyms-storefront.png)
+![Illustration of how search synonyms configured in the back-office work in the storefront](user/img/marketing/search/synonym-search-back-office-storefront-example.png)
 
 You can view the list of all created search synonyms in the Search Synonym [grid](../../getting-started/information-management/index.md#user-guide-data-management-basics).
 

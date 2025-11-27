@@ -16,8 +16,10 @@ The Entity Management topic explains how you can record, process and analyze var
 
 Follow the links below to learn more:
 
+* [Create Entities](create-entities.md)
 * [Manage Entities](manage-entities.md)
   * [Edit an Entity](manage-entities.md#edit-an-entity)
+  * [Delete an Entity](manage-entities.md#delete-an-entity)
   * [Manage Unique Keys](manage-entities.md#manage-unique-keys)
 * [Create Entity Fields](entity-fields/index.md)
   * [Basic Entity Field Properties](entity-fields/entity-fields-basic-properties.md)

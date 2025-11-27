@@ -17,7 +17,7 @@ Mastering the application menu is a two-step process:
 1. [Create the new navigation items](#book-navigation-create-menu-item)
 2. [Compose trees of navigation items](#book-navigation-compose-tree)
 
-The <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/NavigationBundle" target="_blank">OroNavigationBundle</a> automatically processes a YAML configuration file which is named `navigation.yml` when it is placed in the `Resources/config/oro` directory of a registered bundle. The menu configuration needs to be placed under the `menu_config` tree.
+The <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/NavigationBundle" target="_blank">OroNavigationBundle</a> automatically processes a YAML configuration file which is named `navigation.yml` when it is placed in the `Resources/config/oro` directory of a registered bundle. The menu configuration needs to be placed under the `menu_config` tree.
 
 <a id="book-navigation-create-menu-item"></a>
 
@@ -100,7 +100,7 @@ If you wanted to create a dedicated blog tab instead, you would have to configur
 
 ## Breadcrumbs
 
-The breadcrumb provider’s goal is to show breadcrumbs based on a specific menu defined in navigation.yml. You can get the breadcrumbs through any existing <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/NavigationBundle#menu-declaration-in-yaml" target="_blank">menu alias</a>. The menu can be created and used for the breadcrumbs’ structure only.
+The breadcrumb provider’s goal is to show breadcrumbs based on a specific menu defined in navigation.yml. You can get the breadcrumbs through any existing <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/NavigationBundle#menu-declaration-in-yaml" target="_blank">menu alias</a>. The menu can be created and used for the breadcrumbs’ structure only.
 
 ### Breadcrumb Provider
 
@@ -153,10 +153,10 @@ titles:
     route_name_3: "Static title"
 ```
 
-The title can be defined with an attribute together with route attribute:
+The title can be defined with an annotation together with route annotation:
 
 ```none
-#[TitleTemplate('Route title with %parameter%')]
+@TitleTemplate("Route title with %parameter%")
 ```
 
 <!-- Frontend -->

@@ -32,6 +32,8 @@ The **Re-Order** link displayed within the All Past Orders grid is the most stra
 
 All information about ongoing checkouts is compiled and stored under the Order History section of your Account menu. Keep in mind that only registered users have access to the menu and are able to trace the checkout progress of both their own checkouts and the checkouts initiated by other users from their organization (provided that the [permission to do so is added to the customer user’s role](../../../back-office/customers/customer-user-roles/index.md#user-guide-customers-customer-user-roles)).
 
+![Compiled info about ongoing checkouts under the Order History section of your Account menu](user/img/concept-guides/checkout/compiled_order_info.png)
+
 Here, you can check the following details:
 
 * who initiated the checkout
@@ -98,7 +100,7 @@ A guest checkout provides unregistered users with several options:
 ![The options available for a guest user when they start the checkout](user/img/concept-guides/checkout/initiate_checkout_as_guest.png)
 * skip the account creation step at all and submit an order as a guest
 
-![Creating an account at the Order Review step](user/img/concept-guides/checkout/SampleGuestCheckout9.png)
+![Creating an account at the Order Review step](user/img/storefront/orders/SampleGuestCheckout9.png)
 
 #### HINT
 For more details on how to proceed through the guest checkout process in the storefront, refer to the [Guest Checkout](../../../storefront/checkout/guest-checkout.md#frontstore-guide-orders-checkout-guest) section.
@@ -133,20 +135,3 @@ On top of what is provided by default, you can also add your own code customizat
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

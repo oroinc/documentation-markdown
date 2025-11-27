@@ -7,7 +7,7 @@ attributes to existing entities. Of course, one can extend an entity class and a
 fields and associations in the subclass. However, this approach does not work anymore when an entity should be
 extended by different modules.
 
-To solve this, you can use <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityExtendBundle" target="_blank">EntityExtendBundle</a> which offers the following features:
+To solve this, you can use <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/EntityExtendBundle" target="_blank">EntityExtendBundle</a> which offers the following features:
 
 * Dynamically add fields to entities through configuration.
 * Users with appropriate permissions can add or remove dynamic fields from entities in the user
@@ -29,16 +29,17 @@ they can be removed by administrative users.
    namespace Acme\Bundle\DemoBundle\Entity;
 
    use Doctrine\ORM\Mapping as ORM;
-   use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\Config;
+   use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config;
    use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityInterface;
    use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityTrait;
 
    /**
     * ORM Entity Document.
+    *
+    * @ORM\Entity()
+    * @ORM\Table(name="acme_demo_document")
+    * @Config()
     */
-   #[ORM\Entity]
-   #[ORM\Table(name: 'acme_demo_document')]
-   #[Config]
    class Document implements ExtendEntityInterface
    {
      use ExtendEntityTrait;
@@ -54,13 +55,13 @@ namespace Acme\Bundle\DemoBundle\Migrations\Schema\v1_1;
 
 use Doctrine\DBAL\Schema\Schema;
 use Oro\Bundle\EntityBundle\EntityConfig\DatagridScope;
-use Oro\Bundle\EntityExtendBundle\EntityConfig\ExtendScope;
 use Oro\Bundle\MigrationBundle\Migration\Migration;
 use Oro\Bundle\MigrationBundle\Migration\QueryBag;
+use Oro\Bundle\EntityExtendBundle\EntityConfig\ExtendScope;
 
 class AddDocumentRatingColumn implements Migration
 {
-    #[\Override]
+
     public function up(Schema $schema, QueryBag $queries)
     {
         $table = $schema->getTable('acme_demo_document');
@@ -136,7 +137,6 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
 
 class AddPartnerSinceToOroUser implements Migration
 {
-    #[\Override]
     public function up(Schema $schema, QueryBag $queries)
     {
         $table = $schema->getTable('oro_user');
@@ -156,7 +156,7 @@ class AddPartnerSinceToOroUser implements Migration
 ```
 
 #### NOTE
-Please note that the entity that you add a new field to must have the `#[Config]` attribute
+Please note that the entity that you add a new field to must have the `@Config` annotation
 and should extend an Extend class.
 
 The important part in this migration (which is different from common Doctrine migrations) is the `oro_options` key.
@@ -189,7 +189,7 @@ The `owner` attribute can have the following values:
 * `ExtendScope::OWNER_SYSTEM`— Nothing is rendered automatically, and the developer must explicitly specify how to show the field in different parts of the system (grids, forms, views, etc.).
 
 #### NOTE
-For more default attribute set settings for Extend Entities, see <a href="https://doc.oroinc.com/backend/configuration/annotation/config-field" target="_blank">#[ConfigField]</a>.
+For more default attribute set settings for Extend Entities, see <a href="https://doc.oroinc.com/backend/configuration/annotation/config-field" target="_blank">@ConfigField</a>.
 
 <a id="book-entities-extended-entities-add-enum-fields"></a>
 

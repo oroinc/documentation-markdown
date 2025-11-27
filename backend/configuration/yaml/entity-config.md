@@ -18,8 +18,8 @@ entity_config:
         # ...
 ```
 
-This scope is later referred to with the `defaultValues` option of the `#[Config]` and
-`#[ConfigField]` attributes.
+This scope is later referred to with the `defaultValues` option of the `@Config` and
+`@ConfigField` annotations.
 
 ## Example of ‘Entity’ Scope Configuration
 
@@ -91,8 +91,8 @@ entity_config:
 
 **type**: `map`
 
-Options defined under the `entity` key can be applied on the class level using the `#[Config]`
-attribute. Refer to the [field option](#reference-entity-config-field-items) to define config
+Options defined under the `entity` key can be applied on the class level using the `@Config`
+annotation. Refer to the [field option](#reference-entity-config-field-items) to define config
 options that can be applied to individual class properties.
 
 ### `form`
@@ -123,7 +123,7 @@ used to control how the options are presented in the UI that lets the modify con
 `constraints` (**type**: `map`)
 
 > Validation constraints that must be applied to values that are submitted by the user. Have a
-> look at the <a href="https://symfony.com/doc/6.4/reference/constraints.html" target="_blank">validation constraints reference section</a> of the Symfony documentation to see how
+> look at the <a href="https://symfony.com/doc/5.4/reference/constraints.html" target="_blank">validation constraints reference section</a> of the Symfony documentation to see how
 > to set up validation constraints.
 
 `form` (**type**: `map`)

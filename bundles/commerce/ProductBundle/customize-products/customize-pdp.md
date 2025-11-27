@@ -166,7 +166,7 @@ The following is an example of the data provider:
 
  use Symfony\Component\PropertyAccess\PropertyAccess;
 
- use Oro\Bundle\EntityExtendBundle\Entity\EnumOptionInterface;
+ use Oro\Bundle\EntityExtendBundle\Entity\AbstractEnumValue;
  use Oro\Bundle\ProductBundle\Entity\Product;
 
  class ProductVariantsProvider
@@ -189,7 +189,7 @@ The following is an example of the data provider:
          foreach ($variantLinks as $variantLink) {
              $childProduct = $variantLink->getProduct();
              foreach ($variants as $key => $variant) {
-                 /** @var EnumOptionInterface $enumValue */
+                 /** @var AbstractEnumValue $enumValue */
                  $enumValue = $propertyAccessor->getValue($childProduct, $key);
                  $variants[$key]['elements'][$enumValue->getId()] = $enumValue->getName();
              }

@@ -47,10 +47,10 @@ To configure the required settings for simple products variations:
 2. Select the necessary option from the list:
 
    **Everywhere** — With this option selected, all the simple products are displayed together with the configurable one on a product page, product listing, and a shopping list page.
-   ![A storefront product listing page displaying both configurable product and its variations](user/img/system/config_commerce/product/display_simple_variations.png)
+   > ![A storefront product listing page displaying both configurable product and its variations](user/img/system/config_commerce/product/display_simple_variations.png)
 
    **Hide Completely** — The option hides all the simple products that belong to the configurable one on the product listing and search results pages enabling a customer to select only the configurable one.
-   ![A storefront product listing page displaying only the configurable product without variations](user/img/system/config_commerce/product/hide_simple_variations.png)
+   > ![A storefront product listing page displaying only the configurable product without variations](user/img/system/config_commerce/product/hide_simple_variations.png)
 
    **Hide from the catalog and search** — The option hides all the simple products that belong to the configurable one on the product listing and search results pages. However, a customer can still order a required product variant through a quick order form or an RFQ even if such product is not displayed individually in the product catalog.
 3. Click **Save Settings**.
@@ -60,20 +60,3 @@ To configure the required settings for simple products variations:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

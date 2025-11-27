@@ -60,6 +60,5 @@ In the sections below, you can learn the key things you can come across when wor
 * [Entity Attachments](attachments.md)
 * [Customize CRUD Pages](customize-crud.md)
 * [Fixtures](fixtures.md)
-* [Data Sanitization](sanitize.md)
 
 <!-- Frontend -->

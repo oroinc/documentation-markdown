@@ -9,6 +9,7 @@ Scheduled price activation helps eliminate the unwanted pressure of price manage
 To schedule price activation and deactivation:
 
 1. Navigate to **Sales > Price Lists** in the main menu.
+   ![The list of all price lists](user/img/sales/pricelist/PriceLists.png)
 2. Click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the required price list and then click the <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** icon to start editing price list details.
 3. In the **General** section, next to the **Schedule**, add a timetable for price list activation and deactivation:
    1. Click *Choose a date* to open the calendar and pick the date.
@@ -23,20 +24,3 @@ To schedule price activation and deactivation:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

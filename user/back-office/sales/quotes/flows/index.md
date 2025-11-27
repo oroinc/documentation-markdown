@@ -13,10 +13,12 @@ This flow is used when the [Quote Management Flow](../../../system/workflows/sys
 
 <!-- As an illustration, let us see the quote in action and walk through the steps a buyer and a sales manager may follow to communicate or negotiate for the sale: -->
 
-Quote Management Flow (QMF) is a [system](../../../system/workflows/index.md#user-guide-system-workflow-management-system-custom) workflow that defines a sequence of [steps and transitions](../../../system/workflows/steps-transitions.md#user-guide-system-workflow-management-steps-transitions) that a quote can go through as a deal progresses.
+### Overview
+
+Quote Management Flow (QBW) is a [system](../../../system/workflows/index.md#user-guide-system-workflow-management-system-custom) workflow that defines a sequence of [steps and transitions](../../../system/workflows/steps-transitions.md#user-guide-system-workflow-management-steps-transitions) that a quote can go through as a deal progresses.
 
 #### NOTE
-For more information on the difference between the simple Quote Management Flow and the one with approvals, see [Configure Quote Workflows in the Back-Office](../../../system/workflows/system-workflows/quote-flows-overview.md#system-workflows-quote-understanding).
+The difference between the simple Quote Management Flow and the one with approval is covered in the [Understanding Quote Workflows](../../../system/workflows/system-workflows/quote-flows-overview.md#system-workflows-quote-understanding) section.
 
 To reach the workflow:
 
@@ -60,12 +62,18 @@ These statuses cannot be edited or deleted.
 
 The QMF consists of the following steps and transitions:
 
-| Steps            | Transitions                                                                                                     | Post-Transition Steps                                                                             |
-|------------------|-----------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| Draft            | * Edit<br/>* Clone<br/>* Delete<br/>* Send to Customer                                                          | * Draft<br/>* Draft<br/>* Deleted<br/>* Sent to Customer                                          |
-| Sent to Customer | * Cancel<br/>* Expire<br/>* Delete<br/>* Create New Quote<br/>* Accept<br/>* Decline<br/>* Declined by Customer | * Closed<br/>* Closed<br/>* Deleted<br/>* Sent to Customer<br/>* Closed<br/>* Closed<br/>* Closed |
-| Closed           | * Reopen                                                                                                        | * Closed                                                                                          |
-| Deleted          | * Undelete                                                                                                      | * Draft                                                                                           |
+1. Steps:
+   1. Draft
+   2. Sent to Customer
+   3. Closed
+   4. Deleted
+2. Transitions:
+   1. For **Draft**: Edit, Clone, Delete, Send to Customer
+   2. For **Sent to Customer**: Cancel, Expire, Delete, Create New Quote, Accept, Decline, Declined by Customer
+   3. For **Closed**: Reopen
+   4. For **Deleted**: Undelete
+
+![image](user/img/system/workflows/workflows/QBW_steps_transitions_table.png)
 
 #### NOTE
 Please note that Accepted and Declined transitions for the Sent to Customer step are automatically triggered by the changes of customer statuses and they do not, therefore, take the form of buttons in the interface.
@@ -77,7 +85,7 @@ As an illustration, let us go through a sample flow to see the QMF in action:
 <!-- quote_in_use -->
 1. Once a quote is created, it is automatically moved to the **Draft** step with the possibility to edit, clone, delete and send the quote to a customer.
    ![image](user/img/system/workflows/workflows/Illustration_1.png)
-2. The quote with an offer valid until a specific date is sent to a customer.
+2. The quote with an offer valid until 19 April is sent to a customer.
    ![image](user/img/system/workflows/workflows/Illustration_2.png)
 
 > The quote transitions from **Draft** state into **Sent to Customer**. Now it is possible to cancel, expire, delete, create a quote, or mark it as declined by customer.
@@ -86,10 +94,10 @@ As an illustration, let us go through a sample flow to see the QMF in action:
 
 > #### NOTE
 > If a customer generates an order based on the quote, you can leave the quote in the **Sent to Customer** state so that customer user could reuse it for future orders, or expire it to disable orders based on this quote.
-1. The customer provided no feedback on the quote before the given date, and the quote is expired by the sales personnel, leaving it in the **Closed** step.
+1. The customer provided no feedback on the quote before 19 April, and the quote is expired by the sales personnel, leaving it in the **Closed** step.
 
 > ![image](user/img/system/workflows/workflows/Illustration_4.png)
-1. The offer has been reconsidered and validation date was extended until a later date. The quote is reopened. It is moved back to the draft step with the possibility to edit, clone, delete and send the quote to a customer. The quote number is changed (in our case, from 21 to 22).
+1. The offer has been reconsidered and validation date was extended until 21 April. The quote is reopened. It is moved back to the draft step with the possibility to edit, clone, delete and send the quote to a customer. The quote number is changed (in our case, from 21 to 22).
 
 > ![image](user/img/system/workflows/workflows/Illustration_5.png)
 

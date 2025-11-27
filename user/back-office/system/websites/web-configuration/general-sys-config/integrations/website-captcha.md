@@ -2,6 +2,9 @@
 
 # Configure CAPTCHA Settings per Website
 
+#### NOTE
+This feature is available as of OroCommerce version 5.1.9.
+
 CAPTCHA, which stands for Completely Automated Public Turing test to tell Computers and Humans Apart, is a type of challenge-response test used to verify whether the user is human. CAPTCHAs are crucial for maintaining the integrity, security, and usability of online systems. They ensure that interactions and transactions on websites are legitimate and performed by real users, protecting against malicious activities.
 
 In OroCommerce, you can configure CAPTCHA on [global](../../../../configuration/system/integrations/captcha-settings.md#admin-configuration-integrations-captcha-global), [organization](../../../../user-management/organizations/org-configuration/general-setup-org/integrations/organization-captcha.md#organization-configuration-captcha), and website levels using any of the tree supported service: Google reCAPTCHA, hCAPTCHA and Cloudflare Turnstile.
@@ -34,7 +37,7 @@ To configure CAPTCHA settings per website:
    * **Site Key** — Provide a site key to invoke Turnstile on your site generated in the settings of your Turnstile widget in your Cloudflare account.
    * **Secret Key** — Provide a secret key to connect to the Cloudflare Turnstile server generated in the settings of your Turnstile widget in your Cloudflare account.
 
-   For more information on these options, please refer to the <a href="https://developers.cloudflare.com/turnstile/" target="_blank">Cloudflare Turnstile documentation</a>.
+   For more information on these options, please refer to the <a href="https://docs.hcaptcha.com/" target="_blank">hCapture documentation</a>.|Cloudflare Turnstile documentation|.
 5. Click **Save Settings**.
 
 <!-- fa-bars = fa-navicon -->
@@ -42,20 +45,3 @@ To configure CAPTCHA settings per website:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

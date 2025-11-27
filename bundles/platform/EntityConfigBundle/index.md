@@ -2,7 +2,7 @@
 
 # OroEntityConfigBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityConfigBundle" target="_blank">OroEntityConfigBundle</a> enables developers to define and configure the entities metadata in the YAML configuration files and provides the ability for the application users to set values of these metadata properties in the entity management UI.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/EntityConfigBundle" target="_blank">OroEntityConfigBundle</a> enables developers to define and configure the entities metadata in the YAML configuration files and provides the ability for the application users to set values of these metadata properties in the entity management UI.
 
 ## Related Documentation
 

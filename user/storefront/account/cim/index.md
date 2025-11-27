@@ -2,7 +2,9 @@
 
 # Manage Payment Profiles (Authorize.Net Customer Profiles) in the Storefront
 
-When checking out using a credit card or <a href="https://www.authorize.Net/payments/echeck/" target="_blank">eCheck</a>, a customer is presented with the option to store the payment method for future use. This information is stored in your OroCommerce account as an Authorize.Net customer profile. A customer who has a previously saved profile is presented with the option for seamless subsequent checkouts without having to re-enter their payment data. Once you log into your account in the OroCommerce storefront, you can view and manage payment and address information stored within Customer Profiles in the user menu, as well as add new credit cards and bank accounts.
+When checking out using a credit card or <a href="https://www.authorize.Net/payments/echeck/" target="_blank">eCheck</a>, a customer is presented with the option to store the payment method for future use. This information is stored in your OroCommerce account as an Authorize.Net customer profile. A customer who has a previously saved profile is presented with the option for seamless subsequent checkouts without having to re-enter their payment data. Once you log into your account in the OroCommerce storefront, you can view and manage payment and address information stored within Customer Profiles, as well as add new credit cards and bank accounts.
+
+To locate the information in your customer profile, navigate to **Account > Manage Payment Profiles**.
 
 ![Manage Customer Payment Information section in the storefront account](user/img/storefront/cim/manage_payment_profiles.png)
 
@@ -18,8 +20,8 @@ Up to 10 payment profiles can be saved in your OroCommerce account.
 To create a new credit card payment profile:
 
 1. On the Manage Payment Profiles page, click **+Add New Credit Card** on the right.
-   ![image](user/img/storefront/cim/manage_payment_profiles2.png)
 2. In the **New Payment Profile** form, provide the following details:
+   ![Add a new credit card payment profile](user/img/storefront/cim/add_new_credit_card.png)
    * **Name** — Provide the name for the account.
    * **Credit Card Number** — Provide the card number (without spaces).
    * **Expiration Date** — Provide the expiration date for the card you are attaching to the account.
@@ -41,17 +43,20 @@ To add a new card during the checkout:
 2. Provide the details of the new card in the form:
    ![New credit card form at checkout](user/img/storefront/cim/new_card_at_checkout_form.png)
 3. To save the details of the card for the future use, select the **Save Payment Details** checkbox.
+   ![Credit card form filled in during checkout](user/img/storefront/cim/card_form_fillied_in_checkout.png)
 
    When you place the order, this card is saved in your account in the **Manage Payment Profiles** section as a non-default card.
    ![New credit card created at checkout is saved in the customer profile](user/img/storefront/cim/new_card_from_checkou_saved_to_account.png)
 
 ### Manage a Credit Card Profile
 
-* To edit a credit card, click ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) **Edit** at the end of the row of the selected profile.
-  ![Edit payment profile info](user/img/storefront/cim/edit-cim.png)
+* To edit a credit card, click <i class="fas fa-pencil-alt" aria-hidden="true"></i> **Edit** at the end of the row of the selected profile.
+  ![Edit payment profile info](user/img/storefront/cim/update_payment_profile.png)
 
   To update card information, select the **Update Credit Card Information** checkbox and provide new information in the credit card form.
-* To delete credit card, click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** at the end of the row of the selected profile. Click **Yes** in the confirmation dialog.
+  ![Update credit card payment details](user/img/storefront/cim/update_credit_card_info.png)
+* To delete credit card, click <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** at the end of the row of the selected profile. Click **Yes** in the confirmation dialog.
+  ![Delete a credit card profile](user/img/storefront/cim/delete_credit_card.png)
 
 ## Add a New Bank Account
 
@@ -89,12 +94,12 @@ To add a new bank account during checkout:
 
 ### Manage a Bank Account
 
-* To edit a bank account, click ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) **Edit** at the end of the row of the selected profile.
+* To edit a bank account, click <i class="fas fa-pencil-alt" aria-hidden="true"></i> **Edit** at the end of the row of the selected profile.
   ![Edit bank account payment profile info](user/img/storefront/cim/update_bank_acc_profile.png)
 
   To update card information, select the **Update Bank Account Information** checkbox and provide new information in the bank account form.
   ![Update bank account payment details](user/img/storefront/cim/update_bank_acc_info.png)
-* To delete a bank account, click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** at the end of the row of the selected profile. Click **Yes** in the confirmation dialog.
+* To delete a bank account, click <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** at the end of the row of the selected profile. Click **Yes** in the confirmation dialog.
   ![Delete a bank account profile](user/img/storefront/cim/delete_bank_acc.png)
 
 ## Payment Profiles on the Authorize.Net Side
@@ -110,20 +115,8 @@ If you edit or delete a payment profile on the Authorize.Net side, these changes
 
 * [Set Up Authorize.Net Integration in the Back-Office](../../../back-office/system/integrations/payment-integration/authorizenet/authorizenet-integration.md#user-guide-payment-configuration-payment-method-integration-authorizenet-details)
 
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->
+<!-- fa-bars = fa-navicon -->
+<!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
+<!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
+<!-- Check mark in the square. -->
+<!-- SortDesc is also used as drop-down arrow -->

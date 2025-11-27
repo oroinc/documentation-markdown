@@ -13,19 +13,13 @@ While Zendesk integration capabilities are pre-implemented, Oro application can 
 
 To retrieve your API token on the Zendesk side:
 
-1. Open your account profile.
-2. Click on the cog icon in the panel to the left to open the **Admin** menu.
+1. Open your account profile and go to the **Admin** page.
    ![image](user/img/system/integrations/zendesk/zendesk_admin.png)
-
-1. Navigate to the **Apps & Integrations > API Configuration**.
+2. Navigate to the **CHANNELS > API**.
    ![image](user/img/system/integrations/zendesk/zendesk_api.png)
-2. Make sure the **Token Access** is enabled.
-3. Click on API Tokens in the panel to the left to open the API Tokens page.
-4. Click **Add API Token** to create a new one.
+3. Make sure the **Token Access** is enabled.
+4. Copy an active API token.
    ![image](user/img/system/integrations/zendesk/zendesk_api_token.png)
-5. Provide a description for the new token, and click **Save**. This will prompt generation of a new token.
-   ![image](user/img/system/integrations/zendesk/new-token.png)
-6. Copy and store this the token as you will need it to connect to the OroCommerce application. Please be aware that it will not be shown again after you click **Save**.
 
 ## Create the Integration
 
@@ -54,9 +48,6 @@ To create an integration with Zendesk:
    * **Remote wins** — Zendesk data is applied to both Zendesk and the Oro application.
    * **Local wins** — Oro application data is applied to both Zendesk and the Oro application.
 
-#### NOTE
-In the **Synchronization Settings** section, select the **Log Warnings** checkbox if you want all synchronization errors to be written into the application log.
-
 <a id="user-guide-zendesk-channel-integration-details-edit"></a>
 
 ## Manage the Integration
@@ -81,7 +72,7 @@ Once integration has been created, the data is automatically synchronized.
 To start the synchronization manually:
 
 1. Navigate to **System > Integrations > Manage Integrations** in the main menu.
-2. For the integration with Zendesk, hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right and click <i class="fas fa-sync-alt" aria-hidden="true"></i> to schedule sync.
+2. For the integraion with Zendesk, hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right and click <i class="fas fa-sync-alt" aria-hidden="true"></i> to schedule sync.
 
 #### NOTE
 Alternatively, open the integration details page and click **Schedule Sync** on the top right.
@@ -149,20 +140,3 @@ The case fields are mapped to the Zendesk ticket fields as follows:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

@@ -99,7 +99,7 @@ It is preferred to group modules that are used together or/and on specific pages
 
 The map option allows to substitute a module with the given ID with a different module. Such substitution is working for the given module prefix.
 
-For example, <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/UIBundle" target="_blank">OroUIBundle</a> is delivered with an extended version of the jQuery library. This means
+For example, <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/UIBundle" target="_blank">OroUIBundle</a> is delivered with an extended version of the jQuery library. This means
 that all modules should receive the extended jQuery library from the OroUIBundle. However, since
 the bundle itself needs the original version of the library to be able to extend it, it must get
 the original version when requiring it:

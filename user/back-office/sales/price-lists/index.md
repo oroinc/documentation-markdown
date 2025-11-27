@@ -35,3 +35,4 @@ Learn more on price lists in the following topics:
 **Related Topics**
 
 * [Price Management Concept Guide](../../../concept-guides/catalog-promotions/pricing/index.md#user-guide-pricing)
+* [Your Price vs Listed Price](../../../storefront/getting-started/common-controls.md#frontstore-guide-navigation-product-price)

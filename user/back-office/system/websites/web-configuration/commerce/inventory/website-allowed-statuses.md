@@ -2,7 +2,7 @@
 
 # Configure Allowed Statuses Settings per Website
 
-You can control the way product inventory is displayed for your buyers in the storefront per website:
+You can control the way product inventory is displayed for your buyers (in the storefront) per website:
 
 1. Navigate to **System > Websites** in the main menu.
 2. For the necessary website, hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the necessary website and click <i class="fas fa-cog" aria-hidden="true"></i> to start editing the configuration.
@@ -11,40 +11,14 @@ You can control the way product inventory is displayed for your buyers in the st
    #### NOTE
    For faster navigation between the configuration menu sections, use [Quick Search](../../../../configuration/quick-search.md#user-guide-system-configuration-quick-search).
 4. Clear the **Use Organization** checkbox to change the organization-wide setting.
-5. In the **Storefront** section, select the following statuses:
+5. In the **Store Frontend** section, select the following statuses:
    * **Visible Inventory Statuses** — A buyer can see products with the selected inventory statuses in the storefront.
-   * **Can Be Added To RFQs** —  A buyer can add Products with the selected inventory statuses when creating an RFQ in the storefront.
-   * **Can Be Added To Orders** — A buyer can add Products with the selected inventory statuses when creating an Order in the storefront.
-
-   > #### HINT
-   > This configuration is also available [on the global level](../../../../configuration/commerce/inventory/allowed-statuses.md#configuration-guide-commerce-configuration-inventory-allowed-statuses).
-6. In the **Inventory Filter**, you can allow storefront users to filter products by the Inventory statuses, while allowing administrators to prevent revealing unwanted inventory details:
-   * **Enable For Guests** - enable or disable the ability to show the inventory filter to unauthenticated visitors.
-   * **Inventory Filter Type** - select the type of inventory filter to display. The *Multi-Select* filter type enables users to filter by any combination of individual inventory statuses. The *Simple* type will allow to filter only by predefined inventory statuses when the filter is applied. For this type, select the statuses that will be considered as *In Stock* in the storefront in the *In Stock Statuses For Simple Filter* field below.
-
-   #### HINT
-   This configuration is also available on the [organization](../../../../user-management/organizations/org-configuration/commerce/inventory/organization-allowed-statuses.md#inventory-allowed-statuses-org) and [global](../../../../configuration/commerce/inventory/allowed-statuses.md#configuration-guide-commerce-configuration-inventory-allowed-statuses) levels.
-7. Click **Save Settings**.
+   * **Store Frontend: Can Be Added To RFQs** —  A buyer can add Products with the selected inventory statuses when creating an RFQ in the storefront.
+   * **Store Frontend: Can Be Added To Orders** — A buyer can add Products with the selected inventory statuses when creating an Order in the storefront.
+6. Click **Save Settings**.
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

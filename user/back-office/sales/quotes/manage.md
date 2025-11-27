@@ -28,7 +28,7 @@ To edit a quote:
 
    #### IMPORTANT
    The icon that starts a workflow looks like the **Edit** icon. Please check the hint that appears when you hover over the icon to make sure that you select the desired action.
-3. Update the **Quote General Information**, **Line Items**, **Shipping Address**, **Shipping Information** sections, or add any relevant documents under **Customer Documents**. See [Create a Quote](create/create-from-scratch.md#quote-create-from-scratch) topic for detailed information on the available options.
+3. Update the **Quote General Information**, **Line Items**, **Shipping Address**, or **Shipping Information** sections. See [Create a Quote](create/create-from-scratch.md#quote-create-from-scratch) topic for detailed information on the available options.
 4. Click **Save** on the top right of the page.
 
 The quote is updated.
@@ -50,7 +50,7 @@ To edit a quote:
 2. Choose the quote in the list and click it. The quote details page opens.
 3. Click **Edit** on the top right of the page:
    ![Click the Edit button on the quote edit page](user/img/sales/quotes/quotes_edit1.png)
-4. Update the **Quote General Information**, **Line Items**, **Shipping Address**, **Shipping Information**, or **Customer Documents** sections. See [Create a Quote](create/create-from-scratch.md#quote-create-from-scratch) topic for detailed information on the available options.
+4. Update the **Quote General Information**, **Line Items**, **Shipping Address**, or **Shipping Information** sections. See [Create a Quote](create/create-from-scratch.md#quote-create-from-scratch) topic for detailed information on the available options.
 5. Click **Save** on the top right of the page.
 
 The quote is updated.
@@ -72,7 +72,7 @@ This option is available only when:
 * One of the workflows is active, and the current workflow step allows quote deletion.
 
 1. In the main menu, navigate to **Sales > Quotes**. The quote list opens.
-2. Choose the quote you need to delete, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the row, and then click the ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** icon.
+2. Choose the quote you need to delete, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the row, and then click the <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** icon.
 3. In the confirmation dialog, click **Yes, Delete**.
 
 <!-- finish -->
@@ -97,7 +97,7 @@ You can delete a quote in this way only when the [Quote Management Flow](flows/i
 ### Delete Multiple Quotes
 
 1. In the main menu, navigate to **Sales > Quotes**. The quote list opens.
-2. Select the checkboxes in front of the quotes that you need to delete, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the list header, and then click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete**.
+2. Select the checkboxes in front of the quotes that you need to delete, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the list header, and then click <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete**.
 
    #### TIP
    To select a bulk of items quickly, click <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i> next to the checkbox at the beginning of the table header and then select one of the following options:
@@ -112,20 +112,3 @@ You can delete a quote in this way only when the [Quote Management Flow](flows/i
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

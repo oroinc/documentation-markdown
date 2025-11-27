@@ -15,13 +15,11 @@ On step “Call Phone Conversation”, the user enters Workflow Data and navigat
 
 ## Configuration
 
-```yaml
+```php
 workflows:
     phone_call:
         entity: Acme\Bundle\DemoBundle\Entity\PhoneCall
         start_step: start_call
-        metadata:
-            is_collaboration_workflow: true
         steps:
             start_call:
                 allowed_transitions:
@@ -47,8 +45,6 @@ workflows:
                 type: string
             conversation_result:
                 type: string
-            unresolved_questions:
-                type: string
             conversation:
                 type: entity
                 options:
@@ -62,7 +58,7 @@ workflows:
             start_call:
                 is_start: true                         # this transition used to start new workflow
                 step_to: start_conversation            # next step after transition performing
-                transition_service: acme.demo.workflow.transition.connected # An ID of the transition service
+                transition_definition: create_call     # link to definition of conditions and actions
                 init_context_attribute: init_source    # name of variable which contains init context
                 init_entities:                         # list of view page entities where will be displayed transition button
                     - 'Oro\Bundle\UserBundle\Entity\User'
@@ -75,18 +71,31 @@ workflows:
                 transition_definition: connected_definition
             not_answered:
                 step_to: end_call
-                conditional_steps_to:
-                    start_call:                            # If there are open questions transit workflow to start_call step. Otherwise transit to default step_to (end_call step)
-                        conditions:
-                            '@not_empty': $unresolved_questions
-                transition_service: acme.phone_call.workflow.transition.not_answered
+                transition_definition: not_answered_definition
             end_conversation:
                 step_to: end_call
                 form_options:
                     attribute_fields:
-                        conversation_comment: ~
+                        conversation_comment:
+                            options:
                 transition_definition: end_conversation_definition
         transition_definitions:
+            create_call:
+                conditions:    # Check that the transition start from the entity page
+                    '@and':
+                        - '@not_empty': [$init_source.entityClass]
+                        - '@not_empty': [$init_source.entityId]
+                actions:
+                    - '@find_entity':
+                        class: $init_source.entityClass
+                        identifier: $init_source.entityId
+                        attribute: $.user
+                    - '@tree':
+                        conditions:
+                            - '@instanceof': [$init_source.entityClass, 'Oro\Bundle\UserBundle\Entity\User']
+                        actions:
+                            - '@assign_value': [$entity.phone, $.user.phone]
+                            - '@flush_entity': $entity    # flush created entity
             connected_definition: # Try to make call connected
                 # Check that timeout is set
                 conditions:
@@ -95,6 +104,16 @@ workflows:
                 actions:
                     - '@assign_value':
                         parameters: [$call_successfull, true]
+            not_answered_definition: # Callee did not answer
+                # Make sure that caller waited at least 60 seconds
+                conditions: # call_timeout not empty and >= 60
+                    '@and':
+                        - '@not_blank': [$call_timeout]
+                        - '@ge': [$call_timeout, 60]
+                # Set call_successfull = false
+                actions:
+                    - '@assign_value':
+                        parameters: [$call_successfull, false]
             end_conversation_definition:
                 conditions:
                     # Check required properties are set
@@ -114,63 +133,6 @@ workflows:
                                 comment: $conversation_comment
                                 successful: $conversation_successful
                                 call: $phone_call
-```
-
-## Transition Service
-
-In the example for the `start_call` transition the `transition_service` was set to handle the transition logic.
-Here is a service implementation:
-
-```php
-namespace Acme\Bundle\DemoBundle\Workflow\PhoneCall\Transition;
-
-use Doctrine\Persistence\ManagerRegistry;
-use Oro\Bundle\ActionBundle\Provider\ButtonSearchContextProvider;
-use Oro\Bundle\UserBundle\Entity\User;
-use Oro\Bundle\WorkflowBundle\Model\TransitionServiceAbstract;
-
-class ConnectedTransition extends TransitionServiceAbstract
-{
-    public function __construct(
-        private ManagerRegistry $registry
-    ) {
-    }
-
-    public function isConditionAllowed(WorkflowItem $workflowItem, Collection $errors = null): bool
-    {
-        $initContext = $workflowItem->getData()->get('init_context');
-
-        return $initContext instanceof ButtonSearchContext
-            && $initContext->getEntityClass()
-            && $initContext->getEntityId();
-    }
-
-    public function execute(WorkflowItem $workflowItem): void
-    {
-        $data = $workflowItem->getData();
-        $initContext = $data->get('init_context');
-
-        $em = $this->registry->getManagerForClass($initContext->getEntityClass());
-        $user = $em->find($initContext->getEntityClass(), $initContext->getEntityId());
-
-        if ($user instanceof User) {
-            $workflowItem->getEntity()->setPhone($user->getPhone());
-            $em->flush();
-        }
-    }
-}
-```
-
-*src/Acme/Bundle/DemoBundle/Resources/config/services.yml*
-```yaml
-services:
-        # ...
-        acme.demo.workflow.transition.connected:
-            class: Acme\Bundle\DemoBundle\Workflow\PhoneCall\Transition\ConnectedTransition
-            arguments:
-                - '@doctrine'
-            tags:
-                - { name: 'oro_workflow.transition_service' }
 ```
 
 ## Translation File Configuration
@@ -204,8 +166,6 @@ oro:
                     label: 'Conversation Result'
                 conversation:
                     label: Conversation
-                unresolved_questions:
-                    label: 'Unresolved Questions'
             transition:
                 connected:
                     label: Connected
@@ -230,25 +190,37 @@ namespace Acme\Bundle\DemoBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity]
-#[ORM\Table(name: 'acme_demo_phone_call')]
+/**
+ * @ORM\Table(name="acme_demo_phone_call")
+ * @ORM\Entity
+ */
 class PhoneCall
 {
-    #[ORM\Id]
-    #[ORM\Column(name: 'id', type: 'integer')]
-    #[ORM\GeneratedValue(strategy: 'AUTO')]
+    /**
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
     private $id;
 
-    #[ORM\Column(name: 'number', type: 'string', length: 255)]
+    /**
+     * @ORM\Column(name="number", type="string", length=255)
+     */
     private $number;
 
-    #[ORM\Column(name: 'name', type: 'string', length: 255, nullable: true)]
+    /**
+     * @ORM\Column(name="name", type="string", length=255, nullable=true)
+     */
     private $name;
 
-    #[ORM\Column(name: 'description', type: 'text', nullable: true)]
+    /**
+     * @ORM\Column(name="description", type="text", nullable=true)
+     */
     private $description;
 
-    #[ORM\OneToMany(targetEntity: 'PhoneConversation', mappedBy: 'call')]
+    /**
+     * @ORM\OneToMany(targetEntity="PhoneConversation", mappedBy="call")
+     **/
     private $conversations;
 
     public function __construct()
@@ -309,26 +281,38 @@ namespace Acme\Bundle\DemoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity]
-#[ORM\Table(name: 'acme_demo_phone_conversation')]
+/**
+ * @ORM\Table(name="acme_demo_phone_conversation")
+ * @ORM\Entity
+ */
 class PhoneConversation
 {
-    #[ORM\Id]
-    #[ORM\Column(name: 'id', type: 'integer')]
-    #[ORM\GeneratedValue(strategy: 'AUTO')]
+    /**
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
     private $id;
 
-    #[ORM\ManyToOne(targetEntity: 'PhoneCall', inversedBy: 'conversations')]
-    #[ORM\JoinColumn(name: 'call_id', referencedColumnName: 'id')]
+    /**
+     * @ORM\ManyToOne(targetEntity="PhoneCall", inversedBy="conversations")
+     * @ORM\JoinColumn(name="call_id", referencedColumnName="id")
+     */
     private $call;
 
-    #[ORM\Column(name: 'result', type: 'string', length: 255, nullable: true)]
+    /**
+     * @ORM\Column(name="result", type="string", length=255, nullable=true)
+     */
     private $result;
 
-    #[ORM\Column(name: 'comment', type: 'string', length: 255, nullable: true)]
+    /**
+     * @ORM\Column(name="comment", type="string", length=255, nullable=true)
+     */
     private $comment;
 
-    #[ORM\Column(name: 'successful', type: 'boolean', nullable: true)]
+    /**
+     * @ORM\Column(name="successful", type="boolean", nullable=true)
+     */
     private $successful;
 
     public function getId()

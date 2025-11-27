@@ -7,7 +7,7 @@
 ## Symfony Role in OroPlatform
 
 #### NOTE
-We use <a href="https://symfony.com/" target="_blank">Symfony Framework</a> v. 6.4 LTS in Oro Applications v.5.x.
+We use <a href="https://symfony.com/" target="_blank">Symfony Framework</a> v. 5.4 LTS in Oro Applications v.5.x.
 
 Symfony is the most mature PHP framework that provides a wide range of functions typical for any web application. Symfony takes care of numerous tasks, for instance:
 
@@ -18,13 +18,13 @@ Symfony is the most mature PHP framework that provides a wide range of functions
 
 For more information on Symfony, its purpose and benefits, see the following articles on the Symfony website:
 
-* <a href="https://symfony.com/doc/6.4/introduction/from_flat_php_to_symfony.html" target="_blank">Symfony versus Flat PHP: Why is Symfony better than just opening up a file and writing flat PHP?</a>.
+* <a href="https://symfony.com/doc/5.4/introduction/from_flat_php_to_symfony.html" target="_blank">Symfony versus Flat PHP: Why is Symfony better than just opening up a file and writing flat PHP?</a>.
 * <a href="https://hackernoon.com/7-good-reasons-to-use-symfony-framework-for-your-project-265f96dcf759" target="_blank">7 Good Reasons to Use Symfony Framework for Your Project</a>
 * <a href="https://matthiasnoback.nl/2013/08/why-symfony-seven-facts/" target="_blank">Why Symfony? Seven Facts</a>
 
 Using Symfony allows web applications to avoid the development of low-level components responsible for the application’s organization and focus on developing a functionality specific to a particular web application.
 
-Oro applications have a lot in common with regular Symfony applications based on the 3rd version of the framework. So, if you are not familiar with Symfony yet - start your acquaintance with the Oro application from the *Getting Started* and *Guides* sections of the official <a href="https://symfony.com/doc/6.4/index.html" target="_blank">Symfony documentation</a>.
+Oro applications have a lot in common with regular Symfony applications based on the 3rd version of the framework. So, if you are not familiar with Symfony yet - start your acquaintance with the Oro application from the *Getting Started* and *Guides* sections of the official <a href="https://symfony.com/doc/5.4/index.html" target="_blank">Symfony documentation</a>.
 
 Many Symfony features substantially impacted the architecture of all Oro applications. Some are listed below with the description of how they were adjusted for Oro applications compared to other Symfony-based applications.
 
@@ -32,10 +32,10 @@ Many Symfony features substantially impacted the architecture of all Oro applica
 
 ## HTTP Request Application Flow
 
-Symfony framework (and its <a href="https://symfony.com/doc/6.4/components/http_kernel.html" target="_blank">HttpKernel Component</a>) determines
+Symfony framework (and its <a href="https://symfony.com/doc/5.4/components/http_kernel.html" target="_blank">HttpKernel Component</a>) determines
 the main flow of the Oro web application, i.e., the transformation of user requests into responses.
 
-This flow in Oro applications is similar to the flows of other <a href="https://symfony.com/doc/6.4/introduction/http_fundamentals.html#the-symfony-application-flow" target="_blank">Symfony applications </a>, in particular:
+This flow in Oro applications is similar to the flows of other <a href="https://symfony.com/doc/5.4/introduction/http_fundamentals.html#the-symfony-application-flow" target="_blank">Symfony applications </a>, in particular:
 
 1. A client sends an HTTP request to the application.
 2. The request is executed by the application’s front controller (index.php) file, which takes a request, boots the application, and passes the request information.
@@ -50,7 +50,7 @@ This routine defines several important architectural features of Oro application
 
 ## Event System
 
-Oro applications actively use <a href="https://symfony.com/doc/6.4/event_dispatcher.html" target="_blank">Symfony Event Dispatcher</a> to create
+Oro applications actively use <a href="https://symfony.com/doc/5.4/event_dispatcher.html" target="_blank">Symfony Event Dispatcher</a> to create
 and use the points of functional extension and control of the application flow.
 
 As illustrated throughout the Developer Guide, a significant part of the Oro application’s functionality allows you to adjust the application behavior by creating listeners or subscribers for system events.
@@ -61,13 +61,13 @@ As illustrated throughout the Developer Guide, a significant part of the Oro app
 
 The <a href="https://en.wikipedia.org/wiki/Inversion_of_control" target="_blank">Inversion of Control principle</a> is widely used in the architecture of Oro applications to loosen the coupling between classes and objects, facilitate extensibility and eliminate code duplication.
 
-The principle is embodied in the | Symfony’s Service container| and the <a href="https://symfony.com/doc/6.4/components/dependency_injection.html" target="_blank">Dependency Injection Component</a> used to create and manage all objects and organize their interaction in Oro applications.
+The principle is embodied in the | Symfony’s Service container| and the <a href="https://symfony.com/doc/5.4/components/dependency_injection.html" target="_blank">Dependency Injection Component</a> used to create and manage all objects and organize their interaction in Oro applications.
 
 <a id="dev-guide-application-web-framework-symfony-bundle-system"></a>
 
 ## Bundle System
 
-The <a href="https://symfony.com/doc/6.4/bundles.html" target="_blank">bundle system</a> is one of the main principles of feature and code organization in Oro applications. However, there are some differences in it between the Symfony framework and Oro applications.
+The <a href="https://symfony.com/doc/5.4/bundles.html" target="_blank">bundle system</a> is one of the main principles of feature and code organization in Oro applications. However, there are some differences in it between the Symfony framework and Oro applications.
 
 At the beginning of Oro applications’ development, there were certain constraints with the Symfony bundle management system that we decided to address, namely:
 
@@ -101,7 +101,7 @@ Please refer to the [Architecture Guide](../structure/index.md#architecture-oro-
 
 Oro widely uses Symfony conventions to configure the application and specific features in YAML configuration files.
 
-On the application level (<a href="https://symfony.com/doc/6.4/best_practices/configuration.html" target="_blank">according to Symfony conventions</a>), the configuration is divided into infrastructure-related ( *.env-app*) and application-related (*config/config.yml* file).
+On the application level (<a href="https://symfony.com/doc/5.4/best_practices/configuration.html" target="_blank">according to Symfony conventions</a>), the configuration is divided into infrastructure-related ( *.env-app*) and application-related (*config/config.yml* file).
 
 On the bundle level, Oro applications have slight changes in the configuration technologies but a considerable shift in the role and purpose of the configuration files.
 
@@ -142,12 +142,12 @@ navigation:
 
 ## Templating System
 
-<a href="https://symfony.com/doc/6.4/templates.html" target="_blank">Symfony Templating</a> is widely extended in Oro Applications by the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/LayoutBundle" target="_blank">Layouts</a> concept, which allows addressing Symfony’s limitations in UI extension and composition.
+<a href="https://symfony.com/doc/5.4/templates.html" target="_blank">Symfony Templating</a> is widely extended in Oro Applications by the <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/LayoutBundle" target="_blank">Layouts</a> concept, which allows addressing Symfony’s limitations in UI extension and composition.
 
-However, all features of the <a href="https://twig.symfony.com/" target="_blank">TWIG templating engine</a> and <a href="https://symfony.com/doc/6.4/components/templating.html" target="_blank">Symfony Templating Component</a> are widely used in Oro
+However, all features of the <a href="https://twig.symfony.com/" target="_blank">TWIG templating engine</a> and <a href="https://symfony.com/doc/5.4/components/templating.html" target="_blank">Symfony Templating Component</a> are widely used in Oro
 applications in UI building.
 
-We recommend you get acquainted with the <a href="https://symfony.com/doc/6.4/templates.html" target="_blank">Symfony Templating</a> documentation to work with Oro applications.
+We recommend you get acquainted with the <a href="https://symfony.com/doc/5.4/templates.html" target="_blank">Symfony Templating</a> documentation to work with Oro applications.
 
 <a id="dev-guide-application-web-framework-symfony-security-system-data-access-management"></a>
 
@@ -159,7 +159,7 @@ business applications.
 #### NOTE
 More information on this is available in the next section of this guide which is dedicated to OroPlatform and its Security System.
 
-However, this RBAC system of Oro applications widely uses <a href="https://symfony.com/doc/6.4/components/security.html" target="_blank">Symfony Security Components</a>. It is, therefore, vital that you familiarize yourself with them to be able to work with Oro applications.
+However, this RBAC system of Oro applications widely uses <a href="https://symfony.com/doc/5.4/components/security.html" target="_blank">Symfony Security Components</a>. It is, therefore, vital that you familiarize yourself with them to be able to work with Oro applications.
 
 <a id="dev-guide-application-web-framework-symfony-databases-management-doctrine-orm"></a>
 
@@ -179,7 +179,7 @@ Because the Oro application functionality is constantly evolving, it was essenti
 
 ## CLI Application
 
-All Symfony-based applications <a href="https://symfony.com/doc/6.4/console.html" target="_blank">come with a command line interface tool</a> (bin/console) that helps you
+All Symfony-based applications <a href="https://symfony.com/doc/5.4/console.html" target="_blank">come with a command line interface tool</a> (bin/console) that helps you
 maintain your application. It provides commands that boost your productivity by automating
 tedious and repetitive tasks, such as clearing the application cache, debugging routing, viewing the list of registered commands, etc.
 
@@ -208,23 +208,23 @@ of the functionality used to perform typical web programming tasks, while the fr
 Description of Symfony’s contribution to the Oro applications architecture would not be complete without
 mentioning Symfony components that are actively used in the development of Oro applications:
 
-- <a href="https://symfony.com/doc/6.4/components/asset.html" target="_blank">Asset Component</a>
-- <a href="https://symfony.com/doc/6.4/components/console.html" target="_blank">Console Component</a>
-- <a href="https://symfony.com/doc/6.4/components/dependency_injection.html" target="_blank">DependencyInjection Component</a>
-- <a href="https://symfony.com/doc/6.4/components/event_dispatcher.html" target="_blank">EventDispatcher Component</a>
-- <a href="https://symfony.com/doc/6.4/components/expression_language.html" target="_blank">ExpressionLanguage Component</a>
-- <a href="https://symfony.com/doc/6.4/components/form.html" target="_blank">Form Component</a>
-- <a href="https://symfony.com/doc/6.4/components/http_foundation.html" target="_blank">The HttpFoundation Component</a>
-- <a href="https://symfony.com/doc/6.4/components/http_kernel.html" target="_blank">HttpKernel Component</a>
-- <a href="https://symfony.com/doc/6.4/components/options_resolver.html">OptionsResolver Component</a>
-- <a href="https://symfony.com/doc/6.4/components/property_access.html" target="_blank">PropertyAccess Component</a>
-- <a href="https://symfony.com/doc/6.4/components/routing.html" target="_blank">Routing Component</a>
-- <a href="https://symfony.com/doc/6.4/components/security.html" target="_blank">Security Component</a>
-- <a href="https://symfony.com/doc/6.4/components/serializer.html" target="_blank">Serializer Component</a>
-- <a href="https://symfony.com/doc/6.4/components/templating.html" target="_blank">Templating Component</a>
-- <a href="https://symfony.com/doc/6.4/components/translation.html" target="_blank">Translation Component</a>
-- <a href="https://symfony.com/doc/6.4/components/validator.html" target="_blank">Validator Component</a>
-- <a href="https://symfony.com/doc/6.4/components/yaml.html" target="_blank">Yaml Component</a>
+- <a href="https://symfony.com/doc/5.4/components/asset.html" target="_blank">Asset Component</a>
+- <a href="https://symfony.com/doc/5.4/components/console.html" target="_blank">Console Component</a>
+- <a href="https://symfony.com/doc/5.4/components/dependency_injection.html" target="_blank">DependencyInjection Component</a>
+- <a href="https://symfony.com/doc/5.4/components/event_dispatcher.html" target="_blank">EventDispatcher Component</a>
+- <a href="https://symfony.com/doc/5.4/components/expression_language.html" target="_blank">ExpressionLanguage Component</a>
+- <a href="https://symfony.com/doc/5.4/components/form.html" target="_blank">Form Component</a>
+- <a href="https://symfony.com/doc/5.4/components/http_foundation.html" target="_blank">The HttpFoundation Component</a>
+- <a href="https://symfony.com/doc/5.4/components/http_kernel.html" target="_blank">HttpKernel Component</a>
+- <a href="https://symfony.com/doc/5.4/components/options_resolver.html">OptionsResolver Component</a>
+- <a href="https://symfony.com/doc/5.4/components/property_access.html" target="_blank">PropertyAccess Component</a>
+- <a href="https://symfony.com/doc/5.4/components/routing.html" target="_blank">Routing Component</a>
+- <a href="https://symfony.com/doc/5.4/components/security.html" target="_blank">Security Component</a>
+- <a href="https://symfony.com/doc/5.4/components/serializer.html" target="_blank">Serializer Component</a>
+- <a href="https://symfony.com/doc/5.4/components/templating.html" target="_blank">Templating Component</a>
+- <a href="https://symfony.com/doc/5.4/components/translation.html" target="_blank">Translation Component</a>
+- <a href="https://symfony.com/doc/5.4/components/validator.html" target="_blank">Validator Component</a>
+- <a href="https://symfony.com/doc/5.4/components/yaml.html" target="_blank">Yaml Component</a>
 
 You must be familiar with these components to work comfortably with Oro applications.
 

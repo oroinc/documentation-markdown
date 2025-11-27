@@ -4,7 +4,7 @@
 
 You can perform the following actions for leads from the grid:
 
-* Delete ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg)
+* Delete <i class="fas fa-trash-alt" aria-hidden="true"></i>
 * Edit <i class="fa fa-edit fa-lg" aria-hidden="true"></i>
 * View <i class="fa fa-eye fa-lg" aria-hidden="true"></i>
 
@@ -33,6 +33,8 @@ The lead page contains all available information on the lead in the **General In
 
 The following actions are available for a lead on the lead view page:
 
+- **Share**: Share a lead with contacts of your choice (available for the Enterprise edition).
+  ![The sharing configuration settings](user/img/sales/leads/share_lead.png)
 - **Disqualify action:** Disqualify a lead.
 
   #### NOTE
@@ -63,20 +65,3 @@ Want to unlock eCommerce opportunities to drive <a href="https://oroinc.com/b2b-
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

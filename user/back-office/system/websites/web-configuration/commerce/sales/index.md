@@ -8,4 +8,3 @@
 * [Orders History](website-open-orders.md)
 * [Multi Shipping Options](website-multi-shipping.md)
 * [Quotes](website-quotes.md)
-* [Invoices](website-invoices.md)

@@ -19,7 +19,9 @@ To learn how to set up a system mailbox, see [Configure System Mailbox Globally]
 
 ## Personal Emails
 
-Oro supports synchronization with your email provider using IMAP, meaning you can receive and review emails directly from the Oro application. Oro also supports connection to your SMTP server, which allows you to send emails from the Oro user interface without jumping back and forth between tabs. You can set up your personal email box by navigating to your settings under **Your Name > My Configuration**. If you use Gmail or Outlook, you can also use OroConnector with your Oro Enterprise application, which allows you to sync data from the Oro application directly to your email client.
+Oro supports synchronization with your email provider using IMAP, meaning you can receive and review emails directly from the Oro application. Oro also supports connection to your SMTP server, which allows you to send emails from the Oro user interface without jumping back and forth between tabs. If you use [Gmail](oroconnector-google.md#oroconnector-for-google-workspace) and [Outlook](oroconnector-microsoft.md#oroconnector-for-microsoft), you can also use OroConnector with your Oro Enterprise application, which allows you to sync data from the Oro application directly to your email client. You can set up your personal email box by navigating to your settings under **Your Name > My Configuration**.
+
+To learn how to set up a personal email via IMAP and SMTP, see [Configure Email Settings per User](../../system/user-management/users/configuration/user-email-settings.md#my-email-configuration).
 
 To learn how to set up a personal email via IMAP and SMTP, see [Configure Email Settings per User](../../system/user-management/users/configuration/user-email-settings.md#my-email-configuration). To learn how to use OroConnector, see OroConnector user guide for [Google Workspace](oroconnector-google.md#oroconnector-for-google-workspace) or [Microsoft 365](oroconnector-microsoft.md#oroconnector-for-microsoft).
 
@@ -47,7 +49,7 @@ To learn how to create and manage email templates, see [Configure Email Template
 
 ## Automation and Triggers
 
-Notification rules in OroCommerce are predefined conditions that trigger automatic notifications or emails based on specific events or changes within the system. These rules are designed to keep users informed in real time. For instance, when the order status changes to “closed,” a notification rule can automatically email the customer about this. Whenever an automatic email notification is sent out, it has to follow a specific [notification template](../../system/emails/email-templates.md#user-guide-using-emails-create-template) created beforehand that gives it style and content.
+Notification rules in OroCommerce are predefined conditions that trigger automatic notifications or emails based on specific events or changes within the system. These rules are designed to keep users informed in real time. For instance, when the order status changes to “shipped,” a notification rule can automatically email the customer with tracking information. Whenever an automatic email notification is sent out, it has to follow a specific [notification template](../../system/emails/email-templates.md#user-guide-using-emails-create-template) created beforehand that gives it style and content.
 
 To learn how to work with notification rules, see [Configure Email Notification Rules](../../system/emails/notification-rules.md#user-guide-using-emails-notifications).
 

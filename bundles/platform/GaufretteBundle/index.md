@@ -2,7 +2,7 @@
 
 # OroGaufretteBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/GaufretteBundle" target="_blank">OroGaufretteBundle</a> is a facade for KnpGaufretteBundle that enables a filesystem abstraction layer in the Oro applications and provides a simplified file manager service for media files.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/GaufretteBundle" target="_blank">OroGaufretteBundle</a> is a facade for KnpGaufretteBundle that enables a filesystem abstraction layer in the Oro applications and provides a simplified file manager service for media files.
 
 ## Related Documentation
 

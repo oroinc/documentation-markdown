@@ -2,7 +2,7 @@
 
 # OroPricingBundle
 
-<a href="https://github.com/oroinc/orocommerce/tree/master/src/Oro/Bundle/PricingBundle" target="_blank">OroPricingBundle</a> introduces prices for products in OroCommerce.
+<a href="https://github.com/oroinc/orocommerce/tree/5.1/src/Oro/Bundle/PricingBundle" target="_blank">OroPricingBundle</a> introduces prices for products in OroCommerce.
 
 For back-office users (e.g. sales representatives), the bundle enables the following actions:
 
@@ -14,7 +14,6 @@ For back-office users (e.g. sales representatives), the bundle enables the follo
 
 * [Getting a Product Price](getting-product-price.md)
 * [Getting Price for a Product Line Item](getting-product-line-item-price.md)
-* [Getting a Product Kit Price by API](getting-product-kit-price-by-API.md)
 * [Configure Price List Sharding](price-list-sharding.md)
 * [Optimize Website Indexation and Price Recalculation](optimize-index-and-price-calculation.md)
 * [Combined Price List](combined-price-lists.md)

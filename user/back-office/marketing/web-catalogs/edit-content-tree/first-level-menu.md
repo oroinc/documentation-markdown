@@ -12,7 +12,13 @@ The homepage that is shown when a buyer navigates to the web store is configured
 
 The first level of the main menu in the storefront is represented by **root content nodes** in the back-office.
 
-![The homepage node displayed in the storefront and in the back-office](user/img/marketing/web_catalogs/FirstLevelMenuFrontStore.png)
+Storefront:
+
+![The homepage node displayed in the storefront](user/img/marketing/web_catalogs/FirstLevelMenuFrontStore.png)
+
+Back-Office:
+
+![The homepage node configured in the back-office](user/img/marketing/web_catalogs/RootNodesManagementConsole.png)
 
 **Root content nodes** are nested under the **homepage node**.
 
@@ -55,7 +61,7 @@ To create or configure the content node in the web catalog:
    Never leave the restrictions for non-default variant empty. This may cause unexpected priority collision between the default and non-default variant.
 
    For the **menu and sub-menu nodes**, the settings are inherited from the parent node. To modify the inherited default settings, clear the **Inherit Parent** box, and specify the necessary restrictions.
-   ![clear the Inherit Parent box](user/img/marketing/web_catalogs/InheritParent.png)
+   ![clear the Inherit Parent box](user/img/marketing/web_catalogs/InheritParent.png)![Additional restriction settings appear when clearing the Inherit Parent box](user/img/marketing/web_catalogs/InheritParentOff.png)
 6. In the *Content Variants* section, add the default content item to be displayed in the OroCommerce storefront when the node-level restriction conditions are met:
 
 > * Select the type of content to be displayed in the storefront from the list on the right.

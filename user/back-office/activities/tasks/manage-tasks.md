@@ -41,8 +41,8 @@ To view, edit, or delete a specific task from the page of all tasks:
 To manage a specific task from its page:
 
 1. Navigate to **Activities > Tasks** in the main menu.
-2. Click on the required task to open it.
-3. Here, you can add context, edit or delete the existing task, send an email, or add a comment.
+2. Click once on the required task to open it.
+3. Here, you can, share the task, add context, edit or delete the existing task, send an email, or add a comment.
 
 ![The actions available on the task details page](user/img/activities/ManageTasksTaskPage.png)
 1. If the [task flow](../../system/workflows/system-workflows/task-flow.md#doc-workflows-task-flow) is enabled, you can:
@@ -50,7 +50,7 @@ To manage a specific task from its page:
    * <i class="fa fa-check fa-lg" aria-hidden="true"></i> Close the task
 
 #### NOTE
-To delete a bulk of tasks in one go, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Actions** menu at the end of the table header row and then click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete**.
+To delete a bulk of tasks in one go, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Actions** menu at the end of the table header row and then click <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete**.
 
 ## From the Assignee’s Profile
 
@@ -88,20 +88,3 @@ You can also view, edit, or delete a task from the My Calendar page and the Toda
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

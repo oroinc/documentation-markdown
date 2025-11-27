@@ -13,5 +13,4 @@ Follow the links below to find out what capabilities each section of this menu o
 * [My Emails](my-emails.md#doc-my-oro-emails)
 * [My Tasks](../../activities/tasks/index.md#doc-activities-tasks)
 * [My Calendar](my-calendar.md#user-guide-calendars-manage)
-* [My Conversations](../../activities/conversations/index.md#doc-activities-conversations)
 * [Log Out](../application-authentication/log-in-out.md#doc-log-out)

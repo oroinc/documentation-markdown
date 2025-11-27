@@ -34,12 +34,6 @@ bin/console oro:workflow:translations:dump my_workflow --locale=en > $YOUR_BUNDL
 
 This way, file <YourBundleDirectory>/Resources/translations/workflows.en.yml is filled by translation keys tree with empty strings, so a developer can fill their values with proper text (English in the example).
 
-If your workflow is extended from a different workflow, you may want to inherit existing translations from that parent workflow. To do so, pass the name of the parent workflow as the –parent-workflow option value. Any translations that are not present in your workflow will automatically be copied from the parent workflow.
-
-```none
-bin/console oro:workflow:translations:dump my_workflow --locale=en --parent-workflow=the_parent_workflow > $YOUR_BUNDLE_DIR/Resources/translations/workflows.en.yml
-```
-
 **Step 3**
 
 When the translation file is updated, you might need to load translations into the system from that file; for this, run the [oro:translation:load](../../../bundles/platform/TranslationBundle/commands.md#oro-translation-load-command) command.

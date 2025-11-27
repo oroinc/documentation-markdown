@@ -35,7 +35,7 @@ To create a content template:
 1. Use WYSIWYG to design the template you need.
 2. Click **Save and Close**.
 
-Once saved, the system automatically generates the content template preview, which you can also view in the All Templates’ grid. There, you can select which content template to view <i class="fa fa-eye fa-lg" aria-hidden="true"></i>, edit <i class="fa fa-edit fa-lg" aria-hidden="true"></i>, clone <i class="far fa-copy" aria-hidden="true"></i>, or delete ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg).
+Once saved, the system automatically generates the content template preview, which you can also view in the All Templates’ grid. There, you can select which content template to view <i class="fa fa-eye fa-lg" aria-hidden="true"></i>, edit <i class="fa fa-edit fa-lg" aria-hidden="true"></i>, clone <i class="far fa-copy" aria-hidden="true"></i>, or delete <i class="fas fa-trash-alt" aria-hidden="true"></i>.
 
 ![Available actions on the all Content Templates grid page](user/img/marketing/content-templates/all-content-templates-grid-options.png)
 
@@ -48,20 +48,3 @@ Once you save the content template, you can now place it in the required locatio
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

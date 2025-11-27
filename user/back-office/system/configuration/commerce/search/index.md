@@ -9,4 +9,3 @@ Learn how to configure search synonyms, saved search for the OroCommerce Enterpr
 * [Search Synonyms](search-synonyms.md)
 * [Customer Recommendations](customer-recommendations.md)
 * [Search Terms](search-terms.md)
-* [Stop Words](stop-words.md)

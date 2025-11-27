@@ -78,7 +78,7 @@ represents the name of a configuration option, its values are maps that can use 
 
 > A map of options and their values configuring the Symfony form type (see the `type` option
 > below). You can find a complete reference of available options for Symfony’s built-in form
-> types <a href="https://symfony.com/doc/6.4/reference/forms/types.html" target="_blank">in the Symfony documentation</a>.
+> types <a href="https://symfony.com/doc/5.4/reference/forms/types.html" target="_blank">in the Symfony documentation</a>.
 
 `show_on_widget` (**type**: `boolean`)
 
@@ -142,7 +142,7 @@ widget options:
 
 > A map of options and their values configuring the Symfony form type (see the `type` option
 > below). You can find a complete reference of available options for Symfony’s built-in form
-> types <a href="https://symfony.com/doc/6.4/reference/forms/types.html" target="_blank">in the Symfony documentation</a>.
+> types <a href="https://symfony.com/doc/5.4/reference/forms/types.html" target="_blank">in the Symfony documentation</a>.
 
 `show_on_widget` (**type**: `boolean`)
 

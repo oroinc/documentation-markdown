@@ -22,7 +22,9 @@ use Oro\Component\Config\Loader\YamlCumulativeFileLoader;
 
 class AcmeSomeExtension extends Extension
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function load(array $configs, ContainerBuilder $container): void
     {
         // load configuration from acme.yml which can be located in any bundle
@@ -92,7 +94,9 @@ As well as the `Symfony Config Component`, the `Oro Config Component` uses its o
 ```php
 class AcmeSomeExtension extends Extension
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function load(array $configs, ContainerBuilder $container): void
     {
         $acmeConfig = [];
@@ -116,7 +120,9 @@ class AcmeSomeExtension extends Extension
 ```php
 class AcmeSomeExtension extends Extension
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function load(array $configs, ContainerBuilder $container): void
     {
         $acmeConfig = [];

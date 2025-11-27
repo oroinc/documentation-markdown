@@ -1,5 +1,3 @@
-<a id="bundle-docs-commerce-checkout-bundle-checkout-finish"></a>
-
 # Checkout Finish
 
 The application must verify a range of conditions before processing the final step of creating an order during checkout. These may include:

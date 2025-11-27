@@ -42,15 +42,15 @@ Anti-Corruption Layer is responsible for the communication with <a href="https:/
 
 The anti-corruption layer includes a couple of DTO objects, as well as:
 
-* <a href="https://github.com/oroinc/paypal-express/blob/master/Transport/PayPalExpressTransport.php" target="_blank">PayPalExpressTransport</a>
-* <a href="https://github.com/oroinc/paypal-express/blob/master/Transport/PayPalClient.php" target="_blank">PayPalClient</a>
-* <a href="https://github.com/oroinc/paypal-express/blob/master/Transport/PayPalSDKObjectTranslator.php" target="_blank">PayPalSDKObjectTranslator</a>
+* <a href="https://github.com/oroinc/paypal-express/blob/5.1/Transport/PayPalExpressTransport.php" target="_blank">PayPalExpressTransport</a>
+* <a href="https://github.com/oroinc/paypal-express/blob/5.1/Transport/PayPalClient.php" target="_blank">PayPalClient</a>
+* <a href="https://github.com/oroinc/paypal-express/blob/5.1/Transport/PayPalSDKObjectTranslator.php" target="_blank">PayPalSDKObjectTranslator</a>
 
 The primary goal of this layer is to hide the actual way of communication with <a href="https://developer.paypal.com/api/rest/" target="_blank">PayPal REST API</a>. It also helps avoid backward-incompatible changes if PayPal changes its REST API in the future. It is also helpful for implementing the reverse side integration with PayPal.
 
 #### PayPalExpressTransport
 
-PayPalExpressTransport is responsible for the interaction with <a href="https://github.com/oroinc/paypal-express/blob/master/Transport/PayPalClient.php" target="_blank">PayPalClient</a> and <a href="https://github.com/oroinc/paypal-express/blob/master/Transport/PayPalSDKObjectTranslator.php" target="_blank">PayPalSDKObjectTranslator</a> and hiding and wrapping PayPal SDK exceptions in the client code of OroCommerce.
+PayPalExpressTransport is responsible for the interaction with <a href="https://github.com/oroinc/paypal-express/blob/5.1/Transport/PayPalClient.php" target="_blank">PayPalClient</a> and <a href="https://github.com/oroinc/paypal-express/blob/5.1/Transport/PayPalSDKObjectTranslator.php" target="_blank">PayPalSDKObjectTranslator</a> and hiding and wrapping PayPal SDK exceptions in the client code of OroCommerce.
 
 #### PayPalClient
 
@@ -68,14 +68,14 @@ The payment actions layer is responsible for handling payment actions.
 
 The layer includes:
 
-* <a href="https://github.com/oroinc/paypal-express/blob/master/Method/PaymentAction/PaymentActionRegistry.php" target="_blank">PaymentActionRegistry</a>
-* <a href="https://github.com/oroinc/paypal-express/blob/master/Method/PaymentAction/Complete/CompletePaymentActionRegistry.php" target="_blank">CompletePaymentActionRegistry</a>
-* <a href="https://github.com/oroinc/paypal-express/blob/master/Method/PaymentAction/PaymentActionExecutor.php" target="_blank">PaymentActionExecutor</a>
-* <a href="https://github.com/oroinc/paypal-express/blob/master/Method/PaymentAction/CompleteVirtualAction.php" target="_blank">CompleteVirtualAction</a> in addition to supported actions and complete actions implementing <a href="https://github.com/oroinc/paypal-express/blob/master/Method/PaymentAction/PaymentActionInterface.php" target="_blank">PaymentActionInterface</a>
+* <a href="https://github.com/oroinc/paypal-express/blob/5.1/Method/PaymentAction/PaymentActionRegistry.php" target="_blank">PaymentActionRegistry</a>
+* <a href="https://github.com/oroinc/paypal-express/blob/5.1/Method/PaymentAction/Complete/CompletePaymentActionRegistry.php" target="_blank">CompletePaymentActionRegistry</a>
+* <a href="https://github.com/oroinc/paypal-express/blob/5.1/Method/PaymentAction/PaymentActionExecutor.php" target="_blank">PaymentActionExecutor</a>
+* <a href="https://github.com/oroinc/paypal-express/blob/5.1/Method/PaymentAction/CompleteVirtualAction.php" target="_blank">CompleteVirtualAction</a> in addition to supported actions and complete actions implementing <a href="https://github.com/oroinc/paypal-express/blob/5.1/Method/PaymentAction/PaymentActionInterface.php" target="_blank">PaymentActionInterface</a>
 
 #### PaymentActionExecutor
 
-PaymentActionExecutor is responsible for executing a payment action. It uses <a href="https://github.com/oroinc/paypal-express/blob/master/Method/PaymentAction/Complete/CompletePaymentActionRegistry.php" target="_blank">CompletePaymentActionRegistry</a> to get an appropriate payment action.
+PaymentActionExecutor is responsible for executing a payment action. It uses <a href="https://github.com/oroinc/paypal-express/blob/5.1/Method/PaymentAction/Complete/CompletePaymentActionRegistry.php" target="_blank">CompletePaymentActionRegistry</a> to get an appropriate payment action.
 
 #### PaymentActionRegistry
 
@@ -85,7 +85,7 @@ Actions that are not presented in the interface can be added, but the default wo
 
 #### CompleteVirtualAction
 
-CompleteVirtualAction is responsible for receiving a complete payment action by name from <a href="https://github.com/oroinc/paypal-express/blob/master/Method/PaymentAction/Complete/CompletePaymentActionRegistry.php" target="_blank">CompletePaymentActionRegistry</a> and delegating the call to the actual complete payment action.
+CompleteVirtualAction is responsible for receiving a complete payment action by name from <a href="https://github.com/oroinc/paypal-express/blob/5.1/Method/PaymentAction/Complete/CompletePaymentActionRegistry.php" target="_blank">CompletePaymentActionRegistry</a> and delegating the call to the actual complete payment action.
 
 #### CompletePaymentActionRegistry
 
@@ -95,10 +95,10 @@ A complete payment action is configured in the PayPal Express method integration
 
 By default, two possible complete actions are available:
 
-* Authorize (<a href="https://github.com/oroinc/paypal-express/blob/master/Method/PaymentAction/Complete/AuthorizeAndCaptureAction.php" target="_blank">AuthorizeAndCaptureAction</a>)
-* Authorize and capture (<a href="https://github.com/oroinc/paypal-express/blob/master/Method/PaymentAction/Complete/AuthorizeOnCompleteAction.php" target="_blank">AuthorizeOnCompleteAction</a>)
+* Authorize (<a href="https://github.com/oroinc/paypal-express/blob/5.1/Method/PaymentAction/Complete/AuthorizeAndCaptureAction.php" target="_blank">AuthorizeAndCaptureAction</a>)
+* Authorize and capture (<a href="https://github.com/oroinc/paypal-express/blob/5.1/Method/PaymentAction/Complete/AuthorizeOnCompleteAction.php" target="_blank">AuthorizeOnCompleteAction</a>)
 
-To register a new complete payment action, create a new service with tag oro_paypal_express.complete_payment_action (class of the service must implement <a href="https://github.com/oroinc/paypal-express/blob/master/Method/PaymentAction/PaymentActionInterface.php" target="_blank">PaymentActionInterface</a>).
+To register a new complete payment action, create a new service with tag oro_paypal_express.complete_payment_action (class of the service must implement <a href="https://github.com/oroinc/paypal-express/blob/5.1/Method/PaymentAction/PaymentActionInterface.php" target="_blank">PaymentActionInterface</a>).
 
 After a new service is registered, it will be available in the integration settings of the PayPal Express payment method.
 

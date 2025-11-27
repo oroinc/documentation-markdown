@@ -2,12 +2,12 @@
 
 # Manage Previously Purchased Products in the Storefront
 
-The Previously Purchased Products page displays the products that were recently purchased by customer users. In the storefront, this page is nested under the **Previous Purchased** section of the user menu.
+The Previously Purchased Products page displays the products that were recently purchased by customer users. In the storefront, this page is nested under the **Previous Purchased** section of the **Account** menu.
 
 ![image](user/img/storefront/previously_purchased/PreviouslyPurchased.png)
 
 #### NOTE
-The Previously Purchased section of the storefront can be [enabled or disabled](../../../back-office/system/configuration/commerce/orders/global-previously-purchased.md#sys-commerce-orders-previously-purchased-main) by the website administrator depending on the business and website requirements.
+The Previously Purchased section of the storefront can be enabled or disabled by the website administrator depending on the business and website requirements.
 
 From the Previously Purchased section, you can:
 

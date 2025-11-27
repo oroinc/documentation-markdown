@@ -20,7 +20,7 @@ purchase_history:
 ```
 
 The `oro_order.enable_purchase_history` option turns the feature on or off.
-The `oro_order.order_previously_purchased_period` option stores the number of days that the purchase history should cover. The products listed as previously purchased are filtered using this timeframe and are displayed in the <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/OrderBundle/Resources/config/oro/datagrids.yml#L751" target="_blank">previously purchased products grid</a>.
+The `oro_order.order_previously_purchased_period` option stores the number of days that the purchase history should cover. The products listed as previously purchased are filtered using this timeframe and are displayed in the <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/OrderBundle/Resources/config/oro/datagrids.yml#L751" target="_blank">previously purchased products grid</a>.
 
 For more information about system_config.yml, please see the relevant [system configuration documentation](../../../backend/system-configuration/index.md#backend-system-configuration).
 
@@ -28,7 +28,7 @@ For more information about system_config.yml, please see the relevant [system co
 
 ## Website Search Index
 
-Class <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/OrderBundle/EventListener/WebsiteSearchProductIndexerListener.php" target="_blank">WebsiteSearchProductIndexerListener</a>. This listener contains methods which are called when reindex process is running.
+Class <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/OrderBundle/EventListener/WebsiteSearchProductIndexerListener.php" target="_blank">WebsiteSearchProductIndexerListener</a>. This listener contains methods which are called when reindex process is running.
 
 ### onWebsiteSearchIndex
 
@@ -41,7 +41,7 @@ This method adds new columns to the records with the oro_product_WEBSITE_ID inde
 
 ### Index Field
 
-<a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/OrderBundle/Resources/config/oro/website_search.yml" target="_blank">website_search.yml</a>
+<a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/OrderBundle/Resources/config/oro/website_search.yml" target="_blank">website_search.yml</a>
 
 ```yaml
 Oro\Bundle\ProductBundle\Entity\Product:
@@ -54,7 +54,7 @@ Oro\Bundle\ProductBundle\Entity\Product:
 
 The index field which stores information about the date of the last purchase of the product.
 
-This field is used to select a query in the grid config for select, filter and sort data. For more information, please see <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/OrderBundle/Resources/config/oro/datagrids.yml#L75" target="_blank">datagrids.yml</a>.
+This field is used to select a query in the grid config for select, filter and sort data. For more information, please see <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/OrderBundle/Resources/config/oro/datagrids.yml#L75" target="_blank">datagrids.yml</a>.
 
 ```yaml
 query:
@@ -73,9 +73,9 @@ query:
 
 **ReindexProductLineItemListener**
 
-Class <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/OrderBundle/EventListener/ORM/ReindexProductLineItemListener.php" target="_blank">ReindexProductLineItemListener</a>.
+Class <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/OrderBundle/EventListener/ORM/ReindexProductLineItemListener.php" target="_blank">ReindexProductLineItemListener</a>.
 
-This listener contains methods which are called when the <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/OrderBundle/Entity/OrderLineItem.php" target="_blank">OrderLineItem</a> entity is changed, and if all conditions are correct, a message is sent to the message queue to reindex product data.
+This listener contains methods which are called when the <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/OrderBundle/Entity/OrderLineItem.php" target="_blank">OrderLineItem</a> entity is changed, and if all conditions are correct, a message is sent to the message queue to reindex product data.
 
 **reindexProductOnLineItemCreateOrDelete**
 
@@ -97,9 +97,9 @@ This method is triggered when we update the “product” field in the order lin
 
 **ReindexProductOrderListener**
 
-Class <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/OrderBundle/EventListener/ORM/ReindexProductOrderListener.php" target="_blank">ReindexProductOrderListener</a>.
+Class <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/OrderBundle/EventListener/ORM/ReindexProductOrderListener.php" target="_blank">ReindexProductOrderListener</a>.
 
-This listener contains methods which are called when the <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/OrderBundle/Entity/Order.php" target="_blank">Order entity</a> is changed, and if all conditions are correct, a message is sent to the message queue to reindex product data.
+This listener contains methods which are called when the <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/OrderBundle/Entity/Order.php" target="_blank">Order entity</a> is changed, and if all conditions are correct, a message is sent to the message queue to reindex product data.
 
 **processIndexOnOrderStatusChange**
 
@@ -143,7 +143,7 @@ This method is triggered when order is updated and the createdAt field is change
 
 **PreviouslyPurchasedFeatureToggleListener**
 
-Class <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/OrderBundle/EventListener/PreviouslyPurchasedFeatureToggleListener.php" target="_blank">PreviouslyPurchasedFeatureToggleListener</a>.
+Class <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/OrderBundle/EventListener/PreviouslyPurchasedFeatureToggleListener.php" target="_blank">PreviouslyPurchasedFeatureToggleListener</a>.
 
 This listener contains methods which are called when we turn the feature on or off from the system config.
 
@@ -161,7 +161,7 @@ This method is triggered when we change the enable_purchase_history config setti
 
 ### ProductReindexManager
 
-Class <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/ProductBundle/Search/Reindex/ProductReindexManager.php" target="_blank">ProductReindexManager</a>.
+Class <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/ProductBundle/Search/Reindex/ProductReindexManager.php" target="_blank">ProductReindexManager</a>.
 
 This manager contains methods which are used when we need to reindex a product or a collection of products. Use it when you need
 to reindex product data.
@@ -188,7 +188,7 @@ This method triggers reindex process for a collection of product ids.
 
 **PreviouslyPurchasedConfigProvider**
 
-Class <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/OrderBundle/Provider/PreviouslyPurchasedConfigProvider.php" target="_blank">PreviouslyPurchasedConfigProvider</a>.
+Class <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/OrderBundle/Provider/PreviouslyPurchasedConfigProvider.php" target="_blank">PreviouslyPurchasedConfigProvider</a>.
 
 This provider provides you with the configuration for previously purchased products.
 
@@ -214,7 +214,7 @@ Returns the start date in string format for previously purchased products.
 
 **LatestOrderedProductsInfoProvider**
 
-Class <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/OrderBundle/Provider/LatestOrderedProductsInfoProvider.php" target="_blank">LatestOrderedProductsInfoProvider</a>.
+Class <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/OrderBundle/Provider/LatestOrderedProductsInfoProvider.php" target="_blank">LatestOrderedProductsInfoProvider</a>.
 
 This provider is used when we need more information about who and when bought products in the order.
 
@@ -243,16 +243,16 @@ Returns information about who and when bought the products.
 
 **PreviouslyPurchasedOrderStatusesProvider**
 
-Class <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/OrderBundle/Provider/PreviouslyPurchasedOrderStatusesProvider.php" target="_blank">PreviouslyPurchasedOrderStatusesProvider</a>.
+Class <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/OrderBundle/Provider/PreviouslyPurchasedOrderStatusesProvider.php" target="_blank">PreviouslyPurchasedOrderStatusesProvider</a>.
 
-This service implements <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/OrderBundle/Provider/OrderStatusesProviderInterface.php" target="_blank">OrderStatusesProviderInterface</a> and contains methods which return applicable statuses for the order. For example:
+This service implements <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/OrderBundle/Provider/OrderStatusesProviderInterface.php" target="_blank">OrderStatusesProviderInterface</a> and contains methods which return applicable statuses for the order. For example:
 
 ```php
 /**
- * @param EnumOptionInterface|null $status
+ * @param AbstractEnumValue|null $status
  * @return bool
  */
-protected function isAllowedStatus(EnumOptionInterface $status = null)
+protected function isAllowedStatus(AbstractEnumValue $status = null)
 {
     // statusProvider implements OrderStatusesProviderInterface
     $availableStatuses = $this->statusesProvider->getAvailableStatuses();

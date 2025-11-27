@@ -4,7 +4,7 @@
 
 The previously purchased products page displays the products that were recently purchased by customer users. In the storefront, this page is nested under the **Previous Purchased** menu in **Account**.
 
-![Previously Purchased customer account menu in the storefront](user/img/storefront/previously_purchased/PreviouslyPurchased.png)
+![Previously Purchased customer account menu in the storefront](user/img/system/config_commerce/order/PreviouslyPurchasedFrontStore.png)
 
 #### HINT
 The previously purchased products page is disabled by default, but you can enable it on three levels, globally, [per organization](../../../user-management/organizations/org-configuration/commerce/orders/organization-previously-purchased.md#sys-commerce-orders-previously-purchased-org) and [per website](../../../websites/web-configuration/commerce/orders/website-previously-purchased.md#sys-commerce-orders-previously-purchased-website). Once enabled, you can also set the number of days that the purchase history should cover.

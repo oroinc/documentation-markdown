@@ -2,7 +2,7 @@
 
 # OroSEOBundle
 
-<a href="https://github.com/oroinc/orocommerce/tree/master/src/Oro/Bundle/SEOBundle" target="_blank">OroSEOBundle</a> provides CLI to generate <a href="https://www.sitemaps.org/protocol.html" target="_blank">sitemap.xml</a> and <a href="http://www.robotstxt.org/" target="_blank">robots.txt</a> files for the OroCommerce application and enables back-office administrators to configure sitemap generation options in the system configuration UI. The bundle also provides UI for content managers to set localized Search Engine Optimization (SEO) meta tags (title, description, keywords) for every product, category, content node, and CMS page.
+<a href="https://github.com/oroinc/orocommerce/tree/5.1/src/Oro/Bundle/SEOBundle" target="_blank">OroSEOBundle</a> provides CLI to generate <a href="https://www.sitemaps.org/protocol.html" target="_blank">sitemap.xml</a> and <a href="http://www.robotstxt.org/" target="_blank">robots.txt</a> files for the OroCommerce application and enables back-office administrators to configure sitemap generation options in the system configuration UI. The bundle also provides UI for content managers to set localized Search Engine Optimization (SEO) meta tags (title, description, keywords) for every product, category, content node, and CMS page.
 
 ## Related Documentation
 

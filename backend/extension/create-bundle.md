@@ -9,14 +9,13 @@
 ## Create a Bundle Manually
 
 First you need to specify name and namespace of your bundle. Symfony framework already has
-<a href="https://symfony.com/doc/6.4/bundles/best_practices.html#bundle-name" target="_blank">best practices for bundle structure and bundle name</a> and we recommend to follow these practices and use them.
+<a href="https://symfony.com/doc/5.4/bundles/best_practices.html#bundle-name" target="_blank">best practices for bundle structure and bundle name</a> and we recommend to follow these practices and use them.
 
 Let us assume that we want to create the AcmeDemoBundle and put it under the namespace `Acme\Bundle\DemoBundle`
 in the `/src` directory. We need to create the corresponding directory structure and the bundle file with the following content:
 
 *src/Acme/Bundle/DemoBundle/AcmeDemoBundle.php*
 ```php
-
 namespace Acme\Bundle\DemoBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
@@ -30,11 +29,10 @@ Basically, it is a regular Symfony bundle. The only difference is in the way it 
 
 ## Create a Bundle Service Container Extension
 
-For a load configuration files you need to create Service Container Extension. See <a href="https://symfony.com/doc/6.4/configuration.html#configuration-files" target="_blank">Symfony Configuration Files</a>
+For a load configuration files you need to create Service Container Extension. See <a href="https://symfony.com/doc/5.4/configuration.html#configuration-files" target="_blank">Symfony Configuration Files</a>
 
 *src/Acme/Bundle/DemoBundle/DependencyInjection/AcmeDemoExtension.php*
 ```php
-
 namespace Acme\Bundle\DemoBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
@@ -44,7 +42,6 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 class AcmeDemoExtension extends Extension
 {
-    #[\Override]
     public function load(array $configs, ContainerBuilder $container)
     {
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
@@ -55,7 +52,7 @@ class AcmeDemoExtension extends Extension
 }
 ```
 
-Create basic `Resources/config/services.yml` for define service parameters. See <a href="https://symfony.com/doc/6.4/service_container.html#service-parameters" target="_blank">Symfony Service Parameters</a>
+Create basic `Resources/config/services.yml` for define service parameters. See <a href="https://symfony.com/doc/5.4/service_container.html#service-parameters" target="_blank">Symfony Service Parameters</a>
 
 *src/Acme/Bundle/DemoBundle/Resources/config/services.yml*
 ```yaml
@@ -124,8 +121,8 @@ This file provides a list of bundles to register. All such files are automatical
 
 ## References
 
-* <a href="https://symfony.com/doc/6.4/bundles/best_practices.html" target="_blank">Symfony Best Practices for Structuring Bundles</a>
-* <a href="https://symfony.com/doc/6.4/reference/events.html" target="_blank">Symfony Framework Events</a>
+* <a href="https://symfony.com/doc/5.4/bundles/best_practices.html" target="_blank">Symfony Best Practices for Structuring Bundles</a>
+* <a href="https://symfony.com/doc/5.4/reference/events.html" target="_blank">Symfony Framework Events</a>
 * [Bundle-less Structure](../architecture/bundle-less-structure.md#dev-backend-architecture-bundle-less-structure)
 
 <!-- Frontend -->

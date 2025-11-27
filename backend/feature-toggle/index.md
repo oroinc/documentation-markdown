@@ -105,7 +105,9 @@ use Symfony\Component\Config\Definition\Builder\NodeBuilder;
 
 class FeatureConfigurationExtension implements ConfigurationExtensionInterface
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function extendConfigurationTree(NodeBuilder $node)
     {
         $node
@@ -206,13 +208,17 @@ class ProductFormExtension extends AbstractTypeExtension implements FeatureToggl
 {
     use FeatureCheckerHolderTrait;
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public static function getExtendedTypes(): iterable
     {
         return ['acme_product'];
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         if (!$this->isFeaturesEnabled()) {

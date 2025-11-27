@@ -9,7 +9,6 @@ Learn how to configure localization options, currency and tracking, as well and 
 * [Currency](global-currency.md#sys-config-sysconfig-general-setup-currency)
 * [Display Settings](display.md#configuration-general-setup-display-settings)
 * [User Settings](user.md#admin-configuration-user-settings)
-* [User Login](user-login.md#admin-configuration-user-login-form)
 * [Search](search.md#configuration-system-configuration-general-setup-sysconfig-search-global)
 * [Tracking](tracking.md#admin-configuration-tracking-settings)
 * [Upload Settings](upload.md#configuration-guide-system-configuration-general-setup-sysconfig-upload-settings)

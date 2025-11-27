@@ -70,7 +70,7 @@ oro_oauth2_server:
 ```
 
 #### NOTE
-To use OAuth 2.0 authorization, generate the private and public RSA keys and place them into locations specified in the authorization_server / private_key and resource_server / public_key options. You can use php bin/console oro:oauth-server:generate-keys Symfony command to easily generate RSA keys. Also see <a href="https://oauth2.thephpleague.com/installation/#generating-public-and-private-keys" target="_blank">Generating public and private keys</a> for details on how to generate the keys manually.
+To use OAuth 2.0 authorization, generate the private and public keys and place them into locations specified in the authorization_server / private_key and resource_server / public_key options. See <a href="https://oauth2.thephpleague.com/installation/#generating-public-and-private-keys" target="_blank">Generating public and private keys</a> for details on how to generate the keys.
 
 <a id="bundle-docs-platform-oauth2-server-bundle-manage-applications"></a>
 
@@ -99,7 +99,9 @@ class LoadOAuthApplication extends AbstractFixture implements ContainerAwareInte
 {
     use ContainerAwareTrait;
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function load(ObjectManager $manager)
     {
         $client = new Client();
@@ -129,9 +131,5 @@ See [OAuth Authentication in API](../../../api/authentication/oauth.md#web-servi
 ## Business Tip
 
 Find out what sets <a href="https://oroinc.com/b2b-ecommerce/what-is-b2b-ecommerce/" target="_blank">B2B eCommerce</a> apart from B2C and whether your company needs digital commerce.
-
-## Related Documentation
-
-* [Commands](commands.md)
 
 <!-- Frontend -->

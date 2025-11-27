@@ -6,12 +6,12 @@ This guide demonstrates how to set up [Docker and Symfony Server development sta
 
 ## Environment Setup
 
-1. Install php 8.4 with all required extensions:
+1. Install PHP 8.2 with all required extensions:
    ```none
    sudo apt install software-properties-common
    sudo add-apt-repository -y ppa:ondrej/php
    sudo apt update
-   sudo apt -y install php8.4 php8.4-fpm php8.4-cli php8.4-pdo php8.4-mysqlnd php8.4-xml php8.4-soap php8.4-gd php8.4-zip php8.4-intl php8.4-mbstring php8.4-opcache php8.4-curl php8.4-bcmath php8.4-ldap php8.4-pgsql php8.4-dev
+   sudo apt -y install php8.2 php8.2-fpm php8.2-cli php8.2-pdo php8.2-mysqlnd php8.2-xml php8.2-soap php8.2-gd php8.2-zip php8.2-intl php8.2-mbstring php8.2-opcache php8.2-curl php8.2-bcmath php8.2-ldap php8.2-pgsql php8.2-dev
    ```
 
    Install the MongoDB PHP Extension with PECL:
@@ -22,13 +22,13 @@ This guide demonstrates how to set up [Docker and Symfony Server development sta
    For more information, see <a href="https://www.php.net/manual/en/mongodb.installation.php" target="_blank">MongoDB PHP Extension installation</a>.
 2. Configure PHP:
    ```none
-   echo -e "extension=mongodb.so \n\nmemory_limit = 2048M \nmax_input_time = 600 \nmax_execution_time = 600 \nrealpath_cache_size=4096K \nrealpath_cache_ttl=600 \nopcache.enable=1 \nopcache.enable_cli=0 \nopcache.memory_consumption=512 \nopcache.interned_strings_buffer=32 \nopcache.max_accelerated_files=32531 \nopcache.save_comments=1" | sudo tee -a  /etc/php/8.4/fpm/php.ini
-   echo -e "extension=mongodb.so \n\nmemory_limit = 2048M" | sudo tee -a  /etc/php/8.4/cli/php.ini
+   echo -e "extension=mongodb.so \n\nmemory_limit = 2048M \nmax_input_time = 600 \nmax_execution_time = 600 \nrealpath_cache_size=4096K \nrealpath_cache_ttl=600 \nopcache.enable=1 \nopcache.enable_cli=0 \nopcache.memory_consumption=512 \nopcache.interned_strings_buffer=32 \nopcache.max_accelerated_files=32531 \nopcache.save_comments=1" | sudo tee -a  /etc/php/8.2/fpm/php.ini
+   echo -e "extension=mongodb.so \n\nmemory_limit = 2048M" | sudo tee -a  /etc/php/8.2/cli/php.ini
    ```
-3. Install Node.js 22:
+3. Install Node.js 18:
    ```none
    sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
-   curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+   curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
    sudo apt -y install nodejs
    ```
 4. Install Docker and Docker Compose:

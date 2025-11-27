@@ -10,7 +10,7 @@ By default, all cookies used in ORO applications have the **secure** flag set to
 
 Except for the CSRF cookie, all cookies have the **httponly** flag set to *true*. This means that the cookie will not be accessible by scripting languages, such as JavaScript.
 
-More information about this configuration is available in the <a href="https://symfony.com/doc/6.4/reference/configuration/framework.html#cookie-secure" target="_blank">cookie secure configuration</a> section of Symfony documentation.
+More information about this configuration is available in the <a href="https://symfony.com/doc/5.4/reference/configuration/framework.html#cookie-secure" target="_blank">cookie secure configuration</a> section of Symfony documentation.
 
 If your application uses a proxy that redirects from https requests to http, the application will detect that the request was made with the http request. As a result, the `auto` value for the secure parameter will remove the **secure** flag.
 

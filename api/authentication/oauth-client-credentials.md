@@ -60,30 +60,6 @@ Accept: application/vnd.api+json
 Authorization: Bearer your access token
 ```
 
-According to <a href="https://www.rfc-editor.org/rfc/rfc6750" target="_blank">Rfc6750</a>, an access token can be included as a body parameter in requests.
-
-#### NOTE
-When sending the access token as a body parameter, the request must include a Content-Type header set to application/vnd.api+json.
-
-Here is an example of how to send the access token as a body parameter:
-
-```http
-POST /api/users HTTP/1.1
-Accept: application/vnd.api+json
-Content-Type: application/vnd.api+json
-
-{
-    "access_token": "your_access_token",
-    "data": {
-      "type": "contacts",
-      "attributes": {
-        "firstName": "Jerry12",
-        "lastName": "Coleman2"
-      }
-    }
-}
-```
-
 #### NOTE
 Access tokens for back-office and storefront API are not interchangeable. If you attempt to request data for the storefront API with a token generated for the back-office application, access will be denied.
 
@@ -91,5 +67,3 @@ Access tokens for back-office and storefront API are not interchangeable. If you
 # Business Tip
 
 <a href="https://oroinc.com/b2b-ecommerce/what-is-b2b-ecommerce/" target="_blank">What is B2B eCommerce</a> and how does it differ from B2C? Read our guide to find out.
-
-<!-- Frontend -->

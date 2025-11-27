@@ -22,11 +22,11 @@ The possible values of this option:
 
 ## Implementation
 
-The list of system calendars is stored in the <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Entity/SystemCalendar.php" target="_blank">oro_system_calendar</a> table. The **public** field indicates whether a calendar is organization or system-wide. System-wide calendars are marked as `public`.
+The list of system calendars is stored in the <a href="https://github.com/oroinc/OroCalendarBundle/blob/5.1/Entity/SystemCalendar.php" target="_blank">oro_system_calendar</a> table. The **public** field indicates whether a calendar is organization or system-wide. System-wide calendars are marked as `public`.
 
 Both organization and system-wide calendars are implemented as [calendar providers](provider.md#bundle-docs-platform-calendar-bundle-provider). For more implementation details, see the following the source code:
 
-- <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Provider/SystemCalendarProvider.php" target="_blank">SystemCalendarProvider</a> - responsible for **organization wide calendars**
-- <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Provider/PublicCalendarProvider.php" target="_blank">PublicCalendarProvider</a> - responsible for **system wide calendars**
+- <a href="https://github.com/oroinc/OroCalendarBundle/blob/5.1/Provider/SystemCalendarProvider.php" target="_blank">SystemCalendarProvider</a> - responsible for **organization wide calendars**
+- <a href="https://github.com/oroinc/OroCalendarBundle/blob/5.1/Provider/PublicCalendarProvider.php" target="_blank">PublicCalendarProvider</a> - responsible for **system wide calendars**
 
 <!-- Frontend -->

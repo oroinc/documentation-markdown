@@ -49,7 +49,9 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
 
 class AddTeaserField implements Migration
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function up(Schema $schema, QueryBag $queries): void
     {
         if (!$schema->hasTable('acme_blog_post')) {
@@ -120,7 +122,6 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
 
 class AddExtraContentField implements Migration
 {
-    #[\Override]
     public function up(Schema $schema, QueryBag $queries): void
     {
         if (!$schema->hasTable('acme_blog_post')) {
@@ -147,15 +148,33 @@ class BlogPost implements DatesAwareInterface, ExtendEntityInterface
 {
     // ...
 
-    #[ORM\Column(name: 'extra_content', type: 'wysiwyg', nullable: true)]
-    #[ConfigField(defaultValues: ['attachment' => ['acl_protected' => false]])]
+    /**
+     * @ORM\Column(name="extra_content", type="wysiwyg", nullable=true)
+     * @ConfigField(
+     *      defaultValues={
+     *          "attachment"={
+     *              "acl_protected"=false
+     *          }
+     *      }
+     * )
+     */
     protected $extraContent;
 
-    #[ORM\Column(name: 'extra_content_style', type: 'wysiwyg_style', nullable: true)]
-    #[ConfigField(defaultValues: ['attachment' => ['acl_protected' => false]])]
+    /**
+     * @ORM\Column(name="extra_content_style", type="wysiwyg_style", nullable=true)
+     * @ConfigField(
+     *      defaultValues={
+     *          "attachment"={
+     *              "acl_protected"=false
+     *          }
+     *      }
+     * )
+     */
     protected $extraContentStyle;
 
-    #[ORM\Column(name: 'extra_content_properties', type: 'wysiwyg_properties', nullable: true)]
+    /**
+     * @ORM\Column(name="extra_content_properties", type="wysiwyg_properties", nullable=true)
+     */
     protected $extraContentProperties;
 
     public function getExtraContent(): ?string

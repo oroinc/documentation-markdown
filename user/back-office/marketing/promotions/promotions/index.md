@@ -17,7 +17,7 @@ In OroCommerce, you can:
 * Manage discounts in placed [orders](../../../sales/orders/index.md#user-guide-sales-orders) and view them in [shopping lists](../../../sales/shopping-lists/index.md#user-guide-sales-shopping-lists) in the back-office.
 
 #### NOTE
-OroMarketplace sellers have the capability to create their own promotions and coupons within their respective stores. This feature can be toggled in the system configuration [at the global level](../../../system/configuration/commerce/marketplace/marketplace-general.md#configuration-commerce-marketplace-seller-global). However, sellers do not have the ability to manipulate the Restrictions and Expression fields or add segments in the advanced products filter.
+As of OroMarketplace version 5.1.7, sellers have the capability to create their own promotions and coupons within their respective stores. This feature can be toggled in the system configuration [at the global level](../../../system/configuration/commerce/marketplace/marketplace-general.md#configuration-commerce-marketplace-seller-global). However, sellers do not have the ability to manipulate the Restrictions and Expression fields or add segments in the advanced products filter.
 
 The following topics will delve into how to view, create, and manage promotions in your Oro application:
 

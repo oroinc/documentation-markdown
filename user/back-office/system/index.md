@@ -1,7 +1,5 @@
 <!-- meta: description = Extensive manuals on the Oro application back-office system configuration -->
 
-<a id="user-guide-system-setting"></a>
-
 # Manage System Settings in the Back-Office
 
 The **System** menu of the back-office contains post-install configuration settings of your Oro application. This is the starting point for setting up your application, from application display settings to payment integrations. Before proceeding with application configuration, please review the topics listed below to get a full understanding of general and domain-specific settings, and available configuration levels.
@@ -9,7 +7,6 @@ The **System** menu of the back-office contains post-install configuration setti
 ![System menu](user/img/system/configuration/system_menu.png)
 * [Configuration](configuration/index.md#mc-system-configuration) — Manage system settings and settings specific for CRM, Commerce and marketing features.
 * [User Management](user-management/index.md#user-guide-user-management) — Configure user, role and access management in the application and determine levels of access to data.
-* [Theme Configuration](theme-configuration/index.md#back-office-theme-configuration) — Configure and customize storefront look and feel.
 * [Contact Reasons](contact-reasons/index.md#admin-guide-contact-reasons) — Manage contact reasons used to categorize contact requests submitted through your website.
 * [Contact Groups](contact-groups/index.md#contact-groups) — Create and manage contact groups.
 * [Emails](emails/index.md#admin-guide-email-configuration) — Create and manage templates, notification rules and maintenance notifications.
@@ -21,7 +18,7 @@ The **System** menu of the back-office contains post-install configuration setti
 * [Entities](entities/index.md#doc-entities) — Create and manage entities and entity fields.
 * [Tags Management](tags-management/index.md#admin-guide-tag-management) — Create tags and taxonomies to organize data in the application.
 * [Menus](menus/index.md#doc-config-menus) — Customize default back-office menus.
-* [Storefront Menus](frontend-menus/index.md#backend-frontend-menus) — Configure default storefront menus.
+* [Frontend Menus](frontend-menus/index.md#backend-frontend-menus) — Configure default storefront menus.
 * [System Calendars](system-calendars/index.md#user-guide-calendars) — Create system and organization calendars and add events to them.
 * [Shipping Rules](shipping-rules/index.md#sys-shipping-rules) — Add shipping rules to bind customers to specific shipping prices based on the shipping locations and the products they purchase.
 * [Payment Rules](payment-rules/index.md#sys-payment-rules) —  Add payment rules to make payment options visible to buyers in the storefront.

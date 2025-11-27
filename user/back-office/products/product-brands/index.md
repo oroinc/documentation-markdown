@@ -23,6 +23,7 @@ There are two ways to create a brand, from scratch and when creating/editing a p
    * **Slug** — Enter a URL slug that is used when building a human-readable URL in the storefront. If the field is left blank, the slug will be generated automatically.
    * **Status** — Select product brand status (*Enabled*/*Disabled*). The field is mandatory.
 4. In the **Short Description** section, provide a short but meaningful default description of the product brand to make identification of the brand more accessible. Move from tab to tab to localize the description by setting the required fallback option. You can select whether to fall back to the default value, parent localization, or a custom value from the dropdown. When selecting the custom value, provide the localized version of the short description in the text field.
+   > ![Localization fallback option for the short description of the master catalog](user/img/products/products/localize_short_descriptions_brands.png)
 5. In the **Long Description** section, enter a long default description of the product brand. Move from tab to tab to localize the description by setting the required fallback option. You can select whether to fall back to the default value, parent localization, or a custom value from the dropdown. When selecting the custom value, provide the localized version of the long description in the WYSIWYG field. For more details on WYSIWYG management, see the [WYSIWYG Editor](../../../concept-guides/content-management/wysiwyg.md#getting-started-wysiwyg-editor-field) topic.
 6. In the **SEO** section, provide the following information:
    * **Meta Title** — Enter the meta title for the product brand. The meta title is what is seen by search engine users and used by the search engine to help it index the page
@@ -63,7 +64,7 @@ Once a brand has been created and assigned to a product, you may make it filtera
 
 1. Navigate to **Products > Product Attributes** in the main menu.
 2. Click the **brand** attribute or <i class="fa fa-edit fa-lg" aria-hidden="true"></i> at the end of the row to edit the attribute. Keep in mind that editing system attributes is only possible in the [global organization](../../getting-started/navigation/org-selector.md#user-guide-getting-started-change-organization).
-3. In the **Storefront options** section, set the **Filterable** option to **Yes**.
+3. In the **Frontend options** section, set the **Filterable** option to **Yes**.
    ![Set the Filterable option to yes](user/img/products/products/brand_filters_2.png)
 4. Click **Save and Close**.
 
@@ -75,20 +76,3 @@ The brand filter is now available in the storefront.
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

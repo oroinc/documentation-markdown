@@ -32,7 +32,6 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  */
 class QuestionType extends AbstractType
 {
-    #[\Override]
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
@@ -58,7 +57,6 @@ class QuestionType extends AbstractType
             );
     }
 
-    #[\Override]
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
@@ -69,7 +67,7 @@ class QuestionType extends AbstractType
 ```
 
 #### SEE ALSO
-Learn more about <a href="https://symfony.com/doc/6.4/book/forms.html" target="_blank">form types in the Symfony documentation</a>.
+Learn more about <a href="https://symfony.com/doc/5.4/book/forms.html" target="_blank">form types in the Symfony documentation</a>.
 
 <a id="cookbook-entity-controller"></a>
 
@@ -84,8 +82,8 @@ namespace Acme\Bundle\DemoBundle\Controller;
 use Acme\Bundle\DemoBundle\Entity\Question;
 use Acme\Bundle\DemoBundle\Form\Type\QuestionType;
 use Oro\Bundle\FormBundle\Model\UpdateHandlerFacade;
-use Oro\Bundle\SecurityBundle\Attribute\Acl;
-use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
+use Oro\Bundle\SecurityBundle\Annotation\Acl;
+use Oro\Bundle\SecurityBundle\Annotation\AclAncestor;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -95,13 +93,16 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * Contains CRUD actions for Question
+ *
+ * @Route("/question", name="acme_demo_question_")
  */
-#[Route(path: '/question', name: 'acme_demo_question_')]
 class QuestionController extends AbstractController
 {
-    #[Route(path: '/', name: 'index')]
-    #[Template]
-    #[AclAncestor('acme_demo_question_view')]
+    /**
+     * @Route("/", name="index")
+     * @Template
+     * @AclAncestor("acme_demo_question_view")
+     */
     public function indexAction(): array
     {
         return [
@@ -109,9 +110,16 @@ class QuestionController extends AbstractController
         ];
     }
 
-    #[Route(path: '/view/{id}', name: 'view', requirements: ['id' => '\d+'])]
-    #[Template]
-    #[Acl(id: 'acme_demo_question_view', type: 'entity', class: 'Acme\Bundle\DemoBundle\Entity\Question', permission: 'VIEW')]
+    /**
+     * @Route("/view/{id}", name="view", requirements={"id"="\d+"})
+     * @Template
+     * @Acl(
+     *      id="acme_demo_question_view",
+     *      type="entity",
+     *      class="Acme\Bundle\DemoBundle\Entity\Question",
+     *      permission="VIEW"
+     * )
+     */
     public function viewAction(Question $entity): array
     {
         return [
@@ -121,13 +129,19 @@ class QuestionController extends AbstractController
 
     /**
      * Create Question
+     *
+     * @Route("/create", name="create", options={"expose"=true})
+     * @Template("@AcmeDemo/Question/update.html.twig")
+     * @Acl(
+     *      id="acme_demo_question_create",
+     *      type="entity",
+     *      class="Acme\Bundle\DemoBundle\Entity\Question",
+     *      permission="CREATE"
+     * )
      */
-    #[Route(path: '/create', name: 'create', options: ['expose' => true])]
-    #[Template('@AcmeDemo/Question/update.html.twig')]
-    #[Acl(id: 'acme_demo_question_create', type: 'entity', class: 'Acme\Bundle\DemoBundle\Entity\Question', permission: 'CREATE')]
     public function createAction(Request $request): array|RedirectResponse
     {
-        $createMessage = $this->container->get(TranslatorInterface::class)->trans(
+        $createMessage = $this->get(TranslatorInterface::class)->trans(
             'acme.demo.controller.question.saved.message'
         );
 
@@ -136,13 +150,19 @@ class QuestionController extends AbstractController
 
     /**
      * Edit Question form
+     *
+     * @Route("/update/{id}", name="update", requirements={"id"="\d+"})
+     * @Template
+     * @Acl(
+     *      id="acme_demo_question_update",
+     *      type="entity",
+     *      class="Acme\Bundle\DemoBundle\Entity\Question",
+     *      permission="EDIT"
+     * )
      */
-    #[Route(path: '/update/{id}', name: 'update', requirements: ['id' => '\d+'])]
-    #[Template]
-    #[Acl(id: 'acme_demo_question_update', type: 'entity', class: 'Acme\Bundle\DemoBundle\Entity\Question', permission: 'EDIT')]
     public function updateAction(Question $entity, Request $request): array|RedirectResponse
     {
-        $updateMessage = $this->container->get(TranslatorInterface::class)->trans(
+        $updateMessage = $this->get(TranslatorInterface::class)->trans(
             'acme.demo.controller.question.saved.message'
         );
 
@@ -154,7 +174,7 @@ class QuestionController extends AbstractController
         Request $request,
         string $message = ''
     ): array|RedirectResponse {
-        return $this->container->get(UpdateHandlerFacade::class)->update(
+        return $this->get(UpdateHandlerFacade::class)->update(
             $entity,
             $this->createForm(QuestionType::class, $entity),
             $message,
@@ -163,8 +183,7 @@ class QuestionController extends AbstractController
         );
     }
 
-    #[\Override]
-    public static function getSubscribedServices(): array
+    public static function getSubscribedServices()
     {
         return array_merge(
             parent::getSubscribedServices(),
@@ -354,16 +373,20 @@ You can delete an entity through the [DELETE operation](../entities-data-managem
 
 *src/Acme/Bundle/DemoBundle/Entity/Question.php*
 ```php
-#[Config(
-    routeName: 'acme_demo_question_index',
-    routeView: 'acme_demo_question_view',
-    defaultValues: [
-        'entity' => ['icon' => 'fa-question'],
-    ]
-)]
+/**
+ * @Config(
+ *     routeName="acme_demo_question_index",
+ *     routeView="acme_demo_question_view",
+ *     defaultValues={
+ *         "entity"={
+ *             "icon"="fa-question"
+ *         },
+ *     }
+ * )
+ */
 ```
 
-See the sample configuration of the default `DELETE` operation in the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ActionBundle/Resources/config/oro/actions.yml" target="_blank">Actions</a> topic.
+See the sample configuration of the default `DELETE` operation in the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ActionBundle/Resources/config/oro/actions.yml" target="_blank">Actions</a> topic.
 
 If the default configuration is not valid for your particular case, create your own operation that would inherit from the default one, following the example:
 

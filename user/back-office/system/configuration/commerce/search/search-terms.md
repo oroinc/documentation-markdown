@@ -19,12 +19,17 @@ To configure the search history settings globally:
 For faster navigation between the configuration menu sections, use [Quick Search](../../quick-search.md#user-guide-system-configuration-quick-search).
 
 ![Global search history configuration options](user/img/system/config_commerce/search/global-search-history-settings.png)
-1. In the **Search History** section, clear the *Use Default* checkbox to configure the following search history reporting options:
+1. In the **Search Term Management** section, clear the *Use Default* checkbox to enable the search term functionality.
+   * **Enable Search Term Management** - this functionality enables you to respond to certain search phrases with tailored actions. When a designated search term is detected, you can choose a corresponding action from a range of pre-set responses, such as automatically direct users to a predetermined page, replace the default search results, and more. Enabling this option adds a Search Term menu item to **Marketing > Search** in the back-office. By default, this option is disabled.
+2. In the **Search History** section, clear the *Use Default* checkbox to configure the following search history reporting options:
    * **Enable Search History Reporting** — enables the [Search History feature](../../../../marketing/search/index.md#user-guide-search-search-history) globally to track your customers’ search activity in the storefront. The option also enables the [a Search Terms report](../../../../reports-segments/reports/search-report.md#user-guide-search-terms-report) that collects statistics on how many times a particular search term was used, the number of times that search term returned products, and the number of times it returned an empty result. When Enable Search History Reporting is disabled, the feature is removed from the main menu and grids, along with the Search Terms report.
    * **Enable Search History Collection** — depends on the Enable Search History Reporting option above. When Enable Search History Collection is enabled, all search queries are logged into the database. This option allows enabling/disabling certain groups of visitors. For example, you can choose not to log requests from anonymous users by turning off this option at customer group level for Anonymous customers. Exercise care when enabling this option on popular websites as it may result in a large number of records saved to the database.
-2. In the **Special Pages** section, clear the *Use Default* checkbox to configure the empty search results page:
+3. In the **Special Pages** section, clear the *Use Default* checkbox to configure the empty search results page:
    * **Empty Search Result Page** — You can configure an Empty Search Results Page, if the product search produced an empty result and there is no custom page configured for that specific combination of a [search term](../../../../marketing/search/index.md#user-guide-search-search-terms) and additional search criteria. The web-node selected for this configuration option should be available for all users and cannot have restrictions.
-3. Click **Save Settings**.
+
+   #### NOTE
+   This option is available starting from OroCommerce version 6.0.2.
+4. Click **Save Settings**.
 
 **Related Topics**
 

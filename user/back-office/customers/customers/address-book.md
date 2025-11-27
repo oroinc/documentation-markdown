@@ -4,7 +4,7 @@
 
 <!-- begin -->
 
-For customers, customer users, and contacts in the Oro application, the address book allows to enter and view account/customer address details.
+For customers, customer users, and contacts in the Oro application, the address book allows to enter and view account address details.
 
 To add an address to the address book:
 
@@ -50,7 +50,7 @@ Please be aware that a valid Google API key is required to display maps in the s
 Delete is disabled for the primary address. To delete the address marked as primary, you must first move the primary label to a different address.
 
 * **Edit an address** - To edit an address, click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> on the top right of the address background, update the address details, and click **Save**.
-* **Delete an address** - Delete an address by clicking ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) next to it.
+* **Delete an address** - Delete an address by clicking <i class="fas fa-trash-alt" aria-hidden="true"></i> next to it.
 
 <!-- finish -->
 <!-- fa-bars = fa-navicon -->
@@ -58,20 +58,3 @@ Delete is disabled for the primary address. To delete the address marked as prim
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

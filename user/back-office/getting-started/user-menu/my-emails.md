@@ -16,6 +16,9 @@ It is also possible to configure auto-actions and auto-responses. For example, w
 
 Oro also provides a feature of auto-assignment to contacts, thanks to which new emails synced into the application are automatically linked to contacts if the email addresses of these contacts appear in the correspondence.
 
+> See a short demo on <a href="https://academy.oroinc.com/media-library/create-manage-emails-orocrm" target="_blank">how to create and manage emails</a>, or keep reading the step-by-step guidance below.
+
+> > <iframe width="560" height="315" src="https://www.youtube.com/embed/hTI0IWEsSF4" frameborder="0" allowfullscreen></iframe>
 <!-- start_my_emails -->
 
 Navigate to **My Emails** by clicking on your user name on the top right of the application page.
@@ -76,15 +79,7 @@ To compose a new email:
 * **Type** — Select the type of the message to be sent:
   * **HTML:** The email will be coded so that the text is formatted and images are added.                                                            \* **Plain:** The email will contain plain text with no formatting or unique layout options.
 * **Body** — Enter the text of your email. You can customize your email text using the following features:
-  - Bold, Italic, Underline styles
-  - Text color
-  - Background color
-  - Bullet List
-  - Numbered List
-  - Insert/Edit link
-  - Source Code
-  - Image Embed Upload
-  - Fullscreen view
+  - Bold, Italic, Underline styles                                                                                                                   - Text color                                                                                                                                       - Background color                                                                                                                                 - Bullet List                                                                                                                                      - Numbered List                                                                                                                                    - Insert/Edit link                                                                                                                                 - Source Code                                                                                                                                      - Image Embed Upload                                                                                                                               - Fullscreen view
 * **Add Signature** — The signature may be added to any email you write in the Oro application. Your organization settings define whether the signature will be added automatically or manually. If you have a signature configured, you can add it by clicking **Add Signature**.
 * **Attach a file** — You can attach a file from your PC or a related record. Click **From a Record** to re-use an attachment from another email in the thread or to choose an attachment assigned to the records. Click **Upload** and select the necessary file to be uploaded from your computer as an attachment to your email.
 * **Contexts** — Context is any record or records that ha(s)ve meaningful relation to an email conversation (e.g., contacts, customer users, accounts, leads, opportunities, rfqs, etc). When you add context of a record to the email conversation, it will be displayed on top of your email details page or under the **Activity** section of the added record’s page. **Note**: If an email has been created from an entity record view page (e.g., from a lead’s page), this record will be added as a context automatically.
@@ -129,8 +124,7 @@ From the email details page, you can:
 You can reach your emails by clicking on the Recent Emails button in the top right corner of the Oro application window. A list of unread emails
 will appear, as illustrated in the screenshot below:
 
-<!-- .. image:: /user/img/getting_started/user_menu/recent_emails_button.jpg
-:alt: View the list of unread emails displayed when clicking the Recent Emails button -->
+![View the list of unread emails displayed when clicking the Recent Emails button](user/img/getting_started/user_menu/recent_emails_button.jpg)
 
 Clicking on an email from the list redirects you to the page of the selected email.
 
@@ -146,7 +140,7 @@ The following features are available within the **Recent Emails** list:
 
 The Recent Emails widget allows you to see the most recent additions to your inbox and outbox.
 
-![Configuring the Recent Emails widget](user/img/dashboards/recent_emails_config.png)
+![A sample of the Recent Emails widget](user/img/dashboards/recent_emails.png)
 
 #### NOTE
 For how to add widgets to the dashboard and manage them, see the relevant topics:
@@ -169,20 +163,3 @@ For how to add widgets to the dashboard and manage them, see the relevant topics
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

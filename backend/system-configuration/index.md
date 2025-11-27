@@ -6,7 +6,7 @@
 
 # System Configuration
 
-With the help of <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ConfigBundle" target="_blank">OroConfigBundle</a>, you can define configuration settings in different
+With the help of <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/ConfigBundle" target="_blank">OroConfigBundle</a>, you can define configuration settings in different
 scopes. These settings can be organized and visualized in different configuration
 trees.
 
@@ -31,7 +31,9 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 class Configuration implements ConfigurationInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder('acme_demo');
@@ -90,7 +92,7 @@ public function load(array $configs, ContainerBuilder $container): void
 
 #### SEE ALSO
 If you are not familiar with creating `Configuration` classes, check out an article on
-<a href="https://symfony.com/doc/6.4/bundles/extension.html" target="_blank">semantic configurations</a> in the official documentation.
+<a href="https://symfony.com/doc/5.4/bundles/extension.html" target="_blank">semantic configurations</a> in the official documentation.
 
 #### NOTE
 How the `SettingsBuilder` Works
@@ -195,7 +197,7 @@ class DemoController extends AbstractController
 ```
 
 #### NOTE
-The actual setting name is to be prefixed by the <a href="https://symfony.com/doc/6.4/bundles/best_practices.html#bundle-name" target="_blank">bundle alias</a> (`acme_demo` for AcmeDemoBundle).
+The actual setting name is to be prefixed by the <a href="https://symfony.com/doc/5.4/bundles/best_practices.html#bundle-name" target="_blank">bundle alias</a> (`acme_demo` for AcmeDemoBundle).
 
 <a id="app-config-templates"></a>
 
@@ -210,7 +212,7 @@ value of a configuration option:
 ```
 
 #### NOTE
-The actual setting name is to be prefixed by the <a href="https://symfony.com/doc/6.4/bundles/best_practices.html#bundle-name" target="_blank">bundle alias</a> (here
+The actual setting name is to be prefixed by the <a href="https://symfony.com/doc/5.4/bundles/best_practices.html#bundle-name" target="_blank">bundle alias</a> (here
 `acme_demo` for AcmeDemoBundle).
 
 ### In Workflows and Operations (Actions)
@@ -239,7 +241,7 @@ In workflows, you can use a condition to check that System Configuration has the
 To add a new config scope:
 
 1. Add scope manager.
-   > A scope manager is a class that provides access to configuration attributes in a particular scope. This class should extend <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ConfigBundle/Config/AbstractScopeManager.php" target="_blank">AbstractScopeManager</a>.
+   > A scope manager is a class that provides access to configuration attributes in a particular scope. This class should extend <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ConfigBundle/Config/AbstractScopeManager.php" target="_blank">AbstractScopeManager</a>.
 
    > In the simplest case, scope manager looks like this:
    > ```php
@@ -249,33 +251,20 @@ To add a new config scope:
 
    > class TestScopeManager extends AbstractScopeManager
    > {
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function getScopedEntityName(): string
    >     {
-   >         return 'test'; // scope entity name
+   >         return 'test'; //scope entity name
    >     }
 
-   >     #[\Override]
-   >     public function getScopeId(): int
+   >     /**
+   >      * @inheritDoc
+   >      */
+   >     public function getScopeId(): ?int
    >     {
    >         return 0; // scope entity id (can be different for different cases)
-   >     }
-
-   >     #[\Override]
-   >     public function setScopeId(?int $scopeId): void
-   >     {
-   >     }
-
-   >     #[\Override]
-   >     protected function isSupportedScopeEntity(object $entity): bool
-   >     {
-   >         return false;
-   >     }
-
-   >     #[\Override]
-   >     protected function getScopeEntityIdValue(object $entity): int
-   >     {
-   >         throw new \LogicException(sprintf('"%s" is not supported.', ClassUtils::getClass($entity)));
    >     }
    > }
    > ```
@@ -325,13 +314,17 @@ To add a new config scope:
    > {
    >     protected const TEST_TREE_NAME = 'test_configuration';
 
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     protected function getTreeName(): string
    >     {
    >         return $this->getTreeData(self::TEST_TREE_NAME, self::CORRECT_FIELDS_NESTING_LEVEL);
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     protected function getParentCheckboxLabel(): string
    >     {
    >         return $this->getJsTreeData(self::TEST_TREE_NAME, self::CORRECT_MENU_NESTING_LEVEL);
@@ -350,13 +343,15 @@ To add a new config scope:
 
    > add a new action to manipulate data:
    > ```php
-   > #[Route(
-   >     path: '/test-config-route/{activeGroup}/{activeSubGroup}',
-   >     name: 'test_config',
-   >     requirements: ['id' => '\d+'],
-   >     defaults: ['activeGroup' => null, 'activeSubGroup' => null]
-   > )]
-   > #[Template]
+   > /**
+   >  * @Route(
+   >  *      "/test-config-route/{activeGroup}/{activeSubGroup}",
+   >  *      name="test_config",
+   >  *      requirements={"id"="\d+"},
+   >  *      defaults={"activeGroup" = null, "activeSubGroup" = null}
+   >  * )
+   >  * @Template()
+   >  */
    > public function testConfigAction(Request $request, $activeGroup = null, $activeSubGroup = null)
    > {
    >     $provider = $this->get('acme_demo.provider.form_provider.test');
@@ -519,7 +514,7 @@ To specify a handler, use the following syntax:
 - @service_id::methodName for a method in a service
 
 Please note that a group configuration form can have several handlers, and they can be specified in different bundles.
-All handlers are executed only if a group configuration form does not have validation errors and the changed configuration option is saved. See <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ConfigBundle/Form/Handler/ConfigHandler.php" target="_blank">ConfigHandler</a> for details.
+All handlers are executed only if a group configuration form does not have validation errors and the changed configuration option is saved. See <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ConfigBundle/Form/Handler/ConfigHandler.php" target="_blank">ConfigHandler</a> for details.
 
 **Example**
 
@@ -641,14 +636,14 @@ system_configuration:
 You can add your own rules on how system configuration search should work.
 By default, search works:
 
-- for group titles, see <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ConfigBundle/Provider/GroupSearchProvider.php" target="_blank">GroupSearchProvider</a>.
-- for field labels and tooltips, see <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ConfigBundle/Provider/FieldSearchProvider.php" target="_blank">FieldSearchProvider</a>.
-- for fields with search_type: text, see <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ConfigBundle/Provider/FieldSearchProvider.php" target="_blank">FieldSearchProvider</a>.
-- for fields with search_type: choice, see <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ConfigBundle/Provider/FieldSearchProvider.php" target="_blank">FieldSearchProvider</a>.
+- for group titles, see <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ConfigBundle/Provider/GroupSearchProvider.php" target="_blank">GroupSearchProvider</a>.
+- for field labels and tooltips, see <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ConfigBundle/Provider/FieldSearchProvider.php" target="_blank">FieldSearchProvider</a>.
+- for fields with search_type: text, see <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ConfigBundle/Provider/FieldSearchProvider.php" target="_blank">FieldSearchProvider</a>.
+- for fields with search_type: choice, see <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ConfigBundle/Provider/FieldSearchProvider.php" target="_blank">FieldSearchProvider</a>.
 
 ##### Define a Search Provider
 
-Create your own DemoSearchProvider that implements <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ConfigBundle/Provider/SearchProviderInterface.php" target="_blank">SearchProviderInterface</a>.
+Create your own DemoSearchProvider that implements <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ConfigBundle/Provider/SearchProviderInterface.php" target="_blank">SearchProviderInterface</a>.
 
 ```php
 namespace Acme\Bundle\DemoBundle\Provider;
@@ -669,14 +664,18 @@ class DemoSearchProvider implements SearchProviderInterface
         $this->configBag = $configBag;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function supports($name): bool
     {
         // example of how the field can be determined
         return $this->configBag->getFieldsRoot($name) !== false;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getData($name): array
     {
         // example how to filter by `search_type`

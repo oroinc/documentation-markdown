@@ -19,9 +19,9 @@ To edit the existing customer login page:
    There is only one customer login page available, and you cannot create more. If you update the login page in one organization, the changes will be reflected in other existing organizations.
 
    ![Blank customer login page](user/img/marketing/customer_login_pages/customer_login_page.png)
-3. To update **Top Content**, provide the text of your choice in the related field block. Once saved, the content in the storefront will be updated with new content appearing above credentials input fields.
+3. To update **Top Content**, provide the text of your choice in the block on the right. Once saved, the content in the storefront will be updated with new content appearing above credentials input fields.
    ![Top content added to storefront](user/img/marketing/customer_login_pages/top_content.png)
-4. To update **Bottom Content**, provide the text of your choice in the related field block. Once saved, the content in the storefront will be updated with new content appearing below the *Log In* button.
+4. To update **Bottom Content**, provide the text of your choice in the block to the right. Once saved, the content in the storefront will be updated with new content appearing below the *Sign In* button.
    ![Bottom content added to storefront](user/img/marketing/customer_login_pages/bottom_content.png)
 5. To update **CSS Styles**, provide CSS code in the block to the right. Once saved, the content in the storefront will be updated after page refresh.
    ![CSS style added to storefront, changed color of the header to red](user/img/marketing/customer_login_pages/css.png)
@@ -41,20 +41,3 @@ To edit the existing customer login page:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

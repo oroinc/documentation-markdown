@@ -48,8 +48,8 @@ All the subsidiary departments and divisions are displayed in the Subsidiaries s
 * [Export Customers](export.md)
 * [Import Customers](import.md)
 * [Configure Price List per Customer](customer-price-lists.md)
-* [Add All Products Page to Storefront Menus per Customer](customer-all-products-menus.md)
-* [Customize Storefront Menus per Customer](customer-frontend-menus.md)
+* [Add All Products Page to Frontend Menus per Customer](customer-all-products-menus.md)
+* [Customize Frontend Menus per Customer](customer-frontend-menus.md)
 * [Configure Settings per Customer](customer-configuration/index.md)
 
 <!-- fa-bars = fa-navicon -->
@@ -57,20 +57,3 @@ All the subsidiary departments and divisions are displayed in the Subsidiaries s
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

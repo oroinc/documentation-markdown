@@ -8,14 +8,14 @@ The data for these lists are loaded from the [website search index](../../Websit
 This was done to avoid unnecessary hydration of product entities, which is quite expensive and requires
 a lot of database requests.
 
-The main entry point to the product lists is <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/ProductBundle/Provider/ProductListBuilder.php" target="_blank">ProductListBuilder</a>. This builder creates a base query to load products
-from website search index, executes this query and converts the result to a list of <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/ProductBundle/Model/ProductView.php" target="_blank">ProductView</a> objects.
+The main entry point to the product lists is <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/ProductBundle/Provider/ProductListBuilder.php" target="_blank">ProductListBuilder</a>. This builder creates a base query to load products
+from website search index, executes this query and converts the result to a list of <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/ProductBundle/Model/ProductView.php" target="_blank">ProductView</a> objects.
 To be able to customize which data should be loaded, this builder dispatches the following events:
 
-* class <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/ProductBundle/Event/BuildQueryProductListEvent.php" target="_blank">BuildQueryProductListEvent</a>, event name: `oro_product.product_list.build_query`.
-* class <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/ProductBundle/Event/BuildQueryProductListEvent.php" target="_blank">BuildQueryProductListEvent</a>, event name: `oro_product.product_list.build_query.PRODUCT_LIST_TYPE`.
-* class <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/ProductBundle/Event/BuildResultProductListEvent.php" target="_blank">BuildResultProductListEvent</a>, event name: `oro_product.product_list.build_result`.
-* class <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/ProductBundle/Event/BuildResultProductListEvent.php" target="_blank">BuildResultProductListEvent</a>, event name: `oro_product.product_list.build_result.PRODUCT_LIST_TYPE`.
+* class <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/ProductBundle/Event/BuildQueryProductListEvent.php" target="_blank">BuildQueryProductListEvent</a>, event name: `oro_product.product_list.build_query`.
+* class <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/ProductBundle/Event/BuildQueryProductListEvent.php" target="_blank">BuildQueryProductListEvent</a>, event name: `oro_product.product_list.build_query.PRODUCT_LIST_TYPE`.
+* class <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/ProductBundle/Event/BuildResultProductListEvent.php" target="_blank">BuildResultProductListEvent</a>, event name: `oro_product.product_list.build_result`.
+* class <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/ProductBundle/Event/BuildResultProductListEvent.php" target="_blank">BuildResultProductListEvent</a>, event name: `oro_product.product_list.build_result.PRODUCT_LIST_TYPE`.
 
 `PRODUCT_LIST_TYPE` here is a unique string that identifies each type of product list.
 The following product list types are available out-of-the-box:

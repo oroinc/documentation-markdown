@@ -73,7 +73,7 @@ Step executor is responsible for data flow. In the step executor, the data retur
 
 This configuration is used by OroBatchBundle and encapsulates three jobs for importing the entity from a CSV file, validating the imported data and exporting the entity to a CSV file.
 
-```yaml
+```php
 connector:
     name: oro_importexport
     jobs:

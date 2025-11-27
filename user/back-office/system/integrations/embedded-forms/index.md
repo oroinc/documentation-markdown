@@ -6,6 +6,11 @@ In Oro application, embedded forms help create the code that may be added to a t
 
 Embedded forms may be used to collect requests of marketing, technical, commercial or any other nature.
 
+The fields of an embedded form depend on its type. The two out-of-the-box types of the embedded forms are:
+
+* Contact Request
+  > ![The contact request form](user/img/system/integrations/emb_form/cont_req.png)
+
 Additional embedded form types may be created in the course of integration with the Oro application, subject to your specific business needs.
 
 ## Create an Embedded Form
@@ -16,7 +21,7 @@ In order to create a new embedded form:
 2. Click **Create Embedded Form**.
 3. Provide the following details:
    * **Title** — The title used to refer to the form in the system. The field must be defined.
-   * **Form Type** — Choose one of the available form types.
+   * **Form Type** — Choose one of the form types described above.
    * **CSS** — Editable CSS. The default CSS corresponds to the initial form design, subject to its type. You can edit the CSS to change such settings as the border width, color, fonts etc.
    * **Success Message** — The message to be displayed on the website following the successful form submission. By default is set to *Form has been submitted successfully*.
    * **Allowed Domains** — Allowed cross origin domains where the form can be embedded. Supports wildcard, e.g., X.example.com.
@@ -28,7 +33,7 @@ Once saved, the form is displayed on the page of all embedded forms under **Syst
 
 ![A list of all embedded forms](user/img/system/integrations/emb_form/emb_form_create_ex_01.png)
 
-You can view <i class="fa fa-eye fa-lg" aria-hidden="true"></i>, edit <i class="fa fa-edit fa-lg" aria-hidden="true"></i>, and delete ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) contact requests using the corresponding action icons.
+You can view <i class="fa fa-eye fa-lg" aria-hidden="true"></i>, edit <i class="fa fa-edit fa-lg" aria-hidden="true"></i>, and delete <i class="fas fa-trash-alt" aria-hidden="true"></i> contact requests using the corresponding action icons.
 
 <a id="admin-embedded-forms-code"></a>
 
@@ -37,7 +42,7 @@ You can view <i class="fa fa-eye fa-lg" aria-hidden="true"></i>, edit <i class="
 To add the necessary embedded form to your website:
 
 1. Navigate to **System > Integrations > Embedded Forms** in the main menu.
-2. Click on the form to open its details page.
+2. Click once on the form to open its details page.
 3. In the **Get Code** section, copy the provided code and paste it to the required section of your website.
 
 ![A sample iframe code for the Thanks for question form](user/img/system/integrations/emb_form/emb_form_code.png)
@@ -47,20 +52,3 @@ To add the necessary embedded form to your website:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

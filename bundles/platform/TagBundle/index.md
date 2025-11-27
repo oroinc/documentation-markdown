@@ -2,30 +2,34 @@
 
 # OroTagBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/TagBundle" target="_blank">OroTagBundle</a> implements tags for application entities and enables users to manage tags on entity view pages, observe them in DataGrids, and use them as filtering fields in report query builders.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/TagBundle" target="_blank">OroTagBundle</a> implements tags for application entities and enables users to manage tags on entity view pages, observe them in DataGrids, and use them as filtering fields in report query builders.
 With this bundle, admin users can enable or disable the tag feature for particular entities in the entity management UI.
 
 Developers can also configure tags for every entity in the entity configuration metadata.
 
 ## Entity Configuration
 
-Tags can only be enabled for Configurable entities. To enable tags for an entity, use the #[Config] attribute, e.g.:
+Tags can only be enabled for Configurable entities. To enable tags for an entity, use the @Config annotation, e.g.:
 
 ```php
+/**
 ...
-#[Config(
-    defaultValues: [
-        ...
-        'tag' => ['enabled' => true]
-        ...
-    ]
-)]
+ * @Config(
+ *      defaultValues={
+ *          ...
+ *          "tag"={
+ *              "enabled"=true
+ *          }
+ *          ...
+ *      }
+ * )
 ...
+ */
 ```
 
 Tags can also be enabled/disabled for an entity in the UI **System > Entities > Entity Management** (attribute Tagging).
 
-**Please note**, <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/TagBundle/Entity/Taggable.php" target="_blank">Taggable interface</a> is still supported, but deprecated. If entity implements Taggable interface, you cannot disable tagging for it in the UI.
+**Please note**, <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/TagBundle/Entity/Taggable.php" target="_blank">Taggable interface</a> is still supported, but deprecated. If entity implements Taggable interface, you cannot disable tagging for it in the UI.
 
 ## Tags in Grids
 
@@ -44,7 +48,9 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
 
 class AcmeDemoBundle implements Migration
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         $options = new OroOptions();
@@ -70,23 +76,23 @@ Tags can be used in reports. If tags are enabled for the entity, virtual field t
 
 By default Tags field is automatically added as the last element in the last sub-block of the first block in entity views.
 
-To disable this behavior set enableDefaultRendering option to \_false_ in the entity #[Config] attribute
+To disable this behavior set enableDefaultRendering option to \_false_ in the entity @Config annotation
 
 ```php
+/**
+...
+ * @Config(
+ *      defaultValues={
+ *          ...
+ *          "tag"={
+ *              "enabled"=true,
+ *              "enableDefaultRendering"=false
+ *          }
+ *          ...
+ *      }
+ * )
 ...
  */
-...
-#[Config(
-    defaultValues: [
-        ...
-        'tag' => [
-            'enabled' => true,
-            'enableDefaultRendering' => false
-        ]
-        ...
-    ]
-)]
-...
 ```
 
 Then you are able to manually render tags somewhere else in the entity view template.

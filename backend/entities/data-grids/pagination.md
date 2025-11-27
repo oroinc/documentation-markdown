@@ -43,10 +43,14 @@ datagrids:
 
 *src/Acme/Bundle/DemoBundle/Controller/QuestionController.php*
 ```php
-#[Route(path: '/question', name: 'acme_demo_question_')]
+/**
+ * @Route("/question", name="acme_demo_question_")
+ */
 class QuestionController extends AbstractController
 {
-    #[Route(path: '/view/{id}', name: 'view', requirements: ['id' => '\d+'])]
+    /**
+     * @Route("/view/{id}", name="view", requirements={"id"="\d+"})
+     */
     public function viewAction(Question $entity): array
     {
         return [

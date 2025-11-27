@@ -8,9 +8,6 @@
 
 This guide explains how to upgrade Oro application to the next version in a development environment.
 
-#### TIP
-If you are looking for specific instructions on upgrading the source code itself, please refer to our detailed guide on [Upgrading the Source Code to v6.1](upgrade-source-code.md#upgrade-to-6).
-
 An absolute path to the directory where an application is installed will be used in the guide and will
 be referred to as **<application-root-folder>** further in this topic.
 
@@ -44,11 +41,74 @@ To retrieve a new version and upgrade your Oro application instance, execute the
    ```
 5. Stop all running consumers.
 6. Create backups of your Database and Code.
-7. Checkout the next application version’s source code. The code is usually stored in a git repository, and stable release versions are marked with git tags.
-   ```none
-   git fetch --tags
-   git checkout <tag-name>
-   ```
+7. Get changes.
+
+   **If You Checkout from the GitHub Repository:**
+
+   Pull changes from the Oro application GitHub repository.
+   * Add the corresponding ORO application repository as an additional remote by running one of commands below. In the example the new remote name is oro.
+     ```bash
+     # OroCommerce Community Edition
+     git remote add oro git@github.com:oroinc/orocommerce-application.git
+     # OroCommerce Enterprise Edition
+     git remote add oro git@github.com:oroinc/orocommerce-enterprise-application.git
+     # OroCRM Community Edition
+     git remote add oro git@github.com:oroinc/crm-application.git
+     # OroCRM Enterprise Edition
+     git remote add oro git@github.com:oroinc/crm-enterprise-application.git
+     # OroPlatform Community Edition
+     git remote add oro git@github.com:oroinc/platform-application.git
+     # OroCommerce Community Edition for Germany
+     git remote add oro git@github.com:oroinc/orocommerce-application-de.git
+     # OroCommerce Enterprise Edition for Germany
+     git remote add oro git@github.com:oroinc/orocommerce-enterprise-application-de.git
+     # OroCommerce Enterprise Edition (without CRM)
+     git remote add oro git@github.com:oroinc/orocommerce-enterprise-nocrm-application.git
+     ```
+   * Fetch tags from the corresponding ORO application repository
+     ```bash
+     git fetch oro --tags
+     ```
+   * Checkout the new branch that will contain the code of the upgraded application to the next version
+     ```bash
+     git checkout -b feature/upgrade
+     ```
+   * Merge changes from the corresponding ORO application repository to the new branch
+     ```bash
+     git merge 5.0.7 --allow-unrelated-histories
+     ```
+
+     Replace `5.0.7` with the version you upgrade the application to.
+   * Resolve conflicts if needed and commit changes
+
+     #### NOTE
+     If you have any customization or third-party extensions installed, make sure that:
+     : - your changes to the `src/AppKernel.php` file are merged to the new file.
+       - your changes to the `src/` folder are merged, and it contains the custom files.
+       - your changes to the `composer.json` file are merged into the new file.
+       - your changes to the `packages.json` file are merged to the new file.
+       - your changes to configuration files in the `config/` folder are merged to the new files.
+
+     ```bash
+     git commit
+     ```
+
+   **If You Download the Source Code Archive:**
+
+   Download the latest version of the application source code from the download section on <a href="http://www.oroinc.com/" target="_blank">the website</a>:
+   * <a href="https://oroinc.com/b2b-ecommerce/download/#source" target="_blank">Download OroCommerce</a>
+   * <a href="https://oroinc.com/orocrm/download/#source" target="_blank">Download OroCRM</a>
+   * <a href="https://oroinc.com/oroplatform/download/#source" target="_blank">Download OroPlatform</a>
+
+   <br/>
+
+   #### NOTE
+   If you have any customization or third-party extensions installed, make sure that:
+   : - your changes to the `src/AppKernel.php` file are merged to the new file.
+     - your changes to the `src/` folder are merged, and it contains the custom files.
+     - your changes to the `composer.json` file are merged into the new file.
+     - your changes to the `packages.json` file are merged to the new file.
+     - your changes to configuration files in the `config/` folder are merged to the new files.
 8. Remove old caches.
    ```none
    rm -rf var/cache/prod/
@@ -64,22 +124,20 @@ To retrieve a new version and upgrade your Oro application instance, execute the
     php bin/console oro:platform:update --env=prod
     ```
 
+    #### NOTE
     To speed up the update process, consider using `--schedule-search-reindexation` or `--skip-search-reindexation` option:
-    * `--schedule-search-reindexation` — postpone search reindexation process until the message queue consumer is started (on step 12 below).
-    * `--skip-search-reindexation` — skip search reindexation. Later, you can start it manually using commands
-      : oro:search:reindex to update search index for the specified entities and oro:website-search:reindex to rebuild storefront search index.See [Search Index: Indexation Process](../architecture/tech-stack/search/index.md#search-index-overview-indexation-process) for more details.
+    > * `--schedule-search-reindexation` — postpone search reindexation process until the message queue consumer is started (on step 12 below).
+    > * `--skip-search-reindexation` — skip search reindexation. Later, you can start it manually using commands
+    >   oro:search:reindex to update search index for the specified entities and oro:website-search:reindex to rebuild storefront search index.
+    >   See [Search Index: Indexation Process](../architecture/tech-stack/search/index.md#search-index-overview-indexation-process).
 
+    #### NOTE
     When the following options are not provided, they are set up automatically for the `test` environment:
-    * –force
-    * –skip-translations
-    * –timeout=600
+    > * –force
+    > * –skip-translations
+    > * –timeout=600
 
     The verbose mode is always set to debug in the `test` environment.
-
-    #### IMPORTANT
-    **Search Reindexation for Different Upgrade Types**
-    * **For LTS migrations (major version upgrades):** Running the search reindexation is **required** to ensure proper indexing and prevent issues with search functionality.
-    * **For patch upgrades (minor updates within the same LTS):** While not mandatory, it is **highly recommended** to run search reindexation to ensure the Elasticsearch index structure remains correct.
 12. Remove the caches.
     ```none
     php bin/console cache:clear --env=prod

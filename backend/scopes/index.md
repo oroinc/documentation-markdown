@@ -58,10 +58,17 @@ class OroCustomerBundleScopeRelations implements Migration, ScopeExtensionAwareI
 {
     use ScopeExtensionAwareTrait;
 
-    #[\Override]
-    public function up(Schema $schema, QueryBag $queries): void
+    /**
+     * {@inheritdoc}
+     */
+    public function up(Schema $schema, QueryBag $queries)
     {
-        $this->scopeExtension->addScopeAssociation($schema, 'customer', 'oro_customer', 'name');
+        $this->scopeExtension->addScopeAssociation(
+            $schema,
+            'customer',
+            OroCustomerBundleInstaller::ORO_CUSTOMER_TABLE_NAME,
+            'name'
+        );
     }
 }
 ```
@@ -72,7 +79,7 @@ class OroCustomerBundleScopeRelations implements Migration, ScopeExtensionAwareI
 
 To extend a scope with a criterion that your bundle may provide:
 
-1. Create a class that implements <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ScopeBundle/Manager/ScopeCriteriaProviderInterface.php" target="_blank">ScopeCriteriaProviderInterface</a>,
+1. Create a class that implements <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ScopeBundle/Manager/ScopeCriteriaProviderInterface.php" target="_blank">ScopeCriteriaProviderInterface</a>,
    as shown in the following example:
 
 ```php
@@ -87,13 +94,17 @@ class ScopeUserCriteriaProvider implements ScopeCriteriaProviderInterface
         $this->tokenStorage = $tokenStorage;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getCriteriaField()
     {
         return self::USER;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getCriteriaValue()
     {
         $token = $this->tokenStorage->getToken();
@@ -107,7 +118,9 @@ class ScopeUserCriteriaProvider implements ScopeCriteriaProviderInterface
         return null;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getCriteriaValueType()
     {
         return User::class;

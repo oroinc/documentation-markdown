@@ -26,4 +26,5 @@ You can enable cross-domain tracking to be able to track user interactions acros
 
 * [Configure Global Google Settings](index.md#admin-configuration-integrations-google)
 * [Configure Google Single Sign On](google-single-sign-on.md#user-guide-google-single-sign-on)
+* [Set Up Voice and Video Calls via Hangouts](hangouts.md#user-guide-hangouts)
 * [Configure Google Tag Manager Integration](../../../../integrations/gtm/index.md#gtm-ga-4-integration)

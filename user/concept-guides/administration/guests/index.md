@@ -68,10 +68,10 @@ Keep in mind that when setting the restrictions to the **Non-Authenticated Visit
 #### HINT
 If you experience issues with visibility configuration, make sure you read the following **visibility rules** and check if your settings are not overridden by other configuration with a higher priority:
 
-* The website visibility may be configured individually for each website. The visibility configured for a particular website has priority over the default website visibility.
-* The product visibility has priority over the category visibility. If the product is visible, but the category is hidden, the product is still visible.
-* The category visibility has a higher priority than the parent category.
-* The customer group visibility overrides visibility for a customer within the same website.
+> * The website visibility may be configured individually for each website. The visibility configured for a particular website has priority over the default website visibility.
+> * The product visibility has priority over the category visibility. If the product is visible, but the category is hidden, the product is still visible.
+> * The category visibility has a higher priority than the parent category.
+> * The customer group visibility overrides visibility for a customer within the same website.
 
 ## Guest Pricing
 
@@ -100,20 +100,3 @@ For the non-registered users to view your custom prices in the storefront, you n
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

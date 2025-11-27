@@ -90,7 +90,7 @@ Each calendar event has a recurrence field. This is a dictionary containing fiel
 </table>
 ```
 
-Usually, for recurring events, only one entity of OroBundleCalendarBundleEntityCalendarEvent is created with reference to the entity of OroBundleCalendarBundleEntityRecurrence. When an API request with a date range is sent to the server, it dynamically expands each recurring event into occurrences of this recurring event. Each occurrence event will have the same data as the original recurring event, but with start and end dates dynamically calculated.
+Usually, for recurring events, only one entity of OroCalendarBundle:CalendarEvent is created with reference to the entity of OroCalendarBundle:Recurrence. When an API request with a date range is sent to the server, it dynamically expands each recurring event into occurrences of this recurring event. Each occurrence event will have the same data as the original recurring event, but with start and end dates dynamically calculated.
 
 ## Exceptions
 
@@ -123,23 +123,23 @@ Here is a list of the key classes:
 
 **Entities**
 
-- <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Entity/Recurrence.php" target="_blank">Entity/Recurrence</a> - Entity that contains all recurrence pattern data and has ‘one to one’ relation with <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Entity/CalendarEvent.php" target="_blank">CalendarEvent</a>.
+- <a href="https://github.com/oroinc/OroCalendarBundle/blob/5.1/Entity/Recurrence.php" target="_blank">Entity/Recurrence</a> - Entity that contains all recurrence pattern data and has ‘one to one’ relation with <a href="https://github.com/oroinc/OroCalendarBundle/blob/5.1/Entity/CalendarEvent.php" target="_blank">CalendarEvent</a>.
 
 **Model**
-- <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Model/Recurrence.php" target="_blank">Model/Recurrence</a> - Model represents domain logic related to recurrence. The recurrence entity is passed to the model in most cases to fulfill its responsibilities. The client code can use it in the application.
+- <a href="https://github.com/oroinc/OroCalendarBundle/blob/5.1/Model/Recurrence.php" target="_blank">Model/Recurrence</a> - Model represents domain logic related to recurrence. The recurrence entity is passed to the model in most cases to fulfill its responsibilities. The client code can use it in the application.
 
 **Model / Strategies**
 Strategies implement different types of recurrence patterns. The model uses strategies to delegate responsibilities related
 to different recurrence patterns. Strategies should not be used directly in application client code.
 
-- <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Model/Recurrence/AbstractStrategy.php" target="_blank">Model/Recurrence/AbstractStrategy</a> - The base class for recurrence patterns. It contains all basic methods that can be reused in child classes.
-- <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Model/Recurrence/DailyStrategy.php" target="_blank">Model/Recurrence/DailyStrategy</a> - The daily recurrence pattern strategy implementation.
-- <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Model/Recurrence/DelegateStrategy.php" target="_blank">Model/Recurrence/DelegateStrategy</a> - The class that determines what recurrence pattern strategy must be used according to the recurrence data.
-- <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Model/Recurrence/MonthlyStrategy.php" target="_blank">Model/Recurrence/MonthlyStrategy</a> - The Monthly recurrence pattern strategy implementation.
-- <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Model/Recurrence/MonthNthStrategy.php" target="_blank">Model/Recurrence/MonthNthStrategy</a> - The MonthNth recurrence pattern strategy implementation.
-- <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Model/Recurrence/StrategyInterface.php" target="_blank">Model/Recurrence/StrategyInterface</a> - An interface of recurrence pattern strategies.
-- <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Model/Recurrence/WeeklyStrategy.php" target="_blank">Model/Recurrence/WeeklyStrategy</a> - The Weekly recurrence pattern strategy implementation.
-- <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Model/Recurrence/YearlyStrategy.php" target="_blank">Model/Recurrence/YearlyStrategy</a> - The Yearly recurrence pattern strategy implementation.
-- <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Model/Recurrence/YearNthStrategy.php" target="_blank">Model/Recurrence/YearNthStrategy</a> - The YearNth recurrence pattern strategy implementation.
+- <a href="https://github.com/oroinc/OroCalendarBundle/blob/5.1/Model/Recurrence/AbstractStrategy.php" target="_blank">Model/Recurrence/AbstractStrategy</a> - The base class for recurrence patterns. It contains all basic methods that can be reused in child classes.
+- <a href="https://github.com/oroinc/OroCalendarBundle/blob/5.1/Model/Recurrence/DailyStrategy.php" target="_blank">Model/Recurrence/DailyStrategy</a> - The daily recurrence pattern strategy implementation.
+- <a href="https://github.com/oroinc/OroCalendarBundle/blob/5.1/Model/Recurrence/DelegateStrategy.php" target="_blank">Model/Recurrence/DelegateStrategy</a> - The class that determines what recurrence pattern strategy must be used according to the recurrence data.
+- <a href="https://github.com/oroinc/OroCalendarBundle/blob/5.1/Model/Recurrence/MonthlyStrategy.php" target="_blank">Model/Recurrence/MonthlyStrategy</a> - The Monthly recurrence pattern strategy implementation.
+- <a href="https://github.com/oroinc/OroCalendarBundle/blob/5.1/Model/Recurrence/MonthNthStrategy.php" target="_blank">Model/Recurrence/MonthNthStrategy</a> - The MonthNth recurrence pattern strategy implementation.
+- <a href="https://github.com/oroinc/OroCalendarBundle/blob/5.1/Model/Recurrence/StrategyInterface.php" target="_blank">Model/Recurrence/StrategyInterface</a> - An interface of recurrence pattern strategies.
+- <a href="https://github.com/oroinc/OroCalendarBundle/blob/5.1/Model/Recurrence/WeeklyStrategy.php" target="_blank">Model/Recurrence/WeeklyStrategy</a> - The Weekly recurrence pattern strategy implementation.
+- <a href="https://github.com/oroinc/OroCalendarBundle/blob/5.1/Model/Recurrence/YearlyStrategy.php" target="_blank">Model/Recurrence/YearlyStrategy</a> - The Yearly recurrence pattern strategy implementation.
+- <a href="https://github.com/oroinc/OroCalendarBundle/blob/5.1/Model/Recurrence/YearNthStrategy.php" target="_blank">Model/Recurrence/YearNthStrategy</a> - The YearNth recurrence pattern strategy implementation.
 
 <!-- Frontend -->

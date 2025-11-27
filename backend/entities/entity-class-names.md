@@ -2,18 +2,18 @@
 
 # Entity Class Name Provider
 
-This service aims to provide human-readable representation in **English** of an entity class name. OroPlatform uses this provider to generate a description of REST API resources that are generated on the fly. See <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Routing/DictionaryEntityApiDocHandler.php" target="_blank">DictionaryEntityApiDocHandler</a> for details.
+This service aims to provide human-readable representation in **English** of an entity class name. OroPlatform uses this provider to generate a description of REST API resources that are generated on the fly. See <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityBundle/Routing/DictionaryEntityApiDocHandler.php" target="_blank">DictionaryEntityApiDocHandler</a> for details.
 
 **Interface of an entity class name provider**
 
-The <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Provider/ChainEntityClassNameProvider.php" target="_blank">entity class name provider</a> service is a “chain” service. It works by asking a set of prioritized providers to get a human-readable representation of an entity class name. Each child service must implement <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Provider/EntityClassNameProviderInterface.php" target="_blank">EntityClassNameProviderInterface</a>. This interface declares the following methods:
+The <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityBundle/Provider/ChainEntityClassNameProvider.php" target="_blank">entity class name provider</a> service is a “chain” service. It works by asking a set of prioritized providers to get a human-readable representation of an entity class name. Each child service must implement <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityBundle/Provider/EntityClassNameProviderInterface.php" target="_blank">EntityClassNameProviderInterface</a>. This interface declares the following methods:
 
 - *getEntityClassName* - returns a human-readable representation for an entity class.
 - *getEntityClassPluralName* - returns a human-readable representation in plural for an entity class.
 
 **Create custom entity class name provider**
 
-To create own provider just create a class implementing <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Provider/EntityClassNameProviderInterface.php" target="_blank">EntityClassNameProviderInterface</a> and register it in DI container with the tag **oro_entity.class_name_provider**. You can also use the existing <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Provider/AbstractEntityClassNameProvider.php" target="_blank">abstract provider</a> as a superclass for your provider.
+To create own provider just create a class implementing <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityBundle/Provider/EntityClassNameProviderInterface.php" target="_blank">EntityClassNameProviderInterface</a> and register it in DI container with the tag **oro_entity.class_name_provider**. You can also use the existing <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityBundle/Provider/AbstractEntityClassNameProvider.php" target="_blank">abstract provider</a> as a superclass for your provider.
 
 *src/Acme/Bundle/DemoBundle/Provider/AcmeClassNameProvider.php*
 ```php
@@ -28,7 +28,9 @@ use Oro\Bundle\EntityBundle\Provider\EntityClassNameProviderInterface;
  */
 class AcmeClassNameProvider extends AbstractEntityClassNameProvider implements EntityClassNameProviderInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getEntityClassName(string $entityClass): ?string
     {
         // add your implementation here
@@ -39,7 +41,9 @@ class AcmeClassNameProvider extends AbstractEntityClassNameProvider implements E
         return "PRIORITY";
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getEntityClassPluralName(string $entityClass): ?string
     {
         // add your implementation here

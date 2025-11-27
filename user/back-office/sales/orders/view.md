@@ -22,12 +22,13 @@ available by default but depend on the order status:
 
 - **Shipping Tracking** — Click to add [shipping tracking](track-order.md#user-guide-shipping-order).
 - **Cancel** — Click to [cancel an order](control.md#doc-orders-actions-cancel). Available only for open orders.
-- **Close** — Click to [close an order](control.md#doc-orders-actions-close). Available only for open and canceled orders.
+- **Close** — Click to [close an order](control.md#doc-orders-actions-close). Available only for open, canceled, and shipped orders.
+- **Mark as Shipped** — Click to [mark an order as shipped](control.md#doc-orders-actions-mark-shipped). Available only for open orders.
+- **Archive** — Click to [archive an old order](control.md#doc-orders-actions-archive). Available only for closed orders.
 - **Add Special Discount** — Click to [add special discounts](../../marketing/promotions/promotions/manage-discounts-in-orders.md#user-guide-sales-orders-promotions-add-special-discount).
 - **Add Coupon Code** — Click to [provide a coupon code](../../marketing/promotions/coupons/index.md#user-guide-marketing-promotions-coupons-edit-on-order-page).
 - **Edit** — Click to [edit an order](manage.md#user-guide-sales-orders-edit).
 - **Delete** — Click to [delete an order](manage.md#doc-orders-actions-delete).
-- **Download** — Click to download a PDF of the current order (available as of OroCommerce version 6.1.6). Each time you click, a new PDF is generated with an updated timestamp.
 - **More Actions** drop-down:
   - **Add Attachment** — Click to [attach a file to the order](../../getting-started/information-management/attachments.md#user-guide-activities-attachments).
   - **Add Note** — Click to [make a note regarding this order](../../getting-started/information-management/notes.md#user-guide-add-note).
@@ -51,11 +52,10 @@ This section is for order details, such as who created the order or to which web
 | **Currency**               | The currency in which the order is made.                                                                                                                                                                                                                           |
 | **Subtotal**               | The amount due for items in the order. Does not include additional costs, taxes, discounts.                                                                                                                                                                        |
 | **Customer**               | The customer that made the order.                                                                                                                                                                                                                                  |
-| **Customer User**          | The customer user that created an order on behalf of their customer.                                                                                                                                                                                               |
-| **Internal Status**        | The order status is managed only in the back-office. See the [description of internal statuses](statuses.md#doc-orders-statuses-internal).                                                                                                                         |
+| **Customer User**          | The customer user that made an order on behalf of the customer.                                                                                                                                                                                                    |
+| **Internal Status**        | The order status visible only in the back-office. See the [description of internal statuses](statuses.md#doc-orders-statuses-internal).                                                                                                                            |
 | **Do Not Ship Later Than** | The date on which the order expires.                                                                                                                                                                                                                               |
 | **Source Document**        | If the order has been created from an RFQ, quote, or another order, this field contains a link to the corresponding record. If the order was created from scratch (in the back-office) or through the quick order form (in the storefront), the field shows ‘N/A’. |
-| **Created By**             | The name of the user who created an order on behalf of a customer user, either via the back-office or [customer user impersonation](../../customers/customer-users/index.md#user-guide-customers-customer-user-impersonate) in the storefront.                     |
 | **Payment Method**         | The payment method selected to pay for the order.                                                                                                                                                                                                                  |
 | **Payment Status**         | Whether the order is already paid in full, the payment for the order is authorized, etc.                                                                                                                                                                           |
 | **Website**                | The storefront website from which the order was made.                                                                                                                                                                                                              |
@@ -90,7 +90,7 @@ If an order contains [product kit(s)](../../products/products/create-kit.md#prod
 
 This section displays details of shipping tracking and cost.
 
-**Discounts**
+**Promotions and Discounts**
 
 This section provides information about promotions and discounts applied to the order. The section is divided into **All Promotions** and **All Special Discounts**.
 
@@ -116,9 +116,9 @@ This section shows order costs, including any discounts (in all currencies, conf
 
 ![The Totals section of the order details page](user/img/sales/orders/order_details_totals.png)
 
-**Payments**
+**Payment History**
 
-This section provides information about payment transactions related to the order.
+This section provides information about payment transactions concerning the order.
 
 ![The Payment History section of the order details page](user/img/sales/orders/order_details_paymenthistory.png)
 
@@ -141,15 +141,9 @@ If you do not see this section, contact your administrator.
 
 If you are an administrator, find the Order entity and check the access level configured for the View Payment action.
 
-**Invoices**
-
-When the invoice functionality is [enabled in the system configuration](../../system/configuration/commerce/sales/global-invoices.md#configuration-guide-commerce-configuration-sales-invoices), you can view invoices associated with an order in the dedicated *Invoices* tab. Click on the invoice to open its view page.
-
-![Invoices tab on the order view page](user/img/sales/invoices/invoices-order-view-page.png)
-
 **Activity**
 
-This section displays any notes, calendar events, conversations or emails related to the order.
+This section displays any notes, calendar events, or emails related to the order.
 
 You can filter activities by type and by date (e.g., the exact date or a date range that covers the activity date) and browse them from the newest to the oldest and vice versa.
 
@@ -161,7 +155,7 @@ Click the activity to see detailed information about it.
 
 To edit the activity, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the row and click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Update**. In the dialog that appears, make the required changes and then click **Save**.
 
-To delete the activity, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the row and click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete**. In the confirmation dialog, click **Yes, Delete**.
+To delete the activity, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the row and click <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete**. In the confirmation dialog, click **Yes, Delete**.
 
 You can add and delete an activity context.
 
@@ -181,7 +175,7 @@ In the **Add Comment** dialog, type your message.
 Use the built-in text editor to format your comment. You can also attach a file to your comment.
 For this, click the **Upload** link in the dialog and locate the required file. When the comment is ready, click **Add**.
 
-To edit or delete a comment, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu next to it and click the <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** icon correspondingly.
+To edit or delete a comment, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu next to it and click the <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** or <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** icon correspondingly.
 
 For more information about activities, see the [Activities](../../activities/index.md#user-guide-productivity-tools) guide.
 
@@ -201,20 +195,3 @@ For information on attachments and how to manage them, see the [Attachments](../
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

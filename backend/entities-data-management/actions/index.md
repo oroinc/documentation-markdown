@@ -25,7 +25,7 @@ operations: # root elements
         extends: acme_demo_operation_base               # (optional) parent operation if needed
         label: 'Acme demo operation'                    # this value will be shown in UI for operation button
         substitute_operation: some_operation            # configuration of 'some_operation' will be replaced by configuration of this operation
-        enabled: $variable                              # operation status will be determined later, means used in application, but button is disabled on front-end if status will be false
+        enabled: false                                  # operation is disabled, means not used in application
         entities: # on view/edit pages of this entities operation button will be shown
             - Acme\Bundle\DemoBundle\Entity\Question    # entity class name
         routes: # on pages with these routes operation button will be shown
@@ -37,7 +37,7 @@ operations: # root elements
         button_options:                                 # (optional) display options for operation button
             icon: fa-check                              # (optional) class of button icon
             class: btn                                  # (optional) class of button
-            group: acme.demo.operations.demogroup.label # (optional) group operation to drop-down on the label
+            group: aсme.demo.operations.demogroup.label # (optional) group operation to drop-down on the label
             template: '@OroAction/Operation/button.html.twig'   # (optional) custom button template
             data:                                               # custom data attributes which will be added to button
                 param: value
@@ -47,9 +47,9 @@ operations: # root elements
                 component_name: '[name$="[component]"]'
                 component_additional: '[name$="[additional]"]'
         frontend_options:                                                 # (optional) display options for operation button
-            confirmation: acme.demo.operations.operation_perform_confirm
+            confirmation: aсme.demo.operations.operation_perform_confirm
             template: '@OroAction/Operation/form.html.twig'               # (optional) custom template, can be used both for page or dialog
-            title: acme.demo.operations.dialog.title                      # (optional) custom title
+            title: aсme.demo.operations.dialog.title                      # (optional) custom title
             title_parameters:
                 '%%some_param%%': $.paramValue
             options:                                                      # (optional) modal dialog options
@@ -98,7 +98,6 @@ operations: # root elements
             '@not_empty': [ $group ]                                      # condition definition
         preactions:                                                       # (optional) any needed pre actions which will execute before pre conditions
             -   '@assign_value': [ $name, 'User Name' ]                   # action alias
-            -   '@assign_value': [ $variable, true ]                      # preaction that determines value for enabled
         form_init:                                                        # (optional) any needed actions which will execute before showing form dialog
             -   '@assign_value': [ $group, 'Group Name' ]                 # action alias
         actions:                                                          # (optional) any needed actions which will execute after click on th button
@@ -111,62 +110,6 @@ operations: # root elements
 ```
 
 This configuration describes the operation that relates to the `Question` entity. The button with the “adme.demo.myentity.operations.myentity_operation” label is displayed on the view page (acme_demo_myentity_view) of this entity (in case the ‘updatedAt’ field > new DateTime(‘now’)). If the expired property of the entity = false, then clicking the button triggers the “assign_value” action that sets the ‘expired’ field to true. If form_options are specified, then the form dialog with attributes fields is displayed when clicking the button. The actions run only on the submit form.
-
-Instead of adding the operation logic to the configuration file, it can be placed in a separate service that implements the `OperationServiceInterface`. This interface has 3 methods: `isPreConditionAllowed`, `isConditionAllowed` and `execute`. If the operation service is used, it should be set in the operation configuration with the `service` parameter. In this case, `preactions`, `preconditions`, `conditions` and `action` are not allowed to be used and their logic must be moved to an appropriate method of the operation service.
-
-*src/Acme/Bundle/DemoBundle/Resources/config/oro/actions.yml*
-```yaml
-operations:
-    label: 'Base acme demo operation'
-    routes:
-        - acme_demo_priority_view
-    acl_resource: acme_demo_priority_view
-    service: acme_demo.operation.base_demo_operation
-```
-
-## Operation Events
-
-The platform provides several events that are triggered at various points in the operation lifecycle. These events allow developers to hook into the execution process and execute custom logic at specific points in the operation. This is particularly useful for adding additional business logic, sending notifications, or updating external systems based on operation activity. Special guard events can be used to prevent the operation from being executed or displayed.
-
-**Available Events**
-
-### oro_operation.announce
-
-Validate whether the operation button is allowed
-This is a guard event.
-
-The two events being dispatched are:
-
-- oro_operation.announce
-- oro_operation.[operation name].announce
-
-### oro_operation.guard
-
-Validate whether the operation is allowed.
-This is a guard event.
-
-The two events being dispatched are:
-
-- oro_operation.guard
-- oro_operation.[operation name].guard
-
-### oro_operation.pre_execute
-
-Operation logic is starting execution (triggered right before the execution of operation actions).
-
-The two events being dispatched are:
-
-- oro_operation.pre_execute
-- oro_operation.[operation name].pre_execute
-
-### oro_operation.execute
-
-Operation logic is being executed (triggered right after execution of operation actions).
-
-The two events being dispatched are:
-
-- oro_operation.execute
-- oro_operation.[operation name].execute
 
 ## Configuration Validation
 
@@ -198,7 +141,7 @@ All configurations apply automatically after their changes are made in the devel
 
 Supposing you need to disable the default DELETE operation for your new MyEntity entity. Here is the case which describes the solution. You can do this in actions.yml under your bundle configuration resources directory:
 
-```yaml
+```php
 operations:
     DELETE:
         exclude_entities: ['MyEntity']
@@ -224,7 +167,7 @@ datagrids:
 
 some_default_common_operation is not displayed at your_datagrid_name grid anymore. However, action_configuration can accept callable as a value, so sometimes the options are occupied by service callback. If it is so, we can use a different approach.
 
-1. Disable the operation for custom datagrid using the exclude_datagrids option in the operation definition. So you can specify the name of the datagrid that should be excluded from the *operation* matching. If another bundle defines your operation, you can use the *merge* behavior of operation configuration and add an additional property value under your bundle configuration. For example, the operation that should not be displayed for the product_view datagrid is the default DELETE operation from OroActionBundle. You can exclude your grid from matching adding the following options to `<YourBundle>/Resources/config/oro/actions.yml` for the backend datagrid and to `<YourBundle>/Resources/views/layouts/<theme>/config/datagrids.yml` for the frontend datagrid.
+1. Disable the operation for custom datagrid using the exclude_datagrids option in the operation definition. So you can specify the name of the datagrid that should be excluded from the *operation* matching. If another bundle defines your operation, you can use the *merge* behavior of operation configuration and add an additional property value under your bundle configuration. For example, the operation that should not be displayed for the product_view datagrid is the default DELETE operation from OroActionBundle. You can exclude your grid from matching with the next addition to <YourBundle>/Resources/config/oro/actions.yml
 
 ```none
 operations:

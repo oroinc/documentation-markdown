@@ -48,7 +48,7 @@ datagrids:
                 inline_editing:
                     enable: true # this cell will be editable
                 expanded: true # this cell will be rendered as radio buttons
-                choices: "@oro_entity_extend.enum_options_provider->getEnumChoicesByCode('cust_prod_visibility')"
+                choices: "@oro_entity_extend.enum_value_provider->getEnumChoicesByCode('cust_prod_visibility')"
                 translatable_options: false
         options:
             cellSelection:
@@ -67,7 +67,7 @@ The section `inline_editing` with the option `enable` for columns makes the cell
 Event listener `\Oro\Bundle\DataGridBundle\EventListener\CellSelectionListener` is applied to all grids with the `cellSelection` option.
 If this option is specified, the listener will add a js module `orodatagrid/js/datagrid/listener/change-editable-cell-listener` to handle changes in behavior in the frontend.
 
-To receive the select options or radio button values, use the `oro_entity_extend.enum_options_provider` service, which provides the ability to get enum options by enum code.
+To receive the select options or radio button values, use the `oro_entity_extend.enum_value_provider` service, which provides the ability to get enum values by enum code.
 
 1. **Add** `oro_entity_changeset` **to form type**
 
@@ -104,7 +104,7 @@ As a result, field `visibilityForCustomer` which contains data in the current fo
 
 1. **Create a custom form handler with processing editable grid cells**
 
-To convert enum option in the handler, use method `getEnumOptionByCode` of the `oro_entity_extend.enum_options_provider` service.
+To convert enum value in the handler, use method `getEnumValueByCode` of the `oro_entity_extend.enum_value_provider` service.
 
 Below is an example of such a handler:
 

@@ -13,7 +13,7 @@ This configuration allows to use Amazon S3 cloud service for the importing and e
 
 **Example**
 
-```yaml
+```php
 services:
     aws_s3.client:
         class: AmazonS3

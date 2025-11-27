@@ -27,7 +27,7 @@ Each layout block is rendered with a **Twig block**, as in:
 
 Twig blocks are organized to Twig files named **block themes**.
 
-For instance, <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/ProductBundle/Resources/views/layouts/default/oro_product_frontend_product_view/layout.html.twig" target="_blank">this block theme</a> is used as a theme for the product display page.
+For instance, <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/ProductBundle/Resources/views/layouts/default/oro_product_frontend_product_view/layout.html.twig" target="_blank">this block theme</a> is used as a theme for the product display page.
 
 <a id="dev-doc-frontend-twig-block-names"></a>
 
@@ -108,7 +108,7 @@ layout:
 ```
 
 **Note:** Form themes are managed separately from the layout block
-themes, see <a href="https://symfony.com/doc/6.4/form/form_themes.html" target="_blank">Form Themes</a> for more details. To apply the form theme, use the `@setFormTheme` action.
+themes, see <a href="https://symfony.com/doc/5.4/form/form_themes.html" target="_blank">Form Themes</a> for more details. To apply the form theme, use the `@setFormTheme` action.
 
 <a id="dev-doc-frontend-locate-block-themes"></a>
 
@@ -129,7 +129,7 @@ To discover variables available in a block, you can use the snippets below:
   ```twig
   {{ dump(_context) }}
   ```
-- To dump all variables to the <a href="https://symfony.com/doc/6.4/profiler.html" target="_blank">Symfony Profiler</a>
+- To dump all variables to the <a href="https://symfony.com/doc/5.4/profiler.html" target="_blank">Symfony Profiler</a>
   ```twig
   {% dump(_context) %}
   ```

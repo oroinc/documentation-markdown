@@ -25,7 +25,7 @@ To change the default sitemap settings for the website:
 Possible combinations
 
 ![Table that explains what landing pages are included and excluded into the sitemap file depending on the selected config options](user/img/system/config_system/sitemap-config-options.png)
-1. Under **Robots.txt**, a user can modify **Robots.Txt Template**, granting or restricting permission for site crawlers to navigate through the specified URLs within your website domain. Initially, the system obtains the default values from the *config/robots.txt.dist* or *robots.%domain.name%.txt* files automatically. Once a user modifies the values in the **Robots.Txt Template** configuration, the system starts adhering to these adjusted values only, subsequently updating the *robots.txt* and *sitemap* files accordingly.
+1. Under **Robots.txt** (available as of OroCommerce version 5.1.9), a user can modify **Robots.Txt Template**, granting or restricting permission for site crawlers to navigate through the specified URLs within your website domain. Initially, the system obtains the default values from the *config/robots.txt.dist* or *robots.%domain.name%.txt* files automatically. Once a user modifies the values in the **Robots.Txt Template** configuration, the system starts adhering to these adjusted values only, subsequently updating the *robots.txt* and *sitemap* files accordingly.
 2. Click **Save**.
 
 <!-- finish -->
@@ -34,20 +34,3 @@ Possible combinations
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

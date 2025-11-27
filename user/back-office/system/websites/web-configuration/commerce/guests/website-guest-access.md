@@ -2,9 +2,6 @@
 
 # Configure Guest Website Access Settings per Website
 
-#### HINT
-This section is part of the [Guest Functions](../../../../../../concept-guides/catalog-promotions/product-management/index.md#concept-guides-product-management) topic that provides a general understanding of the guest access concept in OroCommerce.
-
 To enable guest access per website:
 
 1. Navigate to **System > Websites**.
@@ -27,20 +24,3 @@ To disable guest access globally, clear the **Enable Guest Access** checkbox.
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

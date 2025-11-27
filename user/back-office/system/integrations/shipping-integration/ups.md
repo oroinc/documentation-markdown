@@ -38,6 +38,7 @@ To enable communication with UPS in order to request the shipping cost estimate 
 
 * **Name** – the shipping method name that is shown as an option for shipping configuration in the OroCommerce back-office.
 * **Label** – the shipping method name/label that is shown as a shipping option for the buyer in the OroCommerce storefront on the checkout.
+* **Short label** – the shipping method name/label that is shown in the order details in the OroCommerce back-office and storefront after the order is submitted.
 * **Status** - set the status to **Active** to enable the integration.
 
 1. Set the **Test Mode** into the necessary state. Enable it if you are using the test UPS access key and disable for production access.
@@ -49,9 +50,9 @@ To enable communication with UPS in order to request the shipping cost estimate 
    Never use the UPS access key that is dedicated for the production environment in your sandbox/test OroCommerce environment.
 
    Never enable the Test Mode for the UPS integration on your production instance of OroCommerce.
-2. Provide the UPS connection details: OAuth Client Id and OAuth Client Secret to connect. Click **Check UPS Connection** to ensure UPS API is accessible.
+2. Provide the UPS connection details: *OAuth Client Id* and *OAuth Client Secret* to connect. Click **Check UPS Connection** to ensure UPS API is accessible.
    > #### NOTE
-   > For the case when you update existing integration, you may see the additional deprecated **API user (Deprecated)**, **API Password (Deprecated)**, **API Key (Deprecated)** fields.
+   > For the case when you update existing integration, you may see the additional deprecated **API user (Deprecated)**, **API Password (Deprecated)**, and **API Key (Deprecated)** fields.
 
    > Please follow the <a href="https://developer.ups.com/oauth-developer-guide?loc=en_US" target="_blank">UPS Migration Guide</a> to finalize the migration to OAuth authentication.
    > ![image](user/img/system/integrations/UpdateUPSIntegration.png)
@@ -76,11 +77,7 @@ To enable communication with UPS in order to request the shipping cost estimate 
    Once you select the destination, the list of shipping services appears.
 7. Select the UPS shipping services that should be supported in the OroCommerce shipping options. Use *Ctrl*/*Shift* to select multiple options.
 8. Set status to **Active** to enable the integration.
-
-#### NOTE
-In the **Synchronization Settings** section, select the **Log Warnings** checkbox if you want all synchronization errors to be written into the application log.
-
-1. Click **Save**.
+9. Click **Save**.
 
 Next, set up a shipping rule via the [Shipping Rules Configuration](../../shipping-rules/index.md#sys-shipping-rules) page to enable this shipping method for all or some customer orders.
 

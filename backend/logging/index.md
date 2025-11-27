@@ -20,7 +20,7 @@ Logging of 404 and 405 errors is disabled by default. You can enable it in the m
 
 ### Advanced Logging Configuration
 
-Oro applications use Monolog integration with the Symfony framework with a few additional features built on top. Follow the official Symfony documentation for details on how to configure features like writing logs to different locations, registering a custom log handler (e.g., Mongo, New Relic, Slack), or enabling log rotation (see <a href="https://symfony.com/doc/6.4/logging.html#monolog" target="_blank">Symfony Monolog Documentation</a>).
+Oro applications use Monolog integration with the Symfony framework with a few additional features built on top. Follow the official Symfony documentation for details on how to configure features like writing logs to different locations, registering a custom log handler (e.g., Mongo, New Relic, Slack), or enabling log rotation (see <a href="https://symfony.com/doc/5.4/logging.html#monolog" target="_blank">Symfony Monolog Documentation</a>).
 
 ## Logging Strategy: What to Log
 

@@ -6,7 +6,7 @@
 
 ### oro_html_sanitize
 
-The **oro_html_sanitize** filter removes HTML elements except those that are allowed. You can find the list of allowed HTML tags in the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/FormBundle/Resources/config/oro/app.yml" target="_blank">app.yml</a> file.
+The **oro_html_sanitize** filter removes HTML elements except those that are allowed. You can find the list of allowed HTML tags in the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/FormBundle/Resources/config/oro/app.yml" target="_blank">app.yml</a> file.
 
 ```twig
 {{ data|oro_html_sanitize() }}

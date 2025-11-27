@@ -33,7 +33,6 @@ You integrate OroCommerce with the following systems and services:
 
 * [Check/Money Order](check-money-order/index.md#user-guide-payment-check-money-order)
 * [Payment Terms](payment-terms/index.md#user-guide-payment-payment-providers-overview-payment-term-config)
-* [OroPay](oropay/index.md#user-guide-payment-oropay)
 * [PayPal Payflow Gateway / PayPal Payment Pro](paypal-services/gateway-pro/index.md#sys-integrations-manage-integrations-paypal-payflow-gateway)
 * [PayPal Express](paypal-services/express/index.md#config-guide-payment-paypal-express)
 * [Apruve](apruve/index.md#user-guide-payment-payment-providers-overview-apruve)
@@ -52,7 +51,7 @@ The default OroCommerce application includes the following payment methods out-o
 To delete an integration with the payment provider and disable payment methods they offer in OroCommerce orders and quotes:
 
 1. Navigate to **System > Integrations > Manage Integrations** in the main menu. The **Manage Integrations** page opens.
-2. Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the row with the necessary integration and click the ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** icon.
+2. Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the row with the necessary integration and click the <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** icon.
 
    The confirmation dialog appears.
 
@@ -71,21 +70,4 @@ The payment methods that were based on this integration are no longer usable in 
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->
 <!-- CyberSource Payment Service <cybersource/index> -->

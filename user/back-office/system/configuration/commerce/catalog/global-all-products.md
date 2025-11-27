@@ -16,12 +16,13 @@ In your Oro back-office, you can enable and configure the All Products page for 
 To configure the All Products page:
 
 1. Enable **All Products Page** in system configuration on the required level — globally (see below) or [per website](../../../websites/web-configuration/commerce/catalog/website-all-products.md#sys-conf-commerce-catalog-special-pages-website).
-2. Add it to the storefront as part of either your [web catalog](../../../../marketing/web-catalogs/edit-content-tree/content-variants.md#user-guide-marketing-web-catalog) (**Marketing > Web Catalog**) or storefront menu (**System > Storefront Menus**) on the required level:
-   * [Globally](../../../frontend-menus/global-all-products-menus.md#sys-conf-frontend-menus-all-products-global) (**System > Storefront Menus**)
+2. Add it to the storefront as part of either your [web catalog](../../../../marketing/web-catalogs/edit-content-tree/content-variants.md#user-guide-marketing-web-catalog) (**Marketing > Web Catalog**) or frontend menu (**System > Frontend Menus**) on the required level:
+   * [Globally](../../../frontend-menus/global-all-products-menus.md#sys-conf-frontend-menus-all-products-global) (**System > Frontend Menus**)
    * [Per organization](../../../user-management/organizations/organization-all-products-menus.md#sys-users-organization-menus-all-products-organization) (**System > User Management > Organizations**)
    * [Per website](../../../websites/website-all-products-menu.md#sys-users-organization-menus-all-products-website) (**System > Websites**)
    * [Per customer group](../../../../customers/customer-groups/customer-group-all-products-menus.md#user-guide-customers-customer-groups-all-products) (**Customers > Customer Group**)
    * [Per customer](../../../../customers/customers/customer-all-products-menus.md#user-guide-customers-customers-all-products) (**Customers > Customers**)
+3. Check the [example of adding the All Products page](../../../websites/web-configuration/commerce/catalog/website-all-products.md#user-guide-all-products-sample) for your reference.
 
 #### NOTE
 Please note that it is recommended to enable the All Products page exclusively for *small catalogs* with no more than a few hundred products, otherwise browser performance might be affected.

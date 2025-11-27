@@ -1,10 +1,10 @@
-<a id="attribute-config"></a>
+<a id="annotation-config"></a>
 
-# #[Config]
+# @Config
 
-This attribute is used to configure default values for configurable entity classes.
+This annotation is used to configure default values for configurable entity classes.
 
-## Arguments
+## Options
 
 ### `defaultValues`
 
@@ -12,13 +12,17 @@ Configures default values for particular config options on a per property basis:
 
 ```php
 // ...
-use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\Config;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config;
 
-#[Config(
-    defaultValues: [
-        "dataaudit" => ["auditable" => true]
-    ]
-)]
+/**
+ * @Config(
+ *      defaultValues={
+ *          "dataaudit"={
+ *              "auditable"=true
+ *          }
+ *      }
+ * )
+ */
 class User
 {
     // ...
@@ -60,7 +64,7 @@ This parameter sets default settings for OroActivityBundle. This bundle helps cl
 
 #### `attachment`
 
-You can configure this attribute when you use <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/AttachmentBundle/Provider/AttachmentProvider.php" target="_blank">AttachmentProvider</a>.
+You can configure this attribute when you use <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/AttachmentBundle/Provider/AttachmentProvider.php" target="_blank">AttachmentProvider</a>.
 
 * **enabled** *boolean* - indicates whether attachments can be added to the entity or not.
 * **maxsize** *integer* - is the max size of the uploaded file in megabytes.
@@ -100,6 +104,7 @@ Dictionary entities are responsible for storing a predefined set of values of a 
 * **virtual_fields** *string[]* - specifies the list of fields for which the virtual fields can be created. If it is not specified, the virtual fields are created for all fields, except for the identifier ones.
 * **search_fields** *string[]* - specifies the list of fields used for searching in the reports filter.
 * **representation_field** *string* - specifies the representation field used to render titles for search items in the reports filter.
+* **activity_support** *boolean* - enables the “activity_support” functionality.
 
 #### `draft`
 
@@ -128,7 +133,7 @@ This attribute is only used for Enum parameters. For more information, see [Opti
 * **code** *string* - a unique identifier of this enum.
 * **public** *boolean* - indicates whether this enum is public. Public enums can be used in any extendable entity, which means that you can create a field of this enum type in any entity. Private enums cannot be reused.
 * **multiple** *boolean* - Indicates whether several options can be selected for this enum or it supports only one selected option.
-* **immutable** *boolean or array* - is used to prohibit changing the list of enum options and a public flag. This means that values cannot be added or deleted, but it is still possible to update the names of existing values, reorder them and change the default values. Below are examples of possible values:
+* **immutable** *boolean or array* - is used to prohibit changing the list of enum values and a public flag. This means that values cannot be added or deleted, but it is still possible to update the names of existing values, reorder them and change the default values. Below are examples of possible values:
   > - false or empty array - no any restrictions
   > - true - means that all constraints are applied, so it will not be allowed to add/delete options and change ‘public’ flag
   > - ‘add’, ‘delete’, ‘public’ - the same as true; it will not be allowed to add/delete options and change ‘public’ flag
@@ -143,7 +148,7 @@ This attribute sets default settings for [Extend Entities](../../entities/extend
   > - `ExtendScope::OWNER_CUSTOM` - The property is user-defined, and the core system should handle how the property appears in grids, forms, etc. (if not configured otherwise).
   > - `ExtendScope::OWNER_SYSTEM` - Nothing is rendered automatically, and you must explicitly specify how to show the property in different parts of the system (grids, forms, views, etc.).
 * **table** *string* - is the table name for a custom entity. This is optional attribute. If it is not specified, the table name is generated automatically.
-* **inherit** *string* - is the parent class name. You are not usually requires to specify this attribute as it is calculated automatically for regular extend and custom entities. An example of an entity where this attribute is used is EnumOption.
+* **inherit** *string* - is the parent class name. You are not usually requires to specify this attribute as it is calculated automatically for regular extend and custom entities. An example of an entity where this attribute is used is EnumValue.
 * **pending_changes** - when a user changes something that requires schema update, this change is not applied to the configuration, but is stored into “pending_changes” as changeset. The format of changeset is [‘scope’ => [‘field’ => [‘oldValue’, ‘newValue’], …], …].
   > Let’s assume that a user has an active activity email and changes it to a task. In this case, the value of pending changes would be the following:
   > ```none
@@ -155,12 +160,12 @@ This attribute sets default settings for [Extend Entities](../../entities/extend
   > ]
   > ```
 * **is_serialized** *boolean* - if TRUE then field data will be saved in serialized_data column without doctrine schema update.
-* **state** *string* - the state of the extend config field. See available states in <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityExtendBundle/EntityConfig/ExtendScope.php" target="_blank">ExtendScope.php</a>.
+* **state** *string* - the state of the extend config field. See available states in <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityExtendBundle/EntityConfig/ExtendScope.php" target="_blank">ExtendScope.php</a>.
 * **is_extend** *boolean* - if true, the config entity is able to extend.
 * **is_deleted** *boolean* - if true, the config entity is able to delete.
 * **upgradeable** *boolean* - if true, the extend config entity is able to update.
 * **pk_columns** *string[]* - a list of Primary Keys column name.
-* **index** *string[]* - a list of index fields of the entity. See available index states in <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/EntityConfig/IndexScope.php" target="_blank">IndexScope.php</a>
+* **index** *string[]* - a list of index fields of the entity. See available index states in <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityBundle/EntityConfig/IndexScope.php" target="_blank">IndexScope.php</a>
 * **schema** *array* - contains information about the structure and entity class of the extend.
 * **relation** *array* - contains information about the relation of the entity.
 * **extend_class** *string* - extends class name.
@@ -257,7 +262,7 @@ Data sharding allows to improve OroCommerce operation and accelerate database pe
 
 #### `slug`
 
-This attribute is set for <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/RedirectBundle/Entity/SluggableInterface.php" target="_blank">SluggableInterface</a>.
+This attribute is set for <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/RedirectBundle/Entity/SluggableInterface.php" target="_blank">SluggableInterface</a>.
 
 * **source** *string* - slug source field name.
 
@@ -284,23 +289,23 @@ Example:
 namespace Acme\Bundle\DemoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\Config;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config;
 use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityInterface;
 use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityTrait;
 
 /**
- * ORM Entity NotManageableEntity
- */
-#[ORM\Table(name: 'acme_demo_not_manageable_entity')]
-#[Config(
-    defaultValues: [
-        'entity_management' => ['enabled' => false]
-    ]
-)]
-class NotManageableEntity implements ExtendEntityInterface
-{
-    use ExtendEntityTrait;
-}
+ * ORM Entity NotManageableEntity.
+ *
+ * @ORM\Table(
+ *     name="acme_demo_not_manageable_entity"
+ * )
+ *         },
+ *         "comment"={
+ *             "immutable"=true
+ *         },
+ *         "activity"={
+ *             "immutable"=true
+     */
 ```
 
 #### `territory`
@@ -317,11 +322,13 @@ The route name of the view that shows the datagrid of available records:
 
 ```php
 // ...
-use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\Config;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config;
 
-#[Config(
-    routeName: "oro_user_index"
-)]
+/**
+ * @Config(
+ *      routeName="oro_user_index"
+ * )
+ */
 class User
 {
     // ...
@@ -334,11 +341,13 @@ The route name of a controller that shows a particular object:
 
 ```php
 // ...
-use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\Config;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config;
 
-#[Config(
-    routeView: "oro_user_view"
-)]
+/**
+ * @Config(
+ *      routeView="oro_user_view"
+ * )
+ */
 class User
 {
     // ...
@@ -351,11 +360,13 @@ The route name of a controller that creates an object:
 
 ```php
 // ...
-use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\Config;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config;
 
-#[Config(
-    routeCreate: "oro_user_create"
-)]
+/**
+ * @Config(
+ *      routeCreate="oro_user_create"
+ * )
+ */
 class User
 {
     // ...
@@ -368,11 +379,13 @@ The route name of controller action that updates an object:
 
 ```php
 // ...
-use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\Config;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config;
 
-#[Config(
-    routeUpdate: "oro_user_update"
-)]
+/**
+ * @Config(
+ *      routeUpdate="oro_user_update"
+ * )
+ */
 class User
 {
     // ...

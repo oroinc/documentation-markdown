@@ -2,11 +2,10 @@
 
 # OroShoppingListBundle
 
-<a href="https://github.com/oroinc/orocommerce/tree/master/src/Oro/Bundle/ShoppingListBundle" target="_blank">ShoppingListBundle</a> adds the ShoppingList entity to the OroCommerce application, provides UI for the OroCommerce to create, view and manage shopping lists.
+<a href="https://github.com/oroinc/orocommerce/tree/5.1/src/Oro/Bundle/ShoppingListBundle" target="_blank">ShoppingListBundle</a> adds the ShoppingList entity to the OroCommerce application, provides UI for the OroCommerce to create, view and manage shopping lists.
 
 ## Related Documentation
 
 * [Shopping List in the Storefront](shopping-list-on-storefront.md)
-* [Shopping List Page Validation](shopping-list-page-validation.md)
 
 <!-- Frontend -->

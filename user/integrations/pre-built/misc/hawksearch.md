@@ -2,8 +2,8 @@
 
 # Integration with Hawksearch
 
-#### IMPORTANT
-This is a custom extension, not a core feature of OroCommerce, and is not covered by the Oro User License Agreement. Please <a href="https://oroinc.com/contact-us/" target="_blank">contact our support team</a> for more information on available integration options. You can also visit our <a href="https://extensions.oroinc.com/" target="_blank">extensions store</a> to explore other integrations and extensions.
+#### HINT
+This is an on-demand integration and will need customization to your specific needs. Please <a href="https://oroinc.com/contact-us/" target="_blank">contact our support team</a> for more information on available integration options, or check out our <a href="https://extensions.oroinc.com/" target="_blank">extensions store</a> for a range of other integrations we offer.
 
 Oro offers integration with Hawksearch, a search and navigation platform designed for e-commerce websites. It provides advanced search and filtering capabilities to improve the user experience and help customers find products more easily.
 

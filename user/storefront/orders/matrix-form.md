@@ -9,33 +9,24 @@ Depending on the configuration:
 1. The matrix form can be displayed:
    * on a product page:
 
-   ![Different matrix form view options displayed on the product page in the storefront](user/img/system/config_commerce/product/matrix_view_on_product_page.png)
+   ![image](user/img/system/config_commerce/product/matrix_product_view.png)
    * on the product listing:
 
-   ![Different matrix form view options displayed on the product listing page in the storefront](user/img/system/config_commerce/product/matrix_view_on_product_listing.png)
+   ![image](user/img/system/config_commerce/product/matrix_product_listing.png)
    * on a shopping list page:
 
-   ![Different matrix form view options displayed on the product shopping list page in the storefront](user/img/system/config_commerce/product/matrix_shopping_list.png)
+   ![image](user/img/system/config_commerce/product/matrix_shopping_list.png)
+   * as a popup when clicking the **Update Shopping List** button on the product page.
+
+   ![image](user/img/system/config_commerce/product/matrix_popup.png)
 2. Enter the number of items for each category.
-3. Click **Add to Shopping List** on the bottom right of the matrix ordering form. Alternatively, select the shopping list to add the items to, or create a new shopping list by clicking ![ChevronDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/chevron-down.svg) and selecting your option.
-   ![image](user/img/system/config_commerce/product/matrix_add_to_shopping_list.png)
+3. Click **Add to Shopping List** on the bottom right of the matrix ordering form. Alternatively, select the shopping list to add the items to, or create a new shopping list by clicking <i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i> and selecting your option.
+   ![image](user/img/storefront/orders/matrix_form_frontend.png)
 
-However, please keep in mind, that your website configuration may be different, and the matrix form may be unavailable.
+However, please keep in mind, that your website configuration may be different and the matrix form may be unavailable.
 
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->
+<!-- fa-bars = fa-navicon -->
+<!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
+<!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
+<!-- Check mark in the square. -->
+<!-- SortDesc is also used as drop-down arrow -->

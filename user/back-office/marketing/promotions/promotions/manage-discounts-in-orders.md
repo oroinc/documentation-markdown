@@ -2,7 +2,7 @@
 
 # Manage Discounts in Orders
 
-You can view discounts applied to a specific order under the dedicated **Discounts** section on the order page. This section is divided into **All Promotions** and **All Special Discounts**.
+You can view discounts applied to a specific order under the dedicated **Promotions and Discounts** section on the order page. This section is divided into **All Promotions** and **All Special Discounts**.
 
 Within **All Promotions**, you can view promotions and coupon codes.
 
@@ -28,8 +28,8 @@ You cannot use two coupon codes for one order if they are part of the same promo
 
 Promotion can be applied to the existing order in two ways:
 
-* **By creating a new promotion** — If there are no available promotions applicable to the items from the order, you need to [create a new promotion](create.md#user-guide-marketing-promotions-create) with the necessary products added to it. Once you open the order edit page, the created promotion will be added to the order automatically and will be displayed in the **Discounts** section under **All Promotions**.
-* **By applying an existing promotion** — If the promotion applicable to the order items was created after the order had been placed, it will be added automatically once you open the order edit page. This promotion will be displayed in the **Discounts** section under **All Promotions**.
+* **By creating a new promotion** — If there are no available promotions applicable to the items from the order, you need to [create a new promotion](create.md#user-guide-marketing-promotions-create) with the necessary products added to it. Once you open the order edit page, the created promotion will be added to the order automatically and will be displayed in the **Promotions and Discounts** section under **All Promotions**.
+* **By applying an existing promotion** — If the promotion applicable to the order items was created after the order had been placed, it will be added automatically once you open the order edit page. This promotion will be displayed in the **Promotions and Discounts** section under **All Promotions**.
 
 The following illustration is an example of multiple discounts applied to one order:
 
@@ -41,8 +41,12 @@ The following illustration is an example of multiple discounts applied to one or
 
 To add one-time personalized discounts for selected customers:
 
-1. On the order page, click **Add Special Discount** from the **More Actions** menu.
-   ![More Actions menu options on the order page](user/img/marketing/promotions/more-actions-discount.png)
+1. On the order page, click **Add Special Discount** on the top.
+
+   Alternatively:
+
+   Click **Add Special Discount**  under **Promotions and Discounts > All Special Discounts**.
+   ![Highlight the Add Special Discount button under the Promotions and Discounts section](user/img/marketing/promotions/AddSpecialDiscount4.png)
 2. In the form that opens, provide the following information:
    * **Discount** — Provide the desired discount amount (in currency or percents). This field is mandatory.
    * **Description** — Provide the reason for the special discount. This field is optional.
@@ -56,13 +60,11 @@ This way, you can apply one or more special discounts to selected orders.
 
 ## Manage Discounts When Editing the Order
 
-You can manage promotions, coupons and special discounts for the required order by opening its edit page and navigating to the **Discounts** section.
+You can manage promotions, coupons and special discounts for the required order by opening its edit page and navigating to the **Promotions and Discounts** section.
 
-![Highlight the Add Special Discount button under the Promotions and Discounts section](user/img/marketing/promotions/AddSpecialDiscount4.png)
+Under **All Promotions**, you can <i class="fa fa-eye fa-lg" aria-hidden="true"></i> view details of the selected promotion or coupon code, <i class="fa fa-times fa-lg" aria-hidden="true"></i> deactivate, or <i class="fas fa-trash-alt" aria-hidden="true"></i> delete them from the system.
 
-Under **All Promotions**, you can <i class="fa fa-eye fa-lg" aria-hidden="true"></i> view details of the selected promotion or coupon code, <i class="fa fa-times fa-lg" aria-hidden="true"></i> deactivate, or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) delete them from the system.
-
-Under **All Special Discounts**, you can <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit, or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) remove the discount.
+Under **All Special Discounts**, you can <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit, or <i class="fas fa-trash-alt" aria-hidden="true"></i> remove the discount.
 
 ![View the actions that you can do to promotions and discounts](user/img/marketing/promotions/ManagePromotionsIcons.png)
 <!-- finish_promotions_in_order -->
@@ -71,20 +73,3 @@ Under **All Special Discounts**, you can <i class="fa fa-edit fa-lg" aria-hidden
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

@@ -2,7 +2,7 @@
 
 # OroNotificationBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/NotificationBundle" target="_blank">OroNotificationBundle</a> extends the OroEmailBundle capabilities and enables the email notification feature in Oro applications. It provides the UI and CLI tool to send and manage email notifications.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/NotificationBundle" target="_blank">OroNotificationBundle</a> extends the OroEmailBundle capabilities and enables the email notification feature in Oro applications. It provides the UI and CLI tool to send and manage email notifications.
 
 ## Console Commands
 
@@ -47,7 +47,7 @@ Make sure that the consumer is running.
 
 ## Extend Additional Associations
 
-To add new associations to Additional Associations group, create a class that implements <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/NotificationBundle/Provider/AdditionalEmailAssociationProviderInterface.php" target="_blank">AdditionalEmailAssociationProviderInterface</a> and registered in the DI container with the oro_notification.additional_email_association_provider tag.
+To add new associations to Additional Associations group, create a class that implements <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/NotificationBundle/Provider/AdditionalEmailAssociationProviderInterface.php" target="_blank">AdditionalEmailAssociationProviderInterface</a> and registered in the DI container with the oro_notification.additional_email_association_provider tag.
 
 An example:
 
@@ -73,7 +73,9 @@ An example:
    >         $this->translator = $translator;
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function getAssociations(string $entityClass): array
    >     {
    >         if (!is_a($entityClass, Some::class, true)) {
@@ -88,7 +90,9 @@ An example:
    >         ];
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function isAssociationSupported($entity, string $associationName): bool
    >     {
    >         return
@@ -96,7 +100,9 @@ An example:
    >             && 'someAssociation' === $associationName;
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function getAssociationValue($entity, string $associationName)
    >     {
    >         // get target entity logic

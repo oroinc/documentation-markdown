@@ -61,7 +61,7 @@ Color settings
 
 ## Dashboard
 
-The Seller Dashboard is represented by a twig template, see @OroSellerDashboard/Index/default.html.twig.
+The Seller Dashboard is represented by a twig template, see OroBundleSellerDashboardBundleResourcesviewsIndexdefault.html.twig.
 
 ## Date periods
 
@@ -80,10 +80,10 @@ As an example, the period `Year`:
 \* in dashboard template `OroSellerDashboardBundle:Index:default.html.twig` in period switcher :
 
 ```html
-<div class="btn-group">
+<ul class="buttonwrapper">
     ...
-    <button class="btn" data-period="year">{{ 'oro.seller_dashboard.period.year'|trans }}</button>
-</div>
+    <li id="year"><label>{{ 'Orosellerdashboard.period.year'|trans }}</label></li>
+</ul>
 ```
 
 * in `AbstractChartDataProvider` is used in methods `getIntervalsForPeriod` and `getDateRanges`

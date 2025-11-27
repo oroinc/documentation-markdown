@@ -13,9 +13,9 @@ To see the Layout section, click the Layout icon on the Symfony Toolbar:
 
 ![Layout developer toolbar](img/frontend/developer_toolbar_layout_icon.png)
 
-### Layout Updates
+### Layout updates in the default theme can be added to:
 
-The layout can be updated for a particular theme, specific pages, or widget containers.
+Suggestions, where to place layout updates for the active theme, to apply them to the current page, widget container or to all the pages.
 
 <a id="dev-doc-frontend-layouts-debugging-layout-tree"></a>
 

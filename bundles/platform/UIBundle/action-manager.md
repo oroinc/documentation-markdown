@@ -80,6 +80,6 @@ or hook parameter can get multiple properties
 ```
 
 #### HINT
-See more examples in ActionManager.addAction <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/UIBundle/Resources/public/js/app/modules/jstree-actions-module.js" target="_blank">oroui/js/app/modules/jstree-actions-module.js</a>
+See more examples in ActionManager.addAction <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/UIBundle/Resources/public/js/app/modules/jstree-actions-module.js" target="_blank">oroui/js/app/modules/jstree-actions-module.js</a>
 
 <!-- Frontend -->

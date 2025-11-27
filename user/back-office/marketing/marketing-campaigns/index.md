@@ -74,10 +74,10 @@ The URL parameter and the push code provide you with different options to log a 
 The first option is a URL parameter:
 
 ```html
-?pk_campaign=buy_2_get_1_free
+?pk_campaign=btwogonefree
 ```
 
-It is used when you have a tracking website, and you want to calculate the events for multiple campaigns and from different sources, such as an email link, Youtube, social media, paid ads or organic search visits. It should be added to the URL of the website you want to monitor. The event is logged only when a user reaches the website via the specific link with this parameter (for example, *sample-site.net?pk_campaign=buy_2_get_1_free*).
+It is used when you have a tracking website, and you want to calculate the events for multiple campaigns and from different sources, such as an email link, Youtube, social media, paid ads or organic search visits. It should be added to the URL of the website you want to monitor. The event is logged only when a user reaches the website via the specific link with this parameter (for example, *sample-site.net?pk_campaign=btwogonefree*).
 
 In the **Events** section on the campaign’s page, you will see all the events logged under this campaign.
 
@@ -90,7 +90,7 @@ The idea behind the URL parameter is that each campaign is assigned its own uniq
 The second option is a push code:
 
 ```html
-_paq.push(['setCampaignName', 'buy_2_get_1_free']);
+_paq.push(['setCampaignName', 'btwogonefree']);
 ```
 
 This code is used when you run only one marketing campaign on your website, so all user interactions within your website should be uniquely assigned to this particular campaign regardless of the source the visitors used to reach your website.
@@ -101,15 +101,14 @@ In this case, you need to insert this push code into the javascript code of your
 <script type="text/javascript">
     var _paq = _paq || [];
     _paq.push(['setUserId', 'guest' ]);
-    _paq.push(['setCampaignName', 'buy_2_get_1_free']);
+    _paq.push(['setCampaignName', 'btwogonefree']);
 ```
 
 No matter which code you choose, a URL Parameter or a Push Code, the results will be displayed in the report.
 
 You can export this report at any time by clicking the **Export Grid** button.
 
-<!-- .. image:: /user/img/marketing/marketing/export_grid.png
-:alt: Click the export grid button -->
+![Click the export grid button](user/img/marketing/marketing/export_grid.png)
 
 <a id="user-guide-marketing-campaigns-actions"></a>
 
@@ -125,7 +124,7 @@ You can manage marketing campaigns directly from their details page. Here, you c
 
 The same actions are available for a campaign after you navigate to **Marketing > Campaigns** in the main menu.
 
-Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the required tracking website and select the necessary action, either <i class="fa fa-eye fa-lg" aria-hidden="true"></i> View, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> Edit, or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) Delete.
+Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the required tracking website and select the necessary action, either <i class="fa fa-eye fa-lg" aria-hidden="true"></i> View, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> Edit, or <i class="fas fa-trash-alt" aria-hidden="true"></i> Delete.
 
 ![Actions that are available from the page of all marketing campaigns](user/img/marketing/marketing/campaign_actions_general.png)
 
@@ -148,7 +147,7 @@ To share a marketing campaign with other Oro application user:
 The **Already shared with** section gets automatically populated with the person you have added.
 
 1. Click **Apply** to save the changes.
-2. To cancel the campaign sharing with a particular person, click **Share**, and then click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) next to the username. Use mass actions to cancel sharing for more than one user.
+2. To cancel the campaign sharing with a particular person, click **Share**, and then click <i class="fas fa-trash-alt" aria-hidden="true"></i> next to the username. Use mass actions to cancel sharing for more than one user.
 
 <!-- stop -->
 <!-- fa-bars = fa-navicon -->
@@ -156,20 +155,3 @@ The **Already shared with** section gets automatically populated with the person
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

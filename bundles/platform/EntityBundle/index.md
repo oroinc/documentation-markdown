@@ -2,7 +2,7 @@
 
 # OroEntityBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle" target="_blank">OroEntityBundle</a> extends the Doctrine ORM functionality with additional field types and helpers. The bundle introduces entity aliases that enable the entity types reference in a shorter form.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/EntityBundle" target="_blank">OroEntityBundle</a> extends the Doctrine ORM functionality with additional field types and helpers. The bundle introduces entity aliases that enable the entity types reference in a shorter form.
 
 ## Related Documentation
 

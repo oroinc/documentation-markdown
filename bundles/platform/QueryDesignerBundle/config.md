@@ -12,12 +12,12 @@ query_designer:
         # put configuration of aggregating functions here
 ```
 
-You can find all available configuration options in the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/QueryDesignerBundle/QueryDesigner/Configuration.php" target="_blank">Configuration.php file</a>.
+You can find all available configuration options in the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/QueryDesignerBundle/QueryDesigner/Configuration.php" target="_blank">Configuration.php file</a>.
 
 ## Filters Configuration
 
 This section describes how you can configure the list of filters are displayed on the results page (e.g., a report results grid) and intended for filtering the resulting data.
-The <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/QueryDesignerBundle/Resources/config/oro/query_designer.yml" target="_blank">configuration of default filters</a> describes filters for general data types, such as string, integer, money, percent etc. For instance, take a look at the configuration of a filter used to filter textual data:
+The <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/QueryDesignerBundle/Resources/config/oro/query_designer.yml" target="_blank">configuration of default filters</a> describes filters for general data types, such as string, integer, money, percent etc. For instance, take a look at the configuration of a filter used to filter textual data:
 
 ```yaml
 query_designer:
@@ -32,10 +32,10 @@ First, the applicable attribute describes rules, and then a filter is used. In t
 
 - type - field data type
 - field - field name
-- entity - entity name, for example `Oro\Bundle\UserBundle\Entity\User`
+- entity - entity name, for example `OroUserBundle:User` or `Oro\Bundle\UserBundle\Entity\User`
 - identifier - true/false, check if the field is the primary key
 
-For instance, if you need to use a special filter for the name field of the User entity, you can use the following applicable condition: {entity: OroBundleUserBundleEntityUser, field: name}.
+For instance, if you need to use a special filter for the name field of the User entity, you can use the following applicable condition: {entity: OroUserBundle:User, field: name}.
 The type attribute sets the identifier of a filter UI control. To find all existing controls, run the following command:
 
 ```php
@@ -60,7 +60,7 @@ This will add an additional condition to the applicable attribute of the existin
 
 ## Grouping Configuration
 
-Currently, the configuration of the grouping columns has only one attribute - exclude. With its help, you can specify which fields cannot be used in the GROUP BY SQL clause. <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/QueryDesignerBundle/Resources/config/oro/query_designer.yml" target="_blank">By default</a> the following data types are not available for grouping: array, object. Here is an example of grouping configuration:
+Currently, the configuration of the grouping columns has only one attribute - exclude. With its help, you can specify which fields cannot be used in the GROUP BY SQL clause. <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/QueryDesignerBundle/Resources/config/oro/query_designer.yml" target="_blank">By default</a> the following data types are not available for grouping: array, object. Here is an example of grouping configuration:
 
 ```yaml
 query_designer:
@@ -72,7 +72,7 @@ Each item in the exclude array can have the following attributes:
 
 - type - field data type
 - field - field name
-- entity - entity name, for example `Oro\Bundle\UserBundle\Entity\User`
+- entity - entity name, for example `OroUserBundle:User` or `Oro\Bundle\UserBundle\Entity\User`
 - identifier - true/false, check if the field is the primary key
 
 ## Aggregating Functions Configuration
@@ -98,8 +98,8 @@ Each item in the applicable array can have the following attributes:
 
 - type - field data type
 - field - field name
-- entity - entity name, for example `Oro\Bundle\UserBundle\Entity\User`
-- parent_entity - the name of parent entity, for example `Oro\Bundle\UserBundle\Entity\User`
+- entity - entity name, for example `OroUserBundle:User` or `Oro\Bundle\UserBundle\Entity\User`
+- parent_entity - the name of parent entity, for example `OroUserBundle:User` or `Oro\Bundle\UserBundle\Entity\User`
 - identifier - true/false, check if the field is the primary key
 
 ## Dump Reference Structure

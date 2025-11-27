@@ -8,7 +8,7 @@ There are three content restriction modes: secure (the default mode), selective,
 
 The secure content restriction mode is turned on by default. You may want to switch to the **selective** mode if you work in a production system and need to enable users with corresponding permissions to insert potentially unsafe content via the back-office UI into certain fields of specific entities. If you develop in the system that no one else has access to, you can enable **unsecure** mode to stop validating the content added to the WYSIWYG fields in the UI. In this mode, any content can be inserted via the application UI by any user with the edit permissions for the WYSIWYG field.
 
-The default **secure** configuration is stored in the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/FormBundle/Resources/config/oro/app.yml" target="_blank">app.yml file of the OroFormBundle</a>. The default configuration for the **selective** mode is stored <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/CMSBundle/Resources/config/oro/app.yml" target="_blank">in the app.yml file of the CMSBundle</a>.
+The default **secure** configuration is stored in the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/FormBundle/Resources/config/oro/app.yml" target="_blank">app.yml file of the OroFormBundle</a>. The default configuration for the **selective** mode is stored <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/CMSBundle/Resources/config/oro/app.yml" target="_blank">in the app.yml file of the CMSBundle</a>.
 
 As it is not possible to change restrictions via the back-office application UI, you need to override the default configuration file if you want to lift the default secure content restrictions.
 

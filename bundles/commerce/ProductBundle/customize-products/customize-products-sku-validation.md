@@ -28,7 +28,9 @@ There are 2 ways to override the oro_product.sku.regex_pattern parameter in your
 
    > class OverrideProductSKUCompilerPass implements CompilerPassInterface
    > {
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function process(ContainerBuilder $container)
    >     {
    >         $container->setParameter('oro_product.sku.regex_pattern', '/^[a-z]*$/');
@@ -47,7 +49,9 @@ There are 2 ways to override the oro_product.sku.regex_pattern parameter in your
 
    > class AcmeDemoBundle extends Bundle
    > {
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function build(ContainerBuilder $container): void
    >     {
    >         parent::build($container);

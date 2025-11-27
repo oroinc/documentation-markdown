@@ -24,7 +24,9 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
 
 class CustomMigration implements Migration
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function up(Schema $schema, QueryBag $queries)
     {
         // ...
@@ -33,7 +35,7 @@ class CustomMigration implements Migration
 ```
 
 #### NOTE
-Entity metadata in the PHP entity classes (attributes) should exactly match what the schema migration is doing. If you create a migration that modifies the type, length, or another property of an existing entity field, please remember to make the same change in the PHP entity class attributes.
+Entity metadata in the PHP entity classes (annotations) should exactly match what the schema migration is doing. If you create a migration that modifies the type, length, or another property of an existing entity field, please remember to make the same change in the PHP entity class annotations.
 
 In the `Oro\Bundle\MigrationBundle\Migration\Migration::up`, you can modify the database schema and/or add additional SQL queries executed before and after the schema changes.
 
@@ -52,7 +54,9 @@ use Doctrine\Persistence\ObjectManager;
 
 class CustomFixture implements FixtureInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function load(ObjectManager $manager)
     {
         // ...
@@ -64,6 +68,6 @@ class CustomFixture implements FixtureInterface
 Your data fixture classes must reside in the  *“Migrations/Data/ORM”* sub-directory of your bundle to be loaded automatically during the installation.
 
 #### TIP
-Read the <a href="https://github.com/doctrine/data-fixtures/blob/master/README.md" target="_blank">doctrine data fixtures documentation</a> to learn more about the Doctrine Data Fixtures extension.
+Read the <a href="https://github.com/doctrine/data-fixtures/blob/1.5.x/README.md" target="_blank">doctrine data fixtures documentation</a> to learn more about the Doctrine Data Fixtures extension.
 
 <!-- Frontend -->

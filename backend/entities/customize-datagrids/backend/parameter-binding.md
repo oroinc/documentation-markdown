@@ -53,7 +53,7 @@ To pass parameter `groupId` to the grid, use the following format when rendering
 {{ dataGrid.renderGrid('acme-demo-datagrid', {'groupId': entityId}) }}
 ```
 
-Or pass them directly to <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/DataGridBundle/Datagrid/Manager.php" target="_blank">DatagridManager</a>.
+Or pass them directly to <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/DataGridBundle/Datagrid/Manager.php" target="_blank">DatagridManager</a>.
 
 ```php
 $datagridManager->getDatagrid('acme-demo-datagrid', ['groupId' => $entityId]);
@@ -80,7 +80,7 @@ bind_parameters:
 
 ## Support of Parameter Binding by Datasource
 
-Datasource must implement <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/DataGridBundle/Datasource/BindParametersInterface.php" target="_blank">BindParametersInterface</a> to support the `bind_parameters` option.
+Datasource must implement <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/DataGridBundle/Datasource/BindParametersInterface.php" target="_blank">BindParametersInterface</a> to support the `bind_parameters` option.
 
 ## Parameter Binder Class
 
@@ -102,7 +102,7 @@ $queryParameterBinder->bindParameters($datagrid, ['email'], false);
 
 ## Parameter Binding Listener
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/DataGridBundle/EventListener/DatasourceBindParametersListener.php" target="_blank">DatasourceBindParametersListener</a> is responsible for running the binding of the datasource parameters. It checks whether the datasource implements <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/DataGridBundle/Datasource/BindParametersInterface.php" target="_blank">BindParametersInterface</a> and whether it has the `bind_parameters` option.
+<a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/DataGridBundle/EventListener/DatasourceBindParametersListener.php" target="_blank">DatasourceBindParametersListener</a> is responsible for running the binding of the datasource parameters. It checks whether the datasource implements <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/DataGridBundle/Datasource/BindParametersInterface.php" target="_blank">BindParametersInterface</a> and whether it has the `bind_parameters` option.
 
 If the grid configuration is applicable, then the parameters configuration specified in the `bind_parameters` is passed to the datasource method `bindParameters`.
 

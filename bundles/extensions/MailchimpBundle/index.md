@@ -2,7 +2,7 @@
 
 # OroMailChimpBundle
 
-<a href="https://github.com/oroinc/OroCRMMailChimpBundle" target="_blank">OroMailChimpBundle</a> provides <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/IntegrationBundle" target="_blank">integration</a> with <a href="https://mailchimp.com/" target="_blank">MailChimp</a> marketing automation platform for Oro applications.
+<a href="https://github.com/oroinc/OroCRMMailChimpBundle" target="_blank">OroMailChimpBundle</a> provides <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/IntegrationBundle" target="_blank">integration</a> with <a href="https://mailchimp.com/" target="_blank">MailChimp</a> marketing automation platform for Oro applications.
 
 The bundle enables users to create and configure the integration, schedule, or manually start synchronization between Oro application marketing lists and MailChimp subscribers list and import data of MailChimp email campaigns into the Oro application.
 
@@ -44,7 +44,7 @@ The following steps are performed in the course of the marketing list members sy
 
 * All the marketing list members are checked for subscription to the MailChimp audience. Unsubscribed members are scheduled for the subscription.
 * All the marketing list members absent from the static segment are scheduled for the mass addition to the segment.
-* All the members present in the static segment but absent in the marketing list are scheduled for removal from the static segment.
+* All the members present in the static segment but absent in the marketing list are scheduled for removal from the the static segment.
 
 Segment export has four steps:
 

@@ -4,8 +4,8 @@
 
 Once the All Products page has been enabled in the system configuration [globally](../configuration/commerce/catalog/global-all-products.md#sys-conf-commerce-catalog-special-pages-global) or [per website](../websites/web-configuration/commerce/catalog/website-all-products.md#sys-conf-commerce-catalog-special-pages-website), you can add it to a storefront menu on the system level (globally):
 
-1. Navigate to **System > Storefront Menus** in the main menu.
-2. Click on the menu to which you will add the All Products page.
+1. Navigate to **System > Frontend Menus** in the main menu.
+2. Click once on the menu to which you will add the All Products page.
 3. Click **Create Menu Item** on the top right of the page.
 4. In the **Title** field, type in the label for the menu item.
 5. In the **URI** field, specify  */catalog/allproducts*.

@@ -14,14 +14,12 @@ Read more in the following topics below:
   * [Access Control Lists](acl.md#backend-security-bundle-access-control-list)
   * [Permissions for Entities](acl.md#backend-security-bundle-configure-entities)
   * [Protecting Resources](acl.md#backend-security-bundle-protect-resources)
-  * [Role Based Access Control](role-based-access-control.md#backend-security-bundle-role-access-control)
 * [Access Levels and Ownership Illustration](example.md#backend-security-bundle-example)
 * OroSecurityBundle Features
   * [ACL Manager](acl-manager.md#backend-security-bundle-acl-manager)
   * [Field ACL](field-acl.md#backend-security-bundle-field-acl)
   * [Custom Listeners](custom-listeners.md#backend-security-bundle-listeners)
   * [Access Rules](access-rules.md#backend-security-bundle-access-rules)
-  * [HTTP Security Response Headers](security-headers.md#backend-security-bundle-security-headers)
 * Custom and Configurable Permissions
   * [How to Configure and Apply Custom Permissions to an Entity](permissions.md#backend-security-bundle-permissions)
   * [How to Work with Configurable Permissions](configurable-permissions.md#backend-security-bundle-configurable-permissions)

@@ -44,7 +44,7 @@ There are two kinds of PageComponents:
 
 ## Extending BaseComponent
 
-BaseComponent is a module <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/UIBundle/Resources/public/js/app/components/base/component.js" target="_blank">oroui/js/app/components/base/component</a> very similar to Backbone.View. The difference is that it is not visible and has no functionality to interact with DOM.
+BaseComponent is a module <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/UIBundle/Resources/public/js/app/components/base/component.js" target="_blank">oroui/js/app/components/base/component</a> very similar to Backbone.View. The difference is that it is not visible and has no functionality to interact with DOM.
 
 It has two static methods:
 

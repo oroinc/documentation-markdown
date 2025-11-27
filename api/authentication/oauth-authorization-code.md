@@ -10,7 +10,7 @@ client authentication using other means. Public clients are incapable of maintai
 credentials (e.g., clients executing on the device used by the resource owner, such as an installed native application or a web
 browser-based application), and incapable of secure client authentication via any other means.
 
-[OroOAuth2ServerBundle](../../bundles/platform/OAuth2ServerBundle/index.md#bundle-docs-platform-oauth2-server-bundle) supports <a href="https://datatracker.ietf.org/doc/html/rfc7636" target="_blank">PKCE extension (RFC 7636)</a>
+[OroOAuth2ServerBundle](../../bundles/platform/OAuth2ServerBundle/index.md#bundle-docs-platform-oauth2-server-bundle) supports <a href="https://datatracker.ietf.org/doc/html/rfc7636" target="_blank">PKCE extention (RFC 7636)</a>
 to the Authorization Code flow to prevent CSRF and authorization code injection attacks.
 
 ## Obtain the Authorization Code
@@ -54,27 +54,6 @@ If the application was created with the Skip User Consent option, the approve cl
 Once the user approves the client, they are redirected from the authorization server to the client’s redirect URI with the following parameters in the query string:
 
 > * code with the authorization code.
-
-## Obtain the Authorization Code for a Visitor
-
-To obtain the authorization code for a visitor, the redirect should be sent to the `https://yourapplication/oauth2-token/authorize-visitor` URL.
-The request parameters are the same as described in the previous section.
-
-**Example**
-
-```http
-GET /oauth2-token/authorize-visitor?response_type=code&client_id=your_client_identifier&redirect_uri=https://your_redirect_uri.com HTTP/1.1
-```
-
-Next, the user is redirected from the authorization server to the client’s redirect URI without needing any confirmation. The code parameter contains the authorization code for the visitor, which is appended to the client’s redirect URI.
-
-When a visitor has a shopping list that needs to be transferred to a user, include the visitor’s access token in the query string when requesting an access token for the user. This visitor’s access token should be specified using the visitor_access_token parameter.
-
-**Example**
-
-```http
-GET /oauth2-token/authorize?response_type=code&client_id=your_client_identifier&redirect_uri=https://your_redirect_uri.com&visitor_access_token=visitor's_access_token HTTP/1.1
-```
 
 ## Generate Token
 
@@ -152,30 +131,6 @@ An example of an API request:
 GET /api/users HTTP/1.1
 Accept: application/vnd.api+json
 Authorization: Bearer your access token
-```
-
-According to <a href="https://www.rfc-editor.org/rfc/rfc6750" target="_blank">Rfc6750</a>, an access token can be included as a body parameter in requests.
-
-#### NOTE
-When sending the access token as a body parameter, the request must include a Content-Type header set to application/vnd.api+json.
-
-Here is an example of how to send the access token as a body parameter:
-
-```http
-POST /api/users HTTP/1.1
-Accept: application/vnd.api+json
-Content-Type: application/vnd.api+json
-
-{
-    "access_token": "your_access_token",
-    "data": {
-      "type": "contacts",
-      "attributes": {
-        "firstName": "Jerry12",
-        "lastName": "Coleman2"
-      }
-    }
-}
 ```
 
 #### NOTE

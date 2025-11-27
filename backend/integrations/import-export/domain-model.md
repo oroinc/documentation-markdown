@@ -79,7 +79,7 @@ The *configuration* parameter is a specific configuration of a job obtained by C
 
 **The jobType and jobName parameters in jobs configuration of OroBatchBundle**
 
-```yaml
+```php
 connector:
     name: oro_importexport
     jobs:
@@ -114,7 +114,7 @@ Oro\\Bundle\\ImportExportBundle\\Context\\ContextInterface
 
 **Description:**
 
-The context interface provides an interface for accessing different kinds of data and is shared during the import/export operation processing.
+Th context interface provides an interface for accessing different kinds of data and is shared during the import/export operation processing.
 
 The following data are available to access:
 
@@ -313,7 +313,7 @@ Oro\\Bundle\\ImportExportBundle\\Processor\\ProcessorRegistry
 
 ProcessorRegistry provides a storage of all registered processors declared by the client bundles. A specific processor of an entity extends the basic one (Import Processor or Export Processor) and contains its own components (Serializer, Data Converter, Strategy). Such processor should be registered in DIC with the following tag:
 
-```yaml
+```php
 services:
     orocrm_contact.importexport.processor.export:
         parent: oro_importexport.processor.export_abstract
@@ -631,7 +631,7 @@ Oro\\Bundle\\ImportExportBundle\\Serializer\\Serializer
 
 Serializer is a class extended from a standard Symfony’s serializer and used instead of it to perform serialization/deserialization. It has its own normalizers/denormalizers that are added using the following tags in the DI configuration:
 
-```yaml
+```php
 services:
     acme_demo.importexport.user_normalizer:
         class: Acme\Bundle\DemoBundle\ImportExport\UserNormalizer

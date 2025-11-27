@@ -22,13 +22,13 @@ An **application** repository stores a complete solution created to automate act
 
 Sample applications: <a href="https://github.com/oroinc/crm-application" target="_blank">OroCRM</a>, <a href="https://github.com/oroinc/orocommerce-application" target="_blank">OroCommerce</a>, <a href="https://github.com/oroinc/platform-application" target="_blank">OroPlatform</a>.
 
-A **package** repository contains a module that groups a set of ready-to-use features, usually those related to a particular business subdomain, and may be included in any Oro application. To enable an Oro package in the Oro application, add it as a dependency/prerequisite before you start the Oro application installation. As long as the Oro application uses the Symfony framework, packages may contain <a href="https://symfony.com/doc/6.4/bundles.html" target="_blank">Bundles</a>.
+A **package** repository contains a module that groups a set of ready-to-use features, usually those related to a particular business subdomain, and may be included in any Oro application. To enable an Oro package in the Oro application, add it as a dependency/prerequisite before you start the Oro application installation. As long as the Oro application uses the Symfony framework, packages may contain <a href="https://symfony.com/doc/5.4/bundles.html" target="_blank">Bundles</a>.
 
 For example, the <a href="https://github.com/oroinc/OroCRMMarketingBundle" target="_blank">Marketing</a> package is, by default, enabled in Oro applications.
 
 A **component** repository contains the source code of the reusable development module that enables a set of commonly used functions that you can use as third-party libraries without the Oro application. Rather than a complete business feature, the Oro component can handle generic functionality that is not bound to the business domain. Component repositories are typically published as read-only subtree distributions of independent package bundles or components.
 
-Sample component: <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/MessageQueueBundle" target="_blank">OroMessageQueueBundle</a>
+Sample component: <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/MessageQueueBundle" target="_blank">OroMessageQueueBundle</a>
 
 You can find a complete list of OroInc public repositories at <a href="https://github.com/oroinc/" target="_blank">https://github.com/oroinc/</a>.
 
@@ -36,7 +36,7 @@ You can find a complete list of OroInc public repositories at <a href="https://g
 
 Oro application uses <a href="https://getcomposer.org/doc/03-cli.md#require" target="_blank">composer</a> as an application-level dependency manager. It is widely used and popular in the PHP development community.
 
-With composer, you can manage dependencies by editing the composer.json file (see <a href="https://github.com/oroinc/crm-application/tree/6.1/composer.json" target="_blank">composer.json</a> sample and <a href="https://getcomposer.org/doc/" target="_blank">composer documentation</a> for more information).
+With composer, you can manage dependencies by editing the composer.json file (see <a href="https://github.com/oroinc/crm-application/blob/5.1/composer.json" target="_blank">composer.json</a> sample and <a href="https://getcomposer.org/doc/" target="_blank">composer documentation</a> for more information).
 
 Every Oro application contains a composer.json file in the application root directory.
 
@@ -51,6 +51,7 @@ The required packages (dependencies) are listed in the following way:
 "require": {
      "oro/crm": "2.x-dev",
      "oro/platform-serialised-fields": "2.x-dev",
+     "oro/crm-hangouts-call-bundle": "2.x-dev",
      "oro/mailchimp": "2.x-dev",
      "oro/crm-dotmailer": "2.x-dev",
      "oro/crm-zendesk": "2.x-dev"
@@ -86,7 +87,7 @@ After registration, the **package** is listed in the <a href="https://packagist.
 #### NOTE
 The **package** links to the package source code repository and may also contain information about the package required dependencies, configuration, scripts that should be executed during the package installation (e.g., post-install and post-update scripts), etc. You may use the package as a dependency in your custom application like Oro applications use Oro packages.
 
-See sample <a href="https://github.com/oroinc/crm-application/tree/6.1/composer.json" target="_blank">composer.json</a>.
+See sample <a href="https://github.com/oroinc/crm-application/blob/5.1/composer.json" target="_blank">composer.json</a>.
 
 ## File System Structure
 
@@ -130,116 +131,6 @@ We recommend to include additional files, like:
 * UPGRADE.md - information about upgrading from the old version of the package to the new one
 * CHANGELOG.md - list of changes made in the package since the previous version
 * phpunit.xml.dist - template of phpunit.xml, which can be used to run package tests
-
-## File System Permissions
-
-* Default permissions are 755 for directories and 644 for files (non-executable).
-* Default owner is any non www-data user.
-* Default owner group is www-data.
-
-In OroCommerce, web requests and CLI scripts must get readonly access to sources with a limited write access to a
-set of folders using specific user www-data (bundled with Nginx and Apache).
-
-To prepare application sources and pre-built assets, use orodeployer user:
-
-```bash
-$ id -u -n
-orodeployer
-
-$ id -g -n
-www-data
-
-git clone https://github.com/oroinc/orocommerce-application.git
-cd orocommerce-application
-composer install
-rm -rf var/cache/* var/logs/*
-```
-
-Below is a list of sources with pre-built assets:
-
-```bash
-tree -ug -L 1 -p
-
-[drwxr-xr-x orodeployer www-data]  .
-|-- [-rw-r--r-- orodeployer www-data]  3rd-party-dependencies.md
-|-- [-rw-r--r-- orodeployer www-data]  CHANGELOG.md
-|-- [-rw-r--r-- orodeployer www-data]  Jenkinsfile
-|-- [-rw-r--r-- orodeployer www-data]  LICENSE
-|-- [-rw-r--r-- orodeployer www-data]  README.md
-|-- [-rw-r--r-- orodeployer www-data]  UPGRADE.md
-|-- [-rw-r--r-- orodeployer www-data]  Vagrantfile
-|-- [-rw-r--r-- orodeployer www-data]  behat.yml.dist
-|-- [drwxr-xr-x orodeployer www-data]  bin
-|-- [-rw-r--r-- orodeployer www-data]  composer.json
-|-- [-rw-r--r-- orodeployer www-data]  composer.lock
-|-- [drwxr-xr-x orodeployer www-data]  config
-|-- [-rw-r--r-- orodeployer www-data]  dev.json
-|-- [-rw-r--r-- orodeployer www-data]  dev.lock
-|-- [-rw-r--r-- orodeployer www-data]  docker-compose.yml
-|-- [-rw-r--r-- orodeployer www-data]  karma.conf.js.dist
-|-- [-rw-r--r-- orodeployer www-data]  package-lock.json
-|-- [-rw-r--r-- orodeployer www-data]  package.json
-|-- [-rw-r--r-- orodeployer www-data]  pdepend.xml.dist
-|-- [-rw-r--r-- orodeployer www-data]  phpunit.xml.dist
-|-- [drwxr-xr-x orodeployer www-data]  public
-|-- [drwxr-xr-x orodeployer www-data]  src
-|-- [drwxr-xr-x orodeployer www-data]  templates
-|-- [drwxr-xr-x orodeployer www-data]  translations
-|-- [drwxr-xr-x orodeployer www-data]  var
-|-- [drwxr-xr-x orodeployer www-data]  vendor
-`-- [-rw-r--r-- orodeployer www-data]  webpack.config.js
-```
-
-To force required permissions, run:
-
-```bash
-setfacl -b -R .
-chown -R orodeployer:www-data .
-find . -type d -not -perm 755 -print -exec chmod 755 {} \;
-find . -type f -not -perm 644 -print -exec chmod 644 {} \;
-```
-
-To allow www-user to write to specific folders, run:
-
-```bash
-chown -R www-data:www-data var/sessions var/cache var/logs var/data public/media
-```
-
-Current directories as files permissions:
-
-```bash
-tree -ug -L 1 -p public/
-
-[drwxr-xr-x orodeployer www-data]  public/
-|-- [drwxr-xr-x orodeployer www-data]  bundles
-|-- [-rw-r--r-- orodeployer www-data]  favicon.ico
-|-- [-rw-r--r-- orodeployer www-data]  index.php
-|-- [-rw-r--r-- orodeployer www-data]  index_dev.php
-|-- [drwxr-xr-x orodeployer www-data]  js
-|-- [-rw-r--r-- orodeployer www-data]  maintenance.html
-|-- [drwxr-xr-x www-data www-data]  media
-|-- [-rw-r--r-- orodeployer www-data]  notinstalled.html
-|-- [-rw-r--r-- orodeployer www-data]  robots.txt
-`-- [-rw-r--r-- orodeployer www-data]  tracking.php
-```
-
-```bash
-tree -ug -L 1 -p var/
-
-[drwxr-xr-x orodeployer www-data]  var/
-|-- [drwxr-xr-x www-data www-data]  cache
-|-- [drwxr-xr-x www-data www-data]  data
-|-- [drwxr-xr-x www-data www-data]  logs
-`-- [drwxr-xr-x www-data www-data]  sessions
-```
-
-You can also reduce the amount of writable folders and files:
-
-* Keep var/sessions read-only by using [OroRedisConfigBundle](../../../bundles/platform/RedisConfigBundle/index.md#bundle-docs-platform-redis-bundle)
-* Keep public/media read-only by using <a href="https://github.com/oroinc/gridfs-config" target="_blank">OroGridFSConfigBundle</a>
-
-#### NOTE
-Commands like `oro:assets:install` or `oro:assets:build` are designed for the build phase and are not allowed in runtime and for the www-data user. Run commands using the orodeployer user during deployments only.
 
 <!-- finish_oro_php_app_structure -->
 

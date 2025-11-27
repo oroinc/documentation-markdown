@@ -2,9 +2,6 @@
 
 # Configure Global Synonym Search Settings
 
-#### HINT
-Read [Search Functions Concept Guide](../../../../../concept-guides/catalog-promotions/search/index.md#user-guide-getting-started-search) to get a general understanding of the search functionality in OroCommerce.
-
 In OroCommerce Enterprise Edition, you can [create a synonym group](../../../../marketing/search/index.md#user-guide-search-synonyms) where a search for one word from this group in the OroCommerce storefront would return results for all the synonyms in this group. Synonym management is enabled globally and [per website](../../../websites/web-configuration/commerce/search/website-search-synonyms.md#configuration-website-commerce-search-synonyms) in the system configuration, and subsequently managed through **Marketing > Search > Search Synonyms** in the main menu.
 
 To enable synonyms globally:
@@ -15,7 +12,7 @@ To enable synonyms globally:
 #### NOTE
 For faster navigation between the configuration menu sections, use [Quick Search](../../quick-search.md#user-guide-system-configuration-quick-search).
 
-1. Clear the **Use Default** checkbox.
+1. Сlear the **Use Default** checkbox.
 2. Select the **Enable Search Synonyms** checkbox to add the ability to search for synonyms during the full-text search in the storefront.
 3. Click **Save Settings**.
 

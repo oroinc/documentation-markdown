@@ -19,11 +19,7 @@ To enable flat rate shipping:
    ![image](user/img/system/integrations/CreateFlatRate.png)
 3. Type in the integration name and label (e.g., Flat Rate). Add label translations, if necessary.
 4. Set status to **Active** to enable the integration.
-
-#### NOTE
-In the **Synchronization Settings** section, select the **Log Warnings** checkbox if you want all synchronization errors to be written into the application log.
-
-1. Click **Save**.
+5. Click **Save**.
 
 Next, set up a shipping rule via the [Shipping Rules Configuration](../../shipping-rules/index.md#sys-shipping-rules) page to enable this shipping method for all or some customer orders.
 

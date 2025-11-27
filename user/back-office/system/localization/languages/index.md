@@ -5,9 +5,6 @@
 #### HINT
 This section is part of the [Localization and Translation](../../../../concept-guides/administration/localization/index.md#concept-guide-localization-translation) concept guide that provides a general understanding of the localization and translation processes in OroCommerce.
 
-#### NOTE
-The Languages settings are accessible from the **Global organization only**. Find more on working with organizations in the [Company Structure and Organization Selector](../../../getting-started/navigation/org-selector.md#user-guide-getting-started-company-structure).
-
 <!-- begin -->
 
 In the Oro applications, language is a core component of system localization and content translation. It performs the following functions:
@@ -71,20 +68,3 @@ Now, once the language has appeared in the list, you can perform the following a
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

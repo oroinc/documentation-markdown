@@ -4,16 +4,33 @@
 
 After the integration is complete, the customer user may select one of the payment methods that are shown after the connectivity check and payment rules evaluation.
 
-## PayPal Payflow Gateway and Express Checkout
+## PayPal Payflow Gateway with No CVV Required
 
-![image](user/img/system/integrations/checkout/checkout_payflow_gateway_vs_express.png)
+![image](user/img/system/integrations/checkout/checkout_payments_pro_no_cvv.png)
 
 #### NOTE
 If the order total is zero, the PayPal Payment method will be hidden and unavailable for selection.
 
-## PayPal Payments Pro and Express Checkout
+## PayPal Payments Pro with Require CVV Entry Enabled
 
-![image](user/img/system/integrations/checkout/checkout_payments_pro_vs_express.png)
+![image](user/img/system/integrations/checkout/checkout_payments_pro_cvv.png)
+
+#### NOTE
+If the order total is zero, the PayPal Payment method will be hidden and unavailable for selection.
+
+## PayPal Payments Pro Express Checkout
+
+<!-- Express Checkout is part of the payment method name (PayPal Payments Pro Express Checkout). Unintentionally, it is forced to duplicate the parent header. Other payment methods do not have to follow this style. -->![image](user/img/system/integrations/checkout/checkout_payments_pro_express.png)
+
+#### NOTE
+If the order total is zero, the PayPal Payment method will be hidden and unavailable for selection.
+
+## PayPal Payments Express Checkout
+
+![image](user/img/system/integrations/checkout/checkout_paypal_express.png)
+
+#### NOTE
+Before you can use PayPal Express in OroCommerce, [install](../../../../../../backend/extension/install-extension.md#cookbook-extensions-composer) the <a href="https://packagist.oroinc.com/?#oro/paypal-express" target="_blank">Oro PayPal Express Integration</a> package.
 
 #### NOTE
 If the order total is zero, the PayPal Payment method will be hidden and unavailable for selection.
@@ -31,7 +48,7 @@ To checkout with Apruve, make sure you have registered the account in the Apruve
 
 Once a customer selects the Apruve payment method for their order, they are asked to log into their Apruve corporate account to authorize this payment.
 
-![image](user/img/system/integrations/checkout/checkout_apruve_1.png)
+![image](user/img/system/integrations/checkout/checkout_apruve_1.png)![image](user/img/system/integrations/checkout/checkout_apruve_2.png)![image](user/img/system/integrations/checkout/checkout_apruve_3.png)
 
 In the Apruve account, under the *Shopper* role, the customer can view their order details by navigating to **Orders** menu on the left and selecting the corresponding order.
 

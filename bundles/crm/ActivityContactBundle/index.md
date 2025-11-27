@@ -2,7 +2,7 @@
 
 # OroActivityContactBundle
 
-<a href="https://github.com/oroinc/crm/tree/6.1/src/Oro/Bundle/ActivityContactBundle" target="_blank">OroActivityContactBundle</a> enables tracking of attempts to contact customers in OroCRM applications.
+<a href="https://github.com/oroinc/crm/tree/5.1src/Oro/Bundle/ActivityContactBundle" target="_blank">OroActivityContactBundle</a> enables tracking of attempts to contact customers in OroCRM applications.
 
 The bundle allows developers to register activity as contact activity. These logged activities are used during the contact attempts calculation and allow admin users to see contact attempts statistics for entities where contact activities are enabled.
 
@@ -22,7 +22,7 @@ The bundle introduces a contacting activity. This can be a call or an email from
 
 ## Relate Activity Entity to the Contacting Activities Type
 
-Create a provider that implements <a href="https://github.com/oroinc/crm/tree/6.1/src/Oro/Bundle/ActivityContactBundle/Direction/DirectionProviderInterface.php" target="_blank">DirectionProviderInterface</a> and make it a tagged service, for example:
+Create a provider that implements <a href="https://github.com/oroinc/crm/blob/5.1/src/Oro/Bundle/ActivityContactBundle/Direction/DirectionProviderInterface.php" target="_blank">DirectionProviderInterface</a> and make it a tagged service, for example:
 
 ```none
 tags:
@@ -33,8 +33,8 @@ tags:
 
 On application install or during the update from the previous version:
 
-- via <a href="https://github.com/oroinc/crm/tree/6.1/src/Oro/Bundle/ActivityContactBundle/Migration/ActivityContactMigrationQuery.php" target="_blank">ActivityContactMigrationQuery</a> required fields (for statistics storage) will be added for entities with enabled “Call” & “Email” activities
-- job will be added to execute <a href="https://github.com/oroinc/crm/tree/6.1/src/Oro/Bundle/ActivityContactBundle/Command/ActivityContactRecalculateCommand.php" target="_blank">oro:activity-contact:recalculate</a> command. Recalculation of existing activities.
+- via <a href="https://github.com/oroinc/crm/blob/5.1/src/Oro/Bundle/ActivityContactBundle/Migration/ActivityContactMigrationQuery.php" target="_blank">ActivityContactMigrationQuery</a> required fields (for statistics storage) will be added for entities with enabled “Call” & “Email” activities
+- job will be added to execute <a href="https://github.com/oroinc/crm/blob/5.1/src/Oro/Bundle/ActivityContactBundle/Command/ActivityContactRecalculateCommand.php" target="_blank">oro:activity-contact:recalculate</a> command. Recalculation of existing activities.
 
 Please note:
 

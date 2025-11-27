@@ -2,7 +2,7 @@
 
 # OroDataGridBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/DataGridBundle" target="_blank">OroDatagridBundle</a> allows to define YAML configuration of data collection presentation in a grid form.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/DataGridBundle" target="_blank">OroDatagridBundle</a> allows to define YAML configuration of data collection presentation in a grid form.
 
 ## Related Documentation
 

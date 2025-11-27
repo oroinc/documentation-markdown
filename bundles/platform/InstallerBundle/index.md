@@ -2,7 +2,7 @@
 
 # OroInstallerBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/InstallerBundle" target="_blank">OroInstallerBundle</a> enables developers to install Oro applications in a prepared environment using the CLI and define activities for the installation process on a bundle level.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/InstallerBundle" target="_blank">OroInstallerBundle</a> enables developers to install Oro applications in a prepared environment using the CLI and define activities for the installation process on a bundle level.
 
 For installation instructions, please see the [Installation](../../../backend/setup/installation.md#install-for-dev) topic.
 
@@ -85,7 +85,7 @@ Example:
 The following variables are available in the installer script:
 
 - $container - Symfony2 DI container
-- $commandExecutor - An instance of the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/InstallerBundle/CommandExecutor.php" target="_blank">CommandExecutor</a> class. You can use it to execute Symfony console commands
+- $commandExecutor - An instance of the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/InstallerBundle/CommandExecutor.php" target="_blank">CommandExecutor</a> class. You can use it to execute Symfony console commands
 
 All outputs from the installer script will be logged in the oro_install.log file or will be displayed in the console.
 
@@ -104,6 +104,6 @@ In some cases, you may need to launch PHP scripts in the context of OroPlatform.
 The following variables are available in the script:
 
 - $container - Symfony2 DI container
-- $commandExecutor - an instance of the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/InstallerBundle/CommandExecutor.php" target="_blank">CommandExecutor</a> class. You can use it to execute Symfony console commands
+- $commandExecutor - an instance of the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/InstallerBundle/CommandExecutor.php" target="_blank">CommandExecutor</a> class. You can use it to execute Symfony console commands
 
 <!-- Frontend -->

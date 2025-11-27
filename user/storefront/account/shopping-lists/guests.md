@@ -20,27 +20,15 @@ By default, only one shopping list is available for unregistered users:
    Alternatively, navigate to the shopping list itself by clicking **Shopping List** in the top right corner of the store page, and click *View Details*.
 
    In the *Quantity* field, change the quantity of the product.
-3. To remove items from the list, click ![ChevronDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/chevron-down.svg) next to **Update Shopping List** and click **Remove from Shopping List**.
+3. To remove items from the list, click <i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i> next to **Update Shopping List** and click **Remove from Shopping List**.
    > ![image](user/img/storefront/shopping_lists/shopping_list_dropdown_2.png)
 
    > Alternatively, navigate to the shopping list itself by clicking **Shopping List** in the top right corner of the store page, and click *View Details*.
 
-   > Next to the product, click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) to remove it.
+   > Next to the product, click <i class="fas fa-trash-alt" aria-hidden="true"></i> to remove it.
 
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->
+<!-- fa-bars = fa-navicon -->
+<!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
+<!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
+<!-- Check mark in the square. -->
+<!-- SortDesc is also used as drop-down arrow -->

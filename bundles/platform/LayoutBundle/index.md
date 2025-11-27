@@ -2,7 +2,7 @@
 
 # OroLayoutBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/LayoutBundle" target="_blank">OroLayoutBundle</a> integrates the OroLayout Component into OroPlatform and enables layout themes definition and configuration which supports building layouts based on the configuration of other bundles.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/LayoutBundle" target="_blank">OroLayoutBundle</a> integrates the OroLayout Component into OroPlatform and enables layout themes definition and configuration which supports building layouts based on the configuration of other bundles.
 
 ## Related Documentation
 
@@ -16,7 +16,6 @@
 * [Import Layout Updates](../../../frontend/storefront/layouts/index.md#import-layout-updates)
 * [Debug Information](../../../frontend/storefront/debugging.md#dev-doc-frontend-layouts-debugging)
 * [Layout Cache](layout-cache.md#layouts-layout-cache)
-* [Old Themes](old-themes.md#layouts-old-themes)
 * [Returning Custom Status Code](../../../frontend/storefront/layouts/returning-custom-status-code.md#dev-doc-frontend-layouts-returning-custom-status-code)
 
 <!-- Frontend -->

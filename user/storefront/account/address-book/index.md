@@ -8,7 +8,10 @@ The following information covers the **Address Book** section of the **Account**
 
 <!-- begin -->
 
-To open the address book, click **Address Book** under **My Profile** in the top navigation bar.
+To open the address book:
+
+1. Click **Account** in the [user menu](../../getting-started/general-layout.md#frontstore-guide-navigation-user-menu) on the top left of the page.
+2. Under **Account**, Click **Address Book**.
 
 The address book has two sections:
 
@@ -18,7 +21,9 @@ The address book has two sections:
 ![image](user/img/storefront/profile/MyProfileAddressBooks.png)
 
 #### NOTE
-Depending in the storefront settings, the address book lists may appear in the compact format with a map displayed on the right. Please be aware that a valid Google API key is required to display maps in the storefront. Please see [the back-office settings](../../../back-office/system/configuration/system/integrations/google-settings/google-integration.md#system-configuration-integrations-google) for more information.
+Depending on the storefront settings, the address book lists may appear in the compact format with a map displayed on the right. Please be aware that a valid Google API key is required to display maps in the storefront. Please see [the back-office settings](../../../back-office/system/configuration/system/integrations/google-settings/google-integration.md#system-configuration-integrations-google) for more information.
+
+![image](user/img/storefront/profile/address_book_compact.png)
 
 <a id="frontstore-guide-address-book-manage"></a>
 
@@ -62,9 +67,9 @@ To create a new company address:
 
 You can perform the following actions for each address record:
 
-* Show an address on the map: click ![Map-SVG](_themes/sphinx_rtd_theme/static/svg-icons/map.svg)
-* Edit an address: click ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg)
-* Delete an address: click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg)
+* Show an address on the map: click <i class="far fa-map" aria-hidden="true"></i>
+* Edit an address: click <i class="fas fa-pencil-alt" aria-hidden="true"></i>
+* Delete an address: click <i class="fas fa-trash-alt" aria-hidden="true"></i>
 
 ## Manage My Addresses
 
@@ -105,25 +110,13 @@ To create a new personal address:
 
 You can perform the following actions for each address record in the table:
 
-* Show an address on the map: click ![Map-SVG](_themes/sphinx_rtd_theme/static/svg-icons/map.svg)
-* Edit an address: click ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg)
-* Delete an address: click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg)
+* Show an address on the map: click <i class="far fa-map" aria-hidden="true"></i>
+* Edit an address: click <i class="fas fa-pencil-alt" aria-hidden="true"></i>
+* Delete an address: click <i class="fas fa-trash-alt" aria-hidden="true"></i>
 
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->
+<!-- fa-bars = fa-navicon -->
+<!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
+<!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
+<!-- Check mark in the square. -->
+<!-- SortDesc is also used as drop-down arrow -->
 <!-- finish -->

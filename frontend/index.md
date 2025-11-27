@@ -14,7 +14,7 @@ There are two types of themes:
 #### HINT
 Back-office themes cannot be used in the storefront and vice-versa.
 
-[Storefront Design: Style Guide](storefront-style-guide/index.md#frontend-storefront-design) guides you on how to create and customize OroCommerce storefront theme using Figma.
+[Storefront Design](storefront-design/index.md#frontend-storefront-design) guides you on how to create and customize OroPlatform-based application UI using Sketch.
 
 All the themes use the same [Javascript Architecture](javascript/index.md#dev-doc-frontend-javascript) except for the way the JS modules are registered.
 

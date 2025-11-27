@@ -4,9 +4,9 @@
 
 # OroSecurityBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/SecurityBundle" target="_blank">OroSecurityBundle</a> extends Symfony security capabilities to enable a role-based ACL security system in the Oro applications.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/SecurityBundle" target="_blank">OroSecurityBundle</a> extends Symfony security capabilities to enable a role-based ACL security system in the Oro applications.
 
-The bundle enables developers to set up access restrictions for entities and non-entity related actions using the PHP attributes and the YAML configuration files. It also provides UI for application administrators to configure the entity-specific permissions for particular user roles based on the entity ownership.
+The bundle enables developers to set up access restrictions for entities and non-entity related actions using the DOC-block annotations and the YAML configuration files. It also provides UI for application administrators to configure the entity-specific permissions for particular user roles based on the entity ownership.
 
 ## Related Documentation
 
@@ -19,7 +19,6 @@ The bundle enables developers to set up access restrictions for entities and non
   * [Field ACL](../../../backend/security/field-acl.md#backend-security-bundle-field-acl)
   * [Custom Listeners](../../../backend/security/custom-listeners.md#backend-security-bundle-listeners)
   * [Access Rules](../../../backend/security/access-rules.md#backend-security-bundle-access-rules)
-  * [HTTP Security Response Headers](../../../backend/security/security-headers.md#backend-security-bundle-security-headers)
 * Custom and Configurable Permissions
   * [How to Configure and Apply Custom Permissions to an Entity](../../../backend/security/permissions.md#backend-security-bundle-permissions)
   * [How to Work with Configurable Permissions](../../../backend/security/configurable-permissions.md#backend-security-bundle-configurable-permissions)

@@ -35,7 +35,7 @@ You can perform the following actions here:
 * Create a warehouse: Click the button on the top right.
 * **View Warehouse details**: Click on the warehouse to open its details page.
 * **Edit Warehouse details**: Click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> at the end of the row to start editing the selected warehouse details. You might need to click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the row to reach the <i class="fa fa-edit fa-lg" aria-hidden="true"></i> icon.
-* **Delete a Warehouse**: Click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the row, and then click the ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** icon.
+* **Delete a Warehouse**: Click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the row, and then click the <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** icon.
 
 #### NOTE
 If the warehouse has been enabled in the [global system configuration](../system/configuration/commerce/inventory/product-options.md#sys-conf-commerce-inventory-product-options-global) with no other warehouses enabled, you cannot delete it.
@@ -52,20 +52,3 @@ If the warehouse has been enabled in the [global system configuration](../system
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

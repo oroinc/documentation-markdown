@@ -4,7 +4,7 @@
 
 # Expression Language for Shipping and Payment Rules
 
-Expression language for payment and shipping rules expressions is a user-friendly and business oriented extension of the <a href="https://symfony.com/doc/6.4/components/expression_language/introduction.html" target="_blank">Symfony Expression Language</a>. It is easy to use and, on top of usual comparison and logical operators, it allows iterating through the collections of items using  *(collection).all* and  *(collection).any* operations. Keep in mind that out-of-the-box, you can add any custom fields to the required entity in addition to the attributes listed below.
+Expression language for payment and shipping rules expressions is a user-friendly and business oriented extension of the <a href="https://symfony.com/doc/5.4/components/expression_language/introduction.html" target="_blank">Symfony Expression Language</a>. It is easy to use and, on top of usual comparison and logical operators, it allows iterating through the collections of items using  *(collection).all* and  *(collection).any* operations. Keep in mind that out-of-the-box, you can add any custom fields to the required entity in addition to the attributes listed below.
 
 #### NOTE
 Note that the *float* values require using a number with a fractional part (a floating-point number), for example, lineItem.quantity != **1.0** instead of lineItem.quantity != **1**.

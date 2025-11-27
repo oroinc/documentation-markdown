@@ -11,8 +11,9 @@ You can use this field type:
 ```php
 /**
  * @var decimal
+ *
+ * @ORM\Column(name="tax_amount", type="money")
  */
-#[ORM\Column(name: 'tax_amount', type: 'money')]
 protected $taxAmount;
 ```
 
@@ -23,8 +24,9 @@ You can use this field type:
 ```php
 /**
  * @var float
+ *
+ * @ORM\Column(name="percent_field", type="percent")
  */
-#[ORM\Column(name: 'percent_field', type: 'percent')]
 protected $percentField;
 ```
 
@@ -39,8 +41,9 @@ You can use this field type:
 ```php
 /**
  * @var \Oro\Component\Config\Common\ConfigObject
+ *
+ * @ORM\Column(name="map_config", type="config_object")
  */
-#[ORM\Column(name: 'map_config', type: 'config_object')]
 protected $mapConfigField;
 ```
 
@@ -51,8 +54,9 @@ You can use this field type:
 ```php
 /**
  * @var int
+ *
+ * @ORM\Column(name="duration", type="duration")
  */
-#[ORM\Column(name: 'duration', type: 'duration')]
 protected $duration;
 ```
 

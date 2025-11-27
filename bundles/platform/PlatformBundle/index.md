@@ -2,11 +2,11 @@
 
 # OroPlatformBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/PlatformBundle" target="_blank">OroPlatformBundle</a> provides adjustments to the Symfony framework that enable you to configure the application settings in bundles’ YAML configuration files, switch the application to the maintenance mode, and define the global command options, etc.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/PlatformBundle" target="_blank">OroPlatformBundle</a> provides adjustments to the Symfony framework that enable you to configure the application settings in bundles’ YAML configuration files, switch the application to the maintenance mode, and define the global command options, etc.
 
 ## Lazy Services
 
-Lazy service is a service that is used all over the system wrapped inside a lazy loading proxy. It allows initializing such services not during injection but when it is requested for the first time. Symfony provides the functionality to use <a href="https://symfony.com/doc/6.4/service_container/lazy_services.html" target="_blank">lazy services</a> out-of-the-box.
+Lazy service is a service that is used all over the system wrapped inside a lazy loading proxy. It allows initializing such services not during injection but when it is requested for the first time. Symfony provides the functionality to use <a href="https://symfony.com/doc/5.4/service_container/lazy_services.html" target="_blank">lazy services</a> out-of-the-box.
 
 In your own bundles, services must be marked as lazy in service declaration by adding an additional key “lazy” that is set to true.
 
@@ -115,7 +115,9 @@ use Symfony\Component\Console\Input\InputOption;
 
 class MyNewGlobalOptionsProvider implements GlobalOptionsProviderInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function addGlobalOptions(Command $command)
     {
         // Create a new option and add it to the definitions
@@ -124,7 +126,9 @@ class MyNewGlobalOptionsProvider implements GlobalOptionsProviderInterface
         $command->getDefinition()->addOption($option);
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function resolveGlobalOptions(InputInterface $input)
     {
         // Get the option's value and do something with it

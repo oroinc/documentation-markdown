@@ -8,7 +8,7 @@ This section is part of the [OroMarketplace Concept Guide](../../../concept-guid
 Merchants looking to sell their products online via OroMarketplace can submit an online registration form on the OroMarketplace website. Once the form is submitted, the details of the application are synchronized with the OroMarketplace back-office. A person responsible for processing seller registration requests in the marketplace owner organization can then start processing the request, accept it straight away, or decline it. They can also create a new request via the back-office of the (global) marketplace owner organization, as long as they have obtained the necessary details from the seller.
 
 #### HINT
-Before you work with seller registration requests, make sure they are [enabled in the settings of the global organization settings](../../system/user-management/organizations/org-configuration/commerce/marketplace/organization-marketplace-general.md#configuration-commerce-marketplace-seller-organization).
+Before you work with seller regsitration requests, make sure they are [enabled in the application](../../system/configuration/commerce/marketplace/marketplace-general.md#configuration-commerce-marketplace-seller-global).
 
 ## Create a Seller Registration Request
 
@@ -35,17 +35,13 @@ Once the request is saved, the person responsible for handling them can progress
 
 You can perform the following actions for requests from the grid:
 
-* Delete ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg)
+* Delete <i class="fas fa-trash-alt" aria-hidden="true"></i>
 * Edit <i class="fa fa-edit fa-lg" aria-hidden="true"></i>
 * View <i class="fa fa-eye fa-lg" aria-hidden="true"></i>
 
 ![Grid actions for seller registration requests](user/img/sales/seller-registration-requests/grid-actions-seller-request.png)
 
-Two grid views are available for seller registration requests: **Open Seller Registration Requests** and **All Seller Registration Requests**.
-
-![Illustration of the two grid views](user/img/sales/seller-registration-requests/two-grid-views.png)
-
-You can filter the grid with all requests and then save the filtered page as another grid view.
+Two grid views are available for seller registration requests: **Open Seller Registration Requests** and **All Seller Registration Requests**. You can filter the grid with all requests and then save the filtered page as another grid view.
 
 ![Illustration of how to add a new grid page.](user/img/sales/seller-registration-requests/new-grid-for-seller-request.png)
 
@@ -61,26 +57,8 @@ On the view page of a request, you can transition it through the steps of the [S
 
 For more information, see [Information Management](../../getting-started/information-management/index.md#user-guide-data-management-basics-entities).
 
-![Action available for a seller registration request from its view page](user/img/sales/seller-registration-requests/request-view-page.png)
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
-<!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->
+<!-- SortDesc is also used as drop-down arrow -->![Action available for a seller registration request from its view page](user/img/sales/seller-registration-requests/request-view-page.png)

@@ -47,7 +47,7 @@ class SetWebsiteSearchRelevanceWeightListener
      */
     private function calculateRelevanceWeight(Product $product): float
     {
-        switch ($product->getInventoryStatus()->getInternalId()) {
+        switch ($product->getInventoryStatus()->getId()) {
             case Product::INVENTORY_STATUS_IN_STOCK:
                 return 1.0;
             case Product::INVENTORY_STATUS_OUT_OF_STOCK:
@@ -78,4 +78,4 @@ Oro\Bundle\ProductBundle\Entity\Product:
         type: decimal
 ```
 
-Finally, clear the cache using the `php bin/console cache:clear --env=prod` command and trigger reindexation of the required entity using the `php bin/console oro:website-search:reindex --class="Oro\Bundle\ProductBundle\Entity\Product" --env=prod` command.
+Finally, clear the cache using the `php bin/console cache:clear --env=prod` command and trigger reindexation of the required entity using the `php bin/console oro:website-search:reindex --class=OroProductBundle:Product --env=prod` command.

@@ -100,7 +100,7 @@ To edit a column:
 
 To delete a column:
 
-1. Click the ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** icon to the right of the corresponding row.
+1. Click the <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** icon to the right of the corresponding row.
 2. In the **Delete Confirmation** dialog box, click **Yes, Delete**.
 
 ##### Rearrange Report Columns
@@ -122,7 +122,7 @@ Do not add fields that are not present in the **Columns** section.
 
 To remove a field from the **Grouping** section:
 
-1. Click the ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** icon to the right of the corresponding row.
+1. Click the <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** icon to the right of the corresponding row.
 2. In the **Delete Confirmation** dialog box, click **Yes, Delete**.
 
 #### Grouping by Date
@@ -161,6 +161,8 @@ OroCommerce supports line charts. To create a line chart for the report, define 
 | **Chart Type**        | Currently only the **Line Chart** option is available                             |
 | **Category (X Axis)** | Select the fields with the values which will form the X Axis of the report chart. |
 | **Value (Y Axis)**    | Choose the fields with the values which will form the Y Axis of the report chart. |
+
+For more details, see the [chart example](reports-examples.md#user-guide-business-intelligence-reports-chart-examples).
 
 ## View a Custom Report
 
@@ -214,7 +216,7 @@ Please be aware the Export Grid button may not be available for some reports if 
 ### From the Custom Reports Grid
 
 1. In the main menu, navigate to **Reports & Segments > Manage Reports**.
-2. On the custom reports page, select the report to delete, hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu, and then click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete**.
+2. On the custom reports page, select the report to delete, hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu, and then click <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete**.
 3. In the **Deletion Confirmation** dialog box, click **Yes, Delete**.
 
 ### From the Custom Report View Page
@@ -229,33 +231,17 @@ You can delete multiple custom reports at a time.
 
 1. In the main menu, navigate to **Reports & Segments > Manage Reports**.
 2. Select multiple custom reports by clicking <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i> in the left corner of the list header.
-3. Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the list header and click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) to delete multiple reports simultaneously.
+3. Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the list header and click <i class="fas fa-trash-alt" aria-hidden="true"></i> to delete multiple reports simultaneously.
    ![Using the bulk delete function to delete multiple custom reports](user/img/reports/custom_reports_16.png)
 4. In the **Delete Confirmation** dialog box, click **Yes, Delete**.
 
 **Related Topics**
 
 * [Use System Reports](system-reports.md#user-guide-business-intelligence-reports-use-system-reports)
+* [Reports Examples](reports-examples.md#user-guide-business-intelligence-reports-reports-examples)
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

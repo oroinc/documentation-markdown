@@ -1,3 +1,11 @@
+<a id="configuration-commerce-design-theme-theme-settings-globally"></a>
+
+<a id="configuration-commerce-design-theme-page-templates"></a>
+
+<a id="configuration-commerce-design-theme-filter-settings"></a>
+
+<a id="configuration-commerce-design-theme-menu-templates"></a>
+
 <a id="configuration-commerce-design-theme"></a>
 
 # Configure Global Theme Settings
@@ -5,14 +13,14 @@
 In your Oro application, you can control and customize the storefront look and feel.
 
 #### HINT
-Theme is configurable on three levels – globally, [per organization](../../../user-management/organizations/org-configuration/commerce/design/organization-theme.md#configuration-commerce-design-theme-theme-settings-organization) and [website](../../../websites/web-configuration/commerce/design/website-theme.md#configuration-commerce-design-theme-theme-settings-website).
+This can be done on three levels – globally, [per organization](../../../user-management/organizations/org-configuration/commerce/design/organization-theme.md#configuration-commerce-design-theme-theme-settings-organization) and [website](../../../websites/web-configuration/commerce/design/website-theme.md#configuration-commerce-design-theme-theme-settings-website).
 
 You can set the following theme-related options that apply globally by default:
 
 * Pre-designed theme for the storefront
-* The layout for the product page details
+* The layout for the product page details (default tabbed view, short, two column, or list)
 * Style of the selector in filters
-* Display mode for the user menu in the storefront, and more
+* Display mode for the user menu in the storefront
 
 To configure the storefront theme options globally:
 
@@ -21,26 +29,47 @@ To configure the storefront theme options globally:
 
    #### NOTE
    For faster navigation between the configuration menu sections, use [Quick Search](../../quick-search.md#user-guide-system-configuration-quick-search).
+
+   ![Global theme configuration settings](user/img/system/config_commerce/design/design_theme_global.png)
 3. In the **Theme Settings** section, configure the following options:
-   * **Theme** — select the storefront theme from the list. For more details on how to customize a theme from the dropdown list, refer to the [theme configuration](../../../theme-configuration/index.md#back-office-theme-configuration) topic.
+   * **Theme** — select the theme from the list. The theme controls general design of the storefront that defines its look and feel. *Default* and *custom* themes are available out-of-the-box for the storefront.
+
+   For example, this is how the address book looks in the storefront for the default and custom themes:
+   > **Default theme**
+   > ![A sample of the Address Book menu in the storefront if the default theme is enabled](user/img/system/config_commerce/design/MyProfileAddressBooks.png)
+
+   > **Custom theme**
+   > ![A sample of the Address Book menu in the storefront if the custom theme is enabled](user/img/system/config_commerce/design/address_book_compact.png)
    * **Product Image Placeholder** — select the image file that will appear on the product listing and product view pages for the products that have no associated images to avoid a blank image page.
-   * **Category Image Placeholder** — select the image file to be applied to the category that has no associated image. The image is usually used in various category widgets.
-4. In the **Page Templates** section, select the product page template from the list. A page template is used to render the product page in the storefront by default, unless the template is overridden in the product details. Available options are *Default*, *Tabs*, *Wide*.
 
-   #### IMPORTANT
-   The Page Templates configuration applies to OroCommerce version 5.1 and below and is retained in the current version only for legacy backward compatibility. For v6.0 and above, please configure this option under [System > Theme Configuration](../../../theme-configuration/index.md#back-office-theme-configuration).
+   ![A sample of the product image placeholder on the product listing page](user/img/system/config_commerce/design/product_image_placeholder.png)
+   * **Category Image Placeholder** — select the image file to be applied to the category that has no associated image. The image is usually used in various category widgets (e.g., *Featured Categories*).
+
+   ![A sample of the product image placeholder for the on the product listing age](user/img/system/config_commerce/design/category_image_placeholder.png)
+4. In the **Page Templates** section, select the product page template from the list.
+
+   This page template is used to render the product page in the storefront by default, unless the template is overridden in the product details.
+
+   *Default template* (tabbed), *Short page*, *Two-column page*, and *List page* templates are available out of the box. For preview and more information on these options, see the [Manage Product Page Design with Page Templates](../../../../products/products/page-templates.md#user-guide-page-templates) topic.
 5. In the **Filter Settings** section, specify how the multi-select filters should look in the storefront. Available options are *Drop-down* and *All at once*.
-   ![Illustration of the multi-select filter displayed in the drop-down and all at once in the storefront](user/img/system/config_commerce/design/filter_settings_dropdown.png)
 
-   #### HINT
-   To specify where the filter panel should be represented in the storefront, at the top or in the sidebar, refer to the [theme configuration](../../../theme-configuration/index.md#back-office-theme-configuration) documentation.
+   For example, this is how the user menu looks for different values:
 
-   To control whether to hide or disable product attributes within filters, refer to the [filters and sorting settings](../catalog/global-filters-sorters.md#configuration-guide-commerce-configuration-catalog-filters-sorters) documentation.
+   **Drop-down**
+   ![Illustration of the multi-select filter dispayed in the drop-down in the storefront](user/img/system/config_commerce/design/filter_settings_dropdown.png)
+
+   **All at once**
+   ![Illustration of the multi-select filter displayed all at once in the storefront](user/img/system/config_commerce/design/filter_settings_allatonce.png)
 6. In the **Menu Templates** section, select the user menu display mode that defines the look and feel of the user menu in the storefront.
 
-> #### IMPORTANT
-> The Menu Templates configuration applies to OroCommerce version 5.1 and below and is retained in the current version only for legacy backward compatibility.
-1. In the **Grid Settings** section, configure the following options:
+   For example, this is how the user menu looks for different values:
+
+   **Show all items at once**
+   ![The storefront user menu look when the Show all items at once option is enabled](user/img/system/config_commerce/design/ShowAllItemsAtOnce.png)
+
+   **Show subitems in a popup**
+   ![The storefront user menu look when the Show subitems in a popup option is enabled](user/img/system/config_commerce/design/ShowSubitemsInPopup.png)
+7. In the **Grid Settings** section, configure the following options:
    * **Responsive Grids** — This option makes storefront grids responsible, realigning row cells to fit various screen sizes.
    * **Swipe Actions Grids** — This option enables swipe actions for the storefront grids on mobile devices.
-2. Click **Save Settings**.
+8. Click **Save Settings**.

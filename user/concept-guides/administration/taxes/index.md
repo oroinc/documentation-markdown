@@ -112,24 +112,24 @@ Let’s outline the steps that you need to take to configure the tax settings fo
 1. Provided that all your customers are eligible to pay taxes, and all your products are taxable, create the tax rules that match the sales scenario of your business, where each customer has the devoted tax rule based on their location.
 
 ![Steps you need to take to create a tax rule and the list of the rules created based on the provided example](user/img/concept-guides/taxes/tax_rules_steps.png)
-1. Decide how you want to calculate taxes and whether you want to include or exclude the sales tax from product prices when displaying the products in the storefront.
+1. Decide whether you want to include or exclude the sales tax from product prices when displaying the products in the storefront.
    > #### HINT
    > The setting can be toggled in the [Tax Calculation configuration](../../../back-office/system/configuration/commerce/taxation/tax-calculation.md#user-guide-taxes-tax-configuration).
    > ![Toggle the feature to include or exclude the tax from product prices](user/img/concept-guides/taxes/price_include_feature_toggle.png)
 
 When the **tax is excluded**, all customers see the same *initial price of the product before taxes*. The tax is calculated and applied to the order at checkout based on the customer’s shipping address (in our case).
 
-So, the customer from Los Angeles who is going to submit the order for $441.57 has to pay additionally their local sales tax rate of 9.5% ($41.95) for the order total as all items in the order are taxable.
+So, the customer from Los Angeles who is going to submit the order for $169.58 has to pay additionally their local sales tax rate of 9.5% ($16.11) for the order total as all items in the order are taxable.
 
 ![The LA customer's order summary with original product prices and taxes applied separately](user/img/concept-guides/taxes/LA_customer_order.png)
 
-As for the customer from Galeton, Colorado, they have to pay an extra $12.81, based on the Galeton’s local tax rate of 2.9%.
+As for the customer from Galeton, Colorado, they have to pay an extra $4.92, based on the Galeton’s local tax rate of 2.9%.
 
 ![The Galeton customer's order summary with original product prices and taxes applied separately](user/img/concept-guides/taxes/Galeton_customer_order.png)
 
 Sometimes, you may prefer to **include the taxes** to the product prices and display the *final price* to your customers when they browse the storefront. In this case, you have to create related price lists that would reflect the prices with taxes per each customer individually, depending on their local tax rates.
 
-With this configuration, the order of your LA customer would look as illustrated in the picture below, where the tax is just displayed as a reference and is not charged twice. The tax ($41.95) and total order amount ($483.53) remain the same as in the order with the taxes that are excluded from product prices.
+With this configuration, the order of your LA customer would look as illustrated in the picture below, where the tax is just displayed as a reference and is not charged twice. The tax ($16.11) and total order amount ($169.58) remain the same as in the order with the taxes that are excluded from product prices.
 
 ![The LA customer's order summary where the product prices include taxes](user/img/concept-guides/taxes/LA_customer_order_include_tax.png)
 

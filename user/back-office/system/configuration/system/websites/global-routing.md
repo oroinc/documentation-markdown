@@ -21,21 +21,22 @@ To change the default global routing settings:
    ![Global website routing settings](user/img/system/config_system/routing_general.png)
    * **URL** - Internal links and canonical URLs (meta keywords) on the OroCommerce storefront pages may contain this value as the website base URL. This option value is used in internal links when a customer uses insecure (HTTP) connection. In the canonical links, it is used when the **Canonical URL Security Type** is set to *Secure*.
    * **Secure URL** - Internal links and canonical URLs (meta keywords) on the OroCommerce storefront pages may contain this value as the website base URL. This option value is used in internal links when a customer uses secure (HTTPS) connection. In the canonical links, it is used when the **Canonical URL Security Type** is set to *Insecure*.
-   * **Create Redirects** - This option defines a strategy for creating redirects when the URL building rules change. Supported options: *Ask*, *Never*, *Always*.
+   * **Create Redirects** - this option defines a strategy for creating redirects when the URL building rules change. Supported options: *Ask*, *Never*, *Always*.
 
      When *Ask* is selected, OroCommerce prompts to confirm redirect creation on every change.
 
      When *Never* is selected, OroCommerce does not create any redirects.
 
      When *Always* is selected, the redirects are created by default.
-   * **Web Catalog** - When you add a web catalog, it populates the main menu and sub-menus of the OroCommerce storefront. If there is no web catalog available, the structure of the master catalog is used to fill the storefront menu. Once you add a web catalog, click **Save Settings** to prompt the system to show you a detailed content tree of the selected web catalog under the **Navigation Root** field.
-   * **Navigation Root** - This option is available only if a web catalog has been added. Here, you can select the root content node to be displayed in the OroCommerce storefront. Keep in mind that only the sub-menu nodes that belong to the selected parent node will be visible in the storefront.
-     ![The selected sub-menu nodes that will be visible in the storefront](user/img/system/config_system/visible_content_node.png)
-   * **Main Navigation Menu** - Select which [storefront menu](../../../../../concept-guides/administration/menus/index.md#menu-management-concept-guide) will represent the [main menu](../../../../../storefront/getting-started/general-layout.md#frontstore-guide-navigation-main-menu) in the storefront.
-     ![Illustration of how changing Main Navigation Menu affects the storefront](user/img/system/frontend_menu/main-navigation-menu.png)
+   * **Web Catalog** - when a Web Catalog is selected, it populates the main menu and sub-menus on the OroCommerce Storefront. If there is no Web Catalog in OroCommerce, the Master Catalog structure is mimicked.
 
-> * **Homepage** - When no web catalog is available, you can choose any of the available landing pages as your homepage. Please note that on clean installations of Oro applications, the default homepage is blank.
-1. In the **Direct URLs** section, configure the following settings:
+   Once you decide on the Web Catalog, click **Save Settings**, and the detailed content tree of the selected web catalog appears under the **Navigation Root** field.
+   * **Navigation Root** - select the root content node to be displayed in the OroCommerce storefront. Keep in mind that only the sub-menu nodes that belong to the selected parent node will be visible in the storefront.
+     ![The selected sub-menu nodes that will be visible in the storefront](user/img/system/config_system/visible_content_node.png)
+   * **Main Navigation Menu** - Select which [frontend menu](../../../frontend-menus/index.md#frontend-menus-overview) will represent the [main menu](../../../../../storefront/getting-started/general-layout.md#frontstore-guide-navigation-main-menu) in the storefront.
+     ![Illustration of how changing Main Navigation Menu affects the storefront](user/img/system/frontend_menu/main-navigation-menu.png)
+4. In the **Direct URLs** section, configure the following settings:
+   ![Global Direct URLs settings](user/img/system/config_system/routing_direct_url.png)
    * **Enable Direct URLs** - when enabled, the page URL is built using the page slug (e.g., /500-watt-work-light). When disabled, the system path to the item and its ID is used (e.g., /product/view/4).
    * **Product URL Prefix** - the prefix that is appended to the product slug in the URL.
    * **Brand URL Prefix** - the prefix that is appended to the product brand slug in the URL.
@@ -44,12 +45,13 @@ To change the default global routing settings:
 
 <a id="routing-website-matchers-global"></a>
 1. In the **Canonical URLs** section, configure the following parameters:
+   ![Global Canonical URLs settings](user/img/system/config_system/routing_canonical_url.png)
    * **Canonical URL Type** - this option defines whether the *System URL* or *Direct URL* should be used as a canonical link in the meta keywords in the page source code.
      * When *System URL* is selected, the page URL is built using the system path to the item and its ID (e.g. /product/view/4).
      * When *Direct URL* is selected, the page URL is built using the page slug (e.g. /500-watt-work-light).
 
      #### NOTE
-     <a href="https://support.google.com/webmasters/answer/139066?hl=en" target="_blank">Canonical link</a> is used to help search engines identify the unique content that should be indexed. Switching from one setting to the other does not modify the data stored in the database, it only controls which data is used to as a canonical URL.
+     <a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls?hl=en&visit_id=638162001252801531-2888881340&rd=1" target="_blank">Canonical link</a> is used to help search engines identify the unique content that should be indexed. Switching from one setting to the other does not modify the data stored in the database, it only controls which data is used to as a canonical URL.
    * **Canonical URL Security Type** - this option defines which value should be used as a website base URL in the canonical link in the page meta keywords. Supported options: *Insecure* and *Secure*.
      * When *Insecure* is selected, the website base URL in the canonical link matches the **URL** value.
      * When *Secure* is selected, the **Secure URL** value is used instead.

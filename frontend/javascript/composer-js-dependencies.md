@@ -13,7 +13,7 @@ As NPM allows a lot more freedom in package naming, we could no longer update so
 
 The following software is required for composer to install JS dependencies:
 
-> - <a href="https://nodejs.org/en/" target="_blank">Node.js</a>, version 20
+> - <a href="https://nodejs.org/en/" target="_blank">Node.js</a>, version 18
 > - <a href="https://npmjs.org/" target="_blank">NPM</a>
 
 #### HINT

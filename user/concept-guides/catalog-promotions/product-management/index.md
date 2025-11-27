@@ -33,15 +33,13 @@ All the product components are used when creating simple and configurable produc
 
 ![Product filters in the storefront](user/img/concept-guides/products/product_creation_steps.png)
 
-<a id="concept-guides-product-management-types"></a>
-
 ## Simple vs Configurable Products vs Kits
 
 In OroCommerce, products can be of three types, simple, configurable and kits. The product type selected at the first step of product creation in the back-office determines the way product information is used and managed in OroCommerce.
 
 **Simple products** are physical items that exist in a basic, single variation. Their qualifiers, such as color or size, cannot be modified meaning customers cannot select the same product with slightly different characteristics. Simple products have a unique SKU and serve as ‘building blocks’ for configurable products. You can manage the inventory information and the price for a simple product.
 
-![An example of a simple product displayed in the storefront](user/img/concept-guides/products/simple-product.png)
+![An example of a simple product displayed in the storefront](user/img/concept-guides/products/SimpleProductScreenFrontStore.png)
 
 Unlike a simple product, **a configurable product** is an item available in multiple variations. Customers configure the product in terms of its color, size or any other applicable parameters according to buying needs. Buyers in the storefront choose from the options provided to ‘configure’ a product according to their needs.
 
@@ -49,7 +47,7 @@ However, in the back-office, configurable products are more sophisticated. A con
 
 ![Both configurable and simple products are illustrated in the products grid](user/img/concept-guides/products/SampleConfigSimpleGrid.png)
 
-For example, a USB flash drive may be available in various colors and capacity (e.g., Red USB drive 64 GB, Red USB drive 256 GB, White USB drive 128 GB, Black USB drive 64 GB). In this case, the generic USB flash drive is a configurable product, Red USB drive 64 GB, Red USB drive 256 GB, White USB drive 128 GB, and Black USB drive 64 GB are product variants (created as simple products), and *color* and *capacity* are configurable attributes in the generic USB flash drive.
+For example, a USB flash drive may be available in various colors and capacity (e.g., Red USB drive 64 GB, Red USB drive 256 GB, Green USB drive 128 GB, Black USB drive 64 GB). In this case, the generic USB flash drive is a configurable product, Red USB drive 64 GB, Red USB drive 256 GB, Green USB drive 128 GB, and Black USB drive 64 GB are product variants (created as simple products), and *color* and *capacity* are configurable attributes in the generic USB flash drive.
 
 A configurable attribute is one of the product attributes that are used to distinguish product variants of the same configurable product. There should be at least one configurable attribute specified for the configurable product in order to enable the customer to perform product variant selection.
 
@@ -59,10 +57,10 @@ To purchase multiple product variants in one order, use a [matrix order form](..
 
 A **product kit** is an assortment of products, each with their individual SKUs. Each product in this assortment bundle can be mandatory or optional for the buyers to buy in order to proceed though the checkout. An example of a product kit would be a lamp with a selection of optional accessories or services for it, such as spare bulbs of different wattage or warranty.
 
-![Product kits in the storefront](user/img/concept-guides/products/kit-front.png)
+![Product kits in the storefront](user/img/products/products/kits/kit-front.png)
 
 #### NOTE
-Check out the [Product Kits Concept Guide](kits-concept.md#concept-guides-product-management-kits) for more information on product kits.
+Product Kits in the back-office are available as of 5.1LTS. Product Kits in the storefront are available as of 5.1.3. By default, the product kits feature is disabled for v.5.1 but you can enable it with developer assistance in the <a href="https://github.com/oroinc/orocommerce/blob/5.1/src/Oro/Bundle/ProductBundle/Resources/config/oro/app.yml" target="_blank">yaml file of the ProductBundle</a>.
 
 ## Products in a Multi-Org Application
 
@@ -89,148 +87,37 @@ When the required number of products has been created or imported, you can furth
 The products that appear on the home page of the OroCommerce storefront are customized through the configuration settings of:
 
 * A [master catalog](../../../back-office/products/master-catalog/index.md#user-guide-master-catalog) or a [web catalog](../../../back-office/marketing/web-catalogs/index.md#user-guide-web-catalog) that organize all existing products in your store by categories.
-* A [featured products segment](#concept-guides-product-management-featured-products) that displays the selected products on the crowded paths of you website.
-* A [new arrivals segment](#concept-guides-product-management-new-arrivals-products) that showcases a few new products of your store that you want to promote.
+* A [featured products segment](../../../back-office/system/configuration/commerce/product/global-featured-products.md#products-featured-products) that displays the selected products on the crowded paths of you website.
+* A [new arrivals segment](../../../back-office/system/configuration/commerce/product/global-promotions.md#sys-commerce-product-new-arrivals-block-global) that showcases a few new products of your store that you want to promote.
 * A [new product icon](../../../back-office/system/configuration/commerce/product/global-promotions.md#sys-commerce-product-new-arrivals) that highlights the products as new.
 * A [product image watermark](../../../back-office/system/configuration/commerce/product/global-product-images.md#configuration-guide-commerce-configuration-product-images) that can be added on top of the images for the selected products.
 
 ![Visual representation of products on the home page](user/img/concept-guides/products/highlight_products_home_page.png)
 
-You can configure the [All Products page](../../../back-office/system/configuration/commerce/catalog/global-all-products.md#sys-conf-commerce-catalog-special-pages) to display all available products from the master catalog grouped by categories.
+On the product details page, you can configure the following options:
 
-You can also enable the [image preview on product listing page](../../../back-office/system/configuration/commerce/product/global-product-images.md#sys-commerce-product-product-images-image-preview-global) to see the product image gallery when clicking on the <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> icon on a product image in the storefront.
-
-![Visual representation of products on the product listing page](user/img/concept-guides/products/all_product_page_storefront.png)
-
-<a id="user-guide-products-recommendations"></a>
-
-## Product Recommendations
-
-OroCommerce understands the importance of providing personalized and relevant product suggestions to customers, which is why it offers sellers the ability to enhance the shopping experience and increase sales through the use of product recommendations. There are:
-
-> * similar products
-> * related products
-> * up-sell products
-> * featured products
-
-By leveraging these product recommendation features, OroCommerce empowers sellers to curate a personalized shopping experience that engages customers and drives conversions. Through targeted suggestions and strategic promotions, sellers can increase customer satisfaction, boost sales, and foster long-term loyalty.
-
-### Similar Products
+* A [product image gallery](../../../back-office/system/configuration/commerce/product/global-product-images.md#sys-commerce-product-product-images-gallery-slider-global) that controls the way the product options are displayed on the product page. You can select whether to use popup or inline view for the image gallery.
+* A [related products block](../../../back-office/system/configuration/commerce/catalog/global-related-products.md#sys-commerce-catalog-relate-products-main) that binds similar products related to those currently browsed by the customer or those that complement each other, like the laptop and its accessories, a mouse, notebook bag or screen cleaning cloths.
+* An [up-sell products block](../../../back-office/system/configuration/commerce/catalog/global-related-products.md#sys-commerce-catalog-upsell-products) that binds products that should be promoted with the product selected by the customer, like more expensive alternatives of the model, upgrade options, additional parts. Taking the example of the laptop, that would be a laptop with a larger screen, better processor, or higher hard drive capacity than the customer planned to buy.
+* A [similar products block](../../../back-office/system/configuration/commerce/catalog/global-related-products.md#sys-commerce-catalog-similar-products) that automatically shows products similar to the current one, like similar laptops on the laptop page. The more common traits a similar laptop shares with the original laptop, the higher it is in the list.
 
 #### NOTE
-Similar Products are available for the OroCommerce Enterprise edition if Elasticsearch is used as the search engine.
+Similar products are available for the OroCommerce Enterprise edition if Elasticsearch is used as the search engine.
 
-The Similar Products feature is designed to assist sellers in showcasing products on the product view page that are similar or complementary to the one currently being viewed by a customer. Based on the information stored in the search index, OroCommerce intelligently identifies and displays similar products, encouraging customers to explore additional options that align with their interests.
+![Visual representation of products on the product details page](user/img/concept-guides/products/highlight_products_details_page.png)
 
-You can enable and configure the Similar Products feature in the system configuration [globally](../../../back-office/system/configuration/commerce/catalog/global-related-products.md#sys-commerce-catalog-relate-products), per [organization](../../../back-office/system/user-management/organizations/org-configuration/commerce/catalog/organization-related-products.md#sys-users-organization-commerce-catalog-related-products), and per [website](../../../back-office/system/websites/web-configuration/commerce/catalog/website-related-products.md#sys-websites-commerce-catalog-related-products). For example, you can enable buyers to add a similar product to the shopping list directly from the product view page where the recommendation appears or toggle the minimum and maximum number of products displayed on the page.
+You can configure the [All Products page](../../../back-office/system/configuration/commerce/catalog/global-all-products.md#sys-conf-commerce-catalog-special-pages) to display all available products from the master catalog grouped by categories. Here, you can also customize the [image preview on product listing page](../../../back-office/system/configuration/commerce/product/global-product-images.md#sys-commerce-product-product-images-image-preview-global) to see the product image gallery instead of the product page when clicking on the image in the product listing.
 
-![Illustration of similar product recommendations in the back-office and storefront](user/img/concept-guides/products/similar-products.png)
-
-### Related Products
-
-The Related Products feature allows sellers to showcase a curated selection of products closely associated with the item a customer is currently viewing. OroCommerce identifies and presents related products that align with the customer’s interests and preferences, guiding them towards products they may have otherwise overlooked.
-
-By strategically selecting and displaying related products, sellers can encourage customers to explore additional offerings, discover new items, and make informed purchase decisions.
-
-You can enable and configure the Related Products feature in the system configuration [globally](../../../back-office/system/configuration/commerce/catalog/global-related-products.md#sys-commerce-catalog-relate-products), per [organization](../../../back-office/system/user-management/organizations/org-configuration/commerce/catalog/organization-related-products.md#sys-users-organization-commerce-catalog-related-products), and per [website](../../../back-office/system/websites/web-configuration/commerce/catalog/website-related-products.md#sys-websites-commerce-catalog-related-products). For example, you can ensure that related products are automatically linked to each other, enhancing the effectiveness of product recommendations. So if a customer is viewing the standing lamp, they will see the lightning bulb as a suggested related product. Similarly, if a customer is viewing the lightning bulb, they will also see the standing lamp as a related item.
-
-You can also control whether customers can add a related item to the shopping list directly from the view page of the product they are browsing.
-
-![Global related items configuration](user/img/concept-guides/products/related-products-config.png)
-
-### Up-Sell Products
-
-This feature allows sellers to leverage customers’ buying intent by suggesting higher-priced or upgraded alternatives to the product they are currently viewing on the product view page. By strategically showcasing products that offer additional features, improved quality, or enhanced functionality, sellers can encourage customers to consider upgrading their purchase, ultimately increasing the average order value and maximizing revenue.
-
-The Up-sell feature enables sellers to tap into the customer’s desire for a better product or an elevated shopping experience. By presenting a more premium option, sellers can cater to varying customer needs and preferences while simultaneously boosting their sales performance.
-
-You can enable and configure the up-sell product feature options [globally](../../../back-office/system/configuration/commerce/catalog/global-related-products.md#sys-commerce-catalog-relate-products), per [organization](../../../back-office/system/user-management/organizations/org-configuration/commerce/catalog/organization-related-products.md#sys-users-organization-commerce-catalog-related-products), and per [website](../../../back-office/system/websites/web-configuration/commerce/catalog/website-related-products.md#sys-websites-commerce-catalog-related-products).
-
-![Illustration of the related and up-sell products segments in the storefront](user/img/concept-guides/products/up-sell-config.png)
-
-<a id="concept-guides-product-management-featured-products"></a>
-
-### Featured Products
-
-#### IMPORTANT
-As of OroCommerce v6.0, the configuration logic for the featured products block has been updated. Users of v5.1 and earlier should configure the block following the [principles for those versions](../../../back-office/system/configuration/commerce/product/global-featured-products.md#sys-commerce-product-featured-products). While users of the **Refreshing Teal** theme can use the new configuration principles described in the section.
-
-The featured products feature provides sellers with an opportunity to highlight specific products in their website’s storefront. This feature allows for strategic placement of products that are popular, on sale, or aligned with current marketing campaigns, effectively capturing the attention of customers as soon as they land on the website.
-
-#### NOTE
-Keep in mind that **featured products segment** is different from the [featured_menu](../../administration/menus/index.md#menu-management-concept-guide). While the featured products segment is intended to store only the products and categories that are marked as featured, the featured menu is designed to offer any other information that you want to emphasize.
-
-![A sample of the featured_menu and a featured product segment in the storefront](user/img/concept-guides/menus/featured_menu_vs_segment.png)
-
-To add the featured products block to any storefront page, you need to:
-
-1. Mark the selected products as featured in the **General** section of the **Products > Products** main menu by setting **Is Featured** to *Yes*.
-
-![Toggling the Is Featured setting to Yes.](user/img/concept-guides/products/is-featured.png)
-1. Create a featured products segment to include all products that you have marked as featured under **Reports & Segments > Manage Segments** as described in the [Create Segment](../../../back-office/reports-segments/segments.md#user-guide-business-intelligence-create-segments) topic.
-
-![Creating a segment with a list of all products marked as featured](user/img/concept-guides/products/featured-segment.png)
-1. Create a [product segment content widget](../../../back-office/marketing/content-widgets/index.md#content-widgets-product-segment) to include the featured products segment that you have configured in Step 2.
-
-![Creating a product segment content widget with the featured products selected for segment](user/img/concept-guides/products/featured-products-content-widget.png)
-1. Once you save the content widget, you can now place it to the required location in the [WYSIWYG](../../content-management/wysiwyg.md#getting-started-wysiwyg-editor-field) field of your landing page or content block.
-
-![Adding a block content widget to a WYSIWYG field](user/img/concept-guides/products/featured-products-content-widget-wysiwyg.png)
-
-<a id="concept-guides-product-management-new-arrivals-products"></a>
-
-### New Arrivals Products
-
-#### IMPORTANT
-As of OroCommerce v6.0, the configuration logic for the new arrivals products block has been updated. Users of v5.1 and earlier should configure the block following the [principles for those versions](../../../back-office/system/configuration/commerce/product/global-promotions.md#configuration-guide-commerce-configuration-promotions). While users of the **Refreshing Teal** theme can use the new configuration principles described in the section.
-
-The new arrivals products feature provides sellers with an opportunity to highlight new products in their website’s storefront, effectively capturing the attention of customers as soon as they land on the website.
-
-To add the new arrivals products block to any storefront page, you need to:
-
-1. Mark the selected products as new arrivals in the **General** section of the **Products > Products** main menu by setting **Is New Arrival** to *Yes*.
-
-![Toggling the New Arrival setting to Yes.](user/img/concept-guides/products/new-arrivals.png)
-1. Create a new arrivals products segment to include all products that you have marked as new arrival under **Reports & Segments > Manage Segments** as described in the [Create Segment](../../../back-office/reports-segments/segments.md#user-guide-business-intelligence-create-segments) topic.
-2. Create a [product segment content widget](../../../back-office/marketing/content-widgets/index.md#content-widgets-product-segment) to include the new arrival products segment that you have configured in Step 2.
-
-![Creating a product segment content widget with the new arrival products selected for segment](user/img/concept-guides/products/new-arrivals-products-content-widget.png)
-1. Once you save the content widget, you can now place it to the required location in the [WYSIWYG](../../content-management/wysiwyg.md#getting-started-wysiwyg-editor-field) field of your landing page or content block.
-
-![Adding a block content widget to a WYSIWYG field](user/img/concept-guides/products/new-arrivals-products-content-widget-wysiwyg.png)
+![Visual representation of products on the product details page](user/img/concept-guides/products/all_product_page_storefront.png)
 
 As you can see, with OroCommerce you can create an appealing and functional product pages that are the key to sales in online stores of all kinds.
 
-**Related Articles**
-
-* [Product Kits](kits-concept.md#concept-guides-product-management-kits)
-* [Products User Guide](../../../back-office/products/index.md#doc-products)
-* [Product-Related Settings in System Configuration](../../../back-office/system/configuration/commerce/product/index.md#configuration-products)
-
-<!-- fa-bars = fa-navicon -->
-<!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
-<!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
-<!-- Check mark in the square. -->
-<!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->
-
 #### BUSINESS TIP
-### Business Tip
+## Business Tip
 
 <a href="https://oroinc.com/b2b-ecommerce/what-is-b2b-ecommerce/" target="_blank">What is B2B eCommerce</a> and how it can benefit your business? You’ll find answers to this and other commerce-related questions in our guide.
+
+**Related Articles**
+
+* [Products User Guide](../../../back-office/products/index.md#doc-products)
+* [Product-Related Settings in System Configuration](../../../back-office/system/configuration/commerce/product/index.md#configuration-products)

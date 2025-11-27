@@ -49,18 +49,22 @@ The controller receives an entity “priority” and passes it to the view:
 
 *src/Acme/Bundle/DemoBundle/Controller/PriorityController.php*
 ```php
-#[Route(path: '/priority', name: 'acme_demo_priority_')]
+/**
+ * @Route("/priority", name="acme_demo_priority_")
+ */
 class PriorityController extends AbstractController
 {
-    #[Route(path: '/view/{id}', name: 'view', requirements: ['id' => '\d+'])]
-    #[Template]
+    /**
+     * @Route("/view/{id}", name="view", requirements={"id"="\d+"})
+     * @Template
+     */
     public function viewAction(Priority $entity): array
     {
         return [
             'entity' => $entity,
         ];
     }
-    }
+}
 ```
 
 In this example, the entity mapping page adds a grid with the data of the linked entity.
@@ -105,7 +109,7 @@ In case if names of the parameter in the grid and the query do not match, you ca
 ```
 
 #### CAUTION
-A datasource must implement the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/DataGridBundle/Datasource/BindParametersInterface.php" target="_blank">BindParametersInterface</a> to support the `bind_parameters` option.
+A datasource must implement the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/DataGridBundle/Datasource/BindParametersInterface.php" target="_blank">BindParametersInterface</a> to support the `bind_parameters` option.
 
 ## Solution 2. Create Custom Event Listener
 
@@ -194,6 +198,6 @@ The view passes the “holder_entity_id” parameter with the value “entity.id
 
 ## References
 
-* <a href="https://symfony.com/doc/6.4/cookbook/doctrine/event_listeners_subscribers.html" target="_blank">Symfony Cookbook How to Register Event Listeners and Subscribers</a>
+* <a href="https://symfony.com/doc/5.4/cookbook/doctrine/event_listeners_subscribers.html" target="_blank">Symfony Cookbook How to Register Event Listeners and Subscribers</a>
 
 <!-- Frontend -->

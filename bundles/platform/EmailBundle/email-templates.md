@@ -2,24 +2,309 @@
 
 # Email Templates
 
-Email template is a predefined email content that can be used to send emails. They can contain variables (placeholders) that are replaced with actual values when the email is sent.
+Any bundle can define its templates using Data Fixtures.
+To achieve this, add a fixture in the `SomeBundle\Migrations\Data\ORM` folder that extends the `Oro\Bundle\EmailBundle\Migrations\Data\ORM\AbstractEmailFixture` abstract class and implements the only method - getEmailsDir:
 
-Email template can be created and managed in the following ways:
+```php
+class DataFixtureName extends AbstractEmailFixture
+{
+    /**
+     * Return path to email templates
+     *
+     * @return string
+     */
+    public function getEmailsDir()
+    {
+        return __DIR__ . DIRECTORY_SEPARATOR . '../data/emails';
+    }
+}
+```
 
-- in the UI via **System > Emails > Templates**,
-- programmatically via data fixtures. See [Email Templates Migrations](email-templates-migrations.md#bundle-docs-platform-email-bundle-templates-migrations) ,
-- from the command line via `oro:email:template:import` Symfony command. See [Commands](commands.md#bundle-docs-platform-email-bundle-commands).
+Place email templates in that defined folder with any file name.
 
-Before an email is sent, a corresponding email template is rendered using the <a href="https://twig.symfony.com/" target="_blank">TWIG templating engine</a> in a separate sandbox environment. See [Email Templates Rendering](email-templates-rendering.md#bundle-docs-platform-email-bundle-templates-rendering) and [Email Templates Rendering Sandbox](email-templates-rendering-sandbox.md#bundle-docs-platform-email-bundle-templates-rendering-sandbox) for the internals.
+## Email Format
 
-## Related Documentation
+You can define email format based on file name, e.g.:
 
-* [Loading an Email Template](email-templates-load.md)
-* [Rendering an Email Template](email-templates-rendering.md)
-* [Email Templates Rendering Sandbox](email-templates-rendering-sandbox.md)
-* [Email Templates Inheritance](email-templates-inheritance.md)
-* [Sending an Email Created from an Email Template](email-templates-send.md)
-* [Email Templates Migrations](email-templates-migrations.md)
-* [Email Templates Attachments](email-templates-attachments.md)
+- html format: update_user.html.twig, some_name.html
+- txt format: some_name.txt.twig, some_name.txt
+- default format - html, if file extension can’t be recognized as html or txt
+
+## Email Parameters
+
+Each template must define these params:
+
+- entityName - each template knows how to display some entity
+- subject - email subject
+
+Optional parameter:
+
+- name - template name; the template file name without extension is used if this parameter is not specified
+- isSystem - 1 or 0, default - false (0)
+- isEditable - 1 or 0, default - false (0); make sense only if isSystem = 1 and allow to edit content of system templates
+
+Params defined with syntax at the top of the template.
+
+```twig
+@entityName = Oro\Bundle\UserBundle\Entity\User
+@subject = Subject {{ entity.username }}
+@isSystem = 1
+```
+
+## Available Variables in Email Templates
+
+For security reasons, the <a href="https://twig.symfony.com/doc/2.x/api.html#sandbox-extension" target="_blank">Sandbox mode</a> is enabled for Email templates for the Twig Templating Engine.
+
+It means that only a limited set of variables is allowed in email templates:
+
+* the set of system variables and
+* the set of entity variables (entity object of the entityName class with all its fields if the entity is set for template).
+
+The list of these variables is provided on the Email Template edit page of the admin UI (on the System > Emails > Templates menu item).
+
+Also, additional Twig functions, filters, and tags are registered and allowed to be used in Email Templates. You can find the complete list of these functions, filters, and tags by searching classes inherited from <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EmailBundle/DependencyInjection/Compiler/AbstractTwigSandboxConfigurationPass.php" target="_blank">AbstractTwigSandboxConfigurationPass</a>. You can also check out the topic on [Email](../../../user/back-office/system/emails/email-templates.md#user-guide-email-template).
+
+## Extend Available Data in Email Templates
+
+To extend the available data (variables) in email templates, you can create your own variable provider and processor. The variable provider must implement <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityBundle/Twig/Sandbox/EntityVariablesProviderInterface.php" target="_blank">EntityVariablesProviderInterface</a> and be registered in the DI container with the oro_email.emailtemplate.variable_provider tag. The variable processor must implement <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityBundle/Twig/Sandbox/VariableProcessorInterface.php" target="_blank">VariableProcessorInterface</a> and be registered in the DI container with the oro_email.emailtemplate.variable_processor tag.
+
+An example:
+
+1. Create a variable provider:
+   > ```php
+   > class MyVariablesProvider implements EntityVariablesProviderInterface
+   > {
+   >     public function getVariableDefinitions(string $entityClass = null): array
+   >     {
+   >         return [
+   >             MyEntity::class => [
+   >                 'someVariable' => [
+   >                     'type'  => RelationType::TO_ONE,
+   >                     'label' => $this->translator->trans('acme.my_entity.some_variable')
+   >                 ]
+   >             ]
+   >         ];
+   >     }
+
+   >     public function getVariableGetters(): array
+   >     {
+   >         return [];
+   >     }
+
+   >     public function getVariableProcessors(string $entityClass): array
+   >     {
+   >         if (MyEntity::class === $entityClass) {
+   >             return [
+   >                 'someVariable'  => [
+   >                     'processor' => 'my_processor'
+   >                 ]
+   >             ];
+   >         }
+
+   >         return [];
+   >     }
+   > }
+   > ```
+2. Create a variable processor:
+   > ```php
+   > class MyVariableProcessor implements VariableProcessorInterface
+   > {
+   >     public function process(string $variable, array $processorArguments, TemplateData $data): void
+   >     {
+   >         $someObject = new SomeObject();
+   >         $someObject->setName('test')
+
+   >         $data->setComputedVariable($variable, $someObject);
+   >     }
+   > }
+   > ```
+3. Register variable provider and processor in the DI container:
+   > ```yaml
+   > services:
+   >     acme_demo.emailtemplate.my_variable_provider:
+   >         class: Acme\Bundle\DemoBundle\Provider\MyVariablesProvider
+   >         public: false
+   >         tags:
+   >             - { name: oro_email.emailtemplate.variable_provider, scope: entity }
+
+   >     acme_demo.emailtemplate.my_variable_processor:
+   >         class: Acme\Bundle\DemoBundle\Provider\MyVariableProcessor
+   >         public: false
+   >         tags:
+   >             - { name: oro_email.emailtemplate.variable_processor, alias: my_processor }
+   > ```
+
+Another way to extend the available data is to create a Twig function and register it in the Email templates.
+
+Twig environment.
+
+An example:
+
+1. Create a Twig extension:
+   > ```php
+   > namespace Acme\Bundle\DemoBundle\Twig;
+
+   > use Acme\Bundle\DemoBundle\Entity\Some;
+   > use Twig\Extension\AbstractExtension;
+   > use Twig\TwigFunction;
+
+   > class MyExtension extends AbstractExtension
+   > {
+   >     /**
+   >      * @inheritDoc
+   >      */
+   >     public function getFunctions(): array
+   >     {
+   >         return [new TwigFunction('some_function', [$this, 'getSomeVariableValue'])];
+   >     }
+
+   >     /**
+   >      * @param Some $entity
+   >      * @return array
+   >      */
+   >     public function getSomeVariableValue(Some $entity): array
+   >     {
+   >         $result = [];
+   >         foreach ($entity->getProducts() as $product) {
+   >             $result[] = [
+   >                 'productName' => $product->getName()
+   >             ];
+   >         }
+
+   >         return $result;
+   >     }
+   > }
+   > ```
+2. Register the Twig extension in the DI container:
+   > ```yaml
+   > services:
+   >     acme.twig.my_extension:
+   >         class: Acme\Bundle\DemoBundle\Twig\MyExtension
+   >         public: false
+   >         tags:
+   >             - { name: twig.extension }
+   > ```
+3. Create a DI compiler pass to register the created extension and function in the Email Twig Environment:
+   > ```php
+   > namespace Acme\Bundle\DemoBundle\DependencyInjection\Compiler;
+
+   > use Oro\Bundle\EmailBundle\DependencyInjection\Compiler\AbstractTwigSandboxConfigurationPass;
+
+   > class TwigSandboxConfigurationPass extends AbstractTwigSandboxConfigurationPass
+   > {
+   >     /**
+   >      * @inheritDoc
+   >      */
+   >     protected function getFunctions(): array
+   >     {
+   >         return [
+   >             'some_function'
+   >         ];
+   >     }
+
+   >     /**
+   >      * @inheritDoc
+   >      */
+   >     protected function getFilters(): array
+   >     {
+   >         return [];
+   >     }
+
+   >     /**
+   >      * @inheritDoc
+   >      */
+   >     protected function getTags(): array
+   >     {
+   >         return [];
+   >     }
+
+   >     /**
+   >      * @inheritDoc
+   >      */
+   >     protected function getExtensions(): array
+   >     {
+   >         return [
+   >             'acme.twig.my_extension'
+   >         ];
+   >     }
+   > }
+   > ```
+4. Register the created compiler pass:
+   > ```php
+   > namespace Acme\Bundle\DemoBundle;
+
+   > use Acme\Bundle\DemoBundle\DependencyInjection\Compiler\TwigSandboxConfigurationPass;
+   > use Symfony\Component\DependencyInjection\ContainerBuilder;
+   > use Symfony\Component\HttpKernel\Bundle\Bundle;
+
+   > class AcmeDemoBundle extends Bundle
+   > {
+   >     /**
+   >      * @inheritDoc
+   >      */
+   >     public function build(ContainerBuilder $container): void
+   >     {
+   >         parent::build($container);
+
+   >         $container->addCompilerPass(new TwigSandboxConfigurationPass());
+   >     }
+   > }
+   > ```
+
+Once you complete these steps, the “some_function” Twig function becomes available in Email templates.
+
+## Basic Email Template Structure
+
+Be aware that HTML email templates are passed to WYSIWYG when edited. **WYSIWYG automatically tries to modify the given HTML according to HTML specifications.** Therefore, text and tags that violate HTML specifications should be wrapped in HTML comments. For example, no tags or text are allowed between <table></table> tags except thead, tbody, tfoot, th, tr, td.
+
+Examples:
+
+Invalid template:
+
+```twig
+<table>
+    <thead>
+        <tr>
+            <th><strong>Acme</strong></th>
+        </tr>
+    </thead>
+    {% for item in collection %}
+    <tbody>
+        {% for subItem in item %}
+        <tr>
+            {% if loop.first %}
+            <td>{{ subItem.key }}</td>
+            <td>{{ subItem.value }}</td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </tbody>
+    {% endfor %}
+</table>
+```
+
+Valid template:
+
+```twig
+<table>
+    <thead>
+        <tr>
+            <th><strong>Acme</strong></th>
+        </tr>
+    </thead>
+    <!--{% for item in collection %}-->
+    <tbody>
+        <!--{% for subItem in item %}-->
+        <tr>
+            <!--{% if loop.first %}-->
+            <td>{{ subItem.key }}</td>
+            <td>{{ subItem.value }}</td>
+            <!--{% endif %}-->
+        </tr>
+        <!--{% endfor %}-->
+    </tbody>
+    <!--{% endfor %}-->
+</table>
+```
 
 <!-- Frontend -->

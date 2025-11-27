@@ -26,7 +26,7 @@ $webpImageUrl = $this->fileUrlProvider->getFilteredImageUrl($image, $filterName,
 
 ## Custom URL Provider
 
-In order to hook into the logic of generating a URL for a file or image, <a href="https://symfony.com/doc/6.4/service_container/service_decoration.html" target="_blank">decorate service</a> `oro_attachment.provider.file_url` with a class that implements the `Oro\Bundle\AttachmentBundle\Provider\FileUrlProviderInterface` interface. For example:
+In order to hook into the logic of generating a URL for a file or image, <a href="https://symfony.com/doc/5.4/service_container/service_decoration.html" target="_blank">decorate service</a> `oro_attachment.provider.file_url` with a class that implements the `Oro\Bundle\AttachmentBundle\Provider\FileUrlProviderInterface` interface. For example:
 
 *src/Acme/Bundle/DemoBundle/Provider/CustomUrlProvider.php*
 ```php
@@ -48,19 +48,25 @@ class CustomUrlProvider implements FileUrlProviderInterface
         $this->innerFileUrlProvider = $innerFileUrlProvider;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getFileUrl(File $file, string $action = self::FILE_ACTION_GET, int $referenceType = UrlGeneratorInterface::ABSOLUTE_PATH): string
     {
         return 'custom url here';
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getResizedImageUrl(File $file, int $width, int $height, string $format = '', int $referenceType = UrlGeneratorInterface::ABSOLUTE_PATH): string
     {
         return 'custom url here';
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getFilteredImageUrl(File $file, string $filterName, string $format = '', int $referenceType = UrlGeneratorInterface::ABSOLUTE_PATH): string
     {
         if (/* custom condition here */) {
@@ -88,7 +94,7 @@ services:
 
 ## Custom Filename Provider
 
-To hook into the logic of generating a filename for a file or image, <a href="https://symfony.com/doc/6.4/service_container/service_decoration.html" target="_blank">decorate service</a> `oro_attachment.provider.file_name`
+To hook into the logic of generating a filename for a file or image, <a href="https://symfony.com/doc/5.4/service_container/service_decoration.html" target="_blank">decorate service</a> `oro_attachment.provider.file_name`
 with a class that implements the `Oro\Bundle\AttachmentBundle\Provider\FileNameProviderInterface` interface. For example:
 
 *src/Acme/Bundle/DemoBundle/Provider/CustomFileNameProvider.php*
@@ -125,7 +131,9 @@ class CustomFileNameProvider implements FileNameProviderInterface
         $this->doctrineHelper = $doctrineHelper;
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getFileName(File $file): string
     {
         if (!$this->isApplicable($file)) {
@@ -135,7 +143,9 @@ class CustomFileNameProvider implements FileNameProviderInterface
         return $this->getNameWithFormat($file);
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getFilteredImageName(File $file, string $filterName, string $format = ''): string
     {
         if (!$this->isApplicable($file)) {
@@ -145,7 +155,9 @@ class CustomFileNameProvider implements FileNameProviderInterface
         return $this->getNameWithFormat($file, $format);
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getResizedImageName(File $file, int $width, int $height, string $format = ''): string
     {
         if (!$this->isApplicable($file)) {
@@ -230,7 +242,7 @@ class CustomFileNameProvider implements FileNameProviderInterface
     private function getCategoryTitle(Product $product): ?string
     {
         /** @var CategoryRepository $repository */
-        $repository = $this->doctrineHelper->getEntityRepository('Oro\Bundle\CatalogBundle\Entity\Category');
+        $repository = $this->doctrineHelper->getEntityRepository('OroCatalogBundle:Category');
         $category   = $repository->findOneByProduct($product);
 
         if ($category instanceof Category) {

@@ -2,6 +2,9 @@
 
 # Configure Global CAPTCHA Settings
 
+#### NOTE
+This feature is available as of OroCommerce version 5.1.9.
+
 CAPTCHA, which stands for Completely Automated Public Turing test to tell Computers and Humans Apart, is a type of challenge-response test used to verify whether the user is human. CAPTCHAs are crucial for maintaining the integrity, security, and usability of online systems. They ensure that interactions and transactions on websites are legitimate and performed by real users, protecting against malicious activities.
 
 In OroCommerce, you can configure CAPTCHA on global, [organization](../../../user-management/organizations/org-configuration/general-setup-org/integrations/organization-captcha.md#organization-configuration-captcha), and [website](../../../websites/web-configuration/general-sys-config/integrations/website-captcha.md#website-configuration-captcha-settings) levels using any of the tree supported service: Google reCAPTCHA, hCAPTCHA and Cloudflare Turnstile.

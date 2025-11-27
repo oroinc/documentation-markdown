@@ -109,7 +109,7 @@ To create a shipping rule:
 
       A shipping method appears in the list only if it is configured to support the selected currency.
 
-      To delete a shipping method, click the ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** icon at the end of the corresponding row.
+      To delete a shipping method, click the <i class="fas fa-trash-alt" aria-hidden="true"></i> **Delete** icon at the end of the corresponding row.
    2. Configure all selected shipping methods. Configuration options vary depending on a shipping method. For details on options available for different methods, see [Configure a Shipping Method in a Shipping Rule](#doc-shipping-rules-shipping-methods-detailed). The configuration summary appears next to the shipping method name, in the **Options** column.
       ![image](user/img/system/shipping_rules/shipping_rule_method_summary.png)
 
@@ -245,20 +245,3 @@ To define which columns to show in the table, click <i class="fa fa-cog fa-lg" a
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

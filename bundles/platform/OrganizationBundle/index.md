@@ -2,7 +2,7 @@
 
 # OroOrganizationBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/OrganizationBundle" target="_blank">OroOrganizationBundle</a> extends the OroPlatform ACL system with organization and business unit ownership levels and provides the ability for the application users to reflect the company organizational structure in the application ACL permission scheme.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/OrganizationBundle" target="_blank">OroOrganizationBundle</a> extends the OroPlatform ACL system with organization and business unit ownership levels and provides the ability for the application users to reflect the company organizational structure in the application ACL permission scheme.
 
 OroOrganizationBundle introduces two entities: Organization and Business Units that help with data responsibility and configuration.
 
@@ -16,25 +16,24 @@ Each user can be assigned to multiple business units. For ease of assignment, a 
 
 Each entity can have one of 3 ownership types defined: User, Business Unit, or Organization.
 
-Ownership type is stored in entity config and can be defined through entity class attribute:
+Ownership type is stored in entity config and can be defined through entity class annotation:
 
 ```php
-...
-#[Config(
-    defaultValues: [
-        'entity' => [
-            'label' => 'User',
-            'plural_label' => 'Users'
-        ],
-        'ownership' => [
-            'owner_type' => 'BUSINESS_UNIT',
-            'owner_field_name' => 'owner',
-            'owner_column_name' => 'business_unit_owner_id'
-        ]
-    ]
-)]
-...
-class User
+/**
+    ...
+ * @Configurable(
+ *  defaultValues={
+ *      "entity"={"label"="User", "plural_label"="Users"},
+ *      "ownership"={
+ *          "owner_type"="BUSINESS_UNIT",
+ *          "owner_field_name"="owner",
+ *          "owner_column_name"="business_unit_owner_id"
+ *      }
+ *  }
+ * )
+    ...
+ */
+ class User
 ```
 
 ## Available Ownership Types

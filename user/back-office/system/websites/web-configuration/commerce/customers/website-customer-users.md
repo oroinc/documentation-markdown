@@ -21,9 +21,8 @@ To change the default customer user configuration settings for a website:
    * **Required Company Name** — Shows/hides the company name field in the registration form in the storefront. Required for individual customers who do not belong to any company.
    * **Show Registration Instructions** — Enables/disables registration instructions in the storefront login page. This option is disabled by default.
    * **Registration Instructions Text** — If *Show Registration Instructions* is enabled, the text provided in the field is displayed in the storefront login page.
-6. In the **Login Redirect** section, configure the following options:
-   * **Redirect After Login** — Allows specifying a different target page for a successful login, instead of redirecting the user back to the original page where the login process began. However, if the login is initiated while accessing a protected resource, the user will always be redirected to the originally requested resource upon successful authentication. Available options from the drop-down are: none, content node, category, system page, URI.
-   * **Do Not Leave Checkout** — Enable this option to redirect the user back to the checkout page after a successful login, overriding the *Redirect After Login* setting that may specify a different target page.
+6. In the **REST API** section, configure the following option:
+   * **Enable API Key Generation** — Enable/disable automatic generation of API access keys for new customer users.
 7. In the **Cookies Banner** section, enable a cookie consent banner. A cookie consent banner is the cookie warning that pops up on websites when a user visits the site for the first time.
 
    To configure cookie consent banner on the organization level, take the following steps:
@@ -37,20 +36,3 @@ To change the default customer user configuration settings for a website:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

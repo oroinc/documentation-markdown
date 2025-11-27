@@ -65,14 +65,14 @@ To create a new marketing list:
    - Define the sorting order if you want the grid to be sorted by the value in this column.
    - Click **Add**.
 
-   You can ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) delete, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit, or <i class="fas fa-arrows-alt-v" aria-hidden="true"></i> change the column position by clicking the corresponding icon.
+   You can <i class="fas fa-trash-alt" aria-hidden="true"></i> delete, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit, or <i class="fas fa-arrows-alt-v" aria-hidden="true"></i> change the column position by clicking the corresponding icon.
 6. Once you finish configuring the marketing list, click **Save and Close** in the top right corner.
 
 Now, you can use contacts from your marketing lists to run dedicated campaigns.
 
 ## Manage Marketing Lists
 
-Navigate to **Marketing > Marketing Lists** in the main menu to be able to <i class="fa fa-eye fa-lg" aria-hidden="true"></i> view the marketing list details, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit, or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) delete unnecessary marketing lists by clicking the corresponding icon.
+Navigate to **Marketing > Marketing Lists** in the main menu to be able to <i class="fa fa-eye fa-lg" aria-hidden="true"></i> view the marketing list details, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit, or <i class="fas fa-trash-alt" aria-hidden="true"></i> delete unnecessary marketing lists by clicking the corresponding icon.
 
 ![The actions available for each marketing list from the grid](user/img/marketing/marketing/list_action_icons.png)
 
@@ -123,7 +123,7 @@ Once at least one item is deleted from the marketing list, it is moved to the **
 ### Share the Marketing List
 
 #### NOTE
-Sharing records is available in the Enterprise edition applications and [if the feature is enabled in the back-office configuration settings](../../system/configuration/system/general-setup/user.md#admin-configuration-user-settings-share).
+Sharing records is available in the Enterprise edition applications.
 
 To share the marketing list with other Oro application users:
 
@@ -134,7 +134,7 @@ To share the marketing list with other Oro application users:
 
 You can preview the sharing status and see who you already shared the marketing list with. For this, click **Share** again.
 
-To cancel sharing the marketing list with a particular person, click **Share**, and then click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) next to the user name. Use mass actions to cancel sharing for more than one user.
+To cancel sharing the marketing list with a particular person, click **Share**, and then click <i class="fas fa-trash-alt" aria-hidden="true"></i> next to the user name. Use mass actions to cancel sharing for more than one user.
 
 ### Synchronize a Marketing List with External System
 
@@ -153,20 +153,3 @@ Digital transformation is being driven by technologies in major industries such 
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

@@ -9,10 +9,10 @@ Keep in mind that search result notifications have a [limit preconfigured in the
 To save a search result:
 
 1. Use the search bar to look for a product name, SKU, keyword, etc.
-2. When the search results are displayed, click **Save This Search** on the top right.
+2. When the search results are displayed, click the **Save** icon on the top right. Make sure that the panel with filters is open.
    ![Saved search icon in the Filters panel](user/img/storefront/navigation/saved-search.png)
 3. Select the checkboxes for *New Product* and/or *Inventory Status* if you want to receive notifications.
-4. Click **Save**. Your search query is now saved under **My Account > Saved Search**.
+4. Click **Add**. Your search query is now saved under **My Account > Saved Search**.
    ![Saved search in the customer user account](user/img/storefront/navigation/saved-search-account-table.png)
 
 **Related Topics**

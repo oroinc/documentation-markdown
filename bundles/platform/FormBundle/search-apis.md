@@ -8,5 +8,5 @@ This section contains the list of connected search APIs
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | (generic)     | [oroui/js/tools/search-api-accessor](../UIBundle/client-side/api-accessor.md#bundle-docs-platform-ui-bundle-apiaccessor)                                                                                      |
 | entity_select | [oroentity/js/tools/entity-select-search-api-accessor](../EntityBundle/entity-select-search-api-accessor.md#bundle-docs-platform-entity-bundle-search-api-processor)                                          |
-| acl_users     | <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/UserBundle/Resources/doc/client-side/acl-users-search-api-accessor.md" target="_blank">orouser/js/tools/acl-users-search-api-accessor</a> |
+| acl_users     | <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/UserBundle/Resources/doc/client-side/acl-users-search-api-accessor.md" target="_blank">orouser/js/tools/acl-users-search-api-accessor</a> |
 <!-- Frontend -->

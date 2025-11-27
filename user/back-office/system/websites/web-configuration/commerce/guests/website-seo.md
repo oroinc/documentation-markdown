@@ -23,28 +23,9 @@ For faster navigation between the configuration menu sections, use [Quick Search
    * **Used Product Description Field** — The setting enables you to control which product field to be used for the Schema.org description property. Select the required description type from the dropdown. Available options are *Simplified [Long] Description*, *SEO Meta Description*, and *Simplified Short Description*.
 3. Click **Save Settings**.
 
-<!-- .. image:: /user/img/system/config_commerce/seo/website-seo-settings.png
-:alt: SEO settings configuration per website -->
-<!-- leaving screenshot with old UI while BB-26449 is open. -->
+![SEO settings configuration per website](user/img/system/config_commerce/seo/website-seo-settings.png)
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

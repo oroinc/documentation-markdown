@@ -2,7 +2,7 @@
 
 # Configure Multiple Shipping Settings per Website
 
-For standard [multi-step checkout](../../../../../../concept-guides/administration/checkout/index.md#checkout-guide-multi-page), you configure different line item grouping for the storefront checkout, as well as enable storefront customers to select different shipping methods for different line items or different groups of line items. In addition, you can enable sub-orders to be created for each group of line items.
+For standard [multi-step checkout](../../../../../../concept-guides/administration/checkout/index.md#checkout-guide-multi-page), you configure different line item grouping for the storefront checkout, as well as enable storefront customers to select different shipping methods for different line items. In addition, you can enable sub-orders to be created for each group of line items.
 
 ![Displaying order line items grouped by category at checkout](user/img/system/config_commerce/sales/multi-shipping-storefront.png)
 
@@ -17,10 +17,7 @@ To configure multi shipping per website:
    #### NOTE
    For faster navigation between the configuration menu sections, use [Quick Search](../../../../configuration/quick-search.md#user-guide-system-configuration-quick-search).
 4. Clear the **Use Organization** checkbox to change the organization-wide settings.
-5. In the **General Options**, select **Enable Shipping Method Selection Per Line Item** to enable selection of shipping method per line items.
-
-   #### NOTE
-   If the option is disabled, but the **Enable Grouping Of Line Items During Checkout** option is enabled, the selection of shipping method will be available per each group of line items.
+5. In the **General Options**, select **Enable Shipping Method Selection Per Line Item** to activate the multi-shipping functionality and display other related options.
 6. In the **Line Items Grouping Options**, configure the following options:
    * **Enable Grouping Of Line Items During Checkout** — When enabled, line items during checkout are displayed in groups divided by specific criteria (e.g., ID, category, brand, etc). This option may affect shipping rules and discount calculations (see other configuration options).
      * *Group Line Items By* — Select if you want to group line items per ID, category, brand, or parent product.
@@ -35,20 +32,3 @@ To configure multi shipping per website:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

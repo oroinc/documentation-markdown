@@ -2,7 +2,7 @@
 
 # OroEmbeddedFormBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EmbeddedFormBundle" target="_blank">OroEmbeddedFormBundle</a> enables the application users to create integrated forms using UI, embed them into third-party sites with inline or iframe codes, and collect the submitted information in the Oro application database.
+<a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/EmbeddedFormBundle" target="_blank">OroEmbeddedFormBundle</a> enables the application users to create integrated forms using UI, embed them into third-party sites with inline or iframe codes, and collect the submitted information in the Oro application database.
 
 This bundle has the following configuration options:
 
@@ -14,7 +14,7 @@ oro_embedded_form:
     # The number of seconds the CSRF token should live for.
     csrf_token_lifetime: 3600
     # The service id that is used to cache CSRF tokens.
-    # If not specified the oro_embedded_form.csrf_token_cache service
+    # If not specified the Oro\Bundle\SecurityBundle\Cache\WsseNoncePhpFileCache
     # will be used that stores data in %kernel.cache_dir%/security/embedded_form
     csrf_token_cache_service_id: ~
 ```

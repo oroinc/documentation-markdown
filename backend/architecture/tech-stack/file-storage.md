@@ -133,7 +133,7 @@ gaufrette_adapter.public: 'gridfs:mongodb://user:password@host1:27017,host2:2701
 
 You can also enable additional Gaufrette adapter types to support configuration via the config/parameters.yml file.
 
-To do this, create a configuration factory class that implements <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/GaufretteBundle/DependencyInjection/Factory/ConfigurationFactoryInterface.php" target="_blank">ConfigurationFactoryInterface</a> and register it as the configuration factory for the oro_gaufrette bundle in your bundle class:
+To do this, create a configuration factory class that implements <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/GaufretteBundle/DependencyInjection/Factory/ConfigurationFactoryInterface.php" target="_blank">ConfigurationFactoryInterface</a> and register it as the configuration factory for the oro_gaufrette bundle in your bundle class:
 
 ```php
 namespace Acme\Bundle\DemoBundle\DependencyInjection\Factory;
@@ -142,19 +142,25 @@ use Oro\Bundle\GaufretteBundle\DependencyInjection\Factory\ConfigurationFactoryI
 
 class SomeAdapterConfigurationFactory implements ConfigurationFactoryInterface
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getAdapterConfiguration(string $configString): array
     {
         // implement logic here
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getKey(): string
     {
         // implement logic here
     }
 
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function getHint(): string
     {
         // implement logic here
@@ -172,7 +178,9 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class AcmeDemoBundle extends Bundle
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function build(ContainerBuilder $container): void
     {
         parent::build($container);
@@ -188,7 +196,7 @@ class AcmeDemoBundle extends Bundle
 
 ## Access to Data in Storage
 
-The main access point to the files in storage is the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/GaufretteBundle/FileManager.php" target="_blank">FileManager</a> service.
+The main access point to the files in storage is the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/GaufretteBundle/FileManager.php" target="_blank">FileManager</a> service.
 
 To implement the access point to your type of data in the storage:
 
@@ -202,7 +210,7 @@ knp_gaufrette:
             alias: some_storage_filesystem
 ```
 
-- Register the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/GaufretteBundle/FileManager.php" target="_blank">FileManager</a> service as the child of the `oro_gaufrette.file_manager` service:
+- Register the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/GaufretteBundle/FileManager.php" target="_blank">FileManager</a> service as the child of the `oro_gaufrette.file_manager` service:
 
 ```yaml
 acme.file_manager:
@@ -262,7 +270,7 @@ In this example, the files are available via the `http://your_domain/media/my_pu
 
 ## Access to Data via Stream Wrappers
 
-Files in the filesystem can be accessed via stream wrappers and with the help of the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/GaufretteBundle/FileManager.php" target="_blank">FileManager</a> service.
+Files in the filesystem can be accessed via stream wrappers and with the help of the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/GaufretteBundle/FileManager.php" target="_blank">FileManager</a> service.
 
 The application has two stream wrappers configured to be used with Gaufrette filesystems:
 
@@ -270,12 +278,12 @@ The application has two stream wrappers configured to be used with Gaufrette fil
 - Read-only wrapper by the [OroGaufretteBundle](../../../bundles/platform/GaufretteBundle/index.md#bundle-docs-platform-gaufrette-bundle).
 
 The standard stream wrapper allows full access to the files stored in the filesystem. By default, the wrapper is configured
-to use the `gaufrette` protocol. To get the full URL of a file use the getFilePath() method of the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/GaufretteBundle/FileManager.php" target="_blank">FileManager</a> service.
+to use the `gaufrette` protocol. To get the full URL of a file use the getFilePath() method of the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/GaufretteBundle/FileManager.php" target="_blank">FileManager</a> service.
 
 You can use the read-only stream wrapper if you need to read data but do not know if the data to be written is available.
 For example, this case can be figured if the local adapter was used and the files were uploaded by someone other than the user that runs
 the application. By default, the wrapper is configured to use the `gaufrette-readonly` protocol.
-To get the full URL of a file use getReadonlyFilePath() method of the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/GaufretteBundle/FileManager.php" target="_blank">FileManager</a> service.
+To get the full URL of a file use getReadonlyFilePath() method of the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/GaufretteBundle/FileManager.php" target="_blank">FileManager</a> service.
 
 <a id="backend-file-storage-migrate-data-command"></a>
 
@@ -292,7 +300,7 @@ In the **Automatic** mode, the data is migrated to the current structure by a pr
 In the **Manual** mode, a user is asked for a path to be migrated and the Gaufrette file system name where the data should migrate.
 
 The command has a list of pre-configured default paths from which the data is moved in the automatic mode and a list
-of <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/GaufretteBundle/FileManager.php" target="_blank">FileManager</a> services where data can be uploaded.
+of <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/GaufretteBundle/FileManager.php" target="_blank">FileManager</a> services where data can be uploaded.
 
 You can set the path to be migrated with the `--migration-path` option.
 
@@ -300,7 +308,7 @@ You can set the Gaufrette file system name with the `--gaufrette-filesystem` opt
 
 To get the list of available file systems, run the command with the `--mode=filesystems-list` option.
 
-To add an additional path from which the data is going to be moved or an additional <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/GaufretteBundle/FileManager.php" target="_blank">FileManager</a>, add a new CompilerPass
+To add an additional path from which the data is going to be moved or an additional <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/GaufretteBundle/FileManager.php" target="_blank">FileManager</a>, add a new CompilerPass
 in your bundle and add it into the Bundle class:
 
 ```php
@@ -316,7 +324,9 @@ use Symfony\Component\DependencyInjection\Reference;
  */
 class MigrateFileStorageCommandCompilerPass implements CompilerPassInterface
 {
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function process(ContainerBuilder $container)
     {
         $container->getDefinition(MigrateFileStorageCommand::class)

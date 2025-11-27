@@ -6,6 +6,13 @@
 
 Oro provides a call tracking tool to record any call-related details, such as the subjects of calls, people involved, and even call duration, for users who make and receive many calls per day and communicate with clients by phone. This is especially helpful to managers who can monitor the progress of important tasks and see if all key contacts have received enough attention.
 
+Additionally, the Oro application’s integration with [Google Hangouts](../../system/configuration/system/integrations/google-settings/hangouts.md#user-guide-hangouts) enables you to make Hangouts voice or video calls from within your Oro application, providing an advantage for sales and support teams by helping them connect with customers directly.
+
+#### WARNING
+Google has retired Google Hangouts and associated services, and this integration is no longer supported.
+
+You can make voice calls to a single phone number or launch an audio/video conference with up to 5 participants. Call data is logged automatically, including any notes made during the call.
+
 Before proceeding to the detailed guidance below, see a short demo on <a href="https://academy.oroinc.com/media-library/log-call-orocrm" target="_blank">how to log calls in your Oro application</a>.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TKNXHcKxVII" frameborder="0" allowfullscreen></iframe>
@@ -40,20 +47,3 @@ You can also access your call log from the [Recent Calls dashboard widget](../..
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

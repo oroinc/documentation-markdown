@@ -44,7 +44,7 @@ The following actions can be performed with business customer records:
 
 **From the business customers grid**:
 
-1. Delete ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg)
+1. Delete <i class="fas fa-trash-alt" aria-hidden="true"></i>
 2. Edit <i class="fa fa-edit fa-lg" aria-hidden="true"></i>
 3. View <i class="fa fa-eye fa-lg" aria-hidden="true"></i>
 
@@ -62,23 +62,6 @@ The following actions can be performed with business customer records:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->
 
 * [Export Business Customers](export.md)
 * [Import Business Customers](import.md)

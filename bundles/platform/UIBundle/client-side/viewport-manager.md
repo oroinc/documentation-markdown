@@ -46,7 +46,7 @@ $oro-breakpoints: (
 );
 ```
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/UIBundle/Resources/public/default/scss/settings/_breakpoints.scss" target="_blank">Default scss breakpoints</a> are converted to the following object:
+<a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/UIBundle/Resources/public/default/scss/settings/_breakpoints.scss" target="_blank">Default scss breakpoints</a> are converted to the following object:
 
 ```javascript
 mediaTypes: {

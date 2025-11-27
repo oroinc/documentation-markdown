@@ -16,7 +16,8 @@ You can also [configure reports via the web UI](../../user/back-office/reports-s
 ### Configure a Report
 
 Building a new report is as easy as defining a data grid. A data grid is a YAML configuration living in a
-file called `datagrids.yml` in your bundle’s `Resources/config/oro` directory for the backend datagrid and in `Resources/views/layouts/<theme>/config/datagrids.yml` for the frontend datagrid. Take a look at the following example:
+file called `datagrids.yml` in your bundle’s `Resources/config/oro` directory. Take a look at the
+following example:
 
 *src/Acme/Bundle/DemoBundle/Resources/config/oro/datagrids.yml*
 ```yaml
@@ -141,10 +142,10 @@ The definition of a data grid consists of the following sections:
 > reports will be exportable.
 
 #### SEE ALSO
-This example is taken from <a href="https://github.com/oroinc/crm/tree/6.1/src/Oro/Bundle/ReportCRMBundle/Resources/config/oro/datagrids.yml" target="_blank">ReportBundle</a>, which is part of OroPlatform. Refer to it for more
+This example is taken from <a href="https://github.com/oroinc/crm/blob/5.1/src/Oro/Bundle/ReportCRMBundle/Resources/config/oro/datagrids.yml" target="_blank">ReportBundle</a>, which is part of OroPlatform. Refer to it for more
 examples.
 
-You can also find more information on data grids in the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/DataGridBundle" target="_blank">DataGridBundle</a> documentation.
+You can also find more information on data grids in the <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/DataGridBundle" target="_blank">DataGridBundle</a> documentation.
 
 ### Access the Report
 

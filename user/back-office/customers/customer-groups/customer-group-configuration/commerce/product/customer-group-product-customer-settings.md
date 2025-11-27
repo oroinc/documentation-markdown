@@ -15,7 +15,7 @@ To configure product data export settings per customer group:
 2. For the necessary customer group, hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the necessary group and click the <i class="fas fa-cog" aria-hidden="true"></i> **Configuration** icon to start editing the configuration.
 
 ![Configuration settings for a customer group](user/img/customers/customer_groups/customer-group-config.png)
-1. Select **Commerce > Product > Customer Settings** in the menu to the left.
+1. Select **Commerce > Products > Customer Settings** in the menu to the left.
 
 ![Product data export configuration options on customer group level](user/img/customers/customer_groups/customer-settings-config.png)
 1. Enable the following options by clearing the **Use Website** checkbox next to the required option:
@@ -29,20 +29,3 @@ To configure product data export settings per customer group:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

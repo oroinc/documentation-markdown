@@ -26,6 +26,9 @@ Types of possible landing pages you can build with OroCommerce:
 1. The **About Company** landing page
 
 ![A sample of the About Company landing page](user/img/concept-guides/content-management/landing_page_about_company.png)
+1. The **Coming Soon** landing page
+
+![A sample of the Coming Soon landing page](user/img/concept-guides/content-management/coming_soon_landing_page.png)
 1. The **Terms and Conditions** landing page
 
 ![A sample of the Terms and Conditions landing page](user/img/concept-guides/content-management/terms_and_conditions_landing_page.png)

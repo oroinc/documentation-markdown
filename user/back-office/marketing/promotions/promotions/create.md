@@ -9,16 +9,14 @@ You can set up a shipping promotion, line item promotion or buy X get Y promotio
 To create a new promotion:
 
 1. Navigate to **Marketing > Promotions > Promotions** in the main menu.
+   ![The page of all promotions available in the system](user/img/marketing/promotions/PromotionsGridNew.png)
 
-In the All Promotions grid, you can click any promotion to view its details, hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the required promotion to <i class="far fa-copy" aria-hidden="true"></i> duplicate, <i class="fa fa-eye fa-lg" aria-hidden="true"></i> view, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit, or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) delete it from the system.
+In the All Promotions grid, you can click any promotion to view its details, hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the required promotion to <i class="far fa-copy" aria-hidden="true"></i> duplicate, <i class="fa fa-eye fa-lg" aria-hidden="true"></i> view, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit, or <i class="fas fa-trash-alt" aria-hidden="true"></i> delete it from the system.
 
-> ![The page of all promotions available in the system](user/img/marketing/promotions/PromotionsGridNew.png)
 1. To create a new promotion, click **Create Promotion** in the top right corner.
 2. In the **General** section, complete the following fields:
    * **Owner** — Select the user responsible for the promotion from the list, or click <i class="fa fa-bars fa-lg" aria-hidden="true"></i> to load the list of users to choose from. By default, the current user in predefined as the promotion owner.
    * **Name** — Specify the promotion name to distinguish it from other promotions.
-   * **Storefront Labels** — Specify the label (e.g., the promotion name) that will be displayed in the Order Summary section of the checkout in the storefront (illustrated below) alongside the coupon code. If left blank, the name of the promotion linked to the coupons will be used as the label.
-     ![Displaying the promotion label at checkout](user/img/marketing/promotions/CouponFrontStoreName.png)
    * **Sort Order** — Enter the sort order to set the priority compared to other available promotions. The lower is the number, the higher is the priority.
    * **Enabled** — Enable the checkbox to activate the promotion. To deactivate it, clear the checkbox.
    * **Stop Further Rule Processing** — Select this option if you wish to prevent applying other promotions with lower priority.
@@ -61,6 +59,8 @@ In the All Promotions grid, you can click any promotion to view its details, hov
 
       #### NOTE
       You may use filter on the top of the dialog to limit the scope of the products and make it fit into the visible area.
+7. In the **Store Frontend** section, you can specify the label (e.g. the promotion name) in the Labels field that will be displayed in the Order Summary section of the checkout in the storefront (illustrated below) alongside the coupon code. If left blank, the name of the promotion linked to the coupons will be used as the label.
+   ![The store frontend section of the promotions page where you can add the label to be displayed at checkout](user/img/marketing/promotions/CouponFrontStoreName.png)
 
 ## Discount Options for Order Line Item
 
@@ -133,20 +133,3 @@ For the [shipping](../../../../concept-guides/administration/shipping-configurat
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

@@ -51,7 +51,6 @@ In the Localization section, you can configure the following localization and ma
 
 In the Display section, you can configure the following display options:
 
-![Display settings user configuration](user/img/system/user_management/user_configuration_display_settings.png)
 1. In the **User Bar** section, configure the setting:
    * **Show Recent Emails** — Enable the checkbox to display the recent emails on the user bar. They will appear next to the user name.
 
@@ -61,7 +60,6 @@ In the Display section, you can configure the following display options:
 3. In the **Data Grid Settings** section, configure the options to display all the record lists (grids) in the back-office:
    * **Items Per Page By Default** — Defines the number of items displayed on one page of the grid by default (every time you open the grid).
    * **Lock Headers In Grids** — Ensures that grid headers stay visible while you scroll.
-   * **Row Link Navigation** — Enables the ability for the row in the grid to behave like a native link. By right-clicking on the item in the grid, you can open it in a new tab/window.
    * **Record Pagination** — Enables the user navigation to the previous or next grid record from a record view page.
    * **Record Pagination Limit** — Type the maximum number of records that the user can navigate from a record view page.
 
@@ -78,13 +76,12 @@ In the Display section, you can configure the following display options:
    * **Enable Left Sidebar** — Select **Yes** to enable the user to see and utilize the left sidebar.
    * **Enable Right Sidebar** — Select **Yes** to enable the user to see and utilize the right sidebar.
 7. In the **Reports Settings** section, configure the following settings:
-   * **Display SQL In Reports And Segments** — Select this checkbox to enable the user to review the SQL request sent to the system for a report or a segment. This way, users can check if a report has been developed correctly.
-
+   > * **Display SQL In Reports And Segments** — Select this checkbox to enable the user to review the SQL request sent to the system for a report or a segment. This way, users can check if a report has been developed correctly.
    ![A sample of the enabled display SQL field](user/img/system/config_system/user_configuration_showsql.png)
 8. In the **Window Settings** section, configure the following settings:
-   * **Quick Create Actions** — Select the preferred way to display the quick creation buttons form. The buttons with quick actions appear on the customer, customer user, and customer group view pages. When clicked, the form can be displayed in a new browser tab, a popup dialog window, or replace the current page.
+   > * **Quick Create Actions** — Select the preferred way to display the quick creation buttons form. The buttons with quick actions appear on the customer, customer user, and customer group view pages. When clicked, the form can be displayed in a new browser tab, a popup dialog window, or replace the current page.
 
-   ![Displaying quick action buttons on the customer view page](user/img/system/config_system/quick-creation-buttons.png)
+   > ![Displaying quick action buttons on the customer view page](user/img/system/config_system/quick-creation-buttons.png)
 
 <!-- finish_display_set_user -->
 
@@ -122,15 +119,16 @@ On the **Email Configuration** page, define the email-related options.
 
      As an example, we have synchronized a Gmail mailbox with your Oro application, having previously turned on **access for less secure apps**. More details on how to synchronize your Gmail and turn on access for less secured apps can be found in the <a href="https://support.google.com/mail/answer/7126229?hl=en&rd=2&visit_id=1-636180891016092253-2149088408#ts=1665018%2C1665144" target="_blank">Use IMAP to check Gmail</a> and <a href="https://support.google.com/accounts/answer/6010255?hl=en" target="_blank">Less secure apps & your Google Account</a> topics.
 
-   ![Email synchronization settings configuration on the user level](user/img/system/user_management/personabox_imap_smtp.jpg)
-3. Under **Email Threads**, select how to display emails and replies to users, either as threads or separately.
+> <br/>
+> > ![Email synchronization settings configuration on the user level](user/img/system/user_management/personabox_imap_smtp.jpg)
+> <br/>
+1. Under **Email Threads**, select how to display emails and replies to users, either as threads or separately.
    * **Display Email Conversations As** — Defines the user’s email representation under **My Emails**.
 
    ![A sample of an email with the threaded option selected](user/img/system/config_system/threaded_emails.png)![A sample of an email with the non-threaded option selected](user/img/system/config_system/non-threaded-emails.png)
    * **Display Emails In Activity Lists As** — Defines how emails and replies are displayed under the **Activity** menu of a selected record.
-
-   ![A sample of an email with the threaded option selected](user/img/system/config_system/threaded_email_activities.png)![A sample of an email with the non-threaded option selected](user/img/system/config_system/non_threaded_email_activities.png)
-4. **Reply** — Define which button will be displayed as the default one: **Reply** is available by default with the **Forward** and **Reply all** options in the dropdown. The settings can be changed to have **Reply all** displayed at the top.
+     ![A sample of an email with the threaded option selected](user/img/system/config_system/threaded_email_activities.png)![A sample of an email with the non-threaded option selected](user/img/system/config_system/non_threaded_email_activities.png)
+2. **Reply** — Define which button will be displayed as the default one: **Reply** is available by default with the **Forward** and **Reply all** options in the dropdown. The settings can be changed to have **Reply all** displayed at the top.
 
 ## Update Contact Information
 
@@ -153,20 +151,3 @@ For more information on how to configure the contact information visible to the 
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

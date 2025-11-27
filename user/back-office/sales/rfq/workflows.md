@@ -70,11 +70,16 @@ You can add and remove columns in the workflows list by clicking <i class="fas f
 
 The RFQ Submission Flow consists of the following steps and transitions:
 
-| Steps                  | Transitions                                                              | Post-Transition Steps                                                           |
-|------------------------|--------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| Submitted              | * Cancel<br/>* Decline<br/>* Request More Info<br/>* Cancel<br/>* Delete | * Canceled<br/>* Canceled<br/>* Requires Attention<br/>* Canceled<br/>* Deleted |
-| Requires<br/>Attention | * Cancel<br/>* Declined<br/>* Provide More Info                          | * Canceled<br/>* Canceled<br/>* Submitted                                       |
-| Canceled               | * Resubmit<br/>* Reopen                                                  | * Canceled<br/>* Submit                                                         |
+1. Steps:
+   1. Submitted
+   2. Requires Attention
+   3. Cancelled
+2. Transitions:
+   1. For **Submitted**: Cancel, Decline, Request More Information
+   2. For **Requires Attention**: Cancel, Decline, Provide More Information
+   3. For **Cancelled**: Resubmit, Reopen
+
+![image](user/img/system/workflows/rfq/frontoffice/RFQFrontOfficeTable.png)
 
 #### NOTE
 Please note that the Request For Information, Reopen and Decline transitions are visible only in the back-office for the sales personnel.
@@ -161,17 +166,25 @@ You can add and remove columns in the list by clicking <i class="fas fa-cog" ari
 
 RFQ Management Flow consists of the following steps and transitions:
 
+1. Steps:
+   > 1. Open
+   > 2. More Information Requested
+   > 3. Processed
+   > 4. Declined
+   > 5. Cancelled
+   > 6. Deleted
+2. Transitions:
+   > 1. For **Open**: Mark as Processed, Request More Information, Decline, Cancel, Delete.
+   > 2. For **More Information Requested**: Cancel, Delete, Info Provided.
+   > 3. For **Processed**: Delete.
+   > 4. For **Declined**: Cancel, Delete, Reprocess.
+   > 5. For **Cancelled**: Delete, Reprocess.
+   > 6. For **Deleted**: Undelete.
+
 #### NOTE
 Please note that the Info Provided transition for the More Information Requested step is automatically triggered and it does not, therefore, take the form of a button in the interface.
 
-| Steps                          | Transitions                                                                                 | Post-Transition Steps                                                  |
-|--------------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
-| Open                           | * Mark as Processed<br/>* Requires More Information<br/>* Decline<br/>* Cancel<br/>* Delete | * Processed<br/>* Canceled<br/>* Declined<br/>* Canceled<br/>* Deleted |
-| More Information<br/>Requested | * Cancel<br/>* Delete<br/>* Information Provided                                            | * Canceled<br/>* Deleted<br/>* Open                                    |
-| Processed                      | * Delete                                                                                    | * Deleted                                                              |
-| Declined                       | * Cancel<br/>* Delete<br/>* Reprocess                                                       | * Canceled<br/>* Deleted<br/>* Open                                    |
-| Canceled                       | * Delete<br/>* Reprocess                                                                    | * Deleted<br/>* Open                                                   |
-| Deleted                        | * Undelete                                                                                  | * Canceled<br/>* Open<br/>* More Information<br/>  Requested           |
+![image](user/img/system/workflows/rfq/backoffice/RQF_steps_transitions_table.png)
 
 #### NOTE
 Steps that follow the **Undelete** transition depend on the internal and/or customer statuses prior to deletion:
@@ -205,20 +218,3 @@ It is possible to create a quote or an order straight from the RFQ page by click
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

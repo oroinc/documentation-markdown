@@ -158,7 +158,9 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class AcmeCoreBundle extends Bundle
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function build(ContainerBuilder $container): void
     {
         parent::build($container);

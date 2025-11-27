@@ -14,8 +14,6 @@ Leads by Date report shows:
 - The number of the leads created on a specific date
 - Total amount of the leads created
 
-In the [global organization](../../system/user-management/organizations/index.md#user-ee-multi-org), lead details are displayed per organization. Organizations without global access can view lead details specific to their organization only.
-
 ![Leads by date report](user/img/sales/leads/leads_by_date.png)
 
 You can add new custom reports. For more details on the ways to create and customize the reports, see the [Reports topic](index.md#user-guide-reports).

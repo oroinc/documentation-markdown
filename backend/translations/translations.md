@@ -106,22 +106,26 @@ use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Gedmo\Translatable\Translatable;
 
-#[ORM\Entity]
-#[ORM\Table('acme_demo_country')]
-#[Gedmo\TranslationEntity(class: 'Acme\Bundle\DemoBundle\Entity\CountryTranslation')]
+/**
+ * @ORM\Table("acme_demo_country")
+ * @ORM\Entity()
+ * @Gedmo\TranslationEntity(class="Acme\Bundle\DemoBundle\Entity\CountryTranslation")
+ */
 class Country implements Translatable
 {
     /**
      * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255)
+     * @Gedmo\Translatable
      */
-    #[ORM\Column(name: 'name', type: 'string', length: 255)]
-    #[Gedmo\Translatable]
     protected string $name;
 
     /**
      * @var string
+     *
+     * @Gedmo\Locale
      */
-    #[Gedmo\Locale]
     protected string $locale;
 
     /**
@@ -168,21 +172,25 @@ namespace Acme\Bundle\DemoBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Translatable\Entity\MappedSuperclass\AbstractTranslation;
 
-#[ORM\Entity]
-#[ORM\Table(name: 'oro_acme_country_trans')]
+/**
+ * @ORM\Table(name="oro_acme_country_trans")
+ * @ORM\Entity()
+ */
 class CountryTranslation extends AbstractTranslation
 {
     /**
      * @var string
+     *
+     * @ORM\Column(type="string", length=255)
      */
-    #[ORM\Column(type: 'string', length: 255)]
     protected $content;
 }
 ```
 
-For the grid to have working translations for entities with `Gedmo` fields, add the `HINT_TRANSLATABLE` hint to the `Resources/config/oro/datagrids.yml` configuration file. Keep in mind that the frontend datagrid is configured in the `Resources/views/layouts/<theme>/config/datagrids.yml` file.
+For the grid to have working translations for entities with `Gedmo` fields, add the `HINT_TRANSLATABLE` hint
+in Resources/config/oro/datagrids.yml configuration file:
 
-```yaml
+```php
 datagrids:
    acme-country-grid:
        source:
@@ -195,7 +203,7 @@ datagrids:
 
 Below is a simple example of a grid configuration that uses the hint:
 
-```yaml
+```php
 datagrids:
    acme-country-grid:
        source:
@@ -253,32 +261,31 @@ use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityInterface;
 use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityTrait;
 use Oro\Bundle\LocaleBundle\Entity\LocalizedFallbackValue;
 
-#[ORM\Entity]
-#[ORM\Table(name: 'acme_demo_some')]
+/**
+ * @ORM\Table(name="acme_demo_some")
+ * @ORM\Entity()
+ */
 class Some implements ExtendEntityInterface
 {
     use ExtendEntityTrait;
-
     /**
      * @var Collection|LocalizedFallbackValue[]
+     *
+     * @ORM\ManyToMany(
+     *      targetEntity="Oro\Bundle\LocaleBundle\Entity\LocalizedFallbackValue",
+     *      cascade={"ALL"},
+     *      orphanRemoval=true
+     * )
+     * @ORM\JoinTable(
+     *      name="acme_demo_some_name",
+     *      joinColumns={
+     *          @ORM\JoinColumn(name="some_id", referencedColumnName="id", onDelete="CASCADE")
+     *      },
+     *      inverseJoinColumns={
+     *          @ORM\JoinColumn(name="localized_value_id", referencedColumnName="id", onDelete="CASCADE", unique=true)
+     *      }
+     * )
      */
-    #[ORM\ManyToMany(
-        targetEntity: 'Oro\Bundle\LocaleBundle\Entity\LocalizedFallbackValue',
-        cascade: ['ALL'],
-        orphanRemoval: true
-    )]
-    #[ORM\JoinTable(name: 'acme_demo_some_name')]
-    #[ORM\JoinColumn(
-        name: 'some_id',
-        referencedColumnName: 'id',
-        onDelete: 'CASCADE'
-    )]
-    #[ORM\inverseJoinColumn(
-        name: 'localized_value_id',
-        referencedColumnName: 'id',
-        unique: true,
-        onDelete: 'CASCADE'
-    )]
     protected $names;
 }
 ```
@@ -295,7 +302,9 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class AcmeDemoBundle extends Bundle
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function build(ContainerBuilder $container): void
     {
         parent::build($container);
@@ -320,7 +329,9 @@ use Symfony\Component\Form\FormBuilderInterface;
 
 class SomeType extends AbstractType
 {
-    #[\Override]
+    /**
+     * @inheritDoc
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add(

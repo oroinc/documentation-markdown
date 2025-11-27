@@ -6,7 +6,7 @@
 
 Use workflows to define rules and guidelines of possible actions and updates of the opportunities in the application.
 
-You can have multiple active workflows for the same entity at the same time (e.g.: alternative sales workflow that the sales representative can use when they decide how to deal with an opportunity; parallel sales follow-up and order fulfillment workflow for a placed order, etc.).
+You can have multiple active workflows for the same entity at the same time (e.g.: alternative sales workflow that the sales representative can choose when they decide how to deal with an opportunity; parallel sales follow-up and order fulfillment workflow for a placed order, etc.).
 
 In the following example, we have two workflows for an opportunity which are active at the same time (Opportunity Management Flow and Opportunity Support Flow).
 
@@ -16,7 +16,7 @@ In the following example, we have two workflows for an opportunity which are act
 
 To ensure data consistency and reasoned opportunity management by a sales manager, you can activate Opportunity Management Flow under **System > Workflows**.
 
-This can be done from the **Workflows** page by selecting Opportunity Management Flow and clicking **Activate** on the top right, or via the grid **More Actions** icons.
+This can be done from the **Workflows** page by selecting Opportunity Management Flow and clicking **Activate** on the top right.
 
 ![Opportunity management flow view page](user/img/sales/opportunities/activate_opp_flow.png)
 
@@ -82,15 +82,11 @@ To close an opportunity as Lost:
 3. Select the **Expected Close Date**.
 4. Click **Submit**.
 
-<!-- Other
-~~~~~ -->
-<!-- Depending on their configuration, workflow steps can vary. Here is an example of the steps and transitions configured for the Opportunity Support flow. -->
-<!-- .. image:: /user/img/sales/opportunities/wf_steps.jpg
-:alt: Example of the open Opportunity Support Flow -->
-<!-- .. image:: /user/img/sales/opportunities/wf_steps_2.jpg
-:alt: Example of the Opportunity Support Flow steps and transitions once the complaint is registered -->
-<!-- .. image:: /user/img/sales/opportunities/wf_steps_3.jpg
-:alt: Example of the closed Opportunity Support Flow -->
+#### Other
+
+Depending on their configuration, workflow steps can vary. Here is an example of the steps and transitions configured for the Opportunity Support flow.
+
+![Example of the open Opportunity Support Flow](user/img/sales/opportunities/wf_steps.jpg)![Example of the Opportunity Support Flow steps and transitions once the complaint is registered](user/img/sales/opportunities/wf_steps_2.jpg)![Example of the closed Opportunity Support Flow](user/img/sales/opportunities/wf_steps_3.jpg)
 
 <a id="mc-sales-opportunities-quote"></a>
 
@@ -119,7 +115,7 @@ From the opportunity page, the following actions are possible for the quote:
 
 - View: <i class="fa fa-eye fa-lg" aria-hidden="true"></i>
 - Edit: <i class="fa fa-edit fa-lg" aria-hidden="true"></i>
-- Delete: ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg)
+- Delete: <i class="fas fa-trash-alt" aria-hidden="true"></i>
 - Expire: <i class="far fa-clock" aria-hidden="true"></i>
 
 #### NOTE
@@ -127,8 +123,12 @@ Note that the availability of the **Expire** option for a quote within the oppor
 
 ![A quote created from an opportunity](user/img/sales/opportunities/quote_created_opp.png)
 
+On the Quote page, the relation to the opportunity (which this quote has been created from) remains:
+
+![Relation between the quote and opportunity on the quote page](user/img/sales/opportunities/quote_opp.png)![Relation between the quote and opportunity on the quote page](user/img/sales/opportunities/quote_opp_edit.png)
+
 #### NOTE
-Although opportunity relation can be displayed on the quote page, you cannot manage it. When no opportunity relation is available for a quote, the inactive **Opportunity** field is displayed.
+Although opportunity relation can be displayed on the quote page, it is impossible to manage it. When no opportunity relation is available for a quote, the inactive **Opportunity** field is displayed.
 
 You can create any number of quotes for one open opportunity.
 
@@ -138,20 +138,3 @@ You can create any number of quotes for one open opportunity.
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

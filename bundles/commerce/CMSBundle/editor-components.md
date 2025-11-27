@@ -301,7 +301,7 @@ export default GrapesJS.plugins.add('foo-plugin', () => {
 });
 ```
 
-Use Symfony Form Type Extension to add the new plugin to the WYSIWYG field. For more information about Symfony forms, see <a href="https://symfony.com/doc/6.4/form/create_form_type_extension.html" target="_blank">form type extension</a>.
+Use Symfony Form Type Extension to add the new plugin to the WYSIWYG field. For more information about Symfony forms, see <a href="https://symfony.com/doc/5.4/form/create_form_type_extension.html" target="_blank">form type extension</a>.
 
 *src/{YourBundleName}/Form/Extension/FooWysiwygTypeExtension.php*
 ```php

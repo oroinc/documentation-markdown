@@ -2,7 +2,7 @@
 
 # ORM Datasource
 
-This datasource provides an adapter to access data from the doctrine ORM using the doctrine query builder. You can configure a query using the `query` param under the source tree. This query will be converted via <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/DataGridBundle/Datasource/Orm/QueryConverter/YamlConverter.php" target="_blank">YamlConverter</a> to the doctrine `QueryBuilder` object.
+This datasource provides an adapter to access data from the doctrine ORM using the doctrine query builder. You can configure a query using the `query` param under the source tree. This query will be converted via <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/DataGridBundle/Datasource/Orm/QueryConverter/YamlConverter.php" target="_blank">YamlConverter</a> to the doctrine `QueryBuilder` object.
 
 **Example**
 
@@ -21,7 +21,7 @@ datagrids:
 
 ## Important Notes
 
-By default, all datagrids that use ORM datasource are marked by the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/DoctrineUtils/README.md#preciseorderbywalker-class" target="_blank">HINT_PRECISE_ORDER_BY</a> query hint. This guarantees that rows are sorted the same way independently of the state of the SQL server and the values of OFFSET and LIMIT clauses. More details are available in the <a href="https://www.postgresql.org/docs/8.1/static/queries-limit.html" target="_blank">Queries Limits</a> section of PostgreSQL documentation.
+By default, all datagrids that use ORM datasource are marked by the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Component/DoctrineUtils/README.md#preciseorderbywalker-class" target="_blank">HINT_PRECISE_ORDER_BY</a> query hint. This guarantees that rows are sorted the same way independently of the state of the SQL server and the values of OFFSET and LIMIT clauses. More details are available in the <a href="https://www.postgresql.org/docs/8.1/static/queries-limit.html" target="_blank">Queries Limits</a> section of PostgreSQL documentation.
 
 If you need to disable this behavior for your datagrid, use the following configuration:
 
@@ -40,7 +40,7 @@ datagrids:
 
 ### Modify Query Configuration from PHP Code
 
-You can modify query configuration from PHP code, for example from the datagrid [extensions](../extensions/index.md#customize-datagrid-extensions) or [listeners](../index.md#customizing-data-grid-in-orocommerce-backend-extendability). This can be done using <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/DataGridBundle/Datasource/Orm/OrmQueryConfiguration.php" target="_blank">OrmQueryConfiguration</a> class. To get an instance of this class, use the getOrmQuery method of <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/DataGridBundle/Datagrid/Common/DatagridConfiguration.php" target="_blank">DatagridConfiguration</a>. For example:
+You can modify query configuration from PHP code, for example from the datagrid [extensions](../extensions/index.md#customize-datagrid-extensions) or [listeners](../index.md#customizing-data-grid-in-orocommerce-backend-extendability). This can be done using <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/DataGridBundle/Datasource/Orm/OrmQueryConfiguration.php" target="_blank">OrmQueryConfiguration</a> class. To get an instance of this class, use the getOrmQuery method of <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/DataGridBundle/Datagrid/Common/DatagridConfiguration.php" target="_blank">DatagridConfiguration</a>. For example:
 
 ```php
 $query = $config->getOrmQuery();
@@ -48,7 +48,7 @@ $rootAlias = $query->getRootAlias();
 $query->addSelect($rootAlias . '.myField');
 ```
 
-In addition to query modification methods, the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/DataGridBundle/Datasource/Orm/OrmQueryConfiguration.php" target="_blank">OrmQueryConfiguration</a> contains several valuable methods:
+In addition to query modification methods, the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/DataGridBundle/Datasource/Orm/OrmQueryConfiguration.php" target="_blank">OrmQueryConfiguration</a> contains several valuable methods:
 
 - `getRootAlias()` - Returns the FIRST root alias of the query.
 - `getRootEntity($entityClassResolver = null, $lookAtExtendedEntityClassName = false)` - Returns the FIRST root entity of the query.

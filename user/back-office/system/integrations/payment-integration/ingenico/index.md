@@ -8,7 +8,7 @@
 This section is part of the [Payment Configuration](../../../../../concept-guides/administration/payment-configuration/index.md#user-guide-payment) topic that provides a general understanding of the payment concept in OroCommerce.
 
 #### HINT
-The feature requires extension, so visit Oro Extensions Store to download the Ingenico extension and then use the composer to [install the extension to your application](../../../../../../backend/extension/install-extension.md#cookbook-extensions-composer).
+The feature requires extension, so visit Oro Extensions Store to download the <a href="https://marketplace.oroinc.com/orocommerce/extension/ingenico-epayments-bundle/" target="_blank">Ingenico extension</a> and then use the composer to [install the extension to your application](../../../../../../backend/extension/install-extension.md#cookbook-extensions-composer).
 
 To configure the integration between Ingenico and OroCommerce, follow the steps outlined below:
 
@@ -33,11 +33,7 @@ To configure the integration between Ingenico and OroCommerce, follow the steps 
      ![Tokenization](user/img/system/integrations/ingenico/tokenization.png)
    * **Direct Debit Text** - Provide the description of the transaction displayed on the customer bank statement to assist the customer in recognizing the transaction. This field is mandatory if you selected SEPA and ACH payment methods.
    * **Default Owner** - A user who is responsible for this integration and manages it.
-
-#### NOTE
-In the **Synchronization Settings** section, select the **Log Warnings** checkbox if you want all synchronization errors to be written into the application log.
-
-1. Click **Save and Close**.
+4. Click **Save and Close**.
 
 Once the integration with Ingenico is created, the next step is to [set up a payment rule](../../../payment-rules/index.md#sys-payment-rules) that enables these payment methods for all or some customer orders in the OroCommerce application.
 

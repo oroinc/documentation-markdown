@@ -10,7 +10,7 @@ You can control the way sitemap is generated for specific organization in OroCom
 
    #### NOTE
    For faster navigation between the configuration menu sections, use [Quick Search](../../../../configuration/quick-search.md#user-guide-system-configuration-quick-search).
-4. Under **Robots.txt**, a user can modify **Robots.Txt Template**, granting or restricting permission for site crawlers to navigate through the specified URLs within your website domain. Initially, the system obtains the default values from the *config/robots.txt.dist* or *robots.%domain.name%.txt* files automatically. Once a user modifies the values in the **Robots.Txt Template** configuration, the system starts adhering to these adjusted values only, subsequently updating the *robots.txt* and *sitemap* files accordingly.
+4. Under **Robots.txt** (available as of OroCommerce version 5.1.9), a user can modify **Robots.Txt Template**, granting or restricting permission for site crawlers to navigate through the specified URLs within your website domain. Initially, the system obtains the default values from the *config/robots.txt.dist* or *robots.%domain.name%.txt* files automatically. Once a user modifies the values in the **Robots.Txt Template** configuration, the system starts adhering to these adjusted values only, subsequently updating the *robots.txt* and *sitemap* files accordingly.
    ![image](user/img/system/user_management/org_configuration/websites/sitemap_org.png)
 5. Click **Save**.
 
@@ -19,20 +19,3 @@ You can control the way sitemap is generated for specific organization in OroCom
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

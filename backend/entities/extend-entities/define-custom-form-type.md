@@ -3,9 +3,9 @@
 # Define Custom Form Type for Fields
 
 Extended fields are rendered as HTML controls, and control type (text, textarea, number, checkbox, etc.) is defined by
-classes that implement <a href="https://github.com/symfony/symfony/blob/6.4/src/Symfony/Component/Form/FormTypeGuesserInterface.php" target="_blank">Symfony\\Component\\Form\\FormTypeGuesserInterface</a>.
+classes that implement <a href="https://github.com/symfony/symfony/blob/5.4/src/Symfony/Component/Form/FormTypeGuesserInterface.php" target="_blank">Symfony\\Component\\Form\\FormTypeGuesserInterface</a>.
 
-In case of extended fields, OroPlatform has three guessers (in decreasing priority): <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Form/Guesser/FormConfigGuesser.php" target="_blank">FormConfigGuesser</a>, <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityExtendBundle/Form/Guesser/ExtendFieldTypeGuesser.php" target="_blank">ExtendFieldTypeGuesser</a> and <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Form/Guesser/DoctrineTypeGuesser.php" target="_blank">DoctrineTypeGuesser</a>.
+In case of extended fields, OroPlatform has three guessers (in decreasing priority): <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityBundle/Form/Guesser/FormConfigGuesser.php" target="_blank">FormConfigGuesser</a>, <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityExtendBundle/Form/Guesser/ExtendFieldTypeGuesser.php" target="_blank">ExtendFieldTypeGuesser</a> and <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityBundle/Form/Guesser/DoctrineTypeGuesser.php" target="_blank">DoctrineTypeGuesser</a>.
 
 Each provides guesses, and the best guess is selected based on the guesser’s confidence (low, medium, high, very high).
 
@@ -22,7 +22,9 @@ There are a few ways to define a custom form type and form options for a particu
 
    > class AcmeExtendGuesserPass implements CompilerPassInterface
    > {
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function process(ContainerBuilder $container)
    >     {
    >         $guesser = $container->findDefinition('oro_entity_extend.provider.extend_field_form_type');
@@ -42,7 +44,9 @@ There are a few ways to define a custom form type and form options for a particu
 
    > class ExtendFieldCustomFormOptionsProvider implements ExtendFieldFormOptionsProviderInterface
    > {
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function getOptions(string $className, string $fieldName): array
    >     {
    >         $options = [];
@@ -74,7 +78,9 @@ There are a few ways to define a custom form type and form options for a particu
 
    > class CustomTypeGuesser implements FormTypeGuesserInterface
    > {
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function guessType(string $class, string $property)
    >     {
    >         // some conditions here
@@ -88,19 +94,25 @@ There are a few ways to define a custom form type and form options for a particu
    >         return new ValueGuess(false, ValueGuess::LOW_CONFIDENCE);
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function guessRequired(string $class, string $property)
    >     {
    >         return new ValueGuess(false, ValueGuess::LOW_CONFIDENCE);
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function guessMaxLength(string $class, string $property)
    >     {
    >         return new ValueGuess(null, ValueGuess::LOW_CONFIDENCE);
    >     }
 
-   >     #[\Override]
+   >     /**
+   >      * @inheritDoc
+   >      */
    >     public function guessPattern(string $class, string $property)
    >     {
    >         return new ValueGuess(null, ValueGuess::LOW_CONFIDENCE);
@@ -120,22 +132,24 @@ There are a few ways to define a custom form type and form options for a particu
 
    > | Guesser                                                                                                                                                                    |   Priority |
    > |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
-   > | <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Form/Guesser/FormConfigGuesser.php" target="_blank">FormConfigGuesser</a>                 |         20 |
-   > | <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityExtendBundle/Form/Guesser/ExtendFieldTypeGuesser.php" target="_blank">ExtendFieldTypeGuesser</a> |         15 |
-   > | <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Form/Guesser/DoctrineTypeGuesser.php" target="_blank">DoctrineTypeGuesser</a>             |         10 |
+   > | <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityBundle/Form/Guesser/FormConfigGuesser.php" target="_blank">FormConfigGuesser</a>                 |         20 |
+   > | <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityExtendBundle/Form/Guesser/ExtendFieldTypeGuesser.php" target="_blank">ExtendFieldTypeGuesser</a> |         15 |
+   > | <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityBundle/Form/Guesser/DoctrineTypeGuesser.php" target="_blank">DoctrineTypeGuesser</a>             |         10 |
 
    > Select it according to what you need to achieve.
-4. Using attribute to a field or a related entity (if an extended field is an association)
+4. Using annotation to a field or a related entity (if an extended field is an association)
    > ```php
-   > #[Config(
-   >     defaultValues: [
-   >         ...
-   >         'form' => [
-   >             'form_type' => 'Oro\Bundle\UserBundle\Form\Type\UserSelectType',
-   >             'form_option' => ['option1' => ..., ...]
-   >         ]
-   >     ]
-   > )]
+   > /*
+   >  * @Config(
+   >  *      defaultValues={
+   >             ...
+   >  *          "form"={
+   >  *              "form_type"="Oro\Bundle\UserBundle\Form\Type\UserSelectType",
+   >  *              "form_option"="{option1: ..., ...}"
+   >  *          }
+   >  *      }
+   >  * )
+   >  */
    > ```
 
 <!-- Frontend -->

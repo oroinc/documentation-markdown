@@ -69,11 +69,16 @@ You can add and remove columns in the workflows list by clicking <i class="fas f
 
 The RFQ Submission Flow consists of the following steps and transitions:
 
-| Steps                  | Transitions                                                              | Post-Transition Steps                                                           |
-|------------------------|--------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| Submitted              | * Cancel<br/>* Decline<br/>* Request More Info<br/>* Cancel<br/>* Delete | * Canceled<br/>* Canceled<br/>* Requires Attention<br/>* Canceled<br/>* Deleted |
-| Requires<br/>Attention | * Cancel<br/>* Declined<br/>* Provide More Info                          | * Canceled<br/>* Canceled<br/>* Submitted                                       |
-| Canceled               | * Resubmit<br/>* Reopen                                                  | * Canceled<br/>* Submit                                                         |
+1. Steps:
+   1. Submitted
+   2. Requires Attention
+   3. Cancelled
+2. Transitions:
+   1. For **Submitted**: Cancel, Decline, Request More Information
+   2. For **Requires Attention**: Cancel, Decline, Provide More Information
+   3. For **Cancelled**: Resubmit, Reopen
+
+![image](user/img/system/workflows/rfq/frontoffice/RFQFrontOfficeTable.png)
 
 #### NOTE
 Please note that the Request For Information, Reopen and Decline transitions are visible only in the back-office for the sales personnel.
@@ -103,20 +108,3 @@ As an illustration, let us go through a sample flow to see RFQ Submission Flow i
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

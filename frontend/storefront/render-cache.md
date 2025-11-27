@@ -1,5 +1,3 @@
-<a id="dev-doc-render-cache"></a>
-
 # OroCommerce Render Caching
 
 One of the ways to significantly improve website performance is to enable caching.

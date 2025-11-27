@@ -4,7 +4,7 @@
 
 To create an activity from your new entity, make the entity extended and include it in the activity group.
 
-To make the entity extended, implement the ExtendEntityInterface using the ExtendEntityTrait. The class must also implement <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ActivityBundle/Model/ActivityInterface.php" target="_blank">ActivityInterface</a>.
+To make the entity extended, implement the ExtendEntityInterface using the ExtendEntityTrait. The class must also implement <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ActivityBundle/Model/ActivityInterface.php" target="_blank">ActivityInterface</a>.
 
 Here is an example:
 
@@ -29,11 +29,15 @@ Use this class as the superclass for your entity. To include the entity in the a
 
 *src/Acme/Bundle/DemoBundle/Entity/Sms.php*
 ```php
-#[Config(
-    defaultValues: [
-        'grouping' => ['groups' => ['activity']],
-    ]
-)]
+/**
+ * @Config(
+ *     defaultValues={
+ *          "grouping"={
+ *             "groups"={"activity"}
+ *         },
+ *     }
+ * )
+ */
 class Sms implements
     ActivityInterface,
     ExtendEntityInterface
@@ -49,7 +53,7 @@ Your entity is now recognized as the activity entity. To make sure that the acti
 ## Working with Activity Associations
 
 Activity associations are represented by [multiple many-to-many](extend-entities/multi-target-associations.md#book-entities-extended-entities-multi-target-associations-types) associations.
-It is quite a complex type of associations, and to help work with activities, use the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ActivityBundle/Manager/ActivityManager.php" target="_blank">ActivityManager</a> class.
+It is quite a complex type of associations, and to help work with activities, use the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ActivityBundle/Manager/ActivityManager.php" target="_blank">ActivityManager</a> class.
 
 This class provides the following functionality:
 
@@ -75,7 +79,7 @@ Before using the new activity entity within OroPlatform, you need to:
 * [Configure UI for Activity List Section]()
 * [Configure UI for an Activity Button]()
 
-Take a look at <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ActivityBundle/Resources/config/oro/entity_config.yml" target="_blank">all configuration options</a> for the activity scope before reading further.
+Take a look at <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ActivityBundle/Resources/config/oro/entity_config.yml" target="_blank">all configuration options</a> for the activity scope before reading further.
 
 ### Configure UI for Activity List Section
 
@@ -92,15 +96,21 @@ Keep in mind that:
     /**
      * This action is used to render the list of sms associated with the given entity
      * on the view page of this entity
+     *
+     * @Route(
+     *      "/activity/view/{entityClass}/{entityId}",
+     *      name="acme_demo_sms_activity_view",
+     *      requirements={"entityClass"="\w+", "entityId"="\d+"}
+     * )
+     *
+     * @AclAncestor("acme_demo_sms_view")
      */
-    #[Route(path: '/activity/view/{entityClass}/{entityId}', name: 'acme_demo_sms_activity_view', requirements: ['entityClass' => '\w+', 'entityId' => '\d+'])]
-    #[AclAncestor('acme_demo_sms_view')]
     public function activityAction(string $entityClass, int $entityId): Response
     {
         return $this->render(
             '@AcmeDemo/Sms/activity.html.twig',
             [
-                'entity' => $this->container->get(EntityRoutingHelper::class)->getEntity($entityClass, $entityId),
+                'entity' => $this->get(EntityRoutingHelper::class)->getEntity($entityClass, $entityId),
             ]
         );
     }
@@ -129,15 +139,19 @@ Now, you need to bind the controller to your activity entity. Use ORO entity con
 
 *src/Acme/Bundle/DemoBundle/Entity/Sms.php*
 ```php
-#[Config(
-    defaultValues: [
-        'grouping' => ['groups' => ['activity']],
-        'activity' => [
-            'route' => 'acme_demo_sms_activity_view',
-            'acl' => 'acme_demo_sms_view',
-        ]
-    ]
-)]
+/**
+ * @Config(
+ *     defaultValues={
+ *          "grouping"={
+ *             "groups"={"activity"}
+ *         },
+ *          "activity"={
+ *              "route"="acme_demo_sms_activity_view",
+ *              "acl"="acme_demo_sms_view",
+ *          }
+ *     }
+ * )
+ */
 class Sms implements
     ActivityInterface,
     ExtendEntityInterface
@@ -243,17 +257,21 @@ placeholders:
 
 *src/Acme/Bundle/DemoBundle/Entity/Sms.php*
 ```php
-#[Config(
-    defaultValues: [
-        'grouping' => ['groups' => ['activity']],
-        'activity' => [
-            'route' => 'acme_demo_sms_activity_view',
-            'acl' => 'acme_demo_sms_view',
-            'action_button_widget' => 'acme_demo_add_sms_button',
-            'action_link_widget' => 'acme_demo_add_sms_link'
-        ]
-    ]
-)]
+/**
+ * @Config(
+ *     defaultValues={
+ *          "grouping"={
+ *             "groups"={"activity"}
+ *         },
+ *          "activity"={
+ *              "route"="acme_demo_sms_activity_view",
+ *              "acl"="acme_demo_sms_view",
+ *              "action_button_widget"="acme_demo_add_sms_button",
+ *              "action_link_widget"="acme_demo_add_sms_link"
+ *          }
+ *     }
+ * )
+ */
 class Sms implements
     ActivityInterface,
     ExtendEntityInterface
@@ -270,18 +288,18 @@ The following screenshot is an example of new activity from the view page:
 
 ## Configure Custom Grid for Activity Context Dialog
 
-If you want to define a context grid for an entity (e.g., Document) in the activity context dialog, add the context option in the entity class #[Config] attribute, for example:
+If you want to define a context grid for an entity (e.g., Document) in the activity context dialog, add the context option in the entity class @Config annotation, for example:
 
 *src/Acme/Bundle/DemoBundle/Entity/Document.php*
 ```php
-#[Config(
-    defaultValues: [
-        'grid' => [
-            'default' => 'acme-demo-document-grid-select',
-            'context' => 'document-for-context-grid'
-        ],
-    ]
-)]
+/**
+ * @Config(
+ *         "grid"={
+ *             "default"="acme-demo-document-grid-select",
+ *             "context"="document-for-context-grid"
+ *     }
+ * )
+ */
 ```
 
 This option is used to recognize the grid for the entity with a higher priority than the default option.
@@ -328,7 +346,7 @@ datagrids:
 
 The column type is twig (unchangeable), so you can also specify template.
 
-The default one is <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ActivityBundle/Resources/views/Grid/Column/contexts.html.twig" target="_blank">@OroActivity/Grid/Column/contexts.html.twig</a>.
+The default one is <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ActivityBundle/Resources/views/Grid/Column/contexts.html.twig" target="_blank">@OroActivity/Grid/Column/contexts.html.twig</a>.
 
 ```twig
 {% for item in value %}
@@ -416,7 +434,9 @@ class SmsActivityListProvider implements
         $this->commentAssociationHelper  = $commentAssociationHelper;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function isApplicableTarget($entityClass, $accessible = true)
     {
         return $this->activityAssociationHelper->isActivityAssociationEnabled(
@@ -427,48 +447,52 @@ class SmsActivityListProvider implements
     }
 
     /**
+     * {@inheritdoc}
      * @param Sms $entity
      */
-    #[\Override]
     public function getSubject($entity)
     {
         return substr(trim($entity->getMessage()), 0, 20);
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getDescription($entity)
     {
         return null;
     }
 
     /**
+     * {@inheritdoc}
      * @param Sms $entity
      */
-    #[\Override]
     public function getOwner($entity)
     {
         return $entity->getOwner();
     }
 
     /**
+     * {@inheritdoc}
      * @param Sms $entity
      */
-    #[\Override]
     public function getCreatedAt($entity)
     {
         return $entity->getCreatedAt();
     }
 
     /**
+     * {@inheritdoc}
      * @param Sms $entity
      */
-    #[\Override]
     public function getUpdatedAt($entity)
     {
         return $entity->getUpdatedAt();
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getData(ActivityList $activityList)
     {
         /** @var SMS $sms */
@@ -484,21 +508,25 @@ class SmsActivityListProvider implements
     }
 
     /**
+     * {@inheritdoc}
      * @param Sms $entity
      */
-    #[\Override]
     public function getOrganization($entity)
     {
         return $entity->getOrganization();
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getTemplate()
     {
         return '@AcmeDemo/Sms/js/activityItemTemplate.html.twig';
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getRoutes($entity)
     {
         return [
@@ -508,13 +536,17 @@ class SmsActivityListProvider implements
         ];
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getActivityId($entity)
     {
         return $this->doctrineHelper->getSingleEntityIdentifier($entity);
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function isApplicable($entity)
     {
         if (\is_object($entity)) {
@@ -525,24 +557,26 @@ class SmsActivityListProvider implements
     }
 
     /**
+     * {@inheritdoc}
      * @param Sms $entity
      */
-    #[\Override]
     public function getTargetEntities($entity)
     {
         return $entity->getActivityTargets();
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function isCommentsEnabled($entityClass)
     {
         return $this->commentAssociationHelper->isCommentAssociationEnabled($entityClass);
     }
 
     /**
+     * {@inheritdoc}
      * @param Sms $entity
      */
-    #[\Override]
     public function getActivityOwners($entity, ActivityList $activityList)
     {
         $organization = $this->getOrganization($entity);
@@ -560,7 +594,9 @@ class SmsActivityListProvider implements
         return [$activityOwner];
     }
 
-    #[\Override]
+    /**
+     * {@inheritDoc}
+     */
     public function isActivityListApplicable(ActivityList $activityList): bool
     {
         return true;
@@ -649,9 +685,16 @@ Create a view action in your controller and a TWIG template.
 
 *src/Acme/Bundle/DemoBundle/Controller/SmsController.php*
 ```php
-    #[Route(path: '/widget/info/{id}', name: 'acme_demo_sms_widget_info', requirements: ['id' => '\d+'], options: ['expose' => true])]
-    #[Template('@AcmeDemo/Sms/widget/info.html.twig')]
-    #[AclAncestor('acme_demo_sms_view')]
+    /**
+     * @Route(
+     *      "/widget/info/{id}",
+     *      name="acme_demo_sms_widget_info",
+     *      options={"expose"=true},
+     *      requirements={"id"="\d+"}
+     * )
+     * @Template("@AcmeDemo/Sms/widget/info.html.twig")
+     * @AclAncestor("acme_demo_sms_view")
+     */
     public function infoAction(Request $request, Sms $entity): array
     {
         $targetEntity = $this->getTargetEntity($request);
@@ -673,7 +716,7 @@ Create a view action in your controller and a TWIG template.
      */
     protected function getTargetEntity(Request $request)
     {
-        $entityRoutingHelper = $this->container->get(EntityRoutingHelper::class);
+        $entityRoutingHelper = $this->get(EntityRoutingHelper::class);
         $targetEntityClass = $entityRoutingHelper->getEntityClassName($request, 'targetActivityClass');
         $targetEntityId = $entityRoutingHelper->getEntityId($request, 'targetActivityId');
         if (!$targetEntityClass || !$targetEntityId) {
@@ -719,13 +762,19 @@ Define the update action in your controller.
 ```php
     /**
      * Edit Sms form
+     *
+     * @Route("/update/{id}", name="acme_demo_sms_update", requirements={"id"="\d+"}, options={"expose"=true})
+     * @Template
+     * @Acl(
+     *      id="acme_demo_sms_update",
+     *      type="entity",
+     *      class="Acme\Bundle\DemoBundle\Entity\Sms",
+     *      permission="EDIT"
+     * )
      */
-    #[Route(path: '/update/{id}', name: 'acme_demo_sms_update', requirements: ['id' => '\d+'], options: ['expose' => true])]
-    #[Template]
-    #[Acl(id: 'acme_demo_sms_update', type: 'entity', class: 'Acme\Bundle\DemoBundle\Entity\Sms', permission: 'EDIT')]
     public function updateAction(Sms $entity, Request $request): array|RedirectResponse
     {
-        $updateMessage = $this->container->get(TranslatorInterface::class)->trans(
+        $updateMessage = $this->get(TranslatorInterface::class)->trans(
             'acme.demo.controller.sms.saved.message'
         );
 
@@ -743,9 +792,8 @@ Create a controller. Here is an example of the controller:
 ```php
 namespace Acme\Bundle\DemoBundle\Controller\Api\Rest;
 
-use Acme\Bundle\DemoBundle\Entity\Sms;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
-use Oro\Bundle\SecurityBundle\Attribute\Acl;
+use Oro\Bundle\SecurityBundle\Annotation\Acl;
 use Oro\Bundle\SoapBundle\Controller\Api\FormAwareInterface;
 use Oro\Bundle\SoapBundle\Controller\Api\Rest\RestController;
 use Oro\Bundle\SoapBundle\Entity\Manager\ApiEntityManager;
@@ -765,9 +813,14 @@ class SmsController extends RestController
      *      description="Delete sms",
      *      resource=true
      * )
+     * @Acl(
+     *      id="acme_demo_sms_delete",
+     *      type="entity",
+     *      permission="DELETE",
+     *      class="Acme\Bundle\DemoBundle\Entity\Sms"
+     * )
      * @return Response
      */
-    #[Acl(id: 'acme_demo_sms_delete', type: 'entity', permission: 'DELETE', class: Sms::class)]
     public function deleteAction(int $id)
     {
         return $this->handleDeleteRequest($id);
@@ -778,19 +831,19 @@ class SmsController extends RestController
      *
      * @return ApiEntityManager
      */
-    #[\Override]
     public function getManager()
     {
-        return $this->container->get('acme_demo_sms.manager.api');
+        return $this->get('acme_demo_sms.manager.api');
     }
 
     /**
      * @return FormAwareInterface
      */
-    #[\Override]
     public function getFormHandler()
     {
-        return $this->container->get('acme_demo_sms.form.handler.sms_api');
+        return $this->get('acme_demo_sms.form.handler.sms_api');
+    }
+}
 ```
 
 Register the created controller.
@@ -853,11 +906,11 @@ This API handler is the implementation of REST API.
 ```php
 namespace Acme\Bundle\DemoBundle\Form\Handler;
 
-use Acme\Bundle\DemoBundle\Entity\Sms;
-use Acme\Bundle\DemoBundle\Form\Type\SmsApiType;
 use Doctrine\Persistence\ObjectManager;
 use Oro\Bundle\FormBundle\Form\Handler\RequestHandlerTrait;
 use Oro\Bundle\SoapBundle\Controller\Api\FormAwareInterface;
+use Acme\Bundle\DemoBundle\Entity\Sms;
+use Acme\Bundle\DemoBundle\Form\Type\SmsApiType;
 use Symfony\Component\Form\FormFactory;
 use Symfony\Component\HttpFoundation\RequestStack;
 
@@ -915,7 +968,9 @@ class SmsApiHandler implements FormAwareInterface
         return false;
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getForm()
     {
         return $this->formFactory->createNamed('', SmsApiType::class);
@@ -938,9 +993,9 @@ Create a form type to add the createdAt field.
 ```php
 namespace Acme\Bundle\DemoBundle\Form\Type;
 
-use Acme\Bundle\DemoBundle\Entity\Sms;
 use Oro\Bundle\FormBundle\Form\Type\OroDateTimeType;
 use Oro\Bundle\SoapBundle\Form\EventListener\PatchSubscriber;
+use Acme\Bundle\DemoBundle\Entity\Sms;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -949,7 +1004,9 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  */
 class SmsApiType extends SmsType
 {
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         parent::buildForm($builder, $options);
@@ -965,7 +1022,9 @@ class SmsApiType extends SmsType
         $builder->addEventSubscriber(new PatchSubscriber());
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults(
@@ -976,12 +1035,17 @@ class SmsApiType extends SmsType
         );
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getName()
     {
         return $this->getBlockPrefix();
     }
 
-    #[\Override]
+    /**
+     * {@inheritdoc}
+     */
     public function getBlockPrefix()
     {
         return 'sms';

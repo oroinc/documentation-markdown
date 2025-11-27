@@ -2,9 +2,6 @@
 
 # Configure Search History Settings per Customer
 
-#### HINT
-Read [Search Functions Concept Guide](../../../../../../concept-guides/catalog-promotions/search/index.md#user-guide-getting-started-search) to get a general understanding of the search functionality in OroCommerce.
-
 #### NOTE
 You can configure search history globally, [per organization](../../../../../system/user-management/organizations/org-configuration/commerce/search/org-search-terms.md#organization-commerce-configuration-search-history), [website](../../../../../system/websites/web-configuration/commerce/search/website-search-terms.md#configuration-website-commerce-search-history), [customer group](../../../../customer-groups/customer-group-configuration/commerce/search/customer-group-search-terms-settings.md#user-guide-customer-groups-configuration-settings-search), or customer.
 
@@ -31,20 +28,3 @@ To configure the search history settings per customer:
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

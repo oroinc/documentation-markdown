@@ -113,53 +113,6 @@ Supported search index providers:
 #### NOTE
 For implementation details, see [Search Index Concept](search/index.md#search-index-overview) topic for more information about the search index component.
 
-### Cache Storage
-
-The purpose of caching is to minimize the number of computing operations, including fetching data from other sources, by reusing results stored in the cache storage.
-
-In production environments, we employ the following types of cache:
-- Data Cache
-- System Cache
-- Content Cache
-
-**Data cache**
-
-Data cache is used for storing data that can be generated and changed in runtime.
-It depends on database data, therefore must be shared in [multi-node setups](../../../cloud/architecture/index.md#cloud-architecture).
-It is implemented using <a href="https://symfony.com/doc/current/components/cache/adapters/redis_adapter.html" target="_blank">Redis Cache Adapter</a> and [OroRedisConfigBundle](../../../bundles/platform/RedisConfigBundle/index.md#bundle-docs-platform-redis-bundle) with Redis Sentinel or Redis Cluster.
-
-Examples of such cache are below:
-
-* [Caching complex ACL structures](../../entities/acls.md#coobook-entities-acl-enable)
-* [Catalog Menu Caching](../../../bundles/commerce/CatalogBundle/index.md#bundle-docs-commerce-catalog-bundle)
-* <a href="https://www.doctrine-project.org/projects/doctrine-orm/en/2.15/reference/caching.html" target="_blank">Doctrine ORM caching</a>
-
-#### NOTE
-See the [Data Cache Service](../../../bundles/platform/CacheBundle/index.md#bundle-docs-platform-cache-bundle-data-cache-service) documentation for more information.
-
-**System cache**
-
-System cache should be generated during deployment operations and must be read-only in runtime.
-It mainly relies on code sources such as DI container, annotations, TWIG, YAML and in some cases, database data like [Extend Entities](../../entities/extend-entities/index.md#book-entities-extended-entities). As a result, it should not be shared in [multi-node setups](../../../cloud/architecture/index.md#cloud-architecture).
-It is implemented using <a href="https://symfony.com/doc/current/components/cache/adapters/filesystem_adapter.html" target="_blank">Filesystem Cache Adapter</a> and <a href="https://symfony.com/doc/current/components/cache/adapters/php_files_adapter.html" target="_blank">PHP Files Cache Adapter</a>, and it becomes the most efficient cache when combined with OPcache.
-
-Examples of such cache are below:
-
-* <a href="https://symfony.com/doc/current/components/dependency_injection/workflow.html#working-with-a-cached-container" target="_blank">Symfony container</a>
-* <a href="https://symfony.com/doc/current/reference/configuration/twig.html#cache" target="_blank">Twig caching</a>
-
-#### NOTE
-See the [Caching Static Configuration](../../../bundles/platform/CacheBundle/index.md#bundle-docs-platform-cache-bundle-caching-static-configs) documentation for more information.
-
-**Content cache**
-
-Content cache is used for storing html content to avoid its generation whenever the page is accessed.
-It depends on the database data, but must not be shared in [multi-node setups](../../../cloud/architecture/index.md#cloud-architecture).
-It is implemented using <a href="https://symfony.com/doc/current/components/cache/adapters/redis_adapter.html" target="_blank">Redis Cache Adapter</a> and [OroRedisConfigBundle](../../../bundles/platform/RedisConfigBundle/index.md#bundle-docs-platform-redis-bundle) using standalone Redis running alongside PHP-FPM and Nginx.
-
-#### NOTE
-For more information, see [OroCommerce Render Caching](../../../frontend/storefront/render-cache.md#dev-doc-render-cache).
-
 ### Notes on Deployment Options
 
 For a compact and resource-efficient deployment, all systems and elements of the Oro application may be hosted on a single physical or virtual server instance.

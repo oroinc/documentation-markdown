@@ -2,6 +2,9 @@
 
 # Configure Global Seller Product Approval Workflow Settings
 
+#### HINT
+The workflow is only available in the Enterprise edition of the Oro application starting from v5.1.2.
+
 In the system configuration, you can configure the recipients of the email notifications, which are sent when a product from a non-global organization is submitted for approval or rejection.
 
 To configurable the settings globally:

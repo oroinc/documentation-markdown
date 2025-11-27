@@ -193,26 +193,6 @@ oro_api:
             # Prototype
             name:                 ~
 
-        # The configuration of CORS requests to download published OpenAPI specifications.
-        cors:
-
-            # The amount of seconds the user agent is allowed to cache CORS preflight requests.
-            preflight_max_age:    600
-
-            # The list of origins that are allowed to send CORS requests.
-            allow_origins:        []
-
-                # Examples:
-                # - 'https://foo.com'
-                # - 'https://bar.com'
-
-            # The list of headers that are allowed to send by CORS requests.
-            allow_headers:        []
-
-                # Examples:
-                # - X-Foo
-                # - X-Bar
-
     # The definition of API actions.
     actions:
 
@@ -263,20 +243,6 @@ oro_api:
 
         # Prototype
         name:                 ~
-
-    # The data types for which it is disallowed to use an array filter.
-    filter_disallow_array_data_types: []
-
-        # Examples:
-        # - string
-        # - text
-
-    # The data types for which it is disallowed to use a range filter.
-    filter_disallow_range_data_types: []
-
-        # Examples:
-        # - string
-        # - text
 
     # The form types that can be reused in API.
     form_types:
@@ -360,8 +326,8 @@ oro_api:
             # The name of the feature.
             feature_name:         ~
 
-            # The list of security firewall authenticators that should be removed if the feature is disabled.
-            feature_firewall_authenticators: []
+            # The list of security firewall listeners that should be removed if the feature is disabled.
+            feature_firewall_listeners: []
 
     # The Batch API configuration.
     batch_api:
@@ -398,35 +364,6 @@ oro_api:
 
             # Prototype
             name:                 ~
-
-        # The maximum number of seconds that API waits for a synchronous batch API operation finished. If the operation is not finished within this time interval it is processed as an asynchronous operation.
-        sync_processing_wait_timeout: 25
-
-        # The default maximum number of entities that can be processed by synchronous batch API.
-        sync_processing_limit: 100
-
-        # The default maximum number of included entities that can be processed by synchronous batch API.
-        sync_processing_included_data_limit: 50
-
-        # The maximum number of entities of a specific type that can be processed by synchronous batch API.
-        # The null value can be used to revert already configured limit for a specific entity type and use the default limit for it.
-        sync_processing_limit_per_entity:
-
-            # Example:
-            # Oro\Bundle\UserBundle\Entity\User: 10
-
-            # Prototype
-            name:                 ~
-
-        # The maximum number of included entities that can be processed by synchronous batch API for a specific primary entity type.
-        # The null value can be used to revert already configured limit for a specific entity type and use the default limit for it.
-        sync_processing_included_data_limit_per_entity:
-
-            # Example:
-            # Oro\Bundle\UserBundle\Entity\User: 20
-
-            # Prototype
-            name:                 ~
 ```
 
 ## oro_asset
@@ -450,15 +387,6 @@ oro_asset:
 
     # Npm installation timeout in seconds, null to disable timeout
     npm_install_timeout:  null
-
-    # External resource assets configuration
-    external_resources:
-
-    # Prototype
-    name:
-
-        # The link to the external resource
-        link:                 ~ # Required
 
     # Webpack Dev Server configuration
     webpack_dev_server:
@@ -821,6 +749,22 @@ oro_google_tag_manager:
         batch_size:           30
 ```
 
+## oro_hangouts_call
+
+The default configuration for extension with alias “oro_hangouts_call”:
+
+```yaml
+oro_hangouts_call:
+    initial_apps:
+
+        # Prototype
+        -
+            app_id:               ~ # Required
+            app_type:             ROOM_APP
+            app_name:             ~
+            base_path:            ~
+```
+
 ## oro_health_check
 
 The default configuration for extension with alias “oro_health_check”:
@@ -1156,25 +1100,6 @@ The default configuration for extension with alias “oro_paypal”:
 ```yaml
 oro_paypal:
     allowed_ips:          []
-```
-
-## oro_query_designer
-
-The default configuration for extension with alias “oro_query_designer”:
-
-```yaml
-oro_query_designer:
-
-    # The configuration of entities whose associations can be used in the query designer without expanding their fields.
-    collapsed_associations:
-
-        # Example:
-        # Acme\AppBundle\Entity\User: { virtual_fields: [id], search_fields: [firstName, lastName] }
-
-        # Prototype
-        class:
-            virtual_fields:       []
-            search_fields:        []
 ```
 
 ## oro_report

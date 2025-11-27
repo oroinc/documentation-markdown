@@ -38,27 +38,9 @@ The following system workflows are provided out-of-the-box in the Oro applicatio
 * [Contact Request Workflow](contact-request-wf.md#admin-guide-workflows-contact-request-wf)
 * [Seller Registration Workflow for OroMarketplace](seller-registration-flow.md#system-workflows-seller-registration-flow)
 * [Seller Product Approval Workflow](seller-product-approval.md#system-workflows-seller-product-approval-workflow)
-* [Conversations Workflow](conversations-workflow.md#system-workflows-conversations-backoffice-workflow)
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
 <!-- IcPencil refers to Rename in Commerce and Inline Editing in CRM -->
 <!-- Check mark in the square. -->
 <!-- SortDesc is also used as drop-down arrow -->
-<!-- A -->
-<!-- B -->
-<!-- C -->
-<!-- D -->
-<!-- E -->
-<!-- F -->
-<!-- G -->
-<!-- H -->
-<!-- I -->
-<!-- L -->
-<!-- M -->
-<!-- P -->
-<!-- R -->
-<!-- S -->
-<!-- T -->
-<!-- U -->
-<!-- Z -->

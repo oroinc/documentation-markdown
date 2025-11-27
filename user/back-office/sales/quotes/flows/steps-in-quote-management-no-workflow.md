@@ -19,7 +19,7 @@ To edit a quote:
 
    #### IMPORTANT
    The icon that starts a workflow looks like the **Edit** icon. Please check the hint that appears when you hover over the icon to make sure that you select the desired action.
-3. Update the **Quote General Information**, **Line Items**, **Shipping Address**, **Shipping Information** sections, or add any relevant documents under **Customer Documents**. See [Create a Quote](../create/create-from-scratch.md#quote-create-from-scratch) topic for detailed information on the available options.
+3. Update the **Quote General Information**, **Line Items**, **Shipping Address**, or **Shipping Information** sections. See [Create a Quote](../create/create-from-scratch.md#quote-create-from-scratch) topic for detailed information on the available options.
 4. Click **Save** on the top right of the page.
 
 The quote is updated.
@@ -129,7 +129,7 @@ To edit a quote:
 
    #### IMPORTANT
    The icon that starts a workflow looks like the **Edit** icon. Please check the hint that appears when you hover over the icon to make sure that you select the desired action.
-3. Update the **Quote General Information**, **Line Items**, **Shipping Address**, **Shipping Information** sections, or add any relevant documents under **Customer Documents**. See [Create a Quote](../create/create-from-scratch.md#quote-create-from-scratch) topic for detailed information on the available options.
+3. Update the **Quote General Information**, **Line Items**, **Shipping Address**, or **Shipping Information** sections. See [Create a Quote](../create/create-from-scratch.md#quote-create-from-scratch) topic for detailed information on the available options.
 4. Click **Save** on the top right of the page.
 
 The quote is updated.

@@ -11,29 +11,27 @@ the [CSS Files Structure](../css/index.md#dev-doc-frontend-css-theme-structure) 
 
 To change the color scheme:
 
-1. Create your own list of colors and merge it with `$color-palette` using the `map.deep-merge($map1, $map2)` SASS function.
+1. Create your own list of colors and merge it with `$color-palette` using the `map_merge($map1, $map2)` SASS function.
    : This way, your color scheme will rewrite or extend the already existing $color-palette.
      ```scss
-     @use 'sass:map';
-     <br/>
      $theme-color-palette: (
          'primary': (
              'main': #37435c,
          ),
          'secondary': (
-             'c1': #fcb91d,
+             'main': #fcb91d,
          ),
-         'neutral': (
-             'grey2': #dadada
+         'additional': (
+             'ultra': #fff
          )
      ) !default;
      <br/>
-     $color-palette: map.deep-merge($color-palette, $theme-color-palette);
+     $color-palette: map_merge($color-palette, $theme-color-palette);
      ```
-2. To get the color you need, use the `get-var-color($palette, $key);` function.
+2. To get the color you need, use the `get-color($palette, $key);` function.
    > ```scss
    > .input {
-   >     color: get-var-color('neutral', 'grey2');
+   >     color: get-color('secondary', 'main');
    > }
    > ```
 3. Run the following console commands to publish the changes:
