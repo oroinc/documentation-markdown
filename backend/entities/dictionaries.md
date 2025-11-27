@@ -23,7 +23,7 @@ REST API resources are created automatically for the following types of dictiona
 
 If you have a group of entities that can be classified as a dictionary but are not included in the `dictionary` group in the entity configuration, and you need to have its entities added to the dictionary REST API, you need to do two things.
 
-1. Create a dictionary value list provider implementing the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Provider/DictionaryValueListProviderInterface.php" target="_blank">DictionaryValueListProviderInterface</a> interface.
+1. Create a dictionary value list provider implementing the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityBundle/Provider/DictionaryValueListProviderInterface.php" target="_blank">DictionaryValueListProviderInterface</a> interface.
 2. Register your provider service in the DI container by the following tag: `oro_entity.dictionary_value_list_provider`:
 
 *src/Acme/Bundle/DemoBundle/Resources/config/services.yml*

@@ -2,11 +2,11 @@
 
 # Entity Aliases
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Model/EntityAlias.php" target="_blank">Entity aliases</a> were introduced to provide a simple way of referring to entities.
+<a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityBundle/Model/EntityAlias.php" target="_blank">Entity aliases</a> were introduced to provide a simple way of referring to entities.
 
 The usages for entity aliases can be numerous, but they come in handy when specifying entities in the API, removing the need to use bulky FQCNs.
 
-You can use entity aliases with the help of <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/ORM/EntityAliasResolver.php" target="_blank">EntityAliasResolver</a>, which provides necessary functions for obtaining aliases for given class names and visa versa.
+You can use entity aliases with the help of <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityBundle/ORM/EntityAliasResolver.php" target="_blank">EntityAliasResolver</a>, which provides necessary functions for obtaining aliases for given class names and visa versa.
 
 ## Define Entity Aliases
 
@@ -47,7 +47,7 @@ oro_entity:
 
 When you need more complicated rules for creating entity aliases that cannot be configured via the `Resources/config/oro/entity.yml` file, create an entity alias provider.
 
-For this, you need to implement the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Provider/EntityAliasProviderInterface.php" target="_blank">EntityAliasProviderInterface</a> interface in your provider class:
+For this, you need to implement the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityBundle/Provider/EntityAliasProviderInterface.php" target="_blank">EntityAliasProviderInterface</a> interface in your provider class:
 
 ```php
 use Oro\Bundle\EmailBundle\Entity\Manager\EmailAddressManager;

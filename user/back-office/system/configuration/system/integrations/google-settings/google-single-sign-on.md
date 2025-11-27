@@ -55,7 +55,7 @@ To configure the integration with Google Single Sign-On in your Oro application:
 3. Define the following fields for **Google Sign-On:**
    * **Enable** — Check **Enable** to activate Google Single Sign-on.
    * **Domains** — Enter a comma-separated list of email domains allowed to use Google SSO (e.g., domains associated with your company). It limits Google SSO access to users with email addresses matching these domains. Leave the field empty to allow any domain.
-   * **Disable Non-SSO Login for Listed Domains** (available as of OroCommerce version 6.1.2) — When enabled, users with email addresses matching the domains specified in the *Domains* field will be required to sign in using **Google SSO only**. Username and password login will be restricted for these users.
+   * **Disable Non-SSO Login for Listed Domains** — When enabled, users with email addresses matching the domains specified in the *Domains* field will be required to sign in using **Google SSO only**. Username and password login will be restricted for these users.
 
 ![Global Google integration settings](user/img/system/config_system/google_integration_new.png)
 

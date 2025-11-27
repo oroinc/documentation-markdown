@@ -49,7 +49,7 @@ The Serialized Fields bundle adds a new field called Storage Type within New fie
 
 ![Basic properties available when creating a new field for an entity](user/img/system/entity_management/new_entity_field.png)
 
-To create a serialized field via migration, use <a href="https://github.com/oroinc/OroEntitySerializedFieldsBundle/tree/6.1/Migration/Extension/SerializedFieldsExtension.php" target="_blank">SerializedFieldsExtension</a>. For example:
+To create a serialized field via migration, use <a href="https://github.com/oroinc/OroEntitySerializedFieldsBundle/blob/master/Migration/Extension/SerializedFieldsExtension.php" target="_blank">SerializedFieldsExtension</a>. For example:
 
 *src/Acme/Bundle/DemoBundle/Migrations/Schema/v1_4/AddSerializedFieldMigration.php*
 ```php

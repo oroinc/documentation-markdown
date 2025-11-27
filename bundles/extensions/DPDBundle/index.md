@@ -2,7 +2,7 @@
 
 # OroDPDBundle
 
-<a href="https://github.com/oroinc/OroDpdBundle" target="_blank">OroDPDBundle</a> adds the <a href="https://www.dpd.com/" target="_blank">DPD</a> shipping service <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/IntegrationBundle" target="_blank">integration</a> to Oro applications and helps admin users to enable and configure DPD <a href="https://github.com/oroinc/orocommerce/tree/master/src/Oro/Bundle/ShippingBundle" target="_blank">shipping methods</a> for invoices, quotes, and customer orders. The bundle also adds the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ActionBundle" target="_blank">operation button</a> for admin users to the order view pages to provide order shipping data and send the package pick-up request to the DPD service.
+<a href="https://github.com/oroinc/OroDpdBundle" target="_blank">OroDPDBundle</a> adds the <a href="https://www.dpd.com/" target="_blank">DPD</a> shipping service <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/IntegrationBundle" target="_blank">integration</a> to Oro applications and helps admin users to enable and configure DPD <a href="https://github.com/oroinc/orocommerce/tree/master/src/Oro/Bundle/ShippingBundle" target="_blank">shipping methods</a> for invoices, quotes, and customer orders. The bundle also adds the <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ActionBundle" target="_blank">operation button</a> for admin users to the order view pages to provide order shipping data and send the package pick-up request to the DPD service.
 
 The DPD shipping provides functionality to:
 

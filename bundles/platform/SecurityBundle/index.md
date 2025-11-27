@@ -4,7 +4,7 @@
 
 # OroSecurityBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/SecurityBundle" target="_blank">OroSecurityBundle</a> extends Symfony security capabilities to enable a role-based ACL security system in the Oro applications.
+<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/SecurityBundle" target="_blank">OroSecurityBundle</a> extends Symfony security capabilities to enable a role-based ACL security system in the Oro applications.
 
 The bundle enables developers to set up access restrictions for entities and non-entity related actions using the PHP attributes and the YAML configuration files. It also provides UI for application administrators to configure the entity-specific permissions for particular user roles based on the entity ownership.
 

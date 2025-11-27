@@ -196,7 +196,7 @@ For more information, please refer to the <a href="https://packagist.org/package
 
 ### Add Custom Condition
 
-The conditions are based on the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/ConfigExpression/README.md" target="_blank">ConfigExpression</a> component.
+The conditions are based on the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/ConfigExpression/README.md" target="_blank">ConfigExpression</a> component.
 
 To add a custom condition, add a service to DIC with the “oro_action.condition” tag, for example:
 

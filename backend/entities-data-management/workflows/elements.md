@@ -8,7 +8,7 @@
 
 ### Add a Custom Condition
 
-Conditions are based on the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/ConfigExpression/README.md" target="_blank">ConfigExpression</a> component.
+Conditions are based on the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/ConfigExpression/README.md" target="_blank">ConfigExpression</a> component.
 
 To add a custom condition, add a service to DIC with tag oro_action.condition, as illustrated below:
 

@@ -1,5 +1,8 @@
 <a id="orocloud-maintenance-env-vars"></a>
 
+#### IMPORTANT
+You are viewing the upcoming documentation for OroCloud, scheduled for release later in 2025. For accurate and up-to-date information, please refer only to the documentation of <a href="https://doc.oroinc.com/cloud/" target="_blank">the latest LTS version</a>.
+
 # How to Add/Remove Environment Variables
 
 <a href="https://en.wikipedia.org/wiki/Environment_variable" target="_blank">Environment variable</a> can be configured for application usage, as illustrated below:

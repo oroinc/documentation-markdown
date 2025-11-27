@@ -2,7 +2,7 @@
 
 # OroDistributionBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/DistributionBundle" target="_blank">OroDistributionBundle</a> enables application bundles registration based on their YAML configuration files without changing the application files. It also provides CLI to manage Oro packages in the applications.
+<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/DistributionBundle" target="_blank">OroDistributionBundle</a> enables application bundles registration based on their YAML configuration files without changing the application files. It also provides CLI to manage Oro packages in the applications.
 
 ## Use the Bundle
 

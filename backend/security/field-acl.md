@@ -41,7 +41,7 @@ As a result, the $isGranted variable contains the *true* value if access is gran
 
 The $entity parameter should contain an instance of the entity you want to check.
 
-If you have no entity instance, but you know a class name, the ID of the record, the owner, and the organization IDs of this record, the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/SecurityBundle/Acl/Domain/DomainObjectReference.php" target="_blank">DomainObjectReference</a>] can be used as the domain object:
+If you have no entity instance, but you know a class name, the ID of the record, the owner, and the organization IDs of this record, the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/SecurityBundle/Acl/Domain/DomainObjectReference.php" target="_blank">DomainObjectReference</a>] can be used as the domain object:
 
 ```php
 // ....

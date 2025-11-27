@@ -47,8 +47,8 @@ The **allowed options in the theme configuration** file are the following:
 | icon              | The icon is displayed<br/>in the UI.                                                                                                        | no         | no         |
 | favicons_path     | The path to favicons                                                                                                                        | no         | no         |
 | svg_icons_support | Defines whether Theme<br/>supports SVG icons. Default<br/>value will be inherited from<br/>the parent themes if any,<br/>otherwise - false. | no         | yes        |
-| pdf_document      | Defines paths to Twig<br/>templates used to generate<br/>PDF documents (e.g. invoice)                                                       | no         | yes        |
 | fonts             | Defines fonts for theme                                                                                                                     | no         | no         |
+| pdf_document      | Defines paths to Twig<br/>templates used to generate<br/>PDF documents (e.g. invoice)                                                       | no         | no         |
 | configuration     | Defines theme configuration<br/>options that give theme<br/>developers more possibility<br/>for configurable storefront                     | no         | no         |
 
 **Example:**
@@ -188,7 +188,7 @@ To get the correct theme option value, use getThemeOption and getThemeConfigOpti
 ```php
 namespace Oro\Component\Layout\Extension\Theme\Model;
 
-class ThemeManager implements ResetInterface
+class ThemeManager implements ThemeManagerInterface, ResetInterface
 {
     public function getThemeOption(string $themeName, string $optionName, bool $inherited = true): mixed
     {

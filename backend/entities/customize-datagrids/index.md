@@ -16,7 +16,7 @@ The ORM data source types allow for database query specification, sorters, and f
 
 ## Inner Workings of Datagrids
 
-Datagrids in Oro applications are highly customizable. It is possible to modify an existing grid in order to fetch more data than was originally defined in the grid configuration. In this article, we will retrieve and present to a user some additional data in the existing <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/ProductBundle/Resources/config/oro/datagrids.yml#L305" target="_blank">products-grid</a>.
+Datagrids in Oro applications are highly customizable. It is possible to modify an existing grid in order to fetch more data than was originally defined in the grid configuration. In this article, we will retrieve and present to a user some additional data in the existing <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/ProductBundle/Resources/config/oro/datagrids.yml#L305" target="_blank">products-grid</a>.
 
 And before we start customizing it, let’s take a deeper look into two aspects of how the datagrids actually work:
 

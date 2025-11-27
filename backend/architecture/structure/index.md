@@ -28,7 +28,7 @@ For example, the <a href="https://github.com/oroinc/OroCRMMarketingBundle" targe
 
 A **component** repository contains the source code of the reusable development module that enables a set of commonly used functions that you can use as third-party libraries without the Oro application. Rather than a complete business feature, the Oro component can handle generic functionality that is not bound to the business domain. Component repositories are typically published as read-only subtree distributions of independent package bundles or components.
 
-Sample component: <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/MessageQueueBundle" target="_blank">OroMessageQueueBundle</a>
+Sample component: <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/MessageQueueBundle" target="_blank">OroMessageQueueBundle</a>
 
 You can find a complete list of OroInc public repositories at <a href="https://github.com/oroinc/" target="_blank">https://github.com/oroinc/</a>.
 
@@ -36,7 +36,7 @@ You can find a complete list of OroInc public repositories at <a href="https://g
 
 Oro application uses <a href="https://getcomposer.org/doc/03-cli.md#require" target="_blank">composer</a> as an application-level dependency manager. It is widely used and popular in the PHP development community.
 
-With composer, you can manage dependencies by editing the composer.json file (see <a href="https://github.com/oroinc/crm-application/tree/6.1/composer.json" target="_blank">composer.json</a> sample and <a href="https://getcomposer.org/doc/" target="_blank">composer documentation</a> for more information).
+With composer, you can manage dependencies by editing the composer.json file (see <a href="https://github.com/oroinc/crm-application/blob/master/composer.json" target="_blank">composer.json</a> sample and <a href="https://getcomposer.org/doc/" target="_blank">composer documentation</a> for more information).
 
 Every Oro application contains a composer.json file in the application root directory.
 
@@ -86,7 +86,7 @@ After registration, the **package** is listed in the <a href="https://packagist.
 #### NOTE
 The **package** links to the package source code repository and may also contain information about the package required dependencies, configuration, scripts that should be executed during the package installation (e.g., post-install and post-update scripts), etc. You may use the package as a dependency in your custom application like Oro applications use Oro packages.
 
-See sample <a href="https://github.com/oroinc/crm-application/tree/6.1/composer.json" target="_blank">composer.json</a>.
+See sample <a href="https://github.com/oroinc/crm-application/blob/master/composer.json" target="_blank">composer.json</a>.
 
 ## File System Structure
 

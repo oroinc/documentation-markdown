@@ -12,12 +12,12 @@ query_designer:
         # put configuration of aggregating functions here
 ```
 
-You can find all available configuration options in the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/QueryDesignerBundle/QueryDesigner/Configuration.php" target="_blank">Configuration.php file</a>.
+You can find all available configuration options in the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/QueryDesignerBundle/QueryDesigner/Configuration.php" target="_blank">Configuration.php file</a>.
 
 ## Filters Configuration
 
 This section describes how you can configure the list of filters are displayed on the results page (e.g., a report results grid) and intended for filtering the resulting data.
-The <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/QueryDesignerBundle/Resources/config/oro/query_designer.yml" target="_blank">configuration of default filters</a> describes filters for general data types, such as string, integer, money, percent etc. For instance, take a look at the configuration of a filter used to filter textual data:
+The <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/QueryDesignerBundle/Resources/config/oro/query_designer.yml" target="_blank">configuration of default filters</a> describes filters for general data types, such as string, integer, money, percent etc. For instance, take a look at the configuration of a filter used to filter textual data:
 
 ```yaml
 query_designer:
@@ -60,7 +60,7 @@ This will add an additional condition to the applicable attribute of the existin
 
 ## Grouping Configuration
 
-Currently, the configuration of the grouping columns has only one attribute - exclude. With its help, you can specify which fields cannot be used in the GROUP BY SQL clause. <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/QueryDesignerBundle/Resources/config/oro/query_designer.yml" target="_blank">By default</a> the following data types are not available for grouping: array, object. Here is an example of grouping configuration:
+Currently, the configuration of the grouping columns has only one attribute - exclude. With its help, you can specify which fields cannot be used in the GROUP BY SQL clause. <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/QueryDesignerBundle/Resources/config/oro/query_designer.yml" target="_blank">By default</a> the following data types are not available for grouping: array, object. Here is an example of grouping configuration:
 
 ```yaml
 query_designer:

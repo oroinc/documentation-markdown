@@ -35,7 +35,7 @@ For more information, see the following external resources:
 
 ### DBAL Broker
 
-The DBAL broker is implemented by the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/MessageQueueBundle" target="_blank">OroMessageQueueBundle</a>. It is part of OroPlatform which means that this broker is available in all Oro applications out-of-the-box.
+The DBAL broker is implemented by the <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/MessageQueueBundle" target="_blank">OroMessageQueueBundle</a>. It is part of OroPlatform which means that this broker is available in all Oro applications out-of-the-box.
 
 For message storage, like the message queue, the DBAL broker uses application database tables.
 

@@ -2,7 +2,7 @@
 
 # OroDashboardBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/DashboardBundle" target="_blank">OroDashboardBundle</a> introduces different widget types and manages the configuration of user dashboards and dashboard widgets.
+<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/DashboardBundle" target="_blank">OroDashboardBundle</a> introduces different widget types and manages the configuration of user dashboards and dashboard widgets.
 A dashboard is a default page you see after you log in. It is an adjustable view that contains many types of information blocks (widgets) and metrics, such as today’s calendar, recent calls and emails, quick launchpad, etc. You can have several dashboards that serve different purposes and switch between them.
 
 ## Configure a Dashboard

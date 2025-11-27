@@ -21,7 +21,7 @@ When the quantity of the product is lower than or equals the value of the `oro_i
 
 Two new options are added for products and categories. These options are `highlightLowInventory` and `lowInventoryThreshold`.
 These options help configure options for each category or product individually. By default, these options use the value from the system configuration.
-To check the currently configured fallback for product or category, use <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Fallback/EntityFallbackResolver.php" target="_blank">Oro\\Bundle\\EntityBundle\\Fallback\\EntityFallbackResolver</a>.
+To check the currently configured fallback for product or category, use <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityBundle/Fallback/EntityFallbackResolver.php" target="_blank">Oro\\Bundle\\EntityBundle\\Fallback\\EntityFallbackResolver</a>.
 
 Example:
 
@@ -48,7 +48,7 @@ This method is called before the grid is built. It adds a new `low_inventory` pr
 
 This method is called when we execute query and have data result.
 This method uses the logic of [LowInventoryProvider]() . It adds information about the low inventory option for each product in the collection. It also adds a boolean value to `low_inventory` which will then be used in the layout.
-The following is an <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/InventoryBundle/Resources/views/layouts/default/imports/oro_product_list_item/low_inventory.html.twig" target="_blank">example of using low_inventory</a> in the layout of the product grid:
+The following is an <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/InventoryBundle/Resources/views/layouts/default/imports/oro_product_list_item/low_inventory.html.twig" target="_blank">example of using low_inventory</a> in the layout of the product grid:
 
 ```twig
 {% block _product_datagrid_row__product_low_inventory_label_widget %}
@@ -62,7 +62,7 @@ The following is an <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/
 
 ### LowInventoryCheckoutLineItemValidationListener
 
-The <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/InventoryBundle/EventListener/LowInventoryCheckoutLineItemValidationListener.php" target="_blank">Oro\\Bundle\\InventoryBundle\\EventListener\\LowInventoryCheckoutLineItemValidationListener</a> class.
+The <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/InventoryBundle/EventListener/LowInventoryCheckoutLineItemValidationListener.php" target="_blank">Oro\\Bundle\\InventoryBundle\\EventListener\\LowInventoryCheckoutLineItemValidationListener</a> class.
 This listener contains a method that checks low inventory for line item products and adds a warning message if a product has low quantity.
 
 #### onLineItemValidate
@@ -77,7 +77,7 @@ It validates the product from the line item and adds a warning message if this p
 
 ### LowInventoryProvider
 
-The <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/InventoryBundle/Inventory/LowInventoryProvider.php" target="_blank">Oro\\Bundle\\InventoryBundle\\Inventory\\LowInventoryProvider</a> class.
+The <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/InventoryBundle/Inventory/LowInventoryProvider.php" target="_blank">Oro\\Bundle\\InventoryBundle\\Inventory\\LowInventoryProvider</a> class.
 
 This class contains a method that helps you quickly get information about low quantity for the current product or product collection.
 
@@ -113,7 +113,7 @@ This method returns information about the low inventory status of the current pr
 ```
 
 It works in the same way as the [isLowInventoryProduct]() method, but has differences in taken up arguments and returned values.
-This method takes an argument as an array of the <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/ProductBundle/Entity/Product.php" target="_blank">Product entity</a> and <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/ProductBundle/Entity/ProductUnit.php" target="_blank">ProductUnit entity</a> entities and returns an array of product ids with a boolean result.
+This method takes an argument as an array of the <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/ProductBundle/Entity/Product.php" target="_blank">Product entity</a> and <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/ProductBundle/Entity/ProductUnit.php" target="_blank">ProductUnit entity</a> entities and returns an array of product ids with a boolean result.
 `true` is returned if the quantity of the product is less than the `lowInventoryThreshold` option. `false` is returned if the quantity of the product is greater than the `lowInventoryThreshold` option, or if `highlightLowInventory` is not checked.
 
 ## Twig
@@ -131,7 +131,7 @@ is used. The following example illustrates how to use this function/how this fun
 
 ### LowInventoryCheckoutLineItemValidator
 
-The <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/InventoryBundle/Validator/LowInventoryCheckoutLineItemValidator.php" target="_blank">Oro\\Bundle\\InventoryBundle\\Validator\\LowInventoryCheckoutLineItemValidator</a> class.
+The <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/InventoryBundle/Validator/LowInventoryCheckoutLineItemValidator.php" target="_blank">Oro\\Bundle\\InventoryBundle\\Validator\\LowInventoryCheckoutLineItemValidator</a> class.
 This class contains a method that returns a message if a product has low quantity.
 
 #### getLowInventoryMessage

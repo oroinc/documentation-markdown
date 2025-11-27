@@ -193,15 +193,15 @@ To make your datagrid accessible, create a controller that the user can visit, w
 namespace Acme\Bundle\DemoBundle\Controller;
 
 use Acme\Bundle\DemoBundle\Entity\Question;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Symfony\Bridge\Twig\Attribute\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Attribute\Route;
 
 #[Route(path: '/question', name: 'acme_demo_question_')]
 class QuestionController extends AbstractController
 {
     #[Route(path: '/', name: 'index')]
-    #[Template]
+    #[Template('@AcmeDemo/Question/index.html.twig')]
     public function indexAction(): array
     {
         return [

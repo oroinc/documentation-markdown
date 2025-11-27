@@ -141,10 +141,10 @@ The definition of a data grid consists of the following sections:
 > reports will be exportable.
 
 #### SEE ALSO
-This example is taken from <a href="https://github.com/oroinc/crm/tree/6.1/src/Oro/Bundle/ReportCRMBundle/Resources/config/oro/datagrids.yml" target="_blank">ReportBundle</a>, which is part of OroPlatform. Refer to it for more
+This example is taken from <a href="https://github.com/oroinc/crm/blob/master/src/Oro/Bundle/ReportCRMBundle/Resources/config/oro/datagrids.yml" target="_blank">ReportBundle</a>, which is part of OroPlatform. Refer to it for more
 examples.
 
-You can also find more information on data grids in the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/DataGridBundle" target="_blank">DataGridBundle</a> documentation.
+You can also find more information on data grids in the <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/DataGridBundle" target="_blank">DataGridBundle</a> documentation.
 
 ### Access the Report
 

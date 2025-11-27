@@ -54,11 +54,11 @@ The message itself has headers and body, and they change this way while travelin
 
 ### Key Classes
 
-- <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/MessageQueue/Client/MessageProducer.php" target="_blank">MessageProducer</a> - The client’s message producer that sends messages
-- <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/MessageQueue/Consumption/MessageProcessorInterface.php" target="_blank">MessageProcessorInterface</a> - Each class that does the job has to implement this interface
-- <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/MessageQueue/Client/TopicSubscriberInterface.php" target="_blank">TopicSubscriberInterface</a> - Kind of EventSubscriberInterface. It allows you to keep a processing code and topics it is subscribed to in one place.
-- <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/MessageQueue/Client/ConsumeMessagesCommand.php" target="_blank">ConsumeMessagesCommand</a> - A command you use to consume messages.
-- <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/MessageQueue/Consumption/QueueConsumer.php" target="_blank">QueueConsumer</a> - A class that works inside the command and watches out for a new message, and once it gets it, it passes it to the message processor.
+- <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/MessageQueue/Client/MessageProducer.php" target="_blank">MessageProducer</a> - The client’s message producer that sends messages
+- <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/MessageQueue/Consumption/MessageProcessorInterface.php" target="_blank">MessageProcessorInterface</a> - Each class that does the job has to implement this interface
+- <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/MessageQueue/Client/TopicSubscriberInterface.php" target="_blank">TopicSubscriberInterface</a> - Kind of EventSubscriberInterface. It allows you to keep a processing code and topics it is subscribed to in one place.
+- <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/MessageQueue/Client/ConsumeMessagesCommand.php" target="_blank">ConsumeMessagesCommand</a> - A command you use to consume messages.
+- <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/MessageQueue/Consumption/QueueConsumer.php" target="_blank">QueueConsumer</a> - A class that works inside the command and watches out for a new message, and once it gets it, it passes it to the message processor.
 
 ## Message Processors
 

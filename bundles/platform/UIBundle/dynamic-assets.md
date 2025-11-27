@@ -16,7 +16,7 @@ For example, let us assume that acme asset package should use the dynamic versio
                acme:
                    version_strategy: 'Oro\Bundle\AssetBundle\VersionStrategy\BuildVersionStrategy'
    ```
-2. Set <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/UIBundle/Asset/DynamicAssetVersionStrategy.php" target="_blank">DynamicAssetVersionStrategy</a> for this package.
+2. Set <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/UIBundle/Asset/DynamicAssetVersionStrategy.php" target="_blank">DynamicAssetVersionStrategy</a> for this package.
    ```php
    namespace Acme\Bundle\DemoBundle;
 

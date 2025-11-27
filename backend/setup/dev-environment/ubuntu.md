@@ -31,7 +31,11 @@ This guide demonstrates how to set up [Docker and Symfony Server development sta
    curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash -
    sudo apt -y install nodejs
    ```
-4. Install Docker and Docker Compose:
+4. Install PNPM Using NPM:
+   ```none
+   npm install -g pnpm@latest-10
+   ```
+5. Install Docker and Docker Compose:
    ```none
    # Set up Docker's apt repository
    sudo install -m 0755 -d /etc/apt/keyrings
@@ -51,13 +55,13 @@ This guide demonstrates how to set up [Docker and Symfony Server development sta
    ```
 
    For more information, see <a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository" target="_blank">Docker installation on Ubuntu</a>.
-5. Install Composer v2:
+6. Install Composer v2:
    ```none
    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && php composer-setup.php
    php -r "unlink('composer-setup.php');"
    sudo mv composer.phar /usr/bin/composer
    ```
-6. Install Symfony Server and enable TLS:
+7. Install Symfony Server and enable TLS:
    ```none
    sudo apt -y install libnss3-tools
    wget https://get.symfony.com/cli/installer -O - | bash
@@ -65,7 +69,7 @@ This guide demonstrates how to set up [Docker and Symfony Server development sta
    source ~/.bashrc
    symfony server:ca:install
    ```
-7. Restart the terminal and web browser to get them ready.
+8. Restart the terminal and web browser to get them ready.
 
 #### BUSINESS TIP
 ## Business Tip

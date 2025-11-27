@@ -8,7 +8,7 @@ OroPlatform collects documentation for API resources from several sources:
 
 - Documentation in a [configuration file](configuration.md#web-api-configuration).
 - A <a href="https://daringfireball.net/projects/markdown/" target="_blank">Markdown</a> document. You can find detailed information further below.
-- System-wide descriptions of <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityConfigBundle/README.md" target="_blank">configurable entities and fields</a>.
+- System-wide descriptions of <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityConfigBundle/README.md" target="_blank">configurable entities and fields</a>.
 
 The source with the highest priority is the configuration file. The documentation provided there overrides all other sources. However, as it is a YAML file, it is not entirely suitable for extensive multi-line texts. A more appropriate place for the documentation is a separate <a href="https://daringfireball.net/projects/markdown/" target="_blank">Markdown</a> file. To use a custom markdown file, provide a link to it in the configuration file, as illustrated below:
 
