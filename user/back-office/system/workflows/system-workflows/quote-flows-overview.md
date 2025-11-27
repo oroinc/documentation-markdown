@@ -3,15 +3,12 @@
 # Configure Quote Workflows in the Back-Office
 
 * [Quote Management Flow](quote-management-workflow.md)
-  * [Overview](quote-management-workflow.md#overview)
   * [Statuses](quote-management-workflow.md#statuses)
   * [Steps and Transitions](quote-management-workflow.md#steps-and-transitions)
   * [Sample Flow](quote-management-workflow.md#sample-flow)
 * [Backoffice Quote Flow with Approvals](backoffice-quote-flow-with-approvals.md)
-  * [Overview](backoffice-quote-flow-with-approvals.md#overview)
   * [Prerequisites](backoffice-quote-flow-with-approvals.md#prerequisites)
   * [Steps and Transitions](backoffice-quote-flow-with-approvals.md#steps-and-transitions)
-  * [Sample Flow](backoffice-quote-flow-with-approvals.md#sample-flow)
 
 #### NOTE
 For general information on using workflows, see the [Workflows](../index.md#user-guide-system-workflow-management) section.

@@ -13,12 +13,10 @@ This flow is used when the [Quote Management Flow](../../../system/workflows/sys
 
 <!-- As an illustration, let us see the quote in action and walk through the steps a buyer and a sales manager may follow to communicate or negotiate for the sale: -->
 
-### Overview
-
-Quote Management Flow (QBW) is a [system](../../../system/workflows/index.md#user-guide-system-workflow-management-system-custom) workflow that defines a sequence of [steps and transitions](../../../system/workflows/steps-transitions.md#user-guide-system-workflow-management-steps-transitions) that a quote can go through as a deal progresses.
+Quote Management Flow (QMF) is a [system](../../../system/workflows/index.md#user-guide-system-workflow-management-system-custom) workflow that defines a sequence of [steps and transitions](../../../system/workflows/steps-transitions.md#user-guide-system-workflow-management-steps-transitions) that a quote can go through as a deal progresses.
 
 #### NOTE
-The difference between the simple Quote Management Flow and the one with approval is covered in the [Understanding Quote Workflows](../../../system/workflows/system-workflows/quote-flows-overview.md#system-workflows-quote-understanding) section.
+For more information on the difference between the simple Quote Management Flow and the one with approvals, see [Configure Quote Workflows in the Back-Office](../../../system/workflows/system-workflows/quote-flows-overview.md#system-workflows-quote-understanding).
 
 To reach the workflow:
 

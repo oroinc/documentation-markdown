@@ -6,7 +6,7 @@
 You can configure SCIM synchronization [globally](../../../../configuration/system/general-setup/user.md#admin-configuration-user-settings) or per organization.
 
 #### NOTE
-The SCIM synchronization is available as of OroCommerce Enterprise version 6.1.6.
+The SCIM synchronization is available as of OroCommerce Enterprise version 6.1.7.
 
 The User Settings section enables you to configure the SCIM (System for Cross-domain Identity Management) protocol in the Oro application. This setup allows you to import and synchronize users from external identity systems, such as Microsoft Entra ID, into Oro. Once imported, these users can log in to Oro via [Microsoft 365 Single Sign-On](../../../../configuration/system/integrations/microsoft-settings/microsoft-single-sign-on.md#user-guide-integrations-microsoft-single-sign-on).
 
@@ -25,13 +25,16 @@ To set the user provisioning settings per specific organization:
 * **Enable SCIM** — Enable or disable the SCIM integration on the global level.
 * **Default Access to Organization Business Units** — Select the organizations and business units that will be automatically assigned to newly synchronized users.
 * **Default Roles** — Select the user roles that new users will receive upon synchronization.
+* **Extra fields handling** — Choose how the system should handle cases when the identity provider send extra fields. The available options are:
+  > * **Return error** (default) — If selected, and the identity provider sends extra fields to Oro, the system will return an error.
+  > * **Ignore extra fields** — If selected, and the identity provider sends extra fields to Oro, the system will ignore these fields.
 * **Empty name values handling** — Choose how the system should handle cases when the identity provider does not send first or last name values. The available options are:
-  > * **Leave as is and expect validation errors** — If selected, and the identity provider sends no first or last name to Oro, the system will return an exception without generating any replacement values.
+  > * **Leave as is and expect validation errors** — If selected, and the identity provider sends no first or last name to Oro, the system will return an error without generating any replacement values.
   > * **Generate based on user name** (default) — If selected, the first and last name values will be copied from the username field.
-  > * **Use random string** —  If selected, the first and last name values will be automatically generated as random strings.
+  > * **Use random string** — If selected, the first and last name values will be automatically generated as random strings.
 
 1. Click **Save settings** to apply the changes.
-2. Once enabled, you can configure Microsoft Entra provisioning service, following the steps described in the [related documentation](../../../../configuration/system/general-setup/user.md#microsoft-entra-provisioning-service).
+2. Once enabled, you can configure a user provisioning service, following the steps described in the [Configure Okta Provisioning Service](../../../../configuration/system/general-setup/user.md#okta-provisioning-service) or the [Configure Microsoft Entra Provisioning Service](../../../../configuration/system/general-setup/user.md#microsoft-entra-provisioning-service).
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->

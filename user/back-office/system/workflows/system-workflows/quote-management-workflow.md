@@ -4,12 +4,10 @@
 
 <!-- start_quote_management_flow -->
 
-## Overview
-
-Quote Management Flow (QBW) is a [system](../index.md#user-guide-system-workflow-management-system-custom) workflow that defines a sequence of [steps and transitions](../steps-transitions.md#user-guide-system-workflow-management-steps-transitions) that a quote can go through as a deal progresses.
+Quote Management Flow (QMF) is a [system](../index.md#user-guide-system-workflow-management-system-custom) workflow that defines a sequence of [steps and transitions](../steps-transitions.md#user-guide-system-workflow-management-steps-transitions) that a quote can go through as a deal progresses.
 
 #### NOTE
-The difference between the simple Quote Management Flow and the one with approval is covered in the [Understanding Quote Workflows](quote-flows-overview.md#system-workflows-quote-understanding) section.
+For more information on the difference between the simple Quote Management Flow and the one with approvals, see [Configure Quote Workflows in the Back-Office](quote-flows-overview.md#system-workflows-quote-understanding).
 
 To reach the workflow:
 
