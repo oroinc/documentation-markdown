@@ -259,6 +259,6 @@ console.log(node.__field);
 }
 ```
 
-See other methods of <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityBundle/Resources/public/js/app/services/entity-structure-data-provider.js" target="_blank">oroentity/js/app/services/entity-structure-data-provider</a>.
+See other methods of <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityBundle/Resources/public/js/app/services/entity-structure-data-provider.js" target="_blank">oroentity/js/app/services/entity-structure-data-provider</a>.
 
 <!-- Frontend -->

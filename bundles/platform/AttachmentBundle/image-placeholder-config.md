@@ -12,7 +12,7 @@ There are three services that enable you to set a placeholder for the image that
 
 ## Default Image Placeholder Provider
 
-Take a look at the <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/ProductBundle/Resources/config/image_placeholder.yml" target="_blank">image_placeholder.yml</a> file on Github.
+Take a look at the <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/ProductBundle/Resources/config/image_placeholder.yml" target="_blank">image_placeholder.yml</a> file on Github.
 
 Perform the following steps to override DefaultImagePlaceholderProvider that is located at the very bottom of this chain:
 

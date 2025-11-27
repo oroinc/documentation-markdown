@@ -2,6 +2,9 @@
 
 <a id="orocloud"></a>
 
+#### IMPORTANT
+You are viewing the upcoming documentation for OroCloud, scheduled for release later in 2025. For accurate and up-to-date information, please refer only to the documentation of <a href="https://doc.oroinc.com/cloud/" target="_blank">the latest LTS version</a>.
+
 # OroCloud Documentation
 
 Adoption of cloud platforms has skyrocketed due to their elasticity, security, ability to quickly and easily deploy, and, most importantly, their minimized total cost of ownership.

@@ -72,7 +72,7 @@ class OroCustomerBundleScopeRelations implements Migration, ScopeExtensionAwareI
 
 To extend a scope with a criterion that your bundle may provide:
 
-1. Create a class that implements <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ScopeBundle/Manager/ScopeCriteriaProviderInterface.php" target="_blank">ScopeCriteriaProviderInterface</a>,
+1. Create a class that implements <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ScopeBundle/Manager/ScopeCriteriaProviderInterface.php" target="_blank">ScopeCriteriaProviderInterface</a>,
    as shown in the following example:
 
 ```php

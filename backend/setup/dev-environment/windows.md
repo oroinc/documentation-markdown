@@ -56,13 +56,18 @@ This guide demonstrates how to set up [Docker and Symfony Server development sta
    curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
    sudo apt -y install nodejs
    ```
-3. Install Composer:
+3. Install PNPM 10 Using NPM:
    ```none
-   php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && php composer-setup.php
-   php -r "unlink('composer-setup.php');"
-   sudo mv composer.phar /usr/bin/composer
+   npm install -g pnpm@latest-10
    ```
-4. Install Symfony Server:
+4. Install Composer:
+
+> ```none
+> php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && php composer-setup.php
+> php -r "unlink('composer-setup.php');"
+> sudo mv composer.phar /usr/bin/composer
+> ```
+1. Install Symfony Server:
    ```none
    sudo apt -y install libnss3-tools
    wget https://get.symfony.com/cli/installer -O - | bash
@@ -76,7 +81,7 @@ This guide demonstrates how to set up [Docker and Symfony Server development sta
 
    An example of importing a certificate in Chrome:
    ![Opening certificates in Chrome settings](img/backend/setup/wsl/chrome-certificates-2.png)![Importing certificate to Chrome](img/backend/setup/wsl/import-certificate-3.png)
-5. Configure the network. WSL 2 changes the way networking is configured compared to WSL 1. You need to enable proxy of traffic to permit the traffic through the Windows firewall.
+2. Configure the network. WSL 2 changes the way networking is configured compared to WSL 1. You need to enable proxy of traffic to permit the traffic through the Windows firewall.
 
    Run in Ubuntu `ip addr | grep eth0` to see the IP address of the WSL 2 virtual machine.
    ![IP address of WSL 2 virtual machine](img/backend/setup/wsl/ip-addr-ubuntu.png)
@@ -85,7 +90,7 @@ This guide demonstrates how to set up [Docker and Symfony Server development sta
 
    Configure Windows Defender Firewall, as illustrated below:
    ![Configure Windows Defender Firewall step 1](img/backend/setup/wsl/firewall-1.png)![Configure Windows Defender Firewall step 2](img/backend/setup/wsl/firewall-2.png)![Configure Windows Defender Firewall step 3](img/backend/setup/wsl/firewall-3.png)![Configure Windows Defender Firewall step 4](img/backend/setup/wsl/firewall-4.png)![Configure Windows Defender Firewall step 5](img/backend/setup/wsl/firewall-5.png)![Configure Windows Defender Firewall step 6](img/backend/setup/wsl/firewall-6.png)
-6. Restart the terminal and the web browser to get them ready.
+3. Restart the terminal and the web browser to get them ready.
 
 ## What’s Next
 

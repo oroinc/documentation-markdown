@@ -130,9 +130,6 @@ You can issue more than one refund, but you cannot refund a total greater than t
 
 ## Stripe Integration Element (for Invoices)
 
-#### NOTE
-The Invoices functionality is available as of OroCommerce version 6.1.3.
-
 Stripe Integration Element is designed to handle invoice payments in the OroCommerce storefront, and is separate from the Stripe Legacy functionality.
 
 To connect this element to the storefront, you need to:

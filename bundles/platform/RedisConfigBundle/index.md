@@ -2,7 +2,7 @@
 
 # OroRedisConfigBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/RedisConfigBundle" target="_blank">OroRedisConfigBundle</a> provides configuration enhancements for Oro applications to enable usage of <a href="https://redis.io/" target="_blank">Redis</a> for caching.
+<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/RedisConfigBundle" target="_blank">OroRedisConfigBundle</a> provides configuration enhancements for Oro applications to enable usage of <a href="https://redis.io/" target="_blank">Redis</a> for caching.
 
 The bundle enables developers to set Redis parameters in the application configuration YAML files and after that automatically enables and configures Redis caching services for different types of application caches (Doctrine cache, file cache, etc.) based on these parameters.
 

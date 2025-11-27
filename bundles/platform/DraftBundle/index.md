@@ -2,7 +2,7 @@
 
 # OroDraftBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/DraftBundle" target="_blank">OroDraftBundle</a> allows to edit and publish a version of a Draftable entity record that will need more work in order to be finished.
+<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/DraftBundle" target="_blank">OroDraftBundle</a> allows to edit and publish a version of a Draftable entity record that will need more work in order to be finished.
 
 ## Related Documentation
 

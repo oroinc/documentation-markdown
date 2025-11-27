@@ -12,7 +12,7 @@ You can use the Subresource Integrity feature by specifying a cryptographic hash
 you’re telling the browser to fetch, in the value of the `integrity` attribute of a <script> element or a <link> element with rel=”stylesheet”, rel=”preload”.
 
 #### HINT
-This feature is disabled by default, to enable it, you must set the configuration option “oro_asset.subresource_integrity_enabled” to true.
+This feature is enabled by default, to disable it, you can set the configuration option “oro_asset.subresource_integrity_enabled” to false.
 
 Use the Twig `oro_integrity` function to add an `integrity` attribute with the appropriate hash for the asset, along with the \`\` crossorigin=”anonymous”\`\` attribute.
 

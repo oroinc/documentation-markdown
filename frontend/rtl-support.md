@@ -21,7 +21,7 @@ To enable RTL, select the **Enable RTL Mode** checkbox when creating a new local
 Layout and back-office themes configuration have the `rtl_support` option that has to be enabled. It affects the style-building process. An additional style file is created with the rtl annex in the name (`*.rtl.css`).
 
 * [Layout theming definition](storefront/theming.md#dev-doc-frontend-layouts-theming-definition)
-* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ThemeBundle#adding-a-theme-using-configyml" target="_blank">Admin theme configuration</a>
+* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ThemeBundle#adding-a-theme-using-configyml" target="_blank">Admin theme configuration</a>
 
 Out-of-the-box, the `Default` layout theme and `Oro` back-office theme have RTL support enabled.
 

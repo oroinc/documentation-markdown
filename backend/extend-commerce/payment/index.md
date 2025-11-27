@@ -1272,7 +1272,7 @@ Pay attention to the lines:
 
 This is where you define which transaction types are associated with the payment method. To keep it simple, for Collect On Delivery a single transaction is defined. Thus, it will work the following way: when a user submits an order, the “purchase” transaction takes place, and the order status becomes “purchased”.
 
-Check <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/PaymentBundle/Method/PaymentMethodInterface.php" target="_blank">PaymentMethodInterface</a> for more information on other predefined transactions.
+Check <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/PaymentBundle/Method/PaymentMethodInterface.php" target="_blank">PaymentMethodInterface</a> for more information on other predefined transactions.
 
 #### NOTE
 You can additionally implement the OroBundlePaymentBundleMethodPaymentMethodGroupAwareInterface to restrict the payment method to a specific group of payment methods. You can get the list of available payment methods in a specific group via OroBundlePaymentBundleMethodProviderPaymentMethodGroupAwareProvider.

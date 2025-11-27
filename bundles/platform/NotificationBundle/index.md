@@ -2,7 +2,7 @@
 
 # OroNotificationBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/NotificationBundle" target="_blank">OroNotificationBundle</a> extends the OroEmailBundle capabilities and enables the email notification feature in Oro applications. It provides the UI and CLI tool to send and manage email notifications.
+<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/NotificationBundle" target="_blank">OroNotificationBundle</a> extends the OroEmailBundle capabilities and enables the email notification feature in Oro applications. It provides the UI and CLI tool to send and manage email notifications.
 
 ## Console Commands
 
@@ -47,7 +47,7 @@ Make sure that the consumer is running.
 
 ## Extend Additional Associations
 
-To add new associations to Additional Associations group, create a class that implements <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/NotificationBundle/Provider/AdditionalEmailAssociationProviderInterface.php" target="_blank">AdditionalEmailAssociationProviderInterface</a> and registered in the DI container with the oro_notification.additional_email_association_provider tag.
+To add new associations to Additional Associations group, create a class that implements <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/NotificationBundle/Provider/AdditionalEmailAssociationProviderInterface.php" target="_blank">AdditionalEmailAssociationProviderInterface</a> and registered in the DI container with the oro_notification.additional_email_association_provider tag.
 
 An example:
 

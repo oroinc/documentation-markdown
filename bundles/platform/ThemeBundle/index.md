@@ -2,7 +2,7 @@
 
 # OroThemeBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ThemeBundle" target="_blank">OroThemeBundle</a> provides the basic theme support with the ability to change the original UI applying the extra CSS/SCSS files that are grouped into themes.
+<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ThemeBundle" target="_blank">OroThemeBundle</a> provides the basic theme support with the ability to change the original UI applying the extra CSS/SCSS files that are grouped into themes.
 
 Basic statements:
 

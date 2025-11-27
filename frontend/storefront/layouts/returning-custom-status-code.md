@@ -9,12 +9,8 @@ content as the first argument and the status code as the second.
 Study the example below:
 
 ```php
- /**
- * #[Route("/sample_not_found_page_code")
- *
- * @return Response
- */
-public function sampleNotFoundCodeAction()
+#[Route(path: '/sample/not-found', name: 'sample_not_found_page_code')]
+public function sampleNotFoundCodeAction(): Response
 {
     $contextParams = ['some_context_variable' => 'value'];
     $content = $this->get('layout')->render($contextParams, ['some_context_variable']);

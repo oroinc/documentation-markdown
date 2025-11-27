@@ -2,7 +2,7 @@
 
 # OroLocaleBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/LocaleBundle" target="_blank">OroLocaleBundle</a> enables the locale management and a data localization support.
+<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/LocaleBundle" target="_blank">OroLocaleBundle</a> enables the locale management and a data localization support.
 
 This bundle provides the next localization tools:
 

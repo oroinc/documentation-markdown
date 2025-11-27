@@ -2,7 +2,7 @@
 
 # OroMessageQueueBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/MessageQueueBundle" target="_blank">OroMessageQueueBundle</a> incorporates the OroMessageQueue component into OroPlatform and thereby provides message queue processing capabilities for all application components.
+<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/MessageQueueBundle" target="_blank">OroMessageQueueBundle</a> incorporates the OroMessageQueue component into OroPlatform and thereby provides message queue processing capabilities for all application components.
 
 ## Related Documentation
 

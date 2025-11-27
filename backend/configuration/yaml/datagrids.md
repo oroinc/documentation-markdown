@@ -1235,7 +1235,7 @@ datagrids:
 ```
 
 #### NOTE
-By default, all datagrids that use ORM datasource are marked by the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/DoctrineUtils/README.md#preciseorderbywalker-class" target="_blank">HINT_PRECISE_ORDER_BY</a> query hint. This guarantees that rows are sorted the same way independently of the state of the SQL server and the values of OFFSET and LIMIT clauses.
+By default, all datagrids that use ORM datasource are marked by the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/DoctrineUtils/README.md#preciseorderbywalker-class" target="_blank">HINT_PRECISE_ORDER_BY</a> query hint. This guarantees that rows are sorted the same way independently of the state of the SQL server and the values of OFFSET and LIMIT clauses.
 
 If you need to disable this behavior for your datagrid, use the following configuration:
 

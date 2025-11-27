@@ -27,7 +27,7 @@ Each layout block is rendered with a **Twig block**, as in:
 
 Twig blocks are organized to Twig files named **block themes**.
 
-For instance, <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/ProductBundle/Resources/views/layouts/default/oro_product_frontend_product_view/layout.html.twig" target="_blank">this block theme</a> is used as a theme for the product display page.
+For instance, <a href="https://github.com/oroinc/orocommerce/blob/master/src/Oro/Bundle/ProductBundle/Resources/views/layouts/default/oro_product_frontend_product_view/layout.html.twig" target="_blank">this block theme</a> is used as a theme for the product display page.
 
 <a id="dev-doc-frontend-twig-block-names"></a>
 

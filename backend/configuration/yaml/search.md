@@ -149,7 +149,7 @@ passed to the translator.
 **type**: `string` **default**: normal
 
 The entity behavior for inheritance. For possible values and what they mean, have a look at the
-constants of the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/SearchBundle/Query/Mode.php" target="_blank">Mode</a> class.
+constants of the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/SearchBundle/Query/Mode.php" target="_blank">Mode</a> class.
 
 <a id="reference-format-search-route-name"></a>
 

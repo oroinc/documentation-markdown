@@ -2,7 +2,7 @@
 
 # Processors
 
-A processor is the main element that implements the business logic of the API. Each processor must implement <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/ChainProcessor/ProcessorInterface.php" target="_blank">ProcessorInterface</a> and be registered in the dependency injection container using the `oro.api.processor` tag.
+A processor is the main element that implements the business logic of the API. Each processor must implement <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/ChainProcessor/ProcessorInterface.php" target="_blank">ProcessorInterface</a> and be registered in the dependency injection container using the `oro.api.processor` tag.
 
 Please see the [actions](actions.md#web-api-actions) and [context](actions.md#web-api-context-class) sections for more details about where and how processors are used.
 
@@ -12,7 +12,7 @@ You can also use the [oro:api:debug](commands.md#oroapidebug) command to see all
 
 ## Creating a Processor
 
-To create a new processor, create a class that implements <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/ChainProcessor/ProcessorInterface.php" target="_blank">ProcessorInterface</a> and <a href="https://symfony.com/doc/6.4/service_container/tags.html" target="_blank">tag</a> it with the `oro.api.processor` name.
+To create a new processor, create a class that implements <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/ChainProcessor/ProcessorInterface.php" target="_blank">ProcessorInterface</a> and <a href="https://symfony.com/doc/6.4/service_container/tags.html" target="_blank">tag</a> it with the `oro.api.processor` name.
 
 ```php
 namespace Acme\Bundle\DemoBundle\Api\Processor;
@@ -47,10 +47,10 @@ services:
 Please note that:
 
 * The name of a processor usually starts with a verb, and the `Processor` suffix is not used.
-* The `priority` attribute is used to control the order in which processors are executed. The higher the priority, the earlier a processor is executed. The default value is 0. The possible range is from -255 to 255. But for some types of processors, the range can be different. For details, see the documentation of the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/ChainProcessor" target="_blank">ChainProcessor</a> component. If several processors have the same priority, the order they are executed is unpredictable.
+* The `priority` attribute is used to control the order in which processors are executed. The higher the priority, the earlier a processor is executed. The default value is 0. The possible range is from -255 to 255. But for some types of processors, the range can be different. For details, see the documentation of the <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Component/ChainProcessor" target="_blank">ChainProcessor</a> component. If several processors have the same priority, the order they are executed is unpredictable.
 * Each processor should check whether its work is already done because there may be a processor with a higher priority that does the same thing in a different way. For example, such processors can be created for customization purposes.
 * Prefer [Processor Conditions]() over a conditional logic inside a processor to avoid loading unnecessary processors.
-* As you can create API resources for any type of object (not only ORM entities), it is always a good idea to check whether a processor applies to ORM entities. This check is swift and helps avoid possible logic issues and performance impact. Please use the `oro_api.doctrine_helper` service to get an instance of <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Util/DoctrineHelper.php" target="_blank">Oro\\Bundle\\ApiBundle\\Util\\DoctrineHelper</a>, as this class is optimized for use in the API stack.
+* As you can create API resources for any type of object (not only ORM entities), it is always a good idea to check whether a processor applies to ORM entities. This check is swift and helps avoid possible logic issues and performance impact. Please use the `oro_api.doctrine_helper` service to get an instance of <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Util/DoctrineHelper.php" target="_blank">Oro\\Bundle\\ApiBundle\\Util\\DoctrineHelper</a>, as this class is optimized for use in the API stack.
 
 An example:
 
@@ -69,13 +69,13 @@ public function process(ContextInterface $context): void
 }
 ```
 
-You can find a list of all existing processors in the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Processor" target="_blank">Processor</a> directory.
+You can find a list of all existing processors in the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Processor" target="_blank">Processor</a> directory.
 
 <a id="processor-conditions"></a>
 
 ## Processor Conditions
 
-When you register a processor in the dependency injection container, you can specify conditions when the processor should be executed. Use the attributes of the `oro.api.processor` tag to specify conditions. Any context property which is scalar, array, or object (instance of the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/ChainProcessor/ToArrayInterface.php" target="_blank">ToArrayInterface</a> ) can be used in the conditions.
+When you register a processor in the dependency injection container, you can specify conditions when the processor should be executed. Use the attributes of the `oro.api.processor` tag to specify conditions. Any context property which is scalar, array, or object (instance of the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/ChainProcessor/ToArrayInterface.php" target="_blank">ToArrayInterface</a> ) can be used in the conditions.
 
 For example, a simple condition is used to filter processors by the action:
 
@@ -93,11 +93,11 @@ Conditions provide a simple way to specify which processors are required to acco
 
 This allows building conditions based on any attribute from the context.
 
-Condition types depend on the registered <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/ChainProcessor/README.md#applicable-checkers" target="_blank">Applicable Checkers</a>. By default, the following checkers are registered:
+Condition types depend on the registered <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/ChainProcessor/README.md#applicable-checkers" target="_blank">Applicable Checkers</a>. By default, the following checkers are registered:
 
-- <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Processor/MatchApplicableChecker.php" target="_blank">MatchApplicableChecker</a>
+- <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Processor/MatchApplicableChecker.php" target="_blank">MatchApplicableChecker</a>
 
-For performance reasons, the functionality of <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/ChainProcessor/SkipGroupApplicableChecker.php" target="_blank">SkipGroupApplicableChecker</a> and <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Component/ChainProcessor/GroupRangeApplicableChecker.php" target="_blank">GroupRangeApplicableChecker</a> was implemented as part of <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Processor/OptimizedProcessorIterator.php" target="_blank">OptimizedProcessorIterator</a>.
+For performance reasons, the functionality of <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/ChainProcessor/SkipGroupApplicableChecker.php" target="_blank">SkipGroupApplicableChecker</a> and <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Component/ChainProcessor/GroupRangeApplicableChecker.php" target="_blank">GroupRangeApplicableChecker</a> was implemented as part of <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Processor/OptimizedProcessorIterator.php" target="_blank">OptimizedProcessorIterator</a>.
 
 ## Examples of Processor Conditions
 
@@ -223,7 +223,7 @@ services:
             - { name: oro.api.processor, action: get_list, group: initialize, someAttribute: '!exists' }
 ```
 
-For more examples, see the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Resources/config" target="_blank">configuration of existing processors</a>. See `processors.*.yml` files.
+For more examples, see the <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ApiBundle/Resources/config" target="_blank">configuration of existing processors</a>. See `processors.*.yml` files.
 
 ## Error Handling
 
@@ -248,9 +248,9 @@ api:
 ```
 
 If an error occurs in a processor, the main execution flow is interrupted, and the control is passed to a group of processors called **normalize_result**. This is true for all types of errors. But there are some exceptions to this rule for the errors that occur in any processor of the **normalize_result** group. The execution flow is interrupted only if any of these processors raises an exception. However, these processors can safely add new errors into the
-[context](actions.md#web-api-context-class), and the execution of the next processors will not be interrupted. For implementation details, see <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Processor/RequestActionProcessor.php" target="_blank">RequestActionProcessor</a>.
+[context](actions.md#web-api-context-class), and the execution of the next processors will not be interrupted. For implementation details, see <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Processor/RequestActionProcessor.php" target="_blank">RequestActionProcessor</a>.
 
-An error is represented by the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Model/Error.php" target="_blank">Error</a> class. Additionally, you can use the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Model/ErrorSource.php" target="_blank">ErrorSource</a> class to specify a source of an error, e.g., the name of a URI parameter or the path to a property in the data. These classes have the following methods:
+An error is represented by the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Model/Error.php" target="_blank">Error</a> class. Additionally, you can use the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Model/ErrorSource.php" target="_blank">ErrorSource</a> class to specify a source of an error, e.g., the name of a URI parameter or the path to a property in the data. These classes have the following methods:
 
 **Error** class
 
@@ -264,11 +264,11 @@ An error is represented by the <a href="https://github.com/oroinc/platform/tree/
 - **setTitle(title)** - Sets a short, human-readable summary of the problem.
 - **getDetail()** - Retrieves a human-readable explanation specific to this occurrence of the problem.
 - **setDetail(detail)** - Sets a human-readable explanation specific to this occurrence of the problem.
-- **getSource()** - Retrieves the instance of <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Model/ErrorSource.php" target="_blank">ErrorSource</a> that represents a source of this problem.
-- **setSource(source)** - Sets the instance of <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Model/ErrorSource.php" target="_blank">ErrorSource</a> that represents a source of this occurrence of the problem.
+- **getSource()** - Retrieves the instance of <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Model/ErrorSource.php" target="_blank">ErrorSource</a> that represents a source of this problem.
+- **setSource(source)** - Sets the instance of <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Model/ErrorSource.php" target="_blank">ErrorSource</a> that represents a source of this occurrence of the problem.
 - **getInnerException()** - Retrieves an exception object that caused this occurrence of the problem.
 - **setInnerException(exception)** - Sets an exception object that caused this occurrence of the problem.
-- **trans(translator)** - Translates all attributes that are represented by the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Model/Label.php" target="_blank">Label</a> object.
+- **trans(translator)** - Translates all attributes that are represented by the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Model/Label.php" target="_blank">Label</a> object.
 
 **ErrorSource** class
 
@@ -352,7 +352,7 @@ class LoadEntityByEntitySerializer implements ProcessorInterface
 }
 ```
 
-For security errors, throw `Symfony\Component\Security\Core\Exception\AccessDeniedException`). The raised exception will be converted to the **Error** object automatically by <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Processor/NormalizeResultActionProcessor.php" target="_blank">NormalizeResultActionProcessor</a>. The services called exception text extractors automatically fill the meaningful properties of the error objects (like HTTP status code, title, and description) based on the underlying exception object. The default implementation of such extractor is <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Request/ExceptionTextExtractor.php" target="_blank">ExceptionTextExtractor</a>. To add a new extractor, create a class that implements <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Request/ExceptionTextExtractorInterface.php" target="_blank">ExceptionTextExtractorInterface</a> and tag it with the `oro.api.exception_text_extractor` in the dependency injection container.
+For security errors, throw `Symfony\Component\Security\Core\Exception\AccessDeniedException`). The raised exception will be converted to the **Error** object automatically by <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Processor/NormalizeResultActionProcessor.php" target="_blank">NormalizeResultActionProcessor</a>. The services called exception text extractors automatically fill the meaningful properties of the error objects (like HTTP status code, title, and description) based on the underlying exception object. The default implementation of such extractor is <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Request/ExceptionTextExtractor.php" target="_blank">ExceptionTextExtractor</a>. To add a new extractor, create a class that implements <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Request/ExceptionTextExtractorInterface.php" target="_blank">ExceptionTextExtractorInterface</a> and tag it with the `oro.api.exception_text_extractor` in the dependency injection container.
 
 Another way to add an **Error** object to the context is helpful for validation errors as it allows you to add several errors:
 
@@ -390,7 +390,7 @@ class ValidateEntityIdExists implements ProcessorInterface
 
 Please note that the default HTTP status code for validation errors is `400 Bad Request`. If necessary, you can set another HTTP status code, e.g., by passing it as the third argument of the `Error::createValidationError` method.
 
-The <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Request/Constraint.php" target="_blank">Constraint</a> class contains titles for different kinds of validation errors. All titles end with the word **constraint**. We recommend using the same template when adding custom types.
+The <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Request/Constraint.php" target="_blank">Constraint</a> class contains titles for different kinds of validation errors. All titles end with the word **constraint**. We recommend using the same template when adding custom types.
 
 All API logs are written into the API channel. To inject the API logger directly to your processors, use the <a href="https://symfony.com/doc/6.4/reference/dic_tags.html#monolog-logger" target="_blank">common way</a>. For example:
 

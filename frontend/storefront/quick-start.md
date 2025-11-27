@@ -172,7 +172,7 @@ stylebook_styles:
 #### NOTE
 Consider declaring separate CSS files for each output to ensure that branding elements such as colors and typography are consistently applied across your entire theme if it is based on the “default” one.
 
-* Run the `npm run build -- --env theme=demo` command to process and combine SCSS files in  `demo`.
+* Run the `pnpm run build -- --env theme=demo` command to process and combine SCSS files in  `demo`.
 * You can use SCSS source maps to find style definitions in a browser and [Oro Frontend Stylebook](css/frontend-stylebook.md#dev-doc-frontend-css-frontend-stylebook) to check how updated styles affect the UI elements.
 
 ## Change Existing Pages Structure

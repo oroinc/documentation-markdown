@@ -85,6 +85,6 @@ The implementation approach for all these types is identical: decoupled frontend
 * [OroImportExportBundle](../../bundles/platform/ImportExportBundle/index.md#bundle-docs-platform-import-export-bundle)
 * [Import/Export Developer Guide](../../backend/integrations/import-export/index.md#dev-integrations-import-export)
 * [Data Import Concept Guide](../concept-guides/administration/data-import/index.md#concept-guide-data-import)
-* <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/IntegrationBundle/" target="_blank">OroIntegrationBundle</a>
+* <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/IntegrationBundle/" target="_blank">OroIntegrationBundle</a>
 
 <!-- Frontend -->

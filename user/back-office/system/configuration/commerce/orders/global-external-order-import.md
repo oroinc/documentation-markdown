@@ -2,9 +2,6 @@
 
 # Configure Global External Order Import Settings
 
-#### NOTE
-The feature is available as of OroCommerce version 6.1.2.
-
 #### HINT
 The External Order Import feature can be enabled globally and [per organization](../../../user-management/organizations/org-configuration/commerce/orders/organization-external-order-import.md#configuration-commerce-orders-external-order-import-org).
 

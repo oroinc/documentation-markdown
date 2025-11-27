@@ -2,6 +2,9 @@
 
 <a id="cloud-architecture"></a>
 
+#### IMPORTANT
+You are viewing the upcoming documentation for OroCloud, scheduled for release later in 2025. For accurate and up-to-date information, please refer only to the documentation of <a href="https://doc.oroinc.com/cloud/" target="_blank">the latest LTS version</a>.
+
 # Architecture
 
 ## IaaS Platforms
@@ -110,7 +113,7 @@ Oro maintains a regular backup process which covers both database and media cont
 * Weekly backups. RPO - Sunday Oro stores weekly backups for the last 4 weeks.
 * Monthly backups. RPO - last Sunday of the month. Oro stores monthly backups for the last 12 month.
 
-You can get the list of available backups and restore to the specific recovery point using [maintenance tool commands](../maintenance/basic-use.md#orocloud-maintenance-use).
+You can get the list of available backups and restore to the specific recovery point using [maintenance tool commands](../maintenance/backups.md#orocloud-maintenance-use).
 
 ### Encryption
 

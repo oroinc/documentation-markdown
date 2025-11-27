@@ -32,7 +32,7 @@ datagrids:
 
 Implement and register a writer for the new export format. To register a writer in the dependency container, use the following naming convention: `oro_importexport.writer.echo.[format]`. So, a writer for PDF should be registered as `oro_importexport.writer.echo.pdf`.
 
-You can use <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ImportExportBundle/Writer/CsvEchoWriter.php" target="_blank">existing CSV writer</a> as an example for your writer.
+You can use <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ImportExportBundle/Writer/CsvEchoWriter.php" target="_blank">existing CSV writer</a> as an example for your writer.
 
 The configuration can also influence performance by changing the value of the grid export page size in the configuration. This will allow you to change the number of queries for the database. But keep in mind that increasing the batch size increases memory consumption.
 
