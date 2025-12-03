@@ -2,9 +2,10 @@
 
 # MultiUseResourceManager ⇐ BaseClass
 
-Allows to create/remove resource that could be used by multiple holders.
+The MultiUseResourceManager provides a mechanism to create and manage resources that can be shared among multiple holders.
+It ensures that the resource is created when at least one holder exists and disposed only when all holders release it.
 
-Use case:
+## Use Case
 
 ```javascript
 var backdropManager = new MultiUseResourceManager({
@@ -18,85 +19,93 @@ var backdropManager = new MultiUseResourceManager({
     }
 });
 
-// 1. case with Ids
+// 1. Using IDs
 var holderId = backdropManager.hold();
 // then somewhere
 backdropManager.release(holderId);
 
-// 2. case with holder object
+// 2. Using a holder object
 backdropManager.hold(this);
-// then somewhere, please note that link to the same object should be provided
+// then somewhere, note that the same object reference must be provided
 backdropManager.release(this);
 
-// 2. case with holder identifier
+// 3. Using a holder identifier
 backdropManager.hold(this.cid);
-// then somewhere, please note that link to the same object should be provided
+// then somewhere, note that the same identifier must be provided
 backdropManager.release(this.cid);
 ```
 
 **Extends:** [BaseClass](base-class.md#bundle-docs-platform-ui-bundle-baseclass)
 
-## multiUseResourceManager.counter : number
+## Properties
 
-Holders counter
+### multiUseResourceManager.counter : number
+
+Holders counter tracking the number of current resource holders.
 
 **Kind**: instance property of MultiUseResourceManager
 **Access:** protected
 
-## multiUseResourceManager.isCreated : boolean
+### multiUseResourceManager.isCreated : boolean
 
-True if resource is created
-
-**Kind**: instance property of MultiUseResourceManager
-
-## multiUseResourceManager.holders : Array
-
-Array of ids of current resource holders
+Indicates whether the resource has been created.
 
 **Kind**: instance property of MultiUseResourceManager
 
-multiUseResourceManager.constructor()
+### multiUseResourceManager.holders : Array
+
+Array containing the identifiers of current resource holders.
+
+**Kind**: instance property of MultiUseResourceManager
+
+## Constructor
+
+### multiUseResourceManager.constructor()
 
 **Kind**: instance method of MultiUseResourceManager
 
-## multiUseResourceManager.hold(holder) ⇒ \*
+## Methods
 
-Holds resource
+### multiUseResourceManager.hold(holder) ⇒ \*
 
-**Kind**: instance method of MultiUseResourceManager
-**Returns**: \* - holder identifier
-
-| Param   | Type   | Description       |
-|---------|--------|-------------------|
-| holder  | \*     | holder identifier |
-
-## multiUseResourceManager.release(id)
-
-Releases resource
+Registers a holder and creates the resource if needed.
 
 **Kind**: instance method of MultiUseResourceManager
+**Returns**: \* - the holder identifier
 
-| Param   | Type   | Description       |
-|---------|--------|-------------------|
-| id      | \*     | holder identifier |
+| Param   | Type   | Description                                         |
+|---------|--------|-----------------------------------------------------|
+| holder  | \*     | Identifier of the holder (object, ID, or reference) |
 
-## multiUseResourceManager.isReleased(id) ⇒ boolean
+### multiUseResourceManager.release(id)
 
-Returns true if resource holder has been already released
+Releases a holder and disposes the resource if no holders remain.
 
 **Kind**: instance method of MultiUseResourceManager
 
-| Param   | Type   | Description       |
-|---------|--------|-------------------|
-| id      | \*     | holder identifier |
+| Param   | Type   | Description                         |
+|---------|--------|-------------------------------------|
+| id      | \*     | Identifier of the holder to release |
 
-## multiUseResourceManager.checkState()
+### multiUseResourceManager.isReleased(id) ⇒ boolean
 
-Check state, creates or disposes resource if required
+Returns true if the specified holder has already released the resource.
+
+**Kind**: instance method of MultiUseResourceManager
+
+| Param   | Type   | Description              |
+|---------|--------|--------------------------|
+| id      | \*     | Identifier of the holder |
+
+### multiUseResourceManager.checkState()
+
+Checks the current state of the resource, creating or disposing it if necessary.
 
 **Kind**: instance method of MultiUseResourceManager
 **Access:** protected
 
-## multiUseResourceManager.dispose()
+### multiUseResourceManager.dispose()
+
+Forces disposal of the resource and clears all holders.
 
 **Kind**: instance method of MultiUseResourceManager

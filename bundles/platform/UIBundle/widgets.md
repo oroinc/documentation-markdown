@@ -2,11 +2,11 @@
 
 # Widgets
 
-**Widget** is a UI element that is placed inside a widget container. Most widgets are backend actions.
+A **widget** is a UI element placed inside a widget container. Most widgets represent backend actions.
 
-Examples of widgets are: contact information, opportunity information, address book, add address form, import form, workflow transitions, etc.
+Examples of widgets include: contact information, opportunity information, address book, add address form, import form, workflow transitions, and more.
 
-**Widget container** is part of UI where widgets are shown. A Widget Container can show different types of widgets.
+**Widget container** is a part of the UI where widgets are displayed. A widget container can host different types of widgets.
 
 Examples of implemented BAP widget containers:
 
@@ -16,58 +16,68 @@ Examples of implemented BAP widget containers:
 
 ## Goals
 
-Widgets are created to give developers the ability to use one content inside different containers on frontend.
+Widgets are designed to allow developers to reuse content across different containers on the frontend.
 
-HTML can be used as content (a fragment of a page or the whole page) generated separately by the method of a controller.
+The content of a widget can be HTML (either a fragment of a page or an entire page) generated separately by a controller method.
 
-System may have different containers: dialog windows, blocks, etc. Also widgets provides additional functionality around
-widget content: remote content loading, widget actions handling, embedded forms processing. Widget manager adds the ability of
-widget-to-widget, widget-to-page and page-to-widget interaction based on Backbone events and direct usage of widgets API.
-Each widget on page has a unique widget identifier.
+The system can have various types of containers, such as dialog windows or content blocks. Widgets also provide additional functionality around their content, including:
+
+- Remote content loading
+- Widget action handling
+- Embedded forms processing
+
+The widget manager enables interaction between widgets and pages through Backbone events and direct use of the widgets API, supporting:
+
+- Widget-to-widget interaction
+- Widget-to-page interaction
+- Page-to-widget interaction
+
+Each widget on a page has a unique widget identifier.
 
 ### JS Modules Services
 
-> - **oroui/js/widget-manager** - Widget manager
-> - **oro/block-widget** - Block widget
-> - **oro/buttons-widget** - Buttons widget
-> - **oro/dialog-widget** - Dialog widget
-> - **oroui/js/widget/abstract-widget** - Abstract widget, cannot be used standalone
+- **oroui/js/widget-manager** - Widget manager
+- **oro/block-widget** - Block widget
+- **oro/buttons-widget** - Buttons widget
+- **oro/dialog-widget** - Dialog widget
+- **oroui/js/widget/abstract-widget** - Abstract widget, cannot be used standalone
 
 ## Widgets
 
-Widget is any controller/action or static content rendered inside the widget container.
-#[Template] attribute supports the `_widgetContainer` request variable, based on which an appropriate template is chosen by the following rule:
+A **widget** is any controller/action or static content rendered inside a widget container.
 
-`<widgetContainer>/<action>.<format>.<templateEngine> (dialog/example.html.twig)`.
+The #[Template] attribute supports the `_widgetContainer` request variable, which determines the template to use according to the following rules:
 
-When no template for a specific container is found, the `widget/<action>.<format>.<templateEngine> (widget/example.html.twig)` template is rendered.
+1. If a template exists for the specified container, it is selected using the pattern: `<widgetContainer>/<action>.<format>.<templateEngine>`.
+   Example: `dialog/example.html.twig`
+2. If no container-specific template is found, the default widget template is used: `widget/<action>.<format>.<templateEngine>`.
+   Example: `widget/example.html.twig`
+3. If no template is found at all, the default action template is rendered:
+   Example: `example.html.twig`
 
-If no such template is found, then the default template for action is rendered (example.html.twig).
-Widgets may be rendered with twig function `oro_widget_render($options)`.
+Widgets can be rendered in Twig using the function: `oro_widget_render($options)`.
 
-Twig template for the widget content must have a `div` element with class `widget-content` as its root element for the widget to work properly with other elements on the page:
-
-`<div class="widget-content">`
+For proper integration with other page elements, the Twig template for a widget must have a root div element with the class `widget-content`: `<div class="widget-content">`
 
 ## Frontend Widget Container
 
 ### Responsibilities
 
-A widget container is responsible for displaying a widget, and loading widget data from the server. Widget containers are Backbone views,
-so you can use all Backbone views features, like events. You need to place widget content inside element with class **widget-content**.
-Widget container adds AJAX handling for included form. A widget container provides the functionality for actions with different action areas.
-All form actions are moved to the **adopted** actions section if they are placed in an element with class **widget-actions**.
+A **widget container** is responsible for displaying a widget and loading its data from the server.
+Widget containers are implemented as Backbone views, which means you can leverage all standard Backbone view features, including events.
 
-Widget container adds `_widgetContainer=<widgetContainerType>&_wid=<widgetIdentifier>` to all requests.
+The widget content must be placed inside an element with the class **widget-content**. The container also handles AJAX requests for any included forms and provides functionality for different action areas. All form actions placed inside an element with the class **widget-actions** are moved to the **adopted actions** section automatically.
 
-* **\_widgetContainer** variable is used to determine the proper template for the current container;
-* **\_wid** variable can be used by widget to get an instance of a widget container from the widget manager.
+The container adds the following parameters to all requests:
+
+* `_widgetContainer` – used to determine the proper template for the current container
+* `_wid` – allows the widget to retrieve an instance of its container from the widget manager
 
 ### Containers
 
-- **Dialog window** showns widget content in a dialog window
-- **Button** shows only included content without a title or actions
-- **Block** displays embedded widget content on a page
+* **Dialog window** – displays widget content in a dialog window
+* **Button** – displays the included content only, without a title or actions
+* **Block** – embeds widget content directly on the page
 
 ### API
 
@@ -258,13 +268,13 @@ General implementation of show logic.
 
 ### Responsibilities
 
-Widget manager is a mediator that allow different parts of system, including widgets themselves, interact with widget
-container instances by unique widget identifier or by widget alias. Widget manager contains registry of all widget
-container instances present on page.  Widget instance registering/removing performed automatically on widget_initialize/widget_remove events.
+The **widget manager** acts as a mediator that enables different parts of the system—including widgets themselves—to interact with widget container instances using either a unique widget identifier or a widget alias.
+
+It maintains a registry of all widget container instances currently present on the page. Registration and removal of widget instances are handled automatically through the `widget_initialize` and `widget_remove` events.
 
 ### Interaction Example
 
-Let’s assume that a widget needs to trigger a *formSave* event when a form is successfully saved.
+This example demonstrates how a widget can trigger a *formSave* event when a form is successfully submitted.
 
 **Page content**
 
@@ -274,7 +284,8 @@ Let’s assume that a widget needs to trigger a *formSave* event when a form is 
 })></div>
 ```
 
-Create a js module that creates widget `'your/widget/creator'` as shown in the example below; please remember to add this module to the list of `dynamic-imports` in `jsmodules.yml`.
+A JavaScript module must be created to initialize the widget `'your/widget/creator'` as shown below.
+Remember to add this module to the `dynamic-imports` section in `jsmodules.yml`.
 
 ```javascript
 import widgetManager from 'oroui/js/widget-manager';
@@ -299,7 +310,7 @@ export default function(options) {
 ```php
 <div class="widget-content">
     <form action="/my-poll-widget" method="post">
-        <label for="variant">Are you satisfied</label>
+        <label for="variant">Are you satisfied?</label>
         <select name="variant" id="variant">
             <option value="yes">Yes</option>
             <option value="no">No</option>
@@ -319,7 +330,8 @@ export default function(options) {
 </div>
 ```
 
-Create a js module with the handler definition `'your/widget/handler'` as shown in the example below; please remember to add this module to the list of 1\`dynamic-imports1\` in 1jsmodules.yml1.
+Next, create a JavaScript module for the handler `'your/widget/handler'` as shown below.
+Remember to add this module to the `dynamic-imports` section in `jsmodules.yml`.
 
 ```javascript
 import widgetManager from 'oroui/js/widget-manager';
@@ -337,7 +349,7 @@ export default function(options) {
 
 Global events triggered on mediator:
 
-- **widget_registration:wid:** - triggered when widget instance added
+* **widget_registration:wid:** - triggered when widget instance added
 
 #### widget-manager.js Methods
 
@@ -377,15 +389,18 @@ Parameters:
 
 ### Widget Context Provider
 
-Widget Context Provider provides the possibility to know the current context of the application during rendering. It enables you to customize the application based on the current context.
-It is registered as DI service named oro_ui.provider.widget_context1. You can inject it as a global variable for twig templates.
+The **Widget Context Provider** allows you to determine the current context of the application during rendering.
+It enables customization of the application behavior based on the active widget context.
+
+This provider is registered as a DI service with the name `oro_ui.provider.widget_context`.
+It can also be injected as a global variable in Twig templates.
 
 ### API
 
 #### isActive
 
-Returns whether current **widget context** is in active state.
+Returns whether the current **widget context** is active (TRUE) or not (FALSE).
 
 #### getWid
 
-Returns unique widget identifier if **widget context** is active or FALSE otherwise.
+Returns the unique widget identifier.

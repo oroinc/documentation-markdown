@@ -17,13 +17,13 @@ To configure your current storefront theme:
 1. In the **General** section, configure the following options:
    ![General section of the theme configuration](user/img/system/theme-configuration/theme-configuration-general.png)
    * **Owner** — Select the owner responsible for the theme configuration.
-   * **Theme** — Select the storefront theme from the list. The default theme starting from version 6.1 LTS is *Refreshing Teal*. However, if you select one of your backup themes from the previous OroCommerce LTS versions, the settings under the Configuration menu below will become disabled. You can still configure them under the [theme system configuration](../configuration/commerce/design/theme-global.md#configuration-commerce-design-theme) settings.
+   * **Theme** — Select the storefront theme from the list. The default themes starting from version 6.1 LTS are *Refreshing Teal* and *Golden Carbon*. However, if you select one of your backup themes from the previous OroCommerce LTS versions, the settings under the Configuration menu below will become disabled. You can still configure them under the [theme system configuration](../configuration/commerce/design/theme-global.md#configuration-commerce-design-theme) settings.
 
    > ![Theme configuration details when the default 5.0 theme is selected](user/img/system/theme-configuration/theme-configuration-5.0.png)
    * **Name** — Specify the name for the theme to distinguish it from other themes.
    * **Description** — Type a short but meaningful description that can help you and other users understand the specifics of the theme.
    * **Type** — Select the theme type. Currently, only storefront themes are available for configuration.
-2. In the **Configuration** section, customize the following options. You can preview several menu configuration setting to visualize what the option does and where the selected storefront menu will be positioned.
+2. In the **Configuration** section, customize the following options. You can preview several menu configuration settings to visualize what the option does and where the selected storefront menu will be positioned.
    ![Configuration section of the theme configuration](user/img/system/theme-configuration/theme-configuration-config-details.png)
 
 * **Show Quick Access Menu** — Enable a storefront quick access menu ([oro_customer_dashboard_quick_access_menu](../../../concept-guides/administration/menus/index.md#menu-management-concept-guide-storefront-quick-access)) on the customer user’s [Dashboard](../../../storefront/account/dashboard/index.md#storefront-dashboard) page. You can edit this menu under *System > Storefront Menus* to include shortcuts to key sections.
@@ -41,7 +41,7 @@ To configure your current storefront theme:
 The Scorecard content widget is available as of OroCommerce version 6.1.2.
 
 * **Customer Dashboard Scorecard (1-4)** — Select a [scorecard content widget](../../marketing/content-widgets/index.md#content-widgets-dashboard-scorecard-widget) from the list of predefined widgets to display on the customer user’s [Dashboard](../../../storefront/account/dashboard/index.md#storefront-dashboard) page. You can select up to four content widgets. Only the widgets of the **Scorecard** type are displayed in the dropdown list. The scorecards represent the information about the total number of customer users under the current customer, the number of shopping lists, open Requests for Quote (excluding cancelled ones), and the total value of all non-cancelled orders.
-  > ![Illustration of the Scorecard widget in the storefront](user/img/marketing/content_widgets/scorecard.png)
+  > ![Illustration of the Scorecard widget in the storefront](user/img/system/theme-configuration/scorecard.png)
 * **Promotional Content** — Select a [content block](../../marketing/content-blocks/index.md#user-guide-landing-pages-marketing-content-blocks) from the dropdown list to display it at the top of the storefront header.
   > ![Promotional content configuration and representation in the storefront header](user/img/system/theme-configuration/promotional-content.png)
 * **Top Navigation Menu** — Select a storefront menu that will be rendered above the header. Please see the [concept guide on storefront menu items](../../../concept-guides/administration/menus/index.md#menu-management-concept-guide) to learn more about each menu.
@@ -58,15 +58,8 @@ The Scorecard content widget is available as of OroCommerce version 6.1.2.
 * **Use Pagination Input if Number of Pages Exceeds** — Set the threshold for a number of pages, at which a pagination input field will appear. If the total number of pages exceeds this specified number, the system will display a pagination input, allowing users to directly enter a page number and quickly navigate to it, rather than clicking through each page individually.
 * **CSS Variables Configuration** — This option includes all the CSS variables that frontend developers use to define the theme in the storefront. These variables are made available here for easier access, allowing administrators to fine-tune the website’s storefront appearance directly. Currently, all variables are rendered as text inputs, and basic validation is in place. However, future updates will enhance validation to ensure that values entered match the allowed CSS properties. The list of supported CSS variables includes: css_background, css_border_radius, css_box_shadow, css_color, css_font_size, css_gap, css_length, css_line_height, css_min_height, css_outline, css_padding, and more.
   > ![CSS variables configuration represented as as text inputs to be filled by back-office users](user/img/system/theme-configuration/CSS-variables-configuration.png)
-* **Product View Page Template** — Select the product page template from the list. A page template is used to render the product page in the storefront by default, unless the template is overridden in the product details. Available options are *Default*, *Tabs*, and *Wide*.
-  > **Default Template**:
-  > ![image](user/img/system/theme-configuration/default-page-template.png)
-
-  > **Tabs (Additional Attribute Groups Are Displayed In Tabs)**:
-  > ![image](user/img/system/theme-configuration/tabbed-page-template.png)
-
-  > **Wide (Additional Attribute Groups Are Displayed In Collapse One Below Another For Full Page Width)**:
-  > ![image](user/img/system/theme-configuration/wide-page-template.png)
+* **Product View Page Template** — Select the product page template from the list. A page template is used to render the product page in the storefront by default, unless the template is overridden in the product details. Available options are *Default*, *Tabs* (additional attribute groups are displayed in tabs), and *Wide* (additional attribute groups are displayed in collapse one below another for full page width).
+  > ![image](user/img/system/theme-configuration/page-templates.png)
 * **Display Price Tiers As** — Select a multi or single unit table. A multi-unit table shows price tiers for all product units in the same table, which might not work well for products with many units or when quantity tiers are not aligned between units. Single-unit table shows price tiers only for the currently selected unit.
 * **Product Image Zoom Type** — Select the zoom effect for product images on the product details page. Available options:
   > **Window**: Displays a zoomed portion of the image in a separate window near the product image.

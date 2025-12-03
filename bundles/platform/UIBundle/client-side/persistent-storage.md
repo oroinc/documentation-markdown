@@ -2,22 +2,26 @@
 
 # PersistentStorage
 
-## persistentStorage
+The persistentStorage module provides client-side storage capabilities.
+It uses localStorage if supported by the browser, otherwise, it falls back to cookies.
+This module implements the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage" target="_blank">Storage Interface</a>, providing a unified API for accessing stored data.
 
-Provides clint-side storage. Uses localStorage if supported, otherwise uses cookies. Realizes <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage" target="_blank">Storage Interface</a>.
+## persistentStorage
 
 **Kind**: Exported member
 
-## persistentStorage.length : number
+## Properties and Methods
 
-Returns an integer representing the number of data items stored in the Storage object.
+### persistentStorage.length : number
+
+Returns the number of data items currently stored in the storage object.
 
 **Kind**: static property of persistentStorage
 **Read only**: true
 
-## persistentStorage.getItem(sKey) ⇒ string
+### persistentStorage.getItem(sKey) ⇒ string
 
-When passed a key name, will return that key’s value.
+Retrieves the value associated with the given key.
 
 **Kind**: static method of persistentStorage
 
@@ -25,9 +29,9 @@ When passed a key name, will return that key’s value.
 |---------|--------|
 | sKey    | string |
 
-## persistentStorage.key(nKeyId)
+### persistentStorage.key(nKeyId)
 
-When passed a number n, this method will return the name of the nth key in the storage.
+Returns the name of the nth key in the storage.
 
 **Kind**: static method of persistentStorage
 
@@ -35,10 +39,9 @@ When passed a number n, this method will return the name of the nth key in the s
 |---------|--------|
 | nKeyId  | number |
 
-## persistentStorage.setItem(sKey, sValue)
+### persistentStorage.setItem(sKey, sValue)
 
-When passed a key name and value, will add that key to the storage, or update that key’s value if it
-already exists.
+Adds a new key/value pair to the storage, or updates the value if the key already exists.
 
 **Kind**: static method of persistentStorage
 
@@ -47,9 +50,9 @@ already exists.
 | sKey    | string |
 | sValue  | string |
 
-## persistentStorage.removeItem(sKey)
+### persistentStorage.removeItem(sKey)
 
-When passed a key name, will remove that key from the storage.
+Removes the key/value pair associated with the given key.
 
 **Kind**: static method of persistentStorage
 
@@ -57,13 +60,15 @@ When passed a key name, will remove that key from the storage.
 |---------|--------|
 | sKey    | string |
 
-## persistentStorage.hasOwnProperty()
+### persistentStorage.hasOwnProperty()
+
+Checks whether the storage object has a specific property.
 
 **Kind**: static method of persistentStorage
 
-## persistentStorage.clear()
+### persistentStorage.clear()
 
-When invoked, will empty all keys out of the storage.
+Removes all keys and values from the storage.
 
 **Kind**: static method of persistentStorage
 

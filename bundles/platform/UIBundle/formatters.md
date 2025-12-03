@@ -2,16 +2,16 @@
 
 # Formatters
 
-Formatters are the set of filters that can be assigned to data.
+**Formatters** are filters that can be applied to data to control its presentation.
 
 ## Implementation
 
-To create your own formatter, create a new service and tag it with the oro_formatter tag.
+To create a custom formatter, define a new service and tag it with the oro_formatter tag.
 
-This tag has the following attributes:
+The tag supports the following attributes:
 
-* **formatter** - The formatter name. It is mandatory attribute.
-* **data_type** - The data type name for which the formatter should be used by default.
+* **formatter** – The unique name of the formatter (required).
+* **data_type** – The data type for which this formatter should be used by default.
 
 Example:
 
@@ -22,13 +22,12 @@ acme_demo.formatter.some_formatter:
         - { name: oro_formatter, formatter: some_formatter }
 ```
 
-The service class should implement the `Oro\Bundle\UIBundle\Formatter\FormatterInterface` interface.
+The service class must implement the interface `Oro\Bundle\UIBundle\Formatter\FormatterInterface`.
 
 ## Usage
 
 To apply a formatter, use the oro_ui.formatter service.
-
-This manager has method format that applies the given formatter to the parameter:
+This service provides the method format, which applies the specified formatter to a given value:
 
 ```none
 ...

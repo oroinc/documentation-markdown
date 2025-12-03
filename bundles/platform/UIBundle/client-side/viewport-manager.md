@@ -2,23 +2,24 @@
 
 # Viewport Manager
 
-Viewport manager contains a collection of available screen types that can be used on the theme.
-It is also responsible for triggering event `viewport:change` through the mediator, when the type of the screen changes.
-You can subscribe to the event `viewport:change` in the view and create a logic based on the viewport changes (for example, [DOM Relocation View](../../../commerce/FrontendBundle/dom-relocation-view.md#bundle-docs-commerce-customer-portal-frontend-bundle-dom)).
-You can also subscribe to a specific event `viewport:desktop`, `viewport:tablet` or any other registered media type in scss.
-Viewport manager has several public methods:
+The Viewport Manager maintains a collection of available screen types that can be used within the theme.
+It is responsible for triggering the `viewport:change` event through the mediator whenever the screen type changes.
 
-- `isApplicable(mediaTypes)`: the method accepts a string or an array of strings of media types as arguments.
-  : - For example:
-      : - `viewportManager.isApplicable('tablet')`
-        - `viewportManager.isApplicable('tablet', 'tablet-small')`
-        - `viewportManager.isApplicable(['tablet', 'tablet-small'])`
-- `getBreakpoints(context)`: returns an object with all registered breakpoints from css property `--breakpoints`. You can pass the `context` of the document as an argument.
-- `getMediaType(mediaType)`: returns `MediaQueryList` by `mediaType` argument.
+You can subscribe to the `viewport:change` event in a view to execute logic based on viewport changes, for example, [DOM Relocation View](../../../commerce/FrontendBundle/dom-relocation-view.md#bundle-docs-commerce-customer-portal-frontend-bundle-dom).
+Additionally, you can listen for specific events such as `viewport:desktop`, `viewport:tablet`, or any other registered media type defined in SCSS.
+
+## Public Methods
+
+- `isApplicable(mediaTypes)` checks if the current viewport matches the provided media types. Accepts a string or an array of strings. Examples:
+  > - `viewportManager.isApplicable('tablet')`
+  > - `viewportManager.isApplicable('tablet', 'tablet-small')`
+  > - `viewportManager.isApplicable(['tablet', 'tablet-small'])`
+- `getBreakpoints(context)` returns an object containing all registered breakpoints from the CSS property `--breakpoints`. Optionally, you can provide the `context` of the document.
+- `getMediaType(mediaType)` returns a `MediaQueryList` object for the specified media type.
 
 ## Screen Map
 
-By default these settings for list of screen types synchronized with scss breakpoints.
+By default, the following screen types are synchronized with SCSS breakpoints:
 
 ```scss
 // Desktop Media Breakpoint
@@ -46,7 +47,7 @@ $oro-breakpoints: (
 );
 ```
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/UIBundle/Resources/public/default/scss/settings/_breakpoints.scss" target="_blank">Default scss breakpoints</a> are converted to the following object:
+<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/UIBundle/Resources/public/default/scss/settings/_breakpoints.scss" target="_blank">Default scss breakpoints</a> are converted to the following JavaScript object:
 
 ```javascript
 mediaTypes: {
@@ -63,13 +64,11 @@ mediaTypes: {
 }
 ```
 
-You can override these breakpoints [via scss variables](../../../../frontend/storefront/how-to/how-to-change-media-breakpoints.md#dev-doc-frontend-storefront-css-media-breakpoints).
+These breakpoints can be overridden [via SCSS variables](../../../../frontend/storefront/how-to/how-to-change-media-breakpoints.md#dev-doc-frontend-storefront-css-media-breakpoints).
 
 ## Media Types
 
-A media type is used to describe a named media query;
-
-For example:
+A media type represents a named media query. For example:
 
 ```javascript
 {
@@ -83,6 +82,7 @@ For example:
 
 **Event:** MediaQueryListEvent
 
-Media Query of the changed media type. Additionally contains a mediaType field with the name of the media type.
+The event is triggered whenever the viewport changes.
+The event object contains the media query of the changed type and a mediaType field specifying the name of the media type.
 
 <!-- Frontend -->

@@ -73,6 +73,6 @@ Oro’s GitHub organization hosts over 70 public repositories, alongside additio
 For the full list of public repositories, visit <a href="https://github.com/oroinc/" target="_blank">https://github.com/oroinc/</a>.
 
 #### HINT
-**Once you identify the repository you need, follow the :ref:\`Get the Oro Application Source Code guide <platform–installation–source-files>\` to clone and start working with the codebase.**
+Once you identify the repository you need, follow the [Get the Oro Application Source Code guide](get-source-files.md#platform-installation-source-files) to clone and start working with the codebase.
 
 <!-- Frontend -->
