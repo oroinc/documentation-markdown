@@ -21,8 +21,9 @@ To enable this feature globally:
 For faster navigation between the configuration menu sections, use [Quick Search](../../quick-search.md#user-guide-system-configuration-quick-search).
 
 1. In the **AI Smart Order** section, clear the **Use Default** checkbox and select the checkbox next to *Enable AI Smart Order* to enable the feature.
-2. Information for the **Smart Order API Key** and **Smart Order URL** fields is provided by the Oro Team upon request during the setup of the Smart Order microservice.
-3. Click **Save Settings**.
+2. Select the **Enable Async Processing** checkbox to process purchase orders asynchronously via the message queue, improving performance and accuracy for large or complex orders.
+3. Information for the **Smart Order API Key** and **Smart Order URL** fields is provided by the Oro Team upon request during the setup of the Smart Order microservice.
+4. Click **Save Settings**.
 
 #### HINT
 You can also enable Smart Order [per organization](../../../user-management/organizations/org-configuration/general-setup-org/integrations/organization-ai-smart-order.md#organization-ai-smart-order-settings).
