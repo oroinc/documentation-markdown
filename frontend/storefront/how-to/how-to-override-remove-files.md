@@ -10,11 +10,3 @@ css:
         - 'bundles/oroform/default/scss/styles.scss': ~ // file will be removed from build process
         - 'bundles/oroform/default/scss/styles.scss': 'bundles/oroform/your_theme/scss/styles.scss' // file will be overridden
 ```
-
-<a id="frontend-styles-customization-remove-unnecessary-files"></a>
-
-## Remove Unnecessary Oro Files
-
-Remove all scss/css: all the themes use styles registered in this theme and from parent themes.
-You cannot change this behavior without changes in assets build logic.
-To remove all assets, override oro_layout.assetic.layout_resource service in your bundle and customize assets collect logic.
