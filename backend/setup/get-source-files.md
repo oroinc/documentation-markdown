@@ -53,7 +53,7 @@ These methods are detailed below.
    # OroCommerce Enterprise Edition
    git clone -b 6.1.0 https://github.com/oroinc/orocommerce-enterprise-application my_project_name
    # OroCommerce Platform Application
-   git clone -b 5.0.0 https://github.com/oroinc/orocommerce-platform-application my_project_name
+   git clone -b 6.1.0 https://github.com/oroinc/orocommerce-platform-application my_project_name
    # OroCRM Community Edition
    git clone -b 6.1.0 https://github.com/oroinc/crm-application my_project_name
    # OroCRM Enterprise Edition
