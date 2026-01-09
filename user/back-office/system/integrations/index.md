@@ -34,6 +34,12 @@ Check the following integrations that can be enabled/disabled and configured in 
   * [UPS](shipping-integration/ups.md#doc-integrations-ups)
   * [FedEx](shipping-integration/fedex.md#doc-integrations-fedex)
   * [DPD](shipping-integration/dpd.md#doc-integrations-dpd)
+* AI Integrations (Open AI and Vertex AI)
+  * [AI Integrations](ai/index.md#user-guide-ai-integrations)
+* OpenID Connect
+  * [OpenID Connect](openid/index.md#user-guide-integrations-openid-connect)
+* OpenAPI Specifications
+  * [OpenAPI Specifications](openapi-specifications/index.md#admin-openapi-specifications)
 * [Google Tag Manager Integration](gtm/index.md#gtm-ga-4-integration)
 * [Dotdigital Integration](dotdigital/index.md#user-guide-dotmailer-overview)
 * [Mailchimp Integration](mailchimp-integration.md#user-guide-mc-integration)
@@ -41,7 +47,3 @@ Check the following integrations that can be enabled/disabled and configured in 
 * [LDAP Integration](ldap-integration.md#user-guide-ldap-integration)
 * Embedded Forms
   * [Embedded Forms](embedded-forms/index.md#admin-embedded-forms)
-* OpenAPI Specifications
-  * [OpenAPI Specifications](openapi-specifications/index.md#admin-openapi-specifications)
-* AI Integrations (Open AI and Vertex AI)
-  * [AI Integrations](ai/index.md#user-guide-ai-integrations)

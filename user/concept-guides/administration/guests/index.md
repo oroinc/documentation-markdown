@@ -38,7 +38,7 @@ Flexible website access management gives you the possibility to customize every 
 
 You can toggle the following features in the system configuration to control the storefront guest users activity:
 
-1. Enable [website access for guests](../../../back-office/system/configuration/commerce/guests/global-guest-access.md#sys-conf-commerce-guest-access-global) to allow guest customers interact with your website. When this option is disabled, the only page that unregistered users can access is the login page.
+1. Enable [website access for guests](../../../back-office/system/configuration/commerce/guests/global-guest-access.md#sys-conf-commerce-guest-access-global) to allow guest customers interact with your website. When this option is disabled, the only page that unregistered users can access is the login page, unless specific system or landing pages are explicitly allowed for guest access in the configuration. Starting from OroCommerce version 6.1.7, when guest access is disabled, administrators can optionally allow guest users to access a limited set of system pages (such as legal or informational pages) and landing (CMS) pages. This makes it possible to keep selected content publicly available while restricting access to the rest of the storefront.
 2. Enable or disable additional features that expand the capabilities of your guest visitors:
    * [Quick order form](../../../back-office/system/configuration/commerce/sales/guest-quick-order-global.md#user-guide-system-configuration-commerce-sales-quick-order-form) — promotes fast purchases through the quick access menu.
    * [Shopping lists](../../../back-office/system/configuration/commerce/sales/global-shopping-list.md#configuration-shopping-list) — gives a guest user the possibility to purchase a product by adding it to the shopping list. Keep in mind that only 1 shopping list is available for a guest customer, and it can be stored for up to 30 days in a single browser.
@@ -47,7 +47,7 @@ You can toggle the following features in the system configuration to control the
    * [Checkout](../../../back-office/system/configuration/commerce/sales/global-checkout-config.md#user-guide-system-configuration-commerce-sales-checkout) — supports anonymous checkouts that do not interrupt the purchase forcing to register an account. However, the guest users are still able to sign up for an account, if they wish, after completing the checkout. The checkout process for guest users is identical to the one for the registered users.
    * [Contacts](../../../back-office/system/configuration/commerce/sales/contacts.md#sys-conf-commerce-sales-contacts-global) - enables to enter the necessary contact information that will be shown to unregistered visitors. Instead of providing your company’s contacts to all anonymous customers, you may use this field to ask for registration and display the contact of your sales representatives who can handle any guest customers’ issues.
 
-![All guest-related features that can be customized in the system configuration](user/img/concept-guides/guests/guest_functions.png)
+![All guest-related features that can be customized in the system configuration](user/img/system/config_commerce/guests/GuestAccessSysConfig.png)
 
 ## Guest Product Visibility
 

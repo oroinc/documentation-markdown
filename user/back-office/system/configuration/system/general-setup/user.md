@@ -35,7 +35,7 @@ Under **Sharing Records**, activate or deactivate the ability to share entity re
 #### NOTE
 The SCIM synchronization is available as of OroCommerce Enterprise version 6.1.7.
 
-Under **User Provisioning**, configure the SCIM (System for Cross-domain Identity Management) protocol in the Oro application. This setup allows you to import and synchronize users from external identity systems, such as Microsoft Entra ID or Okta, into Oro. Once imported, these users can log in to Oro via [Microsoft 365 Single Sign-On](../integrations/microsoft-settings/microsoft-single-sign-on.md#user-guide-integrations-microsoft-single-sign-on) or Okta Single Sign-On.
+Under **User Provisioning**, configure the SCIM (System for Cross-domain Identity Management) protocol in the Oro application. This setup allows you to import and synchronize users from external identity systems, such as Microsoft Entra ID or Okta, into Oro. Once imported, these users can log in to Oro via Microsoft 365 Single Sign-On or Okta Single Sign-On.
 
 ### Enable SCIM Synchronization
 
@@ -67,6 +67,7 @@ To configure the user provisioning via <a href="https://help.okta.com/en-us/cont
    > #### NOTE
    > The redirect URL you can see in <a href="https://developer.okta.com/docs/guides/scim-provisioning-integration-prepare/main/#authentication" target="_blank">authentication</a> in the Okta SCIM API documentation. Add a fake URL if you have not yet created an Okta application. The correct URL can be set later.
 3. Copied Client ID and Client secret. For security reasons, the Client Secret is displayed only once – immediately after you have created a new application. You cannot view the Client Secret anywhere in the application once you leave a page with the created application information, so make sure you save it somewhere safe so you can access it later.
+4. Created the Okta OpenID Connect integration under System > Manage Integrations as described in the [Configure OpenID Connect Integrations in the Back-Office](../../../integrations/openid/index.md#user-guide-integrations-openid-connect) topic.
 
 **Okta side**
 
@@ -116,6 +117,9 @@ To configure the user provisioning via <a href="https://help.okta.com/en-us/cont
     | primaryPhoneType | Personal         | (user.primaryPhone != null && user.primaryPhone != ‘’) ? ‘work’ : ‘’ |
 16. Navigate to the **Assignments** tab and configure the user to be provisioned.
 
+#### IMPORTANT
+The next step is to configure the [Okta OpenID Connect](../../../integrations/openid/index.md#user-guide-integrations-openid-connect) integration under **System > Manage Integrations** menu in the back-office to enable synced users to log in via OIDC SSO.
+
 <a id="microsoft-entra-provisioning-service"></a>
 
 ### Configure Microsoft Entra Provisioning Service
@@ -130,6 +134,7 @@ To configure the user provisioning via <a href="https://learn.microsoft.com/en-u
 2. Created Client Credentials OAuth application as described in the [Create an OAuth Application](../../../user-management/oauth-app.md#oauth-applications) topic.
 3. Copied Client ID and Client secret. For security reasons, the Client Secret is displayed only once – immediately after you have created a new application. You cannot view the Client Secret anywhere in the application once you leave a page with the created application information, so make sure you save it somewhere safe so you can access it later.
    > ![image](user/img/system/user_management/oauth/client_creds_app.png)
+4. Created the Microsoft OpenID Connect integration under System > Manage Integrations as described in the [Configure OpenID Connect Integrations in the Back-Office](../../../integrations/openid/index.md#user-guide-integrations-openid-connect) topic.
 
 **Microsoft Entra side**
 
@@ -174,7 +179,8 @@ To configure the user provisioning via <a href="https://learn.microsoft.com/en-u
 
 After the initial provisioning cycle begins, go to **Provisioning logs** in the left menu to track its progress. This section displays all the actions performed by the provisioning service for your application.
 
-After the user was synced, you will be able to log in via [Microsoft 365 Single Sign-On](../integrations/microsoft-settings/microsoft-single-sign-on.md#user-guide-integrations-microsoft-single-sign-on) with such synced users.
+#### IMPORTANT
+The next step is to configure the [Microsoft OpenID Connect](../../../integrations/openid/index.md#user-guide-integrations-openid-connect) integration under **System > Manage Integrations** menu in the back-office to enable synced users to log in via OIDC SSO.
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
