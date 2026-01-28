@@ -15,3 +15,4 @@ Learn the key options for setting up products in your Oro application, as well a
 * [Seller Product Approval Workflow](seller-product-approval-flow.md#system-configuration-commerce-product-seller-product-approval-workflow)
 * [Product Collections](product-collections.md#configuration-guide-commerce-configuration-product-collections)
 * [Customer Settings](global-customer-settings.md#sys-commerce-product-customer-settings)
+* [Product Import/Export](product-import-export.md#configuration-guide-commerce-product-import-export)

@@ -46,6 +46,7 @@ Learn the key options for setting up products in your Oro application, as well a
 * [Configurable Products](product/global-configurable-products.md#config-guide-landing-commerce-products-configurable-products)
 * [Product Collections](product/product-collections.md#configuration-guide-commerce-configuration-product-collections)
 * [Customer Settings](product/global-customer-settings.md#sys-commerce-product-customer-settings)
+* [Product Import/Export](product/product-import-export.md#configuration-guide-commerce-product-import-export)
 
 ## [Inventory](inventory/index.md#configuration-guide-commerce-configuration-inventory)
 
