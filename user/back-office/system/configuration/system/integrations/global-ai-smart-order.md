@@ -20,10 +20,12 @@ To enable this feature globally:
 #### NOTE
 For faster navigation between the configuration menu sections, use [Quick Search](../../quick-search.md#user-guide-system-configuration-quick-search).
 
-1. In the **AI Smart Order** section, clear the **Use Default** checkbox and select the checkbox next to *Enable AI Smart Order* to enable the feature.
-2. Select the **Enable Async Processing** checkbox to process purchase orders asynchronously via the message queue, improving performance and accuracy for large or complex orders.
-3. Information for the **Smart Order API Key** and **Smart Order URL** fields is provided by the Oro Team upon request during the setup of the Smart Order microservice.
-4. Click **Save Settings**.
+1. To manage any of the available options, clear the **Use Default** next to them first.
+2. In the **AI Smart Order** section, select the checkbox next to *Enable AI Smart Order* to enable the feature.
+3. Select the **Enable Async Processing** checkbox to process purchase orders asynchronously via the message queue, improving performance and accuracy for large or complex orders.
+4. Information for the **Smart Order API Key** and **Smart Order URL** fields is provided by the Oro Team upon request during the setup of the Smart Order microservice.
+5. If you have a <a href="https://extensions.oroinc.com/orocommerce/extension/customer-part-number/" target="_blank">Customer Part Number</a> extension installed, select the **Use CPN in Smart Order** check box to allow customer part numbers to be used and managed for line items during [smart order draft creation](../../../../dashboards/widgets/ai-smart-order.md#user-guide-dashboards-widgets). Please make sure that the **Customer Part Number** [feature is enabled](../../commerce/product/global-customer-settings.md#sys-commerce-product-customer-settings) under **System > Commerce > Product > Customer Settings**.
+6. Click **Save Settings**.
 
 #### HINT
 You can also enable Smart Order [per organization](../../../user-management/organizations/org-configuration/general-setup-org/integrations/organization-ai-smart-order.md#organization-ai-smart-order-settings).

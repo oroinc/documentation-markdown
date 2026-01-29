@@ -209,8 +209,8 @@ For the aggregated information on all OAuth applications created by customer use
 
 **Related Articles**
 
-* [Password Change Policy](../../system/configuration/commerce/customer/global-customer-users.md#user-guide-customers-customer-user-password-change-policy)
-* [Password History Policy](../../system/configuration/commerce/customer/global-customer-users.md#configuration-guide-commerce-configuration-customer-user-password-change-policy)
+* [Password Change Policy](../../system/configuration/commerce/customer/customer-user-login.md#user-guide-customers-customer-user-password-change-policy)
+* [Password History Policy](../../system/configuration/commerce/customer/customer-user-login.md#configuration-guide-commerce-configuration-customer-user-password-change-policy)
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
