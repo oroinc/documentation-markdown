@@ -36,7 +36,6 @@ You integrate OroCommerce with the following systems and services:
 * [OroPay](oropay/index.md#user-guide-payment-oropay)
 * [PayPal Payflow Gateway / PayPal Payment Pro](paypal-services/gateway-pro/index.md#sys-integrations-manage-integrations-paypal-payflow-gateway)
 * [PayPal Express](paypal-services/express/index.md#config-guide-payment-paypal-express)
-* [Apruve](apruve/index.md#user-guide-payment-payment-providers-overview-apruve)
 * [Authorize.Net](authorizenet/index.md#user-guide-payment-payment-providers-overview-authorizenet)
 * [InfinitePay](infinitepay/index.md#user-guide-payment-payment-providers-overview-infinitepay)
 * [Ingenico](ingenico/index.md#user-guide-payment-payment-providers-overview-ingenico)
