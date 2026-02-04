@@ -335,7 +335,7 @@ This feature covers backward compatibility, so all existing images will not be d
 ## Image Metadata Preservation
 
 #### NOTE
-This feature is available as of OroCommerce version 6.1.7.
+This feature is available as of OroCommerce version 6.1.8.
 
 Image Metadata Preservation enables an administrator to control whether uploaded images preserve their original metadata such as copyright information, camera settings, GPS location, and other embedded information.
 

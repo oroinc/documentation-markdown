@@ -66,7 +66,7 @@ More information about the options available for each of the two categories is a
     * [Shopping Lists](commerce/sales/website-guest-shopping-list.md#user-guide-system-configuration-commerce-sales-shopping-list-per-website)
     * [Contacts](commerce/sales/website-sales-info.md#sys-conf-commerce-sales-contacts-website)
     * [Checkout](commerce/sales/website-guest-checkout.md#user-guide-system-configuration-commerce-sales-checkout-website)
-    * [Recurring Orders](../../user-management/organizations/org-configuration/commerce/sales/organization-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders)
+    * [Recurring Orders](commerce/sales/website-recurring-orders.md#user-guide-website-configuration-commerce-sales-recurring-orders)
     * [Orders History](commerce/sales/website-open-orders.md#website-commerce-configuration-sales-order-history)
     * [Multi Shipping Options](commerce/sales/website-multi-shipping.md#user-guide-system-configuration-commerce-sales-multi-shipping-website)
     * [Quotes](commerce/sales/website-quotes.md#sys-websites-quotes)

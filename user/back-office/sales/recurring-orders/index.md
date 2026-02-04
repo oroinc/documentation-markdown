@@ -8,7 +8,7 @@ This is an OroCommerce Enterprise feature, introduced in version 6.1.7.
 Recurring Orders allow customers in the storefront to automatically [place repeat orders based on previously submitted orders](../../../storefront/account/recurring-orders.md#my-account-recurring-orders) and a predefined schedule. Each recurring order defines the frequency, start date, and optional end date for order generation. On each scheduled date, the system automatically creates a new standard order, while back-office users can monitor and manage recurring orders throughout their lifecycle under **Sales > Recurring Orders** in the back-office menu.
 
 #### NOTE
-Recurring orders functionality must be enabled in the [back-office system configuration](../../system/user-management/organizations/org-configuration/commerce/sales/organization-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders) on the required level by the system administrator.
+Recurring orders functionality must be enabled in the [back-office system configuration](../../system/configuration/commerce/sales/global-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders) on the required level by the system administrator.
 
 ## Recurring Orders Grid
 
@@ -59,5 +59,9 @@ Alternatively, a recurring order can be created directly from the **Orders** gri
 
 **Related Topics**
 
-* [Configure Recurring Orders Globally](../../system/user-management/organizations/org-configuration/commerce/sales/organization-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders)
 * [Recurring Orders in the Storefront](../../../storefront/account/recurring-orders.md#my-account-recurring-orders)
+* [Configure Recurring Orders Globally](../../system/configuration/commerce/sales/global-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders)
+* [Configure Recurring Orders per Organization](../../system/user-management/organizations/org-configuration/commerce/sales/organization-recurring-orders.md#user-guide-organization-configuration-commerce-sales-recurring-orders)
+* [Configure Recurring Orders per Website](../../system/websites/web-configuration/commerce/sales/website-recurring-orders.md#user-guide-website-configuration-commerce-sales-recurring-orders)
+* [Configure Recurring Orders per Customer Group](../../customers/customer-groups/customer-group-configuration/commerce/sales/customer-group-recurring-orders.md#user-guide-customer-group-sales-recurring-orders)
+* [Configure Recurring Orders per Customer](../../customers/customers/customer-configuration/commerce/sales/customer-recurring-orders.md#user-guide-customers-sales-recurring-orders)

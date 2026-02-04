@@ -140,8 +140,8 @@ Once scheduled, the recurring order is created and managed separately from the o
 
 **Related Topics**
 
-* [Configure Recurring Orders Globally](../../system/user-management/organizations/org-configuration/commerce/sales/organization-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders)
 * [Recurring Orders in the Storefront](../../../storefront/account/recurring-orders.md#my-account-recurring-orders)
+* [Configure Recurring Orders Globally](../../system/configuration/commerce/sales/global-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders)
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->

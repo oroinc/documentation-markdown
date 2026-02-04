@@ -58,7 +58,7 @@ Be aware that the Image Processing options are only available if libraries <a hr
 
    #### NOTE
    When this option is enabled, the **Enable Original File Names** setting for Product Images is hidden from the system configuration page.
-5. In the **Image Metadata Preservation** section, you can control whether uploaded images preserve their original metadata (available as of OroCommerce version 6.1.7).
+5. In the **Image Metadata Preservation** section, you can control whether uploaded images preserve their original metadata (available as of OroCommerce version 6.1.8).
 
 > ![Image Metadata Preservation settings](user/img/system/config_system/upload_settings_metadata.png)
 

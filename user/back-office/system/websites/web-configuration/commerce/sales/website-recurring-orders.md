@@ -1,11 +1,11 @@
-<a id="user-guide-system-configuration-commerce-sales-recurring-orders"></a>
+<a id="user-guide-website-configuration-commerce-sales-recurring-orders"></a>
 
 # Configure Recurring Orders Settings per Website
 
 #### NOTE
 This is an OroCommerce Enterprise feature, introduced in version 6.1.7.
 
-Recurring Orders enable customers to automatically place repeat orders based on previously submitted orders. Customers can define a schedule with configurable frequency, start date, and optional end date, and manage recurring orders by pausing, resuming, or canceling them as needed. On each scheduled date, the system generates a new order and sends notifications according to the configured settings. Recurring order functionality and related notifications can be configured at the [global level](../../../../user-management/organizations/org-configuration/commerce/sales/organization-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders) and per [organization](../../../../user-management/organizations/org-configuration/commerce/sales/organization-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders), website, [customer group](../../../../../customers/customer-groups/customer-group-configuration/commerce/sales/customer-group-recurring-orders.md#user-guide-customer-group-sales-recurring-orders), and [customer](../../../../../customers/customers/customer-configuration/commerce/sales/customer-recurring-orders.md#user-guide-customers-sales-recurring-orders).
+Recurring Orders enable customers to automatically place repeat orders based on previously submitted orders. Customers can define a schedule with configurable frequency, start date, and optional end date, and manage recurring orders by pausing, resuming, or canceling them as needed. On each scheduled date, the system generates a new order and sends notifications according to the configured settings. Recurring order functionality and related notifications can be configured at the [global level](../../../../configuration/commerce/sales/global-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders) and per [organization](../../../../user-management/organizations/org-configuration/commerce/sales/organization-recurring-orders.md#user-guide-organization-configuration-commerce-sales-recurring-orders), website, [customer group](../../../../../customers/customer-groups/customer-group-configuration/commerce/sales/customer-group-recurring-orders.md#user-guide-customer-group-sales-recurring-orders), and [customer](../../../../../customers/customers/customer-configuration/commerce/sales/customer-recurring-orders.md#user-guide-customers-sales-recurring-orders).
 
 To configure recurring orders per website:
 
