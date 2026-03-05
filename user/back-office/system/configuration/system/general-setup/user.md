@@ -161,9 +161,9 @@ To configure the user provisioning via <a href="https://learn.microsoft.com/en-u
    * Disable group synchronization by turning off the **Provision Microsoft Entra ID Groups** mapping
    * Configure **Provision Microsoft Entra ID Users** with the following mapping settings:
 
-   | customappsso Attribute             | Microsoft Entra ID Attribute                                | Matching precedence   |
+   | customappsso Attribute             | Microsoft Entra ID Attribute                                |   Matching precedence |
    |------------------------------------|-------------------------------------------------------------|-----------------------|
-   | userName                           | userPrincipalName                                           | 1                     |
+   | userName                           | userPrincipalName                                           |                     1 |
    | active                             | Switch([IsSoftDeleted], , “False”, “True”, “True”, “False”) |                       |
    | title                              | jobTitle                                                    |                       |
    | emails[type eq “work”].value       | mail                                                        |                       |
