@@ -102,6 +102,8 @@ OroCloud environments are configured with a <a href="https://www.mongodb.com/doc
 
 Backups of OroCloud environment include the database dump, media files, and either the application source code or the repository commit hash that may be used to retrieve the code.
 
+<a id="cloud-architecture-schedule-backup-retention-policy"></a>
+
 ### Schedule and Backup Retention Policy
 
 Oro maintains a regular backup process which covers both database and media content. There are 3 types of backups depending on the target recovery point objective (RPO):

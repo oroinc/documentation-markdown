@@ -338,6 +338,9 @@ oro:platform:update is not executed.
 
 Once you start using the Oro application, you can establish a regular backup process. This process includes backing up the application media files, a database dump, and the application source code. However, it does not cover Elasticsearch and RabbitMQ. To restore data from a backup, run the `backup:restore` command as described later in the section.
 
+#### IMPORTANT
+The retention time for manually generated backups depends on the environment type. Backup retention follows the same policy as daily automated backups. The one-month retention described in the <a href="https://doc.oroinc.com/cloud/architecture/#schedule-and-backup-retention-policy" target="_blank">OroCloud Architecture</a> documentation applies only to production environments. For details on backup retention for different environment types, see <a href="https://doc.oroinc.com/cloud/environments/#environment-plans" target="_blank">Environment Plans</a>.
+
 ### Backup Everything
 
 To back up the application state, run the backup:create command:
