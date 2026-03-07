@@ -25,6 +25,7 @@ For more details on how to configure the OIDC integration with **OpenID Connect*
 
 **Related Articles**
 
+* [Identity Management Concept Guide](../../../user/concept-guides/administration/identity-management/index.md#concept-guide-identity-management)
 * [Configure OpenID Connect Integrations in the Back-Office](../../../user/back-office/system/integrations/openid/index.md#user-guide-integrations-openid-connect)
 * [Configure User Provisioning and SCIM Synchronization](../../../user/back-office/system/configuration/system/general-setup/user.md#admin-configuration-user-settings-scim)
 * [Configure Okta Provisioning Service](../../../user/back-office/system/configuration/system/general-setup/user.md#okta-provisioning-service)

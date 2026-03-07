@@ -5,6 +5,9 @@
 #### NOTE
 This feature is available as of OroCommerce Enterprise version 6.1.7.
 
+#### HINT
+This section is part of the [Identity Management Concept Guide](../../../../concept-guides/administration/identity-management/index.md#concept-guide-identity-management) topic that provides a general understanding of external identity systems supported by OroCommerce.
+
 The Oro application supports integration with <a href="https://openid.net/developers/how-connect-works/" target="_blank">OpenID Connect</a> (OIDC) to enable **Single Sign-On (SSO)** through third-party identity providers such as **Okta, Microsoft Entra ID, Google**, and other systems that support the OpenID Connect standard.
 
 Using OpenID Connect allows users to authenticate once with a trusted identity provider and then securely access Oro without entering a separate username and password.
@@ -58,8 +61,29 @@ Additional fields are available for provider-specific integrations:
 * **Directory (tenant) ID** - The tenant ID value from the 3rd party OAuth 2 application configuration. Available only for the **Microsoft OpenID Connect** integration type.
 * **Okta instance domain** - The domain name of the Okta instance. Available only for the **Okta OpenID Connect** integration type.
 
+## Configure Okta OpenID Integration
+
+To retrieve the **Client ID** and **Client Secret** values from the Okta app instance, you need to:
+
+1. Log into your <a href="https://login.okta.com/" target="_blank">Okta Admin Console</a> and navigate to **Applications > Applications**.
+2. Click **Create App Integration**.
+3. Select the **OIDC-OpenID Connect** sign-in method.
+4. Select the **Web Application** application type.
+5. Click **Next**.
+6. Provide a name for the new application.
+7. For the **Sign-in redirect URIs**, enter the **Redirect URL** value provided while creating an Okta OpenID Connect integration in the OroCommerce back-office and click **Save**.
+
+![The flow for creating a new Okta OIDC app on the Okta side](user/img/system/integrations/openid/okta-oidc-app-part1.png)
+1. Once the Okta OIDC app instance is created, the **Client ID** and **Client Secret** are generated. You can copy the values and paste them into the corresponding fields of the Okta OpenID Connect integration in the OroCommerce back-office.
+
+![Client Id and Client Secret details of the Okta app](user/img/system/integrations/openid/okta-oidc-app-part2.png)
+1. Users assigned to the Okta application instance you created can now sign in to the OroCommerce platform using Okta SSO. If the required users do not yet exist in OroCommerce, you can configure [SCIM user provisioning](../../configuration/system/general-setup/user.md#admin-configuration-user-settings-scim) to synchronize users from Okta.
+
+![The Login via Okta button is available on the Oro login page after the Okta OIDC integration is created](user/img/system/config_system/okta-sso-back-office.png)
+
 **Related Articles**
 
+* [Identity Management Concept Guide](../../../../concept-guides/administration/identity-management/index.md#concept-guide-identity-management)
 * [Configure User Provisioning and SCIM Synchronization](../../configuration/system/general-setup/user.md#admin-configuration-user-settings-scim)
 * [Configure Okta Provisioning Service](../../configuration/system/general-setup/user.md#okta-provisioning-service)
 * [Configure Microsoft Entra Provisioning Service](../../configuration/system/general-setup/user.md#microsoft-entra-provisioning-service)

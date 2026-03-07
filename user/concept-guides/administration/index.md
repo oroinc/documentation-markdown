@@ -16,3 +16,4 @@ This section includes the following elements:
 * [Checkout Configuration](checkout/index.md)
 * [Consent Management](consents/index.md)
 * [Data Import](data-import/index.md)
+* [Identity Management](identity-management/index.md)
