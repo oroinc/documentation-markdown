@@ -14,10 +14,10 @@ The AI Content Generation integration feature works with two AI clients, OpenAI 
 OpenAI is known for creating models like GPT-3 and GPT-4, which are large-scale, general-purpose language models that excel at natural language understanding and generation.
 Vertex AI is a part of Google Cloud’s suite of AI and machine learning tools and services, designed to provide a comprehensive platform for developing, deploying, and managing machine learning models.
 
-Once the AI Content Generation integration is [configured](../../../back-office/system/integrations/ai/index.md#user-guide-ai-integrations) in your Oro application, you can choose between the two clients and their models in the back-office system configuration settings on global and/or organization levels, for example:
+Once the AI Content Generation integration is [configured](../../../back-office/system/integrations/ai/index.md#user-guide-ai-integrations) in your Oro application, you can choose between the two clients and their models in the back-office system configuration settings on global and/or organization levels:
 
-* For OpenAI - *gpt-3.5-turbo, gpt-3.5-turbo-16k, gpt-4*, etc.
-* For Vertex AI - *text-bison, text-bison-32k*, etc.
+* For OpenAI - see the list of available models at <a href="https://developers.openai.com/api/docs/models" target="_blank">OpenAI API models</a>.
+* For Vertex AI - see the list of available models at <a href="https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models" target="_blank">Vertex AI models</a>.
 
 ![Global AI configuration settings](user/img/system/config_system/ai-global-settings.png)
 
