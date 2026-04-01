@@ -14,7 +14,7 @@ See a short demo on <a href="https://academy.oroinc.com/media-library/create-shi
 
 ## Prepare for Integration
 
-First, ensure you have <a href="https://www.ups.com/one-to-one/register" target="_blank">registered with UPS.com</a> and have opened a UPS Account with the necessary shipping services level.
+First, ensure you have <a href="https://wwwapps.ups.com/doapp/signup" target="_blank">registered with UPS.com</a> and have opened a UPS Account with the necessary shipping services level.
 
 Next:
 

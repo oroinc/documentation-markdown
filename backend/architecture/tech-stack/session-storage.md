@@ -2,7 +2,7 @@
 
 # Session Storage
 
-By default, the Oro application is configured to store <a href="https://www.php.net/manual/en/intro.session.php" target="_blank">sessions</a> in files. If multiple servers serve your application, you must use a database to make sessions work across different servers. The recommended database
+By default, the Oro application is configured to store <a href="https://www.php.net/manual/en/book.session.php" target="_blank">sessions</a> in files. If multiple servers serve your application, you must use a database to make sessions work across different servers. The recommended database
 for best performance is <a href="https://redis.io/" target="_blank">Redis</a>. See [Configure Redis Servers](../../../bundles/platform/RedisConfigBundle/configure-redis-servers.md#bundle-docs-platform-redis-bundle-configure-servers)
 for more details.
 

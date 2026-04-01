@@ -295,7 +295,7 @@ There are several things you can do to improve Doctrine performance:
   $query->execute();
   ```
 
-More recommendations on improving Doctrine performance are available on the <a href="https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/improving-performance.html" target="_blank">Doctrine website</a>.
+More recommendations on improving Doctrine performance are available on the <a href="https://www.doctrine-project.org/projects/doctrine-orm/en/latest/reference/improving-performance.html" target="_blank">Doctrine website</a>.
 
 ## Optimize Message Queue Consumers
 

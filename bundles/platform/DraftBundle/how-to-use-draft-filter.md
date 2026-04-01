@@ -4,7 +4,7 @@
 
 To restrict access to draft entities on pages, use a query modification mechanism that is implemented in Doctrine Filters.
 
-Follow the instructions provided in the <a href="https://www.doctrine-project.org/projects/doctrine-orm/en/2.7/reference/filters.html" target="_blank">Doctrine Filters</a> topic for more details.
+Follow the instructions provided in the <a href="https://www.doctrine-project.org/projects/doctrine-orm/en/latest/reference/filters.html" target="_blank">Doctrine Filters</a> topic for more details.
 
 The system already has the `DraftableFilterManager` auxiliary manager that can be used to turn on/off the draft filter.
 

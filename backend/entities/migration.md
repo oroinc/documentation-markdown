@@ -320,8 +320,8 @@ Here is a list of available extensions:
 
 **Commerce**
 
-* <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/PaymentTermBundle/Migration/Extension/PaymentTermExtension.php" target="_blank">PaymentTermExtension</a> - Adds payment term association to the entity.
-* <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/RedirectBundle/Migration/Extension/SlugExtension.php" target="_blank">SlugExtension</a> - Adds slugs to the entity. More information is available in the [RedirectBundle documentation](../../bundles/commerce/RedirectBundle/index.md#bundle-docs-commerce-redireect-bundle-migration-extension).
+* <a href="https://github.com/oroinc/orocommerce/blob/6.1/src/Oro/Bundle/PaymentTermBundle/Migration/Extension/PaymentTermExtension.php" target="_blank">PaymentTermExtension</a> - Adds payment term association to the entity.
+* <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/Oro/Bundle/RedirectBundle/Migration/Extension/SlugExtension.php" target="_blank">SlugExtension</a> - Adds slugs to the entity. More information is available in the [RedirectBundle documentation](../../bundles/commerce/RedirectBundle/index.md#bundle-docs-commerce-redireect-bundle-migration-extension).
 * <a href="https://github.com/oroinc/crm/tree/6.1/src/Oro/Bundle/SalesBundle/Migration/Extension/CustomerExtension.php" target="_blank">CustomerExtension</a> - Adds association between the target customer table and the customer table. More information is available in the [Migration Extension documentation](../../bundles/crm/SalesBundle/index.md#bundle-docs-crm-sales-bundle-migration-extension).
 
 **Platform**

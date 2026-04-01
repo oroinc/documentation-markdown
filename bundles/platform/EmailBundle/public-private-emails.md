@@ -17,7 +17,7 @@ The default list of public email owner entities:
 - <a href="https://github.com/oroinc/crm/tree/6.1/src/Oro/Bundle/ContactBundle/Entity/Contact.php" target="_blank">Contact entity</a>
 - <a href="https://github.com/oroinc/crm/tree/6.1/src/Oro/Bundle/SalesBundle/Entity/Lead.php" target="_blank">Lead entity</a>
 - <a href="https://github.com/oroinc/customer-portal/tree/6.1/src/Oro/Bundle/CustomerBundle/Entity/CustomerUser.php" target="_blank">Customer User entity</a>
-- <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/RFPBundle/Entity/Request.php" target="_blank">RFP Request entity</a>
+- <a href="https://github.com/oroinc/orocommerce/blob/6.1/src/Oro/Bundle/RFPBundle/Entity/Request.php" target="_blank">RFP Request entity</a>
 
 The default list of private email owner entities:
 

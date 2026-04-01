@@ -94,7 +94,7 @@ Web catalogs can only be assigned to websites, not customers or customer groups.
 
 ## Web Catalogs and Consents
 
-Customers want and deserve to feel their data is safe when shopping online, that is why online businesses must comply with data protection regulations, such as <a href="https://ccpa-info.com/" target="_blank">CCPA</a> or <a href="https://www.eugdpr.org/" target="_blank">GDPR</a>. One of the data protection obligations is to give customers greater access to their personal information and let them have more control over it. OroCommerce allows you to [create and manage customer consents](../../back-office/system/consent-management/index.md#system-consent-management) while enabling buyers to view, manage, and revoke these in your storefront.
+Customers want and deserve to feel their data is safe when shopping online, that is why online businesses must comply with data protection regulations, such as <a href="https://oag.ca.gov/privacy/ccpa/" target="_blank">CCPA</a> or <a href="https://www.eugdpr.org/" target="_blank">GDPR</a>. One of the data protection obligations is to give customers greater access to their personal information and let them have more control over it. OroCommerce allows you to [create and manage customer consents](../../back-office/system/consent-management/index.md#system-consent-management) while enabling buyers to view, manage, and revoke these in your storefront.
 
 #### NOTE
 See [Consent Management Concept Guide](../administration/consents/index.md#user-guide-consents) for more information on data protection.

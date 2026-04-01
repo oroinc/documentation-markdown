@@ -9,7 +9,7 @@ Infrastructure-related environment variable defaults are stored in the  *.env-ap
 * The `ORO_WEBSOCKET_` environment variables define settings for the web UI.
 * The `ORO_SEARCH_ENGINE_DSN` environment variable is used to connect to the search engine.
 * The `ORO_WEBSITE_SEARCH_ENGINE_DSN` environment variable is used to connect to the website search engine.
-* The `ORO_SESSION_DSN` value specifies the PHP <a href="https://symfony.com/doc/6.4/components/http_foundation/session_configuration.html#save-handlers" target="_blank">session handler</a> to be used.
+* The `ORO_SESSION_DSN` value specifies the PHP <a href="https://symfony.com/doc/current/session.html#store-sessions-in-a-key-value-database-redis" target="_blank">session handler</a> to be used.
 * The `ORO_MQ_DSN` environment variable is used to connect to the message queue transport.
 * The `ORO_SECRET` value is used to generate <a href="https://symfony.com/doc/6.4/security/csrf.html" target="_blank">CSRF tokens</a>.
 * The `ORO_ENTERPRISE_LICENCE` value defines the project enterprise license.

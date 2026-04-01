@@ -257,7 +257,7 @@ Data sharding allows to improve OroCommerce operation and accelerate database pe
 
 #### `slug`
 
-This attribute is set for <a href="https://github.com/oroinc/orocommerce/tree/6.1/src/OroBundle/RedirectBundle/Entity/SluggableInterface.php" target="_blank">SluggableInterface</a>.
+This attribute is set for <a href="https://github.com/oroinc/orocommerce/blob/6.1/src/Oro/Bundle/RedirectBundle/Entity/SluggableInterface.php" target="_blank">SluggableInterface</a>.
 
 * **source** *string* - slug source field name.
 

@@ -16,6 +16,6 @@ Are you keeping an eye on the growing digital commerce trend? Find out how you c
 > * [Configure Redis Servers](configure-redis-servers.md#bundle-docs-platform-redis-bundle-configure-servers)
 > * [Configure Application to Use Redis](configuration.md#bundle-docs-platform-redis-bundle-configuration)
 > * <a href="https://github.com/nrk/predis" target="_blank">Predis Documentation</a>
-> * <a href="https://redis.io/docs/management/sentinel/" target="_blank">Redis Sentinel Documentation</a>
+> * <a href="https://redis.io/docs/latest/develop/reference/sentinel-clients/" target="_blank">Redis Sentinel Documentation</a>
 > * <a href="https://redis.io/topics/cluster-tutorial" target="_blank">Redis Cluster Tutorial</a>
 <!-- Frontend -->

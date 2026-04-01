@@ -29,7 +29,7 @@ To create an integration with OpenAI as the AI content generator of choice:
    |-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    | **Name**          | Provide the name for the integration you are creating to refer to it in the Oro application.                                                                                                                  |
    | **Label**         | Provide a name that will be displayed as a choice of AI Generator selector in the [System Configuration](../../configuration/system/integrations/ai-settings.md#admin-configuration-ai-integration-settings). |
-   | **Token**         | Provide a token generated on the page of <a href="https://platform.openai.com/account/api-keys" target="_blank">OpenAI API Keys</a>.                                                                          |
+   | **Token**         | Provide a token generated on the page of <a href="https://platform.openai.com/api-keys" target="_blank">OpenAI API Keys</a>.                                                                                  |
    | **Model**         | Select the model that will generate the result, e.g., gpt-4o-mini. Click **Check OpenAI Connection** to make sure the connection has been established successfully.                                           |
    | **Default Owner** | Select the owner of the integration.                                                                                                                                                                          |
 

@@ -92,7 +92,7 @@ See [Set Up SMTP for Applications on OroCloud](../onboarding/smtp.md#orocloud-sm
 
 Oro application uses Redis cluster to store cache which optimizes processing of complex operations. Redis Sentinel provides high availability for Redis cluster via the automatic failover and failure detection.
 
-See <a href="https://redis.io/docs/management/sentinel/" target="_blank">Redis Sentinel Documentation</a> for more information.
+See <a href="https://redis.io/docs/latest/develop/reference/sentinel-clients/" target="_blank">Redis Sentinel Documentation</a> for more information.
 
 ### File Storage
 
