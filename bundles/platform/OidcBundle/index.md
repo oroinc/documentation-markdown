@@ -30,3 +30,4 @@ For more details on how to configure the OIDC integration with **OpenID Connect*
 * [Configure User Provisioning and SCIM Synchronization](../../../user/back-office/system/configuration/system/general-setup/user.md#admin-configuration-user-settings-scim)
 * [Configure Okta Provisioning Service](../../../user/back-office/system/configuration/system/general-setup/user.md#okta-provisioning-service)
 * [Configure Microsoft Entra Provisioning Service](../../../user/back-office/system/configuration/system/general-setup/user.md#microsoft-entra-provisioning-service)
+* [LDAP Integration](../../../user/back-office/system/integrations/ldap-integration.md#user-guide-ldap-integration)

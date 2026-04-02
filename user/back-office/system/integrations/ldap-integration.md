@@ -2,6 +2,9 @@
 
 # Configure LDAP Integration in the Back-Office
 
+#### HINT
+This section is part of the [Identity Management Concept Guide](../../../concept-guides/administration/identity-management/index.md#concept-guide-identity-management) topic that provides a general understanding of external identity systems supported by OroCommerce.
+
 Single sign-on capability (the ability for users to use the same login credentials for all corporate applications) is
 particularly important for efficiency and performance in large-scale companies. LDAP Integration in Oro application supports this capability.
 
