@@ -32,7 +32,7 @@ For faster navigation between the configuration menu sections, use [Quick Search
 2. To enable guest access to the storefront, select the **Enable Guest Access** checkbox.
 3. To disable guest access globally, clear the **Enable Guest Access** checkbox.
 
-   When the option is disabled, the following additional configuration options become available (available starting from OroCommerce version 6.1.7):
+   When the option is disabled, the following additional configuration options become available:
    * **Allow Guest Access to System Pages** — Select the system pages that should remain available to guest users when guest access is disabled.
    * **Allow Guest Access to Landing Pages** — Select the landing (CMS) pages that should remain available to guest users when guest access is disabled.
 

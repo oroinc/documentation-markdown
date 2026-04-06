@@ -11,7 +11,7 @@ Configuration of Operation declares all aspects related to a specific operation:
 * frontend configuration
 * operation dialog parameters
 
-Structure of configuration is declared in the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ActionBundle/Configuration/Configuration.php" target="_blank">configuration.php</a> file.
+Structure of configuration is declared in the <a href="https://github.com/oroinc/platform/blob/7.0/src/Oro/Bundle/ActionBundle/Configuration/Configuration.php" target="_blank">configuration.php</a> file.
 
 ## Configuration File
 

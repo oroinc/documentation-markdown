@@ -26,6 +26,7 @@ The payment method supports the following payment actions:
 * `purchase` - the meta payment action that automatically chooses between `authorize` and `charge` based on the Stripe Payment Element payment method integration settings.
 * `capture` - the payment is captured after it was authorized.
 * `cancel` - the payment is canceled.
+* `confirm` - to confirm the given Stripe Payment Intent when a user comes after a payment from external URL.
 * `refund` - the payment is refunded.
 * `re_authorize` - the payment is re-authorized after it was previously authorized but not captured.
 
@@ -60,5 +61,6 @@ The effective Stripe API version used by Stripe Payment Element payment method i
 * [Re-authorization](reauthorization.md)
 * [Webhook Events](webhook-events.md)
 * [Invoice Payments](invoice-payments.md)
+* [Checkout Payments](checkout-payments.md)
 
 <!-- Frontend -->

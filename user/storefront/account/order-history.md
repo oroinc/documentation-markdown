@@ -51,9 +51,6 @@ There is also an option download a PDF version of any placed order directly from
 
 ![Illustration of the Order Download Button in the storefront](user/img/system/config_commerce/order/order-pdf.png)
 
-#### NOTE
-Order PDF functionality is available as of OroCommerce version 6.1.6.
-
 To print an order, click on the **Print** button on the top right and follow the instructions on your device.
 
 #### NOTE

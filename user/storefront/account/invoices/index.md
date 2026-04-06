@@ -2,9 +2,6 @@
 
 # Manage Invoices in the Storefront
 
-#### NOTE
-The Invoices functionality is available as of OroCommerce version 6.1.3.
-
 The Invoices feature enables customer users to view, download, and pay invoices directly in the OroCommerce storefront. The feature supports one-click payments for individual invoices.
 
 When the invoice functionality is [enabled in the system configuration](../../../back-office/system/configuration/commerce/sales/global-invoices.md#configuration-guide-commerce-configuration-sales-invoices), you can view customer’s invoices under **My Profile > Invoices** in the storefront.

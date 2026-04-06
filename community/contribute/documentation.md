@@ -10,7 +10,7 @@ If you are willing to contribute — you are totally welcome. The information be
 
 ## Before You Begin
 
-The use of the documentation is subject to the <a href="https://github.com/oroinc/documentation/blob/master/LICENSE" target="_blank">CC-BY-NC-SA 4.0</a> license.
+The use of the documentation is subject to the <a href="https://github.com/oroinc/documentation/blob/7.0/LICENSE" target="_blank">CC-BY-NC-SA 4.0</a> license.
 
 Before submitting your documentation changes in a pull request, please sign our <a href="https://oroinc.com/b2b-ecommerce/contributor-license-agreement/" target="_blank">Contributor License Agreement</a> (CLA). The CLA must be signed for any code or documentation changes to be accepted.
 
@@ -31,7 +31,7 @@ For large volume of  updates, fixes, and enhancements please use the following p
      ```
 
      #### HINT
-     By default, this command builds only the current branch. To build documentation as it appears on the website, including version selection in the index, set the appropriate variables MAINTENANCE_BRANCHES=5.1|6.0|6.1|master. To generate the documentation in **Markdown** format instead of HTML, set the `BUILDER="markdown"` variable.
+     By default, this command builds only the current branch. To build documentation as it appears on the website, including version selection in the index, set the appropriate variables MAINTENANCE_BRANCHES=5.1|6.0|6.1|7.0|master. To generate the documentation in **Markdown** format instead of HTML, set the `BUILDER="markdown"` variable.
 
 ## Update Documentation
 

@@ -1,3 +1,6 @@
+#### IMPORTANT
+You are viewing the upcoming documentation for OroCloud, scheduled for release later in 2025. For accurate and up-to-date information, please refer only to the documentation of <a href="https://doc.oroinc.com/cloud/" target="_blank">the latest LTS version</a>.
+
 # Configuration in Different Environments
 
 A typical OroCloud project has at least 2 environments: “prod” and “stage”. The OroCloud application can be <a href="https://doc.oroinc.com/cloud/maintenance/advanced-use/" target="_blank">configured using orocloud.yaml file</a>.
@@ -46,7 +49,7 @@ and basic auth enabled in dev environment only using orocloud_dev.yaml:
 ## [Deprecated] Git Branches Approach
 
 #### IMPORTANT
-Migrate to Environment Type Approach, because of [Application Packages](basic-use.md#orocloud-maintenance-use-upgrade) feature conflicts.
+Migrate to Environment Type Approach, because of [Application Packages](run-upgrades.md#orocloud-maintenance-use-upgrade) feature conflicts.
 
 One of the solutions is to create different Git branches for different environments, taking the following steps:
 
@@ -73,7 +76,7 @@ One of the solutions is to create different Git branches for different environme
 ## [Deprecated] Composer Script Approach
 
 #### IMPORTANT
-Migrate to Environment Type Approach, because of [Application Packages](basic-use.md#orocloud-maintenance-use-upgrade) feature conflicts.
+Migrate to Environment Type Approach, because of [Application Packages](run-upgrades.md#orocloud-maintenance-use-upgrade) feature conflicts.
 
 You can solve this problem without adding new branches in the repository.
 

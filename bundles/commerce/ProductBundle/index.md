@@ -2,7 +2,7 @@
 
 # OroProductBundle
 
-<a href="https://github.com/oroinc/orocommerce/tree/master/src/Oro/Bundle/ProductBundle" target="_blank">OroProductBundle</a> adds the Product entity to the OroCommerce application, provides UI for the OroCommerce back-office user to create and manage simple or configurable products and product brands, and enables the configuration of product presentation in the storefront via the system configuration menu.
+<a href="https://github.com/oroinc/orocommerce/tree/7.0/src/Oro/Bundle/ProductBundle" target="_blank">OroProductBundle</a> adds the Product entity to the OroCommerce application, provides UI for the OroCommerce back-office user to create and manage simple or configurable products and product brands, and enables the configuration of product presentation in the storefront via the system configuration menu.
 
 ## Related Documentation
 

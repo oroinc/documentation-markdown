@@ -2,7 +2,7 @@
 
 # OroAddressBundle
 
-<a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/AddressBundle" target="_blank">OroAddressBundle</a> introduces the base entity and interfaces for addresses and address-related entities such as a country, a region, a phone, and an email. It also provides a dictionary with country region codes and names.
+<a href="https://github.com/oroinc/platform/tree/7.0/src/Oro/Bundle/AddressBundle" target="_blank">OroAddressBundle</a> introduces the base entity and interfaces for addresses and address-related entities such as a country, a region, a phone, and an email. It also provides a dictionary with country region codes and names.
 
 <a id="bundle-docs-platform-address-bundle-address-type"></a>
 
@@ -131,5 +131,9 @@ Oro\Bundle\ContactBundle\Entity\Contact:
         addresses:
             - Oro\Bundle\AddressBundle\Validator\Constraints\UniqueAddressTypes: ~
 ```
+
+## Related Documentation
+
+* [CLI Commands (AddressBundle)](commands.md#bundle-docs-platform-address-bundle-commands)
 
 <!-- Frontend -->

@@ -2,7 +2,7 @@
 
 # OroCatalogBundle
 
-<a href="https://github.com/oroinc/orocommerce/tree/master/src/Oro/Bundle/CatalogBundle" target="_blank">OroCatalogBundle</a> defines the master catalog and the categories that are aimed at structuring products in OroCommerce.
+<a href="https://github.com/oroinc/orocommerce/tree/7.0/src/Oro/Bundle/CatalogBundle" target="_blank">OroCatalogBundle</a> defines the master catalog and the categories that are aimed at structuring products in OroCommerce.
 
 The bundle provides the ability to manage categories and assign products to them.
 
@@ -38,7 +38,7 @@ The breadcrumb logic follows SEO best practices:
 - The current page is automatically excluded from the breadcrumbs on all pages.
 - Breadcrumbs that consist of only one item are automatically removed.
 
-This logic is applied by default across the storefront (as of OroCommerce 6.1.2) and does not require manual configuration.
+This logic is applied by default across the storefront and does not require manual configuration.
 
 ## Performance notes
 

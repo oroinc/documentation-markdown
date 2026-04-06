@@ -47,9 +47,6 @@ To create a new content widget:
 
   In addition, you can control how each slide’s image loads using the **Loading** and **Fetch Priority** options. **Loading** defines when the image is loaded (*Lazy* or *Eager*), while **Fetch Priority** defines its importance for page load (*Auto*, *High*, or *Low*). Use *Eager* and *High* for images that are visible immediately when the page opens. Prefer *Lazy* with *Auto* or *Low* for images shown after sliding or placed lower on the page.
 
-  #### NOTE
-  For existing sliders created before **Loading** and **Fetch Priority** options were introduced in OroCommerce v.6.1.7, image loading behavior is preserved and images continue to load eagerly by default.
-
 ![Image slider content widget form](user/img/marketing/content_widgets/image_slider_1.png)
 * **Product Mini Block** - Enables you to add a block with product information with or without prices and/or the **Add to Shopping List** button.
 
@@ -80,10 +77,6 @@ Once the widget is saved, add it to the **Customer Dashboard Content Widget** fi
 ![Illustrating the created 5 content widgets on the customer user’s Dashboard page](user/img/marketing/content_widgets/customer-dashboard-content-widget.png)
 
 <a id="content-widgets-dashboard-scorecard-widget"></a>
-
-#### NOTE
-The Scorecard content widget is available as of OroCommerce version 6.1.2.
-
 * **Scorecard** - Enables you to add a block of key business metrics in a compact, easy-to-read format to the customer user’s [Dashboard](../../../storefront/account/dashboard/index.md#storefront-dashboard) page in the My Account section. The scorecard is shown only if the current customer user has appropriate *View* permissions for the corresponding entity. If the customer user has *View – None* permission, the respective scorecard will not be displayed. Scorecards represent the following metrics:
   * **Users** – Displays the total number of customer users under the current customer, including all customer users on lower hierarchy levels (e.g., divisions or sub-accounts). The block visibility is based on the *View* permission on the *Customer User* entity.
   * **Shopping Lists** – Shows the number of shopping lists available to the current customer user. The block visibility is based on the *View* permission on the *Shopping List* entity.

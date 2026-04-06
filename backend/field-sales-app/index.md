@@ -18,7 +18,7 @@ If you are not installing the <a href="https://github.com/oroinc/sales-frontend"
 
 ### Field Sales Application System Requirements
 
-* Node.js is version 22 or higher
+* Node.js is version 24 or higher
 * PNPM is version 9 or higher
 * You have received access and cloned the <a href="https://github.com/oroinc/field-sales-frontend" target="_blank">Field Sales application</a> source code from GitHub. Once you have the application in place, proceed with one of the installation options described below.
 

@@ -2,7 +2,7 @@
 
 # OroPayPalBundle
 
-<a href="https://github.com/oroinc/orocommerce/tree/master/src/Oro/Bundle/PayPalBundle" target="_blank">OroPayPalBundle</a> adds <a href="https://www.paypal.com/" target="_blank">PayPal</a> integration to the OroCommerce application. For the OroCommerce back-office administrator, the bundle provides the ability to enable and configure PayPal payment methods for customer orders. Once PayPal payment methods are enabled, customer users can pay for orders using their existing PayPal account or credit and debit cards.
+<a href="https://github.com/oroinc/orocommerce/tree/7.0/src/Oro/Bundle/PayPalBundle" target="_blank">OroPayPalBundle</a> adds <a href="https://www.paypal.com/" target="_blank">PayPal</a> integration to the OroCommerce application. For the OroCommerce back-office administrator, the bundle provides the ability to enable and configure PayPal payment methods for customer orders. Once PayPal payment methods are enabled, customer users can pay for orders using their existing PayPal account or credit and debit cards.
 
 ## Testing PayPal Response
 

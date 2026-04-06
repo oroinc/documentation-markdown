@@ -32,7 +32,7 @@ This guide demonstrates how to set up [Docker and Symfony Server development sta
 
    ![Configure WSL 2 on the docker side](img/backend/setup/wsl/docker-wsl2-config.png)
 5. Log into Ubuntu 20.04 LTS using Windows Terminal. All the below commands will be executed in it.
-6. Install php 8.4 with all required extensions to Ubuntu 20.04 LTS:
+6. Install php 8.5 with all required extensions to Ubuntu 20.04 LTS:
 
    #### HINT
    It is recommended to run all commands one by one to make sure they exit successfully and avoid missing potential warnings. If you have unreliable connection leading to command failure, please rerun it.
@@ -41,28 +41,33 @@ This guide demonstrates how to set up [Docker and Symfony Server development sta
    sudo apt install software-properties-common
    sudo add-apt-repository -y ppa:ondrej/php
    sudo apt update
-   sudo apt -y install php8.4 php8.4-fpm php8.4-cli php8.4-pdo php8.4-mysqlnd php8.4-xml php8.4-soap php8.4-gd php8.4-zip php8.4-intl php8.4-mbstring php8.4-opcache php8.4-curl php8.4-bcmath php8.4-ldap php8.4-pgsql php8.4-dev php8.4-mongodb
+   sudo apt -y install php8.5 php8.5-fpm php8.5-cli php8.5-pdo php8.5-mysqlnd php8.5-xml php8.5-soap php8.5-gd php8.5-zip php8.5-intl php8.5-mbstring php8.5-opcache php8.5-curl php8.5-bcmath php8.5-ldap php8.5-pgsql php8.5-dev php8.5-mongodb
    ```
 
 > You will be prompted to type in your password as you are running the commands as a sudo user.
 1. Configure PHP:
    ```none
-   echo -e "memory_limit = 2048M \nmax_input_time = 600 \nmax_execution_time = 600 \nrealpath_cache_size=4096K \nrealpath_cache_ttl=600 \nopcache.enable=1 \nopcache.enable_cli=0 \nopcache.memory_consumption=512 \nopcache.interned_strings_buffer=32 \nopcache.max_accelerated_files=32531 \nopcache.save_comments=1" | sudo tee -a  /etc/php/8.4/fpm/php.ini
-   echo -e "memory_limit = 2048M" | sudo tee -a  /etc/php/8.4/cli/php.ini
+   echo -e "memory_limit = 2048M \nmax_input_time = 600 \nmax_execution_time = 600 \nrealpath_cache_size=4096K \nrealpath_cache_ttl=600 \nopcache.enable=1 \nopcache.enable_cli=0 \nopcache.memory_consumption=512 \nopcache.interned_strings_buffer=32 \nopcache.max_accelerated_files=32531 \nopcache.save_comments=1" | sudo tee -a  /etc/php/8.5/fpm/php.ini
+   echo -e "memory_limit = 2048M" | sudo tee -a  /etc/php/8.5/cli/php.ini
    ```
-2. Install Node.js 22:
+2. Install Node.js 24:
    ```none
    sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
-   curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+   curl -sL https://deb.nodesource.com/setup_24.x | sudo -E bash -
    sudo apt -y install nodejs
    ```
-3. Install Composer:
+3. Install PNPM 10 Using NPM:
    ```none
-   php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && php composer-setup.php
-   php -r "unlink('composer-setup.php');"
-   sudo mv composer.phar /usr/bin/composer
+   npm install -g pnpm@latest-10
    ```
-4. Install Symfony Server:
+4. Install Composer:
+
+> ```none
+> php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && php composer-setup.php
+> php -r "unlink('composer-setup.php');"
+> sudo mv composer.phar /usr/bin/composer
+> ```
+1. Install Symfony Server:
    ```none
    sudo apt -y install libnss3-tools
    wget https://get.symfony.com/cli/installer -O - | bash
@@ -76,7 +81,7 @@ This guide demonstrates how to set up [Docker and Symfony Server development sta
 
    An example of importing a certificate in Chrome:
    ![Opening certificates in Chrome settings](img/backend/setup/wsl/chrome-certificates-2.png)![Importing certificate to Chrome](img/backend/setup/wsl/import-certificate-3.png)
-5. Configure the network. WSL 2 changes the way networking is configured compared to WSL 1. You need to enable proxy of traffic to permit the traffic through the Windows firewall.
+2. Configure the network. WSL 2 changes the way networking is configured compared to WSL 1. You need to enable proxy of traffic to permit the traffic through the Windows firewall.
 
    Run in Ubuntu `ip addr | grep eth0` to see the IP address of the WSL 2 virtual machine.
    ![IP address of WSL 2 virtual machine](img/backend/setup/wsl/ip-addr-ubuntu.png)
@@ -85,7 +90,7 @@ This guide demonstrates how to set up [Docker and Symfony Server development sta
 
    Configure Windows Defender Firewall, as illustrated below:
    ![Configure Windows Defender Firewall step 1](img/backend/setup/wsl/firewall-1.png)![Configure Windows Defender Firewall step 2](img/backend/setup/wsl/firewall-2.png)![Configure Windows Defender Firewall step 3](img/backend/setup/wsl/firewall-3.png)![Configure Windows Defender Firewall step 4](img/backend/setup/wsl/firewall-4.png)![Configure Windows Defender Firewall step 5](img/backend/setup/wsl/firewall-5.png)![Configure Windows Defender Firewall step 6](img/backend/setup/wsl/firewall-6.png)
-6. Restart the terminal and the web browser to get them ready.
+3. Restart the terminal and the web browser to get them ready.
 
 ## What’s Next
 

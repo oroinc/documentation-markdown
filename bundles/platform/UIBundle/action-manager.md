@@ -79,6 +79,6 @@ The hook property can also accept multiple properties:
 ```
 
 #### HINT
-See more examples in ActionManager.addAction <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/UIBundle/Resources/public/js/app/modules/jstree-actions-module.js" target="_blank">oroui/js/app/modules/jstree-actions-module.js</a>
+See more examples in ActionManager.addAction <a href="https://github.com/oroinc/platform/blob/7.0/src/Oro/Bundle/UIBundle/Resources/public/js/app/modules/jstree-actions-module.js" target="_blank">oroui/js/app/modules/jstree-actions-module.js</a>
 
 <!-- Frontend -->

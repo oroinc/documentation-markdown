@@ -2,7 +2,7 @@
 
 # OroCMSBundle
 
-<a href="https://github.com/oroinc/orocommerce/tree/master/src/Oro/Bundle/CMSBundle" target="_blank">OroCMSBundle</a> adds content management features to the Oro application. The bundle enables the back-office users to create and modify CMS pages and customize a customer login page. It also enables developers to create content blocks and content widgets.
+<a href="https://github.com/oroinc/orocommerce/tree/7.0/src/Oro/Bundle/CMSBundle" target="_blank">OroCMSBundle</a> adds content management features to the Oro application. The bundle enables the back-office users to create and modify CMS pages and customize a customer login page. It also enables developers to create content blocks and content widgets.
 
 ## Related Documentation
 

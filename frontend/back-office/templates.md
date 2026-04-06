@@ -12,7 +12,7 @@ See the detailed documentation in:
 ## Find Twig Templates
 
 To find the Twig template file and Twig block that is used for rendering
-specific block of a content, you can use <a href="https://github.com/oroinc/twig-inspector/blob/master/Bundle/Resources/doc/usage.md" target="_blank">Twig Inspector</a>. The inspector enables
+specific block of a content, you can use <a href="https://github.com/oroinc/twig-inspector/blob/7.0/Bundle/Resources/doc/usage.md" target="_blank">Twig Inspector</a>. The inspector enables
 you to navigate instantly from a Browser to the Twig template that opens automatically in a PhpStorm.
 
 ## Override Twig Templates

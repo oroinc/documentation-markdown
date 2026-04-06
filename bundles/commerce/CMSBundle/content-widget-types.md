@@ -62,9 +62,6 @@ services:
 
 ## Scorecard
 
-#### NOTE
-The Scorecard content widget is available as of OroCommerce version 6.1.2.
-
 To extend and add a new type of scorecard for selection in this widget, create a custom scorecard provider that implements `Oro\Bundle\CommerceBundle\ContentWidget\Provider\ScorecardInterface` and tag it with oro_commerce.scorecard.
 
 ```php
@@ -111,8 +108,5 @@ oro_commerce.content_widget.scorecards.open_quotes:
     tags:
         - { name: oro_commerce.scorecard }
 ```
-
-#### NOTE
-See the user documentation on [Content Widgets Management](../../../user/concept-guides/content-management/content-widgets.md#concept-guide-content-widgets) for more details about various content widgets available in the system and their configuration.
 
 <!-- Frontend -->

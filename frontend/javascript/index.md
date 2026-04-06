@@ -345,7 +345,7 @@ Curious to learn more about <a href="https://oroinc.com/b2b-ecommerce/what-is-b2
 * [Quick Start Guide](js-quick-start.md)
 * [JavaScript Modularity](javascript-modularity.md)
 * [JavaScript UnitTests](js-unittests.md)
-* [Managing NPM dependencies with Composer](composer-js-dependencies.md)
+* [Managing PNPM dependencies with Composer](composer-js-dependencies.md)
 * [Component Shortcuts](component-shortcuts.md)
 * [Page Component](page-component.md)
 * [Registry](registry.md)

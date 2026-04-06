@@ -10,7 +10,7 @@ To get started, you must install Docker and the Docker Compose plugin. While you
 
 ## Configure Jenkins
 
-The configuration that adds Jenkins locally is in the <a href="https://github.com/oroinc/docker-build" target="_blank">docker-build</a> repository containing the necessary Docker Compose configuration and Jenkins Configuration as Code. The <a href="https://github.com/oroinc/docker-build/blob/master/jenkins/README.md" target="_blank">jenkins</a> folder in the repository acts as a self-contained package, bundling all the necessary components and configurations to build Jenkins locally.
+The configuration that adds Jenkins locally is in the <a href="https://github.com/oroinc/docker-build" target="_blank">docker-build</a> repository containing the necessary Docker Compose configuration and Jenkins Configuration as Code. The <a href="https://github.com/oroinc/docker-build/blob/7.0/jenkins/README.md" target="_blank">jenkins</a> folder in the repository acts as a self-contained package, bundling all the necessary components and configurations to build Jenkins locally.
 
 To start, first, specify the GID of the docker group in the DOCKER_GROUP_ID variable in the .env file. To determine the GID, use the following command:
 
@@ -72,7 +72,7 @@ Currently, the Jenkins setup has been configured to allow anyone to have unrestr
 Out of the box, we provide two default jobs to exemplify the functionality of Jenkins:
 
 * **Docker Pipeline Example**: This job serves as a pipeline job example, showcasing how you can define and execute CI/CD workflows using the Jenkins Pipeline syntax. Access this job by navigating to `http://localhost:8080/job/docker-pipeline`.
-* **Oro Commerce Application**: This job demonstrates a more comprehensive pipeline by executing a Jenkinsfile from the repository located at `https://github.com/oroinc/orocommerce-application.git`. The job clones the repository’s 6.1.0 tag, builds the application, creates runtime, test, init, and init-test images, and performs code style and unit tests. The Jenkinsfile also provides an example of running functional and behat tests (commented out). You can explore this job at `http://localhost:8080/job/orocommerce-application`.
+* **Oro Commerce Application**: This job demonstrates a more comprehensive pipeline by executing a Jenkinsfile from the repository located at `https://github.com/oroinc/orocommerce-application.git`. The job clones the repository’s 7.0.0 tag, builds the application, creates runtime, test, init, and init-test images, and performs code style and unit tests. The Jenkinsfile also provides an example of running functional and behat tests (commented out). You can explore this job at `http://localhost:8080/job/orocommerce-application`.
 
 #### NOTE
 Docker service is used on the host where Jenkins is deployed, i.e., Jenkins has the capability to manage Docker on the host machine. As a result of Jenkins’ operations, Docker images are uploaded to the host and instances are created directly on the host. To view the Docker instances created by Jenkins, run `docker ps -a`. To view the Docker images, run `docker image ls`.

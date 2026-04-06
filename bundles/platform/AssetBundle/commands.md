@@ -21,10 +21,6 @@ php bin/console oro:assets:build default
 ```
 
 ```none
-php bin/console oro:assets:build blank
-```
-
-```none
 php bin/console oro:assets:build admin.oro
 ```
 
@@ -83,10 +79,10 @@ The `--force-warmup` option can be used to warm up the asset-config.json cache:
 php bin/console oro:assets:build --force-warmup
 ```
 
-The `--npm-install` option can be used to reinstall npm dependencies in vendor/oro/platform/build folder. It may be required when node_modules contents become corrupted:
+The `--pnpm-install` option can be used to reinstall npm dependencies in vendor/oro/platform/build folder. It may be required when node_modules contents become corrupted:
 
 ```none
-php bin/console oro:assets:build --npm-install
+php bin/console oro:assets:build --pnpm-install
 ```
 
 The `--skip-css`, `--skip-js`, `--skip-babel`, `--skip-sourcemap`, `--skip-rtl` and `--skip-svg` options allow to skip building CSS and JavaScript files, skip transpiling Javascript with Babel, skip building sourcemaps, skip building RTL styles and skip building SVG sprite respectively:
@@ -158,7 +154,7 @@ php bin/console assets:install [--symlink]
 ```
 
 ```none
-php bin/console oro:assets:build --npm-install
+php bin/console oro:assets:build --pnpm-install
 ```
 
 The `--force-debug` option will launch the child commands in the debug mode (be default they are launched with `--no-debug`):

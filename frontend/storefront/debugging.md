@@ -54,7 +54,7 @@ block views**, it shows the **layout context items** information.
 ## Twig Inspector
 
 The instrument that helps find twig templates and blocks and is used for rendering HTML pages faster during development.
-See <a href="https://github.com/oroinc/twig-inspector/blob/master/Bundle/Resources/doc/usage.md" target="_blank">Twig Inspector documentation</a> for more details.
+See <a href="https://github.com/oroinc/twig-inspector/blob/7.0/Bundle/Resources/doc/usage.md" target="_blank">Twig Inspector documentation</a> for more details.
 
 ## Debug Layout Blocks
 

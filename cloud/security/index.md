@@ -2,6 +2,9 @@
 
 <a id="cloud-security"></a>
 
+#### IMPORTANT
+You are viewing the upcoming documentation for OroCloud, scheduled for release later in 2025. For accurate and up-to-date information, please refer only to the documentation of <a href="https://doc.oroinc.com/cloud/" target="_blank">the latest LTS version</a>.
+
 # Security
 
 ## Network Segmentation

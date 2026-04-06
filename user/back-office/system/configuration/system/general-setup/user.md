@@ -32,11 +32,11 @@ Under **Sharing Records**, activate or deactivate the ability to share entity re
 
 ## User Provisioning
 
-#### NOTE
-The SCIM synchronization is available as of OroCommerce Enterprise version 6.1.7.
-
 #### HINT
 This section is part of the [Identity Management Concept Guide](../../../../../concept-guides/administration/identity-management/index.md#concept-guide-identity-management) topic that provides a general understanding of external identity systems supported by OroCommerce.
+
+#### NOTE
+The SCIM synchronization is only available in the Enterprise edition.
 
 Under **User Provisioning**, configure the SCIM (System for Cross-domain Identity Management) protocol in the Oro application. This setup allows you to import and synchronize users from external identity systems, such as Microsoft Entra ID or Okta, into Oro. Once imported, these users can log into Oro via Microsoft Entra Single Sign-On or Okta Single Sign-On.
 

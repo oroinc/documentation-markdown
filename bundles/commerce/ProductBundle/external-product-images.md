@@ -10,7 +10,7 @@ The rule of thumb is to decide how product images field should work before you c
 #### NOTE
 Switching to the externally stored product images flow disables [Digital Asset Manager](../../../user/back-office/marketing/digital-assets/index.md#digital-assets) for that field.
 
-Below you can find an example of how to switch to the externally stored product images flow manually.
+Below you can find an example of how to manually switch to the externally stored product images flow.
 
 1. Create the migration that switches attachment.is_stored_externally entity field config to true:
    *src/Acme/Bundle/DemoBundle/Migrations/Schema/v1_0/EnableIsStoredExternallyForProductImage.php*

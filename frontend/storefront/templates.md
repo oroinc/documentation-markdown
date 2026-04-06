@@ -27,7 +27,7 @@ Each layout block is rendered with a **Twig block**, as in:
 
 Twig blocks are organized to Twig files named **block themes**.
 
-For instance, <a href="https://github.com/oroinc/orocommerce/blob/6.1/src/Oro/Bundle/ProductBundle/Resources/views/layouts/default/oro_product_frontend_product_view/layout.html.twig" target="_blank">this block theme</a> is used as a theme for the product display page.
+For instance, <a href="https://github.com/oroinc/orocommerce/blob/7.0/src/Oro/Bundle/ProductBundle/Resources/views/layouts/default/oro_product_frontend_product_view/layout.html.twig" target="_blank">this block theme</a> is used as a theme for the product display page.
 
 <a id="dev-doc-frontend-twig-block-names"></a>
 
@@ -115,7 +115,7 @@ themes, see <a href="https://symfony.com/doc/6.4/form/form_themes.html" target="
 ## Locate Block Themes
 
 To find the block theme Twig file and the Twig block that is used for rendering a
-specific block of content, you can use <a href="https://github.com/oroinc/twig-inspector/blob/master/Bundle/Resources/doc/usage.md" target="_blank">Twig Inspector</a> that enables
+specific block of content, you can use <a href="https://github.com/oroinc/twig-inspector/blob/7.0/Bundle/Resources/doc/usage.md" target="_blank">Twig Inspector</a> that enables
 you to navigate instantly from a Browser to the Twig template which opens
 automatically in a PhpStorm.
 

@@ -2,7 +2,7 @@
 
 # AddressValidationBundle
 
-<a href="https://github.com/oroinc/customer-portal/tree/master/src/Oro/Bundle/AddressValidationBundle" target="_blank">AddressValidationBundle</a> implements an address validation feature that uses address validation aware integration to find address suggestions for the entered address and show them to the user.
+<a href="https://github.com/oroinc/customer-portal/tree/7.0/src/Oro/Bundle/AddressValidationBundle" target="_blank">AddressValidationBundle</a> implements an address validation feature that uses address validation aware integration to find address suggestions for the entered address and show them to the user.
 
 ## Configuration
 

@@ -1,4 +1,4 @@
-# Upgrade Website Index to Elasticsearch >=8.4, <9.0
+# Upgrade Website Index to Elasticsearch >=9.2, <10.0
 
 You have only one option to perform the upgrade: via full reindexation.
 
@@ -14,7 +14,7 @@ So, once you have turned on maintenance mode through `app/console lexik:maintena
 
 1. <a href="https://www.elastic.co/guide/en/elasticsearch/reference/master/stopping-elasticsearch.html" target="_blank">Stop old Elasticsearch</a>
 2. Modify credentials for search engine configuration in the corresponding environment variables
-3. <a href="https://www.elastic.co/guide/en/elasticsearch/reference/master/starting-elasticsearch.html" target="_blank">Start the Elasticsearch</a> 8.\* service.
+3. <a href="https://www.elastic.co/guide/en/elasticsearch/reference/master/starting-elasticsearch.html" target="_blank">Start the Elasticsearch</a> 9.\* service.
 
 Proceed with the [standard upgrade procedure](../../../backend/setup/upgrade-to-new-version.md#upgrade-application).
 
@@ -24,8 +24,8 @@ If you are skipping search indexation during the upgrade or keeping all the indi
 then you have to recreate indices and trigger full indexation manually:
 
 ```bash
-php bin/console oro:elasticsearch:create-standard-indexes --env=prod
-php bin/console oro:search:reindex --env=prod --scheduled
+php bin/console oro:website-elasticsearch:create-website-indexes --env=prod
+php bin/console oro:website-search:reindex --env=prod --scheduled
 ```
 
 #### HINT

@@ -2,7 +2,7 @@
 
 # OroRedirectBundle
 
-<a href="https://github.com/oroinc/orocommerce/tree/master/src/Oro/Bundle/RedirectBundle" target="_blank">OroRedirectBundle</a> enables slug management for the product, category, brand, and landing pages in the OroCommerce storefront.
+<a href="https://github.com/oroinc/orocommerce/tree/7.0/src/Oro/Bundle/RedirectBundle" target="_blank">OroRedirectBundle</a> enables slug management for the product, category, brand, and landing pages in the OroCommerce storefront.
 
 The bundle enables OroCommerce back-office administrators to configure automatic slug generation and related options in the system configuration UI. It also provides the ability for content managers to modify slugs manually for every sluggable page.
 

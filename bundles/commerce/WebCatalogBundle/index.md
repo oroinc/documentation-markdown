@@ -2,7 +2,7 @@
 
 # OroWebCatalogBundle
 
-<a href="https://github.com/oroinc/orocommerce/tree/master/src/Oro/Bundle/WebCatalogBundle" target="_blank">OroWebCatalogBundle</a> enables the OroCommerce back-office administrators to set a different structure and content of the storefront for individual customers, customer groups, or all visitors of the website by combining product pages, category pages, system pages, and product collections into custom catalogs for these audiences.
+<a href="https://github.com/oroinc/orocommerce/tree/7.0/src/Oro/Bundle/WebCatalogBundle" target="_blank">OroWebCatalogBundle</a> enables the OroCommerce back-office administrators to set a different structure and content of the storefront for individual customers, customer groups, or all visitors of the website by combining product pages, category pages, system pages, and product collections into custom catalogs for these audiences.
 
 ## Create a Content Variant
 
@@ -158,12 +158,12 @@ For more details, see <a href="https://doc.oroinc.com/backend/api/storefront/" t
 
 If your content variant is represented by a non-ORM entity, enabling storefront API may be more time-consuming. As an example you can investigate how it is done for the system page content variant:
 
-- <a href="https://github.com/oroinc/orocommerce/blob/6.1/src/Oro/Bundle/WebCatalogBundle/Api/Model/SystemPage.php" target="_blank">SystemPage Model</a>
-- <a href="https://github.com/oroinc/orocommerce/blob/6.1/src/Oro/Bundle/WebCatalogBundle/Resources/config/oro/api_frontend.yml" target="_blank">SystemPage declaration in Resources/config/oro/api_frontend.yml</a>
-- <a href="https://github.com/oroinc/orocommerce/blob/6.1/src/Oro/Bundle/WebCatalogBundle/Api/Repository/SystemPageRepository.php" target="_blank">SystemPageRepository class</a>
-- <a href="https://github.com/oroinc/orocommerce/blob/6.1/src/Oro/Bundle/WebCatalogBundle/Api/Processor/LoadSystemPage.php" target="_blank">LoadSystemPage API processor</a>
-- <a href="https://github.com/oroinc/orocommerce/blob/6.1/src/Oro/Bundle/WebCatalogBundle/Api/Processor/ExpandSystemPageContentVariant.php" target="_blank">ExpandSystemPageContentVariant API processor</a>
-- <a href="https://github.com/oroinc/orocommerce/blob/6.1/src/Oro/Bundle/WebCatalogBundle/Api/Processor/LoadSystemPageContentVariantSubresource.php" target="_blank">LoadSystemPageContentVariantSubresource API processor</a>
+- <a href="https://github.com/oroinc/orocommerce/blob/7.0/src/Oro/Bundle/WebCatalogBundle/Api/Model/SystemPage.php" target="_blank">SystemPage Model</a>
+- <a href="https://github.com/oroinc/orocommerce/blob/7.0/src/Oro/Bundle/WebCatalogBundle/Resources/config/oro/api_frontend.yml" target="_blank">SystemPage declaration in Resources/config/oro/api_frontend.yml</a>
+- <a href="https://github.com/oroinc/orocommerce/blob/7.0/src/Oro/Bundle/WebCatalogBundle/Api/Repository/SystemPageRepository.php" target="_blank">SystemPageRepository class</a>
+- <a href="https://github.com/oroinc/orocommerce/blob/7.0/src/Oro/Bundle/WebCatalogBundle/Api/Processor/LoadSystemPage.php" target="_blank">LoadSystemPage API processor</a>
+- <a href="https://github.com/oroinc/orocommerce/blob/7.0/src/Oro/Bundle/WebCatalogBundle/Api/Processor/ExpandSystemPageContentVariant.php" target="_blank">ExpandSystemPageContentVariant API processor</a>
+- <a href="https://github.com/oroinc/orocommerce/blob/7.0/src/Oro/Bundle/WebCatalogBundle/Api/Processor/LoadSystemPageContentVariantSubresource.php" target="_blank">LoadSystemPageContentVariantSubresource API processor</a>
 
 **Adding scope selectors for content variants is automatic**
 

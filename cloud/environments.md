@@ -2,6 +2,9 @@
 
 <a id="cloud-environments"></a>
 
+#### IMPORTANT
+You are viewing the upcoming documentation for OroCloud, scheduled for release later in 2025. For accurate and up-to-date information, please refer only to the documentation of <a href="https://doc.oroinc.com/cloud/" target="_blank">the latest LTS version</a>.
+
 # Environment Types
 
 Software Development Lifecycle (SDLC) involves multiple activities, such as planning, analysis, design and development, different types of testing, deployment, and maintenance. These activities usually happen in various software environments, which could be classified as **development, testing, staging, and production environments**. Depending on your Oro license, you may have access to a different number and different types of OroCloud environments. However, out-of-license environments can also be requested for an additional cost.

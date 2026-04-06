@@ -172,7 +172,7 @@ stylebook_styles:
 #### NOTE
 Consider declaring separate CSS files for each output to ensure that branding elements such as colors and typography are consistently applied across your entire theme if it is based on the “default” one.
 
-* Run the `npm run build -- --env theme=demo` command to process and combine SCSS files in  `demo`.
+* Run the `pnpm run build -- --env theme=demo` command to process and combine SCSS files in  `demo`.
 * You can use SCSS source maps to find style definitions in a browser and [Oro Frontend Stylebook](css/frontend-stylebook.md#dev-doc-frontend-css-frontend-stylebook) to check how updated styles affect the UI elements.
 
 ## Change Existing Pages Structure
@@ -244,7 +244,7 @@ For example, the `product_view_attribute_group_general_attribute_text_sku` block
 {% endblock %}
 ```
 
-To determine which Twig block is responsible for rendering a specific element on a page, you can use the <a href="https://github.com/oroinc/twig-inspector/blob/master/Bundle/Resources/doc/usage.md" target="_blank">Twig Inspector</a>. First, activate it through the Symfony Profiler. Then, click on the Twig Inspector icon and select the element you want to inspect on the page. The corresponding template will be automatically opened in your IDE.
+To determine which Twig block is responsible for rendering a specific element on a page, you can use the <a href="https://github.com/oroinc/twig-inspector/blob/7.0/Bundle/Resources/doc/usage.md" target="_blank">Twig Inspector</a>. First, activate it through the Symfony Profiler. Then, click on the Twig Inspector icon and select the element you want to inspect on the page. The corresponding template will be automatically opened in your IDE.
 
 To override the template, you need to create a Twig file for the block theme in the same location within your bundle. Then, apply it using the `@setBlockTheme` layout action.
 

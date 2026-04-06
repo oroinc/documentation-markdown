@@ -2,11 +2,11 @@
 
 # Configure OpenID Connect Integrations in the Back-Office
 
-#### NOTE
-This feature is available as of OroCommerce Enterprise version 6.1.7.
-
 #### HINT
 This section is part of the [Identity Management Concept Guide](../../../../concept-guides/administration/identity-management/index.md#concept-guide-identity-management) topic that provides a general understanding of external identity systems supported by OroCommerce.
+
+#### NOTE
+This feature is only available in the Enterprise edition.
 
 The Oro application supports integration with <a href="https://openid.net/developers/how-connect-works/" target="_blank">OpenID Connect</a> (OIDC) to enable **Single Sign-On (SSO)** through third-party identity providers such as **Okta, Microsoft Entra ID, Google**, and other systems that support the OpenID Connect standard.
 

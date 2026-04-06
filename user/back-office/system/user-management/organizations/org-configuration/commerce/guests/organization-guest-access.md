@@ -26,7 +26,7 @@ For faster navigation between the configuration menu sections, use [Quick Search
 
    When **Enable Guest Access** is disabled, the storefront becomes inaccessible to guest users except for the login/forgot/reset password page and any system or landing pages explicitly allowed by the administrator.
 
-   In this case, the following additional options become available (available starting from OroCommerce version 6.1.7):
+   In this case, the following additional options become available:
    * **Allow Guest Access to System Pages** — Select the system pages that should remain available to guest users.
    * **Allow Guest Access to Landing Pages** — Select the landing (CMS) pages that should remain available to guest users.
 3. In the **Anonymous Customer Group Access** section, select a customer user group to represent **Non-authenticated Visitors (guests)** in the storefront. This group is used to define product and catalog visibility rules, as well as other features that depend on customer group settings.

@@ -2,6 +2,9 @@
 
 <a id="cloud-onboarding"></a>
 
+#### IMPORTANT
+You are viewing the upcoming documentation for OroCloud, scheduled for release later in 2025. For accurate and up-to-date information, please refer only to the documentation of <a href="https://doc.oroinc.com/cloud/" target="_blank">the latest LTS version</a>.
+
 # Onboarding
 
 This topic details the onboarding process between you and our customer support team before your Oro application deployment begins.

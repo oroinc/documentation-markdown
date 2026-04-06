@@ -25,7 +25,7 @@ For example, you can integrate with an external payment and shipping system and 
 
 ## Prerequisites
 
-- <a href="https://www.php.net/manual/en/install.php" target="_blank">php 8.4</a>
+- <a href="https://www.php.net/manual/en/install.php" target="_blank">php 8.5</a>
 - <a href="https://getcomposer.org/" target="_blank">Composer</a>
 - The latest version of <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a>
 - The <a href="https://sites.google.com/chromium.org/driver/" target="_blank">ChromeDriver</a> binary for your platform

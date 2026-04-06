@@ -24,9 +24,6 @@ To assign an order status globally:
    * **Generate PDF When Order is Created** — When this option is enabled, a PDF is generated after an order is placed. To include the PDF in the email, navigate to **System > Emails > Templates** in the back-office menu, open the edit page of the Order Confirmation Email template, and select Order Default PDF Template in the [Attachments field](../../../emails/email-templates.md#email-templates-attachments).
 
    ![Screenshot of the back-office Email Templates edit page showing the Order Confirmation template. The Attachments field is highlighted, with the Order Default PDF Template selected to include the PDF in confirmation emails.](user/img/system/config_commerce/order/order-pdf-template-attachment.png)
-
-   #### NOTE
-   Order PDF functionality is available as of OroCommerce version 6.1.6.
 4. Click **Save Settings**.
 
 **Related Topic**

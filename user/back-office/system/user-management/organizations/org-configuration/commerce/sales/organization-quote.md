@@ -26,10 +26,6 @@ Keep in mind that the following options must be enabled, too:
 4. Clear the **Use System** checkbox to change the value.
 5. In the **General** section, customize the following options:
    * **Enable Quote (Storefront)** — the option to display or hide the Quote section under the Account menu for registered customers.
-
-   #### NOTE
-   The Enable Quote Project Name feature was introduced in OroCommerce versions 6.1.3 and 6.1.4.
-
    * **Enable Quote Project Name** — this option enables project name management for quotes in the storefront. In the back-office, the feature is enabled automatically if it is turned on for an organization or for at least one website within that organization. Once active, a Project Name field appears on quote edit pages, and a Project Name column is added to the quotes grid in the back-office. The project name serves as an optional identifier that helps users search for and track quotes by name, particularly when records originate from external systems or third parties.
 6. In the **Guest Quote** section, select the **Enable Guest Quote** checkbox to generate unique links for sending quotes to guest users.
 7. Click **Save Settings**.

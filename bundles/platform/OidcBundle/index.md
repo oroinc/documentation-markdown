@@ -3,7 +3,7 @@
 # OroOidcBundle
 
 #### NOTE
-This bundle is available as of OroPlatform Enterprise version 6.1.7.
+This bundle is only available in the Enterprise edition.
 
 OroOidcBundle adds support for the **OpenID Connect** to the Oro applications. It enables SSO via 3-rd party systems like Okta, Microsoft Enta, Google, and others that support OpenID Connect.
 

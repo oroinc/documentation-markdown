@@ -2,7 +2,7 @@
 
 # OroTaxBundle
 
-<a href="https://github.com/oroinc/orocommerce/tree/master/src/Oro/Bundle/TaxBundle" target="_blank">OroTaxBundle</a> introduces tax-related features in the OroCommerce application.
+<a href="https://github.com/oroinc/orocommerce/tree/7.0/src/Oro/Bundle/TaxBundle" target="_blank">OroTaxBundle</a> introduces tax-related features in the OroCommerce application.
 
 The bundle enables back-office users to create taxes, configure tax types for products, customers, and jurisdictions, as well as setup tax application rules based on the tax types.
 
@@ -14,7 +14,7 @@ The bundle also provides an interface that enables developers to implement integ
 
 You can add your own custom tax logic with custom tax provider.
 
-1. Create tax provider that implements <a href="https://github.com/oroinc/orocommerce/blob/6.1/src/Oro/Bundle/TaxBundle/Provider/TaxProviderInterface.php" target="_blank">TaxProviderInterface</a> interface:
+1. Create tax provider that implements <a href="https://github.com/oroinc/orocommerce/blob/7.0/src/Oro/Bundle/TaxBundle/Provider/TaxProviderInterface.php" target="_blank">TaxProviderInterface</a> interface:
 
 ```php
 namespace Acme\Bundle\DemoBundle\Provider;

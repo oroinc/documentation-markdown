@@ -2,7 +2,7 @@
 
 # OroOrderBundle
 
-<a href="https://github.com/oroinc/orocommerce/tree/master/src/Oro/Bundle/OrderBundle" target="_blank">OroOrderBundle</a> adds the Order entity to the OroCommerce application and enables OroCommerce users in the back-office and customer users in the storefront to create and manage orders. In addition, it adds the Previously Purchased Products functionality.
+<a href="https://github.com/oroinc/orocommerce/tree/7.0/src/Oro/Bundle/OrderBundle" target="_blank">OroOrderBundle</a> adds the Order entity to the OroCommerce application and enables OroCommerce users in the back-office and customer users in the storefront to create and manage orders. In addition, it adds the Previously Purchased Products functionality.
 
 ## Related Documentation
 

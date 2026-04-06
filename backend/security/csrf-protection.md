@@ -24,16 +24,15 @@ use Oro\Bundle\SecurityBundle\Attribute\Acl;
 use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
 use Oro\Bundle\SecurityBundle\Attribute\CsrfProtection;
 use Oro\Bundle\SecurityBundle\ORM\Walker\AclHelper;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Symfony\Bridge\Twig\Attribute\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Security\Acl\Voter\FieldVote;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 /**
  * Contains CRUD actions for Favorite
  */
-#[Route(path: '/favorite', name: 'acme_demo_favorite_')]
     #[CsrfProtection]
 #[Route(path: '/favorite', name: 'acme_demo_favorite_')]
 class FavoriteController extends AbstractController

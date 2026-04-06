@@ -10,9 +10,6 @@ To apply user login-related options in your Oro application instance:
 
 ## Configure User Login Form
 
-#### NOTE
-The feature is available as of OroCommerce version 6.1.5.
-
 In the User Login Form section, configure the ability for a user to sign in to the back-office with a username and password.
 
 * **Enable Username/Password Login** - When this option is enabled, users can sign in to the back-office with a username and password, and all features related to passwords will be available. If you disable this option, password login will be turned off for all users, including you and administrators. Consequently, all password-related features will also become unavailable.
@@ -118,12 +115,3 @@ In the Two-Factor Authentication section, configure the following options:
 ![Two-factor authentication field in system configuration settings](user/img/system/config_system/authentication.png)
 * **Code Validity Period** — This option determines how long the authentication code will be valid. If not used within the validity period, the code expires and the user must log in again. By default, the option is set to 1 hour.
 * **Code Length** — This option determines the number of characters in authentication code. By default, the option is set to 6.
-
-## LDAP Users
-
-In the LDAP Users section, configure the following option:
-
-#### NOTE
-**Disable Local Password Change/Reset for LDAP Users** is available as of OroCommerce version 6.1.7.
-
-* **Disable Local Password Change/Reset for LDAP Users** — This configuration option controls whether back-office users whose accounts are synchronized from LDAP can manage their passwords locally in the Oro application. When enabled, LDAP users (identified by a non-empty *LDAP Distinguished Names* field in their profile) cannot change their password on the My User page, use the *Forgot your password?* flow, or have their password reset by administrators.

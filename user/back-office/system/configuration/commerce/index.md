@@ -63,9 +63,9 @@ Learn how to enable the quick order form, promotions, guest shopping lists, esta
 
 * [Quick Order Form](sales/guest-quick-order-global.md#user-guide-system-configuration-commerce-sales-quick-order-form-global)
 * [Promotions](sales/promotions-settings.md#sys-config-commerce-sales-promotions)
+* [Invoices](sales/global-invoices.md#configuration-guide-commerce-configuration-sales-invoices)
 * [Request for Quote](sales/rfq.md#configuration-guide-commerce-configuration-sales-rfq)
 * [Checkout](sales/global-checkout-config.md#user-guide-system-configuration-commerce-sales-checkout)
-* [Recurring Orders](sales/global-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders)
 * [Order History (Open Orders)](sales/open-orders.md#configuration-guide-commerce-configuration-sales-order-history)
 * [Multi Shipping Options](sales/global-multi-shipping.md#user-guide-system-configuration-commerce-sales-multi-shipping)
 * [Contacts](sales/contacts.md#sys-conf-commerce-sales-contacts)
