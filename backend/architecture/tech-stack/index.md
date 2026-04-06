@@ -85,7 +85,7 @@ the file storage component.
 
 ### Session Storage
 
-Oro application uses <a href="https://www.php.net/manual/en/intro.session.php" target="_blank">sessions</a> to preserve user data between web requests. This information is placed in a persistent
+Oro application uses <a href="https://www.php.net/manual/en/book.session.php" target="_blank">sessions</a> to preserve user data between web requests. This information is placed in a persistent
 store that can be accessed from subsequent requests. For implementation details, see
 [Session Storage](session-storage.md#backend-session-storage) topic.
 

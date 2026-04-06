@@ -220,7 +220,7 @@ To use the providers we have created previously, we need to create TwigExtension
 >     }
 
 >     #[\Override]
->     public static function getSubscribedServices()
+>     public static function getSubscribedServices(): array
 >     {
 >         return [
 >             AttachmentManager::class,

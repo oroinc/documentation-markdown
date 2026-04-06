@@ -60,13 +60,13 @@ Gotenberg engine is currently the only supported PDF engine in OroPdfGeneratorBu
 
 Gotenberg engine is implemented by the `\Oro\Bundle\PdfGeneratorBundle\Gotenberg\GotenbergPdfEngine` class. In order to introduce the Gotenberg API URL as a PDF option, the bundle declares the `PDF options configurator` - `\Oro\Bundle\PdfGeneratorBundle\Gotenberg\GotenbergPdfOptionsPresetConfigurator`.
 
-The engine is configured to use <a href="https://gotenberg.dev/docs/routes#html-file-into-pdf-route" target="_blank">HTML file into PDF API route of the Gotenberg service</a>, which means that the bundle sends the HTML content and assets via `multipart/form-data` HTTP request to the Gotenberg API. HTML content is rendered from Twig templates. The related assets, i.e., CSS files and images, are automatically collected during the rendering process by `PDF template renderer`.
+The engine is configured to use <a href="https://gotenberg.dev/docs/convert-with-chromium/convert-html-to-pdf" target="_blank">HTML file into PDF API route of the Gotenberg service</a>, which means that the bundle sends the HTML content and assets via `multipart/form-data` HTTP request to the Gotenberg API. HTML content is rendered from Twig templates. The related assets, i.e., CSS files and images, are automatically collected during the rendering process by `PDF template renderer`.
 
 #### HINT
 For more details about rendering `PDF templates`, see [PDF Template Renderer](pdf-template-renderer.md#bundle-docs-platform-pdf-generator-bundle-pdf-template-renderer) .
 
 #### NOTE
-Take into account the restrictions for header and footer rendering, as assets are not loaded. For more information, see <a href="https://gotenberg.dev/docs/routes#header-footer-chromium" target="_blank">Gotenberg Documentation: Headers and Footers</a>.
+Take into account the restrictions for header and footer rendering, as assets are not loaded. For more information, see <a href="https://gotenberg.dev/docs/convert-with-chromium/convert-html-to-pdf#header--footer" target="_blank">Gotenberg Documentation: Headers and Footers</a>.
 
 ## Related Documentation
 

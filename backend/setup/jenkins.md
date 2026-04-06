@@ -10,7 +10,7 @@ To get started, you must install Docker and the Docker Compose plugin. While you
 
 ## Configure Jenkins
 
-The configuration that adds Jenkins locally is in the <a href="https://github.com/oroinc/docker-build" target="_blank">docker-build</a> repository containing the necessary Docker Compose configuration and Jenkins Configuration as Code. The <a href="https://github.com/oroinc/docker-build/jenkins/README.md" target="_blank">jenkins</a> folder in the repository acts as a self-contained package, bundling all the necessary components and configurations to build Jenkins locally.
+The configuration that adds Jenkins locally is in the <a href="https://github.com/oroinc/docker-build" target="_blank">docker-build</a> repository containing the necessary Docker Compose configuration and Jenkins Configuration as Code. The <a href="https://github.com/oroinc/docker-build/blob/master/jenkins/README.md" target="_blank">jenkins</a> folder in the repository acts as a self-contained package, bundling all the necessary components and configurations to build Jenkins locally.
 
 To start, first, specify the GID of the docker group in the DOCKER_GROUP_ID variable in the .env file. To determine the GID, use the following command:
 

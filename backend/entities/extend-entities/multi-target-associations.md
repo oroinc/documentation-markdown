@@ -274,7 +274,7 @@ class CommentExtension implements ExtendExtensionAwareInterface
         $targetTable  = $schema->getTable($targetTableName);
 
         if (empty($targetColumnName)) {
-            $primaryKeyColumns = $targetTable->getPrimaryKeyColumns();
+            $primaryKeyColumns = $targetTable->getPrimaryKey()->getColumns();
             $targetColumnName  = array_shift($primaryKeyColumns);
         }
 

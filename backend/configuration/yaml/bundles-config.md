@@ -36,7 +36,7 @@ oro_api:
     max_entities:         -1
 
     # The maximum number of related entities that can be retrieved by a request.
-    max_related_entities: 100
+    max_related_entities: 1000
 
     # The maximum number of entities that can be deleted by one request.
     max_delete_entities:  100
@@ -563,6 +563,96 @@ oro_calendar:
     enabled_system_calendar: system
 ```
 
+## oro_commerce_mcp
+
+The default configuration for extension with alias “oro_commerce_mcp”:
+
+```yaml
+oro_commerce_mcp:
+
+    # The application name to be exposed to MCP clients.
+    app:                  ~ # Required
+
+    # The application version to be exposed to MCP clients.
+    version:              ~ # Required
+
+    # Instructions in Markdown format describing MCP server purpose and usage context (for LLMs).
+    # The instructions should start with a top-level section name, for example:
+    # # Critical Rules
+    #
+    # If several bundles provide instructions with the same top-level sections, their contents will be merged.
+    instructions:         null
+
+    # The maximum number of items returned per MCP list request.
+    pagination_limit:     50
+
+    # MCP HTTP transport configuration.
+    http:                 # Required
+
+        # MCP HTTP endpoint path.
+        path:                 ~ # Required
+
+        # The authorization server scopes required for accessing MCP server.
+        scopes:               [] # Required
+
+        # MCP session store configuration.
+        session:
+
+            # The session store type.
+            store:                file # One of "cache"; "memory"; "file"
+
+            # The prefix for cache store.
+            cache_prefix:         ~
+
+            # The directory for file store.
+            directory:            ~
+
+            # The session TTL in seconds.
+            ttl:                  3600
+
+    # MCP services discovery configuration.
+    discovery:
+
+        # Example:
+        # - { base_path: Acme\Bundle\McpBundle\AcmeMcpBundle, scan_dirs: [Mcp] }
+
+        # Prototype
+        -
+
+            # The base path for scanning directories. Also can be PHP class.
+            base_path:            ~
+
+            # The list of directories (relative to the base path) to scan.
+            scan_dirs:            [] # Required
+
+            # The list of directories (relative to the base path) to exclude from the scan.
+            exclude_dirs:         []
+
+    # API related configuration.
+    api:                  # Required
+
+        # The API type that is used to group and protect MCP capabilities.
+        type:                 ~ # Required
+
+        # The human-readable API name.
+        name:                 ~ # Required
+
+        # Indicates whether API is storefront or back-office.
+        frontend:             false
+
+        # The request type for API that is used by MCP tools based on API.
+        request_type:         []
+
+        # All supported API configuration files for MCP tools based on API.
+        config_files:         []
+
+        # A map between API and MCP data types.
+        data_types:
+
+            # Prototype
+            name:                 ~
+```
+
 ## oro_contact
 
 The default configuration for extension with alias “oro_contact”:
@@ -1003,6 +1093,27 @@ oro_message_queue:
 
             # Prototype
             job_name:             ~
+
+    # The maximum time a job can run when all remaining active children
+    # are stuck in FAILED_REDELIVERED status (redelivery loop).
+    # If the runtime exceeds this value, the job is marked as "stale".
+    redelivery_max_runtime:
+
+        # Examples:
+        # default:           X
+        # jobs:              { '# some_job_type_name': 'Y' }
+
+        # The number of seconds since job start to qualify a job stuck
+        # in a redelivery loop as stale.
+        # If this attribute is not set or set to -1, this check is disabled.
+        default:              ~
+
+        # The number of seconds for specific job types.
+        # The key can be a whole job name or a part of it from the beginning of string to any "."
+        jobs:
+
+            # Prototype
+            job_name:             ~
 ```
 
 ## oro_microsoft_sync
@@ -1127,6 +1238,36 @@ oro_oauth2_server:
 
         # The list of security firewalls for which OAuth 2.0 authorization should be enabled.
         oauth_firewalls:      []
+
+    # The list of OAuth protected resources which metadata can be obtained via "/.well-known/oauth-protected-resource/{resourcePath}".
+    protected_resources:
+
+        # Example:
+        # /path/resource:      { name: 'My Resource', supported_scopes: ['data:read'] }
+
+        # Prototype
+        path:
+
+            # The resource name.
+            name:                 ~ # Required
+
+            # The resource route name.
+            route:                ~ # Required
+
+            # The resource route parameters.
+            route_params:
+
+                # Prototype
+                name:                 ~
+
+            # Scopes supported by the resource.
+            supported_scopes:     [] # Required
+
+            # Additional options for the resource.
+            options:
+
+                # Prototype
+                name:                 ~
 ```
 
 ## oro_organization_pro

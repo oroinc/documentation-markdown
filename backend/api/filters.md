@@ -213,7 +213,7 @@ Examples of such filters are <a href="https://github.com/oroinc/platform/blob/ma
 ## Criteria Class
 
 The <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Collection/Criteria.php" target="_blank">Criteria</a> class represents criteria for filtering data returned by ORM queries.
-This class extends the <a href="https://github.com/doctrine/collections/blob/2.0.x/src/Criteria.php" target="_blank">Doctrine Criteria</a> class and adds methods to work with joins.
+This class extends the <a href="https://github.com/doctrine/collections/blob/3.0.x/src/Criteria.php" target="_blank">Doctrine Criteria</a> class and adds methods to work with joins.
 It is required as API filters can be applied to associations at any nesting level.
 
 ## CriteriaConnector Class

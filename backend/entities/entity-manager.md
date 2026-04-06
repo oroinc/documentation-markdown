@@ -6,7 +6,7 @@ Class <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/Ent
 
 **Additional ORM Lifecycle Events**
 
-In addition to standard <a href="https://www.doctrine-project.org/projects/doctrine-orm/en/2.8/reference/events.html#lifecycle-events" target="_blank">Doctrine ORM Lifecycle Events</a>, the OroEntityManager triggers new events:
+In addition to standard <a href="https://www.doctrine-project.org/projects/doctrine-orm/en/latest/reference/events.html#events" target="_blank">Doctrine ORM Lifecycle Events</a>, the OroEntityManager triggers new events:
 
 - *preClose* - The preClose event occurs when the EntityManager#close() operation is invoked, before EntityManager#clear() is invoked.
 

@@ -18,7 +18,7 @@ The multi-org functionality is only available in the Enterprise edition.
 
 Each [organization](../../../back-office/system/user-management/organizations/index.md#user-management-organizations) is an independent organism with a separate inventory, products, and the organization configuration options that may or may not fall back to the [system configuration](../../../back-office/system/configuration/index.md#mc-system-configuration). That is why the master catalog is never replicated in other organizations. Whenever you create a new organization in the same OroCommerce application, a blank category **All Products** is automatically added to the master catalog as a placeholder for your product structure, so you could create and configure a new master catalog specific to this organization.
 
-Consider each available organization in your OroCommerce application as an umbrella that covers one master catalog, multiple web catalogs, and enables you to share products across all websites that belong to this organization.
+Consider each available organization in your OroCommerce application as a container that includes one master catalog, multiple web catalogs, and enables you to share products across all websites that belong to this organization.
 
 ![Illustration of a multi-org application](user/img/products/master_catalog/mc_multi-org.png)
 

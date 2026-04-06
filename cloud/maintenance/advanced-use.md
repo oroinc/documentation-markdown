@@ -251,7 +251,7 @@ orocloud_options:
       'admin':
         type: 'php'
         satisfy: any # Allow access if all (all) or at least one (any) access directive satisfied
-        location: '~ /index\.php/admin(/|$)'
+        location: '~ /index\.php(/admin|$)'
         auth_basic_enable: true
         auth_basic_userlist:
           user3:
@@ -613,8 +613,6 @@ limit_whitelist:
   - '10.1.0.0/22'
 ```
 
-This rule allows an unlimited rate of requests from IP 127.0.0.1 (local host) and subnet 10.1.0.0/22.
-
 `limit_whitelist_uri` —  The list contains regular expressions to define URI of the application which must be limited by `common` zone request rate. This can be used to whitelist URIs that need to receive more requests, e.g., integration URI.
 
 An example of the whitelist:
@@ -623,8 +621,6 @@ An example of the whitelist:
 limit_whitelist_uri:
   - '~(^/admin/test/(.*))'
 ```
-
-This rule allows an unlimited rate of requests to a URI containing the /admin/test/ string.
 
 <!-- note: Allowing access via WAF does not affect the simultaneous connections limits. Use **limit_whitelist** or **limit_whitelist_uri** to set unlimited connectios for a client IP or URI on the server. -->
 
@@ -694,7 +690,7 @@ orocloud_options:
         'admin':
           type: 'php'
           satisfy: any # Allow access if all (all) or at least one (any) access directive satisfied
-          location: '~ /index\.php/admin(/|$)'
+          location: '~ /index\.php(/admin|$)'
           auth_basic_enable: true
           auth_basic_userlist:
             user3:

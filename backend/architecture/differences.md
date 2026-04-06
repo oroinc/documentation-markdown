@@ -53,7 +53,7 @@ With OroPlatform, you can still configure your routes the way you like. As long 
 ## Access Control Lists
 
 <a href="https://symfony.com/doc/6.4/security/acl.html" target="_blank">Access Control Lists</a> (ACLs) usually involve working with the ACL provider, object identities, ACEs, the mask builder, etc. OroPlatform makes
-things more accessible by providing the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/SecurityBundle/Annotation/Acl.php" target="_blank">#[Acl]</a> attribute that you can use to define an ACL and protect a controller in a single step:
+things more accessible by providing the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/SecurityBundle/Acl/AccessLevel.php" target="_blank">#[Acl]</a> attribute that you can use to define an ACL and protect a controller in a single step:
 
 *src/Acme/Bundle/DemoBundle/Controller/BlogController.php*
 ```php
@@ -75,7 +75,7 @@ things more accessible by providing the <a href="https://github.com/oroinc/platf
  }
 ```
 
-Furthermore, once an ACL has been defined, you can reuse it using the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/SecurityBundle/Annotation/AclAncestor.php" target="_blank">#[AclAncestor]</a> attribute:
+Furthermore, once an ACL has been defined, you can reuse it using the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/SecurityBundle/Attribute/AclAncestor.php" target="_blank">#[AclAncestor]</a> attribute:
 
 *src/Acme/Bundle/DemoBundle/Controller/BlogController.php*
 ```php

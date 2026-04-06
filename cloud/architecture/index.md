@@ -95,7 +95,7 @@ See [Set Up SMTP for Applications on OroCloud](../onboarding/smtp.md#orocloud-sm
 
 Oro application uses Redis cluster to store cache which optimizes processing of complex operations. Redis Sentinel provides high availability for Redis cluster via the automatic failover and failure detection.
 
-See <a href="https://redis.io/docs/management/sentinel/" target="_blank">Redis Sentinel Documentation</a> for more information.
+See <a href="https://redis.io/docs/latest/develop/reference/sentinel-clients/" target="_blank">Redis Sentinel Documentation</a> for more information.
 
 ### File Storage
 
@@ -104,6 +104,8 @@ OroCloud environments are configured with a <a href="https://www.mongodb.com/doc
 ## Backups and Restore
 
 Backups of OroCloud environment include the database dump, media files, and either the application source code or the repository commit hash that may be used to retrieve the code.
+
+<a id="cloud-architecture-schedule-backup-retention-policy"></a>
 
 ### Schedule and Backup Retention Policy
 

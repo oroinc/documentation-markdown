@@ -17,5 +17,6 @@
 * [Image Formatters](attachment-bundle-config.md#attachment-bundle-image-formatters)
 * [Enable Debugging Images](attachment-bundle-config.md#attachment-bundle-debug-img)
 * [Image Processing](attachment-bundle-config.md#attachment-image-processing)
+* [Image Metadata Preservation](attachment-bundle-config.md#attachment-metadata-preservation)
 
 <!-- Frontend -->

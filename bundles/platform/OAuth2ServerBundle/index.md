@@ -67,6 +67,11 @@ oro_oauth2_server:
 
         # The full path to the public key file that is used to verify JWT tokens.
         public_key: '%kernel.project_dir%/var/oauth_public.key'
+
+    # The list of OAuth protected resources which metadata can be obtained via "/.well-known/oauth-protected-resource/{resourcePath}".
+    # Example:
+    #  '/path/resource': { name: 'My Resource', route: 'acme.my_resource', supported_scopes: ['data:read'] }
+    protected_resources: []
 ```
 
 #### NOTE

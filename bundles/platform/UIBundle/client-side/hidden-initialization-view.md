@@ -3,16 +3,16 @@
 # HiddenInitializationView ⇐ BaseView
 
 * **Extends:** BaseView
-* **Kind**: global class
+* **Kind:** global class
 
-## new HiddenInitializationView()
+## HiddenInitializationView()
 
-View allows to hide part of the DOM tree until all page components are initialized.
+The **HiddenInitializationView** is used to temporarily hide a section of the DOM until all page components within it are fully initialized.
 
-Usage sample:
+## Usage Example
 
 #### NOTE
-Keep in mind that all div’s attributes are required for valid work.
+All attributes on the <div> element below are required for correct functionality.
 
 ```html
 <div class="invisible"

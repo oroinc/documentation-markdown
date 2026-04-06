@@ -34,12 +34,21 @@ critical_css:
 
 This configuration ensures that the content of the critical.css file is dynamically injected into the page as an inline <style> block.
 
-## Example Output
-
 The injected Critical CSS will look similar to the following:
 
 ```html
 <style>*{box-sizing:border-box}button,input,optgroup,select,textarea{color:inherit}</style>
 ```
+
+To include the Critical CSS as a separate file, you can configure it in the layout.yml file:
+
+```yaml
+critical_css:
+    blockType: style
+    options:
+        content: '=data["theme"].getStylesOutput(context["theme"], "critical_css")'
+```
+
+This configuration ensures that the critical.css file is dynamically injected into the page.
 
 <!-- Frontend -->

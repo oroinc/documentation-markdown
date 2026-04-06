@@ -6,7 +6,7 @@ OroCommerce fulfills individual customer wishes and provides miscellaneous exten
 
 The section focuses on the integrations pre-implemented for your Oro applications and illustrates:
 
-* what payment providers to use to help process different types of payments (OroPay, PayPal, Apruve, Authorize.Net, etc.)
+* what payment providers to use to help process different types of payments (OroPay, PayPal, Authorize.Net, etc.)
 * what shipping methods you can offer your OroCommerce customers (UPS, FedEx)
 * how to set up integrations with payment and shipping services
 * how to use email marketing activities and email marketing automation (Mailchimp, Dotdigital)
@@ -21,7 +21,6 @@ Check the following integrations that can be enabled/disabled and configured in 
   * [Payment Terms](payment-integration/payment-terms/index.md#user-guide-payment-payment-providers-overview-payment-term-config)
   * [OroPay](payment-integration/oropay/index.md#user-guide-payment-oropay)
   * [PayPal Payment Services](payment-integration/paypal-services/index.md#user-guide-payment-payment-providers-overview-paypal)
-  * [Apruve](payment-integration/apruve/index.md#user-guide-payment-payment-providers-overview-apruve)
   * [Authorize.Net](payment-integration/authorizenet/index.md#user-guide-payment-payment-providers-overview-authorizenet)
   * [InfinitePay](payment-integration/infinitepay/index.md#user-guide-payment-payment-providers-overview-infinitepay)
   * [Ingenico](payment-integration/ingenico/index.md#user-guide-payment-payment-providers-overview-ingenico)
@@ -34,6 +33,12 @@ Check the following integrations that can be enabled/disabled and configured in 
   * [UPS](shipping-integration/ups.md#doc-integrations-ups)
   * [FedEx](shipping-integration/fedex.md#doc-integrations-fedex)
   * [DPD](shipping-integration/dpd.md#doc-integrations-dpd)
+* AI Integrations (Open AI and Vertex AI)
+  * [AI Integrations](ai/index.md#user-guide-ai-integrations)
+* OpenID Connect
+  * [OpenID Connect](openid/index.md#user-guide-integrations-openid-connect)
+* OpenAPI Specifications
+  * [OpenAPI Specifications](openapi-specifications/index.md#admin-openapi-specifications)
 * [Google Tag Manager Integration](gtm/index.md#gtm-ga-4-integration)
 * [Dotdigital Integration](dotdigital/index.md#user-guide-dotmailer-overview)
 * [Mailchimp Integration](mailchimp-integration.md#user-guide-mc-integration)
@@ -41,7 +46,3 @@ Check the following integrations that can be enabled/disabled and configured in 
 * [LDAP Integration](ldap-integration.md#user-guide-ldap-integration)
 * Embedded Forms
   * [Embedded Forms](embedded-forms/index.md#admin-embedded-forms)
-* OpenAPI Specifications
-  * [OpenAPI Specifications](openapi-specifications/index.md#admin-openapi-specifications)
-* AI Integrations (Open AI and Vertex AI)
-  * [AI Integrations](ai/index.md#user-guide-ai-integrations)

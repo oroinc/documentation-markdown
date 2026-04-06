@@ -32,10 +32,13 @@ Under **Sharing Records**, activate or deactivate the ability to share entity re
 
 ## User Provisioning
 
+#### HINT
+This section is part of the [Identity Management Concept Guide](../../../../../concept-guides/administration/identity-management/index.md#concept-guide-identity-management) topic that provides a general understanding of external identity systems supported by OroCommerce.
+
 #### NOTE
 The SCIM synchronization is only available in the Enterprise edition.
 
-Under **User Provisioning**, configure the SCIM (System for Cross-domain Identity Management) protocol in the Oro application. This setup allows you to import and synchronize users from external identity systems, such as Microsoft Entra ID or Okta, into Oro. Once imported, these users can log in to Oro via [Microsoft 365 Single Sign-On](../integrations/microsoft-settings/microsoft-single-sign-on.md#user-guide-integrations-microsoft-single-sign-on) or Okta Single Sign-On.
+Under **User Provisioning**, configure the SCIM (System for Cross-domain Identity Management) protocol in the Oro application. This setup allows you to import and synchronize users from external identity systems, such as Microsoft Entra ID or Okta, into Oro. Once imported, these users can log into Oro via Microsoft Entra Single Sign-On or Okta Single Sign-On.
 
 ### Enable SCIM Synchronization
 
@@ -44,6 +47,8 @@ To enable and control SCIM synchronization, set the following options:
 * **Enable SCIM** — Enable or disable the SCIM integration on the global level.
 * **Default Access to Organization Business Units** — Select the organizations and business units that will be automatically assigned to newly synchronized users.
 * **Default Roles** — Select the user roles that new users will receive upon synchronization.
+  > #### IMPORTANT
+  > At least one organization business unit and user role should be configured in order to allow login of imported users.
 * **Extra Fields Handling** — Choose how the system should handle cases when the identity provider sends extra fields. The available options are:
   > * **Return error** (default) — If selected, and the identity provider sends extra fields to Oro, the system will return an error.
   > * **Ignore extra fields** — If selected, and the identity provider sends extra fields to Oro, the system will ignore these fields.
@@ -58,63 +63,99 @@ To enable and control SCIM synchronization, set the following options:
 
 **OroCommerce side**
 
-To configure the user provisioning via <a href="https://help.okta.com/en-us/content/topics/provisioning/lcm/con-okta-prov.htm" target="_blank">Okta provisioning service</a>, make sure you have:
+To configure the user provisioning via <a href="https://help.okta.com/en-us/content/topics/provisioning/lcm/con-okta-prov.htm" target="_blank">Okta provisioning service</a> and allow importing of users from Okta to Oro, make sure you have:
 
-1. Configured the SCIM synchronization globally or [per required organization](../../../user-management/organizations/org-configuration/general-setup-org/organization-user-settings.md#admin-configuration-user-settings-org).
+1. Configured the **SCIM synchronization** globally or [per required organization](../../../user-management/organizations/org-configuration/general-setup-org/organization-user-settings.md#admin-configuration-user-settings-org).
    > #### IMPORTANT
    > At least one organization business unit and user role should be configured in order to allow login of imported users.
-2. Created Authorization Code OAuth application as described in the [Create an OAuth Application](../../../user-management/oauth-app.md#oauth-applications) topic.
+2. Created **Authorization Code** OAuth application as described in the [Create an OAuth Application](../../../user-management/oauth-app.md#oauth-applications) topic.
    > #### NOTE
-   > The redirect URL you can see in <a href="https://developer.okta.com/docs/guides/scim-provisioning-integration-prepare/main/#authentication" target="_blank">authentication</a> in the Okta SCIM API documentation. Add a fake URL if you have not yet created an Okta application. The correct URL can be set later.
-3. Copied Client ID and Client secret. For security reasons, the Client Secret is displayed only once – immediately after you have created a new application. You cannot view the Client Secret anywhere in the application once you leave a page with the created application information, so make sure you save it somewhere safe so you can access it later.
+   > You can find the redirect URL in the <a href="https://developer.okta.com/docs/guides/scim-provisioning-integration-prepare/main/#authentication" target="_blank">Okta SCIM API</a> authentication documentation which provides example URLs to use. These URLs include an identifier `{appName}` generated after you create your app integration in Okta. If the Okta application is already created, use the generated URL. Otherwise, you can temporarily specify a placeholder (fake) URL and update it later once the application is created.
+   ![Creating an Okta OAuth app page](user/img/system/config_system/okta_oauth_app.png)
+3. Copied **Client ID** and **Client secret**. For security reasons, the Client Secret is displayed only once – immediately after you have created a new application. You cannot view the Client Secret anywhere in the application once you leave a page with the created application information, so make sure you save it somewhere safe so you can access it later.
+   ![Client Id and Client Secret details of the Okta OAuth app](user/img/system/config_system/okta_client_id_secret.png)
 
 **Okta side**
 
-1. Log in to your Okta Admin Console.
+**Create an Okta app instance**
+
+1. Log into your <a href="https://login.okta.com/" target="_blank">Okta Admin Console</a>.
 2. Navigate to **Applications > Applications**.
 3. Click **Create App Integration**.
 4. Choose **SAML 2.0** sign-in method and click **Next**.
-5. Provide a name and a logo for the new application and click **Next**.
-6. Fill in the form with the following data and click **Next**:
+
+> ![Creating a new app integration on the Okta side](user/img/system/config_system/okta-create-new-app.png)
+1. Provide a name and a logo for the new application and click **Next**.
+2. Fill in the form with the following data and click **Next**:
    > * **Single sign-on URL**: `https://yourapplication`
    > * **Audience URI (SP Entity ID)**: `https://yourapplication`
-7. Specify options that will help Okta Support understand how you configured this application and click **Finish**.
-   > #### NOTE
-   > As the Okta application has been successfully created, you can now add the redirect URL to the OroCommerce OAuth application.
-8. On the application management page, navigate to the **General** tab and click **Edit** in **App Settings**.
-9. Choose **SCIM** provisioning method and click **Save**.
-10. Navigate to the **Provisioning** tab and click **Edit** in **SCIM Connection**.
-11. Fill in the form with the following data and click **Save**:
-    * **SCIM connector base URL**: `https://yourapplication/{backend_prefix}/scim`
-    * **Unique identifier field for users**: `userName`
-    * **Supported provisioning actions**: `Push New Users` and `Push Profile Updates`
-    * **Authentication Mode**: `OAuth 2`
-    * **Access token endpoint URI**: `https://yourapplication/oauth2-token`
-    * **Authorization endpoint URI**: `https://yourapplication/{backend_prefix}/oauth2-token/authorize`
-    * **Client ID**: The Client ID value of the OAuth 2 application
-    * **Client Secret**: The client secret of the OAuth 2 application
-12. Click **Authorize with {your application}** and grant access to your application to Okta.
-13. Navigate to the **Provisioning** tab, click **To App** in the left menu and click **Edit** in **Provisioning to App**.
-14. Fill in the form with the following data and click **Save**:
-    * **Create Users**: Enable
-    * **Update User Attributes**: Enable
-    * **Deactivate Users**: Enable
-15. Navigate to the **Provisioning** tab and click **To App** in the left menu and configure user mapping with the following attributes:
+3. Specify options that will help Okta Support understand how you configured this application and click **Finish**.
 
-    | Attribute        | Attribute Type   | Value                                                                |
-    |------------------|------------------|----------------------------------------------------------------------|
-    | userName         | Personal         |                                                                      |
-    | givenName        | Personal         | user.firstName                                                       |
-    | familyName       | Personal         | user.lastName                                                        |
-    | middleName       | Personal         | user.middleName                                                      |
-    | honorificPrefix  | Personal         | user.honorificPrefix                                                 |
-    | honorificSuffix  | Personal         | user.firstName                                                       |
-    | email            | Personal         | user.email                                                           |
-    | emailType        | Personal         | (user.email != null && user.email != ‘’) ? ‘work’ : ‘’               |
-    | title            | Personal         | user.title                                                           |
-    | primaryPhone     | Personal         | user.primaryPhone                                                    |
-    | primaryPhoneType | Personal         | (user.primaryPhone != null && user.primaryPhone != ‘’) ? ‘work’ : ‘’ |
-16. Navigate to the **Assignments** tab and configure the user to be provisioned.
+**Get Redirect URL**
+
+As the Okta application has been successfully created, you can now add the **Redirect URL** to the OroCommerce OAuth application. You can find the redirect URL example in the <a href="https://developer.okta.com/docs/guides/scim-provisioning-integration-prepare/main/#authentication" target="_blank">Okta SCIM API</a> authentication documentation.
+
+#### NOTE
+Okta requires the **Redirect URL to follow this format**:
+
+> `https://system-admin.okta.com/admin/app/cpc/{appName}/oauth/callback`
+
+> The `{appName}` value is generated when you create your app integration in Okta. You can obtain it from the Admin Console URL after navigating to **Applications > Applications > your app instance**.
+
+> The Admin Console URL has the following format:
+
+> `https://{orgSubDomain}-admin.{oktaEnvironment}.com/admin/app/{appName}/instance/{instanceID}/#tab-general`
+
+> The `{appName}` is the string between `/app/` and `/instance/` in the URL.
+![Retrieving the appName from Okta app instance and pasting into the Redirect URL field of the Oro OAuth application](user/img/system/config_system/okta-app-name.png)
+
+**Edit Okta app instance**
+
+1. On the application details page, navigate to the **General** tab and click **Edit** in **App Settings**.
+2. Choose **SCIM** provisioning method and click **Save**.
+
+> ![Okta app details page](user/img/system/config_system/okta-app-details-page.png)
+1. Navigate to the **Provisioning** tab and click **Edit** in **SCIM Connection**.
+2. Fill in the form with the following data and click **Save**:
+   > * **SCIM connector base URL**: `https://yourapplication/{backend_prefix}/scim`
+   > * **Unique identifier field for users**: `userName`
+   > * **Supported provisioning actions**: `Push New Users` and `Push Profile Updates`
+   > * **Authentication Mode**: `OAuth 2`
+   > * **Access token endpoint URI**: `https://yourapplication/oauth2-token`
+   > * **Authorization endpoint URI**: `https://yourapplication/{backend_prefix}/oauth2-token/authorize`
+   > * **Client ID**: The Client ID value of the OAuth 2 application
+   > * **Client Secret**: The client secret of the OAuth 2 application
+   ![Okta app SCIM connection details page](user/img/system/config_system/okta-app-scim-connection.png)
+3. Click **Authorize with {your application}** and grant access to your application to Okta.
+4. Navigate to the **Provisioning** tab, click **To App** in the left menu and click **Edit** in **Provisioning to App**.
+5. Fill in the form with the following data and click **Save**:
+   > * **Create Users**: Enable
+   > * **Update User Attributes**: Enable
+   > * **Deactivate Users**: Enable
+6. Configure user mapping with the following attributes:
+   > | Attribute        | Attribute Type   | Value                                                                |
+   > |------------------|------------------|----------------------------------------------------------------------|
+   > | userName         | Personal         |                                                                      |
+   > | givenName        | Personal         | user.firstName                                                       |
+   > | familyName       | Personal         | user.lastName                                                        |
+   > | middleName       | Personal         | user.middleName                                                      |
+   > | honorificPrefix  | Personal         | user.honorificPrefix                                                 |
+   > | honorificSuffix  | Personal         | user.firstName                                                       |
+   > | email            | Personal         | user.email                                                           |
+   > | emailType        | Personal         | (user.email != null && user.email != ‘’) ? ‘work’ : ‘’               |
+   > | title            | Personal         | user.title                                                           |
+   > | primaryPhone     | Personal         | user.primaryPhone                                                    |
+   > | primaryPhoneType | Personal         | (user.primaryPhone != null && user.primaryPhone != ‘’) ? ‘work’ : ‘’ |
+7. Navigate to the **Assignments** tab and configure the user to be provisioned.
+
+Once the provision is established, the users that are/will be registered within this Okta app instance will be synced to Oro. Their details will appear under **System > User Management > Users** in the OroCommerce back-office.
+
+![Okta-imported users available under the Users menu in the OroCommerce back-office](user/img/system/config_system/okta-users.png)
+
+#### IMPORTANT
+The next step is to configure the [Okta OpenID Connect](../../../integrations/openid/index.md#user-guide-integrations-openid-connect) integration under **System > Manage Integrations** menu in the back-office to enable synced users to log into Oro via OIDC SSO.
+
+![The Login via Okta button is available on the Oro login page after the Okta OIDC integration is created](user/img/system/config_system/okta-sso-back-office.png)
 
 <a id="microsoft-entra-provisioning-service"></a>
 
@@ -124,11 +165,11 @@ To configure the user provisioning via <a href="https://help.okta.com/en-us/cont
 
 To configure the user provisioning via <a href="https://learn.microsoft.com/en-us/entra/identity/app-provisioning/use-scim-to-provision-users-and-groups#integrate-your-scim-endpoint-with-the-microsoft-entra-provisioning-service" target="_blank">Microsoft Entra provisioning service</a>, make sure you have:
 
-1. Configured the SCIM synchronization globally or [per required organization](../../../user-management/organizations/org-configuration/general-setup-org/organization-user-settings.md#admin-configuration-user-settings-org).
+1. Configured the **SCIM synchronization** globally or [per required organization](../../../user-management/organizations/org-configuration/general-setup-org/organization-user-settings.md#admin-configuration-user-settings-org).
    > #### IMPORTANT
    > At least one organization business unit and user role should be configured in order to allow login of imported users.
-2. Created Client Credentials OAuth application as described in the [Create an OAuth Application](../../../user-management/oauth-app.md#oauth-applications) topic.
-3. Copied Client ID and Client secret. For security reasons, the Client Secret is displayed only once – immediately after you have created a new application. You cannot view the Client Secret anywhere in the application once you leave a page with the created application information, so make sure you save it somewhere safe so you can access it later.
+2. Created **Client Credentials** OAuth application as described in the [Create an OAuth Application](../../../user-management/oauth-app.md#oauth-applications) topic.
+3. Copied **Client ID** and **Client secret**. For security reasons, the Client Secret is displayed only once – immediately after you have created a new application. You cannot view the Client Secret anywhere in the application once you leave a page with the created application information, so make sure you save it somewhere safe so you can access it later.
    > ![image](user/img/system/user_management/oauth/client_creds_app.png)
 
 **Microsoft Entra side**
@@ -156,9 +197,9 @@ To configure the user provisioning via <a href="https://learn.microsoft.com/en-u
    * Disable group synchronization by turning off the **Provision Microsoft Entra ID Groups** mapping
    * Configure **Provision Microsoft Entra ID Users** with the following mapping settings:
 
-   | customappsso Attribute             | Microsoft Entra ID Attribute                                | Matching precedence   |
+   | customappsso Attribute             | Microsoft Entra ID Attribute                                |   Matching precedence |
    |------------------------------------|-------------------------------------------------------------|-----------------------|
-   | userName                           | userPrincipalName                                           | 1                     |
+   | userName                           | userPrincipalName                                           |                     1 |
    | active                             | Switch([IsSoftDeleted], , “False”, “True”, “True”, “False”) |                       |
    | title                              | jobTitle                                                    |                       |
    | emails[type eq “work”].value       | mail                                                        |                       |
@@ -174,7 +215,20 @@ To configure the user provisioning via <a href="https://learn.microsoft.com/en-u
 
 After the initial provisioning cycle begins, go to **Provisioning logs** in the left menu to track its progress. This section displays all the actions performed by the provisioning service for your application.
 
-After the user was synced, you will be able to log in via [Microsoft 365 Single Sign-On](../integrations/microsoft-settings/microsoft-single-sign-on.md#user-guide-integrations-microsoft-single-sign-on) with such synced users.
+Once the provision is established, the users that are/will be registered within this Okta app instance will be synced to Oro. Their details will appear under **System > User Management > Users** in the OroCommerce back-office.
+
+![Microsoft-imported users available under the Users menu in the OroCommerce back-office](user/img/system/config_system/okta-users.png)
+
+#### IMPORTANT
+The next step is to configure the [Microsoft OpenID Connect](../../../integrations/openid/index.md#user-guide-integrations-openid-connect) integration under **System > Manage Integrations** menu in the back-office to enable synced users to log into Oro via OIDC SSO.
+
+![The Login via Microsoft button is available on the Oro login page after the Microsoft OIDC integration is created](user/img/system/config_system/microsoft-sso-back-office.png)
+
+**Related Articles**
+
+* [Identity Management Concept Guide](../../../../../concept-guides/administration/identity-management/index.md#concept-guide-identity-management)
+* [Configure OpenID Connect Integrations in the Back-Office](../../../integrations/openid/index.md#user-guide-integrations-openid-connect)
+* [OroOidcBundle Developer Documentation](../../../../../../bundles/platform/OidcBundle/index.md#bundle-docs-platform-oidcbundle)
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->

@@ -57,7 +57,7 @@ on each request:
    However, the disadvantage is that data should be deserialized every time it is requested.
 3. As a PHP file in the system cache.
    It has the same DX as the previous approach but with two important additional advantages:
-   the deserialization of the data is not needed and the loaded data is cached by <a href="http://php.net/manual/en/intro.opcache.php" target="_blank">OPcache</a>.
+   the deserialization of the data is not needed and the loaded data is cached by <a href="https://www.php.net/manual/en/book.opcache.php" target="_blank">OPcache</a>.
 
 To implement 3rd approach for your configuration, you need to take the following steps:
 

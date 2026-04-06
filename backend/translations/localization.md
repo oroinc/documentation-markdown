@@ -89,7 +89,7 @@ The allowed placeholders are:
 
 ## Date and Numeric Formatting
 
-Both dates and numbers (decimal, percent, or currency) are formatted using the <a href="http://www.php.net/manual/en/intro.intl.php" target="_blank">INTL library</a> functions. Therefore, this library is required, and dates and numbers are formatted according to the installed version of the library.
+Both dates and numbers (decimal, percent, or currency) are formatted using the <a href="https://www.php.net/manual/en/book.intl.php" target="_blank">INTL library</a> functions. Therefore, this library is required, and dates and numbers are formatted according to the installed version of the library.
 
 The application provides formatter services used to format dates and numbers in the backend, which serve as wrappers for the INTL library:
 

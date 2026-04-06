@@ -29,7 +29,7 @@ To create an integration with OpenAI as the AI content generator of choice:
    |-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    | **Name**          | Provide the name for the integration you are creating to refer to it in the Oro application.                                                                                                                  |
    | **Label**         | Provide a name that will be displayed as a choice of AI Generator selector in the [System Configuration](../../configuration/system/integrations/ai-settings.md#admin-configuration-ai-integration-settings). |
-   | **Token**         | Provide a token generated on the page of <a href="https://platform.openai.com/account/api-keys" target="_blank">OpenAI API Keys</a>.                                                                          |
+   | **Token**         | Provide a token generated on the page of <a href="https://platform.openai.com/api-keys" target="_blank">OpenAI API Keys</a>.                                                                                  |
    | **Model**         | Select the model that will generate the result, e.g., gpt-4o-mini. Click **Check OpenAI Connection** to make sure the connection has been established successfully.                                           |
    | **Default Owner** | Select the owner of the integration.                                                                                                                                                                          |
 
@@ -55,7 +55,7 @@ To create and integration with Vertex AI as the AI content generator of choice:
    | **API Endpoint**  | Use the Endpoint value from the VertexAI text playground.                                                                                                                                                     |
    | **Project ID**    | Use the ProjectID value from the VertexAI text playground.                                                                                                                                                    |
    | **Location**      | Use the Location value from the VertexAI text playground                                                                                                                                                      |
-   | **Model**         | Select the model that will generate the result, e.g., [text-bison@001](mailto:text-bison@001). Click **Check Vertex AI Connection** to make sure the connection has been established successfully.            |
+   | **Model**         | Select the model that will generate the result. Click **Check Vertex AI Connection** to make sure the connection has been established successfully.                                                           |
    | **Default Owner** | Select the owner of the integration.                                                                                                                                                                          |
 
 ![Vertex AI integration settings page](user/img/system/integrations/ai/vertex-ai.png)

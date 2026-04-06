@@ -6,3 +6,4 @@
 * [Promotions](organization-new-arrivals.md)
 * [Configurable Products](organization-configurable-products.md)
 * [Customer Settings](organization-customer-settings.md)
+* [Product Import/Export](organization-product-import-export.md)

@@ -132,4 +132,8 @@ Oro\Bundle\ContactBundle\Entity\Contact:
             - Oro\Bundle\AddressBundle\Validator\Constraints\UniqueAddressTypes: ~
 ```
 
+## Related Documentation
+
+* [CLI Commands (AddressBundle)](commands.md#bundle-docs-platform-address-bundle-commands)
+
 <!-- Frontend -->
