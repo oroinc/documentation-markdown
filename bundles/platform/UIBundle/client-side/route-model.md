@@ -2,9 +2,10 @@
 
 # RouteModel
 
-Abstraction of route
+RouteModel provides an abstraction for working with routes and generating URLs dynamically.
+It handles route parameters, query parameters, and caching to simplify building valid API paths.
 
-Basic usage:
+## Basic Usage
 
 ```javascript
 var route = new RouteModel({
@@ -27,74 +28,83 @@ route.getUrl();
 route.getUrl({page: 2})
 ```
 
-**Augment**: BaseModel
+**Augment:** BaseModel
 
-## routeModel._cachedRouteName : String
+## Properties
 
-Route name cache prepared for
+### routeModel._cachedRouteName : String
 
-**Kind**: instance property of RouteModel
-
-## routeModel._requiredParametersCache : Array.<String>
-
-Cached required parameters
+Cache of the route name for faster access.
 
 **Kind**: instance property of RouteModel
 
-## routeModel.defaults : Object
+### routeModel._requiredParametersCache : Array.<String>
+
+Cached list of parameters required to build a valid URL.
 
 **Kind**: instance property of RouteModel
 
-## routeModel.routeName : string
+### routeModel.defaults : Object
 
-Name of the route
-
-**Kind**: instance property of RouteModel
-
-## routeModel.routeQueryParameterNames : Array.<string>
-
-List of acceptable query parameter names for this route
+Default attributes of the model.
 
 **Kind**: instance property of RouteModel
 
-## routeModel.getRequiredParameters() ⇒ Array.<string>
+### routeModel.routeName : string
 
-Return list of parameter names required by this route (Route parameters are required to build valid url, all
-query parameters assumed as filters and are not required)
+Name of the route associated with this model.
 
-E.g., for route api/rest/latest/<relationClass>/<relationId/comments
-This function will return [‘relationClass’, ‘relationId’]
+**Kind**: instance property of RouteModel
+
+### routeModel.routeQueryParameterNames : Array.<string>
+
+List of query parameter names accepted by this route.
+
+**Kind**: instance property of RouteModel
+
+## Methods
+
+### routeModel.getRequiredParameters() ⇒ Array.<string>
+
+Returns a list of parameter names required to build a valid URL.
+Only route parameters are considered required; query parameters are treated as optional filters.
+
+Example:
+For the route api/rest/latest/<relationClass>/<relationId>/comments, this function will return:
+`['relationClass', 'relationId']`
 
 **Kind**: instance method of RouteModel
 
-## routeModel.getAcceptableParameters() ⇒ Array.<string>
+### routeModel.getAcceptableParameters() ⇒ Array.<string>
 
-Return list of parameter names accepted by this route.
-Includes both query and route parameters
+Returns a list of all parameter names accepted by this route, including both route and query parameters.
 
-E.g., for route api/rest/latest/<relationClass>/<relationId/comments?page=<page>&limit=<limit>
-this function will return [‘relationClass’, ‘relationId’, ‘page’, ‘limit’]
-
-**Kind**: instance method of RouteModel
-
-## routeModel.getUrl([parameters]) ⇒ string
-
-Returns url defined by this model
+Example:
+For the route api/rest/latest/<relationClass>/<relationId>/comments?page=<page>&limit=<limit>,
+this function will return:
+`['relationClass', 'relationId', 'page', 'limit']`
 
 **Kind**: instance method of RouteModel
-**Returns**: string - route url
 
-| Param        | Type   | Description            |
-|--------------|--------|------------------------|
-| [parameters] | Object | parameters to override |
+### routeModel.getUrl([parameters]) ⇒ string
 
-## routeModel.validateParameters([parameters]) ⇒ boolean
-
-Validates parameters list
+Generates the URL for this route using the model’s parameters.
+You can override existing parameters by passing an object.
 
 **Kind**: instance method of RouteModel
-**Returns**: boolean - true, if parameters are valid
+**Returns**: string - the generated route URL
 
-| Param        | Type   | Description             |
-|--------------|--------|-------------------------|
-| [parameters] | Object | parameters to build url |
+| Param        | Type   | Description                                                    |
+|--------------|--------|----------------------------------------------------------------|
+| [parameters] | Object | Optional parameters to override defaults when building the URL |
+
+### routeModel.validateParameters([parameters]) ⇒ boolean
+
+Validates that the provided parameters satisfy the requirements for building the URL.
+
+**Kind**: instance method of RouteModel
+**Returns**: boolean - true if parameters are valid
+
+| Param        | Type   | Description                                 |
+|--------------|--------|---------------------------------------------|
+| [parameters] | Object | Parameters to validate for URL construction |

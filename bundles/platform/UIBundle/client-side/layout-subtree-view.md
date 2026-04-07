@@ -2,11 +2,14 @@
 
 # Layout Subtree View
 
-The layout subtree is used to reload content of some layout block via Ajax request.
+The Layout Subtree View allows you to reload the content of a specific layout block via Ajax requests.
+This is useful for updating portions of a page dynamically without performing a full page reload.
 
 ## Initialization
 
-Layout update:
+### Layout Update
+
+Define a layout update in your YAML configuration:
 
 ```yaml
 layout:
@@ -17,7 +20,9 @@ layout:
                 layout_block_id: ~
 ```
 
-Add LayoutSubtreeView in block template:
+### Adding LayoutSubtreeView in Twig Template
+
+Include the LayoutSubtreeView in the block template to enable dynamic reloading:
 
 ```twig
 {% block _layout_block_id_widget %}
@@ -35,7 +40,9 @@ Add LayoutSubtreeView in block template:
 {% endblock %}
 ```
 
-Or initialize in JavaScript:
+### JavaScript Initialization
+
+You can also initialize the view directly in JavaScript:
 
 ```javascript
 var LayoutSubtreeView = require('oroui/js/app/views/layout-subtree-view');
@@ -45,11 +52,20 @@ var layoutSubtree = new LayoutSubtreeView({
     reloadEvents: ['reload-on-event'],
     restoreFormState: true
 });
+```
 
+### Reloading the Layout
+
+After initialization, the layout can be reloaded programmatically:
+
+```javascript
 //then call reload method
 layoutSubtree.reloadLayout();
+```
 
-//or trigger reload event in other script
+Or you can trigger a reload from another script using the mediator:
+
+```javascript
 var mediator = require('oroui/js/mediator');
 mediator.trigger('reload-on-event');
 ```

@@ -17,11 +17,16 @@ Once the widget is added to the dashboard, you can upload a file of an image of 
 
 ![Illustration of the dashboard with a Smart Order widget](user/img/concept-guides/ai/ai-smart-order-flow.png)
 
+#### NOTE
+If [Async Processing](../../system/configuration/system/integrations/global-ai-smart-order.md#admin-configuration-orders-ai-smart-order-settings) is enabled, the uploaded purchase order is processed in the background via the message queue. After uploading a file via the widget, you can click the provided link to check the job status on the **System > Jobs** page, allowing you to monitor progress and review any issues once processing completes.
+
 Any draft created using the AI smart order feature includes a preview of the original uploaded document. You can turn this preview on or off using the Display/Hide Preview button. When the preview is displayed, you can zoom in and out using the controls above the image and move it horizontally by holding the Ctrl (or Command) key while dragging it.
 
 Once you manually amend the fields that require your attention, click the green checkbox near the field to confirm your changes, and then **Save and Close** to close the order edit page. The order will now be available under **Sales > Orders** in the main menu.
 
 ![Illustration of the system making areas of the order as requiring attention](user/img/concept-guides/ai/ai-smart-order-manual-update.png)
+
+If the <a href="https://extensions.oroinc.com/orocommerce/extension/customer-part-number/" target="_blank">Customer Part Number</a> (CPN) extension is installed, [enabled](../../system/configuration/commerce/product/global-customer-settings.md#sys-commerce-product-customer-settings) and [configured to work](../../system/configuration/system/integrations/global-ai-smart-order.md#admin-configuration-orders-ai-smart-order-settings) with the AI Smart Order functionality, you can add and manage customer-specific part numbers for individual line items while the order is in the **Draft** status. Once a product is selected for a line item, a **Set as CPN** option becomes available, allowing you to create, update, or remove CPNs based on the detected SKUs. Any CPNs you define are saved only when you assign a customer to the order and then click **Save** or **Save and Close**. After that, previously added CPNs are no longer editable for that session, though you can add new ones if needed.
 
 #### NOTE
 You can also automate the conversion of purchase orders into draft orders by configuring your system mailbox to allow the AI Smart Order feature to scan incoming emails and extract order details automatically. The purchase orders must be attached to the email in JPG, PNG, or PDF format. For more information, please see the [Email Configuration](../../system/configuration/system/general-setup/global-email.md#admin-configuration-system-mailboxes) guide.

@@ -53,11 +53,11 @@ The shipping methods from the same service provider may be enabled in different 
 
 In the enhanced example, shipping rules enable more diverse shipping methods:
 
-| Shipping Rule   | Sort Order   | Shipping Method         | Surcharge   |
+| Shipping Rule   |   Sort Order | Shipping Method         | Surcharge   |
 |-----------------|--------------|-------------------------|-------------|
-| A               | 1            | UPS Worldwide Expedited | +10$        |
+| A               |            1 | UPS Worldwide Expedited | +10$        |
 |                 |              | UPS Worldwide Express   | +5$         |
-| B               | 2            | UPS Worldwide Expedited | +15$        |
+| B               |            2 | UPS Worldwide Expedited | +15$        |
 |                 |              | UPS Next Day Air        | +5$         |
 
 When both shipping rules apply to an order, the customer user can choose from the following shipping options:

@@ -2,26 +2,33 @@
 
 # SearchApiAccessor
 
-**SearchApiAccessor** ⇐ [ApiAccessor](api-accessor.md#bundle-docs-platform-ui-bundle-apiaccessor). Provides access to the search API for autocomplete.
-This class is by design to be initiated from the server configuration.
+SearchApiAccessor ⇐ [ApiAccessor](api-accessor.md#bundle-docs-platform-ui-bundle-apiaccessor).
+Provides access to the search API for autocomplete functionality.
+This class is designed to be initialized based on server configuration.
 
 **Extends:** ApiAccessor
 
-| Param                       | Type   | Description                                                                                                            |
-|-----------------------------|--------|------------------------------------------------------------------------------------------------------------------------|
-| options                     | Object | Options container Also check the options for [ApiAccessor](api-accessor.md#bundle-docs-platform-ui-bundle-apiaccessor) |
-| options.search_handler_name | string | Name of the search handler to use                                                                                      |
-| options.label_field_name    | string | Name of the property that will be used as a label                                                                      |
-| options.value_field_name    | string | Optional. Name of the property that will be used as an identifier. By default = ‘id’                                   |
+## Constructor Options
+
+| Param                       | Type   | Description                                                                                                       |
+|-----------------------------|--------|-------------------------------------------------------------------------------------------------------------------|
+| options                     | Object | Options container. See also options for [ApiAccessor](api-accessor.md#bundle-docs-platform-ui-bundle-apiaccessor) |
+| options.search_handler_name | string | Name of the search handler to use                                                                                 |
+| options.label_field_name    | string | Name of the property that will be used as a label                                                                 |
+| options.value_field_name    | string | Optional. Name of the property that will be used as an identifier. Defaults to ‘id’                               |
+
+## Methods
 
 ## searchApiAccessor.prepareUrlParameters()
+
+Prepares URL parameters for the search API request.
 
 **Kind**: instance method of SearchApiAccessor
 
 ## searchApiAccessor.formatResult(response) ⇒ Object
 
-Formats response before it is sent out from this api accessor.
-Converts it to form
+Formats the API response before it is returned from this accessor.
+Converts it into the following structure:
 
 ```javascript
 {
@@ -32,6 +39,6 @@ Converts it to form
 
 **Kind**: instance method of SearchApiAccessor
 
-| Param    | Type   |
-|----------|--------|
-| response | Object |
+| Param    | Type   | Description                                    |
+|----------|--------|------------------------------------------------|
+| response | Object | The response object returned by the search API |

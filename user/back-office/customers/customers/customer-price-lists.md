@@ -16,7 +16,7 @@ To change the price list settings for the customer:
    ![The price list section of the Company A customer](user/img/customers/customers/customer_price_lists.png)
    1. Select one of the following values for the **Fallback** option:
       * *Customer Group* — OroCommerce uses [Price Lists from the customer group configuration](../customer-groups/customer-group-price-lists.md#customers-customer-groups-edit-price-lists) to calculate the prices shown in the storefront.
-      * *Current customer only* — OroCommerce uses the configurations (per website) in the current customer group for price calculation.
+      * *Current customer only* — OroCommerce uses the configurations (per website) in the current customer for price calculation.
    2. To add a price list, click **+ Add Price List** and select the price list in the newly added line. After you start typing the price list name, the list of suggestions appears. Press **Enter** or click the suggested value to add the price list.
 
    ![Adding a new price list to the pricelist section](user/img/customers/customers/pricing_pricelist_add.png)

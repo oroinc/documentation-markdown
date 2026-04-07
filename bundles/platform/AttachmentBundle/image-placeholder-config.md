@@ -160,7 +160,7 @@ To do this, perform the following:
 To use the providers we have created previously, we need to create TwigExtension that fetches the Product image in the appropriate dimension or, if the main image is unavailable, provides the placeholder instead.
 
 > ```php
-> // Twig/ProductImageExtension.php
+
 > namespace Acme\Bundle\DemoBundle\Twig;
 
 > use Oro\Bundle\AttachmentBundle\Entity\File;
@@ -213,7 +213,7 @@ To use the providers we have created previously, we need to create TwigExtension
 >     /**
 >      * {@inheritdoc}
 >      */
->     public static function getSubscribedServices()
+>     public static function getSubscribedServices(): array
 >     {
 >         return [
 >             AttachmentManager::class,

@@ -2,13 +2,16 @@
 
 # Items Manager
 
+The Items Manager provides a framework for managing a list of items. It includes a Backbone
+collection for storing items, and jQuery-UI widgets for editing and rendering them in a table.
+
 ## Components
 
 - Backbone collection for storing list of items
-- itemsManagerEditor - [jQuery-UI widget] for binding html inputs to the item
-- itemsManagerTable - [jQuery-UI widget] for rendering list of items
+- itemsManagerEditor - jQuery-UI widget for binding HTML inputs to the item
+- itemsManagerTable - jQuery-UI widget for rendering the list of items
 
-**Example**:
+## Example
 
 Define Backbone.Model for an item:
 
@@ -31,7 +34,7 @@ var ItemCollection = Backbone.Collection.extend({
 });
 ```
 
-Define html for itemsManagerEditor:
+Define HTML for itemsManagerEditor:
 
 ```html
 <div id="editor">
@@ -45,7 +48,7 @@ Define html for itemsManagerEditor:
 </div>
 ```
 
-Define html for itemsManagerTable:
+Define HTML for itemsManagerTable:
 
 ```html
 <table>
@@ -63,7 +66,7 @@ Define html for itemsManagerTable:
 </table>
 ```
 
-Define template file templates/item.html for the item on the list:
+Define template file templates/item.html for the items on the list:
 
 ```none
 <tr data-cid="<%= cid %>">
@@ -83,7 +86,7 @@ Define template file templates/item.html for the item on the list:
 </tr>
 ```
 
-Instantiate item collection:
+Instantiate the item collection:
 
 ```javascript
 var items = new ItemCollection([

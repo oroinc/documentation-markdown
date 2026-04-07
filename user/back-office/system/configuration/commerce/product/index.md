@@ -16,3 +16,4 @@ Learn the key options for setting up products in your Oro application, as well a
 * [Product Collections](product-collections.md#configuration-guide-commerce-configuration-product-collections)
 * [Customer Settings](global-customer-settings.md#sys-commerce-product-customer-settings)
 * [SEO (Breadcrumbs Rendering)](seo.md#sys-commerce-product-seo)
+* [Product Import/Export](product-import-export.md#configuration-guide-commerce-product-import-export)

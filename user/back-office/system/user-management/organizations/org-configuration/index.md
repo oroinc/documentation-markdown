@@ -21,6 +21,7 @@ The following categories of settings are available for system configuration at o
     * [Display Settings](general-setup-org/organization-display-settings.md#configuration-general-setup-display-settings-organization)
     * [Email Configuration](general-setup-org/organization-email-settings.md#admin-configuration-email-configuration-organization)
     * [Currency](general-setup-org/organization-currency.md#admin-configuration-currency-org)
+    * [User Login](general-setup-org/organization-user-login.md#admin-configuration-user-login-form-org)
     * [Upload Settings](general-setup-org/organization-upload-settings.md#configuration-guide-system-configuration-general-setup-sysconfig-upload-settings-organization)
   * Websites
     * [Routing Settings](general-setup-org/organization-routing.md#organization-config-website-routing)
