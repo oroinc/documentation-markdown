@@ -203,14 +203,14 @@ class Scope
 
 and the existing scopes in the scope repository are as follows:
 
-|   id | customer_id   | customer_group_id   | website_id   |
+|   id |   customer_id |   customer_group_id |   website_id |
 |------|---------------|---------------------|--------------|
-|    1 | 1             |                     | 1            |
-|    2 | 2             |                     | 1            |
-|    3 | 1             |                     | 2            |
-|    4 | 1             |                     |              |
-|    5 |               | 1                   | 1            |
-|    6 |               | 1                   |              |
+|    1 |             1 |                     |            1 |
+|    2 |             2 |                     |            1 |
+|    3 |             1 |                     |            2 |
+|    4 |             1 |                     |              |
+|    5 |               |                   1 |            1 |
+|    6 |               |                   1 |              |
 
 To fetch all scopes that match the customer with an id equal to 1, you can use findRelatedScopes and pass *web_content* and ‘customer’=>1 in the parameters.
 
@@ -276,10 +276,10 @@ As you do not pass the context to the scope manager in the getCriteria method, t
 
 The scopes applicable for the current context are:
 
-|   id | customer_id   | customer_group_id   |
+|   id |   customer_id |   customer_group_id |
 |------|---------------|---------------------|
-|    4 | 1             |                     |
-|    6 |               | 1                   |
+|    4 |             1 |                     |
+|    6 |               |                   1 |
 
 Here is the resulting modified query:
 
@@ -311,12 +311,12 @@ oro_website.website_scope_criteria_provider:
 
 In the current context, the website id is 1, and the scopes of the web_content type are:
 
-|   id | customer_id   | customer_group_id   | website_id   |
+|   id |   customer_id |   customer_group_id |   website_id |
 |------|---------------|---------------------|--------------|
-|    1 | 1             |                     | 1            |
-|    4 | 1             |                     |              |
-|    5 |               | 1                   | 1            |
-|    6 |               | 1                   |              |
+|    1 |             1 |                     |            1 |
+|    4 |             1 |                     |              |
+|    5 |               |                   1 |            1 |
+|    6 |               |                   1 |              |
 
 The updated query is automatically changed to the following one:
 

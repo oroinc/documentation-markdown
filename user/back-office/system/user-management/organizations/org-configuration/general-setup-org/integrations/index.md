@@ -4,3 +4,4 @@
 * [Microsoft Settings](organization-microsoft.md)
 * [AI Content Generation](organization-ai-settings.md)
 * [CAPTCHA Settings](organization-captcha.md)
+* [AI Smart Order](organization-ai-smart-order.md)

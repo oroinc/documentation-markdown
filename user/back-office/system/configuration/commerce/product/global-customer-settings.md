@@ -22,4 +22,5 @@ For faster navigation between the configuration menu sections, use [Quick Search
    * **Enable Product Grid Export** — Enable this option to allow customers in the storefront to export selected product data. Once you enable this option and click **Save Settings** on the top right, options **Include Product Prices** and **Include Price Tiers** will be displayed.
    * **Include Product Prices** — Enable this option to add product prices to the exported product data file. Data will be displayed only for the primary unit, minimum quantity and the currency currently selected in the storefront.
    * **Include Price Tiers** — Enable this option to include price tiers to the exported product data file, if available. If product units have no price, they will be omitted in the exported file.
-2. Click **Save Settings**.
+2. If you have a <a href="https://extensions.oroinc.com/orocommerce/extension/customer-part-number/" target="_blank">Customer Part Number</a> extension installed, enable it here under **Customer Part Number** to allow customers to manage CPN per product.
+3. Click **Save Settings**.
