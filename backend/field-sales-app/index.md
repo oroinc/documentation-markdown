@@ -136,18 +136,49 @@ pnpm install
 1. Build the application using:
 
 ```shell
-pnpm run build --mode=development
+pnpm run build
 ```
 
 This will build the application source code in the specified BUILD_DIR (default is dist). Make sure you have the web server configured to serve the files from this directory.
 
-If you want to run the application for development or debugging purposes, or if you do not have the appropriate web server set up, you can use the Vite development server:
+## Linking the Build to OroCommerce
 
-```shell
-pnpm run dev
+To make the compiled Field Sales application accessible via the OroCommerce web server, you must create a symbolic link from the frontend’s `dist` directory to the OroCommerce `public/sales-frontend` directory.
+
+It is recommended to automate this process by adding a custom script to the `scripts` section of your OroCommerce Enterprise root `composer.json` file:
+
+1. **Update composer.json**:
+
+```json
+{
+    "scripts": {
+        "link-sales-frontend-dist": [
+            "rm -f public/sales-frontend",
+            "ln -s ../path-to-field-sales-frontend/dist public/sales-frontend"
+        ]
+    }
+}
 ```
 
-This command will start the Vite development server, which offers features like hot module replacement (HMR) and other development tools. You do not need to configure a web server to serve the application files, as Vite will take care of that during development.
+#### NOTE
+Replace `../path-to-field-sales-frontend/` with the actual relative path to your Field Sales frontend repository.
+
+1. **Run the script**:
+
+From the OroCommerce root directory, execute:
+
+```bash
+composer run-script link-sales-frontend-dist
+```
+
+Once linked, the application will be available at `http://<your-oro-url>/sales-frontend`.
+
+#### HINT
+If you want to run the application for development or debugging purposes, or if you do not have the appropriate web server set up, you can use the Vite development server:
+
+```bash
+pnpm run dev
+```
 
 <!-- Frontend -->
 
