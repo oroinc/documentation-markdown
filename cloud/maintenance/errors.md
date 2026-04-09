@@ -1,8 +1,5 @@
 <a id="orocloud-errors"></a>
 
-#### IMPORTANT
-You are viewing the upcoming documentation for OroCloud, scheduled for release later in 2025. For accurate and up-to-date information, please refer only to the documentation of <a href="https://doc.oroinc.com/cloud/" target="_blank">the latest LTS version</a>.
-
 # Error Processing and Log Monitoring
 
 Troubleshooting performance issues is not always straightforward, as many things can affect application performance, but proper monitoring practice prevents bugs from heavily impacting your production. We, therefore, recommend using <a href="https://cloud.google.com/docs/" target="_blank">Google Cloud Platform</a> <a href="https://console.cloud.google.com/errors" target="_blank">Error Reporting</a> and <a href="https://cloud.google.com/logging/docs/view/overview" target="_blank">Logs Explorer</a> tools to identify slow application requests, analyze the root cause of the issues, and set up notifications for potential errors. These tools can help you build a powerful error-processing flow to keep quality standards high and minimize the number of errors that may slip into your production environment.

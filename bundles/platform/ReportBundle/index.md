@@ -26,4 +26,19 @@ oro_report:
             - 'oro_reportcrm-'
 ```
 
+## Configure Database as Read-Only for Reports
+
+If your dedicated reports database is configured as read-only, you must also specify this in the oro_installer configuration. This ensures the application handles the database correctly and does not attempt to perform write operations on a read-only connection.
+
+To configure the reports database as read-only, add the following configuration to config/config.yml:
+
+```yaml
+oro_installer:
+    database:
+        readonly:
+            - reports
+```
+
+This configuration informs the application that the database connection named “reports” is read-only and should not require write operations.
+
 <!-- Frontend -->

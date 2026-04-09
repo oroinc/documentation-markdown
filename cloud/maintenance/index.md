@@ -2,30 +2,22 @@
 
 <a id="cloud-maintenance"></a>
 
-#### IMPORTANT
-You are viewing the upcoming documentation for OroCloud, scheduled for release later in 2025. For accurate and up-to-date information, please refer only to the documentation of <a href="https://doc.oroinc.com/cloud/" target="_blank">the latest LTS version</a>.
-
 # Maintenance
 
 The OroCloud application maintenance tool helps you to run and control complex maintenance operations with the existing Oro application environment that is hosted in the OroCloud environment.
 
 * [Before You Begin](before-you-begin.md)
-* [Basic Usage](basic-use.md)
-* [Running Upgrades](run-upgrades.md)
-* [Creating Backups](backups.md)
-* [Application Commands](application-commands.md)
-* [Working with Queues](queues.md)
-* [Working with Services](services.md)
-* [Managing Maintenance Mode](maintenance-mode.md)
-* [Working with the Media](media.md)
+* [Maintenance Commands](basic-use.md)
 * [Advanced Configuration](advanced-use.md)
 * [Configuration in Different Environments](dif-environments.md)
 * [Application Upgrade Using Pre-Built Assets](deploy-pre-built-assets.md)
-* [Applying Patches](patches.md)
+* [How to Apply Patches](patches.md)
 * [Error Processing and Log Monitoring](errors.md)
-* [Adding/Removing Scheduled Tasks](scheduled-tasks.md)
-* [Adding/Removing Environment Variables](env-vars.md)
-* [FAQs](faq.md)
+* [How to Add/Remove Scheduled task](scheduled-tasks.md)
+* [How to Add/Remove Environment Variables](env-vars.md)
+* [FAQ](faq.md)
+
+* [Technical support](../support.md#cloud-support) service details (exclusions, priorities, SLA, etc).
 
 #### BUSINESS TIP
 # Business Tip

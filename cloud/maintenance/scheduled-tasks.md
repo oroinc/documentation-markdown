@@ -1,8 +1,5 @@
 <a id="orocloud-maintenance-scheduled-tasks"></a>
 
-#### IMPORTANT
-You are viewing the upcoming documentation for OroCloud, scheduled for release later in 2025. For accurate and up-to-date information, please refer only to the documentation of <a href="https://doc.oroinc.com/cloud/" target="_blank">the latest LTS version</a>.
-
 # How to Add/Remove Scheduled task
 
 Scheduled (<a href="https://en.wikipedia.org/wiki/Cron" target="_blank">cron</a>) tasks can be configured, as illustrated below:
