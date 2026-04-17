@@ -4,6 +4,7 @@
 * [Shopping List](organization-guest-shopping-list.md)
 * [Contacts](organization-sales-info.md)
 * [Checkout](organization-guest-checkout.md)
+* [Recurring Orders](organization-recurring-orders.md)
 * [Request for Quote](organization-guest-rfq.md)
 * [Orders History](organization-orders-history.md)
 * [Multi Shipping Options](organization-multi-shipping.md)
