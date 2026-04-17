@@ -5,6 +5,7 @@
 * [Shopping List](website-guest-shopping-list.md)
 * [Contacts](website-sales-info.md)
 * [Checkout](website-guest-checkout.md)
+* [Recurring Orders](website-recurring-orders.md)
 * [Orders History](website-open-orders.md)
 * [Multi Shipping Options](website-multi-shipping.md)
 * [Quotes](website-quotes.md)

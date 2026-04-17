@@ -10,5 +10,5 @@ Learn how to enable and set up commerce-related features per customer:
 * **Commerce**
   * [Search (Search Terms)](commerce/search/customer-search-settings.md#user-guide-customers-search-settings)
   * [Product (Customer Settings)](commerce/product/customer-product-settings.md#user-guide-customers-customer-settings)
-  * [Sales (Checkout and Invoices)](commerce/sales/index.md#user-guide-customers-sales-settings)
+  * [Sales (Checkout, Recurring Orders and Invoices)](commerce/sales/index.md#user-guide-customers-sales-settings)
   * [Inventory](commerce/inventory/customer-warehouse-settings.md#user-guide-customers-inventory-settings)

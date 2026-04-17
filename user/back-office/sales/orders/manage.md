@@ -82,6 +82,26 @@ To re-order an existing order:
 3. Update the required information. See [Create an Order from Scratch](create.md#user-guide-sales-orders-create) and [Manage Promotions in Orders](../../marketing/promotions/promotions/manage-discounts-in-orders.md#user-guide-sales-orders-promotions) topics for detailed information on the available options.
 4. Click **Save** on the top right of the page.
 
+## Schedule a Recurring Order
+
+Back-office users can schedule a [recurring order](../recurring-orders/index.md#user-guide-sales-recurring-orders) based on an existing order.
+
+To schedule a recurring order from the order view page:
+
+1. Navigate to **Sales > Orders** in the main menu.
+2. Click the required order to open its details page.
+3. Click **Schedule Recurring Order** at the top of the page.
+4. When the new page opens, configure the recurring order schedule by selecting the repeat frequency, start date, and optional end date, as well as selecting which line items to include.
+5. Click **Save and Close**.
+
+![image](user/img/sales/recurring-orders/new-ro.png)
+
+Alternatively, a recurring order can be scheduled directly from the **Orders** grid. Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu for the required order and click **Schedule Recurring Order**.
+
+![image](user/img/sales/recurring-orders/new-ro-grid.png)
+
+Once scheduled, the recurring order is created and managed separately from the original order under **Sales > Recurring Orders** in the back-office menu.
+
 <a id="doc-orders-actions-delete"></a>
 
 ## Delete an Order
@@ -117,6 +137,11 @@ To re-order an existing order:
 
    To clear the selection, select *None*.
 3. In the confirmation dialog, click **Yes, Delete**.
+
+**Related Topics**
+
+* [Configure Recurring Orders Globally](../../system/user-management/organizations/org-configuration/commerce/sales/organization-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders)
+* [Recurring Orders in the Storefront](../../../storefront/account/recurring-orders.md#my-account-recurring-orders)
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->

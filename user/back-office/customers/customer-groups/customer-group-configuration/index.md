@@ -10,5 +10,5 @@ Learn how to enable and set up commerce-related features per customer group:
 * **Commerce**
   * [Search (Search Terms)](commerce/search/customer-group-search-terms-settings.md#user-guide-customer-groups-configuration-settings-search)
   * [Product (Customer Settings)](commerce/product/customer-group-product-customer-settings.md#user-guide-customer-groups-customer-settings)
-  * [Sales (Checkout & Invoices)](commerce/sales/index.md#user-guide-customer-group-sales-settings)
+  * [Sales (Checkout, Recurring Orders & Invoices)](commerce/sales/index.md#user-guide-customer-group-sales-settings)
   * [Inventory](commerce/inventory/customer-group-warehouse-settings.md#user-guide-customers-customer-group-inventory-settings)
