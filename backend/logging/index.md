@@ -261,4 +261,28 @@ Usually it can be necessary for services that log with INFO and above levels and
 
 You should add the logger in the Decorator of the service and replace the original one with it in the container at CompilerPass based on the environment variable and logger availability. For example, check “SymfonyComponentTranslationLoggingTranslator” that replaces the original “SymfonyComponentTranslationTranslator” in “SymfonyBundleFrameworkBundleDependencyInjectionCompilerLoggingTranslatorPass” based on the container parameter.
 
+## Log Traceability
+
+Log traceability enables correlating all log entries associated with a single user action or operation across multiple processes and services.
+
+### Configuration
+
+By default, the trace ID header is set to `X-Request-ID`. To customize the header name, set the `oro_log_trace_id_header` container parameter using an environment variable:
+
+```bash
+export ORO_LOG_TRACE_ID_HEADER="X-Custom-Trace-ID"
+```
+
+Then configure it in the configuration file:
+
+**config/config.yml**
+
+```yaml
+parameters:
+    oro_log_trace_id_header: "%env(ORO_LOG_TRACE_ID_HEADER)%"
+    oro_log_trace_console: '%env(ORO_LOG_TRACE_CONSOLE)%'
+```
+
+For more details, see [OroLoggerBundle](../../bundles/platform/LoggerBundle/index.md#bundle-docs-platform-logger-bundle-logs-traceability).
+
 <!-- Frontend -->
