@@ -41,8 +41,8 @@ To change the default customer user configuration settings globally:
 <a id="system-configuration-user-impersonation"></a>
 1. In the **Login as Customer User** section, configure the option for customer users. Keep in mind that this feature is available in the Enterprise edition.
    * **Enable Login As Customer User** — The option enables back-office users with the **Login as Customer User** [role capability](../../../user-management/roles/admin-capabilities.md#admin-capabilities) assigned to them to temporarily sign into the OroCommerce storefront and operate it as a specific customer user (i.e., impersonate a customer user). This option is disabled by default. User impersonation is also available at the [organization level](../../../user-management/organizations/org-configuration/commerce/customers/organization-customer-users.md#organization-user-impersonation).
-2. In the **Login Redirect** section, configure the following option:
-   * **Do Not Leave Checkout** — Enable this option to redirect a user back to the checkout page after a successful login. This will override the *Redirect After Login* setting on the [website configuration level](../../../websites/web-configuration/commerce/customers/website-customer-users.md#system-website-configuration-commerce-customers-customer-users) that may specify a different target page.
+2. In the **REST API** section, configure the following option:
+   * **Enable API Key Generation** — Enable/disable automatic generation of API access keys for new customer users.
 
 <a id="configuration-guide-commerce-configuration-cookie-consents"></a>
 1. In the **Cookies Banner** section, you can enable a cookie consent banner. A cookie consent banner is the cookie warning that pops up on websites when a user visits the site for the first time. This banner lets visitors know that their data is being collected and get their consent to use the data. The [CookieConsentBannerBundle](../../../../../../bundles/commerce/CookieConsentBundle/index.md#bundle-docs-commerce-cookie-consent-bundle) allows to show such warning to the user.
@@ -57,7 +57,6 @@ If the application was installed without demo data, the banner is disabled. Conf
 >   ![Text language button](user/img/system/config_commerce/cookie_banner/cookie-banner-landing-page.png)
 1. Click **Save Settings**.
 
-![image](user/img/customers/customer_users/customer_user_password_history_used_password.png)
 <!-- Frontend -->
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
