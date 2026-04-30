@@ -12,5 +12,6 @@
 * [Reverse Synchronization](../../../backend/integrations/integration-config/reverse-sync.md#dev-integrations-integrations-reverse-sync)
 * [Define Owner for Related Entities on Integration Level](../../../backend/integrations/integration-config/default-integration-owner.md#dev-integrations-integrations-default-owner)
 * [Save Service Data Between Synchronizations](../../../backend/integrations/integration-config/additional-capabilities.md#dev-integrations-integrations-additional-capabilities)
+* [Webhooks](webhooks.md#bundle-docs-platform-integration-bundle-webhooks)
 
 <!-- Frontend -->
