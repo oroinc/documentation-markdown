@@ -22,5 +22,6 @@
 * [Filtering Messages in the Message Producer](../../../backend/mq/filtering-messages.md#dev-guide-mq-filtering-messages)
 * [Buffering Messages in the Message Producer](../../../backend/mq/buffering-messages.md#dev-guide-mq-buffering-messages)
 * [Delaying a Message](../../../backend/mq/delayed-messages.md#dev-guide-mq-delaying-messages)
+* [Consumption Modes](../../../backend/mq/consumption-modes.md#dev-guide-mq-consumption-modes)
 
 <!-- Frontend -->
