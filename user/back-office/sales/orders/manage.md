@@ -140,7 +140,7 @@ Once scheduled, the recurring order is created and managed separately from the o
 
 **Related Topics**
 
-* [Configure Recurring Orders Globally](../../system/websites/web-configuration/commerce/sales/website-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders)
+* [Configure Recurring Orders Globally](../../system/user-management/organizations/org-configuration/commerce/sales/organization-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders)
 * [Recurring Orders in the Storefront](../../../storefront/account/recurring-orders.md#my-account-recurring-orders)
 
 <!-- fa-bars = fa-navicon -->
