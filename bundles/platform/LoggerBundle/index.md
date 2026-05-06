@@ -52,9 +52,12 @@ You can also decrease the log level system-wide by skipping the `--user` option.
 
 All console commands are logged automatically on **ConsoleEvents::COMMAND** and **ConsoleEvents::EXCEPTION**. See <a href="https://github.com/oroinc/platform/blob/7.0/src/Oro/Bundle/LoggerBundle/EventSubscriber/ConsoleCommandSubscriber.php" target="_blank">ConsoleCommandSubscriber</a> for more information.
 
+<a id="bundle-docs-platform-logger-bundle-logs-traceability"></a>
+
 ## Logs Traceability
 
-<a id="bundle-docs-platform-logger-bundle-logs-traceability"></a>
+#### NOTE
+Log Traceability is available as of OroCommerce version 7.0.1.
 
 Log traceability provides tracking of related log entries across different parts of the application by assigning a unique trace ID to each request, console command, and message queue operation.
 
