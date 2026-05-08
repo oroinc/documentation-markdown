@@ -20,7 +20,7 @@ A Database System component is responsible for interaction with RDBMS. It enable
 
 OroPlatform Community Edition (CE) is an open-source application designed for small organizations. OroPlatform Enterprise Edition (EE) is designed with scalability and performance in mind.
 
-With OroPlatform CE or EE, you can use PostgreSQL 15.1.
+With OroPlatform CE or EE, you can use PostgreSQL 18.3.
 
 ## Configuration
 
