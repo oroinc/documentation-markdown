@@ -10,6 +10,7 @@ Learn how to set up product and category visibility restrictions, customer user 
 
 * [Visibility](customer/visibility.md#user-guide-customers-configuration-visibility)
 * [Customer Users](customer/global-customer-users.md#sys-config-configuration-commerce-customers-customer-users)
+* [Customer User Login](customer/customer-user-login.md#sys-config-configuration-commerce-customers-customer-user-login)
 * [Interactions](customer/global-interactions.md#configuration-guide-commerce-configuration-interactions)
 
 ## [Guests](guests/index.md#configuration-guide-commerce-configuration-guests)
