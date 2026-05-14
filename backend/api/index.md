@@ -41,5 +41,6 @@ By default, only custom entities, dictionaries, and enumerations are accessible 
 * [Storefront REST API](storefront.md)
 * [Storefront Routes](storefront-routes.md)
 * [Batch API](batch-api.md)
+* [JSON:API EXT ID](ext-id.md)
 
 <!-- Frontend -->
