@@ -41,6 +41,9 @@ oro_api:
     # The maximum number of entities that can be deleted by one request.
     max_delete_entities:  100
 
+    # Whether absolute URLs for assets should be used in API responses.
+    use_absolute_urls_for_api: false
+
     # All supported API configuration files.
     config_files:
 
@@ -427,6 +430,15 @@ oro_api:
 
             # Prototype
             name:                 ~
+
+    # The identifier field names for API resources in "JSON:API EXT ID" API.
+    ext_id_entities:
+
+        # Example:
+        # Oro\Bundle\UserBundle\Entity\User: external_id
+
+        # Prototype
+        name:                 ~
 ```
 
 ## oro_asset

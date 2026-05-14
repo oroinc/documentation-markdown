@@ -150,8 +150,8 @@ This attribute sets default settings for [Extend Entities](../../entities/extend
   > 'activity' => [
   >     'activities' => [
   >         ['Oro\Bundle\EmailBundle\Entity\Email'],
-  >         ['Oro\Bundle\TaskBundle\Entity\Task'],
-  >     ],
+  >         ['Oro\Bundle\TaskBundle\Entity\Task']
+  >     ]
   > ]
   > ```
 * **is_serialized** *boolean* - if TRUE then field data will be saved in serialized_data column without doctrine schema update.
@@ -159,6 +159,7 @@ This attribute sets default settings for [Extend Entities](../../entities/extend
 * **is_extend** *boolean* - if true, the config entity is able to extend.
 * **is_deleted** *boolean* - if true, the config entity is able to delete.
 * **upgradeable** *boolean* - if true, the extend config entity is able to update.
+* **unique_key** *array* - contains configuration of the unique keys. The format is [‘keys’ => [[‘name’ => string, ‘key’ => [field name, …]], …]].
 * **pk_columns** *string[]* - a list of Primary Keys column name.
 * **index** *string[]* - a list of index fields of the entity. See available index states in <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/EntityBundle/EntityConfig/IndexScope.php" target="_blank">IndexScope.php</a>
 * **schema** *array* - contains information about the structure and entity class of the extend.
