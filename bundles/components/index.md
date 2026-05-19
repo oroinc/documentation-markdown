@@ -12,5 +12,6 @@ Oro Config Component provides additional resource types to the Symfony Config Co
 
 * [Configuration Merger](configuration-merger.md)
 * [Cumulative Resources](cumulative-resources.md)
+* [DraftSession Component](draft-session.md)
 * [System Aware Resolver](system-aware-resolver.md)
 * [Resources Loader Factory](resource-loader-factory.md)

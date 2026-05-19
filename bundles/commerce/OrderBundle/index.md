@@ -12,5 +12,7 @@
 * [Managers](previously-purchased-products.md#previously-purchased-products-managers)
 * [Providers](previously-purchased-products.md#previously-purchased-products-providers)
 * [Order PDF Documents](order-pdf-documents.md#bundle-docs-commerce-order-pdf-documents)
+* [Order Edit Draft Session](order-edit-draft-session.md#bundle-docs-commerce-order-bundle-draft-session)
+* [CLI Commands](commands.md#bundle-docs-commerce-order-bundle-commands)
 
 <!-- Frontend -->
