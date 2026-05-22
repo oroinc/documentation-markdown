@@ -70,6 +70,8 @@ To edit an entity:
   > * **Hide** — Select this value from the list if you do not want to show the column with the workflow step in the grid.
 
 ![A sample of an entity record with enabled workflow step](user/img/system/entity_management/entity_showworkflowstep.png)
+* **Include in Smart Insights** — When set to *Yes*, this entity will be considered in [OroIQ Smart Insights](../../../concept-guides/ai/index.md#concept-guide-oroiq) to generate analytics, trends, and contextual recommendations.
+
 1. Click **Save and Close** on the top right.
 2. Once you saved the entity, you must [update the schema](manage-entity-fields.md#admin-guide-update-schema) to apply the changes.
 

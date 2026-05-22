@@ -19,6 +19,7 @@ Learn how to configure localization options, currency and tracking, as well and 
 * [Google Settings](integrations/organization-google.md#organization-google-settings)
 * [Microsoft Settings](integrations/organization-microsoft.md#organization-configuration-microsoft)
 * [AI Content Generation](integrations/organization-ai-settings.md#organization-ai-settings)
-* [AI Agent](integrations/organization-ai-agent.md#organization-ai-agent-settings)
+* [AI Smart Agent](integrations/organization-ai-agent.md#organization-ai-agent-settings)
+* [OroIQ](integrations/organization-oroiq.md#organization-oroiq-settings)
 * [AI Smart Order](integrations/organization-ai-smart-order.md#organization-ai-smart-order-settings)
 * [CAPTCHA Settings](integrations/organization-captcha.md#organization-configuration-captcha)
