@@ -22,16 +22,19 @@ The following categories of settings are available for system configuration at o
     * [Email Configuration](general-setup-org/organization-email-settings.md#admin-configuration-email-configuration-organization)
     * [Currency](general-setup-org/organization-currency.md#admin-configuration-currency-org)
     * [User Login](general-setup-org/organization-user-login.md#admin-configuration-user-login-form-org)
+    * [User Settings](general-setup-org/organization-user-settings.md#admin-configuration-user-settings-org)
     * [Upload Settings](general-setup-org/organization-upload-settings.md#configuration-guide-system-configuration-general-setup-sysconfig-upload-settings-organization)
   * Websites
     * [Routing Settings](general-setup-org/organization-routing.md#organization-config-website-routing)
+    * [Sitemap Settings](general-setup-org/organization-sitemap.md#organization-config-website-sitemap)
   * Integrations
     * [Google Settings](general-setup-org/integrations/organization-google.md#organization-google-settings)
     * [Microsoft Settings](general-setup-org/integrations/organization-microsoft.md#organization-configuration-microsoft)
-    * [AI Content Generation](general-setup-org/integrations/organization-ai-settings.md#organization-ai-settings)
-    * [AI Agent](general-setup-org/integrations/organization-ai-agent.md#organization-ai-agent-settings)
-    * [AI Smart Order](general-setup-org/integrations/organization-ai-smart-order.md#organization-ai-smart-order-settings)
     * [CAPTCHA Settings](general-setup-org/integrations/organization-captcha.md#organization-configuration-captcha)
+    * [AI Content Generation](general-setup-org/integrations/organization-ai-settings.md#organization-ai-settings)
+    * [AI Smart Agent](general-setup-org/integrations/organization-ai-agent.md#organization-ai-agent-settings)
+    * [OroIQ](general-setup-org/integrations/organization-oroiq.md#organization-oroiq-settings)
+    * [AI Smart Order](general-setup-org/integrations/organization-ai-smart-order.md#organization-ai-smart-order-settings)
 * **Commerce**
   * Guests
     * [Website Access](commerce/guests/organization-guest-access.md#guest-access-org)
@@ -48,6 +51,7 @@ The following categories of settings are available for system configuration at o
     * [Promotions](commerce/product/organization-new-arrivals.md#sys-users-organization-commerce-products-new-arrivals)
     * [Configurable Products](commerce/product/organization-configurable-products.md#config-guide-landing-commerce-products-configurable-products-organization)
     * [Customer Settings](commerce/product/organization-customer-settings.md#sys-users-organization-commerce-products-customer-settings)
+    * [Product Import/Export](commerce/product/organization-product-import-export.md#sys-users-organization-commerce-products-import-export)
   * Sales
     * [Quick Order Form](commerce/sales/organization-guest-quick-order.md#user-guide-system-configuration-commerce-sales-quick-order-form-organization)
     * [Shopping List](commerce/sales/organization-guest-shopping-list.md#user-guide-system-configuration-commerce-sales-shopping-list-per-organization)
@@ -58,17 +62,21 @@ The following categories of settings are available for system configuration at o
     * [Multi Shipping Options](commerce/sales/organization-multi-shipping.md#user-guide-system-configuration-commerce-sales-multi-shipping-org)
     * [Quotes](commerce/sales/organization-quote.md#sys-organization-quotes)
     * [Promotions](commerce/sales/organization-promotions.md#sys-conf-commerce-sales-promotions-organization)
+    * [Invoices](commerce/sales/organization-invoices.md#user-guide-system-configuration-commerce-sales-invoices-org)
+    * [Recurring Orders](commerce/sales/organization-recurring-orders.md#user-guide-organization-configuration-commerce-sales-recurring-orders)
   * Orders
     * [Order Automation](commerce/orders/organization-order-automation.md#configuration-commerce-orders-order-automation-organization)
     * [Order Creation](commerce/orders/organization-order-creation.md#configuration-commerce-orders-order-creation-organization)
     * [Purchase History](commerce/orders/organization-previously-purchased.md#sys-commerce-orders-previously-purchased-org)
     * [Order Status Management](commerce/orders/organization-order-status-management.md#sys-commerce-orders-status-management-org)
     * [External Order Import](commerce/orders/organization-external-order-import.md#configuration-commerce-orders-external-order-import-org)
+    * [Order Draft Edit Mode](commerce/orders/organization-order-draft-edit.md#configuration-commerce-orders-draft-edit-mode-org)
   * Search
     * [Saved Search](commerce/search/organization-saved-search.md#organization-commerce-configuration-saved-search)
     * [Search Terms](commerce/search/org-search-terms.md#organization-commerce-configuration-search-history)
   * Taxation
     * [Tax Calculation (Promotions)](commerce/taxation/tax-calculation.md#user-guide-taxes-org-promotions)
+    * [Shipping](commerce/taxation/shipping-tax.md#org-conf-commerce-taxation-shipping-tax)
   * Catalog
     * [Filters and Sorters](commerce/catalog/organization-filters-sorters.md#configuration-guide-commerce-configuration-catalog-filters-sorters-organization)
     * [Related Items](commerce/catalog/organization-related-products.md#sys-users-organization-commerce-catalog-related-products)

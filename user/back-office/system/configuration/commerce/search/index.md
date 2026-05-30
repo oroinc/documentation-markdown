@@ -4,9 +4,9 @@
 
 Learn how to configure search synonyms, saved search for the OroCommerce Enterprise storefront and fuzzy search in the website search index requests to Elasticsearch:
 
+* [Search Terms](search-terms.md)
 * [Saved Search](saved-search.md)
 * [Fuzzy Search](fuzzy-search.md)
 * [Search Synonyms](search-synonyms.md)
-* [Customer Recommendations](customer-recommendations.md)
-* [Search Terms](search-terms.md)
 * [Stop Words](stop-words.md)
+* [Customer Recommendations](customer-recommendations.md)

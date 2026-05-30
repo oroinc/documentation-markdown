@@ -28,6 +28,7 @@ More information about the options available for each of the two categories is a
   * Integrations
     * [Google Settings for the Website](general-sys-config/integrations/website-google-settings.md#website-google-settings)
     * [CAPTCHA Settings for the Website](general-sys-config/integrations/website-captcha.md#website-configuration-captcha-settings)
+    * [AI Smart Agent Settings for the Website](general-sys-config/integrations/website-ai-agent.md#website-configuration-ai-agent-settings)
   * Website
     * [Routing](general-sys-config/websites/website-routing.md#sys-websites-sysconfig-websites-routing)
     * [Sitemap](general-sys-config/websites/website-sitemap.md#sys-websites-sysconfig-websites-sitemap)
@@ -70,6 +71,7 @@ More information about the options available for each of the two categories is a
     * [Orders History](commerce/sales/website-open-orders.md#website-commerce-configuration-sales-order-history)
     * [Multi Shipping Options](commerce/sales/website-multi-shipping.md#user-guide-system-configuration-commerce-sales-multi-shipping-website)
     * [Quotes](commerce/sales/website-quotes.md#sys-websites-quotes)
+    * [Invoices](commerce/sales/website-invoices.md#user-guide-system-configuration-commerce-sales-invoices-per-website)
   * Catalog
     * [Pricing](commerce/catalog/website-pricing.md#pricing-currency-website)
     * [Filters and Sorters](commerce/catalog/website-filters-sorters.md#configuration-guide-commerce-configuration-catalog-filters-sorters-website)
@@ -89,3 +91,4 @@ More information about the options available for each of the two categories is a
   * Orders
     * [Order Creation](commerce/orders/website-order-creation.md#configuration-commerce-orders-order-creation-website)
     * [Purchase History](commerce/orders/website-previously-purchased.md#sys-commerce-orders-previously-purchased-website)
+    * [Order Draft Edit Mode](commerce/orders/website-order-draft-edit.md#configuration-commerce-orders-draft-edit-mode-website)

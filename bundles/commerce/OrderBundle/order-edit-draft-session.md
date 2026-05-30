@@ -2,6 +2,9 @@
 
 # Order Edit Draft Session
 
+#### NOTE
+The Order Draft Edit Mode feature is available as of OroCommerce version 6.1.9.
+
 When a back-office user opens the order edit page, the bundle keeps the original order untouched
 until the user explicitly saves. Every change — adding, modifying, or removing line items, editing
 header fields — is accumulated in a **draft copy** of the order rather than applied to the original
@@ -163,7 +166,7 @@ so that draft rows are visible alongside original rows. `KeepDraftSessionUuidOnR
 automatically injects the UUID into any URL generated for the same set of routes so that internal
 links and redirects carry the session forward without manual intervention.
 
-### `OrderController` and `DraftSessionControllerTrait`
+### OrderController and DraftSessionControllerTrait
 
 `\Oro\Bundle\OrderBundle\Controller\OrderController`
 
@@ -576,5 +579,11 @@ class AcmeOrderBundle extends Bundle
     }
 }
 ```
+
+**Related Topics**
+
+* [Configure Order Draft Edit Mode Settings Globally](../../../user/back-office/system/configuration/commerce/orders/global-order-draft-edit.md#system-configuration-orders-draft-edit-mode)
+* [Configure Order Draft Edit Mode Settings per Organization](../../../user/back-office/system/user-management/organizations/org-configuration/commerce/orders/organization-order-draft-edit.md#configuration-commerce-orders-draft-edit-mode-org)
+* [Configure Order Draft Edit Mode Settings per Website](../../../user/back-office/system/websites/web-configuration/commerce/orders/website-order-draft-edit.md#configuration-commerce-orders-draft-edit-mode-website).
 
 <!-- Frontend -->
