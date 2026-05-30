@@ -2,6 +2,9 @@
 
 # Configure Global OroIQ Settings
 
+#### NOTE
+The OroIQ feature is available as of OroCommerce version 7.0.2.
+
 #### HINT
 Please <a href="https://oroinc.com/contact-us/" target="_blank">contact our support team</a> to learn more about OroCommerce AI features, discuss how they can meet your business needs, and get started with implementation.
 

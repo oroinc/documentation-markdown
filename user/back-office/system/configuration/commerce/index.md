@@ -45,6 +45,7 @@ Learn the key options for setting up products in your Oro application, as well a
 * [Featured Products](product/global-featured-products.md#sys-commerce-product-featured-products-main)
 * [Promotions](product/global-promotions.md#configuration-guide-commerce-configuration-promotions)
 * [Configurable Products](product/global-configurable-products.md#config-guide-landing-commerce-products-configurable-products)
+* [Seller Product Approval Workflow](product/seller-product-approval-flow.md#system-configuration-commerce-product-seller-product-approval-workflow)
 * [Product Collections](product/product-collections.md#configuration-guide-commerce-configuration-product-collections)
 * [Customer Settings](product/global-customer-settings.md#sys-commerce-product-customer-settings)
 * [Product Import/Export](product/product-import-export.md#configuration-guide-commerce-product-import-export)
@@ -65,11 +66,11 @@ Learn how to enable the quick order form, promotions, guest shopping lists, esta
 * [Quick Order Form](sales/guest-quick-order-global.md#user-guide-system-configuration-commerce-sales-quick-order-form-global)
 * [Promotions](sales/promotions-settings.md#sys-config-commerce-sales-promotions)
 * [Invoices](sales/global-invoices.md#configuration-guide-commerce-configuration-sales-invoices)
-* [Request for Quote](sales/rfq.md#configuration-guide-commerce-configuration-sales-rfq)
-* [Checkout](sales/global-checkout-config.md#user-guide-system-configuration-commerce-sales-checkout)
 * [Recurring Orders](../../user-management/organizations/org-configuration/commerce/sales/organization-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders)
+* [Checkout](sales/global-checkout-config.md#user-guide-system-configuration-commerce-sales-checkout)
 * [Order History (Open Orders)](sales/open-orders.md#configuration-guide-commerce-configuration-sales-order-history)
 * [Multi Shipping Options](sales/global-multi-shipping.md#user-guide-system-configuration-commerce-sales-multi-shipping)
+* [Request for Quote](sales/rfq.md#configuration-guide-commerce-configuration-sales-rfq)
 * [Contacts](sales/contacts.md#sys-conf-commerce-sales-contacts)
 * [Quotes](sales/guest-quote.md#sys-conf-commerce-guest-enable-guest-quotes)
 * [Shopping List](sales/global-shopping-list.md#configuration-shopping-list)
@@ -97,11 +98,12 @@ Learn how to configure and manage your company’s business details.
 
 ## [Search](search/index.md#configuration-guide-commerce-configuration-search)
 
+* [Search Terms](search/search-terms.md#configuration-guide-commerce-configuration-search-history)
 * [Saved Search](search/saved-search.md#configuration-guide-commerce-configuration-saved-search)
 * [Fuzzy Search](search/fuzzy-search.md#configuration-guide-commerce-configuration-fuzzy-search)
 * [Search Synonyms](search/search-synonyms.md#configuration-guide-commerce-search-synonyms)
+* [Stop Words](search/stop-words.md#configuration-guide-commerce-configuration-stop-words)
 * [Customer Recommendations](search/customer-recommendations.md#system-configuration-commerce-search-customer-recommendation)
-* [Search Terms](search/search-terms.md#configuration-guide-commerce-configuration-search-history)
 
 ## [Orders](orders/index.md#configuration-guide-commerce-configuration-order)
 
@@ -111,7 +113,6 @@ Learn how to define how open orders should be displayed in the storefront.
 * [Order Creation](orders/global-order-creation.md#configuration-commerce-orders-create)
 * [Purchase History](orders/global-previously-purchased.md#sys-commerce-orders-previously-purchased-main)
 * [Order Status Management](orders/global-order-status-management.md#sys-commerce-orders-status-management)
-* [AI Smart Order](../system/integrations/global-ai-smart-order.md#admin-configuration-orders-ai-smart-order-settings)
 * [External Order Import](orders/global-external-order-import.md#system-configuration-orders-external-order-import)
 
 ## [Shipping](shipping/index.md#configuration-guide-commerce-configuration-shipping)

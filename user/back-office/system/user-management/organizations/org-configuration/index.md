@@ -21,22 +21,26 @@ The following categories of settings are available for system configuration at o
     * [Display Settings](general-setup-org/organization-display-settings.md#configuration-general-setup-display-settings-organization)
     * [Email Configuration](general-setup-org/organization-email-settings.md#admin-configuration-email-configuration-organization)
     * [Currency](general-setup-org/organization-currency.md#admin-configuration-currency-org)
+    * [User Settings](general-setup-org/organization-user-settings.md#admin-configuration-user-settings-org)
     * [Upload Settings](general-setup-org/organization-upload-settings.md#configuration-guide-system-configuration-general-setup-sysconfig-upload-settings-organization)
   * Websites
     * [Routing Settings](general-setup-org/organization-routing.md#organization-config-website-routing)
+    * [Sitemap Settings](general-setup-org/organization-sitemap.md#organization-config-website-sitemap)
   * Integrations
     * [Google Settings](general-setup-org/integrations/organization-google.md#organization-google-settings)
     * [Microsoft Settings](general-setup-org/integrations/organization-microsoft.md#organization-configuration-microsoft)
-    * [AI Content Generation](general-setup-org/integrations/organization-ai-settings.md#organization-ai-settings)
-    * [AI Agent](general-setup-org/integrations/organization-ai-agent.md#organization-ai-agent-settings)
-    * [AI Smart Order](general-setup-org/integrations/organization-ai-smart-order.md#organization-ai-smart-order-settings)
     * [CAPTCHA Settings](general-setup-org/integrations/organization-captcha.md#organization-configuration-captcha)
+    * [AI Content Generation](general-setup-org/integrations/organization-ai-settings.md#organization-ai-settings)
+    * [AI Smart Agent](general-setup-org/integrations/organization-ai-agent.md#organization-ai-agent-settings)
+    * [AI Smart Order](general-setup-org/integrations/organization-ai-smart-order.md#organization-ai-smart-order-settings)
+    * [OroIQ](general-setup-org/integrations/organization-oroiq.md#organization-oroiq-settings)
 * **Commerce**
   * Guests
     * [Website Access](commerce/guests/organization-guest-access.md#guest-access-org)
     * [SEO](commerce/guests/organization-seo.md#sys-conf-commerce-guest-seo-org)
   * Customer
     * [Customer Users](commerce/customers/organization-customer-users.md#system-user-mngm-organization-configuration-commerce-customers-customer-users)
+    * [Customer User Login](commerce/customers/organization-customer-user-login.md#system-user-mngm-organization-configuration-commerce-customers-customer-user-login)
     * [Interactions](commerce/customers/organization-interactions.md#sys-conf-commerce-customer-interactions-organization)
   * Design
     * [Theme](commerce/design/organization-theme.md#configuration-commerce-design-theme-theme-settings-organization)
@@ -69,9 +73,9 @@ The following categories of settings are available for system configuration at o
   * Taxation
     * [Tax Calculation (Promotions)](commerce/taxation/tax-calculation.md#user-guide-taxes-org-promotions)
   * Catalog
-    * [Filters and Sorters](commerce/catalog/organization-filters-sorters.md#configuration-guide-commerce-configuration-catalog-filters-sorters-organization)
-    * [Related Items](commerce/catalog/organization-related-products.md#sys-users-organization-commerce-catalog-related-products)
     * [Pricing](commerce/catalog/pricing.md#configuration-guide-commerce-configuration-catalog-pricing-organization)
+    * [Related Items](commerce/catalog/organization-related-products.md#sys-users-organization-commerce-catalog-related-products)
+    * [Filters and Sorters](commerce/catalog/organization-filters-sorters.md#configuration-guide-commerce-configuration-catalog-filters-sorters-organization)
   * Inventory
     * [Warehouses](commerce/inventory/organization-warehouses.md#warehouses-organization)
     * [Product Options](commerce/inventory/organization-product-options.md#sys-conf-commerce-inventory-product-options-organization)

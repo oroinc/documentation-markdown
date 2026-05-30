@@ -280,8 +280,6 @@ To define a translation:
 3. Using the inline editor, specify the new translation for the label.
    ![image](user/img/system/workflows/translations_edit1.png)![image](user/img/system/workflows/translations_edit2.png)
 
-<!-- You can find more information on translations in the :ref:`Manage Translations <> guide. -->
-
 ## Detailed Information About System Workflows
 
 See the following sections to get more information about the system workflows in the Oro application:

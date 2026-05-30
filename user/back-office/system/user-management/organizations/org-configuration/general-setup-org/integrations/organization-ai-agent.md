@@ -1,6 +1,6 @@
 <a id="organization-ai-agent-settings"></a>
 
-# Configure AI Agent Settings per Organization
+# Configure AI Smart Agent Settings per Organization
 
 #### HINT
 Please <a href="https://oroinc.com/contact-us/" target="_blank">contact our support team</a> to learn more about OroCommerce AI features, discuss how they can meet your business needs, and get started with implementation.
@@ -9,11 +9,11 @@ The [AI Smart Agent](../../../../../../../concept-guides/ai/index.md#concept-gui
 
 Once the agent is installed in the Oro application, you can enable it in the system configuration [globally](../../../../../configuration/system/integrations/ai-agent.md#admin-configuration-ai-agent-settings), per organization, [website](../../../../../websites/web-configuration/general-sys-config/integrations/website-ai-agent.md#website-configuration-ai-agent-settings), [customer](../../../../../../customers/customers/customer-configuration/system-configuration/integrations/customer-ai-agent-setting.md#user-guide-customer-configuration-settings-ai-agent) and [customer group](../../../../../../customers/customer-groups/customer-group-configuration/system-configuration/integrations/customer-group-ai-agent.md#user-guide-customer-groups-configuration-settings-ai-agent):
 
-![AI Agent configuration options page on the organization configuration level](user/img/system/user_management/org_configuration/ai/ai-agent-org-settings.png)
+![AI Smart Agent configuration options page on the organization configuration level](user/img/system/user_management/org_configuration/ai/ai-agent-org-settings.png)
 1. Navigate to **System > User Management > Organizations** in the main menu.
 2. For the necessary organization, hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the row and click <i class="fas fa-cog" aria-hidden="true"></i> to start editing the configuration.
-3. Click **System Configuration > Integrations > AI Agent** in the menu to the left.
-4. In the **AI Agent** section, clear the **Use System** checkbox and select the **Enable AI Agent** checkbox to enable the feature in the storefront.
+3. Click **System Configuration > Integrations > AI Smart Agent** in the menu to the left.
+4. In the **AI Smart Agent** section, clear the **Use System** checkbox and select the **Enable AI Smart Agent** checkbox to enable the feature in the storefront.
 5. Click **Save Settings**.
 
 <!-- fa-bars = fa-navicon -->
