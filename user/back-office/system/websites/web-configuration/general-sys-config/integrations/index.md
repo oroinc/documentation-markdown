@@ -2,4 +2,4 @@
 
 * [Google Settings](website-google-settings.md)
 * [CAPTCHA settings](website-captcha.md)
-* [AI Agent](website-ai-agent.md)
+* [AI Smart Agent](website-ai-agent.md)

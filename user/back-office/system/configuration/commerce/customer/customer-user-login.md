@@ -2,6 +2,9 @@
 
 # Configure Global Customer User Login Settings
 
+#### NOTE
+Customer User Login settings can be configured globally and [per organization](../../../user-management/organizations/org-configuration/commerce/customers/organization-customer-user-login.md#system-user-mngm-organization-configuration-commerce-customers-customer-user-login).
+
 To apply customer user login-related options in your Oro application instance:
 
 1. Navigate to **System > Configuration** in the main menu.

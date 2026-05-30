@@ -51,7 +51,7 @@ This confirmation step is a fundamental part of the OroIQ design. While it enabl
 
 The Oro AI Smart Agent is an innovative virtual assistant designed to enhance and simplify the B2B buying experience in OroCommerce. Seamlessly integrated into the OroCommerce Enterprise storefront UI, this AI-powered assistant allows logged-in buyers to engage with the platform using natural spoken or written language, just as they would with a sales representative.
 
-![Illustration of an AI Agent in the OroCommerce storefront](user/img/concept-guides/ai/agent-storefront.png)
+![Illustration of an AI Smart Agent in the OroCommerce storefront](user/img/concept-guides/ai/agent-storefront.png)
 
 With the Oro AI Smart Agent, buyers can efficiently complete essential e-commerce tasks without requiring extensive training or technical expertise, such as:
 

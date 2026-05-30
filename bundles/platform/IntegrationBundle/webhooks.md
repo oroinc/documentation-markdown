@@ -49,6 +49,9 @@ For entities that support custom fields and entity management:
 4. In the entity configuration form check the **Webhook Accessible** checkbox
 5. Click **Save and Close**
 
+#### NOTE
+For more details on how to create a webhook integration from the back-office, refer to the [Configure Webhooks in the Back-Office](../../../user/back-office/system/integrations/webhooks.md#back-office-integrations-webhooks) topic.
+
 #### Programmatically via ConfigManager
 
 Update existing entity configuration in code:
@@ -106,6 +109,9 @@ class Order
 4. In the **Webhook relations includes** field enter a comma-separated list of relation paths
    (e.g. `customer,lineItems`)
 5. Click **Save and Close**
+
+#### NOTE
+For more details on how to create a webhook integration from the back-office, refer to the [Configure Webhooks in the Back-Office](../../../user/back-office/system/integrations/webhooks.md#back-office-integrations-webhooks) topic.
 
 #### Programmatically via ConfigManager
 
@@ -1172,5 +1178,10 @@ Add to your transport settings form template:
 {# ... other fields ... #}
 {{ form_row(form.webhook) }}
 ```
+
+**Related Articles**
+
+* [Configure Webhooks in the Back-Office](../../../user/back-office/system/integrations/webhooks.md#back-office-integrations-webhooks)
+* [Manage Entity](../../../user/back-office/system/entities/manage-entities.md#doc-entity-actions-create)
 
 <!-- Frontend -->
