@@ -121,8 +121,9 @@ class CurrentTimeTool
 {
     #[McpTool(
         name: 'current_time',
+        title: 'Current Time',
         description: 'Gets current time.',
-        annotations: new ToolAnnotations(title: 'Current Time', readOnlyHint: true)
+        annotations: new ToolAnnotations(readOnlyHint: true)
     )]
     public function getCurrentTime(string $format = 'Y-m-d H:i:s'): string
     {
@@ -228,6 +229,14 @@ oro_commerce_mcp:
             directory: '%kernel.cache_dir%/commerce_mcp_sessions'
             # The session TTL in seconds.
             ttl: 3600
+        # The configuration of CORS requests for MCP server.
+        cors:
+            # The list of origins that are allowed to send CORS requests.
+            # Example: [ 'https://foo.com', 'https://bar.com' ]
+            allow_origins: [ '*' ]
+            # The list of headers that are allowed to send by CORS requests.
+            # Example: [ 'X-Foo', 'X-Bar' ]
+            allow_headers: []
     # MCP services discovery configuration.
     # Example:
     #     discovery:
