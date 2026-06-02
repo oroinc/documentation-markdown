@@ -28,4 +28,5 @@ To learn more about translating static and dynamic content, localization paramet
   * [Date and Numeric Formatting](localization.md#date-and-numeric-formatting)
   * [Name Formatting](localization.md#name-formatting)
   * [Address Formatting](localization.md#address-formatting)
+  * [Updating Localization from CLI](localization.md#updating-localization-from-cli)
 * [Add Translations to Source Code](translations-add-to-source-code.md)
