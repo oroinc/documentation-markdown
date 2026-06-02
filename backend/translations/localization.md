@@ -196,4 +196,20 @@ ROMNEY IN US 47981
 
 As with other entities, the frontend provides an appropriate JavaScript formatter,  the `orolocale/js/formatter/address` JS module. This module is located in the `address.js` file in the Locale bundle and contains a `format()` method, which behaves exactly like the backend formatter.
 
+## Updating Localization from CLI
+
+Administrators can update the application’s language and formatting after installation using the `oro:localization:update` command:
+
+```bash
+bin/console oro:localization:update --formatting-code=<locale_code> --language=<locale_code> --env=prod
+bin/console oro:translation:update --all --env=prod
+```
+
+For example, to switch the application to French localization and formatting, use:
+
+```bash
+bin/console oro:localization:update --formatting-code=fr_FR --language=fr_FR --env=prod
+bin/console oro:translation:update --all --env=prod
+```
+
 <!-- Frontend -->
