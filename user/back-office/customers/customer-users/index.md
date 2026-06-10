@@ -159,7 +159,7 @@ An administrator can change this ttl in the [configuration of the Customer bundl
 
 <a id="user-guide-customers-customer-users-oauth"></a>
 
-## Add OAuth Applications
+## Add OAuth Applications from a Customer User’s Page
 
 Oro applications support OAuth 2.0 credentials authorization grant type to enable connection of third-party applications to the web API. To connect a third-party application, you need to add it and configure its pre-generated credentials in the back-office of your Oro application. These credentials are managed on user level which enables generation of different credentials for various applications across multiple organizations (the multi-org functionality is only available in the Enterprise edition).
 
@@ -172,8 +172,6 @@ If no keys are found, the following warning message will be displayed in the bac
 
 *OAuth authorization is not available as encryption keys configuration was not complete. Please contact your administrator.*
 
-<!-- Install OAuth extension from Oro Extensions Store <link> (3.1). -->
-
 ### Add an Application
 
 To add a new OAuth application for a customer user in the back-office:
@@ -184,7 +182,11 @@ To add a new OAuth application for a customer user in the back-office:
    * **Organization** — If you are adding an application within the organization with *global* access, you can select which other available organization to add the application to.
    * **Application Name** — Provide a meaningful name for the application you are adding.
    * **Active** — Select the **Active** checkbox to activate the new application.
-4. Click **Create**.
+   * **Support all APIs** — Select whether the client should support all available API types. If disabled, the *Supported APIs* filed appears with a list of API types for the user to select the required one.
+   * **Supported APIs** — The field appears when the *Support all APIs* field is disabled. Select the API type that the client should support, for example JSON:API, Email Addon, SCIM, etc.
+
+![image](user/img/customers/customer_users/customer-user-oauth-details-page.png)
+1. Click **Create**.
 
 A corresponding notification is sent to the user’s primary email address, the owner of the OAuth application. You can change the default recipient, localization, or email content if needed by updating the [OAuth email templates](../../system/emails/email-templates.md#user-guide-using-emails-create-template) and the related [notification rule](../../system/emails/notification-rules.md#user-guide-using-emails-notifications) set out-of-the-box in the system configuration.
 
@@ -193,7 +195,7 @@ Once the application is created, you are provided with a Client ID and a Client 
 ![OAuth credentials](user/img/getting_started/user_menu/oauth/oauth_credentials.png)
 
 #### IMPORTANT
-For security reasons, the Client Secret is displayed only once – immediately after you have created a new application. You cannot view the Client Secret anywhere in the application once you close this dialog, so make sure you save it somewhere safe to access it later.
+For security reasons, the Client Secret is displayed only once, immediately after you have created a new application. You cannot view the Client Secret anywhere in the application once you close this dialog, so make sure you save it somewhere safe to access it later.
 
 You can add as many applications as you need for any of your existing organizations. All added applications are displayed in the grid; you can filter them by name, organization, and status.
 
@@ -205,7 +207,10 @@ Use the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options
 Use the generated Client ID and Client Secret to retrieve an access token to connect to your Oro application.
 
 #### NOTE
-For the aggregated information on all OAuth applications created by customer users in the back-office, refer to the general [Customer User OAuth Applications](../customer-user-oauth-app/index.md#customer-user-oauth-app) topic.
+* To create an OAuth application under **Customers > Customer Users** in the back-office, see [Add a Customer User oAuth application](../../system/user-management/users/manage.md#user-guide-add-oauth-to-user).
+* To add an oAuth application to a user via **My User Menu** in the back-office, see [Add OAuth applications to your profile](../../getting-started/user-menu/oauth.md#user-guide-my-profile-oauth).
+* To add an OAuth application to a back-office user under **System > User Management > Users**, see [Add OAuth Applications to a Back-Office User](../../system/user-management/users/manage.md#user-guide-add-oauth-to-user).
+* To add an oAuth application under **System > User Management > OAuth Applications**, see [Configure OAuth Applications for Users in the Back-Office](../../system/user-management/oauth-app.md#oauth-applications).
 
 **Related Articles**
 

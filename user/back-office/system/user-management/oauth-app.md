@@ -69,7 +69,10 @@ Use the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options
 <!-- finish_oauth2 -->
 
 #### NOTE
-For the details on how to add an OAuth application to a selected customer user in the back-office, refer to the [Add OAuth applications to your profile](../../getting-started/user-menu/oauth.md#user-guide-my-profile-oauth) and [Add OAuth applications to a selected user](users/manage.md#user-guide-add-oauth-to-user) topics.
+* To create an OAuth application under **Customers > Customer Users** in the back-office, see [Add a Customer User oAuth application](users/manage.md#user-guide-add-oauth-to-user).
+* To add an OAuth application to a *customer user* directly from their page in the back-office, see [Add OAuth Applications from Customer User’s Page](../../customers/customer-users/index.md#user-guide-customers-customer-users-oauth).
+* To add an oAuth application to a user via **My User Menu** in the back-office, see [Add OAuth applications to your profile](../../getting-started/user-menu/oauth.md#user-guide-my-profile-oauth).
+* To add an OAuth Application to a back-office user under **System > User Management > Users**, see [Add OAuth Applications to a Back-Office User](users/manage.md#user-guide-add-oauth-to-user)
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
