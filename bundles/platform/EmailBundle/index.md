@@ -15,6 +15,7 @@ send emails from the application and use email templates.
 * [Loading an Email Template](email-templates-load.md)
 * [Rendering an Email Template](email-templates-rendering.md)
 * [Email Templates Rendering Sandbox](email-templates-rendering-sandbox.md)
+* [Email Template Security Policy Checking](email-templates-security-policy.md)
 * [Email Templates Inheritance](email-templates-inheritance.md)
 * [Sending an Email Created from an Email Template](email-templates-send.md)
 * [Email Templates Migrations](email-templates-migrations.md)
