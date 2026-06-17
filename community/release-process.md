@@ -54,10 +54,11 @@ Below is the approximate schedule of the currently maintained/supported and plan
 | **6.0 LTS**                      | **March 2024**   | **March 2028**   | March 2030                |
 | **6.1 LTS**                      | **March 2025**   | **March 2029**   | March 2031                |
 | **7.0 LTS**                      | **March 2026**   | **March 2030**   | March 2032                |
+| **7.1 LTS**                      | **March 2027**   | **March 2031**   | March 2033                |
 
 ## New Projects
 
-If you are planning to start a new project in 2025, we recommend beginning development on the most recent available patch version of the **6.1 LTS** release.
+If you are planning to start a new project in 2026, we recommend beginning development on the most recent available patch version of the **7.0 LTS** release.
 
 ## OroCommerce Community Edition Releases
 
@@ -65,8 +66,8 @@ The Oro team produces patch releases for each version of OroCommerce Community E
 
 Community developers and users have access to the following two product branches:
 
-- **Stable** – <a href="https://github.com/oroinc/orocommerce-application/tree/6.1" target="_blank">6.1 branch</a> points to the latest stable release. Use this branch for testing and deployment. To benefit from the latest features, fixes, and security updates, upgrade to the next patch release tag as soon as it becomes available.
-- **Development** – <a href="https://github.com/oroinc/orocommerce-application/tree/master" target="_blank">7.0 branch</a> points to the latest published commit and is updated frequently. This branch should be used **only by the developers and contributors** who actively follow the project progress on GitHub. This branch is not considered stable and is not recommended for production use.
+- **Stable** – <a href="https://github.com/oroinc/orocommerce-application/tree/7.0" target="_blank">7.0 branch</a> points to the latest stable release. Use this branch for testing and deployment. To benefit from the latest features, fixes, and security updates, upgrade to the next patch release tag as soon as it becomes available.
+- **Development** – <a href="https://github.com/oroinc/orocommerce-application/tree/master" target="_blank">7.1 branch</a> points to the latest published commit and is updated frequently. This branch should be used **only by the developers and contributors** who actively follow the project progress on GitHub. This branch is not considered stable and is not recommended for production use.
 
 | OroCommerce Community Edition   | Release Date     | Patch Releases Available Until   |
 |---------------------------------|------------------|----------------------------------|
@@ -74,6 +75,7 @@ Community developers and users have access to the following two product branches
 | **5.1**                         | **March 2023**   | **March 2024**                   |
 | **6.0**                         | **March 2024**   | **March 2025**                   |
 | **6.1**                         | **March 2025**   | **March 2026**                   |
+| **7.0**                         | **March 2026**   | **March 2027**                   |
 
 #### BUSINESS TIP
 ## Business Tip
