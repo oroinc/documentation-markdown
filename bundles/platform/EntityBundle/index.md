@@ -23,5 +23,6 @@
 * [Get the EntityStructureDataProvider Instance](entity-structure-data-provider.md#bundle-docs-platform-entity-bundle-entity-structure-data-provider)
 * [Events](../../../backend/entities/events.md#dev-entities-events)
 * [EntitySelectSearchApiAccessor](entity-select-search-api-accessor.md#bundle-docs-platform-entity-bundle-search-api-processor)
+* [Twig Template Static Analysis](twig-template-static-analysis.md#bundle-docs-platform-entity-bundle-twig-static-analysis)
 
 <!-- Frontend -->
