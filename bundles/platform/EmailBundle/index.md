@@ -12,6 +12,7 @@ send emails from the application and use email templates.
 * [Events](events.md)
 * [Emails](emails.md)
 * [Email Templates](email-templates.md)
+* [Email Template Security Policy Checking](email-templates-security-policy.md)
 * [Email Templates Migrations](email-templates-migrations.md)
 * [System Mailboxes](mailboxes.md)
 * [Email Ownership](ownership.md)
