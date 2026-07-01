@@ -15,6 +15,7 @@ For more information on the setup, see [OroCommerce Field Sales App Setup and Co
 
 ## Related Documentation
 
+* [Application Base URLs](app-base-urls.md)
 * [Commands](commands.md)
 * [Configuration](configuration.md)
 * [CORS](cors.md)

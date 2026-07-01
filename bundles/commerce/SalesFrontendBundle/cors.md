@@ -37,4 +37,7 @@ You can customize methods, headers and max age via corresponding setter methods 
 
 Other CORS settings of the [Back-Office Web API](../../../backend/api/index.md#web-api) remain unchanged.
 
+#### NOTE
+When `app_base_urls` is configured via the `ORO_SALES_FRONTEND_APP_BASE_URLS` environment variable, the back-office API CORS origins are registered at **runtime** on the first request by `AddSalesFrontendOriginsToApiCorsListener`. See [Application Base URLs](app-base-urls.md#bundle-docs-commerce-sales-frontend-bundle-app-base-urls) for details.
+
 <!-- Frontend -->
