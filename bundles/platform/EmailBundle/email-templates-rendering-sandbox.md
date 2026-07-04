@@ -17,6 +17,9 @@ Also, additional Twig functions, filters, and tags are registered and allowed to
 
 ## Configuring Entity and Field Availability
 
+#### NOTE
+The feature is available as of OroCommerce version 7.0.3.
+
 Whether an entity and its fields appear as available variables in email templates is controlled by the
 `email` entity configuration scope. Both settings default to `false`, so developers must explicitly
 opt in to expose an entity or its individual fields.
