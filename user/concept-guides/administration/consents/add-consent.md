@@ -68,6 +68,7 @@ Keep in mind that once a consent is accepted by at least one person in the OroCo
 * [Revoke Consents](../../../back-office/activities/contact-requests/index.md#user-guide-activities-requests)
 * [Build Reports with Accepted Consents](../../../back-office/reports-segments/reports/index.md#user-guide-reports)
 * [Add a Cookie Banner to the Website](../../../../bundles/commerce/CookieConsentBundle/index.md#bundle-docs-commerce-cookie-consent-bundle)
+* [Cookie Consent in OroCommerce: Guidance for Merchants](cookie-consent.md#concept-guide-cookie-consent)
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->
