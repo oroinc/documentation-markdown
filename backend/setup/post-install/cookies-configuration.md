@@ -16,6 +16,9 @@ The storefront functionality adds the following cookies:
 
 All of these cookies are configured in different places.
 
+#### NOTE
+If your OroCommerce application is hosted in OroCloud, an additional **OCXS** cookie is set by the OroCloud platform. This cookie is used for robot detection and prevention and is independent of the cookie configuration described on this page.
+
 ## Back-Office Session Cookie
 
 The back-office session cookie holds information about a logged-in user in the platform application.
