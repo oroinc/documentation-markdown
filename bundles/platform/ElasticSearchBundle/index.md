@@ -19,6 +19,7 @@ This bundle supports Elasticsearch engine version >=7.7, <8.0. You can manually 
 * [ElasticSearch Indexes Backup](backup.md)
 * [ElasticSearch Configuration](configuration.md)
 * [Request Builders](request-builders.md)
+* [Back-Office Search Synonyms](search-synonyms.md)
 * [Troubleshooting](troubleshooting.md)
 * [Upgrade Website Index to Elasticsearch >=8.4, <9.0](upgrade-to-es8.md)
 
