@@ -11,6 +11,7 @@ Learn how to configure localization options, currency and tracking, as well and 
 * [Localization](organization-localization.md#config-guide-localization-organization-localization)
 * [Display Settings](organization-display-settings.md#configuration-general-setup-display-settings-organization)
 * [Email Configuration](organization-email-settings.md#admin-configuration-email-configuration-organization)
+* [Search](organization-search.md#organization-config-search-synonyms)
 * [Currency](organization-currency.md#admin-configuration-currency-org)
 * [User Settings](organization-user-settings.md#admin-configuration-user-settings-org)
 * [Upload Settings](organization-upload-settings.md#configuration-guide-system-configuration-general-setup-sysconfig-upload-settings-organization)

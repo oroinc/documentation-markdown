@@ -19,6 +19,7 @@ This bundle supports Elasticsearch engine version >=9.2, <10.0. You can manually
 * [ElasticSearch Indexes Backup](backup.md)
 * [ElasticSearch Configuration](configuration.md)
 * [Request Builders](request-builders.md)
+* [Back-Office Search Synonyms](search-synonyms.md)
 * [Troubleshooting](troubleshooting.md)
 * [Upgrade Website Index to Elasticsearch >=9.2, <10.0](upgrade-to-es9.md)
 
