@@ -20,11 +20,11 @@ The dashboard shows a pre-configured dashboard with e-commerce statistics like O
 
 ## Configuration
 
-**Important** - this configuration is available only via `config.yml/app.yml`. It is not exposed via system configuration.
+**Important** — this configuration is available only via `config.yml/app.yml`. It is not exposed via system configuration.
 
-* `oro_seller_dashboard.order_count_status_criteria` - only orders with selected statuses will be calculated in the “Orders Count” and “Orders Revenue” widgets
-* `oro_seller_dashboard.top_selling_status_criteria` - only orders with selected statuses will be calculated in the “Top Selling Items” widgets
-* `oro_seller_dashboard.order_overtime_status_criteria` - only orders with selected statuses will be calculated in the “Orders Overtime” widget
+* `oro_seller_dashboard.order_count_status_criteria` — only orders with selected statuses will be calculated in the “Orders Count” and “Orders Revenue” widgets
+* `oro_seller_dashboard.top_selling_status_criteria` — only orders with selected statuses will be calculated in the “Top Selling Items” widgets
+* `oro_seller_dashboard.order_overtime_status_criteria` — only orders with selected statuses will be calculated in the “Orders Overtime” widget
 
 Color settings
 
@@ -49,15 +49,15 @@ Color settings
 
 ## Main Classes
 
-* `Oro\Bundle\SellerDashboardBundle\Provider\ChartDataProviderInterface` - Interface that represents each chart identifier, default date period and data, also contains constants that represent date periods
-  : * `ChartDataProviderInterface::getChartIdentifier` - each chart should have its own identifier, so that JS component can properly identify it and update on period switching.
-    * `ChartDataProviderInterface::getDefaultPeriod` - returns the default period to be used for chart data. Default date period is defined in `AbstractChartDataProvider`.
-    * `ChartDataProviderInterface::getChartData` - each chart data provider implements this method to prepare the data in the specific format and is used to build a specific chart.
-* `Oro\Bundle\SellerDashboardBundle\Provider\AbstractChartDataProvider` - Encapsulates commonly used logic needed by chart data providers
-  : * `AbstractChartDataProvider::getDefaultPeriod` - returns default period to be used for chart data
-    * `AbstractChartDataProvider::getDateRanges` - returns an array of Date objects that represents current period start date, end date and previous period start and end dates (to be used for periods comparison, e.g. `Order Revenue Chart`, `Order Count Char`, etc.)
-    * `AbstractChartDataProvider::getIntervalsForPeriod` - returns an array of formatted `label` and `value` values representing intervals to be used for a chart e.g. `Order Revenue Chart`
-    * `AbstractChartDataProvider::applyDateRangeRestrictionToQB` - used to modify QueryBuilder object and apply dates filter according to required period
+* `Oro\Bundle\SellerDashboardBundle\Provider\ChartDataProviderInterface` — Interface that represents each chart identifier, default date period and data, also contains constants that represent date periods
+  : * `ChartDataProviderInterface::getChartIdentifier` — each chart should have its own identifier, so that JS component can properly identify it and update on period switching.
+    * `ChartDataProviderInterface::getDefaultPeriod` — returns the default period to be used for chart data. Default date period is defined in `AbstractChartDataProvider`.
+    * `ChartDataProviderInterface::getChartData` — each chart data provider implements this method to prepare the data in the specific format and is used to build a specific chart.
+* `Oro\Bundle\SellerDashboardBundle\Provider\AbstractChartDataProvider` — Encapsulates commonly used logic needed by chart data providers
+  : * `AbstractChartDataProvider::getDefaultPeriod` — returns default period to be used for chart data
+    * `AbstractChartDataProvider::getDateRanges` — returns an array of Date objects that represents current period start date, end date and previous period start and end dates (to be used for periods comparison, e.g. `Order Revenue Chart`, `Order Count Char`, etc.)
+    * `AbstractChartDataProvider::getIntervalsForPeriod` — returns an array of formatted `label` and `value` values representing intervals to be used for a chart e.g. `Order Revenue Chart`
+    * `AbstractChartDataProvider::applyDateRangeRestrictionToQB` — used to modify QueryBuilder object and apply dates filter according to required period
 
 ## Dashboard
 
@@ -180,7 +180,7 @@ my_bundle.twig.my_charts_data:
 
 **Step 3**
 
-Implement the method  `ChartDataProviderInterface::getChartIdentifier` - each chart should have its unique identifier.
+Implement the method  `ChartDataProviderInterface::getChartIdentifier` — each chart should have its unique identifier.
 
 ```php
 public function getChartIdentifier(): string
@@ -189,7 +189,7 @@ public function getChartIdentifier(): string
 }
 ```
 
-Implement the method `ChartDataProviderInterface::getChartData` - each chart data provider implements this method
+Implement the method `ChartDataProviderInterface::getChartData` — each chart data provider implements this method
 to prepare the data in the own specific format to be used by e.g. FusionChart component.
 As an example, please refer to any provider that implements `ChartDataProviderInterface`, e.g. `Oro\Bundle\SellerDashboardBundle\Provider\TopSellingCountChartDataProvider`
 

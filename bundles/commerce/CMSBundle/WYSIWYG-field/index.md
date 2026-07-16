@@ -10,9 +10,9 @@ An administrator can add a new WYSIWYG field to any entity available in Entity M
 Each WYSIWYG field data is divided and stored in three separate pieces: HTML markup, CSS styles, JSON properties.
 In practice, the field with the `content` name is stored in three fields:
 
-> * `content` - the main field (database column) to save the HTML markup of the content;
-> * `content_style` - an additional field (database column) to save the CSS styles applied by the editor to the content;
-> * `content_properties` - an additional field (database column) to save additional JSON metadata stored by the editor to properly initialize its UI.
+> * `content` — the main field (database column) to save the HTML markup of the content;
+> * `content_style` — an additional field (database column) to save the CSS styles applied by the editor to the content;
+> * `content_properties` — an additional field (database column) to save additional JSON metadata stored by the editor to properly initialize its UI.
 
 ## Related Documentation
 

@@ -21,14 +21,14 @@ Automatic management of webhook endpoints does not work with local domains, such
 
 The payment method supports the following payment actions:
 
-* `authorize` - the payment is authorized but not captured immediately.
-* `charge` - the payment is captured immediately.
-* `purchase` - the meta payment action that automatically chooses between `authorize` and `charge` based on the Stripe Payment Element payment method integration settings.
-* `capture` - the payment is captured after it was authorized.
-* `cancel` - the payment is canceled.
-* `confirm` - to confirm the given Stripe Payment Intent when a user comes after a payment from external URL.
-* `refund` - the payment is refunded.
-* `re_authorize` - the payment is re-authorized after it was previously authorized but not captured.
+* `authorize` — the payment is authorized but not captured immediately.
+* `charge` — the payment is captured immediately.
+* `purchase` — the meta payment action that automatically chooses between `authorize` and `charge` based on the Stripe Payment Element payment method integration settings.
+* `capture` — the payment is captured after it was authorized.
+* `cancel` — the payment is canceled.
+* `confirm` — to confirm the given Stripe Payment Intent when a user comes after a payment from external URL.
+* `refund` — the payment is refunded.
+* `re_authorize` — the payment is re-authorized after it was previously authorized but not captured.
 
 Under the hood, the `\Oro\Bundle\StripePaymentBundle\PaymentMethod\StripePaymentElement\StripePaymentElementMethod` payment method delegates the payment actions to the `\Oro\Bundle\StripePaymentBundle\StripePaymentIntent\Executor\StripePaymentIntentActionExecutorComposite` executor, which in its turn passes the execution to the appropriate action executor, e.g. based on the payment action type.
 
@@ -36,8 +36,8 @@ Under the hood, the `\Oro\Bundle\StripePaymentBundle\PaymentMethod\StripePayment
 
 The capture method is configured in the Stripe Payment Element integration settings and can be set to one of the following values:
 
-* `manual` - the payment is captured manually after it was authorized.
-* `automatic` - the payment is captured automatically after it was authorized.
+* `manual` — the payment is captured manually after it was authorized.
+* `automatic` — the payment is captured automatically after it was authorized.
 
 Please be aware that the capture method setting is effective only for Stripe payment methods that are capable of manual capture. The list of supported payment methods is defined in the `oro_stripe_payment.payment_method_types` bundle configuration parameter that is originally taken from the [Stripe Documentation](https://docs.stripe.com/payments/payment-methods/payment-method-support).
 

@@ -37,7 +37,7 @@ For more information on price calculation precision and the different types of p
 
 ### Start Calculation With
 
-**Start Calculation With** - The option allows you to specify how taxes should be calculated — either per **Unit Price** or based on the **Row Total** (total price for all units of the same product).
+**Start Calculation With** — The option allows you to specify how taxes should be calculated — either per **Unit Price** or based on the **Row Total** (total price for all units of the same product).
 
 * **Unit Price Formula** — This setting calculates taxes at the **unit level** before summing them up for the entire order. It multiplies the [rounded price](../catalog/global-pricing.md#sys-config-commerce-catalog-pricing-rounding) of a single unit by the tax rate and then by the quantity. This method ensures that each unit’s tax is computed individually. The parentheses `()` in the formula denote where rounding is applied.
 

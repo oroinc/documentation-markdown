@@ -18,6 +18,6 @@ To change the shipping tax configuration:
    ![Global shipping tax configuration](user/img/system/config_commerce/taxation/shipping_tax_config.png)
 3. Clear the **Use Default** checkbox to change the system-wide setting.
 4. In the **Shipping Tax** section, configure the options:
-   * **Tax Code** - Select the tax code (tax identifier) that in combination with [tax rules](../../../../taxes/tax-rules/index.md#tax-rules) defines the tax rate that is applied for the shipping tax calculation.
-   * **Shipping Rates Include Tax** - Enable the checkbox to avoid charging taxes on shipping twice if the shipping rates provided by the shipping carrier(s) or entered manually in the back-office already include tax.
+   * **Tax Code** — Select the tax code (tax identifier) that in combination with [tax rules](../../../../taxes/tax-rules/index.md#tax-rules) defines the tax rate that is applied for the shipping tax calculation.
+   * **Shipping Rates Include Tax** — Enable the checkbox to avoid charging taxes on shipping twice if the shipping rates provided by the shipping carrier(s) or entered manually in the back-office already include tax.
 5. Click **Save**.

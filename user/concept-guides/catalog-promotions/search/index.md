@@ -57,12 +57,12 @@ Several out-of-the-box functions enhance the effectiveness and speed of the sear
 
 **Back-office-specific**
 
-* **Search by an entity in the back-office** - When searching for a term in the back-office, the feature enables you to select the entity that most likely contains the searching record. The search result will then display the records that belong to this entity first.
+* **Search by an entity in the back-office** — When searching for a term in the back-office, the feature enables you to select the entity that most likely contains the searching record. The search result will then display the records that belong to this entity first.
 
 ![Difference between the regular search and search by entity](user/img/concept-guides/search/search-by-entity.png)
 
 <a id="user-guide-getting-started-search-tag"></a>
-* **Search by tag in the back-office** - The feature enables you to view all the records with a specific tag anywhere in the system. Select the *Tag* entity when searching for a term and click the tag when found. You will be presented with a page that looks similar to the search results and contains all the records with this tag.
+* **Search by tag in the back-office** — The feature enables you to view all the records with a specific tag anywhere in the system. Select the *Tag* entity when searching for a term and click the tag when found. You will be presented with a page that looks similar to the search results and contains all the records with this tag.
 
 ![Difference between the regular search and search by entity](user/img/concept-guides/search/search-by-tag.png)
 * [Quick Search](../../../back-office/system/configuration/quick-search.md#user-guide-system-configuration-quick-search) - The intelligent search feature is located in the configuration panel on the left (on all configuration levels). It helps you locate the specific configuration option instantly by keywords. It narrows down the query when you start typing the key letters and displays real-time search results.

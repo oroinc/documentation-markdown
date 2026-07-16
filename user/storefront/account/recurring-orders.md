@@ -12,7 +12,7 @@ The **Recurring Orders** page in the storefront allows customer users to view, m
 To access the page, navigate to **My Account > Recurring Orders**.
 
 #### NOTE
-Recurring orders functionality must be enabled in the [back-office system configuration](../../back-office/system/user-management/organizations/org-configuration/commerce/sales/organization-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders) on the required level by the system administrator.
+Recurring orders functionality must be enabled in the [back-office system configuration](../../back-office/system/configuration/commerce/sales/global-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders) on the required level by the system administrator.
 
 ## Recurring Orders Page
 
@@ -67,4 +67,4 @@ On each scheduled date, the system automatically generates a new standard order 
 **Related Topics**
 
 * [Recurring Orders in the Back-Office](../../back-office/sales/recurring-orders/index.md#user-guide-sales-recurring-orders)
-* [Configure Recurring Orders Globally](../../back-office/system/user-management/organizations/org-configuration/commerce/sales/organization-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders)
+* [Configure Recurring Orders Globally](../../back-office/system/configuration/commerce/sales/global-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders)

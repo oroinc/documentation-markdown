@@ -65,8 +65,8 @@ layout:
 
 The layout engine will look for:
 
-1. `{% block _header_widget %}` - starts with an underscore, then the block ID and the `_widget` suffix.
-2. `{% block container_widget %}` - a block type name with the `_widget` suffix.
+1. `{% block _header_widget %}` — starts with an underscore, then the block ID and the `_widget` suffix.
+2. `{% block container_widget %}` — a block type name with the `_widget` suffix.
 
 If `_header_widget` is found, it will be used, if not,
 `container_widget` will be used for rendering the `header` layout block.
