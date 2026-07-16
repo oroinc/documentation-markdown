@@ -16,23 +16,23 @@ To configure the integration between Ingenico and OroCommerce, follow the steps 
 2. Click **Create Integration** on the top right.
 3. Provide the following information in the form:
    ![Integration with Ingenico setup](user/img/system/integrations/ingenico/integration.png)
-   * **Type** - Select *Ingenico ePayments Connect platform* from the drop-down list.
-   * **Name** - Provide the payment method name that is shown as an option for payment configuration in the OroCommerce back-office.
-   * **Label** - The payment method name/label displayed as a payment option for the buyer in the OroCommerce storefront during the checkout. To translate the label into other languages, click on the icon next to the field.
-   * **Short label** - The payment method name/label that is shown in the order details in the OroCommerce back-office and storefront after the order is submitted. To translate the label into other languages, click on the icon next to the field.
-   * **API Key ID**, **Secret API Key**, **API Endpoint**, **Merchant ID** - Provide credentials, generated on the Ingenico side.
-   * **Enabled Products** - Select one or more items from the list. Press and hold the **Ctrl** or **Shift** key and click on the items to select multiple payment methods.
-     * **Credit Cards** - Credit and debit cards.
-     * **SEPA Direct Debit** - SEPA is a direct debit payment system created by the EU to process cashless payments transactions between EU countries. SEPA uses IBAN.
-     * **ACH** -  ACH direct debit is an electronic network for financial transactions, also known as eChecks.
-   * **Payment Action** - (Only applicable to credit/debit cards) Select the action from the drop-down list:
+   * **Type** — Select *Ingenico ePayments Connect platform* from the drop-down list.
+   * **Name** — Provide the payment method name that is shown as an option for payment configuration in the OroCommerce back-office.
+   * **Label** — The payment method name/label displayed as a payment option for the buyer in the OroCommerce storefront during the checkout. To translate the label into other languages, click on the icon next to the field.
+   * **Short label** — The payment method name/label that is shown in the order details in the OroCommerce back-office and storefront after the order is submitted. To translate the label into other languages, click on the icon next to the field.
+   * **API Key ID**, **Secret API Key**, **API Endpoint**, **Merchant ID** — Provide credentials, generated on the Ingenico side.
+   * **Enabled Products** — Select one or more items from the list. Press and hold the **Ctrl** or **Shift** key and click on the items to select multiple payment methods.
+     * **Credit Cards** — Credit and debit cards.
+     * **SEPA Direct Debit** — SEPA is a direct debit payment system created by the EU to process cashless payments transactions between EU countries. SEPA uses IBAN.
+     * **ACH** —  ACH direct debit is an electronic network for financial transactions, also known as eChecks.
+   * **Payment Action** — (Only applicable to credit/debit cards) Select the action from the drop-down list:
      * *Final Authorization* - The payment creation results in an authorization that is ready for capture. Final authorizations cannot be reversed and need to be captured for the full amount within 7 days.
      * *Pre-Authorization* - The payment creation results in a pre-authorization that is ready for capture. Pre-authorizations can be reversed and can be captured within 30 days. The capture amount can be lower than the authorized amount.
      * *Sale* - The payment creation results in an authorization that is already captured at the moment of approval.
-   * **Allow Tokenization** - Select this checkbox to enable buyers in the storefront to store payment credentials for future payments. Enabling this option does not affect guest buyers in the storefront.
+   * **Allow Tokenization** — Select this checkbox to enable buyers in the storefront to store payment credentials for future payments. Enabling this option does not affect guest buyers in the storefront.
      ![Tokenization](user/img/system/integrations/ingenico/tokenization.png)
-   * **Direct Debit Text** - Provide the description of the transaction displayed on the customer bank statement to assist the customer in recognizing the transaction. This field is mandatory if you selected SEPA and ACH payment methods.
-   * **Default Owner** - A user who is responsible for this integration and manages it.
+   * **Direct Debit Text** — Provide the description of the transaction displayed on the customer bank statement to assist the customer in recognizing the transaction. This field is mandatory if you selected SEPA and ACH payment methods.
+   * **Default Owner** — A user who is responsible for this integration and manages it.
 4. Click **Save and Close**.
 
 Once the integration with Ingenico is created, the next step is to [set up a payment rule](../../../payment-rules/index.md#sys-payment-rules) that enables these payment methods for all or some customer orders in the OroCommerce application.
@@ -50,17 +50,17 @@ The fields to fill in for payment transactions vary depending on the payment met
 #### NOTE
 Fields marked with an asterisk \* are mandatory.
 
-* **SEPA** - IBAN\*, Account Holder Name\*.
+* **SEPA** — IBAN\*, Account Holder Name\*.
 
   **NOTE**: When the billing address for the order has the organization name rather than of an individual, an additional mandatory field **Debtor’s Surname** is displayed.
   ![SEPA](user/img/system/integrations/ingenico/sepa.png)
-* **ACH** - City, First Name, Account holder name\*, Routing number\*, Account number\*, Last name, Street, Street address number, Zip Code.
+* **ACH** — City, First Name, Account holder name\*, Routing number\*, Account number\*, Last name, Street, Street address number, Zip Code.
   ![ACH](user/img/system/integrations/ingenico/ach.png)
-* **Mastercard** - Card number\*, Expiry date\*, CVC2\*.
+* **Mastercard** — Card number\*, Expiry date\*, CVC2\*.
   ![Mastercard](user/img/system/integrations/ingenico/mastercard.png)
-* **Visa** - Saved card, Card number\*, Expiry date\*, CVV\*
+* **Visa** — Saved card, Card number\*, Expiry date\*, CVV\*
   ![Visa](user/img/system/integrations/ingenico/visa.png)
-* **American Express** - Card number\*, Expiry date\*, CID\*
+* **American Express** — Card number\*, Expiry date\*, CID\*
   ![American Express](user/img/system/integrations/ingenico/american-express.png)
 
 ## Process Payments in OroCommerce Back-Office

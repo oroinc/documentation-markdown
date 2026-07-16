@@ -255,10 +255,10 @@ Each email address is owned by exactly one entity. In OroPlatform, `User` entiti
 
 Each entity owning an email address must have its own email entity that implements the `Oro\Bundle\EmailBundle\Entity\EmailInterface`. This interface defines four methods:
 
-* `getEmailField()` - Returns the name of the database table column that holds the actual email address.
-* `getId()` - A unique identifier to find a particular email address entity in the database.
-* `getEmail()` - This method returns the actual email address.
-* `getEmailOwner()` - The entity that owns a certain email address.
+* `getEmailField()` — Returns the name of the database table column that holds the actual email address.
+* `getId()` — A unique identifier to find a particular email address entity in the database.
+* `getEmail()` — This method returns the actual email address.
+* `getEmailOwner()` — The entity that owns a certain email address.
 
 Sample `Email` entity:
 
@@ -323,13 +323,13 @@ Sample `Email` entity:
 
 The entity that is the owner of the email address has to implement the `Oro\Bundle\EmailBundle\Entity\EmailOwnerInterface`:
 
-* `getClass()` - The fully qualified class name of the entity.
-* `getEmailFields()` - A list of properties of the entity that represent valid email addresses. You can specify more
+* `getClass()` — The fully qualified class name of the entity.
+* `getEmailFields()` — A list of properties of the entity that represent valid email addresses. You can specify more
   : than one property here.
-* `getId()` - A unique identifier to identify a particular owner entity.
-* `getFirstName()` - The first name of the email address owner. It will be used to build proper recipient names
+* `getId()` — A unique identifier to identify a particular owner entity.
+* `getFirstName()` — The first name of the email address owner. It will be used to build proper recipient names
   : when sending emails.
-* `getLastName()` - The last name of the email address owner. It will be used to build proper recipient names
+* `getLastName()` — The last name of the email address owner. It will be used to build proper recipient names
   : when sending emails.
 
 For the `Applicant` entity, the implementation should be similar to the following:
@@ -422,12 +422,12 @@ For the `Applicant` entity, the implementation should be similar to the followin
 To make the application able to find the owner of a certain email address, you have to create a provider that implements the
 `Oro\Bundle\EmailBundle\Entity\Provider\EmailOwnerProviderInterface`. This interface contains the following methods:
 
-* `getEmailOwnerClass()` - Gets the class of an email address owner entity (the class implementing the `EmailOwnerInterface` which is the `Applicant` class in the example above).
-* `findEmailOwner()` - Finds an entity object that is an owner of an email address or `null` if no such owner exists. The returned object must be an instance of the class specified by the `getEmailOwnerClass()` method.
+* `getEmailOwnerClass()` — Gets the class of an email address owner entity (the class implementing the `EmailOwnerInterface` which is the `Applicant` class in the example above).
+* `findEmailOwner()` — Finds an entity object that is an owner of an email address or `null` if no such owner exists. The returned object must be an instance of the class specified by the `getEmailOwnerClass()` method.
 
-`getOrganizations()` - Gets the list of organization IDs where an email address is used.
+`getOrganizations()` — Gets the list of organization IDs where an email address is used.
 
-`getEmails()` - Gets the list of email addresses for an organization.
+`getEmails()` — Gets the list of email addresses for an organization.
 
 The provider class should then look like this:
 

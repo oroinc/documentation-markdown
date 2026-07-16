@@ -286,7 +286,7 @@ datagrids:
 
 #### enable
 
-Marks or unmarks this column as editable. The behavior depends on main inline_editing.behavior: `enable_all` - false will disable editing this cell. `enable_selected` - true will enable editing this cell.
+Marks or unmarks this column as editable. The behavior depends on main inline_editing.behavior: `enable_all` — false will disable editing this cell. `enable_selected` — true will enable editing this cell.
 
 #### save_api_accessor
 
@@ -752,7 +752,7 @@ With this option, you can switch the datagrid class to a custom implementation.
 Provides the ability to work with the grid in different modes. There are two supported modes:
 
 - **server** (default) - all manipulations with data are performed on the backend side; the grid receives data via AJAX requests.
-- **client** - all manipulations with data are performed on the frontend side; no AJAX requests required. The client mode does not currently support filters.
+- **client** — all manipulations with data are performed on the frontend side; no AJAX requests required. The client mode does not currently support filters.
 
 This grid will be rendered and processed in the client mode:
 

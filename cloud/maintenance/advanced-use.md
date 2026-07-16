@@ -385,7 +385,7 @@ Valid changes are applied within 10 minutes or automatically during deployments.
 ### X Frame Header Configuration
 
 * **header_x_frame: true** — is the default value of the flag, configured in the Webserver configuration section. In this case, OroCloud WAF adds the “X-Frame-Options: SAMEORIGIN” header when responding to the initial request. It makes it impossible to embed any OroCommerce site into iFrame at any site except itself to fulfill security requirements.
-* **header_x_frame_app_control: true** - Ignore the “X-Frame-Options” header and allow the application to decide if the header is required. It can be configured in the Webserver or Domain configuration section. Configuration in the domain section takes priority over the webserver section.
+* **header_x_frame_app_control: true** — Ignore the “X-Frame-Options” header and allow the application to decide if the header is required. It can be configured in the Webserver or Domain configuration section. Configuration in the domain section takes priority over the webserver section.
 
 Some business cases require embedding the OroCloud site into the iFrame at other sites, in which case you must set the value to “false”: `header_x_frame: false`.
 This prevents WAF from sending the “X-Frame-Options” header, which allows embedding into any iFrame.
@@ -1076,11 +1076,11 @@ Options:
   -n, --no-interaction                         Do not ask any interactive question
   -v|vv|vvv, --verbose                         Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
 
-* **option "--environment"** - Name of the destination environment where data dump will be copied.
+* **option "--environment"** --- Name of the destination environment where data dump will be copied.
 
-* **option "--components"** - Comma-separated components list (without spaces) to be included in the dump. Allowed: db,ess,rpm. Default: db. Database is sanitized.
+* **option "--components"** --- Comma-separated components list (without spaces) to be included in the dump. Allowed: db,ess,rpm. Default: db. Database is sanitized.
 
-* **option "--indices"** - Comma-separated Elastic indices list to be included in the dump. If not set - all indices will be included.
+* **option "--indices"** --- Comma-separated Elastic indices list to be included in the dump. If not set - all indices will be included.
 ```
 
 #### NOTE
@@ -1150,15 +1150,15 @@ Options:
   -n, --no-interaction                         Do not ask any interactive question
   -v|vv|vvv, --verbose                         Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
 
-* **option "--components"** - Comma-separated list (without spaces) of components for data to be loaded. Allowed: db,ess,rpm. Default: db. Database is sanitized.
+* **option "--components"** --- Comma-separated list (without spaces) of components for data to be loaded. Allowed: db,ess,rpm. Default: db. Database is sanitized.
 
-* **option "--skip-prepare-app"** - Skip prepare application operations. With this option application will not be usable after finishing operation.
+* **option "--skip-prepare-app"** --- Skip prepare application operations. With this option application will not be usable after finishing operation.
 
-* **option "--flush-elasticsearch"** - Flush ElasticSearch. All ElasticSearch data will be lost.
+* **option "--flush-elasticsearch"** --- Flush ElasticSearch. All ElasticSearch data will be lost.
 
-* **option "--run-base-reindex"** - Run command [oro:search:reindex] in background to update search index for the specified entities.
+* **option "--run-base-reindex"** --- Run command [oro:search:reindex] in background to update search index for the specified entities.
 
-* **option "--run-website-reindex"** - Run command [oro:website-search:reindex] in background to rebuild storefront search index.
+* **option "--run-website-reindex"** --- Run command [oro:website-search:reindex] in background to rebuild storefront search index.
 ```
 
 #### NOTE

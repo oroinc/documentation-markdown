@@ -10,25 +10,25 @@ Features are defined in configuration files placed into Resources/config/oro/fea
 
 Each feature consists of one required option, the label. You can configure the following sections, out-of-the-box:
 
-> - `label` - A feature title.
-> - `description` - A feature description.
-> - `toggle` - A [system configuration](../system-configuration/index.md#backend-system-configuration) option key that is used as a feature toggle.
-> - `dependencies` - A list of feature names that the feature depends on. The feature is enabled when all the features from this list are also enabled.
-> - `routes` - A list of route names.
-> - `configuration` - A list of [system configuration](../system-configuration/index.md#backend-system-configuration) group and field names.
-> - `workflows` - A list of [workflow](../entities-data-management/workflows/intro.md#backend-workflows-intro) names.
-> - `processes` - A list of [process](../entities-data-management/processes.md#backend-entities-data-management-processes) names.
-> - `operations` - A list of [operation](../entities-data-management/actions/index.md#bundle-docs-platform-action-bundle-operations) names.
-> - `api_resources` - A list of entity FQCNs that are available as API resources.
-> - `frontend_api_resources` - A list of entity FQCNs that are available as the storefront API resources.
-> - `commands` - A list of commands that depend on the feature. Running these commands is impossible or is not reasonable when the feature is disabled.
-> - `entities` - A list of entity FQCNs.
-> - `dashboard_widgets` - A list of [dashboard widget](../dashboards/index.md#dev-dashboards) names.
-> - `sidebar_widgets` - A list of [sidebar widget](../../bundles/platform/SidebarBundle/index.md#bundle-docs-platform-sidebar-bundle) names.
-> - `cron_jobs` - A list of CRON commands that depend on the feature. These commands are not executed by the [cron](../cron.md#dev-guide-system-cron-jobs) when the feature is disabled.
-> - `navigation_items` - A list of [navigation item](../navigation/index.md#doc-managing-app-menu) names.
-> - `placeholder_items` - A list of [placeholder item](../../frontend/back-office/placeholders.md#backend-placeholders) names.
-> - `mq_topics` - A list of [message queue topic](../mq/message-queue-topics.md#dev-guide-mq-topics) names.
+> - `label` — A feature title.
+> - `description` — A feature description.
+> - `toggle` — A [system configuration](../system-configuration/index.md#backend-system-configuration) option key that is used as a feature toggle.
+> - `dependencies` — A list of feature names that the feature depends on. The feature is enabled when all the features from this list are also enabled.
+> - `routes` — A list of route names.
+> - `configuration` — A list of [system configuration](../system-configuration/index.md#backend-system-configuration) group and field names.
+> - `workflows` — A list of [workflow](../entities-data-management/workflows/intro.md#backend-workflows-intro) names.
+> - `processes` — A list of [process](../entities-data-management/processes.md#backend-entities-data-management-processes) names.
+> - `operations` — A list of [operation](../entities-data-management/actions/index.md#bundle-docs-platform-action-bundle-operations) names.
+> - `api_resources` — A list of entity FQCNs that are available as API resources.
+> - `frontend_api_resources` — A list of entity FQCNs that are available as the storefront API resources.
+> - `commands` — A list of commands that depend on the feature. Running these commands is impossible or is not reasonable when the feature is disabled.
+> - `entities` — A list of entity FQCNs.
+> - `dashboard_widgets` — A list of [dashboard widget](../dashboards/index.md#dev-dashboards) names.
+> - `sidebar_widgets` — A list of [sidebar widget](../../bundles/platform/SidebarBundle/index.md#bundle-docs-platform-sidebar-bundle) names.
+> - `cron_jobs` — A list of CRON commands that depend on the feature. These commands are not executed by the [cron](../cron.md#dev-guide-system-cron-jobs) when the feature is disabled.
+> - `navigation_items` — A list of [navigation item](../navigation/index.md#doc-managing-app-menu) names.
+> - `placeholder_items` — A list of [placeholder item](../../frontend/back-office/placeholders.md#backend-placeholders) names.
+> - `mq_topics` — A list of [message queue topic](../mq/message-queue-topics.md#dev-guide-mq-topics) names.
 
 An example of the features.yml configuration:
 

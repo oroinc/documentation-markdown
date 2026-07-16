@@ -117,7 +117,7 @@ In the System Capabilities section, the following capabilities are available:
   ![image](user/img/system/user_management/user_level_config.png)
 * **Access System Configuration** — Enables a user to access system configuration settings under **System > Configuration** in the main menu.
   ![image](user/img/system/user_management/sys_config.png)
-* **Debug Prices** – Enables a user to access the Price Calculation Details menu under Sales to understand how prices for a particular product are created, what the current prices are for a given customer and website, and what the prices will be for a specific date.
+* **Debug Prices** — Enables a user to access the Price Calculation Details menu under Sales to understand how prices for a particular product are created, what the current prices are for a given customer and website, and what the prices will be for a specific date.
   ![Illustration of the permission that enables Pricing Debug Menu](user/img/sales/prices-debug/prices-debug-ACL.png)
 * **Assign/Unassign Tags** — Enables a user to assign/unassign [tags](../../tags-management/index.md#admin-guide-tag-management) to records.
 * **Connect to Mailchimp** — Enables a user to map the contents of a marketing list in OroCommerce to use a segment of the subscribers list in [Mailchimp](../../../marketing/email-campaigns/sending-email-campaign-via-mailchimp.md#user-guide-mailchimp-campaign). When the capability is enabled, the **Connect to Mailchimp** button appears on the page of the selected marketing list. Make sure that the integration between OroCommerce and [Mailchimp is configured](../../integrations/mailchimp-integration.md#user-guide-mc-integration) for the capability to work.

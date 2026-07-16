@@ -78,8 +78,8 @@ We recommend changing your password after the first login unless you use a Googl
 3. On the page of your profile, click **Edit**.
 4. In the **Password** section, provide the following information:
    * **Password** — Provide your current password.
-   * **New Password** – Provide a new password. It must be at least eight characters long and include a lower case letter, an upper case letter, and a number
-   * **Repeat New Password** – Confirm the new passport by typing it in again.
+   * **New Password** — Provide a new password. It must be at least eight characters long and include a lower case letter, an upper case letter, and a number
+   * **Repeat New Password** — Confirm the new passport by typing it in again.
 5. Click **Save**. The new password will be sent to your primary email address.
 
 **To change your password via the More Actions menu:**
