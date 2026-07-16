@@ -6,7 +6,7 @@ REST API allows to create advanced search queries.
 
 Parameters for APIs requests:
 
-- **query** - search string
+- **query** — search string
 
 REST API url: `http://domail.com/api/rest/latest/search/advanced`
 
@@ -16,15 +16,15 @@ REST API works with the get request only.
 
 Request returns an array with data:
 
-- **records_count** - the total number of results (without `offset`
+- **records_count** — the total number of results (without `offset`
   and `max_results`) parameters
-- **count** - count of records in the current request
-- **data** - array with data. Data consists of the following values:
-  - **entity_name** - class name of entity
-  - **record_id** - id of record from this entity
-  - **record_string** - the title of this record
-  - **record_url** - the given URL for this record
-  - **selected_data** - data from fields that have been explicitly
+- **count** — count of records in the current request
+- **data** — array with data. Data consists of the following values:
+  - **entity_name** — class name of entity
+  - **record_id** — id of record from this entity
+  - **record_string** — the title of this record
+  - **record_url** — the given URL for this record
+  - **selected_data** — data from fields that have been explicitly
     selected in the select clause (optional)
 
 ## Query Language
@@ -119,20 +119,20 @@ Different field types support different operators in the `where` block.
 
 ### For String Fields
 
-- **~ (CONTAINS)** - operator `~` is used for set text field value.
+- **~ (CONTAINS)** — operator `~` is used for set text field value.
   If search value is string, it must be quoted. Examples:
   ```none
   name ~ value
   name ~ "string value"
   ```
-- **!~ (NOT CONTAINS)** - operator `!~` is used for search strings
+- **!~ (NOT CONTAINS)** — operator `!~` is used for search strings
   without value. If the search value is a string, it must be quoted.
   Examples:
   ```none
   name !~ value
   name !~ "string value"
   ```
-- **like** - operator `like` is used to finding records with a
+- **like** — operator `like` is used to finding records with a
   specified substring in any position (`LIKE %value%` statement
   behaviour). If the search value is a multi-word string that contains
   whitespaces, it should be enclosed in quotes. Examples:
@@ -140,7 +140,7 @@ Different field types support different operators in the `where` block.
   name like value
   name like "string value"
   ```
-- **notlike** - operator `notlike` is used to find records
+- **notlike** — operator `notlike` is used to find records
   without a specified substring in any position (`NOT LIKE %value%`
   statement behaviour). If the search value is a multi-word string that
   contains whitespaces, it should be enclosed in quotes. Examples:
@@ -151,21 +151,21 @@ Different field types support different operators in the `where` block.
 
 ### For Numeric Fields
 
-- **= (EQUALS)** - operator `=` is used to search for records where the
+- **= (EQUALS)** — operator `=` is used to search for records where the
   field value matches the specified value. Examples:
   ```none
   integer count = 100
   decimal price = 12.5
   datetime create_date = "2013-01-01 00:00:00"
   ```
-- **!= (NOT EQUALS)** - operator `!=` is used to search for records
+- **!= (NOT EQUALS)** — operator `!=` is used to search for records
   where the field value does not match the specified value. Examples:
   ```none
   integer count != 5
   decimal price != 45
   datetime create_date != "2012-01-01 00:00:00"
   ```
-- **>, <, <=, >=** - Operators are used to search for the records where the field value is `greater`, `less`,
+- **>, <, <=, >=** — Operators are used to search for the records where the field value is `greater`, `less`,
   `less than or equals` or `greater than or equals` of the
   specified value. Examples:
   ```none
@@ -173,13 +173,13 @@ Different field types support different operators in the `where` block.
   decimal price < 45
   datetime create_date > "2012-01-01 00:00:00"
   ```
-- **in** - operator `in` is used to search for the records where the value is in
+- **in** — operator `in` is used to search for the records where the value is in
   the specified set of data. Examples:
   ```none
   integer count in (5, 10, 15, 20)
   decimal price in (12.2, 55.25)
   ```
-- **!in** - operator `!in` is used to search for records where the field value is not
+- **!in** — operator `!in` is used to search for records where the field value is not
   in the specified set of data. Examples:
   ```none
   integer count !in (1, 3, 5)

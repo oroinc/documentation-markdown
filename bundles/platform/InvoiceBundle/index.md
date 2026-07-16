@@ -9,8 +9,8 @@ OroInvoiceBundle enables invoice management in a standalone application, relying
 
 The bundle introduces the following entities:
 
-- `\Oro\Bundle\InvoiceBundle\Entity\Invoice` - represents an invoice and includes the generic invoice fields such as invoice number, invoice date, total amount, etc.
-- `\Oro\Bundle\InvoiceBundle\Entity\InvoiceLineItem` - represents an individual line item within an invoice and includes fields such as description, unit, quantity, price, etc.
+- `\Oro\Bundle\InvoiceBundle\Entity\Invoice` — represents an invoice and includes the generic invoice fields such as invoice number, invoice date, total amount, etc.
+- `\Oro\Bundle\InvoiceBundle\Entity\InvoiceLineItem` — represents an individual line item within an invoice and includes fields such as description, unit, quantity, price, etc.
 
 #### NOTE
 This package is designed to operate independently of OroCommerce and should not include any commerce-related functionalities. All OroCommerce-specific features must be included in the [OroCommerceInvoiceBundle](../../commerce/CommerceInvoiceBundle/index.md#bundle-docs-commerce-invoice-bundle).

@@ -31,10 +31,10 @@ menu_config:
 
 You can define the following attributes:
 
-- **Label** - is the name of action.
-- **Position** - specifies the order in context menu.
-- **Module** - is a path to the JavaScript module. It handles an item action.
-- **Template** - is the name of an item template. Example of an item template:
+- **Label** — is the name of action.
+- **Position** — specifies the order in context menu.
+- **Module** — is a path to the JavaScript module. It handles an item action.
+- **Template** — is the name of an item template. Example of an item template:
   ```twig
   <li{{ oro_menu.attributes(itemAttributes) }}>
       <a href="#" class="action">
@@ -51,11 +51,11 @@ In the template, provide the `<li{{ oro_menu.attributes(itemAttributes) }}>` tag
 
 **Module** receives the following values from **options** into **initialize**:
 
-- **el** - context menu item.
-- **model** - a <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Resources/public/js/calendar/connection/model.js" target="_blank">Backbone model</a> represents a calendar connection .
-- **collection** - a <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Resources/public/js/calendar/connection/collection.js" target="_blank">Backbone collection</a>.
-- **colorManager** - <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Resources/public/js/calendar/color-manager.js" target="_blank">manager</a>.
-- **connectionsView** - a Backbone view represents a <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Resources/public/js/calendar/connection/view.js" target="_blank">calendar items list</a>.
+- **el** — context menu item.
+- **model** — a <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Resources/public/js/calendar/connection/model.js" target="_blank">Backbone model</a> represents a calendar connection .
+- **collection** — a <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Resources/public/js/calendar/connection/collection.js" target="_blank">Backbone collection</a>.
+- **colorManager** — <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Resources/public/js/calendar/color-manager.js" target="_blank">manager</a>.
+- **connectionsView** — a Backbone view represents a <a href="https://github.com/oroinc/OroCalendarBundle/blob/master/Resources/public/js/calendar/connection/view.js" target="_blank">calendar items list</a>.
 
 In the JavaScript module, you can use the default method **execute**. This method is called when a user clicks on your item menu, for example:
 

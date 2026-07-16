@@ -27,9 +27,9 @@ Content-Security-Policy: frame-ancestors 'self' https://example.com
 
 When a user successfully logs in using the login page embedded in the iframe in the Sales Frontend application, the OroCommerce application sends back the 301 response that redirects a user to the route `oro_sales_frontend_default` (/admin/sales-frontend/ by default) and sets the following cookies:
 
-* `OROSFAID` - Sales Frontend session cookie. Inherits the default session settings, but can be configured in the oro_sales_frontend.session bundle configuration.
-* `OROSFARM` - Sales Frontend remember-me login cookie.
-* `OROSFATOKEN` - Sales Frontend OAuth2 access token cookie obtained under-the-hood of <a href="https://github.com/oroinc/sales-frontend" target="_blank">SalesFrontendBundle</a> after a successful login. By default, it has the HTTP-only flag. Can be configured in the oro_sales_frontend.access_token bundle configuration.
+* `OROSFAID` — Sales Frontend session cookie. Inherits the default session settings, but can be configured in the oro_sales_frontend.session bundle configuration.
+* `OROSFARM` — Sales Frontend remember-me login cookie.
+* `OROSFATOKEN` — Sales Frontend OAuth2 access token cookie obtained under-the-hood of <a href="https://github.com/oroinc/sales-frontend" target="_blank">SalesFrontendBundle</a> after a successful login. By default, it has the HTTP-only flag. Can be configured in the oro_sales_frontend.access_token bundle configuration.
 
 #### NOTE
 OAuth2 authentication is performed in the OroBundleSalesFrontendBundleEventListenerSecuritySalesFrontendLoginListener.

@@ -66,7 +66,7 @@ The configured values are stored in different tables:
 Below the configuration level, each option’s configuration is divided into three sections:
 
 <a id="book-entities-configuration-options"></a>
-* `options` - These values are used to configure additional behavior for the config field:
+* `options` — These values are used to configure additional behavior for the config field:
 
   | Option          | Description                                                                                                                                                               |
   |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -74,7 +74,7 @@ Below the configuration level, each option’s configuration is divided into thr
   | `translatable`  | If `true`, the value entered by the user is treated as a key which is<br/>then used to look up the actual value using the Symfony translation<br/>procedure.              |
   | `indexed`       | Set this to `true` when the attribute needs to be accessed in SQL<br/>queries (see [Indexed Attributes](#book-entities-indexed-attributes)).                              |
   | `priority`      | Defines the order in which options will be shown in grid views and<br/>forms (options with a higher priority will be displayed before options<br/>with a lower priority). |
-* `grid` - Configures the way the field is presented in a datagrid:
+* `grid` — Configures the way the field is presented in a datagrid:
 
   | Option                                                 | Description                                                                                                             |
   |--------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
@@ -86,7 +86,7 @@ Below the configuration level, each option’s configuration is divided into thr
   #### NOTE
   To use the attribute in a grid view, it
   [needs to be indexed](#book-entities-indexed-attributes).
-* `form` - You use these options to control how the user can configure the actual value:
+* `form` — You use these options to control how the user can configure the actual value:
 
   | Option          | Description                                                                                                              |
   |-----------------|--------------------------------------------------------------------------------------------------------------------------|
