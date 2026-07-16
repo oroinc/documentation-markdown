@@ -19,9 +19,9 @@ SCSS files as other template assets (images as javascripts) and [layout update f
 [themes](../theming.md#dev-doc-frontend-layouts-theming). Out-of-the-box, the OroCommerce application comes with two
 [themes](../theming.md#dev-doc-frontend-layouts-theming-orocommerce-themes), **default**, and **custom**.
 
-1. **default** - a fully developed theme and recommended for customizations. It
+1. **default** — a fully developed theme and recommended for customizations. It
    has basic @mixins, @functions, variables, color palette, typography, settings and dependencies.
-2. **custom** - a modified **default** theme
+2. **custom** — a modified **default** theme
 
 <a id="dev-doc-frontend-css-theme-structure"></a>
 
@@ -33,9 +33,9 @@ Core styles are located in <a href="https://github.com/oroinc/platform/tree/5.1/
 
 CSS structure has three folders, **components**, **settings**, and **variables**:
 
-1. **components** - a folder for bundle components;
-2. **settings** - a folder for @mixins, @functions, and settings for a particular theme;
-3. **variables** - a folder for all configuration variables for a particular bundle.
+1. **components** — a folder for bundle components;
+2. **settings** — a folder for @mixins, @functions, and settings for a particular theme;
+3. **variables** — a folder for all configuration variables for a particular bundle.
 
 Each bundle has its own **styles.scss** that collects all variables, settings, and components styles.
 

@@ -272,8 +272,8 @@ To achieve this, you need a way to get and bind data to the layout elements.
 
 Data can flow to a layout from several sources:
 
-1. From a **Layout Context** - the shared layouts data
-2. From a **Layout Data Provider** - the data that is unique for every particular page, based on the same layout
+1. From a **Layout Context** — the shared layouts data
+2. From a **Layout Data Provider** — the data that is unique for every particular page, based on the same layout
 
 The <a href="https://symfony.com/doc/5.4/components/expression_language/introduction.html" target="_blank">Symfony Expression Language</a> is used to unify access of the **Context** and **Data** variables. The Expression Language syntax is similar to JavaScript, but in layouts, it is limited to the basic operations with no functions at all and only a few defined variables:
 

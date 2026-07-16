@@ -128,8 +128,8 @@ WorkflowBundle provides two following console commands to work with processes.
 
 This command loads processes configuration from .yml configuration files to the database. It is used during application installation and update. The command has two optional options:
 
-- **–directories** - this option specifies directories used to find configuration files (multiple values allowed)
-- **–definitions** - this option specifies names of the process definitions that should be loaded (multiple values allowed)
+- **–directories** — this option specifies directories used to find configuration files (multiple values allowed)
+- **–definitions** — this option specifies names of the process definitions that should be loaded (multiple values allowed)
 
 #### NOTE
 You should run this command if the process configuration was changed to upload your changes to DB.
@@ -138,8 +138,8 @@ You should run this command if the process configuration was changed to upload y
 
 This command executes a process trigger with a specified identifier and the process name. The command has two required options:
 
-- **–id** - the identifier of the ProcessTrigger to handle
-- **–name** - the name of ProcessDefinition. The trigger should belong to this ProcessDefinition
+- **–id** — the identifier of the ProcessTrigger to handle
+- **–name** — the name of ProcessDefinition. The trigger should belong to this ProcessDefinition
 
 ## REST API
 

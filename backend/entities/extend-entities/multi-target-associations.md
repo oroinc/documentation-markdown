@@ -220,8 +220,8 @@ entity_config:
 
 As you can see, this configuration file declares new entity config scope named `note` and two attributes on entity level in this scope (both of these attributes are applicable for the target side of association):
 
-- **enabled** - this attribute indicates whether a note can be added to a target entity.
-- **immutable** - this attribute can be used to prohibit changing the association state. This attribute can be used to prohibit disabling an already enabled association and vise versa.
+- **enabled** — this attribute indicates whether a note can be added to a target entity.
+- **immutable** — this attribute can be used to prohibit changing the association state. This attribute can be used to prohibit disabling an already enabled association and vise versa.
 
 You can use both of these attributes for your own associations, and they will automatically have the same behavior. You can find the implementation of the **enabled** attribute in <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityExtendBundle/Form/Type/AssociationChoiceType.php" target="_blank">AssociationChoiceType</a> (please note that this form type has been configured to be used with this attribute). You can find the implementation of the **immutable** attribute in <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityConfigBundle/Form/Type/AbstractConfigType.php" target="_blank">AbstractConfigType</a>.
 
@@ -502,8 +502,8 @@ entity_config:
 
 As you can see, this configuration file declares new entity config scope named `activity` and two attributes on entity level in this scope (both of these attributes are applicable for the target side of association):
 
-- **activities** - this attribute indicates which activity entities can be associated with a target entity.
-- **immutable** - this attribute can be used to prohibit changing the association state. This attribute can be used to prohibit disabling an already enabled association and vise versa.
+- **activities** — this attribute indicates which activity entities can be associated with a target entity.
+- **immutable** — this attribute can be used to prohibit changing the association state. This attribute can be used to prohibit disabling an already enabled association and vise versa.
 
 You can find the implementation of both attributes in <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/EntityExtendBundle/Form/Type/MultipleAssociationChoiceType.php" target="_blank">MultipleAssociationChoiceType</a>. Please note that this form type has been configured to be used with this attribute.
 

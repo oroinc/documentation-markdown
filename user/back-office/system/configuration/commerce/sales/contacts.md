@@ -23,19 +23,19 @@ To enable or disable the display of sales representative information in the stor
 
    ![Global contact configuration settings](user/img/system/config_commerce/sales/SalesInfoGlobal.png)
 3. In the **Display** list, select one of the options that will determine what and whose information to show on the website:
-   * **Don’t Display Contact Info** - no sales rep information is displayed. This option is the default one.
-   * **Customer User Owner** - allow customer user owner information to be displayed.
-   * **Customer Owner** - allow customer owner information to be displayed.
+   * **Don’t Display Contact Info** — no sales rep information is displayed. This option is the default one.
+   * **Customer User Owner** — allow customer user owner information to be displayed.
+   * **Customer Owner** — allow customer owner information to be displayed.
 
      #### NOTE
      User settings override all other settings if **Customer Owner** or **Customer User Owner** are selected as a display option.
-   * **Pre-configured** - in the *Contact Details* text field, specify custom contact details you wish to be displayed.
+   * **Pre-configured** — in the *Contact Details* text field, specify custom contact details you wish to be displayed.
 
    ![Sample of the contact details to be displayed in the storefront](user/img/system/config_commerce/sales/SalesInfoGlobalPreConfigured.png)
 4. Options selected as **Available User Options** determine what options the user will see in the **Customer Visible Contact Info** list in their user configuration settings (in **My User > My Configuration > Commerce > Sales > Contacts > Customer Visible Contact Info**).
 
    The options are the following:
-   * **Don’t Display Contact Info** – allow setting the option of no sales rep information to be displayed.
+   * **Don’t Display Contact Info** — allow setting the option of no sales rep information to be displayed.
 
      If the admin enables the **Available User Options** checkbox and sets the *Don’t Display Contact Info* option, then the user will see *Don’t Display Contact Info* in their configuration settings.
 
@@ -47,7 +47,7 @@ To enable or disable the display of sales representative information in the stor
 
      Then:
      ![The related user contact configuration settings](user/img/system/config_commerce/sales/DontDisplayInfoSalesRep.png)
-   * **Use User Profile Data** – allow setting the option of user profile details to be displayed.
+   * **Use User Profile Data** — allow setting the option of user profile details to be displayed.
 
      If the admin enables the **Available User Options** checkbox and sets the *Use User Profile Data* option, then the user will see *Use My Profile Data* in their configuration settings.
 
@@ -56,7 +56,7 @@ To enable or disable the display of sales representative information in the stor
 
      Then:
      ![The related user contact configuration settings](user/img/system/config_commerce/sales/UseUserProfileDataSalesRep.png)
-   * **Enter Manually** – allow to set the option of manually entered text in the *Enter Contact Info* field.
+   * **Enter Manually** — allow to set the option of manually entered text in the *Enter Contact Info* field.
 
      If the admin enables the **Available User Options** checkbox and sets the *Enter manually* option, then the user will see *Enter Manually* in their configuration settings.
 

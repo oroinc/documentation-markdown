@@ -10,10 +10,10 @@ could be appropriately handled by a message consumer. In other words, a `topic` 
 To declare MQ topic, create a class that implements  `Oro\Component\MessageQueue\Topic\TopicInterface`
 and register it as a service with tag `oro_message_queue.topic`. You have to declare the following methods:
 
-- **getName** - to provide a topic name that will be used within the message queue transport. It usually consists of lowercase characters, digits, dots, and underscores.
-- **getDescription** - to provide a human-readable topic description. It is usually not longer than 80 characters.
-- **getDefaultPriority** - to provide a default priority for a message in the specified queue. It must return a constant from `Oro\Component\MessageQueue\Client\MessagePriority`.
-- **configureMessageBody** - to configure `Symfony\Component\OptionsResolver\OptionsResolver` that is used to validate the message body structure:
+- **getName** — to provide a topic name that will be used within the message queue transport. It usually consists of lowercase characters, digits, dots, and underscores.
+- **getDescription** — to provide a human-readable topic description. It is usually not longer than 80 characters.
+- **getDefaultPriority** — to provide a default priority for a message in the specified queue. It must return a constant from `Oro\Component\MessageQueue\Client\MessagePriority`.
+- **configureMessageBody** — to configure `Symfony\Component\OptionsResolver\OptionsResolver` that is used to validate the message body structure:
   provide a set of defined and required elements, their default values, allowed types and values, etc.
 
 #### NOTE

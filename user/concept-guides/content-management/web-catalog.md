@@ -54,7 +54,7 @@ Every child node must be populated with [content variants](../../back-office/mar
 * [Category page](../../back-office/marketing/web-catalogs/edit-content-tree/content-variants.md#user-guide-marketing-web-catalog-content-variant-category) – a direct link to products from a master catalog category
 * [Product Collection page](../../back-office/marketing/web-catalogs/edit-content-tree/content-variants.md#user-guide-marketing-web-catalog-content-variant-product-collection) – a dynamic collection of products that you filtered/selected manually or in bulk to be displayed for this page
 * [Landing page](../../back-office/marketing/web-catalogs/edit-content-tree/content-variants.md#user-guide-marketing-web-catalog-content-variant-landing-page) – a direct link to a custom content page
-* **Resource Library** – if you download a <a href="https://github.com/oroinc/resource-library" target="_blank">Resource Library Extension</a>, you can add media content, such as news, banners, product review videos, safety specifications, etc.
+* **Resource Library** — if you download a <a href="https://github.com/oroinc/resource-library" target="_blank">Resource Library Extension</a>, you can add media content, such as news, banners, product review videos, safety specifications, etc.
 
 #### HINT
 It is possible to add a custom content page and link it as a content variant, but this requires some customization effort.

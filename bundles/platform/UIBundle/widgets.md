@@ -27,11 +27,11 @@ Each widget on page has a unique widget identifier.
 
 ### JS Modules Services
 
-> - **oroui/js/widget-manager** - Widget manager
-> - **oro/block-widget** - Block widget
-> - **oro/buttons-widget** - Buttons widget
-> - **oro/dialog-widget** - Dialog widget
-> - **oroui/js/widget/abstract-widget** - Abstract widget, cannot be used standalone
+> - **oroui/js/widget-manager** — Widget manager
+> - **oro/block-widget** — Block widget
+> - **oro/buttons-widget** — Buttons widget
+> - **oro/dialog-widget** — Dialog widget
+> - **oroui/js/widget/abstract-widget** — Abstract widget, cannot be used standalone
 
 ## Widgets
 
@@ -73,42 +73,42 @@ Widget container adds `_widgetContainer=<widgetContainerType>&_wid=<widgetIdenti
 
 #### abstract-widget.js options
 
-- **type** - widget type name
-- **el** - widget element selector (inherit from Backbone.View options)
-- **actionsEl** - selector or element from which widget actions will be adopted
-- **url** - URL used to load remote content
-- **elementFirst** - flag, if set and both element and url are given then on first load element content will be used to render widget without AJAX request
-- **title** - widget title
-- **alias** - widget alias
-- **wid** - unique widget identifier
-- **loadingMaskEnabled** - flag, indicated enabled state of loading mask
-- **loadingElement** - element, hidden under loading mask. By default el is used. To hide the whole page, use the ‘body’ selector.
+- **type** — widget type name
+- **el** — widget element selector (inherit from Backbone.View options)
+- **actionsEl** — selector or element from which widget actions will be adopted
+- **url** — URL used to load remote content
+- **elementFirst** — flag, if set and both element and url are given then on first load element content will be used to render widget without AJAX request
+- **title** — widget title
+- **alias** — widget alias
+- **wid** — unique widget identifier
+- **loadingMaskEnabled** — flag, indicated enabled state of loading mask
+- **loadingElement** — element, hidden under loading mask. By default el is used. To hide the whole page, use the ‘body’ selector.
 
 #### abstract-widget.js events
 
 Widget container events:
 
-> - **widgetRemove** - triggered when widget is removed
-> - **adoptedFormSubmitClick** - triggered when adopted form submit button is clicked
-> - **adoptedFormResetClick** - triggered when adopted form reset button is clicked
-> - **adoptedFormSubmit** - triggered when adopted form is submitted
-> - **reset** - triggered when adopted form is reset
-> - **beforeContentLoad** - triggered before content loading started
-> - **contentLoad** - triggered on content load
-> - **contentLoadError** - triggered in case of content loading error
-> - **widget:add:action:section:action_key** - triggered when action is added, triggered when action is added,
+> - **widgetRemove** — triggered when widget is removed
+> - **adoptedFormSubmitClick** — triggered when adopted form submit button is clicked
+> - **adoptedFormResetClick** — triggered when adopted form reset button is clicked
+> - **adoptedFormSubmit** — triggered when adopted form is submitted
+> - **reset** — triggered when adopted form is reset
+> - **beforeContentLoad** — triggered before content loading started
+> - **contentLoad** — triggered on content load
+> - **contentLoadError** — triggered in case of content loading error
+> - **widget:add:action:section:action_key** — triggered when action is added, triggered when action is added,
 >   section is action section name passed to addAction method,
 >   section is action section name passed to addAction method,
 >   action_key is action name passed to addAction method
-> - **renderStart** - triggered before widget rendering
-> - **widgetRender** - triggered on widget rendering
-> - **renderComplete** - triggered on widget rendering complete
+> - **renderStart** — triggered before widget rendering
+> - **widgetRender** — triggered on widget rendering
+> - **renderComplete** — triggered on widget rendering complete
 
 Global events triggered on mediator:
 
-> - **widget_remove** - triggered on mediator when widget is removed
-> - **widget_initialize** - triggered on mediator when widget is created
-> - **widget:render:wid** - triggered on widget render, wid is widget identifier string
+> - **widget_remove** — triggered on mediator when widget is removed
+> - **widget_initialize** — triggered on mediator when widget is created
+> - **widget:render:wid** — triggered on widget render, wid is widget identifier string
 
 ### abstract-widget.js Methods
 
@@ -337,19 +337,19 @@ export default function(options) {
 
 Global events triggered on mediator:
 
-- **widget_registration:wid:** - triggered when widget instance added
+- **widget_registration:wid:** — triggered when widget instance added
 
 #### widget-manager.js Methods
 
-* **resetWidgets()** - Reset manager to initial state.
-* **addWidgetInstance(widget)** - Add widget instance to registry.
+* **resetWidgets()** — Reset manager to initial state.
+* **addWidgetInstance(widget)** — Add widget instance to registry.
 
 Parameters:
 
 | Name   | Type                        | Description     |
 |--------|-----------------------------|-----------------|
 | widget | oroui.widget.AbstractWidget | widget instance |
-* **getWidgetInstance(wid, callback)** -  Get widget instance by widget identifier and pass it to callback when became available.
+* **getWidgetInstance(wid, callback)** —  Get widget instance by widget identifier and pass it to callback when became available.
 
 Parameters:
 
@@ -357,7 +357,7 @@ Parameters:
 |----------|----------|--------------------------|
 | wid      | string   | unique widget identifier |
 | callback | function | widget handler           |
-* **getWidgetInstanceByAlias(alias, callback)** - Get widget instance by alias and pass it to callback when became available.
+* **getWidgetInstanceByAlias(alias, callback)** — Get widget instance by alias and pass it to callback when became available.
 
 Parameters:
 
@@ -365,7 +365,7 @@ Parameters:
 |----------|----------|----------------|
 | alias    | string   | widget alias   |
 | callback | function | widget handler |
-* **removeWidget(wid)** - Remove widget instance from registry.
+* **removeWidget(wid)** — Remove widget instance from registry.
 
 Parameters:
 

@@ -37,10 +37,10 @@ To create a new content widget:
    #### NOTE
    If you have more than one organization in your OroCommerce application, first select the organization to which you want to add a new content widget.
 3. Depending on the widget type, form fields are different:
-   * **Contact Us Form** - Enables you to add a standard Contact Us form.
+   * **Contact Us Form** — Enables you to add a standard Contact Us form.
 
    > ![Contact us content widget form](user/img/marketing/content_widgets/contact_us.png)
-   * **Image Slider** - Enables you to configure and add an image slider.
+   * **Image Slider** — Enables you to configure and add an image slider.
 
    > ![Image slider content widget form](user/img/marketing/content_widgets/image_slider_1.png)
    > <br/>
@@ -50,15 +50,15 @@ To create a new content widget:
    > ![Image slider content widget form](user/img/marketing/content_widgets/image_slider_2.png)
 
    > <br/>
-   * **Product Mini Block** - Enables you to add a block with product information with or without prices and/or the **Add to Shopping List** button.
+   * **Product Mini Block** — Enables you to add a block with product information with or without prices and/or the **Add to Shopping List** button.
      ![A product mini block form](user/img/marketing/content_widgets/mini-block.png)
 
    > <br/>
-   * **Product Segment** - Enables you to add a product segment content widget, configure how many max and min items to show, whether to use slider on mobile, and show the **Add to Shopping List** button in the storefront. Only segments with type *Product* are listed in the **Segment** field dropdown. You can modify an existing [segment](../../reports-segments/segments.md#user-guide-business-intelligence-filters-segments) or create a new one under **Reports&Segments > Manage Segments**.
+   * **Product Segment** — Enables you to add a product segment content widget, configure how many max and min items to show, whether to use slider on mobile, and show the **Add to Shopping List** button in the storefront. Only segments with type *Product* are listed in the **Segment** field dropdown. You can modify an existing [segment](../../reports-segments/segments.md#user-guide-business-intelligence-filters-segments) or create a new one under **Reports&Segments > Manage Segments**.
      ![A product mini block form](user/img/marketing/content_widgets/product-segment.png)
 
    > <br/>
-   * **Tabbed Content** - Enables you to add content to your storefront website in a form of tabs or an accordion.
+   * **Tabbed Content** — Enables you to add content to your storefront website in a form of tabs or an accordion.
      ![Tabbed vs Accordion view of tabbed content widget](user/img/marketing/content_widgets/tabs-vs-accordion.png)
 
    > <br/>

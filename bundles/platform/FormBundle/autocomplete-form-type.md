@@ -260,10 +260,10 @@ If you use custom “configs.route_name” option it’s on your own to check us
 
 The server action receives the following parameters from the client:
 
-* **name** - alias of search handler that is specified using tag “oro_form.autocomplete.search_handler”
-* **query** - search string
-* **page** - number of pages to return
-* **per_page** - how many records service should return
+* **name** — alias of search handler that is specified using tag “oro_form.autocomplete.search_handler”
+* **query** — search string
+* **page** — number of pages to return
+* **per_page** — how many records service should return
 
 Select2 plugin on the client-side expects a response in the following format:
 

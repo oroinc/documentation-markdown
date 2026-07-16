@@ -23,7 +23,7 @@ To limit the shipping address and methods per quote:
       #### NOTE
       Once you change the existing settings, the previous configuration will be saved for your information in the *Previously Selected Shipping Method* log above the list of the shipping methods.
    2. Select the preferred shipping method from the **Default Shipping Method** list if necessary. The customer can change the option to any other available shipping method.
-   3. Optionally, enter the **Overridden Shipping Cost Amount, USD** - a custom shipping cost that will be used instead of the one that is dynamically generated based on the selected shipping method.
+   3. Optionally, enter the **Overridden Shipping Cost Amount, USD** — a custom shipping cost that will be used instead of the one that is dynamically generated based on the selected shipping method.
    4. To enforce using only the default Shipping method, enable the **Shipping Method Locked** flag.
    5. Select the **Allow Unlisted Shipping Methods** checkbox to allow using the shipping method already selected as a default one, even if it is disabled in this quote configuration.
 

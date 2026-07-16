@@ -45,10 +45,10 @@ Find the necessary price attribute in the list and click on it.
 
 The following information is available immediately:
 
-* **Price Attribute** – The name or label of the price attribute.
-* **Field Name** – The name of the field in the code/database that represents the price attribute.
-* **Currencies** – The currencies in which this price attribute is supported.
-* **Enabled in Product Export** – If enabled, this price attribute is used in the [storefront product listing export](../../../storefront/getting-started/common-controls.md#frontstore-guide-navigation-product-data-export).
+* **Price Attribute** — The name or label of the price attribute.
+* **Field Name** — The name of the field in the code/database that represents the price attribute.
+* **Currencies** — The currencies in which this price attribute is supported.
+* **Enabled in Product Export** — If enabled, this price attribute is used in the [storefront product listing export](../../../storefront/getting-started/common-controls.md#frontstore-guide-navigation-product-data-export).
 
 ![Price attribute edit page](user/img/products/price_attributes/price-attribute-edit.png)
 

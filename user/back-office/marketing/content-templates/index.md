@@ -26,10 +26,10 @@ To create a content template:
 2. Click **Create Content Template** on the top right.
 3. Provide the following details:
 
-* **Owner** - the owner of the content template.
-* **Name** - the name of the content template.
-* **Enabled** - select the checkbox to activate the content template.
-* **Tags** - the tag that is associated with the content template. You can either enter your own tag or select from the existing ones. Keep in mind that all content templates are grouped by tags in the WYSIWYG editor to speed up the search. You can find them under the Content Templates’ WYSIWYG tab. The templates without a tag are assigned to the General section.
+* **Owner** — the owner of the content template.
+* **Name** — the name of the content template.
+* **Enabled** — select the checkbox to activate the content template.
+* **Tags** — the tag that is associated with the content template. You can either enter your own tag or select from the existing ones. Keep in mind that all content templates are grouped by tags in the WYSIWYG editor to speed up the search. You can find them under the Content Templates’ WYSIWYG tab. The templates without a tag are assigned to the General section.
   ![Illustrating a Content Templates tab of a WYSIWYG editor being populated with sections](user/img/marketing/content-templates/create-content-template.png)
 
 1. Use WYSIWYG to design the template you need.

@@ -95,13 +95,13 @@ Please be aware that a valid Google API key is required to display maps in the s
 
 ## Manage an Address
 
-* **Mark address as primary** - To mark the address as primary, click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> on the right top of the address background, check the **Primary** box and click **Save**. The primary label will move to the updated address.
+* **Mark address as primary** — To mark the address as primary, click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> on the right top of the address background, check the **Primary** box and click **Save**. The primary label will move to the updated address.
 
 #### NOTE
 Delete is disabled for the primary address. To delete the address marked as primary, you must first move the primary label to a different address.
 
-* **Edit an address** - To edit an address, click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> on the top right of the address background, update the address details, and click **Save**.
-* **Delete an address** - Delete an address by clicking <i class="fas fa-trash-alt" aria-hidden="true"></i> next to it.
+* **Edit an address** — To edit an address, click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> on the top right of the address background, update the address details, and click **Save**.
+* **Delete an address** — Delete an address by clicking <i class="fas fa-trash-alt" aria-hidden="true"></i> next to it.
 
 * [Export Contacts](export-contacts.md)
 * [Import Contacts](import-contacts.md)

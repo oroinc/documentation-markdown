@@ -21,9 +21,9 @@ These settings can be configured [globally](../../../configuration/system/integr
 7. Clear the **Use Organization** checkbox to override the organization-wide setting for a selected user.
 8. In the **Synchronization Settings** section, determine how often the data synchronization should be performed. The interval is set in minutes.
 9. In the **Calendar Synchronization** and **Tasks Synchronization** sections, define the following:
-   * **Enabled** - Indicates whether the synchronization of calendar events and tasks is enabled for the user.
-   * **Sync Direction** - Data synchronization direction. It can be Oro to Microsoft, Microsoft to Oro, and Bidirectional.
-   * **Conflict Resolution** - The conflict resolution strategy that should be used if the same calendar events and tasks are changed in both Microsoft and Oro. This option is applicable only when bidirectional data synchronization is configured.
+   * **Enabled** — Indicates whether the synchronization of calendar events and tasks is enabled for the user.
+   * **Sync Direction** — Data synchronization direction. It can be Oro to Microsoft, Microsoft to Oro, and Bidirectional.
+   * **Conflict Resolution** — The conflict resolution strategy that should be used if the same calendar events and tasks are changed in both Microsoft and Oro. This option is applicable only when bidirectional data synchronization is configured.
 10. Click **Save Settings**.
 
 #### NOTE

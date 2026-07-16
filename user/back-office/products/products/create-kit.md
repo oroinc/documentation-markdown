@@ -22,12 +22,12 @@ To create a new product kit:
 7. Fill in the product details, as described in the topic on [creating a simple product](create-simple.md#products-products-create-simple-product).
 8. In the **Kit Items** section, you can add as many kit items and products to the kits as necessary. For each kit item you add, you can provide the following details:
    ![Fields in the kit items section](user/img/products/products/kits/kit-items.png)
-   * **Label** – Provide name for the kit item. It will be displayed in the back-office kit section, as well as [in the storefront when configuring the kit](../../../storefront/orders/kits.md#storefront-guide-orders-kits) and adding it to the shopping list.
-   * **Sort Order** – Set the sort order to set the order in which kits are displayed in the storefront compared to other available kits. The lower is the number, the higher is the priority.
-   * **Optional** – Indicates whether this kit item is required for purchase, or can be skipped by the customer.
-   * **Minimum Quantity** – The minimum number of products a customer can purchase as part of the kit.
-   * **Maximum Quantity** – The maximum number of products a customer can purchase as part of this kit.
-   * **Unit of Quantity** – Select the [product unit](product-units/index.md#user-guide-products-product-units-in-use) for the product kit items. Available options: *each*, *item*, *kilogram*, *piece*, *set*.
+   * **Label** — Provide name for the kit item. It will be displayed in the back-office kit section, as well as [in the storefront when configuring the kit](../../../storefront/orders/kits.md#storefront-guide-orders-kits) and adding it to the shopping list.
+   * **Sort Order** — Set the sort order to set the order in which kits are displayed in the storefront compared to other available kits. The lower is the number, the higher is the priority.
+   * **Optional** — Indicates whether this kit item is required for purchase, or can be skipped by the customer.
+   * **Minimum Quantity** — The minimum number of products a customer can purchase as part of the kit.
+   * **Maximum Quantity** — The maximum number of products a customer can purchase as part of this kit.
+   * **Unit of Quantity** — Select the [product unit](product-units/index.md#user-guide-products-product-units-in-use) for the product kit items. Available options: *each*, *item*, *kilogram*, *piece*, *set*.
 
    #### HINT
    You can expand or collapse each Kit Item section to display or hide the details of the product(s) that come as part of the kits.
