@@ -121,7 +121,7 @@ Examples of such filters are [ComparisonFilter](#comparisonfilter-filter), <a hr
 
 ## FieldAwareFilterInterface Interface
 
-Filters that are applied to a field and need to know the field name. must implement the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Filter/FieldAwareFilterInterface.php" target="_blank">FieldAwareFilterInterface</a> interface.
+Filters that are applied to a field and need to know the field name. Must implement the <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Filter/FieldAwareFilterInterface.php" target="_blank">FieldAwareFilterInterface</a> interface.
 
 Examples of such filters are [ComparisonFilter](#comparisonfilter-filter), <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Filter/StringComparisonFilter.php" target="_blank">StringComparisonFilter</a>, <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Filter/ExtendedAssociationFilter.php" target="_blank">ExtendedAssociationFilter</a>, <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Filter/NestedAssociationFilter.php" target="_blank">NestedAssociationFilter</a>, <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Filter/PrimaryFieldFilter.php" target="_blank">PrimaryFieldFilter</a> and <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/ApiBundle/Filter/AssociationCompositeIdentifierFilter.php" target="_blank">AssociationCompositeIdentifierFilter</a>.
 
