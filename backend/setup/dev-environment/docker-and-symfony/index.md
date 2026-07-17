@@ -13,7 +13,7 @@ locally on a host machine.
 There are quick guides to set up Docker and Symfony Server development stack:
 
 - [Setup on Mac OS X](../mac.md#setup-dev-env-docker-symfony-mac)
-- [Setup on Ubuntu 24.04 LTS](../ubuntu.md#setup-dev-env-docker-symfony-ubuntu)
+- [Setup on Ubuntu 26.04 LTS](../ubuntu.md#setup-dev-env-docker-symfony-ubuntu)
 - [Setup on Windows Subsystem for Linux (WSL) 2](../windows.md#setup-dev-env-docker-symfony-windows)
 
 **Development Stack**
