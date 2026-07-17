@@ -15,7 +15,7 @@ To apply customer user login-related options in your Oro application instance:
 
 In the Customer User Login Form section, configure the ability for a customer user to sign in with a username and password.
 
-* **Enable Username/Password Login** - When this option is enabled, customer users can sign in with a username and password, and all features related to passwords will be available. If you disable this option, password login will be turned off for all customer users. Consequently, all password-related features will also become unavailable.
+* **Enable Username/Password Login** — When this option is enabled, customer users can sign in with a username and password, and all features related to passwords will be available. If you disable this option, password login will be turned off for all customer users. Consequently, all password-related features will also become unavailable.
 
 #### IMPORTANT
 Before disabling this option, make sure that at least one external authentication method (such as Single Sign-On) is properly set up.

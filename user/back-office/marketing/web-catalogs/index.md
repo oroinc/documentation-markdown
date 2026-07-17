@@ -11,11 +11,11 @@ With the OroCommerce web catalog and content tree, you can organize the target w
 
 The web catalog content nodes may be of the following types:
 
-* **System page** - one of the standard eCommerce website pages (e.g. sign in, user profile, open orders, etc).
-* **Product** - direct link to [product](../../products/index.md#user-guide-products-products) details.
-* **Product Collection** - a dynamically generated group of products that are stored as a data segment.
-* **Category** - a category of the [master catalog](../../products/master-catalog/index.md#user-guide-products-master-catalog).
-* **Landing page** - a custom [landing page](../landing-pages/index.md#user-guide-landing-pages) created in the **Marketing > Landing Pages** section.
+* **System page** — one of the standard eCommerce website pages (e.g. sign in, user profile, open orders, etc).
+* **Product** — direct link to [product](../../products/index.md#user-guide-products-products) details.
+* **Product Collection** — a dynamically generated group of products that are stored as a data segment.
+* **Category** — a category of the [master catalog](../../products/master-catalog/index.md#user-guide-products-master-catalog).
+* **Landing page** — a custom [landing page](../landing-pages/index.md#user-guide-landing-pages) created in the **Marketing > Landing Pages** section.
 
 To view all web catalogs, navigate to **Marketing > Web Catalogs** in the main menu.
 

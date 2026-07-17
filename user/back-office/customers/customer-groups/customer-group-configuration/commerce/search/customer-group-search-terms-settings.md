@@ -18,7 +18,7 @@ To configure the search history settings per customer group:
 ![Customer group search terms configuration settings](user/img/customers/customer_groups/configuration/customer-group-config-search.png)
 1. Select **Commerce > Search > Search Terms** in the menu to the left.
 2. In the Search History section, clear the **Use Website** checkbox and configure the following option:
-   * **Enable Search History Collection** - depends on the [Enable Search History Reporting option](../../../../../system/configuration/commerce/search/search-terms.md#configuration-guide-commerce-configuration-search-history). When Enable Search History Collection is enabled, all search queries are logged into the database. This option allows enabling/disabling certain groups of visitors. For example, you can choose not to log requests from anonymous users by turning off this option at customer group level for Anonymous customers. Exercise care when enabling this option on popular websites as it may result in a large number of records saved to the database.
+   * **Enable Search History Collection** — depends on the [Enable Search History Reporting option](../../../../../system/configuration/commerce/search/search-terms.md#configuration-guide-commerce-configuration-search-history). When Enable Search History Collection is enabled, all search queries are logged into the database. This option allows enabling/disabling certain groups of visitors. For example, you can choose not to log requests from anonymous users by turning off this option at customer group level for Anonymous customers. Exercise care when enabling this option on popular websites as it may result in a large number of records saved to the database.
 3. Click **Save Settings**.
 
 **Related Topics**

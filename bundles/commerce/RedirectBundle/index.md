@@ -22,10 +22,10 @@ You can extend an entity in the system with only a slug prototype if it has no s
 
 Entities that support slug prototypes should implement one of the following interfaces:
 
-- `Oro\Bundle\RedirectBundle\Entity\LocalizedSlugPrototypeAwareInterface` - for localized slug prototypes. Interface is implemented in `Oro\Bundle\RedirectBundle\Entity\LocalizedSlugPrototypeAwareTrait`.
-- `Oro\Bundle\RedirectBundle\Entity\LocalizedSlugPrototypeWithRedirectAwareInterface` - for localized slug prototypes with redirect. Interface is implemented in `Oro\Bundle\RedirectBundle\Entity\LocalizedSlugPrototypeWithRedirectAwareTrait`.
-- `Oro\Bundle\RedirectBundle\Entity\TextSlugPrototypeAwareInterface` - for localized slug prototypes where slugs are stored in a text field. Interface is implemented in `Oro\Bundle\RedirectBundle\Entity\TextSlugPrototypeAwareTrait`.
-- `Oro\Bundle\RedirectBundle\Entity\TextSlugPrototypeWithRedirectAwareInterface` - for localized slug prototypes where slugs are stored in a text field with redirect. Interface is implemented in `Oro\Bundle\RedirectBundle\Entity\TextSlugPrototypeWithRedirectAwareTrait`.
+- `Oro\Bundle\RedirectBundle\Entity\LocalizedSlugPrototypeAwareInterface` — for localized slug prototypes. Interface is implemented in `Oro\Bundle\RedirectBundle\Entity\LocalizedSlugPrototypeAwareTrait`.
+- `Oro\Bundle\RedirectBundle\Entity\LocalizedSlugPrototypeWithRedirectAwareInterface` — for localized slug prototypes with redirect. Interface is implemented in `Oro\Bundle\RedirectBundle\Entity\LocalizedSlugPrototypeWithRedirectAwareTrait`.
+- `Oro\Bundle\RedirectBundle\Entity\TextSlugPrototypeAwareInterface` — for localized slug prototypes where slugs are stored in a text field. Interface is implemented in `Oro\Bundle\RedirectBundle\Entity\TextSlugPrototypeAwareTrait`.
+- `Oro\Bundle\RedirectBundle\Entity\TextSlugPrototypeWithRedirectAwareInterface` — for localized slug prototypes where slugs are stored in a text field with redirect. Interface is implemented in `Oro\Bundle\RedirectBundle\Entity\TextSlugPrototypeWithRedirectAwareTrait`.
 
 Entities that support slugs should implement `Oro\Bundle\RedirectBundle\Entity\SlugAwareInterface` which is implemented in `Oro\Bundle\RedirectBundle\Entity\SlugAwareTrait`.
 In most cases, you can use `Oro\Bundle\RedirectBundle\Entity\SluggableInterface`. It extends `LocalizedSlugPrototypeWithRedirectAwareInterface` and `SlugAwareInterface`. The corresponding trait name is `SlugAwareTrait`.
@@ -36,8 +36,8 @@ In most cases, you can use `Oro\Bundle\RedirectBundle\Entity\SluggableInterface`
 
 `SlugExtension` is used to simplify sluggable entities management in migration. When creating a new installer or an update script that manages sluggable entities, implement `SlugExtensionAwareInterface` and use methods of `SlugExtension` to add a new slug prototype and slug relations:
 
-- `addLocalizedSlugPrototypes` - adds a relation to a localized slug prototype
-- `addSlugs` - creates a slugs relation table
+- `addLocalizedSlugPrototypes` — adds a relation to a localized slug prototype
+- `addSlugs` — creates a slugs relation table
 
 ### Canonical URLs
 
@@ -56,8 +56,8 @@ This can lead to a considerable amount of DB queries, increased page response ti
 Each Oro installation can take place in different environments. To give system administrators maximum flexibility, OroCommerce provides three types of caches that can be configured with the DI parameter oro_redirect.url_cache_type.
 
 - **storage** (default) - stores cached URLs in groups. It is the best fit for filesystem-based caches as its usage minimizes the required space and number of available inodes. This type of cache groups the same URLs. You can tune the grouping factor with the DI parameter oro_redirect.url_storage_cache.split_deep, which is an integer in range 1..32. The default is set to 2, which handles up to 1M of slugs. For an installation that has more slugs, increase this parameter. Note that increasing this option will lead to an increased number of cache files which may require more space and inodes.
-- **key_value** - stores each cached value by its key. It is the best fit for key-value-based caches like Redis.
-- **local** - stores caches in local array cache. It can be used with a database URL provider, allowing semantic URLs usage without their actual caching in the persistent cache.
+- **key_value** — stores each cached value by its key. It is the best fit for key-value-based caches like Redis.
+- **local** — stores caches in local array cache. It can be used with a database URL provider, allowing semantic URLs usage without their actual caching in the persistent cache.
 
 Service oro_redirect.url_cache  must be used for interaction with semantic URL caches.
 
@@ -66,8 +66,8 @@ Service oro_redirect.url_cache  must be used for interaction with semantic URL c
 Semantic URLs should be received from URL providers. These services interact with caches and provide URLs that can be returned to the output.
 There are two providers in OroCommerce:
 
-- **cache** - reads data from oro_redirect.url_cache. Semantic URLs are available only after they appear in cache (URL is processed by MQ).
-- **database** - if a URL is not found in the decorated cache, this provider performs a request to the database. If URL is found, it is stored in the cache. Using this provider, you’ll get a semantic URL immediately, but it can send requests to the database, which may decrease performance.
+- **cache** — reads data from oro_redirect.url_cache. Semantic URLs are available only after they appear in cache (URL is processed by MQ).
+- **database** — if a URL is not found in the decorated cache, this provider performs a request to the database. If URL is found, it is stored in the cache. Using this provider, you’ll get a semantic URL immediately, but it can send requests to the database, which may decrease performance.
 
 You can change the URL provider with the DI parameter oro_redirect.url_provider_type.
 

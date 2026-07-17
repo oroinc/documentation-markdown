@@ -86,7 +86,7 @@ We recommend using [Docker and Symfony Server](docker-and-symfony/index.md#setup
 There are quick guides to set up the Docker and Symfony Server development stack:
 
 - [Setup on Mac OS X](mac.md#setup-dev-env-docker-symfony-mac)
-- [Setup on Ubuntu 24.04 LTS](ubuntu.md#setup-dev-env-docker-symfony-ubuntu)
+- [Setup on Ubuntu 26.04 LTS](ubuntu.md#setup-dev-env-docker-symfony-ubuntu)
 - [Setup on Windows Subsystem for Linux (WSL) 2](windows.md#setup-dev-env-docker-symfony-windows)
 
 Alternatively, to have a fully dockerized environment, you can use <a href="https://github.com/kiboko-labs/kloud" target="_blank">Docker images and stacks for OroPlatform based applications by the Kiboko team</a>.

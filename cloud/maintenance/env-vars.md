@@ -34,7 +34,7 @@ orocloud_options:
       'ORO_DEPLOYMENT_TYPE': 'local'
 ```
 
-* **local** - deployment_type, which will be set to parameters.yml for your deployed application as
+* **local** — deployment_type, which will be set to parameters.yml for your deployed application as
 
 ```none
 deployment_type: local

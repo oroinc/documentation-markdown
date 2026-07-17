@@ -19,10 +19,10 @@ Builder gets the **from** part of a query and converts any specific entities int
 
 Builder iterates through all conditions in the **where** part of the query and passes them to the chain of part builders that are used to process specific condition operators.
 
-- **ContainsWherePartBuilder** - processes **~** (contains) and **!~** (not contains) operators. Adds <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.x/query-dsl-match-query.html" target="_blank">match query</a> for “all_text” field with nGram tokenizer or <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.x/query-dsl-wildcard-query.html" target="_blank">wildcard query</a> for regular fields.
-- **EqualsWherePartBuilder** - processes **=** (equals) and **!=** (not equals) operators. Adds a <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.x/query-dsl-term-query.html" target="_blank">term query</a>.
-- **RangeWherePartBuilder** - processes arithmetical operators applied to numeric values: **>** (greater), **>=** (greater or equals), **<** (lower) and **<=** (lower or equals ). Adds appropriate <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.x/query-dsl-range-query.html" target="_blank">range query</a>.
-- **InWherePartBuilder** - processes **in** and **!in** operators. Converts the set into several **=** or **!=** conditions that uses <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.x/query-dsl-term-query.html" target="_blank">term query</a>.
+- **ContainsWherePartBuilder** — processes **~** (contains) and **!~** (not contains) operators. Adds <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.x/query-dsl-match-query.html" target="_blank">match query</a> for “all_text” field with nGram tokenizer or <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.x/query-dsl-wildcard-query.html" target="_blank">wildcard query</a> for regular fields.
+- **EqualsWherePartBuilder** — processes **=** (equals) and **!=** (not equals) operators. Adds a <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.x/query-dsl-term-query.html" target="_blank">term query</a>.
+- **RangeWherePartBuilder** — processes arithmetical operators applied to numeric values: **>** (greater), **>=** (greater or equals), **<** (lower) and **<=** (lower or equals ). Adds appropriate <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.x/query-dsl-range-query.html" target="_blank">range query</a>.
+- **InWherePartBuilder** — processes **in** and **!in** operators. Converts the set into several **=** or **!=** conditions that uses <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.x/query-dsl-term-query.html" target="_blank">term query</a>.
 
 Each part builder receives field name, field type, condition operator, value, boolean keyword and source request and returns the altered request.
 

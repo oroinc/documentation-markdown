@@ -17,7 +17,7 @@ These parameters are provided by the `\Oro\Bundle\StripePaymentBundle\StripeScri
 
 Out-of-the-box, there are following providers:
 
-* `\Oro\Bundle\StripePaymentBundle\StripeScript\Provider\StripePaymentElementStripeScriptProvider` - provides the Stripe Script parameters for the Stripe Payment Element integration.
-* `\Oro\Bundle\StripePaymentBundle\StripeScript\Provider\StripeScriptEnabledProvider` - provides an ability to explicitly enable the Stripe Script on the page.
+* `\Oro\Bundle\StripePaymentBundle\StripeScript\Provider\StripePaymentElementStripeScriptProvider` — provides the Stripe Script parameters for the Stripe Payment Element integration.
+* `\Oro\Bundle\StripePaymentBundle\StripeScript\Provider\StripeScriptEnabledProvider` — provides an ability to explicitly enable the Stripe Script on the page.
 
 <!-- Frontend -->

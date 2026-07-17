@@ -72,12 +72,12 @@ For that:
 1. Navigate to **System > Configuration > Integrations > Microsoft Settings**.
 2. Provide the following details under **Azure Active Directory Application Settings**:
    ![Azure Active Directory Application Settings](user/img/system/config_system/azure-directory-application-settings.png)
-   * **Application (Client) ID** - The client id generated on the Azure side when creating an active directory application. It is located on the main application page under **Essentials**. Selecting the *Use Default* checkbox resets the value.
-   * **Client Secret** - Provide the client secret value generated on the Azure side. To integrate with the Oro application, make sure to use the *client secret value*, not the secret ID.
+   * **Application (Client) ID** — The client id generated on the Azure side when creating an active directory application. It is located on the main application page under **Essentials**. Selecting the *Use Default* checkbox resets the value.
+   * **Client Secret** — Provide the client secret value generated on the Azure side. To integrate with the Oro application, make sure to use the *client secret value*, not the secret ID.
 
    ![Client secret value and ID on the Microsoft side](user/img/system/integrations/microsoft/client-secret-value-id.png)
-   * **Directory (Tenant) ID** - The directory id generated on the Azure side when creating an active directory application. It is located on the main application page under **Essentials**.
-   * **Redirect URI** - Copy this value and add it to your Azure Application trusted redirect URIs in order to complete the connection.
+   * **Directory (Tenant) ID** — The directory id generated on the Azure side when creating an active directory application. It is located on the main application page under **Essentials**.
+   * **Redirect URI** — Copy this value and add it to your Azure Application trusted redirect URIs in order to complete the connection.
 
    ![How to connect Redirect URI](user/img/system/integrations/microsoft/redirect-url-azure-side.png)
 3. Click **Save Settings**.

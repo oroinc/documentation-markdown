@@ -11,9 +11,9 @@ To change the default currency settings per organization:
    #### NOTE
    For faster navigation between the configuration menu sections, use [Quick Search](../../../../configuration/quick-search.md#user-guide-system-configuration-quick-search).
 4. In the **General** section, define the following options:
-   * **Main Navigation Menu** - Select which [storefront menu](../../../../../../concept-guides/administration/menus/index.md#menu-management-concept-guide) will represent the [main menu](../../../../../../storefront/getting-started/general-layout.md#frontstore-guide-navigation-main-menu) in the storefront.
+   * **Main Navigation Menu** — Select which [storefront menu](../../../../../../concept-guides/administration/menus/index.md#menu-management-concept-guide) will represent the [main menu](../../../../../../storefront/getting-started/general-layout.md#frontstore-guide-navigation-main-menu) in the storefront.
 
-> * **Prefer Self-Contained Web Catalog Canonical URLs** - This option is enabled by default. When disabled, the canonical URLs point to the direct URLs of the underlying content types if they are available. This option is available only when a web catalog is used as storefront menu.
+> * **Prefer Self-Contained Web Catalog Canonical URLs** — This option is enabled by default. When disabled, the canonical URLs point to the direct URLs of the underlying content types if they are available. This option is available only when a web catalog is used as storefront menu.
 
 > > ![Routing configuration at organization level displaying option Prefer Self-Contained Web Catalog Canonical URLs](user/img/system/user_management/org_configuration/websites/self-contained-url.png)
 1. Click **Save**.

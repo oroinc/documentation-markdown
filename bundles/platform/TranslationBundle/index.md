@@ -12,7 +12,7 @@ Translation context resolver should be used to humanize translation keys and giv
 
 ### Classes Description
 
-* **TranslationBundle\\Extension\\TranslationContextResolverInterface** - extensions interface for resolving Translation Context by translation key.
+* **TranslationBundle\\Extension\\TranslationContextResolverInterface** — extensions interface for resolving Translation Context by translation key.
 
 #### Configuration
 
@@ -69,17 +69,17 @@ Translation bundle provide form types for easier translation on frontend.
   This form type works exactly as regular <a href="http://symfony.com/doc/current/reference/forms/types/entity.html" target="_blank">entity form type</a>, but it supports translatable entities and performs translation using one DB request.
 
   Options:
-  * **class** - entity class name, this option is required;
-  * **property** - class property that should be used as label, by default string representation of entity will be used;
-  * **query_builder** - custom query builder or callback to extract entities.
+  * **class** — entity class name, this option is required;
+  * **property** — class property that should be used as label, by default string representation of entity will be used;
+  * **query_builder** — custom query builder or callback to extract entities.
 * **oro_select2_translatable_entity**
 
   This form type is extended from translatable_entity and renders using Select2 JS widget with autocomplete.
 
 ### Classes Description
 
-* **TranslationBundle\\Form\\Type\\TranslatableEntityType** - class for translatable_entity form type, provides functionality to work with translatable entities;
-* **TranslationBundle\\Form\\DataTransformer\\CollectionToArrayTransformer** - extends standard Doctrine transformer to support empty array as data source.
+* **TranslationBundle\\Form\\Type\\TranslatableEntityType** — class for translatable_entity form type, provides functionality to work with translatable entities;
+* **TranslationBundle\\Form\\DataTransformer\\CollectionToArrayTransformer** — extends standard Doctrine transformer to support empty array as data source.
 
 ### Configuration
 
@@ -129,8 +129,8 @@ translation fallbacks.
   Main interface for translation strategies.
 
   Methods:
-  * **getName** - returns text identifier of the strategy;
-  * **getLocaleFallbacks** - returns tree of locale fallbacks.
+  * **getName** — returns text identifier of the strategy;
+  * **getLocaleFallbacks** — returns tree of locale fallbacks.
 * `TranslationBundle\Strategy\DefaultTranslationStrategy`
 
   Implementation of TranslationStrategyInterface to handle default one-locale translation fallback.
@@ -139,14 +139,14 @@ translation fallbacks.
   The main purpose of this class is storing of current translation strategy and performing additional manipulations with it.
 
   Methods:
-  * **getStrategy** - returns current strategy;
-  * **setStrategy** - sets specified strategy as current;
-  * **getFallbackLocales** - returns list of allowed fallback locales for specified strategy and source locale;
-  * **getAllFallbackLocales** - returns list of all fallback locales for specified strategy.
+  * **getStrategy** — returns current strategy;
+  * **setStrategy** — sets specified strategy as current;
+  * **getFallbackLocales** — returns list of allowed fallback locales for specified strategy and source locale;
+  * **getAllFallbackLocales** — returns list of all fallback locales for specified strategy.
 
 ## Dependency Injection Tags
 
-* **oro_translation.extension.translation_strategy** - Registers strategy for providing translation locale fallbacks. Strategy must implement <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/TranslationBundle/Strategy/TranslationStrategyInterface.php" target="_blank">TranslationStrategyInterface</a>.
+* **oro_translation.extension.translation_strategy** — Registers strategy for providing translation locale fallbacks. Strategy must implement <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/TranslationBundle/Strategy/TranslationStrategyInterface.php" target="_blank">TranslationStrategyInterface</a>.
 
 **Related Documentation**
 

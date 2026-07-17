@@ -34,8 +34,8 @@ php bin/console oro:countries:regions:actualize var/data --remove-old-data
 
 The command creates two files:
 
-* `countries.yml` - contains country and region codes (ISO 3166-1 and ISO 3166-2)
-* `entities.en.yml` - contains translations for country and region names
+* `countries.yml` — contains country and region codes (ISO 3166-1 and ISO 3166-2)
+* `entities.en.yml` — contains translations for country and region names
 
 ## oro:countries:regions:update-db
 
@@ -51,8 +51,8 @@ php bin/console oro:countries:regions:update-db [options]
 
 By default, the command reads data from the following files:
 
-* **Translation file**: `@OroAddressBundle/Resources/translations/entities.en.yml` - contains country and region name translations
-* **Countries file**: `@OroAddressBundle/Migrations/Data/ORM/data/countries.yml` - contains country and region codes (ISO2, ISO3, combined codes)
+* **Translation file**: `@OroAddressBundle/Resources/translations/entities.en.yml` — contains country and region name translations
+* **Countries file**: `@OroAddressBundle/Migrations/Data/ORM/data/countries.yml` — contains country and region codes (ISO2, ISO3, combined codes)
 
 You can specify custom file paths using options:
 
@@ -84,10 +84,10 @@ php bin/console oro:countries:regions:update-db --countries-file=var/data/countr
 
 The command modifies the following database tables:
 
-* `oro_dictionary_country` - stores country data (ISO2 code, ISO3 code, name)
-* `oro_dictionary_region` - stores region data (combined code, country code, code, name)
-* `oro_translation_key` - stores translation keys for new countries/regions
-* `oro_translation` - stores translation values
+* `oro_dictionary_country` — stores country data (ISO2 code, ISO3 code, name)
+* `oro_dictionary_region` — stores region data (combined code, country code, code, name)
+* `oro_translation_key` — stores translation keys for new countries/regions
+* `oro_translation` — stores translation values
 
 ### Operations Performed
 

@@ -8,7 +8,7 @@ Recurring Orders is only available in the OroCommerce Enterprise edition.
 Recurring Orders allow customers in the storefront to automatically [place repeat orders based on previously submitted orders](../../../storefront/account/recurring-orders.md#my-account-recurring-orders) and a predefined schedule. Each recurring order defines the frequency, start date, and optional end date for order generation. On each scheduled date, the system automatically creates a new standard order, while back-office users can monitor and manage recurring orders throughout their lifecycle under **Sales > Recurring Orders** in the back-office menu.
 
 #### NOTE
-Recurring orders functionality must be enabled in the [back-office system configuration](../../system/user-management/organizations/org-configuration/commerce/sales/organization-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders) on the required level by the system administrator.
+Recurring orders functionality must be enabled in the [back-office system configuration](../../system/configuration/commerce/sales/global-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders) on the required level by the system administrator.
 
 ## Recurring Orders Grid
 
@@ -37,7 +37,7 @@ From the **Actions** menu, back-office users can perform a variety of operations
 * **Suspend** — Suspends the recurring order and stops further order generation. An optional suspension reason can be provided.
 * **Resume** — Reactivates a suspended recurring order and allows order generation to continue according to the original schedule.
 * **Cancel** — Cancels the recurring order and prevents any further order generation. An optional cancellation reason can be provided.
-* **Delete** - Deleted the recurring order.
+* **Delete** — Deleted the recurring order.
 
 Orders that have already been generated are not affected by suspending or canceling a recurring order.
 
@@ -59,5 +59,5 @@ Alternatively, a recurring order can be created directly from the **Orders** gri
 
 **Related Topics**
 
-* [Configure Recurring Orders Globally](../../system/user-management/organizations/org-configuration/commerce/sales/organization-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders)
+* [Configure Recurring Orders Globally](../../system/configuration/commerce/sales/global-recurring-orders.md#user-guide-system-configuration-commerce-sales-recurring-orders)
 * [Recurring Orders in the Storefront](../../../storefront/account/recurring-orders.md#my-account-recurring-orders)

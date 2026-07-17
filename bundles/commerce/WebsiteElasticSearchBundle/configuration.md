@@ -7,7 +7,7 @@ See the [Search Index](../../../backend/architecture/tech-stack/search/index.md#
 
 The WebsiteElasticSearchBundle uses the same parameters from config.yml as ElasticSearchBundle (host configuration and access credentials), but instead of the same index name it adds new parameter to config.yml:
 
-* **website_search_engine_dsn** - DSN with the prefix of the indexes in Elasticsearch used to store website index data.
+* **website_search_engine_dsn** — DSN with the prefix of the indexes in Elasticsearch used to store website index data.
 
 This way backend and website search data can be stored in separate indexes and may be processed separately.
 

@@ -47,7 +47,7 @@ If the application was installed without demo data, the banner is disabled. Conf
 >   ![Cookie consent banner config](user/img/system/config_commerce/cookie_banner/banner-settings.png)
 > * **Cookies Banner Text** — Provide the message of the cookie banner. To edit the text for a specific language, click the language button and edit the text for the needed language.
 >   ![Text language button](user/img/system/config_commerce/cookie_banner/text-language-button.png)
-> * **Landing Page** - Select the landing page with cookie policy of the application, if any. This landing page will be highlighted as a link on the banner. To translate the landing page title to the specific language, click the language button and edit the title as required.
+> * **Landing Page** — Select the landing page with cookie policy of the application, if any. This landing page will be highlighted as a link on the banner. To translate the landing page title to the specific language, click the language button and edit the title as required.
 >   ![Text language button](user/img/system/config_commerce/cookie_banner/cookie-banner-landing-page.png)
 1. Click **Save Settings**.
 

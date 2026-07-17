@@ -9,8 +9,8 @@ with a Combined Price Lists ORM based storage. Depending on the chosen storage m
 
 ProductPriceStorageInterface consists of 2 methods:
 
-- **getPrices** - returns an array of ProductPriceInterface[] by the requested criteria (ProductPriceScopeCriteriaInterface), products, product unit codes, and currencies. Use ProductPriceDTO as the implementation of ProductPriceInterface.
-- **getSupportedCurrencies** - returns a list of currencies supported by the storage. Currencies should be in ISO 4217 format.
+- **getPrices** — returns an array of ProductPriceInterface[] by the requested criteria (ProductPriceScopeCriteriaInterface), products, product unit codes, and currencies. Use ProductPriceDTO as the implementation of ProductPriceInterface.
+- **getSupportedCurrencies** — returns a list of currencies supported by the storage. Currencies should be in ISO 4217 format.
 
 Simple CSV Storage example:
 
@@ -99,7 +99,7 @@ ProductPriceScopeCriteriaInterface contains all information that may be needed f
 
 - **Customer**
 - **Website**
-- **Context** - an entity in which context prices are requested. For example Order, Shopping List, etc.
+- **Context** — an entity in which context prices are requested. For example Order, Shopping List, etc.
 
 ## Replacing Default Storage
 

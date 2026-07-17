@@ -35,12 +35,12 @@ A *product kit item* is an entity of class `\Oro\Bundle\ProductBundle\Entity\Pro
 
 `ProductKitItem` contains the following fields:
 
-- **label** - a localizable string value represented by the collection of `\Oro\Bundle\ProductBundle\Entity\ProductKitItemLabel` entities;
-- **sortOrder** - an integer value, used to sort *product kit items* when displaying them;
-- **optional** - a boolean flag that indicates whether this *product kit item* is required for purchase or can be skipped by the customer;
-- **minimumQuantity** - a positive or empty numeric value. The precision for this value is controlled by the selected *productUnit*;
-- **maximumQuantity** - numeric positive value or empty value. The precision for this value is controlled by the selected *productUnit*;
-- **productUnit** - a product unit for *minimumQuantity* and *maximumQuantity* values. Allowed values are restricted by the intersection of all product units of the product in the *kitItemProducts* collection. If left empty during product kit creation, the primary unit of the product kit itself is used as the default value if it is present in that intersection; otherwise, this value cannot be empty;
+- **label** — a localizable string value represented by the collection of `\Oro\Bundle\ProductBundle\Entity\ProductKitItemLabel` entities;
+- **sortOrder** — an integer value, used to sort *product kit items* when displaying them;
+- **optional** — a boolean flag that indicates whether this *product kit item* is required for purchase or can be skipped by the customer;
+- **minimumQuantity** — a positive or empty numeric value. The precision for this value is controlled by the selected *productUnit*;
+- **maximumQuantity** — numeric positive value or empty value. The precision for this value is controlled by the selected *productUnit*;
+- **productUnit** — a product unit for *minimumQuantity* and *maximumQuantity* values. Allowed values are restricted by the intersection of all product units of the product in the *kitItemProducts* collection. If left empty during product kit creation, the primary unit of the product kit itself is used as the default value if it is present in that intersection; otherwise, this value cannot be empty;
 - **kitItemProducts** one or more products offered for purchase attached to a *product kit item* via the junction entity `\Oro\Bundle\ProductBundle\Entity\ProductKitItemProduct`.
 
 #### NOTE
