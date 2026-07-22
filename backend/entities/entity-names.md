@@ -81,7 +81,7 @@ class FullNameProvider implements EntityNameProviderInterface
      */
     protected function isFullFormatSupported($className)
     {
-        // check if $className supports full name formatting, e.g. implements some required interfaces
+        // check if $className supports full name formatting, e.g., implements some required interfaces
     }
 }
 ```

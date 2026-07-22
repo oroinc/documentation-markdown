@@ -13,7 +13,7 @@ OroMarketplace is a flexible e-commerce marketplace platform designed to enable 
 * **Advanced Catalog Management:** OroMarketplace often provides tools for managing product listings, categorization, and attributes to ensure a well-organized and searchable marketplace.
 * **Order Management:** It includes order processing and management features that enable the tracking of orders, order fulfillment, and communication between sellers and buyers.
 * **Payment Management:** The platform often supports various payment methods.
-* **Advanced Search and Navigation:** Enhanced search and navigation features make it easy for buyers to find products from various sellers efficiently.
+* **Advanced Search and Navigation:** Enhanced search and navigation features enables buyers to find products from various sellers more efficiently.
 * **Customization and Branding:** Businesses can often customize the look and feel of their marketplace, branding it to match their unique identity.
 * **Security and Compliance:** Highest security standards guaranteed with GDPR, PCI DSS compliance, and SOC 2 Type II certification.
 * **Scalability:** OroMarketplace is designed to grow with your business, accommodating a growing number of sellers and buyers as your marketplace expands.

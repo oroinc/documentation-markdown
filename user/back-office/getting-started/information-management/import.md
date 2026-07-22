@@ -9,7 +9,7 @@ To streamline adding a massive bulk of items, like customer information, product
 To import a bulk of records:
 
 1. In the main menu, navigate to menu item to import the list of the necessary data. The item list opens.
-2. Click **Import File** on the top right.
+2. Click **Import File** at the top right.
 3. In the **Import** dialog, click **Choose File**, select the .csv file you prepared, and then click **Import File**.
 
    ![image](user/img/getting_started/records/import_1.png)

@@ -20,7 +20,7 @@ To edit a quote:
    #### IMPORTANT
    The icon that starts a workflow looks like the **Edit** icon. Please check the hint that appears when you hover over the icon to make sure that you select the desired action.
 3. Update the **Quote General Information**, **Line Items**, **Shipping Address**, **Shipping Information** sections, or add any relevant documents under **Customer Documents**. See [Create a Quote](../create/create-from-scratch.md#quote-create-from-scratch) topic for detailed information on the available options.
-4. Click **Save** on the top right of the page.
+4. Click **Save** at the top right of the page.
 
 The quote is updated.
 
@@ -39,7 +39,7 @@ To notify a customer that their quote is prepared:
 
 1. In the main menu, navigate to **Sales > Quotes**.
 2. Choose the quote in the list and click it. The quote details page opens.
-3. Click <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i> next to **Notify Customer** on the top right of the page, and then click **Notify By Email**.
+3. Click <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i> next to **Notify Customer** at the top right of the page, and then click **Notify By Email**.
 4. In the **Notify By Email** dialog that appears, review the email draft. If required, add additional recipients to the **To**, **CC**, or **BCC** fields, or make other changes. The email body may be adjusted to be more personalized.
    ![A sample of an email sent to a customer to notify them about the quote readiness](user/img/sales/quotes/quotes_notifycustomer2.png)
 5. Click **Send**.
@@ -87,7 +87,7 @@ To indicate that the quote’s validity period is over from the quote details pa
 
 1. In the main menu, navigate to **Sales > Quotes**.
 2. Choose the quote in the list and click it. The quote details page opens.
-3. Click the **Expire Quote** button on the top right of the page.
+3. Click the **Expire Quote** button at the top right of the page.
 4. In the confirmation dialog, click **Mark as Expired**.
 
 The quote is now marked as *Expired*:
@@ -105,10 +105,10 @@ To indicate that the quote’s validity period is over from the quote details pa
 
 1. In the main menu, navigate to **Sales > Quotes**.
 2. Choose the quote in the list and click it. The quote details page opens.
-3. Click **Edit** on the top right of the page:
+3. Click **Edit** at the top right of the page:
    ![Click the Edit button on the quote edit page](user/img/sales/quotes/quotes_edit1.png)
 4. Update the **Quote General Information**, **Line Items**, **Shipping Address**, or **Shipping Information** sections. See [Create a Quote](../create/index.md#user-guide-quotes-create) section for detailed information on the available options.
-5. Click **Save** on the top right of the page.
+5. Click **Save** at the top right of the page.
 
 The quote is updated.
 
@@ -130,7 +130,7 @@ To edit a quote:
    #### IMPORTANT
    The icon that starts a workflow looks like the **Edit** icon. Please check the hint that appears when you hover over the icon to make sure that you select the desired action.
 3. Update the **Quote General Information**, **Line Items**, **Shipping Address**, **Shipping Information** sections, or add any relevant documents under **Customer Documents**. See [Create a Quote](../create/create-from-scratch.md#quote-create-from-scratch) topic for detailed information on the available options.
-4. Click **Save** on the top right of the page.
+4. Click **Save** at the top right of the page.
 
 The quote is updated.
 

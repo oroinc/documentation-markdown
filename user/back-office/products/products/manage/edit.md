@@ -11,7 +11,7 @@ You can update product information in several ways: from the page of all product
 1. In the main menu, navigate to **Products > Products**. The product list opens.
 2. Choose the product you want to modify, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the row, and then click the <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** icon.
 3. Change the product settings as required. For the description of the fields, see [Create a Product](../index.md#doc-products-actions-create) action description.
-4. Click **Save and Close** on the top right of the page.
+4. Click **Save and Close** at the top right of the page.
 
 ## Inline Editing
 
@@ -36,9 +36,9 @@ To edit a product inline, double-click the field or the <i class="fas fa-pencil-
    Alternatively, you can click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the row and then click <i class="fa fa-eye fa-lg" aria-hidden="true"></i> **View**.
 
    The product view page opens.
-3. Click **Edit** on the top right of the page.
+3. Click **Edit** at the top right of the page.
 4. Change the product settings as required. For the description of the fields, see [Create a Product](../index.md#doc-products-actions-create) action description.
-5. Click **Save and Close** on the top right of the page.
+5. Click **Save and Close** at the top right of the page.
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->

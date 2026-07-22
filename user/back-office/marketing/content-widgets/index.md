@@ -34,7 +34,7 @@ Whenever you modify a content widget, changes are applied everywhere the widget 
 To create a new content widget:
 
 1. Navigate to **Marketing > Content Widgets** in the main menu.
-2. Click **Create Content Widget** on the top right.
+2. Click **Create Content Widget** at the top right.
 
    #### NOTE
    If you have more than one organization in your OroCommerce application, first select the organization to which you want to add a new content widget.
@@ -53,7 +53,7 @@ To create a new content widget:
 ![A product mini block form](user/img/marketing/content_widgets/mini-block.png)
 
 <a id="content-widgets-product-segment"></a>
-* **Product Segment** — Enables you to add a product segment content widget to your website page. Only segments with type *Product* are listed in the **Segment** field dropdown. You can modify an existing [segment](../../reports-segments/segments.md#user-guide-business-intelligence-filters-segments) or create a new one under **Reports & Segments > Manage Segments**. You can add a label to be displayed above the list of the products, configure the max and min number of items to show, whether to use slider on mobile, and show the **Add to Shopping List** button in the storefront. Additionally, you can enable or disable autoplay and control its speed in milliseconds, select whether to display dots and/or arrows at the bottom of the product segment and on touchscreens, enable or disable infinite scroll, and enable the display of inventory levels for customers in the storefront.
+* **Product Segment** — Enables you to add a product segment content widget to your website page. Only segments with type *Product* are listed in the **Segment** field drop-down. You can modify an existing [segment](../../reports-segments/segments.md#user-guide-business-intelligence-filters-segments) or create a new one under **Reports & Segments > Manage Segments**. You can add a label to be displayed above the list of the products, configure the max and min number of items to show, whether to use slider on mobile, and show the **Add to Shopping List** button in the storefront. Additionally, you can enable or disable autoplay and control its speed in milliseconds, select whether to display dots and/or arrows at the bottom of the product segment and on touchscreens, enable or disable infinite scroll, and enable the display of inventory levels for customers in the storefront.
 
 ![A product segment form](user/img/marketing/content_widgets/product-segment.png)
 * **Tabbed Content** — Enables you to add content to your storefront website in a form of tabs or an accordion.

@@ -4,7 +4,7 @@
 
 To log in to the website, if you have previously registered an account:
 
-1. Click **Log In** in the top navigation bar.
+1. Click **Log In** on the top navigation bar.
    ![image](user/img/storefront/SignIn.png)
 2. Enter your email address and password into the provided fields.
 3. Click **Log In**.

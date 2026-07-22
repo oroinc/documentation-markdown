@@ -21,7 +21,7 @@ There is no limit to the number of channel records that can be defined for a sin
 To create a channel:
 
 1. Navigate to **System > Channels** in the main menu.
-2. Click **Create Channel** on the top right.
+2. Click **Create Channel** at the top right.
 3. In the **General** section, specify the following channel details:
    * **Name** — A meaningful name used to refer to the channel in the system.
    * **Channel Type** — A type that defines a set of default rules and settings used for the channel.

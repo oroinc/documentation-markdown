@@ -7,7 +7,7 @@ This section is part of the [Payment Configuration](../../../../../concept-guide
 
 In OroCommerce, you can use [payment terms](../../../../../glossary.md#term-Payment-Term) configured per customer to help them use the payment conditions guaranteed by their contract with your company.
 
-Payment term is a set of conditions required for the sale to be completed, e.g. the period that is allowed to a buyer to pay off the amount due. Payment terms may also include cash in advance requirement, cash collection on delivery, a deferred payment period of 10/20/30 days, etc.
+Payment term is a set of conditions required for the sale to be completed, e.g., the period that is allowed to a buyer to pay off the amount due. Payment terms may also include cash in advance requirement, cash collection on delivery, a deferred payment period of 10/20/30 days, etc.
 
 **To use payment terms in your OroCommerce storefront:**
 
@@ -31,7 +31,7 @@ To expose payment terms as a payment method for OroCommerce orders and quotes, e
    * **Label** — The payment method name/label displayed as a payment option for the buyer in the OroCommerce storefront during the checkout. To translate the label into other languages, click on the <i class="fas fa-language" aria-hidden="true"></i> icon next to the field.
 
      #### NOTE
-     It doesn’t have to include the payment processor name if you want to hide it from the buyers. For example, you can enter ‘Credit Card Payments’ if you have a single payment method configured for processing credit cards.
+     It does not have to include the payment processor name if you want to hide it from the buyers. For example, you can enter ‘Credit Card Payments’ if you have a single payment method configured for processing credit cards.
    * **Short label** — The payment method name/label that is shown in the order details in the OroCommerce back-office and storefront after the order is submitted. To translate the label into other languages, click on the <i class="fas fa-language" aria-hidden="true"></i> icon next to the field.
    * **Status**  — Set the status to **Active** to enable the integration.
    * **Default Owner** — A user who is responsible for this integration and manages it.

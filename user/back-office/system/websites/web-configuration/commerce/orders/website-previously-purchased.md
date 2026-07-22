@@ -11,7 +11,7 @@ To enable previously purchased products page per website:
 4. In the **Purchase History** section:
    * *Enable Purchase History* — Clear the **Use Organization** checkbox and select the **Enable Purchase History** checkbox to enable the Previously Purchased Products page.
    * *Display Products Purchased Within (Days)* — Clear the **Use Organization** checkbox and enter the number of days that the purchase history should cover.
-5. Click **Save Settings** on the top right of the page.
+5. Click **Save Settings** at the top right of the page.
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->

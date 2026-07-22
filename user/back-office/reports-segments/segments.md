@@ -36,7 +36,7 @@ To create a new segment:
 
    To add a column to the grid:
    > 1. Choose a field from the drop-down in the **Column** section.
-   > 2. Type in a label to refer to the field in the segment report on the interface. The field label is used by default. Customize it if necessary.
+   > 2. Type in a label to refer to the field in the segment report in the interface. The field label is used by default. Customize it if necessary.
    > 3. Define the sorting order for at least one column in the segment to sort the resulting data set by the field value.
    > 4. Click **Add** button.
    > 5. Reorder the columns by clicking on the line and dragging it to the necessary location.

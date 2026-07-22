@@ -45,7 +45,7 @@ To view tax jurisdiction details:
 2. Find the line with the necessary tax jurisdiction and click on it to open its details page.
    ![View the tax jurisdiction details](user/img/taxes/tax_jurisdiction_details.png)
 
-You can <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg)  delete the tax jurisdiction by clicking the required button on the top right.
+You can <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg)  delete the tax jurisdiction by clicking the required button at the top right.
 
 ### Edit a Tax Jurisdiction
 

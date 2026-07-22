@@ -10,7 +10,7 @@ To enable or disable a user in the Oro application:
 
 1. Navigate to **System > User Management > Users**.
 2. In record table, click on the name of the selected user to open their page.
-3. On page of the selected user, click <i class="fa fa-check fa-lg" aria-hidden="true"></i> **Enable User**/ <i class="fa fa-ban fa-lg" aria-hidden="true"></i> **Disable User** on the top right.
+3. On page of the selected user, click <i class="fa fa-check fa-lg" aria-hidden="true"></i> **Enable User**/ <i class="fa fa-ban fa-lg" aria-hidden="true"></i> **Disable User** at the top right.
    ![image](user/img/system/user_management/user_enable.png)![image](user/img/system/user_management/user_disable.png)
 
    #### NOTE
@@ -39,7 +39,7 @@ To activate a user:
 
 1. Navigate to **System > User Management > Users** in the main menu.
 2. Click on the selected user once to open their page.
-3. On the user page, click the **Activate** on the top right.
+3. On the user page, click the **Activate** at the top right.
    ![image](user/img/system/user_management/user_activate.png)
 
    The user authentication status changes from **Locked** to **Active**.
@@ -60,7 +60,7 @@ To delete a user from the system:
 3. In the **Deletion Confirmation** dialog box, click **Yes, Delete**.
 
    #### NOTE
-   Alternatively, you can delete a user from their user page by clicking the **Delete** on the top right.
+   Alternatively, you can delete a user from their user page by clicking the **Delete** at the top right.
 
    ![image](user/img/system/user_management/user_page_delete.png)
 
@@ -76,7 +76,7 @@ All existing user records are exported at once. Passwords are stored and exporte
 To export user records:
 
 1. Navigate to **System > User Management > Users**.
-2. On the page of all users, click **Export** on the top right.
+2. On the page of all users, click **Export** at the top right.
 3. When the export job finishes, you will receive a notification to your primary email address.
    ![image](user/img/system/user_management/users_grid_export.png)
 
@@ -89,7 +89,7 @@ You can change the password for a specific user on their profile page in the **M
 > ![image](user/img/system/user_management/user_page_change_reset_password.png)
 1. Navigate to **System > User Management > Users**.
 2. On the page of all users, click on the selected user to open their page.
-3. On the user page, click **More Actions** on the top right.
+3. On the user page, click **More Actions** at the top right.
 4. Click <i class="fa fa-key fa-lg" aria-hidden="true"></i> **Change Password** to open a new dialog and provide a new password. Alternatively, you can click the **Suggest Password** link to generate a secure random password. To see / hide  the entered password, click the <i class="fa fa-eye" aria-hidden="true"></i> **Show**/<i class="fa fa-eye-slash" aria-hidden="true"></i> **Hide** icon next to the **New password** field. Once a new password is provided, a reset password email is sent to this user.
    > ![image](user/img/system/user_management/user_change_password.png)
 
@@ -159,7 +159,7 @@ To add a new OAuth application in the back-office:
 
 1. Navigate to **System > User Management > Users** in the main menu.
 2. Click on a user name that you want to add an OAuth application to.
-3. In the **OAuth Applications** section, click **Add Application** on the top right and provide the following details in the pop-up dialog:
+3. In the **OAuth Applications** section, click **Add Application** at the top right and provide the following details in the pop-up dialog:
    ![Add an oauth application](user/img/getting_started/user_menu/oauth/oauth_tab.png)
    * **Organization** — If you are adding an application within the organization with *global* access, you can select which other available organization to add the application to. This field is displayed to users with access to multiple organizations. Keep in mind that the multi-org functionality is only available in the Enterprise edition.
    * **Application Name** — Provide a meaningful name for the application you are adding.
@@ -168,14 +168,14 @@ To add a new OAuth application in the back-office:
    * **Supported APIs** — The field appears when the *Support all APIs* field is disabled. Select the API type that the client should support, for example JSON:API, Email Addon, SCIM, etc.
 4. Click **Create**.
 
-A corresponding notification is sent to the user’s primary email address, the owner of the OAuth application. You can change the default recipient, localization, or email contents if needed by updating the [OAuth email templates](../../emails/email-templates.md#user-guide-using-emails-create-template) and the related [notification rule](../../emails/notification-rules.md#user-guide-using-emails-notifications) set out-of-the-box in the system configuration.
+A corresponding notification is sent to the user’s primary email address, the owner of the OAuth application. You can change the default recipient, localization, or email contents if needed by updating the [OAuth email templates](../../emails/email-templates.md#user-guide-using-emails-create-template) and the related [notification rule](../../emails/notification-rules.md#user-guide-using-emails-notifications) set out of the box in the system configuration.
 
 Once the application is created, you are provided with a Client ID and a Client Secret. Click on the <i class="fa fa-copy" aria-hidden="true"></i> icon to copy the credentials to the clipboard.
 
 ![OAuth credentials](user/img/getting_started/user_menu/oauth/oauth_credentials.png)
 
 #### IMPORTANT
-For security reasons, the Client Secret is displayed only once – immediately after you have created a new application. You cannot view the Client Secret anywhere in the application once you close this dialog, so make sure you save it somewhere safe to access it later.
+For security reasons, the Client Secret is displayed only once, immediately after you have created a new application. You cannot view the Client Secret anywhere in the application once you close this dialog, so make sure you save it somewhere safe to access it later.
 
 You can add as many applications as you need for any of your existing organizations. All added applications are displayed in the grid, and you can filter them by name, organization, and status.
 

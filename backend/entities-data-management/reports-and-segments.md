@@ -15,7 +15,7 @@ You can also [configure reports via the web UI](../../user/back-office/reports-s
 
 ### Configure a Report
 
-Building a new report is as easy as defining a data grid. A data grid is a YAML configuration living in a
+Building a new report follows the same process as defining a data grid. A data grid is a YAML configuration living in a
 file called `datagrids.yml` in your bundle’s `Resources/config/oro` directory for the backend datagrid and in `Resources/views/layouts/<theme>/config/datagrids.yml` for the frontend datagrid. Take a look at the following example:
 
 *src/Acme/Bundle/DemoBundle/Resources/config/oro/datagrids.yml*

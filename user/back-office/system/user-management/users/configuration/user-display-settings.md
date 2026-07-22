@@ -37,8 +37,8 @@ In the Display section, you can configure the following display options for a pa
    ![A formatting tool bar that enables editing a text for emails, notes, and comments](user/img/system/config_system/user_configuration_wysiwyg.png)
 10. In the **Sidebar Settings** section, enable or disable the left and/or right sidebar to keep your sticky notes and task lists:
 
-> * **Enable Left Sidebar** — Select **Yes** to enable the user to see and utilize the left sidebar.
-> * **Enable Right Sidebar** — Select **Yes** to enable the user to see and utilize the right sidebar.
+> * **Enable Left Sidebar** — Select **Yes** to enable the user to see and use the left sidebar.
+> * **Enable Right Sidebar** — Select **Yes** to enable the user to see and use the right sidebar.
 1. In the **Reports Settings** section, configure the following settings:
    * **Display SQL In Reports And Segments** — Select this checkbox to enable the user to review the SQL request sent to the system for a report or a segment. This way, users can check if a report has been developed correctly.
 

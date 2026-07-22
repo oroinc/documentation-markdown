@@ -74,7 +74,7 @@ Records that are specified in a calendar event context have this event displayed
 
 You can also edit or delete calendar events from the My Calendar page and the Today’s Calendar widget.
 
-1. Navigate to **My User** on the top right of the page.
+1. Navigate to **My User** at the top right of the page.
 2. Click **My Calendar**.
 3. Click on a specific event in the calendar.
 4. On the event information card, select the required action.

@@ -8,7 +8,7 @@ You can get easy-to-understand adjustable reports on the budgets and activity of
 customers, on statuses of carts and the current state of actual and potential sales, on the performance of your
 [marketing effort](../../marketing/index.md#user-guide-marketing), specifics of recent [activities](../../activities/index.md#user-guide-activities), etc.
 
-There are several out-of-the-box reports, such as [Leads by Date](leads-reports.md#doc-leads-reports) and
+There are several built-in reports, such as [Leads by Date](leads-reports.md#doc-leads-reports) and
 [Opportunities by Status](opportunities-reports.md#user-guide-opportunities-reports-opportunities-by-status), but you can also create your custom reports.
 
 System reports are read-only. You can view the report output and filter the resulting data.

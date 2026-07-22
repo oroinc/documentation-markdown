@@ -2,7 +2,7 @@
 
 # Manage Tracking Websites in the Back-Office
 
-Oro application offers an out-of-the-box tracking website solution that helps gain insight into how your customers use your website, track their actions on the website, and then use these data to collect statistics. These statistics can be used to generate segments of potential consumers to send targeted email campaigns to.
+Oro application offers a default tracking website solution that helps gain insight into how your customers use your website, track their actions on the website, and then use these data to collect statistics. These statistics can be used to generate segments of potential consumers to send targeted email campaigns to.
 
 ## Prerequisites for Creating a Tracking Website
 
@@ -17,9 +17,9 @@ Once the tracking configuration is ready, create a tracking website record and a
 To generate a new website tracking code:
 
 1. Navigate to **Marketing > Tracking Websites** in the main menu.
-2. Click **Create Tracking Website** in the top right corner.
+2. Click **Create Tracking Website** in the top-right corner.
 3. In the **General** section, provide the following information:
-   * **Owner** — Limits the list of users who can manage the tracking website record to the users, whose roles allow managing tracking websites of the owner (e.g. the owner, members of the same business unit, system administrator, etc.). By default, the field is prepopulated with the user creating the tracking website.
+   * **Owner** — Limits the list of users who can manage the tracking website record to the users, whose roles allow managing tracking websites of the owner (e.g., the owner, members of the same business unit, system administrator, etc.). By default, the field is prepopulated with the user creating the tracking website.
    * **Name** — The name used to refer to the tracking website record in the system.
    * **Identifier** — A unique code of the website used to generate its tracking.
    * **URL** — The URL of the website to be tracked.
@@ -61,7 +61,7 @@ If you want to track user activities on a specific page of the website, uncommen
 _paq.push(['trackEvent', 'OroCRM', 'Tracking', [name], [value] ]
 ```
 
-and replace the **[name]** and **[value]** with the event name (string) and value (number) that you would like to see in the **Events** report in Oro application (e.g. for a cart, event name may be cart_created, and the value may store the item code or cost).
+and replace the **[name]** and **[value]** with the event name (string) and value (number) that you would like to see in the **Events** report in Oro application (e.g., for a cart, event name may be cart_created, and the value may store the item code or cost).
 
 #### NOTE
 The code may be filled with both static and dynamic values. However, the usage of dynamic values requires complex backend development.
@@ -213,7 +213,7 @@ To make sure that synchronization between your website and the application is su
 
 ![Enable dynamic tracking in system configuration](user/img/marketing/tracking_websites/enable_dynamic_tracking_new.png)
 
-A list of events on the tracking website page helps you monitor every occurrence of the tracked action (e.g. a user has accessed a pre-defined part of the website following the campaign). You can find event name and value, user id (guest or user email), the URL of the visited page, the code of the marketing campaign and time when the event was logged.
+A list of events on the tracking website page helps you monitor every occurrence of the tracked action (e.g., a user has accessed a pre-defined part of the website following the campaign). You can find event name and value, user id (guest or user email), the URL of the visited page, the code of the marketing campaign and time when the event was logged.
 
 > ![View the list of events under the Events section of a tracking website record's page](user/img/marketing/tracking_websites/tracking_view_events.png)
 

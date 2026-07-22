@@ -16,8 +16,8 @@ Before proceeding to the detailed guidance below, see a short demo on <a href="h
 
 You can log a call in the following ways:
 
-* Under **Activities > Calls** by clicking the **Log Call** button on the top right.
-* On the page of a record under the **More Actions** menu on the top right.
+* Under **Activities > Calls** by clicking the **Log Call** button at the top right.
+* On the page of a record under the **More Actions** menu at the top right.
 * By clicking the <i class="fa fa-phone-square fa-lg"></i> **Log Call** icon that appears next to the provided phone number throughout the system when you hover over it.
   ![Show the Log Call button that appears next to the phone number](user/img/activities/activities_calls3.png)
 

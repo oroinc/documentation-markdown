@@ -3,9 +3,9 @@
 # HTTP Header Specifics
 
 As mentioned in the [Client Requirements](client-requirements.md#web-services-api-client-requirements)
-and [Authentication](authentication/index.md#web-services-api-authentication) sections, to perform
-an JSON:API request successfully, it is important to provide the correct **Accept**, **Content-Type**
-and **Authentication** parameters, e.g.,:
+and [Authentication](authentication/index.md#web-services-api-authentication) sections, provide the correct **Accept**, **Content-Type**
+and **Authentication** parameters to perform
+an JSON:API request successfully, e.g.,:
 
 ```http
 GET /api/users HTTP/1.1

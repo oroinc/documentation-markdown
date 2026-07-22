@@ -29,7 +29,7 @@ If no keys are found, the following warning message will be displayed in the bac
 To create a new OAuth application in the back-office:
 
 1. Navigate to **System > User Management > OAuth Applications** in the main menu.
-2. Click **Create OAuth Application** on the top right of the screen.
+2. Click **Create OAuth Application** at the top right of the screen.
 3. Provide the following details on the page that opens:
    ![image](user/img/system/user_management/oauth/oauth_app_create.png)
    * **Organization** — If you are adding an application within the organization with *global* access, you can select which other available organization to add the application to. This field is displayed to users with access to multiple organizations (available for the Enterprise edition only).
@@ -44,14 +44,14 @@ To create a new OAuth application in the back-office:
    * **Skip User Consent** — The field appears when selecting *Authorization Code* as a grant type. Use this option for first party applications to skip user login consent screen.
 4. Click **Save and Close**.
 
-A corresponding notification is sent to the primary email address of the user, the owner of oauth application. You can change the default recipient, localization, or an email content if needed by updating the [OAuth email templates](../emails/email-templates.md#user-guide-using-emails-create-template) and the related [notification rule](../emails/notification-rules.md#user-guide-using-emails-notifications) set out-of-the-box in the system configuration.
+A corresponding notification is sent to the primary email address of the user, the owner of oauth application. You can change the default recipient, localization, or an email content if needed by updating the [OAuth email templates](../emails/email-templates.md#user-guide-using-emails-create-template) and the related [notification rule](../emails/notification-rules.md#user-guide-using-emails-notifications) set out of the box in the system configuration.
 
 Once the application is created, you are provided with a Client ID and a Client Secret. Click on the <i class="fa fa-copy" aria-hidden="true"></i> icon to copy the credentials to the clipboard.
 
 ![image](user/img/getting_started/user_menu/oauth/oauth_credentials1.png)
 
 #### IMPORTANT
-For security reasons, the Client Secret is displayed only once – immediately after you have created a new application. You cannot view the Client Secret anywhere in the application once you close this dialog, so make sure you save it somewhere safe so you can access it later.
+For security reasons, the Client Secret is displayed only once, immediately after you have created a new application. You cannot view the Client Secret anywhere in the application once you close this dialog, so make sure you save it somewhere safe so you can access it later.
 
 Use the generated Client ID and Client Secret to retrieve an access token to connect to your Oro application.
 

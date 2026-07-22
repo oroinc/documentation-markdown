@@ -22,7 +22,7 @@ To edit an entity:
 1. In the **General Information** section, update the following information:
 
 * **Icon** — Select the icon from the list that will denote all entity records.
-* **Label** — Type the label used to refer to the entity on the interface. The label must be at least 2 symbols long. Make sure that labels are unique and avoid duplicating them as this makes distinguishing between labels on the interface impossible.
+* **Label** — Type the label used to refer to the entity in the interface. The label must be at least 2 symbols long. Make sure that labels are unique and avoid duplicating them as this makes distinguishing between labels in the interface impossible.
 * **Plural Label** — Type the plural form of the label. It is used in titles of the menu items and grids related to the entity. The plural label must be at least 2 symbols long.
 * **Description** — Type a short but meaningful description that can help you and other users understand the purpose and the specifics of the created entity in future.
 
@@ -31,14 +31,14 @@ To edit an entity:
 
 ![Basic settings available under the communication and collaboration section](user/img/system/entity_management/entity-communication-collab.png)
 * **Activities** — Defines which activities users can add from the page of an entity record. When you add an activity from the entity record page, the entity record appears as a context for this activity. For more information about the activities, see the [Activities](../../activities/index.md#user-guide-activities) topic.
-  > * **Calls** — Select this checkbox to enable [logging calls](../../activities/calls/index.md#doc-activities-calls) from the page of an entity record. Calls are logged via the **More actions** dropdown and are displayed in the **Activity** section on the page of an entity record.
-  > * **Tasks** — Select this checkbox to enable [adding tasks](../../activities/tasks/create-tasks.md#doc-activities-tasks-actions-add-detailed) from the page of an entity record. Tasks are added via the **More actions** dropdown and are displayed in the **Activity** section on the page of an entity record.
-  > * **Conversations** — Select this checkbox to enable starting conversation from the page of an entity record. To use the [conversation feature](../configuration/commerce/customer/global-interactions.md#configuration-guide-commerce-configuration-interactions), enable it in the system configuration first. Conversations can then be started via the **More actions** dropdown and are displayed in the **Activity** section on the page of an entity record.
+  > * **Calls** — Select this checkbox to enable [logging calls](../../activities/calls/index.md#doc-activities-calls) from the page of an entity record. Calls are logged via the **More actions** drop-down and are displayed in the **Activity** section on the page of an entity record.
+  > * **Tasks** — Select this checkbox to enable [adding tasks](../../activities/tasks/create-tasks.md#doc-activities-tasks-actions-add-detailed) from the page of an entity record. Tasks are added via the **More actions** drop-down and are displayed in the **Activity** section on the page of an entity record.
+  > * **Conversations** — Select this checkbox to enable starting conversation from the page of an entity record. To use the [conversation feature](../configuration/commerce/customer/global-interactions.md#configuration-guide-commerce-configuration-interactions), enable it in the system configuration first. Conversations can then be started via the **More actions** drop-down and are displayed in the **Activity** section on the page of an entity record.
   > * **Emails** — Select this checkbox to enable [sending emails](../../getting-started/user-menu/my-emails.md#user-guide-using-emails) from the page of an entity record.
-  > * **Notes** — Select this checkbox to enable [adding notes](../../getting-started/information-management/notes.md#user-guide-add-note) to an entity record. Notes are added via the **More actions** dropdown and are displayed in the **Activity** section on the page of an entity record.
+  > * **Notes** — Select this checkbox to enable [adding notes](../../getting-started/information-management/notes.md#user-guide-add-note) to an entity record. Notes are added via the **More actions** drop-down and are displayed in the **Activity** section on the page of an entity record.
   > * **Calendar Events** — Select this checkbox to enable [adding calendar events](../../activities/calendar-events/index.md#doc-activities-events) from the page of an entity record.
 
-  > ![The activities become available in the More actions dropdown of an entity record if they are enabled in the Communication & Collaboration section](user/img/system/entity_management/more-actions-activities.png)
+  > ![The activities become available in the More actions drop-down of an entity record if they are enabled in the Communication & Collaboration section](user/img/system/entity_management/more-actions-activities.png)
 * **Enable Comments** — Defines whether it is possible to leave comments on entity records. Select **Yes** from the list to enable adding comments to entity records. Select **No** from the list to restrict adding comments to entity records. The default value is **No**. Comments are displayed in the corresponding section on the page of an entity record. For more information on comments, see the topic on [Adding Comments](../../getting-started/information-management/comments.md#user-guide-activities-comments).
   > ![Available actions displayed in the comments section when the enabled comments field is set to `yes`](user/img/system/entity_management/entity_addcomment.png)
 
@@ -58,7 +58,7 @@ To edit an entity:
 
 * **Ownership Type** — Defines who the owner of the entity can be (none, user, business unit, or organization). The ownership type is fixed and cannot be changed once created. For more information, see the [Ownership Type](../user-management/roles/index.md#user-guide-user-management-permissions-ownership-type) topic.
 * **Field Level ACL** — Select this checkbox to define that permissions can be set on individual fields of this entity. For more information about field level ACLs, see the [Entity Fields](entity-fields/index.md#doc-entity-fields) topic.
-* **Show Restricted** — Select this checkbox if you enabled **Field Level ACL** and are going to disable editing of some fields of the entity records but still want users to review the disabled fields on the interface. Fields disabled for modifying will appear dimmed on the interface. For more information about field level ACLs, see the [Entity Fields](entity-fields/index.md#doc-entity-fields) topic.
+* **Show Restricted** — Select this checkbox if you enabled **Field Level ACL** and are going to disable editing of some fields of the entity records but still want users to review the disabled fields in the interface. Fields disabled for modifying will appear dimmed in the interface. For more information about field level ACLs, see the [Entity Fields](entity-fields/index.md#doc-entity-fields) topic.
 * **Webhook Accessible** — Define whether an entity can be used in [webhook notifications](../integrations/webhooks.md#back-office-integrations-webhooks). When set to **Yes**, the entity becomes available for webhook integration. The system generates webhook topics for the entity’s supported events (such as create, update, and delete), allowing administrators or external systems to subscribe to those events and receive notifications when they occur. When set to **No**, the entity is excluded from webhook processing, and no webhook topics are generated for it.
 * **Webhook Relations Includes** — Specify which related data should be included in the [webhook payload](../integrations/webhooks.md#back-office-integrations-webhooks). The field accepts relation paths in *JSON:API includes* format, which is a comma-separated list of relation paths. A relation path is a dot-separated list of relation names (e.g., `organization,owner.groups,lineItems,shippingAddress`). When a webhook event occurs, the system serializes the entity and the specified related data into a JSON:API payload before sending the notification.
 * **Auditable** — This subsection defines whether the system will log what actions are performed with the entity records and who performed them, and users with the corresponding permissions will be able to check it in the **Change History** and **Data Audit** sections of the system. Select **Yes** to enable audit of records of the entity. Select **No** to disable audit of records of the entity. The default value is **No**. For more information about the data audit, see the [Data Audit](../data-audit/index.md#user-guide-data-audit) topic.
@@ -74,7 +74,7 @@ To edit an entity:
 ![A sample of an entity record with enabled workflow step](user/img/system/entity_management/entity_showworkflowstep.png)
 * **Include in Smart Insights** — When set to *Yes*, this entity will be considered in [OroIQ Smart Insights](../../../concept-guides/ai/index.md#concept-guide-oroiq) to generate analytics, trends, and contextual recommendations.
 
-1. Click **Save and Close** on the top right.
+1. Click **Save and Close** at the top right.
 2. Once you saved the entity, you must [update the schema](manage-entity-fields.md#admin-guide-update-schema) to apply the changes.
 
 #### WARNING
@@ -99,7 +99,7 @@ For example, by default you can create two contacts with the same information:
 
 *Jane Roe, born 1985-01-15, sales@example.com*
 
-The system assigns them different IDs and treats them as different records, but they look the same on the interface and actually represent the same person.
+The system assigns them different IDs and treats them as different records, but they look the same in the interface and actually represent the same person.
 
 Now imagine that before adding contacts you have defined two sets of unique keys:
 
@@ -128,7 +128,7 @@ To manage unique keys:
 3. Click **Manage Unique Keys** in the upper-right corner of the page.
 4. On the **Unique Keys** page, click **+Add**.
 5. Specify the required information:
-   * **Name** — The set name on the interface. It is used just for reference.
+   * **Name** — The set name in the interface. It is used just for reference.
    * **Key** — The fields that will be included in this set. Hold the CTRL key to select several fields.
 6. If you need to add another set, repeat steps 4–5.
    ![Specifying a name and a key in the unique keys section](user/img/system/entity_management/entity_manageuniquekeys.png)

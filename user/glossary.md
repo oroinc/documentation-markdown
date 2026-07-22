@@ -185,7 +185,7 @@ Owner
 <a id="term-Payment-Term"></a>
 
 Payment Term
-: A Payment Term describes the conditions under which a seller will complete a sale (e.g. the period allowed to a buyer to pay off the amount due).
+: A Payment Term describes the conditions under which a seller will complete a sale (e.g., the period allowed to a buyer to pay off the amount due).
 
 <a id="term-Price-Attribute"></a>
 
@@ -225,7 +225,7 @@ Promotion
 <a id="term-Quote"></a>
 
 Quote
-: A quote is used to negotiate with the customer (e.g. offer better price, more convenient quantities and additional services). A quote may be created in response to a customer request for quote, or as a result of the direct communication with the customer. Once the customer is happy with the offer in the quote and is ready to proceed with their order, they accept the quote.
+: A quote is used to negotiate with the customer (e.g., offer better price, more convenient quantities and additional services). A quote may be created in response to a customer request for quote, or as a result of the direct communication with the customer. Once the customer is happy with the offer in the quote and is ready to proceed with their order, they accept the quote.
 
 <a id="term-Record"></a>
 
@@ -317,4 +317,4 @@ Workflow
 <a id="term-WYSIWYG-What-You-See-Is-What-You-Get"></a>
 
 WYSIWYG (What You See Is What You Get)
-: The editor that enables to edit the content of a landing page, product page, and any other HTML-like web page, embed codes, media files, and widgets, and preview the results in the editor’s framework directly.
+: The editor that enables you to edit the content of a landing page, product page, and any other HTML-like web page, embed codes, media files, and widgets, and preview the results in the editor’s framework directly.

@@ -16,8 +16,8 @@ This guide demonstrates how to set up [Docker and Symfony Server development sta
    Once rebooted, create a new NIX username and password to log into Ubuntu.
    ![An example of terminal messages displayed once you log into ubuntu](img/backend/setup/wsl/logged-in-ubuntu.png)
 
-   To switch to Ubuntu on your Windows Powershell, click on the dropdown next to the **+** tab and select Ubuntu from the list.
-   ![Ubuntu option in the Powershell dropdown](img/backend/setup/wsl/powershell-ubuntu-dropdown-list.png)
+   To switch to Ubuntu on your Windows Powershell, click on the drop-down next to the **+** tab and select Ubuntu from the list.
+   ![Ubuntu option in the Powershell drop-down](img/backend/setup/wsl/powershell-ubuntu-dropdown-list.png)
 
    To avoid switching to Ubuntu manually every time, you can set up your Windows Powershell to run Ubuntu by default on startup. For this, navigate to your Windows settings > Startup and change the **Default Profile** to *Ubuntu*, as illustrated in the screenshot below:
    ![Change default terminal profile to Ubuntu](img/backend/setup/wsl/ubuntu-on-powershell.png)

@@ -35,7 +35,7 @@ It is recommended to disable phar PHP extension to reduce the risk of PHP unseri
 
 ### Enterprise Edition Software
 
-Enterprise edition is built to support better scale and performance. It is compatible with additional software configuration that enables to achieve these goals.
+Enterprise edition is built to support better scale and performance. It is compatible with additional software configuration that enables achieving these goals.
 
 | *PHP Extensions*   | * pgsql                                                                                                                                                  |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|

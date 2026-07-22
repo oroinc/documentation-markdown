@@ -14,7 +14,7 @@ Read more on this topic in the [Consent Management Concept Guide](../../../conce
 To create a [consent](../../../glossary.md#term-Consent) in OroCommerce:
 
 1. Navigate to **System > Consent Management** in the main menu.
-2. Click **Create Consent** on the top right.
+2. Click **Create Consent** at the top right.
    ![Create a new consent](user/img/system/consents/create_new_consent.png)
 3. Provide the following information:
    * **Owner** — The owner is pre-populated with the user creating the consent but this value can be changed to another user of the system by clicking <i class="fa fa-bars fa-lg" aria-hidden="true"></i> and selecting a user from the list.

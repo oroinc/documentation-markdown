@@ -25,7 +25,7 @@ As an illustration, let us follow the steps of the checkout as an unauthenticate
 
 1. Add selected items to the shopping list.
    ![image](user/img/storefront/orders/SampleGuestCheckout1.png)
-2. Navigate to **Shopping List** on the top right of the page, and click **Checkout**.
+2. Navigate to **Shopping List** at the top right of the page, and click **Checkout**.
    ![image](user/img/storefront/orders/SampleGuestCheckout2.png)
 3. The following options are available on the page that opens:
    > ![image](user/img/storefront/orders/SampleGuestCheckout5.png)

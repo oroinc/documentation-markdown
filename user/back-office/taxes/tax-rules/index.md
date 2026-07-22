@@ -54,7 +54,7 @@ To view tax rule details:
 2. Find the line with the necessary tax rule and click on it to open its details page.
    ![View the tax rule details](user/img/taxes/tax_rules_view.png)
 
-You can <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** the tax rule by clicking the required button on the top right.
+You can <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** the tax rule by clicking the required button at the top right.
 
 <a id="tax-rules-edit"></a>
 
@@ -76,7 +76,7 @@ Another scenario for using export is when you plan bulk data update that is easi
 To export the tax rules in a .csv format:
 
 1. In the main menu, navigate to **Taxes > Tax Rules**.
-2. Click **Export** on the top right.
+2. Click **Export** at the top right.
 3. Once the export is complete, you will receive an email to download the .csv file.
 
 ## Import Tax Rules
@@ -92,7 +92,7 @@ To export the tax rules in a .csv format:
 To import a bulk of tax rules information:
 
 1. In the main menu, navigate to **Taxes > Tax Rules**. The tax rule list opens.
-2. Click **Import File** on the top right.
+2. Click **Import File** at the top right.
 3. **Prepare data for import**: Create your bulk information in the .csv format. Once your file is ready, click **Choose File**, select the prepared comma-separated values (.csv) file, and click **Import File**.
 
 #### NOTE

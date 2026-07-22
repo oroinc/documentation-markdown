@@ -51,7 +51,7 @@ To create a new order from the back-office:
 > * To adjust the order of files displayed to customers in the storefront, modify the number in the sort order input box. For example, files with a sort order of 1 will appear first on the list.
 
 > ![Illustration of the documents uploaded via back-office on the customer side in the storefront](user/img/sales/orders/order-customer-documents.png)
-1. To save the order, click **Save** on the top right of the page.
+1. To save the order, click **Save** at the top right of the page.
 
 #### HINT
 By default, an order has [internal status](statuses.md#doc-orders-statuses-internal) *Open* upon creation. If another status is required for new orders, an administrator must adjust the [order creation configuration settings](../../system/configuration/commerce/orders/global-order-automation.md#configuration-commerce-orders).
@@ -71,8 +71,8 @@ To create an order from a shopping list:
 
 1. Navigate to **Sales > Shopping lists** in the main menu.
 2. Open the selected shopping list from the grid.
-3. Click **Create Order** in the top right corner of the page.
-   ![Click the Create Order button on the top right](user/img/sales/orders/CreateOrderFormSL.png)
+3. Click **Create Order** in the top-right corner of the page.
+   ![Click the Create Order button at the top right](user/img/sales/orders/CreateOrderFormSL.png)
 4. The Create Order form opens, prepopulated with the information from the shopping list:
 
    Amend or add new details to the order, as described in [the Create an Order from Scratch](#user-guide-sales-orders-create) topic.
@@ -94,8 +94,8 @@ To create an order based on a request for a quote (RFQ):
 
 1. Navigate to **Sales > Requests for Quote** in the main menu.
 2. Open the selected RFQ from the grid.
-3. Click **Create Order** in the top right corner of the RFQ page.
-   ![Click Create Order on the top right](user/img/sales/orders/CreateOrderFromRFQ.png)
+3. Click **Create Order** in the top-right corner of the RFQ page.
+   ![Click Create Order at the top right](user/img/sales/orders/CreateOrderFromRFQ.png)
 
 The Create Order form opens prefilled with the information from the RFQ:
 
@@ -130,7 +130,7 @@ Before using AI Smart Order Automation, make sure that:
 
 ![image](user/img/concept-guides/ai/convert-to-draft-order.png)
 
-When the Smart Order functionality is configured and a mailbox is set up, any incoming emails sent by buyers to the designated inbox with purchase order attachments are automatically processed. The system scans the attachments and, upon successful conversion, sends a confirmation email to the same address. This email includes a link to the newly created draft order. To view your inbox, navigate to **Your Name > My Emails** in the top right corner of the back-office.
+When the Smart Order functionality is configured and a mailbox is set up, any incoming emails sent by buyers to the designated inbox with purchase order attachments are automatically processed. The system scans the attachments and, upon successful conversion, sends a confirmation email to the same address. This email includes a link to the newly created draft order. To view your inbox, navigate to **Your Name > My Emails** in the top-right corner of the back-office.
 
 ![image](user/img/concept-guides/ai/so-automation-steps.png)
 

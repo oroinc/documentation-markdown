@@ -23,7 +23,7 @@ In case you need to alter a system workflow, clone it via the command line conso
 
 ## Available System Workflows
 
-The following system workflows are provided out-of-the-box in the Oro application:
+The following system workflows are provided out of the box in the Oro application:
 
 * [Checkout](checkout.md#system-workflows-checkout-workflow)
 * [Alternative Checkout](alternative-checkout.md#system-workflows-alternative-checkout-workflow)

@@ -2,9 +2,9 @@
 
 # Manage Requests for Quote in the Storefront
 
-To negotiate with the sales person (e.g. on a better price, more convenient quantities and additional services), you can request a quote. Both registered and guest users can create [RFQs](../../../glossary.md#term-Request-for-Quote) in the Oro storefront.
+To negotiate with the sales person (e.g., on a better price, more convenient quantities and additional services), you can request a quote. Both registered and guest users can create [RFQs](../../../glossary.md#term-Request-for-Quote) in the Oro storefront.
 
-Registered users can view all existing Requests for Quote or create new ones in their storefront account by clicking Requests for Quote in the user menu in the top navigation bar.
+Registered users can view all existing Requests for Quote or create new ones in their storefront account by clicking Requests for Quote in the user menu on the top navigation bar.
 
 ![image](user/img/storefront/rfq/RFQ.png)
 
@@ -34,7 +34,7 @@ To view a specific RFQ, click **View** on it in the grid.
 
 ![image](user/img/storefront/rfq/ViewRFQ.png)
 
-The Customer User View Page has the number of the selected RFQ in the page header (e.g. #2), as well as the following information:
+The Customer User View Page has the number of the selected RFQ in the page header (e.g., #2), as well as the following information:
 
 * First Name
 * Last Name
@@ -48,11 +48,11 @@ The Customer User View Page has the number of the selected RFQ in the page heade
 * Notes
 * Line Items (item name, requested quantity, target price).
 
-You can print the selected RFQ by clicking **Print RFQ**  on the top right of the view page, or ask a question, as part of the [conversations feature](../../conversations/index.md#storefront-guide-conversations).
+You can print the selected RFQ by clicking **Print RFQ**  at the top right of the view page, or ask a question, as part of the [conversations feature](../../conversations/index.md#storefront-guide-conversations).
 
 ![image](user/img/storefront/rfq/PrintRFQ.png)
 
-If an RFQ was previously cancelled, you can resubmit the RFQ by clicking ![Resubmit-SVG](_themes/sphinx_rtd_theme/static/svg-icons/resubmit.svg) **Resubmit** on the top right of the view page.
+If an RFQ was previously cancelled, you can resubmit the RFQ by clicking ![Resubmit-SVG](_themes/sphinx_rtd_theme/static/svg-icons/resubmit.svg) **Resubmit** at the top right of the view page.
 
 ![image](user/img/storefront/rfq/RFQResubmitNew.png)
 

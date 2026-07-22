@@ -4,7 +4,7 @@
 
 # Expression Language for Shipping and Payment Rules
 
-Expression language for payment and shipping rules expressions is a user-friendly and business oriented extension of the <a href="https://symfony.com/doc/6.4/components/expression_language/introduction.html" target="_blank">Symfony Expression Language</a>. It is easy to use and, on top of usual comparison and logical operators, it allows iterating through the collections of items using  *(collection).all* and  *(collection).any* operations. Keep in mind that out-of-the-box, you can add any custom fields to the required entity in addition to the attributes listed below.
+Expression language for payment and shipping rules expressions is a user-friendly and business oriented extension of the <a href="https://symfony.com/doc/6.4/components/expression_language/introduction.html" target="_blank">Symfony Expression Language</a>. On top of usual comparison and logical operators, it allows iterating through the collections of items using  *(collection).all* and  *(collection).any* operations. Keep in mind that out of the box, you can add any custom fields to the required entity in addition to the attributes listed below.
 
 #### NOTE
 Note that the *float* values require using a number with a fractional part (a floating-point number), for example, lineItem.quantity != **1.0** instead of lineItem.quantity != **1**.
@@ -86,7 +86,7 @@ To find the whole list of fields available for *customer*, navigate to System > 
 * customerUser.firstName *string*
 * customerUser.middleName *string*
 * customerUser.lastName *string*
-* customerUser.fullName *string* (which is a customerUser.firstName ~ ‘ ‘ ~ customerUser.lastName, e.g. ‘Amanda Cole’)
+* customerUser.fullName *string* (which is a customerUser.firstName ~ ‘ ‘ ~ customerUser.lastName, e.g., ‘Amanda Cole’)
 
 To find the whole list of fields available for *customerUser*, navigate to System > Entities > Entity Management > Customer User. More details on the entity fields management are described [here](../entities/manage-entity-fields.md#admin-guide-manage-entity-fields).
 
@@ -106,7 +106,7 @@ Please note that if you enable guest checkout on your website, customerUser will
 **Attributes**
 
 > #### NOTE
-> Use the items with LineItem prefix when processing the lineItems collection using .any() and .all() expressions. Alternatively, address the item in the collection directly, e.g. lineItems[1].product.sku.
+> Use the items with LineItem prefix when processing the lineItems collection using .any() and .all() expressions. Alternatively, address the item in the collection directly, e.g., lineItems[1].product.sku.
 * lineItem.product.id *int*
 * lineItem.product.type *string*
 * lineItem.product.sku *string*
@@ -142,7 +142,7 @@ More details on the entity fields management are described [here](../entities/ma
 **Attributes**
 
 > #### NOTE
-> Use the items with unitPrecision prefix when processing the unitPrecisions collection using lineItem.product.unitPrecisions.any() and lineItem.product.unitPrecisions.all() expressions. Alternatively, address the item in the collection directly, e.g. lineItem.product.unitPrecisions[1].unit.code.
+> Use the items with unitPrecision prefix when processing the unitPrecisions collection using lineItem.product.unitPrecisions.any() and lineItem.product.unitPrecisions.all() expressions. Alternatively, address the item in the collection directly, e.g., lineItem.product.unitPrecisions[1].unit.code.
 
 > - unitPrecision.unit.code *string*
 > - unitPrecision.precision *int*
@@ -153,7 +153,7 @@ More details on the entity fields management are described [here](../entities/ma
 **Attributes**
 
 > #### NOTE
-> Use the items with inventoryLevel prefix when processing the inventoryLevels collection using lineItem.product.inventoryLevels.any() and lineItem.product.inventoryLevels.all() expressions. Alternatively, address the item in the collection directly, e.g. lineItem.product.inventoryLevels[1].warehouse.id.
+> Use the items with inventoryLevel prefix when processing the inventoryLevels collection using lineItem.product.inventoryLevels.any() and lineItem.product.inventoryLevels.all() expressions. Alternatively, address the item in the collection directly, e.g., lineItem.product.inventoryLevels[1].warehouse.id.
 
 > * inventoryLevel.id *int*
 > * inventoryLevel.quantity *int*
@@ -166,7 +166,7 @@ More details on the entity fields management are described [here](../entities/ma
 ### lineItems[X].kitItemLineItems Collection
 
 > #### NOTE
-> Use the items with kitItemLineItem prefix when processing the kitItemLineItems collection using lineItem.kitItemLineItems.any() and lineItem.kitItemLineItems.all() expressions. Alternatively, address the item in the collection directly, e.g. lineItem.kitItemLineItems[1].product.sku.
+> Use the items with kitItemLineItem prefix when processing the kitItemLineItems collection using lineItem.kitItemLineItems.any() and lineItem.kitItemLineItems.all() expressions. Alternatively, address the item in the collection directly, e.g., lineItem.kitItemLineItems[1].product.sku.
 * kitItemLineItem.kitItem.id *int*
 * kitItemLineItem.kitItem.defaultLabel *string*
 * kitItemLineItem.kitItem.optional *bool*
@@ -193,7 +193,7 @@ To find the whole list of fields available for *kitItem*, navigate to System > E
 **Attributes**
 
 > #### NOTE
-> Use the items with user prefix when processing the customer.users collection using customer.users.any() and customer.users.all() expressions.  Alternatively, address the item in the collection directly, e.g. customer.users[1].email.
+> Use the items with user prefix when processing the customer.users collection using customer.users.any() and customer.users.all() expressions.  Alternatively, address the item in the collection directly, e.g., customer.users[1].email.
 * user.id *int*
 * user.email *string*
 * user.firstName *string*
@@ -207,14 +207,14 @@ You can use the following elements to build the expression that identifies the c
 **Supported Data**
 
 * Text enclosed in quotes (’) or double quotes (“)
-* Numbers (e.g. 32)
-* Arrays (e.g. [1, 5], and [“Option A”, “Option B”])
+* Numbers (e.g., 32)
+* Arrays (e.g., [1, 5], and [“Option A”, “Option B”])
 * Boolean values (true and false)
 * null
-* Attributes and data structures listed in the [Attributes Supported in Shipping and Payment Rule Expressions](), e.g. subtotal > 100000 or lineItems.all(lineItem.quantity > 1000).
+* Attributes and data structures listed in the [Attributes Supported in Shipping and Payment Rule Expressions](), e.g., subtotal > 100000 or lineItems.all(lineItem.quantity > 1000).
   - Use *lineItems.all(expression)* and *lineItems.any(expression)* to assess the collection of line items (products and their quantity, units, price, weight, and dimensions) in the order, quote or request for quote. Inside the expression, use *lineItem.product.<fieldname>* phrase to access the product field value. Separate the field from the item with a period.
   - Use lineItems.sum(expression) to sum up results of complex calculations that use the collection items and their properties as parameters. For example, you can get a total weight of the order using the following expression: *lineItems.sum(lineItem.weight.value \*lineItem.quantity)*.
-  - Outside the collection operations, you can assess an element of the array using *item[id].fieldname* phrase (e.g. lineItems[1].product.price > 1000.00). Separate the field from the item with a period.
+  - Outside the collection operations, you can assess an element of the array using *item[id].fieldname* phrase (e.g., lineItems[1].product.price > 1000.00). Separate the field from the item with a period.
 
 See more information about using collections in the **Collection Validation** section below.
 
@@ -247,9 +247,9 @@ See more information about using collections in the **Collection Validation** se
 
 **Collection Validation** with *any (OR)* and *all (AND)* Operations
 
-To validate all items in the collection (e.g. products in the order being submitted), or ensure that at least one value has a particular quality (e.g. it meets bulk quantity requirements), use *items.all(sub-condition)* and *items.any(sub-condition)*  expression phrases. The sub-condition is an expression that applies to every item. Note that it is enclosed in brackets, and no single/double quotes (‘/”) are used as they are reserved for the text values.
+To validate all items in the collection (e.g., products in the order being submitted), or ensure that at least one value has a particular quality (e.g., it meets bulk quantity requirements), use *items.all(sub-condition)* and *items.any(sub-condition)*  expression phrases. The sub-condition is an expression that applies to every item. Note that it is enclosed in brackets, and no single/double quotes (‘/”) are used as they are reserved for the text values.
 
-When you are using all or any method, you provide the named collection of elements (e.g. products) and Oro automatically guesses the name of the single element (e.g. product). It is produced by stripping the trailing ‘s’ for countable nouns and by adding a leading ‘Item’ the uncountable ones, like in: milk.all(milkItem.isfresh).
+When you are using all or any method, you provide the named collection of elements (e.g., products) and Oro automatically guesses the name of the single element (e.g., product). It is produced by stripping the trailing ‘s’ for countable nouns and by adding a leading ‘Item’ the uncountable ones, like in: milk.all(milkItem.isfresh).
 
 The items.all(nested_expression) expression is true when the nested condition is satisfied for every item in the collection. When an item evaluation results in false, the items.all() immediately returns false without processing the remaining items.
 

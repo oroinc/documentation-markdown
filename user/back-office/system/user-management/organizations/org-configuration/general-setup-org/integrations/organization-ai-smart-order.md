@@ -17,7 +17,7 @@ To enable this feature per organization:
 3. Click **System Configuration > Integrations > AI Smart Order** in the menu to the left.
 4. 1. To manage any of the available options, clear the **Use System** next to them first.
 5. In the **AI Smart Order** section, select the **Enable AI Smart Order** checkbox to enable the feature in the storefront.
-6. If you have a <a href="https://extensions.oroinc.com/orocommerce/extension/customer-part-number/" target="_blank">Customer Part Number</a> extension installed, select the **Use CPN in Smart Order** check box to allow customer part numbers to be used and managed for line items during [smart order draft creation](../../../../../../dashboards/widgets/ai-smart-order.md#user-guide-dashboards-widgets). Please make sure that the **Customer Part Number** [feature is enabled](../../../../../configuration/commerce/product/global-customer-settings.md#sys-commerce-product-customer-settings) under **System > Commerce > Product > Customer Settings**.
+6. If you have a <a href="https://extensions.oroinc.com/orocommerce/extension/customer-part-number/" target="_blank">Customer Part Number</a> extension installed, select the **Use CPN in Smart Order** checkbox to allow customer part numbers to be used and managed for line items during [smart order draft creation](../../../../../../dashboards/widgets/ai-smart-order.md#user-guide-dashboards-widgets). Please make sure that the **Customer Part Number** [feature is enabled](../../../../../configuration/commerce/product/global-customer-settings.md#sys-commerce-product-customer-settings) under **System > Commerce > Product > Customer Settings**.
 7. Click **Save Settings**.
 
 #### HINT

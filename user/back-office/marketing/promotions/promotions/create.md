@@ -13,7 +13,7 @@ To create a new promotion:
 In the All Promotions grid, you can click any promotion to view its details, hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the required promotion to <i class="far fa-copy" aria-hidden="true"></i> duplicate, <i class="fa fa-eye fa-lg" aria-hidden="true"></i> view, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit, or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) delete it from the system.
 
 > ![The page of all promotions available in the system](user/img/marketing/promotions/PromotionsGridNew.png)
-1. To create a new promotion, click **Create Promotion** in the top right corner.
+1. To create a new promotion, click **Create Promotion** in the top-right corner.
 2. In the **General** section, complete the following fields:
    * **Owner** — Select the user responsible for the promotion from the list, or click <i class="fa fa-bars fa-lg" aria-hidden="true"></i> to load the list of users to choose from. By default, the current user in predefined as the promotion owner.
    * **Name** — Specify the promotion name to distinguish it from other promotions.
@@ -30,7 +30,7 @@ In the All Promotions grid, you can click any promotion to view its details, hov
       * *Order Line Item* — The discount applies to the line item total,
       * *Buy X Get Y (Same Product)* — The price of certain quantity of the line items (up to Y) may be discounted when they are ordered in bulk (more than X), or
       * *Shipping* —  The discount applies to shipping.
-   2. In the **Type** list, select whether the discount type should be represented by a fixed amount (e.g. - 10USD) or a certain percent (5%) off the item price.
+   2. In the **Type** list, select whether the discount type should be represented by a fixed amount (e.g., - 10USD) or a certain percent (5%) off the item price.
 
       #### NOTE
       Please note that when a fixed discount is used, the promotion applies to the order in the selected currency only.
@@ -60,7 +60,7 @@ In the All Promotions grid, you can click any promotion to view its details, hov
    3. **Advanced Filter** — Add a product via a [filter](../../../reports-segments/filters.md#user-guide-getting-started-filters) to limit the product list and include only the necessary products. Advanced filter is hidden by default. Click **Preview Results** to check whether the products found via the filter match your criteria, or to exclude unnecessary items from the list.
 
       #### NOTE
-      You may use filter on the top of the dialog to limit the scope of the products and make it fit into the visible area.
+      You may use filter at the top of the dialog to limit the scope of the products and make it fit into the visible area.
 
 ## Discount Options for Order Line Item
 
@@ -72,7 +72,7 @@ You can check out a video on <a href="https://academy.oroinc.com/media-library/c
 For the line items discount, provide the following information:
 
 ![The illustration of the discount options for order line items](user/img/marketing/promotions/LineItems.png)
-* **Unit of Quantity** — Select the necessary unit type from the list (e.g. each, item, set.). Note that the discount will only apply to the product with a specified unit type.
+* **Unit of Quantity** — Select the necessary unit type from the list (e.g., each, item, set.). Note that the discount will only apply to the product with a specified unit type.
 * **Apply Discount to** — Select whether to apply discount to each of the items on sale or for the line items total.
 
   For instance, if there are 10 items in the shopping list that qualify for a discount and the discount is $1 per item, then the discount will constitute $10. If in the same scenario the promotion should apply to the line items total, then the total discount will constitute $1.
@@ -93,7 +93,7 @@ For the Buy X Get Y (Same Product) discount, provide the following information:
 ![The illustration of the Buy X Get Y promotion](user/img/marketing/promotions/BuyX.png)
 * **Buy X Quantity** — Enter the quantity of X products the customer needs to purchase to be eligible for the discount.
 * **Get Y Quantity** — Enter the quantity of Y products which the customer will get a discount for when purchases a number of X products.
-* **Unit of Quantity** — Select the necessary unit type from the list (e.g. each, item, set). Note that the discount will only apply to the product with the specified unit type.
+* **Unit of Quantity** — Select the necessary unit type from the list (e.g., each, item, set). Note that the discount will only apply to the product with the specified unit type.
 * **Apply Discount to** — Select one of the options, *Each Y Item Separately* (the discount will apply to Y items only) or *X+Y Total* (the discount will apply to the total of X and Y items).
 
   For instance, if:

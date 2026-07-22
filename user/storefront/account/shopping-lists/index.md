@@ -8,7 +8,7 @@ In OroCommerce, [shopping lists](../../../glossary.md#term-Shopping-List) are mu
 
 <a id="frontstore-guide-shopping-lists-create"></a>
 
-You can reach shopping lists under the account menu in the top navigation bar or in the shopping list widget in the top right corner.
+You can reach shopping lists under the account menu on the top navigation bar or in the shopping list widget in the top-right corner.
 
 ![Two locations of the shopping lists](user/img/storefront/shopping_lists/shopping_lists_location.png)
 

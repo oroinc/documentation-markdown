@@ -11,7 +11,7 @@ Oro application supports Google Single Sign-On. This means that for a user that 
 To configure single sign-on on the Google side:
 
 1. Open <a href="https://console.developers.google.com/start" target="_blank">Google API Console</a>.
-2. Click **My Project** selector in the top left corner to open a popup form.
+2. Click the **My Project** selector in the top-left corner to open a popup form.
 3. Click **New Project** at the top right.
    ![Create a project in the Google API console](user/img/google/create_project.png)
 4. Define the **Project Name** and select the **Location**.
@@ -36,7 +36,7 @@ To configure single sign-on on the Google side:
 Please pay attention to the **Authorized Redirect URIs**, the value from the **System > Configuration > Integrations > Google Settings > Google Integration Settings > Redirect URI** must be added in Authorized Redirect URIs configuration.
 
 1. Click **Create**.
-2. Your **Client ID** and **Client Secret** are generated. For security reasons, the Client Secret is displayed only once – immediately after you have created a new OAuth client. You cannot view the Client Secret anywhere in the application once you close this dialog, so make sure you save it somewhere safe to access it later.
+2. Your **Client ID** and **Client Secret** are generated. For security reasons, the Client Secret is displayed only once, immediately after you have created a new OAuth client. You cannot view the Client Secret anywhere in the application once you close this dialog, so make sure you save it somewhere safe to access it later.
 
 ![OAuth client ID and secret](user/img/google/id_secret.png)
 

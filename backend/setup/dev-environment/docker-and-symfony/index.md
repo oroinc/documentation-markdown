@@ -139,7 +139,7 @@ symfony run -d --watch=src php bin/console oro:message-queue:consume -vv
 ```
 
 #### NOTE
-You can kill Symfony server processes with command `killall <PID>`, you can get PID  from the `symfony server:status` output.
+You can stop Symfony server processes with command `killall <PID>`, you can get PID from the `symfony server:status` output.
 
 ### Check Symfony Server Status
 

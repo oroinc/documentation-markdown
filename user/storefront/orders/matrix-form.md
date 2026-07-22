@@ -17,7 +17,7 @@ Depending on the configuration:
 
    ![Different matrix form view options displayed on the product shopping list page in the storefront](user/img/system/config_commerce/product/matrix_shopping_list.png)
 2. Enter the number of items for each category.
-3. Click **Add to Shopping List** on the bottom right of the matrix ordering form. Alternatively, select the shopping list to add the items to, or create a new shopping list by clicking ![ChevronDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/chevron-down.svg) and selecting your option.
+3. Click **Add to Shopping List** at the bottom right of the matrix ordering form. Alternatively, select the shopping list to add the items to, or create a new shopping list by clicking ![ChevronDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/chevron-down.svg) and selecting your option.
    ![image](user/img/system/config_commerce/product/matrix_add_to_shopping_list.png)
 
 However, please keep in mind, that your website configuration may be different, and the matrix form may be unavailable.

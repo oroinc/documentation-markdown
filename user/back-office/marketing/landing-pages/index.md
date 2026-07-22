@@ -9,7 +9,7 @@ This section is part of the [Content Management Concept Guide](../../../concept-
 
 ![A sample of a landing page](user/img/marketing/landing_pages/LandingPagesSample.png)
 
-While there are a number of default editable landing pages out-of-the-box (e.g., homepage, accessibility, about, etc.), you can also create your own from scratch.
+While there are a number of default editable landing pages out of the box (e.g., homepage, accessibility, about, etc.), you can also create your own from scratch.
 
 <a id="user-guide-landing-pages-create"></a>
 
@@ -37,7 +37,7 @@ To create a new landing page:
    Meta description would summarize the page contents in one or several sentences (~160 characters).
 
    Meta keywords are comma-separated words and phrases that describe the content in the most precise and relevant way that helps find the page via the search engines (e.g., Google, Yahoo, Bing, etc.)
-8. Once you have completed editing the new landing page details, click **Save** on the top right of the page.
+8. Once you have completed editing the new landing page details, click **Save** at the top right of the page.
 
 The new landing page is created and is available by the following URL:
 
@@ -62,7 +62,7 @@ To manage landing pages, navigate to **Marketing > Landing Pages** in the main m
 
 Here, you can perform the following actions:
 
-> * Create a new landing page by clicking **Create Landing Page** on the top right.
+> * Create a new landing page by clicking **Create Landing Page** at the top right.
 > * Bulk delete landing pages: In a bulk select to the top left, select one of the following options: All, All Visible, None. On the top right of the list (grid), click bulk <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu and click the ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) to remove all selected landing pages.
 > * View a landing page by clicking on the item to open its details page.
 > * Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the item and select either to <i class="fa fa-eye fa-lg" aria-hidden="true"></i> view, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit , or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) delete the landing page.
@@ -74,8 +74,8 @@ To view the landing page details:
 
 1. Navigate to **Marketing > Landing Pages** in the main menu.
 2. Find the line with the necessary landing page and click on it. You can preview the landing page’s detailed information.
-3. Click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** on the top right of the page to update the landing page title and content, edit meta information, and change slug prototypes and their translation.
-4. Click **Save** on the top right of the page.
+3. Click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** at the top right of the page to update the landing page title and content, edit meta information, and change slug prototypes and their translation.
+4. Click **Save** at the top right of the page.
 5. Click **Save as draft** to save the landing page as a draft. Find all the related drafts under the **Drafts** section of the landing page.
 
 ## Manage Landing Page Drafts
@@ -88,7 +88,7 @@ The ability to manage drafts depends on the [permissions and access levels](../.
 To create a draft of the required landing page:
 
 1. Navigate to **Marketing > Landing Pages** and click on the selected landing page.
-2. Click <i class="fa fa-copy" aria-hidden="true"></i> **Create draft** on the top right.
+2. Click <i class="fa fa-copy" aria-hidden="true"></i> **Create draft** at the top right.
 3. An action confirmation popup displays the fields to be copied from the selected landing page to its draft (e.g., content, titles, metaTitles, metaDescriptions, metaKeywords). Click **Yes** to proceed and edit the draft.
 
 ![The edit page of the landing page draft](user/img/marketing/landing_pages/landing_page_draft.png)
@@ -102,7 +102,7 @@ To create a draft of the required landing page:
    ![The list of all drafts for the Contact Us landing page](user/img/marketing/landing_pages/all_drafts.png)
 
 <br/>
-1. To publish the draft, click <i class="fas fa-share-square" aria-hidden="true"></i> **Publish draft** on the top right of the draft’s details page. Once the action is confirmed, the draft is published, substituting the original landing page. The drafts previously created for this landing page remain unchanged under the **Drafts** section.
+1. To publish the draft, click <i class="fas fa-share-square" aria-hidden="true"></i> **Publish draft** at the top right of the draft’s details page. Once the action is confirmed, the draft is published, substituting the original landing page. The drafts previously created for this landing page remain unchanged under the **Drafts** section.
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->

@@ -197,7 +197,7 @@ class LoadDashboardData extends AbstractDashboardFixture implements DependentFix
         );
 
         $dashboard
-            // if user doesn't have active dashboard this one will be used
+            // if user does not have active dashboard this one will be used
             ->setIsDefault(true)
 
             // dashboard label

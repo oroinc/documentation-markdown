@@ -23,7 +23,7 @@ To help you create your custom Storefront theme design, we compiled two files, t
 #### NOTE
 These Figma files use the new <a href="https://github.com/oroinc/storefront-themes/tree/master/src/Oro/Bundle/IntelligentBlueThemeBundle" target="_blank">Intelligent Blue theme</a>, which is the recommended and most actively maintained theme for OroCommerce version 7.0.
 
-The *Golden Carbon* and *Refreshing Teal* themes are still available in version 7.0. To see how they look on the storefront, please refer to the related Figma files: <a href="https://static.oroinc.com/doc/Storefront_Style_Guide-6.1-Public_Files-November_2025.fig" target="_blank">Style Guide 6.1 (Golden Carbon)</a>, <a href="https://static.oroinc.com/doc/Design_Mockups_6.1-November_2025.fig" target="_blank">Design Mockups 6.1 (Golden Carbon)</a> and <a href="https://static.oroinc.com/doc/storefront-style-guide-6.0.fig" target="_blank">Style Guide 6.0 (Refreshing Teal)</a>, <a href="https://static.oroinc.com/doc/design-mockups-6.0.fig" target="_blank">Design Mockups 6.0 (Refreshing Teal)</a>.
+The *Golden Carbon* and *Refreshing Teal* themes are still available in version 7.0. To see how they look in the storefront, please refer to the related Figma files: <a href="https://static.oroinc.com/doc/Storefront_Style_Guide-6.1-Public_Files-November_2025.fig" target="_blank">Style Guide 6.1 (Golden Carbon)</a>, <a href="https://static.oroinc.com/doc/Design_Mockups_6.1-November_2025.fig" target="_blank">Design Mockups 6.1 (Golden Carbon)</a> and <a href="https://static.oroinc.com/doc/storefront-style-guide-6.0.fig" target="_blank">Style Guide 6.0 (Refreshing Teal)</a>, <a href="https://static.oroinc.com/doc/design-mockups-6.0.fig" target="_blank">Design Mockups 6.0 (Refreshing Teal)</a>.
 
 This <a href="https://static.oroinc.com/doc/Storefront_style_guide_7.0-Public_files.fig" target="_blank">Style Guide</a> contains:
 
@@ -47,8 +47,8 @@ Please remember that using a separate library file, which is our suggested appro
 2. Find your newly imported library file name and click **Publish**; click Publish again in the window with styles.
 
 ![Illustration of the Figma UI with options to Publish the library file](img/frontend/storefront-design/Publish-updates.png)
-1. When your library file is successfully published, make sure it does not contain styles or elements from any missing libraries. For this, open the Assets tab in the left panel and click on the book icon again. See if under the *Libraries available in this file* it says *Includes 1 missing library*. If it does, click the chevron right > with the *Choose library* dropdown to select your newly imported library file’s name and click **Swap Library**. The *Swap default styles in instances* option should be checked.
-2. Open your newly imported work file (Design Mockups 7.0). In the Assets tab, click on the book icon. Under the *Libraries available in this file* find *Includes 1 missing library* (the source library which your Storefront Style Guide 7.0 file is an exact duplicate of), click the chevron right > with the *Choose library* dropdown to select your newly imported library file’s name and click **Swap Library**. The *Swap default styles in instances* should be checked. Swapping may take some time.
+1. When your library file is successfully published, make sure it does not contain styles or elements from any missing libraries. For this, open the Assets tab in the left panel and click on the book icon again. See if under the *Libraries available in this file* it says *Includes 1 missing library*. If it does, click the chevron right > with the *Choose library* drop-down to select your newly imported library file’s name and click **Swap Library**. The *Swap default styles in instances* option should be checked.
+2. Open your newly imported work file (Design Mockups 7.0). In the Assets tab, click on the book icon. Under the *Libraries available in this file* find *Includes 1 missing library* (the source library which your Storefront Style Guide 7.0 file is an exact duplicate of), click the chevron right > with the *Choose library* drop-down to select your newly imported library file’s name and click **Swap Library**. The *Swap default styles in instances* should be checked. Swapping may take some time.
 3. While still in your work file, open the Assets tab and click on the book icon again. Make sure your newly imported library is marked as **Added**, and that the file does not use elements or styles from any other libraries.
 4. You can now customize the library styles and components.
 
@@ -60,7 +60,7 @@ Once you have finished customizing the style guide and components library, pleas
 
 1. Open the Assets tab in the left panel of this file (library) and click on the book icon.
 2. Find the current file (Storefront Style Guide 7.0), click **Publish changes** and then **Publish**.
-3. Open your work Figma file. If this library is toggled on in your file, click **Review unpublished changes** (the book icon in the top right corner of the Figma toolbar) and then **Update all**.
+3. Open your work Figma file. If this library is toggled on in your file, click **Review unpublished changes** (the book icon in the top-right corner of the Figma toolbar) and then **Update all**.
 
 ![Illustration of the Figma UI with options to Update the file](img/frontend/storefront-design/Apply-Changes.png)
 
@@ -94,7 +94,7 @@ We have curated a list of plugins aimed at improving your workflow and productiv
 The structure of the OroCommerce UI is based on the Atomic Design approach, which means that all functional elements consist of:
 
 * [Atoms](#principles-atoms) - the smallest elements that cannot be separated and that serve as elementary blocks of the interface (colors, typography, buttons, icons, etc.)
-* [Molecules](#principles-molecules) - groups of atoms that form relatively simple functional interface elements (pop-up, button with dropdown, navigation menu)
+* [Molecules](#principles-molecules) - groups of atoms that form relatively simple functional interface elements (pop-up, button with drop-down , navigation menu)
 * [Organisms](#principles-organisms) - groups of molecules that form the relatively complex parts of the interface (header, footer, sidebar)
 * [Templates](#principles-templates) - help place components in the layout and demonstrate the content structure underlying the design
 * [Pages](#principles-pages) - help apply real content to templates displaying the final interface
@@ -107,7 +107,7 @@ The structure of the OroCommerce UI is based on the Atomic Design approach, whic
 
 Atoms are fundamental building blocks of a user interface. They are comprised of basic HTML elements such as buttons, inputs, headers, etc. and cannot be separated without losing their functionality. Each atom has its own unique properties.
 
-For instance, a button atom has properties such as background color, form, title color, size, and font. By modifying these properties, you can alter the overall style of the interface where the atom is utilized.
+For instance, a button atom has properties such as background color, form, title color, size, and font. By modifying these properties, you can alter the overall style of the interface where the atom is used.
 
 Atoms provide a foundation for all basic styles. Therefore, they can serve as a valuable reference material while designing and implementing a user interface in OroCommerce.
 

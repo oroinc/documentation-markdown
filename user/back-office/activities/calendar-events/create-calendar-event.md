@@ -24,7 +24,7 @@ You can add calendar events from the following pages in your Oro application:
 To add a calendar event when viewing a list of events:
 
 1. Navigate to **Activities > Calendar Events** in the main menu.
-2. On the page that opens, click **Create Calendar Event** on the top right.
+2. On the page that opens, click **Create Calendar Event** at the top right.
 3. On the **Create Calendar Event** page, provide the following information:
    * **Owner** — A user who is eligible to manage this event and who is responsible for it. The event appears in the calendar of the owner. By default, a person who is creating an event is selected as its owner. To change the owner, select another user from the list.
    * **Title** — A name for your calendar event.
@@ -75,10 +75,10 @@ To add a calendar event when viewing a list of events:
 
 To create a calendar event when viewing the related record (e.g., opportunity, customer user, etc.):
 
-1. On the page of the selected related record, click **More Actions** on the top right of the page and click **Add Event** on the list.
+1. On the page of the selected related record, click **More Actions** at the top right of the page and click **Add Event** on the list.
    ![Creating a calendar event from the page of a related record](user/img/activities/events_actions_add_related0.png)
 2. In the **Add Event** dialog box, specify event details, as described in the Create Calendar Event [From the Page of All Events](#doc-activities-events-details)  section above.
-3. Click **Save** on the top right.
+3. Click **Save** at the top right.
 
 Calendar events are displayed in the **Activity** section of the pages of related records.
 
@@ -90,8 +90,8 @@ If you create a calendar event from the view page of a related entity record, th
 
 To add calendar events on the **My Calendar** page or in the **Today’s Calendar** widget:
 
-1. Under your user name on the top right of the application page, click **My Calendar**.
-2. Click the empty cell that represents the desired time period. If you are adding an event from the widget, you can alternatively click the **New Event** button on the top right of the widget.
+1. Under your user name at the top right of the application page, click **My Calendar**.
+2. Click the empty cell that represents the desired time period. If you are adding an event from the widget, you can alternatively click the **New Event** button at the top right of the widget.
 3. In the **Add Calendar Event** dialog box, specify the event details.
 4. Click **Save**. The event appears in your calendar if you have specified yourself as an event owner or a guest.
 5. Refresh a page to update the widget after creating the new event.

@@ -4,7 +4,7 @@
 
 Roles are predefined sets of permissions. In the Roles section, you can view, edit and create new roles to define the level of permissions and access to the actions and data in OroCommerce storefront for the users of a specific role.
 
-You can access the list of storefront roles in the menu under your profile name in the top navigation bar.
+You can access the list of storefront roles in the menu under your profile name on the top navigation bar.
 
 ![image](user/img/storefront/users_roles/Roles.png)
 
@@ -32,7 +32,7 @@ Within the table you have the following [actions buttons](../../getting-started/
 
 To open a specific role: click on the selected role in the view table.
 
-To edit a specific role from its view page: click ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) **Edit Role** on the right of the page.
+To edit a specific role from its view page: click ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) **Edit Role** to the right of the page.
 
 ![image](user/img/storefront/users_roles/BuyerEditRole.png)
 
@@ -45,7 +45,7 @@ If the role is predefined, it cannot be deleted. Neither can it be deleted if it
 
 ## Create a New User Role
 
-To create a new user role, click **+Create Customer User Role** on the top right of the page, next to the table name.
+To create a new user role, click **+Create Customer User Role** at the top right of the page, next to the table name.
 
 A form will emerge with the following data to provide:
 

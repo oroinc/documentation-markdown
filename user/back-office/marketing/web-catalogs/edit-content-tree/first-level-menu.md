@@ -62,5 +62,5 @@ To create or configure the content node in the web catalog:
 >   ![Select the type of content to be displayed in the storefront](user/img/marketing/web_catalogs/ContentVariantSection.png)
 > * Configure the content node as described in the [Configure Content Variants for the Content Node](content-variants.md#user-guide-marketing-web-catalog-content-variant) section.
 
->   If necessary, create alternative content variants by selecting a content type from the list on the top right of the *Content Variants* section and providing the set of conditions (localization, website, customer or customer group) to restrict this variant specifically for those cases. To switch the default content variant to a different item, select it using an option to the left of the content variant name.
+>   If necessary, create alternative content variants by selecting a content type from the list at the top right of the *Content Variants* section and providing the set of conditions (localization, website, customer or customer group) to restrict this variant specifically for those cases. To switch the default content variant to a different item, select it using an option to the left of the content variant name.
 <!-- finish -->

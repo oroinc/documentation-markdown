@@ -234,7 +234,7 @@ The <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBu
 
 ## Query Expressions
 
-The following query expressions are implemented out-of-the-box:
+The following query expressions are implemented out of the box:
 
 | Operator              | Class                                                                                                                                                                                                           | Description                                                                              |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|

@@ -22,7 +22,7 @@ datagrids:
                         - u.group = :group_id
             bind_parameters:
                 # Get parameter "group_id" from datagrid
-                # and set it's value to "group_id" parameter in datasource query
+                # and set its value to "group_id" parameter in datasource query
                 - group_id
 ```
 
@@ -43,7 +43,7 @@ datagrids:
                         - u.group = :group_id
             bind_parameters:
                 # Get parameter "groupId" from datagrid
-                # and set it's value to "group_id" parameter in datasource query
+                # and set its value to "group_id" parameter in datasource query
                 group_id: groupId
 ```
 

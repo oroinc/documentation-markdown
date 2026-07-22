@@ -22,7 +22,7 @@ To create a new customer:
 10. In the **Additional** section, select a Payment term to be used as a payment option available to the customer users during the checkout.
 11. In the **Price Lists** section, add price lists and prioritize them as described in the [Price List Management for a Customer Group](../customer-groups/index.md#user-guide-customers-customer-groups-pricelist) section.
 12. When OroCommerce is deployed with InfinitePay payments support, the customer’s VAT Id shall be captured for creditworthiness verification. VAT Id should be valid, and the billing address should match the one provided for the VAT registration. These are prerequisites to enable payments via [InfinitePay](../../system/integrations/payment-integration/infinitepay/infinitepay-prerequisites.md#user-guide-payment-prerequisites-infinitepay) for the customer users.
-13. Click **Save** in the top right.
+13. Click **Save** on the top right.
 
 #### NOTE
 Keep in mind that customers with at least one successful registered checkout cannot be deleted from the system.

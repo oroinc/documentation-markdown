@@ -81,7 +81,7 @@ Scheduled successfully. The result will be sent to the email
 ```
 
 #### HINT
-This trick can be very useful if you need to perform import on regular basis (e.g. by cron using external source).
+This trick can be very useful if you need to perform import on regular basis (e.g., by cron using external source).
 
 ## Disable Optional Listeners
 

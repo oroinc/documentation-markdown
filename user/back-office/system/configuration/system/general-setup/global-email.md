@@ -6,7 +6,7 @@
 
 # Configure Global Email Settings
 
-You can configure email settings on four levels – globally, [per organization](../../../user-management/organizations/org-configuration/general-setup-org/organization-email-settings.md#admin-configuration-email-configuration-organization), [per website](../../../websites/web-configuration/general-sys-config/general/website-email-settings.md#admin-configuration-system-mailboxes-website), or [per user](../../../user-management/users/configuration/user-email-settings.md#admin-configuration-email-configuration-user) with the system settings on the global level containing the highest number of options. Based on the level where configuration has taken place, settings can fall back to other levels.
+You can configure email settings on four levels: globally, [per organization](../../../user-management/organizations/org-configuration/general-setup-org/organization-email-settings.md#admin-configuration-email-configuration-organization), [per website](../../../websites/web-configuration/general-sys-config/general/website-email-settings.md#admin-configuration-system-mailboxes-website), or [per user](../../../user-management/users/configuration/user-email-settings.md#admin-configuration-email-configuration-user) with the system settings on the global level containing the highest number of options. Based on the level where configuration has taken place, settings can fall back to other levels.
 
 #### NOTE
 See a short demo on <a href="https://academy.oroinc.com/media-library/create-manage-emails-orocrm" target="_blank">how to create and manage emails</a> and <a href="https://academy.oroinc.com/media-library/synchronize-mailbox-orocrm" target="_blank">how to synchronize your mailbox with an Oro application</a> or keep reading the step-by-step guidance below.
@@ -32,7 +32,7 @@ To configure email settings globally:
    ![A sample of an email with the threaded option selected](user/img/system/config_system/threaded_emails.png)![A sample of an email with the non-threaded option selected](user/img/system/config_system/non-threaded-emails.png)
    * **Display Emails In Activity Lists As** — Defines how emails and replies are displayed under the **Activity** menu of a selected record.
      ![A sample of an email with the threaded option selected](user/img/system/config_system/threaded_email_activities.png)![A sample of an email with the non-threaded option selected](user/img/system/config_system/non_threaded_email_activities.png)
-5. Under **Reply**, define which button will be displayed as the default one: **Reply** is available by default with the **Forward** and **Reply all** options in the dropdown. The settings can be changed to have **Reply all** displayed at the top.
+5. Under **Reply**, define which button will be displayed as the default one: **Reply** is available by default with the **Forward** and **Reply all** options in the drop-down. The settings can be changed to have **Reply all** displayed at the top.
    > ![Selecting the default reply option](user/img/system/config_system/reply.png)
 6. Under **Attachments**, configure the following attachment options:
    > * *Maximum Attachment Size, Mb* — Set the maximum attachment size in Mb. Attachments that exceed the defined size will not be uploaded. You can remove size limitations by setting the size to 0.
@@ -41,8 +41,8 @@ To configure email settings globally:
    > * *Remove Large Attachments* — Click the button to add a job to the queue to remove all attachments exceeding the defined size from the system.
    > * *Attachments Preview Limit* — Set a limit to show a preview for attachments (a thumbnail for images and a big file icon for other files). Set the preview limit to 0 if you wish to see a list with file names only.
 7. Under **SMTP Settings**, configure the SMTP protocol that allows to send email messages. Click **Check SMTP Connection** once you provide the following details:
-   > * *Host* — SMTP Host name, e.g. smtp.gmail.com
-   > * *Port* — SMTP Port number, e.g. 465
+   > * *Host* — SMTP Host name, e.g., smtp.gmail.com
+   > * *Port* — SMTP Port number, e.g., 465
    > * *Encryption* — Encryption type: None, SSL or TLS
    > * *Username* — Your email address
    > * *Password* — The password for your email address
@@ -100,12 +100,12 @@ To configure a system mailbox globally:
    :alt: Email synchronization settings for Microsoft 365 -->
    * **Account Type: Other**:
      * *Enable IMAP* — Select the checkbox to enable retrieving email messages
-     * *IMAP Host* — Provide the IMAP Host, e.g. imap.gmail.com
-     * *IMAP Port* — Provide the IMAP Port, e.g. 993
+     * *IMAP Host* — Provide the IMAP Host, e.g., imap.gmail.com
+     * *IMAP Port* — Provide the IMAP Port, e.g., 993
      * *Encryption* — Select the encryption type, SSL or TLS.
      * *Enable SMTP* — Select the checkbox to enable sending messages
-     * *SMTP Host* — Provide the SMTP host, e.g. smtp.gmail.com
-     * *SMTP Port* — Provide the SMTP port, e.g. 587
+     * *SMTP Host* — Provide the SMTP host, e.g., smtp.gmail.com
+     * *SMTP Port* — Provide the SMTP port, e.g., 587
      * *Encryption* — Select the encryption type, SSL or TLS.
      * *User* — Provide your email address
      * *Password* — Provide your password
@@ -138,14 +138,14 @@ To configure a system mailbox globally:
    ![Sample auto-response rule form](user/img/system/config_system/ar_rule.png)
    * *Status (Active/Inactive)* — Only rules with active statuses are applied.
    * *Name* — Select the name for the rule to be used within the system.
-   * *Conditions* — Define the rules according to which the rule will be applied. In the first selector, choose the field for which the condition is to be set: Body, From, Cc, Bcc. In the second selector, choose the conditions (e.g. contains, does not contain, is equal to, starts with, etc.). In the field besides the selectors, define the values where required. Click the + or **+Add** button to add another condition for the rule. Click the x button to remove the condition. All conditions are summed up (AND operator).
+   * *Conditions* — Define the rules according to which the rule will be applied. In the first selector, choose the field for which the condition is to be set: Body, From, Cc, Bcc. In the second selector, choose the conditions (e.g., contains, does not contain, is equal to, starts with, etc.). In the field besides the selectors, define the values where required. Click the + or **+Add** button to add another condition for the rule. Click the x button to remove the condition. All conditions are summed up (AND operator).
    * *Response Template* — Choose an [email template](../../../emails/email-templates.md#user-guide-email-template) for auto-response.
    * *Type* — Choose if you want to use html or plain text for the email.
    * *Translations* — If you have more than one language configured in the system, select the necessary translation.
    * *Email Template* — Enter the subject and content of your email.
    * *Save Response As Email Template* — Checking the box automatically saves the current email as a template.
 
-   Click **Add** on the bottom to save the rule.
+   Click **Add** at the bottom to save the rule.
 10. Click **Save Settings**.
 
 #### BUSINESS TIP

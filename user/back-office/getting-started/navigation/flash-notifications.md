@@ -20,4 +20,4 @@ Sometimes, a flash message can contain links to other pages.
 
 ![An example of a flash message with a link](user/img/getting_started/navigation/flash_link.png)
 
-Flash messages appear on the top of the screen for several seconds and then disappear.
+Flash messages appear at the top of the screen for several seconds and then disappear.

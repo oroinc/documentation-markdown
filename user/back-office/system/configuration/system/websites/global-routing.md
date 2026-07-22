@@ -8,7 +8,7 @@ Global routing configuration includes the following information:
 
 * Global website URL when reached using secure (https) and insecure (http) connection
 * Options that impact the way metadata for the search engine is generated
-* Meaningful URL (e.g. /product/view/4 vs /500-watt-work-light)
+* Meaningful URL (e.g., /product/view/4 vs /500-watt-work-light)
 
 #### NOTE
 The website routing settings can be configured globally, per [organization](../../../user-management/organizations/org-configuration/general-setup-org/organization-routing.md#organization-config-website-routing), per [website](../../../websites/web-configuration/general-sys-config/websites/website-routing.md#sys-websites-sysconfig-websites-routing), [customer group](../../../../customers/customer-groups/customer-group-configuration/system-configuration/websites/customer-group-routing-settings.md#user-guide-customer-groups-configuration-settings-routing) and [customer](../../../../customers/customers/customer-configuration/system-configuration/website/customer-routing-settings.md#user-guide-customer-configuration-settings-routing).
@@ -45,8 +45,8 @@ To change the default global routing settings:
 <a id="routing-website-matchers-global"></a>
 1. In the **Canonical URLs** section, configure the following parameters:
    * **Canonical URL Type** — this option defines whether the *System URL* or *Direct URL* should be used as a canonical link in the meta keywords in the page source code.
-     * When *System URL* is selected, the page URL is built using the system path to the item and its ID (e.g. /product/view/4).
-     * When *Direct URL* is selected, the page URL is built using the page slug (e.g. /500-watt-work-light).
+     * When *System URL* is selected, the page URL is built using the system path to the item and its ID (e.g., /product/view/4).
+     * When *Direct URL* is selected, the page URL is built using the page slug (e.g., /500-watt-work-light).
 
      #### NOTE
      <a href="https://support.google.com/webmasters/answer/139066?hl=en" target="_blank">Canonical link</a> is used to help search engines identify the unique content that should be indexed. Switching from one setting to the other does not modify the data stored in the database, it only controls which data is used to as a canonical URL.

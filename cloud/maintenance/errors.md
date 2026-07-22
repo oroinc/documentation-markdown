@@ -97,7 +97,7 @@ Once the field is added, it becomes available in the table:
 
 ![request_time custom field displayed in summary lines](cloud/img/gcp/request-time-in-grid.png)
 
-You can add as many custom fields as necessary, and also edit or remove them from the **Viewing Options** menu on the top right of the log viewer.
+You can add as many custom fields as necessary, and also edit or remove them from the **Viewing Options** menu at the top right of the log viewer.
 
 ![Modify custom fields in Viewing Options](cloud/img/gcp/modify-custom-fields.png)![Modify custom fields form](cloud/img/gcp/edit-custom-fields-form.png)
 

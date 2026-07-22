@@ -178,10 +178,10 @@ For more detailed instructions, refer to the <a href="https://developers.google.
 1. In the <a href="https://script.google.com/" target="_blank">Google Apps Script</a> page, open your project.
 2. Click **Deploy > New deployment** next to the project name.
 
-![Clicking the New Deployment button in the Deploy dropdown](user/img/activities/connector-gmail/new-deployment.png)
+![Clicking the New Deployment button in the Deploy drop-down](user/img/activities/connector-gmail/new-deployment.png)
 1. Select **Add-on** as the deployment configuration type.
 
-![Selecting **Add-on** in the configuration dropdown](user/img/activities/connector-gmail/selecting-addon.png)
+![Selecting **Add-on** in the configuration drop-down](user/img/activities/connector-gmail/selecting-addon.png)
 1. Fill in the description.
 2. Click **Deploy** to complete the deployment.
 

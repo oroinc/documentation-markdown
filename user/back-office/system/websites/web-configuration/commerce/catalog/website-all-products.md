@@ -30,7 +30,7 @@ Please note that it is recommended to enable the All Products page exclusively f
    ![image](user/img/system/websites/web_configuration/AllProductsWebsite.png)
 4. Clear the **Use Organization** checkbox to change the organization-wide setting.
 5. In the **All Products** section, select the **Enable All Products Page** checkbox.
-6. Click **Save Settings** on the top right of the page.
+6. Click **Save Settings** at the top right of the page.
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->

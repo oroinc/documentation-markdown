@@ -2,7 +2,7 @@
 
 # WYSIWYG Field
 
-<a href="https://en.wikipedia.org/wiki/WYSIWYG" target="_blank">WYSIWYG</a> field type utilizes an editor that provides advanced editing capabilities. Any editor can be integrated with WYSIWYG fields, and the <a href="https://grapesjs.com/docs/" target="_blank">GrapesJS</a> editor is integrated out of the box.
+<a href="https://en.wikipedia.org/wiki/WYSIWYG" target="_blank">WYSIWYG</a> field type uses an editor that provides advanced editing capabilities. Any editor can be integrated with WYSIWYG fields, and the <a href="https://grapesjs.com/docs/" target="_blank">GrapesJS</a> editor is integrated out of the box.
 An administrator can add a new WYSIWYG field to any entity available in Entity Management. Landing Page and [Content Blocks](../content-blocks.md#bundle-docs-commerce-cms-bundle-content-blocks) entities use WYSIWYG for their content fields by default.
 
 ## Structure

@@ -32,7 +32,7 @@ To create a payment rule:
 5. In the **Destinations** section, add one or more destinations to apply this payment rule for. The payment rule applies when the billing address matches the provided destination(s). To add a destination:
    1. Click **+ Add**. The following section appears:
       ![image](user/img/system/payment_rules/create_payment_rule.png)
-   2. Specify the destination (e.g. select a Country, or select a country and state; for the most granularity you may provide a distinct list of postal codes to apply the payment rule for.
+   2. Specify the destination (e.g., select a Country, or select a country and state; for the most granularity you may provide a distinct list of postal codes to apply the payment rule for.
 6. In the **Expression** section, specify the expression that describes the conditions when this payment rule should be applied. For example, *account = 1*.
    ![image](user/img/system/payment_rules/create_payment_rule_expression.png)
 
@@ -72,7 +72,7 @@ To enable a payment rule:
 
 To enable several shipping rules at the same time:
 
-1. Select the checkboxes on the left of the corresponding rows. The selected payment rules will be highlighted in yellow.
+1. Select the checkboxes to the left of the corresponding rows. The selected payment rules will be highlighted in yellow.
 2. Click <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> on the far right of table header.
 3. Click <i class="fa fa-check fa-lg" aria-hidden="true"></i> **Enable**.
    ![image](user/img/system/payment_rules/mass_action_payment_rule.png)
@@ -87,7 +87,7 @@ You can use filters on the payment rules list page to find the required records 
 2. To apply a filter, click on its button in the bar, and specify your query in the control that appears.
 
    #### NOTE
-   Filter controls might look different depending on the type of data you are going to filter, e.g. textual, numeric, a date or an option set.
+   Filter controls might look different depending on the type of data you are going to filter, e.g., textual, numeric, a date or an option set.
 
    ![image](user/img/system/payment_rules/filter_payment_rule_2.png)
 

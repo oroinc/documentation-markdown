@@ -11,7 +11,7 @@ Each action has two required elements:
 
 For more details about these elements, see the [Creating a New Action]() section.
 
-The following table shows all actions provided out-of-the-box:
+The following table shows all actions provided out of the box:
 
 | Action Name                                            | Description                                                                                                                                                                                                                                            |
 |--------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -799,7 +799,7 @@ The main processor class: <a href="https://github.com/oroinc/platform/blob/maste
 
 Existing worker processors: <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ApiBundle/Resources/config/processors.get_config.yml" target="_blank">processors.get_config.yml</a>. Run `php bin/console oro:api:debug get_config` to see the list of processors.
 
-Additionally, <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Provider/ConfigProvider.php" target="_blank">ConfigProvider</a> was created to make usage of this action as easy as possible.
+Additionally, <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Provider/ConfigProvider.php" target="_blank">ConfigProvider</a> was created to simplify the use of this action.
 
 Example:
 
@@ -821,7 +821,7 @@ The main processor class: <a href="https://github.com/oroinc/platform/blob/maste
 
 Existing worker processors: <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ApiBundle/Resources/config/processors.get_metadata.yml" target="_blank">processors.get_metadata.yml</a>. Run `php bin/console oro:api:debug get_metadata` to see the list of processors.
 
-Additionally, <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Provider/MetadataProvider.php" target="_blank">MetadataProvider</a> was created to make usage of this action as easy as possible.
+Additionally, <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Provider/MetadataProvider.php" target="_blank">MetadataProvider</a> was created to simplify the use of this action.
 
 Example:
 
@@ -843,7 +843,7 @@ The main processor class: <a href="https://github.com/oroinc/platform/blob/maste
 
 Existing worker processors: <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ApiBundle/Resources/config/processors.normalize_value.yml" target="_blank">processors.normalize_value.yml</a>. Run `php bin/console oro:api:debug normalize_value` to see the list of processors.
 
-Additionally, <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Request/ValueNormalizer.php" target="_blank">ValueNormalizer</a> and <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Util/ValueNormalizerUtil.php" target="_blank">ValueNormalizerUtil</a> were created to make usage of this action as easy as possible.
+Additionally, <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Request/ValueNormalizer.php" target="_blank">ValueNormalizer</a> and <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Util/ValueNormalizerUtil.php" target="_blank">ValueNormalizerUtil</a> were created to simplify the use of this action.
 
 Example:
 
@@ -868,7 +868,7 @@ The main processor class: <a href="https://github.com/oroinc/platform/blob/maste
 
 Existing worker processors:<a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ApiBundle/Resources/config/processors.collect_resources.yml" target="_blank">processors.collect_resources.yml</a>. Run `php bin/console oro:api:debug collect_resources` to see the list of processors.
 
-Additionally, <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Provider/ResourcesProvider.php" target="_blank">ResourcesProvider</a> was created to make it as easy as possible to use this action.
+Additionally, <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Provider/ResourcesProvider.php" target="_blank">ResourcesProvider</a> was created to simplify the use of this action.
 
 Example:
 
@@ -902,7 +902,7 @@ The main processor class: <a href="https://github.com/oroinc/platform/blob/maste
 
 Existing worker processors: <a href="https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/ApiBundle/Resources/config/processors.collect_subresources.yml" target="_blank">processors.collect_subresources.yml</a>. Run `php bin/console oro:api:debug collect_subresources` to see the list of processors.
 
-Additionally, <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Provider/SubresourcesProvider.php" target="_blank">SubresourcesProvider</a> was created to make usage of this action as easy as possible.
+Additionally, <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ApiBundle/Provider/SubresourcesProvider.php" target="_blank">SubresourcesProvider</a> was created to simplify the use of this action.
 
 Example:
 
@@ -1050,7 +1050,7 @@ General methods:
 - **resetErrors()** — Removes all errors.
 - **isSoftErrorsHandling()** — Retrieves a value that indicates whether to stop the further processing or throw an exception in case of error.
 - **setSoftErrorsHandling(softErrorsHandling)** — Sets a value that indicates whether to stop the further processing or throw an exception in case of error.
-- **setProcessed(operationName)** — Marks work as done. In most cases, this method is unnecessary because it is easy to determine when work is already complete by checking the state of a context. However, if a processor performs complex work, it might be required to mark it as already done directly.
+- **setProcessed(operationName)** — Marks work as done. In most cases, this method is unnecessary because you can determine when work is already complete by checking the state of a context. However, if a processor performs complex work, it might be required to mark it as already done directly.
 - **clearProcessed(operationName)** — Marks work as not yet done.
 - **isProcessed(operationName)** — Checks whether work is already done.
 - **getSharedData()** — Retrieves an object used to share data between a primary action and actions executed as part of this action. Also, this object can be used to share data among different kinds of child actions.

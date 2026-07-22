@@ -107,7 +107,7 @@ Translation keys can be used for the **labels** section, and the **labels** and 
 Also, if preview images are defined in the DemoBundle/Resources/public/images directory, make sure they are in the project’s public directory.
 
 #### NOTE
-For default previews and options when they don’t have images, the reserved preview key \_default can be used.
+For default previews and options when they do not have images, the reserved preview key \_default can be used.
 
 ## Theme Configuration Validation
 
