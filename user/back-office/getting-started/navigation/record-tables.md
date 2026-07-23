@@ -31,7 +31,7 @@ If you have a lot of records, they may not all fit on one data page. In this cas
 
 You can navigate between pages using the **<** (previous page) and **>** (next page) buttons. To open a particular page, type its number in the field that displays the current page and press **Enter**.
 
-To change the number of records displayed per page, click the **View Per Page** drop-down list on the top right of the table, and select the required number of items per page.
+To change the number of records displayed per page, click the **View Per Page** drop-down list at the top right of the table, and select the required number of items per page.
 
 <a id="doc-grids-actions-refresh"></a>
 
@@ -100,7 +100,7 @@ The controls available for fields depend on the field type.
 1. **Text fields that can take any value**
 
    For text fields that can take any value, you can enter search words (or part of the word) and select from the list in front of it whether the values that you select must contain these search phrase at any position or does not contain it at all, must start with it, end with it, etc.
-   ![Available values in the contains dropdown](user/img/getting_started/navigation/grid_filters_define.png)
+   ![Available values in the contains drop-down](user/img/getting_started/navigation/grid_filters_define.png)
 
    For conditions like ‘Is Any Of’ and ‘Is Not Any Of,’ enter search words separated by the comma.
 2. **Fields that can take limited values**
@@ -111,7 +111,7 @@ The controls available for fields depend on the field type.
    Click the date fields to select the date via the calendar menu. Click the time fields to select a time from the list.
 
    In addition to selecting a strict calendar date, you can use variables that enable you to specify relative values, such as ‘today,’ ‘start of the month,’ etc.
-   ![Variables that enable to specify relative values such as ‘today,’ ‘start of the month,’ etc](user/img/getting_started/navigation/grids_filters_apply2-2.png)
+   ![Variables that enable specifying relative values such as ‘today,’ ‘start of the month,’ etc](user/img/getting_started/navigation/grids_filters_apply2-2.png)
 
    Also, specify the condition of how to form your desired time range, whether it starts from the day and time that you specified, lies between set dates, etc.
    ![Specify the condition of desired time range](user/img/getting_started/navigation/grids_filters_apply2-3.png)

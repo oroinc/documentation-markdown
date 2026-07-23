@@ -29,7 +29,7 @@ To edit a quote:
    #### IMPORTANT
    The icon that starts a workflow looks like the **Edit** icon. Please check the hint that appears when you hover over the icon to make sure that you select the desired action.
 3. Update the **Quote General Information**, **Line Items**, **Shipping Address**, **Shipping Information** sections, or add any relevant documents under **Customer Documents**. See [Create a Quote](create/create-from-scratch.md#quote-create-from-scratch) topic for detailed information on the available options.
-4. Click **Save** on the top right of the page.
+4. Click **Save** at the top right of the page.
 
 The quote is updated.
 
@@ -48,10 +48,10 @@ To edit a quote:
 
 1. In the main menu, navigate to **Sales > Quotes**.
 2. Choose the quote in the list and click it. The quote details page opens.
-3. Click **Edit** on the top right of the page:
+3. Click **Edit** at the top right of the page:
    ![Click the Edit button on the quote edit page](user/img/sales/quotes/quotes_edit1.png)
 4. Update the **Quote General Information**, **Line Items**, **Shipping Address**, **Shipping Information**, or **Customer Documents** sections. See [Create a Quote](create/create-from-scratch.md#quote-create-from-scratch) topic for detailed information on the available options.
-5. Click **Save** on the top right of the page.
+5. Click **Save** at the top right of the page.
 
 The quote is updated.
 
@@ -88,7 +88,7 @@ You can delete a quote in this way only when the [Quote Management Flow](flows/i
 
 1. In the main menu, navigate to **Sales > Quotes**. The quote list opens.
 2. Click the quote that you need to delete. The page with quote details opens.
-3. Click **Delete** on the top right of the page.
+3. Click **Delete** at the top right of the page.
    ![Click the Delete button on the quote view page](user/img/sales/quotes/quotes_delete1.png)
 4. In the confirmation dialog, click **Yes, Delete**.
 

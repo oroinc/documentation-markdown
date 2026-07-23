@@ -20,15 +20,15 @@ To add or edit the text translated to the target language, navigate to **System 
 
 The following information about the translations is available in the All Translations list:
 
-| Name                | Description                                                                                                                                                                                                        |
-|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| LANGUAGE            | The language of the text system elements available to the user.                                                                                                                                                    |
-| TRANSLATED          | The status indicates whether the text items are translated to the target language (Yes/No).                                                                                                                        |
-| ENGLISH TRANSLATION | The column contains the english translation of the text items.                                                                                                                                                     |
-| TRANSLATED VALUE    | The translation value of the text item to the target language.                                                                                                                                                     |
-| KEY                 | A coded text string that identifies the text system element and is used to find its translation to the target language<br/>(e.g. oro.ui.updated_at) in Oro applications.                                           |
-| DOMAIN              | The logical affiliation to a particular functionality that organises linguistic sources by domain (e.g. security, entities<br/>jsmessages, maintenance, install, workflows, messages, validators, HWIOAuthBundle). |
-| CONTEXT             | The detailed location of the translated functional component (e.g., Workflow “Checkout” -> Name).                                                                                                                  |
+| Name                | Description                                                                                                                                                                                                         |
+|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| LANGUAGE            | The language of the text system elements available to the user.                                                                                                                                                     |
+| TRANSLATED          | The status indicates whether the text items are translated to the target language (Yes/No).                                                                                                                         |
+| ENGLISH TRANSLATION | The column contains the english translation of the text items.                                                                                                                                                      |
+| TRANSLATED VALUE    | The translation value of the text item to the target language.                                                                                                                                                      |
+| KEY                 | A coded text string that identifies the text system element and is used to find its translation to the target language<br/>(e.g., oro.ui.updated_at) in Oro applications.                                           |
+| DOMAIN              | The logical affiliation to a particular functionality that organises linguistic sources by domain (e.g., security, entities<br/>jsmessages, maintenance, install, workflows, messages, validators, HWIOAuthBundle). |
+| CONTEXT             | The detailed location of the translated functional component (e.g., Workflow “Checkout” -> Name).                                                                                                                   |
 
 #### IMPORTANT
 Remember a rule of thumb:
@@ -58,9 +58,9 @@ Add a translation to any UI element or update the existing one by proceeding a f
 
 To remove one or more custom translations and roll back to the default translation downloaded from the Crowdin service, click <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i> in the left corner of the list header. Confirm the removal by clicking the **Reset** button.
 
-* The **All** option enables to select all the translations available under this section.
-* The **All visible** option enables to select only the translations visible on the page you are currently viewing.
-* The **None** option enables to deselect all the translations which were selected previously.
+* The **All** option enables you to select all the translations available under this section.
+* The **All visible** option enables you to select only the translations visible on the page you are currently viewing.
+* The **None** option enables you to deselect all the translations which were selected previously.
 
 Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the list header and click <i class="fas fa-sync-alt" aria-hidden="true"></i> **Reset** to delete multiple custom translations at a time.
 

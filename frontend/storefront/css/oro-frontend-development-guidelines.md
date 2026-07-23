@@ -52,7 +52,7 @@ underscore (\*\*_\_\*\*):
 block-name\_\_elem-name
 ```
 
-If a block has several identical elements (e.g., menu items), all of them will have the same name (e.g. menu_\_item).
+If a block has several identical elements (e.g., menu items), all of them will have the same name (e.g., menu_\_item).
 
 ### Modifier Name
 

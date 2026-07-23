@@ -31,7 +31,7 @@ To create a new quote from the customer request for quote (RFQ):
       <!-- image Notes -->
 
       #### NOTE
-      To delete any quote line, click **Delete** on the right of the line item information group.
+      To delete any quote line, click **Delete** to the right of the line item information group.
 
       <!-- image Delete? -->
    2. Add more products, if necessary, by clicking **+ Add Products** below the existing product lines.
@@ -42,8 +42,8 @@ To create a new quote from the customer request for quote (RFQ):
 
    Depending on the system configuration, the customer may be offered limited shipping options (only those available for the provided address).
    <!-- image Shipping Options. -->
-7. In the **Shipping Information**, configure the default shipping option pre-selected for the customer on the checkout:
-   1. In the **Shipping Methods** list, select the recommended (default) shipping method that will be pre-selected when the customer gets to the shipping configuration on the checkout.
+7. In the **Shipping Information**, configure the default shipping option pre-selected for the customer at checkout:
+   1. In the **Shipping Methods** list, select the recommended (default) shipping method that will be pre-selected when the customer gets to the shipping configuration at checkout.
    2. Optionally, enter the **Overridden Shipping Cost Amount, USD** — a custom shipping cost that will be used instead of the one that is dynamically generated based on the selected shipping method.
    3. To enforce using only the default Shipping method selected earlier, enable the **Shipping Method Locked** flag. When the shipping method is locked, the buyer does not see any other payment options but the default one.
    4. Tick the **Allow Unlisted Shipping Methods** box to allow using the shipping method already selected as a default one, even if the shipping rule configuration disables it.

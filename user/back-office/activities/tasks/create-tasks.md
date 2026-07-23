@@ -21,7 +21,7 @@ In the Oro application, you can create tasks in several ways. In the following s
 To add a task  manually:
 
 1. Navigate to **Activities > Tasks** in the main menu.
-2. Click **Create Task** on the top right.
+2. Click **Create Task** at the top right.
 3. On the **Create Task** page, fill in the required information:
    * **Subject** — The name that summarizes what the task is about.
    * **Description** — Detailed statement of what work is to be done in relation to the task. Use the embedded editor to format text, add images, links, etc.
@@ -59,7 +59,7 @@ You can create a task from a user profile and automatically assign it to the use
 To create a task from a user profile:
 
 1. Open the profile of the user to whom you want to assign a task.
-2. Click **More Actions** on the top right of the page and then click **Assign Task**.
+2. Click **More Actions** at the top right of the page and then click **Assign Task**.
    ![Creating a task from a user profile](user/img/activities/activities_tasks_actions_add_userpage1.png)
 3. In the **Assign Task To** dialog, specify the required data. Fill in the required information as described in the [Add a New Task Manually]() section.
 4. Click **Create Task**. The task appears in the **Tasks** subsection **Additional Information** on the user profile page.
@@ -74,7 +74,7 @@ An administrator may define that users can be specified as a context for a task.
 
 To create a task when viewing the related record (e.g., opportunity, account, etc.):
 
-1. On the page of a related record, click **More Actions > Add Task** on the top right of the page.
+1. On the page of a related record, click **More Actions > Add Task** at the top right of the page.
    ![Creating a task from the related record's page](user/img/activities/tasks_actions_add_related0.png)
 2. In the **Add Task** dialog, specify the required data, as described in the [Add a New Task Manually]() section.
 3. Click **Create Task**.

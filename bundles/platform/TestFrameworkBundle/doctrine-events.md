@@ -32,7 +32,7 @@ class LoadSomeData extends AbstractFixture
      */
     public function onAfterTestTransactionRollback(ConnectionEventArgs $args)
     {
-        // do something (e.g. clear some caches)....
+        // do something (e.g., clear some caches)....
     }
 }
 ```

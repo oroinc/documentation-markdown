@@ -31,8 +31,8 @@ Either the Organization or the First and Last Name fields are mandatory.
 
 1. Click **Save** once you have filled all the fields.
 
-   The address and the map showing the address location is displayed on the right of the address.
-   ![The address and the map are shown on the right of the address](user/img/customers/customers/acc_address_saved.png)
+   The address and the map showing the address location is displayed to the right of the address.
+   ![The address and the map are shown to the right of the address](user/img/customers/customers/acc_address_saved.png)
 
 ## View an Address on the Map
 
@@ -49,7 +49,7 @@ Please be aware that a valid Google API key is required to display maps in the s
 #### NOTE
 Delete is disabled for the primary address. To delete the address marked as primary, you must first move the primary label to a different address.
 
-* **Edit an address** — To edit an address, click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> on the top right of the address background, update the address details, and click **Save**.
+* **Edit an address** — To edit an address, click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> at the top right of the address background, update the address details, and click **Save**.
 * **Delete an address** — Delete an address by clicking ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) next to it.
 
 <!-- finish -->

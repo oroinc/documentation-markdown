@@ -12,7 +12,7 @@ The Localizations settings are accessible from the **Global organization only**.
 
 Localization helps to bind the language and locale-specific formatting for smooth localization of the Oro system elements and messages visible to the user.
 
-To enable easy inheritance from the parent or similar language, localizations may form groups organized as an ancestors tree, for example:
+To enable inheritance from the parent or similar language, localizations may form groups organized as an ancestors tree, for example:
 
 * English
   - English (UK)
@@ -48,7 +48,7 @@ Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More 
 
 ## Create a New Localization
 
-Create a new localization with a specific configuration by clicking **Create Localization** in the top right.
+Create a new localization with a specific configuration by clicking **Create Localization** on the top right.
 
 ![Crete a new localization page](user/img/system/localization/localizations_create.png)
 1. Give the localization a meaningful name and a title. The name is displayed in the back-office while the corresponding title is used in the storefront.
@@ -58,7 +58,7 @@ Create a new localization with a specific configuration by clicking **Create Loc
 2. Select the language formatting style.
 3. If the localization you are creating requires Right-to-Left text direction, select the checkbox for **Enable RTL Mode**.
 4. Select the parent localization from the available list. If no relations are set, the current localization inherits the English translation equivalents by default.
-5. Click **Save** in the top right.
+5. Click **Save** on the top right.
 
 Once the localization is configured, you need to enable it in the system configuration menu. Proceed to the [Localization Settings](../../configuration/system/general-setup/global-localization.md#localization-localization) section and follow the steps described in the guide.
 

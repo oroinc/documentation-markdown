@@ -12,7 +12,7 @@ Pinning pages is a convenient tool that enables you to save a page and quickly r
 
 You can pin a page to the header and return to it at any time with one click. Some pages, such as Dashboards or Calendars, cannot be pinned.
 
-To pin a page, click the pin icon in the top right corner of the page.
+To pin a page, click the pin icon in the top-right corner of the page.
 
 ![Click the pin icon to pin the page](user/img/getting_started/navigation/pin.png)
 

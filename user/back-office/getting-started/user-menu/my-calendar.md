@@ -4,7 +4,7 @@
 
 To reach your calendar settings:
 
-1. Click on your user name on the top right of the application page.
+1. Click on your user name at the top right of the application page.
 2. Click **My Calendar** .
 
 From the calendar page, you can:

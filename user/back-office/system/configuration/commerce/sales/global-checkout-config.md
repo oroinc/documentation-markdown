@@ -9,7 +9,7 @@
 #### HINT
 This section is part of the [Checkout Configuration Concept Guide](../../../../../concept-guides/administration/checkout/index.md#checkout-management-concept-guide) topic that provides a general understanding of single-page and multi-page checkout concepts.
 
-Checkout settings can be configured on three levels – globally, [per organization](../../../user-management/organizations/org-configuration/commerce/sales/organization-guest-checkout.md#user-guide-system-configuration-commerce-sales-organization) and [website](../../../websites/web-configuration/commerce/sales/website-guest-checkout.md#user-guide-system-configuration-commerce-sales-checkout-website).
+Checkout settings can be configured on three levels: globally, [per organization](../../../user-management/organizations/org-configuration/commerce/sales/organization-guest-checkout.md#user-guide-system-configuration-commerce-sales-organization) and [website](../../../websites/web-configuration/commerce/sales/website-guest-checkout.md#user-guide-system-configuration-commerce-sales-checkout-website).
 
 <!-- begin -->
 

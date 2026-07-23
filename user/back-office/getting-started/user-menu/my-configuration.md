@@ -6,11 +6,11 @@ In this section, you can personalize the configuration of your Oro application. 
 
 To reach the **My Configuration** page:
 
-1. Click on your user name on the top right of the application page.
+1. Click on your user name at the top right of the application page.
 2. Click **My Configuration**.
 
 #### IMPORTANT
-User-level configuration settings can fall back to organization settings. For this, select the **Use Organization** checkbox next to the selected option. To go back to the default user-level settings, click **Reset** on the top right.
+User-level configuration settings can fall back to organization settings. For this, select the **Use Organization** checkbox next to the selected option. To go back to the default user-level settings, click **Reset** at the top right.
 
 Two categories of settings are available for configuration at the user level:
 
@@ -41,7 +41,7 @@ In the Localization section, you can configure the following localization and ma
      * *CITY NAME, STATE CODE, COUNTRY, ZIP code*
 
      Otherwise, the *Primary Location* formatting is applied.
-   * **Timezone** — Defines the timezone to be applied for all the time settings defined in the instance. If the time-zone is changed, all the time settings (e.g. due dates of [tasks](../../activities/tasks/index.md#doc-activities-tasks)), time of reminders, etc. change correspondingly. The default value is(UTC -08:00) America/Los Angeles.
+   * **Timezone** — Defines the timezone to be applied for all the time settings defined in the instance. If the time-zone is changed, all the time settings (e.g., due dates of [tasks](../../activities/tasks/index.md#doc-activities-tasks)), time of reminders, etc. change correspondingly. The default value is(UTC -08:00) America/Los Angeles.
 2. In the **Map Settings**, select the **Temperature Unit** and **Wind Speed Unit** to display the weather on the map. The default values are Fahrenheit and miles per hour (MPH).
    ![image](user/img/system/config_system/localization_map.png)
 3. In the **Localization Settings**, provide:
@@ -75,8 +75,8 @@ In the Display section, you can configure the following display options:
 
    ![A formatting tool bar that enables editing a text for emails, notes, and comments](user/img/system/config_system/user_configuration_wysiwyg.png)
 6. In the **Sidebar Settings** section, enable or disable the left and/or right sidebar to keep your sticky notes and task lists:
-   * **Enable Left Sidebar** — Select **Yes** to enable the user to see and utilize the left sidebar.
-   * **Enable Right Sidebar** — Select **Yes** to enable the user to see and utilize the right sidebar.
+   * **Enable Left Sidebar** — Select **Yes** to enable the user to see and use the left sidebar.
+   * **Enable Right Sidebar** — Select **Yes** to enable the user to see and use the right sidebar.
 7. In the **Reports Settings** section, configure the following settings:
    * **Display SQL In Reports And Segments** — Select this checkbox to enable the user to review the SQL request sent to the system for a report or a segment. This way, users can check if a report has been developed correctly.
 
@@ -108,12 +108,12 @@ On the **Email Configuration** page, define the email-related options.
    ![Email synchronization settings for Microsoft 365](user/img/system/integrations/microsoft/office-365-email-sync.png)
    * **Account Type: Other**:
      * *Enable IMAP* — Select the checkbox to enable retrieving email messages
-     * *IMAP Host* — Provide the IMAP Host, e.g. imap.gmail.com
-     * *IMAP Port* — Provide the IMAP Port, e.g. 993
+     * *IMAP Host* — Provide the IMAP Host, e.g., imap.gmail.com
+     * *IMAP Port* — Provide the IMAP Port, e.g., 993
      * *Encryption* — Select the encryption type, SSL or TLS.
      * *Enable SMTP* — Select the checkbox to enable sending messages
-     * *SMTP Host* — Provide the SMTP host, e.g. smtp.gmail.com
-     * *SMTP Port* — Provide the SMTP port, e.g. 587
+     * *SMTP Host* — Provide the SMTP host, e.g., smtp.gmail.com
+     * *SMTP Port* — Provide the SMTP port, e.g., 587
      * *Encryption* — Select the encryption type, SSL or TLS.
      * *User* — Provide your email address
      * *Password* — Provide your password
@@ -130,7 +130,7 @@ On the **Email Configuration** page, define the email-related options.
    * **Display Emails In Activity Lists As** — Defines how emails and replies are displayed under the **Activity** menu of a selected record.
 
    ![A sample of an email with the threaded option selected](user/img/system/config_system/threaded_email_activities.png)![A sample of an email with the non-threaded option selected](user/img/system/config_system/non_threaded_email_activities.png)
-4. **Reply** — Define which button will be displayed as the default one: **Reply** is available by default with the **Forward** and **Reply all** options in the dropdown. The settings can be changed to have **Reply all** displayed at the top.
+4. **Reply** — Define which button will be displayed as the default one: **Reply** is available by default with the **Forward** and **Reply all** options in the drop-down  The settings can be changed to have **Reply all** displayed at the top.
 
 ## Update Contact Information
 

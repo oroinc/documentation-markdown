@@ -32,7 +32,7 @@ The following integration types are available:
 To create an integration with **OpenID Connect**, **Google OpenID Connect**, **Microsoft OpenID Connect**, or **Okta OpenID Connect**:
 
 1. Navigate to **System > Integrations > Manage Integrations** in the main menu.
-2. Click **Create Integration** on the top right and provide the required information.
+2. Click **Create Integration** at the top right and provide the required information.
 
 The configuration options described below represent the full set of settings available for the generic OpenID Connect integration type.
 

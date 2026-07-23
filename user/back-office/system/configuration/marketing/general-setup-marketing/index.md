@@ -8,7 +8,7 @@ Learn how to enable and set up marketing-related features such as marketing list
 
 ## Features
 
-You can customize marketing features, such as [marketing lists](../../../../marketing/marketing-lists/index.md#user-guide-marketing-lists), [website tracking](../../../../marketing/tracking-websites/index.md#user-guide-marketing-tracking), [marketing campaigns](../../../../marketing/marketing-campaigns/index.md#user-guide-marketing-campaigns), [email campaigns](../../../../marketing/email-campaigns/index.md#user-guide-email-campaigns), and/or marketing activity statistics in context (e.g. for orders, customer users, etc.) in your Oro application via the system configuration.
+You can customize marketing features, such as [marketing lists](../../../../marketing/marketing-lists/index.md#user-guide-marketing-lists), [website tracking](../../../../marketing/tracking-websites/index.md#user-guide-marketing-tracking), [marketing campaigns](../../../../marketing/marketing-campaigns/index.md#user-guide-marketing-campaigns), [email campaigns](../../../../marketing/email-campaigns/index.md#user-guide-email-campaigns), and/or marketing activity statistics in context (e.g., for orders, customer users, etc.) in your Oro application via the system configuration.
 
 1. In the main menu, navigate to **System > Configuration**.
 2. Select **Marketing > General Setup > Features** in the menu to the left.

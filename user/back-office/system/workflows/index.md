@@ -10,7 +10,7 @@
 
 In Oro, a [workflow](../../../glossary.md#term-Workflow) is a business process that involves multiple user interactions or sequential phases. It may trigger other workflows and change the status of the items involved in a business process.
 
-In the storefront, workflows organize and direct users’ work (e.g., during the checkout), making them follow particular steps in a pre-defined order (e.g. provide shipping address, then select shipping method from the options supported for the destination), or preventing them from performing actions that either contradict or conflict with the logical steps of a process (e.g., a customer may not be able to submit an order without their manager’s approval).
+In the storefront, workflows organize and direct users’ work (e.g., during the checkout), making them follow particular steps in a pre-defined order (e.g., provide shipping address, then select shipping method from the options supported for the destination), or preventing them from performing actions that either contradict or conflict with the logical steps of a process (e.g., a customer may not be able to submit an order without their manager’s approval).
 
 In the Oro back-office, workflows help users follow standard procedures that may be of a non-linear nature with alternating flow that depends on the available information, related items status, connectivity with integrated solutions, etc.
 
@@ -31,7 +31,7 @@ For more information on system and custom workflows, see [System Workflows](syst
 To create a workflow for an entity:
 
 1. In the main menu, navigate to **System > Workflows**.
-2. Click **Create Workflow** on the top right of the page.
+2. Click **Create Workflow** at the top right of the page.
 3. Specify the details of your workflow in the **General** section.
    ![image](user/img/system/workflows/4_create_wfpng.png)
 
@@ -63,9 +63,9 @@ To create a workflow for an entity:
    - **Add a transition** (clicking the **+ Add Transition** button at the top of the chart opens the **Add Transition** dialog).
    - **Add a step** (clicking the **+ Add Step** button at the top of the chart opens the **Add Step** dialog).
    - **Autosort** (clicking the **Auto Sort** button at the top of the chart automatically shapes your chart).
-   - **Rearrange the chart** for clearer workflow view (drag-and-drop transitions and steps in the chart as required, or click the <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i> **Expand** button in the top right corner of the chart).
-   - **Zoom in/out** (click the <i class="fa fa-search-plus fa-lg" aria-hidden="true"></i> **Zoom In** / <i class="fa fa-search-minus fa-lg" aria-hidden="true"></i> **Zoom Out** button in the top right corner of the chart to zoom the chart in/out, or select zoom percent from the list).
-   - **Show transition labels** (select this checkbox in the top left corner of the chart to display transition labels in the chart).
+   - **Rearrange the chart** for clearer workflow view (drag-and-drop transitions and steps in the chart as required, or click the <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i> **Expand** button in the top-right corner of the chart).
+   - **Zoom in/out** (click the <i class="fa fa-search-plus fa-lg" aria-hidden="true"></i> **Zoom In** / <i class="fa fa-search-minus fa-lg" aria-hidden="true"></i> **Zoom Out** button in the top-right corner of the chart to zoom the chart in/out, or select zoom percent from the list).
+   - **Show transition labels** (select this checkbox in the top-left corner of the chart to display transition labels in the chart).
    - **Drag transitions from one step to another** (point to one of four corners of the step box, and when the cursor changes shape to the hand, click the corner and drag an arrow to another step).
    - **Undo/Redo changes** (click the <i class="fa fa-reply fa-lg" aria-hidden="true"></i> **Undo** / <i class="fa fa-share fa-lg" aria-hidden="true"></i> **Redo** button at the top of the cart to revert or restore changes made to the chart).
    - **Edit/Clone/Delete** a step/transition (point to the step/transition button, and when the <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i> arrow appears, click it, and then click the <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** / <i class="far fa-copy" aria-hidden="true"></i> **Clone** / ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** icon.
@@ -101,22 +101,22 @@ Next, we are going to apply a transition for these steps.
 
 To add a transition to a workflow:
 
-1. Click **Add Transition** on the top right of the chart.
+1. Click **Add Transition** at the top right of the chart.
    ![image](user/img/system/workflows/10_add_transition.png)
 2. In the **Add New Transition** dialog, click the **Info** tab, and provide the following information:
 
-| Field               | Description                                                                                                                                                                                                                                                                                                                              |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Name**            | The name of the transition that will be displayed on its button.                                                                                                                                                                                                                                                                         |
-| **From Step**       | The workflow step, for which the transition button should appear on the entity page.                                                                                                                                                                                                                                                     |
-| **To Step**         | The step to which the workflow will progress after the transition is performed.                                                                                                                                                                                                                                                          |
-| **View Form**       | Transition attributes can appear in one of two available forms: in the *popup window*, which is a default transition behavior suitable for most cases, or on the *separate page*, which should be used with care and only for attribute-heavy transitions.                                                                               |
-| **Warning Message** | If you want to show a warning popup message to the user before a transition is executed, put the text of the warning into this field.                                                                                                                                                                                                    |
-| **Button Label**    | This text appears on the transition button and as the title of the transition form. If the button label is not provided, the value of the **Name** field is used.                                                                                                                                                                        |
-| **Button Title**    | This message appears when a user moves the pointer over the transition button. Use it to provide transition description or any other additional information.                                                                                                                                                                             |
-| **Button Icon**     | An icon that will appear on the transition button before the transition name.                                                                                                                                                                                                                                                            |
-| **Button Style**    | This control specifies the visual style of the transition button.                                                                                                                                                                                                                                                                        |
-| **Button Preview**  | This is the live preview of the transition button as it will appear on the entity page.<br/><br/>![image](user/img/system/workflows/11_add_transition_form.png)<br/><br/>#### IMPORTANT<br/>Self-transitions do not change steps in workflows (e.g. it can be a transition that launches an Edit form of a record within the same step). |
+| Field               | Description                                                                                                                                                                                                                                                                                                                               |
+|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Name**            | The name of the transition that will be displayed on its button.                                                                                                                                                                                                                                                                          |
+| **From Step**       | The workflow step, for which the transition button should appear on the entity page.                                                                                                                                                                                                                                                      |
+| **To Step**         | The step to which the workflow will progress after the transition is performed.                                                                                                                                                                                                                                                           |
+| **View Form**       | Transition attributes can appear in one of two available forms: in the *popup window*, which is a default transition behavior suitable for most cases, or on the *separate page*, which should be used with care and only for attribute-heavy transitions.                                                                                |
+| **Warning Message** | If you want to show a warning popup message to the user before a transition is executed, put the text of the warning into this field.                                                                                                                                                                                                     |
+| **Button Label**    | This text appears on the transition button and as the title of the transition form. If the button label is not provided, the value of the **Name** field is used.                                                                                                                                                                         |
+| **Button Title**    | This message appears when a user moves the pointer over the transition button. Use it to provide transition description or any other additional information.                                                                                                                                                                              |
+| **Button Icon**     | An icon that will appear on the transition button before the transition name.                                                                                                                                                                                                                                                             |
+| **Button Style**    | This control specifies the visual style of the transition button.                                                                                                                                                                                                                                                                         |
+| **Button Preview**  | This is the live preview of the transition button as it will appear on the entity page.<br/><br/>![image](user/img/system/workflows/11_add_transition_form.png)<br/><br/>#### IMPORTANT<br/>Self-transitions do not change steps in workflows (e.g., it can be a transition that launches an Edit form of a record within the same step). |
 1. Click the **Attributes** tab, and define the following fields:
    * **Entity Field** — This is the field of the workflow entity or its related entities that will appear on the view form of the transition. Use these if you want a user to add or edit some entity data in the transition.
    * **Label** — Use the field if you want to change the way it is displayed on the user interface. The system label value of the entity is used by default.
@@ -154,7 +154,7 @@ To set a workflow configuration parameters:
 
 1. In the main menu, navigate to **System > Workflows**.
 2. On the workflow list, click the required workflow.
-3. If the workflow has configuration parameters, you can see the **Configuration** button on the top right of the workflow view page. Click this button.
+3. If the workflow has configuration parameters, you can see the **Configuration** button at the top right of the workflow view page. Click this button.
    ![image](user/img/system/workflows/workflow_set_config_param.png)
 4. On the workflow configuration page, set the required values to the configuration parameters.
    ![image](user/img/system/workflows/workflow_set_config_param2.png)
@@ -169,8 +169,8 @@ When you clone a workflow, pay attention that configuration parameters are clone
 
 Once the workflow has been configured and saved, you can see how it is visualized for the records:
 
-- Transition buttons will be displayed on the top right of the entity record page.
-- All the steps will be located on the top right of the entity record page within the workflow widget.
+- Transition buttons will be displayed at the top right of the entity record page.
+- All the steps will be located at the top right of the entity record page within the workflow widget.
 
 The sample Opportunity Support Flow has been saved and activated.
 
@@ -208,7 +208,7 @@ It is possible to have multiple active workflows for the same record. If you hav
 
 ![image](user/img/system/workflows/24_multiple_wfs.png)
 
-Workflow group can be expanded / collapsed, if necessary, by clicking the **+** **Expand** / **-** **Collapse** icon on the left of the workflow group, as illustrated below:
+Workflow group can be expanded / collapsed, if necessary, by clicking the **+** **Expand** / **-** **Collapse** icon to the left of the workflow group, as illustrated below:
 
 ![image](user/img/system/workflows/25_collapse_flow.png)
 

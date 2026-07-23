@@ -13,9 +13,9 @@ To start previewing a selected node, follow the steps outlined below:
 
 1. Enable the web catalog either on the [global level](../../../system/configuration/system/websites/global-routing.md#user-guide-marketing-web-catalog-enable-globally) or per [website](../../../system/websites/web-configuration/general-sys-config/websites/website-routing.md#user-guide-marketing-web-catalog-enable-per-website).
 2. Navigate to the required web catalog details page under **Marketing > Web Catalogs** and click <i class="fa fa-sitemap fa-lg" aria-hidden="true"></i> **Edit Content Tree** in the more options menu of the related web catalog.
-3. Select the content node to preview and click <i class="far fa-eye" aria-hidden="true"></i> **Preview** on the top right.
-   ![Clicking Preview on the top right of the Lighting  Products content node](user/img/marketing/web_catalogs/web_catalog_preview.png)
-4. The storefront page of the related content node opens in the preview mode in a new tab. The mode allows you to browse other pages as well. The configuration panel on the top of the page enables you to switch between websites, localizations, customer groups, and customers to ensure that the page is displayed correctly, based on different restriction scopes.
+3. Select the content node to preview and click <i class="far fa-eye" aria-hidden="true"></i> **Preview** at the top right.
+   ![Clicking Preview at the top right of the Lighting  Products content node](user/img/marketing/web_catalogs/web_catalog_preview.png)
+4. The storefront page of the related content node opens in the preview mode in a new tab. The mode allows you to browse other pages as well. The configuration panel at the top of the page enables you to switch between websites, localizations, customer groups, and customers to ensure that the page is displayed correctly, based on different restriction scopes.
    ![Configuration panel in the storefront](user/img/marketing/web_catalogs/preview_mode.png)
 5. If you want to adjust any settings and preview the results, you need to save these settings first.
 

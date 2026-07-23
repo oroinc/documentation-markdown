@@ -18,7 +18,7 @@ Oro also provides a feature of auto-assignment to contacts, thanks to which new 
 
 <!-- start_my_emails -->
 
-Navigate to **My Emails** by clicking on your user name on the top right of the application page.
+Navigate to **My Emails** by clicking on your user name at the top right of the application page.
 
 From the page of all emails, you can:
 
@@ -59,20 +59,20 @@ To save a page filtered according to the necessary criteria:
 5. The saved page should now appear on the list.
 
 #### NOTE
-To synchronize your emails manually, click **Sync Emails** on the top right of the page with all emails.
+To synchronize your emails manually, click **Sync Emails** at the top right of the page with all emails.
 
 ## Compose A New Email
 
 To compose a new email:
 
-1. On the page of all emails, click **Compose** on the top right.
+1. On the page of all emails, click **Compose** at the top right.
 2. Provide the following information on the page that opens:
 
 <a id="email-fields"></a>
 * **From** — The sender’s email address (the primary email address is used as a default value).
 * **To** — The email(s) of the recipient(s). You can add more than one email to the field. Clicking **Cc** (carbon copy) will prompt a new field to appear to include more recipients to the emails whom the sender wishes to *publicly* inform of the message. Such recipients will be visible to all other recipients. Clicking **Bcc** (blind carbon copy) will prompt a new field to appear to include those recipients whom the sender wishes to inform of the email *discreetly*. Such recipients are not visible to anyone.
 * **Subject** — Short, descriptive outline of the email message displayed in the recipients’ mailbox.
-* **Apply Template** — You can apply a pre-configured template for your email. More information on email template configuration can be found in the [corresponding](../../system/emails/email-templates.md#user-guide-email-template) section of this guide. Keep in mind that the ability to view and add email templates from the dropdown list depends on specific [roles and permissions](../../system/user-management/roles/index.md#user-guide-user-management-permissions-roles) defined in the system configuration.
+* **Apply Template** — You can apply a pre-configured template for your email. More information on email template configuration can be found in the [corresponding](../../system/emails/email-templates.md#user-guide-email-template) section of this guide. Keep in mind that the ability to view and add email templates from the drop-down list depends on specific [roles and permissions](../../system/user-management/roles/index.md#user-guide-user-management-permissions-roles) defined in the system configuration.
 * **Type** — Select the type of the message to be sent:
   * **HTML:** The email will be coded so that the text is formatted and images are added.                                                            \* **Plain:** The email will contain plain text with no formatting or unique layout options.
 * **Body** — Enter the text of your email. You can customize your email text using the following features:
@@ -94,7 +94,7 @@ To compose a new email:
 
 ## Save Unfinished Email
 
-To save an unfinished email, minimize the email dialog window by clicking on the corresponding button in the top right corner of the email dialog window.
+To save an unfinished email, minimize the email dialog window by clicking on the corresponding button in the top-right corner of the email dialog window.
 
 Your unfinished email will appear as a minimized window throughout the sessions.
 
@@ -126,7 +126,7 @@ From the email details page, you can:
 
 <!-- start_recent_emails_menu_button -->
 
-You can reach your emails by clicking on the Recent Emails button in the top right corner of the Oro application window. A list of unread emails
+You can reach your emails by clicking on the Recent Emails button in the top-right corner of the Oro application window. A list of unread emails
 will appear, as illustrated in the screenshot below:
 
 <!-- .. image:: /user/img/getting_started/user_menu/recent_emails_button.jpg

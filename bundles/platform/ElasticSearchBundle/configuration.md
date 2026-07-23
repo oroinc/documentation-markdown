@@ -38,7 +38,7 @@ oro_search:
         client:
             hosts: ['192.168.10.5:9200', '192.168.15.7:9200']
             # other configuration options for which setters exist in ElasticSearch\ClientBuilder class
-            # (e.g. retries option can be used as setRetries() method exists)
+            # (e.g., retries option can be used as setRetries() method exists)
             retries: 1
 ```
 

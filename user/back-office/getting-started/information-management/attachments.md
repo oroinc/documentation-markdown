@@ -16,7 +16,7 @@ By default, the list of activities available for each entity is determined by wh
 To add an attachment to a record:
 
 1. Navigate to the page of the selected record.
-2. Click **Add Attachment** under the **More Actions** menu on the top right of the page.
+2. Click **Add Attachment** under the **More Actions** menu at the top right of the page.
    ![Click Add Attachment under the More Actions menu](user/img/getting_started/records/add_attachment.png)
 3. In the Add Attachment dialog:
    * Choose the file to attach.

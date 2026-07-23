@@ -47,7 +47,7 @@ To create a new quote from scratch:
       <!-- image Notes -->
 
       #### NOTE
-      To delete any quote line, click **Delete** on the right of the line item information group.
+      To delete any quote line, click **Delete** to the right of the line item information group.
 
       <!-- image Delete? -->
 
@@ -59,7 +59,7 @@ To create a new quote from scratch:
    Keep in mind that the shipping address you enter when creating a quote will be the only option available for the customer at the checkout.
 4. In the **Shipping Information** section, configure the recommended shipping options for the customer:
    ![Shipping options under the Shipping Information section of the quote](user/img/sales/quotes/CreateQioteShipping.png)
-   1. In the **Shipping Method** list, select the recommended (default) shipping method that will be pre-selected when the customer gets to the shipping configuration on the checkout.
+   1. In the **Shipping Method** list, select the recommended (default) shipping method that will be pre-selected when the customer gets to the shipping configuration at checkout.
 
    <!-- .. note:: When none of the methods are selected, the customer can use any listed methods. -->
    <!-- .. note:: Once you change the existing settings, the previous configuration will be saved for your information in the previously Selected Shipping Method log above the list of the shipping methods. -->

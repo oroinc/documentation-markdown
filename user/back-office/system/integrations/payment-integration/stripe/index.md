@@ -23,7 +23,7 @@ To start using Stripe Payment Element with the OroCommerce application:
    ![Test credentials under the Stripe account](user/img/system/integrations/stripe/stripe-account-test.png)
 2. To get the live credentials and start accepting payments, <a href="https://dashboard.stripe.com/account/onboarding/business-structure" target="_blank">add your business details</a> to view live keys.
 3. In the main menu of the OroCommerce back-office, navigate to **System > Integrations > Manage Integrations**.
-4. Click **Create Integration** on the top right.
+4. Click **Create Integration** at the top right.
 5. Provide the following information in the form:
    ![Create an integration with Stripe Payment Element in the back-office](user/img/system/config_commerce/sales/stripe-integration-element.png)
    * **Type** — Select *Stripe Payment Element* from the drop-down list.
@@ -102,7 +102,7 @@ To **refund** (partially or fully) any successful payment:
 2. Click <i class="fa fa-share fa-lg" aria-hidden="true"></i> at the end of the row to open the refund dialog.
 3. By default, you’ll issue a full refund. For a partial refund, enter a different refund amount.
 4. Provide an internal note with the reason for the refund under the **Notes** section.
-5. Select another refund reason from the dropdown. It will be recorded on the Stripe side.
+5. Select another refund reason from the drop-down. It will be recorded on the Stripe side.
 6. Click **Yes. Refund Payment**.
 
 ![Illustrating the refund flow in steps](user/img/system/integrations/stripe/payment-refund-flow.png)

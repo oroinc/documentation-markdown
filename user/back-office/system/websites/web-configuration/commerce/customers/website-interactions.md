@@ -32,7 +32,7 @@ You can enable consents per website if [consents have been enabled globally](../
    #### NOTE
    Keep in mind that on the website level you can add only those consents that have been created on the global level. You cannot create new consents on the website level.
 4. To delete a consent from the list of enabled consents, click **x** next to it.
-5. Click **Save Settings** on the top right.
+5. Click **Save Settings** at the top right.
 
 <a id="sys-conf-commerce-customer-contact-request-website"></a>
 

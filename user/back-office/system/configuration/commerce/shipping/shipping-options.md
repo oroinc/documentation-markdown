@@ -30,7 +30,7 @@ To change these shipping options:
      - parcel
 3. To customize any of these options:
    > 1. Clear the **Use Default** box next to the option.
-   > 2. Select/deselect the option by holding *Ctrl* and clicking on the value (e.g. pound).
+   > 2. Select/deselect the option by holding *Ctrl* and clicking on the value (e.g., pound).
 4. Click **Save**.
 
 ## Shipping Options per Product

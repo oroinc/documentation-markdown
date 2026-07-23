@@ -7,7 +7,7 @@
 To set up integration with Authorize.Net, complete the following:
 
 1. Navigate to **System > Integrations > Manage Integrations** in the main menu.
-2. On the **Manage Integrations** page, click **Create Integration** on the top right.
+2. On the **Manage Integrations** page, click **Create Integration** at the top right.
 3. In the **Basic Information** section, provide the following information:
    ![The form for creating a new integration in OroCommerce](user/img/system/integrations/authorizenet/integrations_authorizenet.png)
    * **Type** —  Select *Authorize.Net*.
@@ -16,7 +16,7 @@ To set up integration with Authorize.Net, complete the following:
    * **Label** — The payment method name/label displayed as a payment option for the buyer in the OroCommerce storefront during the checkout. To translate the label into other languages, click the <i class="fas fa-language" aria-hidden="true"></i> icon next to the field.
 
      #### NOTE
-     It doesn’t have to include the payment processor name if you want to hide it from the buyers. For example, you can enter ‘Credit Card Payments’ if you have a single payment method configured for processing credit cards.
+     It does not have to include the payment processor name if you want to hide it from the buyers. For example, you can enter ‘Credit Card Payments’ if you have a single payment method configured for processing credit cards.
    * **Short label** — The payment method name/label that is shown in the order details in the OroCommerce back-office and storefront after the order is submitted. To translate the label into other languages, click on the <i class="fas fa-language" aria-hidden="true"></i> icon next to the field.
    * **Allowed Credit Card Types** — Select one or more items from the list of the credit card types. Supported types are *Visa, Mastercard, Discover, American Express, JCB, Diner’s Club, and China Union Pay*. Press and hold the **Ctrl** or **Shift** key and click on the items to select multiple card types.
 5. In the **Integration** section, provide the following information:
@@ -56,7 +56,7 @@ To set up integration with Authorize.Net, complete the following:
 
        #### NOTE
        You have 30 days to capture the payment.
-     - *Authorize and Charge* — The payment gateway checks the card with the cardholder’s issuing bank and, if everything is OK, initiates a money transfer from the card to your account. This payment action is recommended when the order is fulfilled immediately after the purchase (e.g. for digital goods sales).
+     - *Authorize and Charge* — The payment gateway checks the card with the cardholder’s issuing bank and, if everything is OK, initiates a money transfer from the card to your account. This payment action is recommended when the order is fulfilled immediately after the purchase (e.g., for digital goods sales).
 
        #### NOTE
        *Authorize and Charge* is the only payment action available for eCheck payments.

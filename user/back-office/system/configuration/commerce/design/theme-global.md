@@ -5,7 +5,7 @@
 In your Oro application, you can control and customize the storefront look and feel.
 
 #### HINT
-Theme is configurable on three levels – globally, [per organization](../../../user-management/organizations/org-configuration/commerce/design/organization-theme.md#configuration-commerce-design-theme-theme-settings-organization) and [website](../../../websites/web-configuration/commerce/design/website-theme.md#configuration-commerce-design-theme-theme-settings-website).
+Theme is configurable on three levels: globally, [per organization](../../../user-management/organizations/org-configuration/commerce/design/organization-theme.md#configuration-commerce-design-theme-theme-settings-organization) and [website](../../../websites/web-configuration/commerce/design/website-theme.md#configuration-commerce-design-theme-theme-settings-website).
 
 You can set the following theme-related options that apply globally by default:
 
@@ -22,7 +22,7 @@ To configure the storefront theme options globally:
    #### NOTE
    For faster navigation between the configuration menu sections, use [Quick Search](../../quick-search.md#user-guide-system-configuration-quick-search).
 3. In the **Theme Settings** section, configure the following options:
-   * **Theme** — select the storefront theme from the list. For more details on how to customize a theme from the dropdown list, refer to the [theme configuration](../../../theme-configuration/index.md#back-office-theme-configuration) topic.
+   * **Theme** — select the storefront theme from the list. For more details on how to customize a theme from the drop-down list, refer to the [theme configuration](../../../theme-configuration/index.md#back-office-theme-configuration) topic.
    * **Product Image Placeholder** — select the image file that will appear on the product listing and product view pages for the products that have no associated images to avoid a blank image page.
    * **Category Image Placeholder** — select the image file to be applied to the category that has no associated image. The image is usually used in various category widgets.
 4. In the **Page Templates** section, select the product page template from the list. A page template is used to render the product page in the storefront by default, unless the template is overridden in the product details. Available options are *Default*, *Tabs*, *Wide*.

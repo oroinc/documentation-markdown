@@ -74,7 +74,7 @@ services:
             - { name: oro_tax.tax_provider, alias: demo, priority: 10 }
 ```
 
-1. Navigate to the admin panel under System > Configuration > Commerce > Taxation > Tax Calculation and chose your own custom **Tax Provider** in the dropdown list.
+1. Navigate to the admin panel under System > Configuration > Commerce > Taxation > Tax Calculation and chose your own custom **Tax Provider** in the drop-down list.
 
 <a id="bundle-docs-commerce-tax-bundle-kits"></a>
 

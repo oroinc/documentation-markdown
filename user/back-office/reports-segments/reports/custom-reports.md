@@ -18,7 +18,7 @@ The following fields are mandatory, and **must** be defined for a report:
 
 | Field           | Description                                                                                                                                                                                                                                                           |
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Name**        | A name that is used to refer to the report on the interface.<br/><br/>It is recommended to create a name that indicates the information the report presents.                                                                                                          |
+| **Name**        | A name that is used to refer to the report in the interface.<br/><br/>It is recommended to create a name that indicates the information the report presents.                                                                                                          |
 | **Entity**      | A target [entity](../../../glossary.md#term-Entity) of the report. Its data will be used to generate the report.<br/><br/>Select one of the entities from the list. (You can also start typing the entity name in the text field to narrow down your entity choices). |
 | **Report Type** | Select *Table* from the list. The report will present the data in the form of a table. Currently, this is the only available type.                                                                                                                                    |
 | **Owner**       | Select the user who can manage this report and be responsible for it.                                                                                                                                                                                                 |
@@ -185,7 +185,7 @@ Please be aware the Export Grid button may not be available for some reports if 
 
 1. Open the report that you want to export:
    * To export a custom report, navigate to **Reports & Segments > Manage Reports** in the main menu and click the required report.
-   * To export a system report, navigate to **Reports & Segments > Reports** in the main menu and further to the required report (e.g. **Reports & Segments > Reports > Accounts > Life Time**).
+   * To export a system report, navigate to **Reports & Segments > Reports** in the main menu and further to the required report (e.g., **Reports & Segments > Reports > Accounts > Life Time**).
 2. On the report page, click the **Export Grid** button in the upper-left corner and then click **CSV** or **XLSX** to export the report to the file of the corresponding format.
    ![Highlight the Export Grid button on the custom report's details page](user/img/reports/custom_reports_11.png)
 

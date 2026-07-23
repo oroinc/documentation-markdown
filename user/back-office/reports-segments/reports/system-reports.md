@@ -6,7 +6,7 @@ Pre-defined system reports are located under **Reports & Segments > Reports** in
 
 ![Illustrate the location of the Reports & Segments main menu and all included submenus](user/img/reports/system_reports_1.png)
 
-The following system reports are available out-of-the-box at the Oro application:
+The following system reports are available out of the box at the Oro application:
 
 * [Accounts Reports](accounts-reports.md)
 * [Leads Reports](leads-reports.md)

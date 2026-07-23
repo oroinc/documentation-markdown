@@ -80,7 +80,7 @@ Create basic `Resources/config/services.yml` for define service parameters. See 
 <!-- Enabling the bundle inside the Kernel: FAILED -->
 <!-- Confirm automatic update of the Routing [yes]? no -->
 <!-- Importing the bundle routing resource: FAILED -->
-<!-- It is important that you don't need to update Kernel and routing, as OroPlatform provides its own way to do that, -->
+<!-- It is important that you do not need to update Kernel and routing, as OroPlatform provides its own way to do that, -->
 <!-- which will be described in the `Enable bundle`_ chapter and in following articles. -->
 <!-- .. note:: -->
 <!-- Automatic bundle generation is provided by the ``sensio/generator-bundle`` package, which is defined in the -->

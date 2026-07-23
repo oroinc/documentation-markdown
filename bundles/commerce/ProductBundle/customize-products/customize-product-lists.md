@@ -18,7 +18,7 @@ To be able to customize which data should be loaded, this builder dispatches the
 * class <a href="https://github.com/oroinc/orocommerce/blob/7.0/src/Oro/Bundle/ProductBundle/Event/BuildResultProductListEvent.php" target="_blank">BuildResultProductListEvent</a>, event name: `oro_product.product_list.build_result.PRODUCT_LIST_TYPE`.
 
 `PRODUCT_LIST_TYPE` here is a unique string that identifies each type of product list.
-The following product list types are available out-of-the-box:
+The following product list types are available out of the box:
 
 * `new_arrivals` for the list of [new arrivals products](../../../../user/back-office/system/configuration/commerce/product/global-promotions.md#sys-commerce-product-new-arrivals).
 * `featured_products` for the list of [featured products](../../../../user/back-office/system/configuration/commerce/product/global-featured-products.md#sys-commerce-product-featured-products).

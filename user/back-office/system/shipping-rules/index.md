@@ -22,15 +22,15 @@ See a short demo on <a href="https://academy.oroinc.com/media-library/create-shi
 
 <!-- begin-shipping-rules-overview -->
 
-On the checkout, when a customer user provides the shipping address, the OroCommerce evaluates shipping rules one by one following the Shipping Rules Sort Order. The matching shipping rule may enable one or more shipping method(s) in the shipping options on the checkout and set the shipping service fee components that are used in shipping cost calculation.
+On the checkout, when a customer user provides the shipping address, the OroCommerce evaluates shipping rules one by one following the Shipping Rules Sort Order. The matching shipping rule may enable one or more shipping method(s) in the shipping options at checkout and set the shipping service fee components that are used in shipping cost calculation.
 
-To decide whether the shipping rule fits the order or not, OroCommerce uses the shipping destination and the shipping rule condition defined with the [expression](expression-lang.md#payment-shipping-expression-lang). The condition may rely on the customer order context. When a shipping rule destination and condition matches the order details (e.g. customer, ordered products and the environment), the shipping rule enables its shipping options and shipping fee components.
+To decide whether the shipping rule fits the order or not, OroCommerce uses the shipping destination and the shipping rule condition defined with the [expression](expression-lang.md#payment-shipping-expression-lang). The condition may rely on the customer order context. When a shipping rule destination and condition matches the order details (e.g., customer, ordered products and the environment), the shipping rule enables its shipping options and shipping fee components.
 
 <a id="doc-shipping-rules-overview-stop-further-processing"></a>
 
 ### Stop Further Rule Processing Mode
 
-When the OroCommerce gets to the shipping rule with the enabled **Stop Further Rule Processing** flag, the remaining rules are not taken into account and their shipping methods are not shown as the shipping options on the checkout. This is helpful when you would like to enforce the recommended shipping method for any location or other conditions it is technically applicable (e.g. use local shipping vendor for all addresses they handle or use the specific shipping vendor that has a VIP SLA with the particular customer). It is recommended to put this type of rules to the top (e.g. setting their sort order to 1).
+When the OroCommerce gets to the shipping rule with the enabled **Stop Further Rule Processing** flag, the remaining rules are not taken into account and their shipping methods are not shown as the shipping options at checkout. This is helpful when you would like to enforce the recommended shipping method for any location or other conditions it is technically applicable (e.g., use local shipping vendor for all addresses they handle or use the specific shipping vendor that has a VIP SLA with the particular customer). It is recommended to put this type of rules to the top (e.g., setting their sort order to 1).
 
 <a id="doc-shipping-rules-overview-shipping-methods-overlap"></a>
 
@@ -75,7 +75,7 @@ To create a shipping rule:
 1. Ensure that the integrations for the shipping methods that you plan to use (UPS, FedEx, Flat Rate, etc.) are already configured. For more information on shipping method integrations and how to configure them, see [Shipping Method Integration](../integrations/shipping-integration/index.md#sys-integrations-manage-integrations-ups-flat-rate).
 2. In the main menu, navigate to **System > Shipping Rules**. The list of shipping rules opens.
    ![image](user/img/system/shipping_rules/shipping_rule_list.png)
-3. Click **Create Shipping Rule** on the top right. The shipping rule create page opens.
+3. Click **Create Shipping Rule** at the top right. The shipping rule create page opens.
 4. In the **General Information** section, provide the following information:
    - Select the **Enabled** checkbox to activate the shipping rule. You may keep it unselected while you are drafting and testing the conditions.
    - **Name**—Specify the shipping rule name.
@@ -137,7 +137,7 @@ For the [flat rate](../../../glossary.md#term-Flat-Rate) shipping method, provid
 > * **Price**—A shipping price based on your agreement with the shipping service provider. The final shipping price depends on the **Type** option (*Pre Item*/*Per Order*).
 > * **Handling fee**—An additional cost for order processing charged by your company.
 > * **Type**—The way a shipping price is calculated for the order. Supported options:
->   - **Per Item**—A shipping price for an order is calculated by multiplying product line item quantities (e.g., 5 cups of coffee, 10 napkins, and 5 cookies give us total of 20 items) and flat rate price (e.g. 1$). Finally, we add a handling fee (e.g. 10$) on top of the resulting amount. The shipping cost for this order is 20\*1$+10$=30$
+>   - **Per Item**—A shipping price for an order is calculated by multiplying product line item quantities (e.g., 5 cups of coffee, 10 napkins, and 5 cookies give us total of 20 items) and flat rate price (e.g., 1$). Finally, we add a handling fee (e.g., 10$) on top of the resulting amount. The shipping cost for this order is 20\*1$+10$=30$
 >   - **Per Order**—A shipping price for an order is calculated as a sum of the specified price and handling fee. For example, if you have specified  *$1* for **Price** and  *$10* for **Handling fee**, then the shipping price for each order is $1+$10=$11
 
 For example:
@@ -207,7 +207,7 @@ To enable a shipping rule:
 
 To enable several shipping rules at the same time:
 
-1. Select the checkboxes on the left of the corresponding rows. The selected shipping rules will be highlighted in yellow.
+1. Select the checkboxes to the left of the corresponding rows. The selected shipping rules will be highlighted in yellow.
 2. Click <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> on the far right of table header.
 3. Click <i class="fa fa-check fa-lg" aria-hidden="true"></i> **Enable**.
 
@@ -223,7 +223,7 @@ You can use filters on the shipping rules list page to find the required records
 2. To apply a filter, click on its button in the bar, and specify your query in the control that appears.
 
    #### NOTE
-   Filter controls might look different depending on the type of data you are going to filter, e.g. textual, numeric, a date or an option set.
+   Filter controls might look different depending on the type of data you are going to filter, e.g., textual, numeric, a date or an option set.
 
    ![image](user/img/system/shipping_rules/SRFilterButton.png)
 

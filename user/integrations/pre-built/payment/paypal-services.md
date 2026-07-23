@@ -43,7 +43,8 @@ When integrating PayPal services with OroCommerce, various types of data are exc
 * **Shipping and Tracking:** If the transaction involves physical products being shipped, shipping information and tracking details may be exchanged between OroCommerce and PayPal. This allows the customer to track the shipment and enables order fulfillment processes.
 * **Customer Details:** OroCommerce may exchange customer-related data with PayPal, such as customer name, email address, and shipping address. This information ensures a seamless checkout experience and enables PayPal to associate the transaction with the customer’s account.
 
-It is important to note that the exact data exchanged and the level of integration can vary depending on the specific PayPal service being used, the configuration settings, and the customization implemented within OroCommerce.
+#### NOTE
+The data exchanged and the integration level depend on the specific PayPal service, OroCommerce configuration, and implemented customizations.
 
 ### Exchanged Fields
 
@@ -76,13 +77,13 @@ We prioritize the security of transactions and employ various measures to ensure
 
 OroCommerce Security Measures:
 
-1. **Data Encryption:** OroCommerce utilizes industry-standard encryption protocols such as SSL/TLS (Secure Sockets Layer/Transport Layer Security) to encrypt communication between the user’s browser and the platform, ensuring that sensitive information remains protected during transmission.
+1. **Data Encryption:** OroCommerce uses industry-standard encryption protocols such as SSL/TLS (Secure Sockets Layer/Transport Layer Security) to encrypt communication between the user’s browser and the platform, ensuring that sensitive information remains protected during transmission.
 2. **Payment Card Industry (PCI) Compliance:** OroCommerce adheres to the PCI Data Security Standard (PCI DSS) requirements, which involve implementing stringent security practices to protect cardholder data. This includes maintaining a secure network, regularly monitoring and testing systems, and implementing strong access control measures.
 3. **User Authentication and Authorization:** OroCommerce provides robust user authentication mechanisms, allowing only authorized personnel to access sensitive information and perform critical actions. Role-based access control and user permission settings ensure that data is accessible only to those with appropriate permissions.
 
 PayPal Security Measures:
 
-1. **Secure Payment Processing:** PayPal utilizes encryption and tokenization technologies to protect payment data, ensuring that sensitive information, such as credit card details or bank account numbers, are securely transmitted and stored.
+1. **Secure Payment Processing:** PayPal uses encryption and tokenization technologies to protect payment data, ensuring that sensitive information, such as credit card details or bank account numbers, are securely transmitted and stored.
 2. **Fraud Detection and Prevention:** PayPal employs sophisticated fraud detection systems and risk management tools to identify and prevent fraudulent transactions. These systems analyze transaction patterns, use machine learning algorithms, and employ real-time monitoring to detect and mitigate fraudulent activity.
 3. **Buyer and Seller Protection:** PayPal offers buyer and seller protection programs that provide an additional layer of security for transactions. These programs help protect buyers from unauthorized transactions, item not received, or significantly not as described issues, while also providing sellers with protection against unauthorized payments and chargebacks.
 4. **PCI Compliance:** PayPal is PCI Level 1 compliant, which is the highest level of certification available. This compliance ensures that PayPal maintains strict security standards to protect customer data.

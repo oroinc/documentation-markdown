@@ -36,8 +36,8 @@ This parameter sets default settings for OroActivityBundle. This bundle helps cl
 * **show_on_page** *integer* - is used to change a page, which will display the “activity list” and activity buttons. Can be used as bitmask. Possible values are in `\Oro\Bundle\ActivityBundle\EntityConfig\ActivityScope::VIEW_PAGE`.
 * **route** *string* - is the route name for the controller that can be used to render the list of this type of activities. This controller must have $entityClass and $entityId. Parameters to pass the target entity. This attribute must be defined for each activity entity (an entity included in the ‘activity’ group, see ‘grouping’ scope).
 * **acl** *string* - is used to check whether this type of activity is available in the current security context.
-* **action_button_widget** *string* - is the widget name of the activity action used to render a button. This widget should be defined in placeholders.yml. This attribute can be defined for the activity entity. Please note that an activity should provide both action_link_widget and action_link_widget, because actions can be rendered both as a button as a dropdown menu.
-* **action_link_widget** *string* - is the widget name of the activity action used to render a link in the dropdown menu. This widget should be defined in placeholders.yml. This attribute can be defined for the activity entity. Please note that an activity should provide both action_link_widget and action_link_widget, because actions can be rendered as a button as a dropdown menu.
+* **action_button_widget** *string* - is the widget name of the activity action used to render a button. This widget should be defined in placeholders.yml. This attribute can be defined for the activity entity. Please note that an activity should provide both action_link_widget and action_link_widget, because actions can be rendered both as a button as a drop-down menu.
+* **action_link_widget** *string* - is the widget name of the activity action used to render a link in the drop-down menu. This widget should be defined in placeholders.yml. This attribute can be defined for the activity entity. Please note that an activity should provide both action_link_widget and action_link_widget, because actions can be rendered as a button as a drop-down menu.
 * **activities** *string[]* - is the list of activities’ class names that can be assigned to the entity.
 * **inheritance_targets** *string[]* - are target entity classes whose activities will be shown in the current entity. If entity 1 has relation with entity 2 and activity is enabled for both of them, we can configure entity 1 using this option to show activities from related entity 2. In the example of the configuration for unidirectional relations below, we are going to join the “user” relation to the “Test” entity through the “Example” entity relation:
 
@@ -55,7 +55,7 @@ This parameter sets default settings for OroActivityBundle. This bundle helps cl
 ]
 ```
 
-* **priority** *integer* - can be used to change the order of this type of activity on the UI.
+* **priority** *integer* - can be used to change the order of this type of activity in the UI.
 * **immutable** *boolean or array* - is used to prohibit changing the activity state (regardless of whether it is enabled or not) for the entity. If TRUE, then activity state cannot be changed. It can also be an array with the list of class names of activities whose state cannot be changed.
 
 #### `attachment`

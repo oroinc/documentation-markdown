@@ -16,7 +16,7 @@ datagrids:
             export: true
 ```
 
-The Export button should be displayed in the top left corner of a grid. To export grid data, users need to click this button and select the format of exporting data (currently, only CSV format is implemented).
+The Export button should be displayed in the top-left corner of a grid. To export grid data, users need to click this button and select the format of exporting data (currently, only CSV format is implemented).
 
 Configure your grid properly if you need to allow the export of grid data in other formats. For example, to allow export data in CSV and PDF formats, use the following configuration:
 

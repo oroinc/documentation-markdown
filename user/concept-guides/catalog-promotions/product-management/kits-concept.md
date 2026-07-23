@@ -37,7 +37,7 @@ Every product in the kit and the kit itself can have tier pricing, depending on 
 
 Both types of product kits can include items that are mandatory or optional. In the example above, a product kit comprising a set of wireless accessories consists of three mandatory items and three optional items that a buyer may choose to include in their kit.
 
-You can control the [visibility of products](../../../back-office/products/products/managing-product-visibility.md#products-product-visibility) in the kits if you do not wish to allow the buyers in the storefront to purchase items from the kit individually. To hide products in the storefront, navigate to **Products > Products** in the back-office main menu, select a product to customize its visibility, click **More actions** and then **Manage Visibility** on the top right.
+You can control the [visibility of products](../../../back-office/products/products/managing-product-visibility.md#products-product-visibility) in the kits if you do not wish to allow the buyers in the storefront to purchase items from the kit individually. To hide products in the storefront, navigate to **Products > Products** in the back-office main menu, select a product to customize its visibility, click **More actions** and then **Manage Visibility** at the top right.
 
 ![Changing the visibility of a product from the product kit to 'hidden'](user/img/concept-guides/products/hide-product-kit-item.png)
 

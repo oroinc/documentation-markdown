@@ -4,7 +4,7 @@
 
 The <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html" target="_blank">Amazon Machine Image (AMI)</a> with OroCommerce Community Edition is listed on the <a href="https://aws.amazon.com/marketplace" target="_blank">Amazon Web Services Marketplace</a>. With its help, you can effortlessly and quickly set up an instance with a working OroCommerce Community Edition application on the <a href="https://aws.amazon.com/ec2/" target="_blank">Amazon EC2</a> platform, as described in detail further in this article.
 
-Deploying a single EC2 instance is helpful when reviewing Oro application features or using the out-of-the-box uncustomized application version for low and medium-traffic websites.
+Deploying a single EC2 instance is helpful when reviewing Oro application features or using the default uncustomized application version for low and medium-traffic websites.
 
 Every AMI (Amazon Machine Image) contains an installed Oro Application along with the LEMP stack:
 
@@ -42,7 +42,7 @@ Before proceeding, ensure you have created an AWS user <a href="https://aws.amaz
 
    Clicking **Review and Launch**  redirects you to the final installation step. Steps 3 to 6 are skipped as they contain preconfigured default values. Should you need to change the default values, return to Steps 3 to 6.
    ![image](img/backend/setup/aws/step_7.png)
-9. Click **Launch** on the bottom right. Select an existing public or private key pair for secure SSH access to your instance or create a new key pair.
+9. Click **Launch** at the bottom right. Select an existing public or private key pair for secure SSH access to your instance or create a new key pair.
    ![image](img/backend/setup/aws/select_a_key_pair.png)
 10. Click **Create a new key pair**, provide its name in the field, and click **Download Key Pair**.
 
@@ -53,7 +53,7 @@ Store the downloaded .pem private key file in a secure and accessible location. 
 
 > ![image](img/backend/setup/aws/launch_status.png)
 
-12. Click **View Instances** on the bottom right to access the **Instances** page with a list of your launched EC2 instances and the information on their
+12. Click **View Instances** at the bottom right to access the **Instances** page with a list of your launched EC2 instances and the information on their
 state and status.
 
 1. Click on the required instance from the list to view its description at the bottom. You can see detailed information about the selected instance below the launched instances list.

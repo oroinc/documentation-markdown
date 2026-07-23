@@ -50,7 +50,7 @@ To create a guest RFQ from the shopping list:
 
 To create an RFQ from the quick order form:
 
-1. Click on the **Quick Order** widget in the top navigation bar.
+1. Click on the **Quick Order** widget on the top navigation bar.
    ![image](user/img/storefront/rfq/GuestQuickOrderButton.png)
 2. Provide order details (item, quantity #, and unit) in the given fields.
 3. Click **Get Quote** below the form.

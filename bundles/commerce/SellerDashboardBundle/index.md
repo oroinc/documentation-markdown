@@ -55,8 +55,8 @@ Color settings
     * `ChartDataProviderInterface::getChartData` — each chart data provider implements this method to prepare the data in the specific format and is used to build a specific chart.
 * `Oro\Bundle\SellerDashboardBundle\Provider\AbstractChartDataProvider` — Encapsulates commonly used logic needed by chart data providers
   : * `AbstractChartDataProvider::getDefaultPeriod` — returns default period to be used for chart data
-    * `AbstractChartDataProvider::getDateRanges` — returns an array of Date objects that represents current period start date, end date and previous period start and end dates (to be used for periods comparison, e.g. `Order Revenue Chart`, `Order Count Char`, etc.)
-    * `AbstractChartDataProvider::getIntervalsForPeriod` — returns an array of formatted `label` and `value` values representing intervals to be used for a chart e.g. `Order Revenue Chart`
+    * `AbstractChartDataProvider::getDateRanges` — returns an array of Date objects that represents current period start date, end date and previous period start and end dates (to be used for periods comparison, e.g., `Order Revenue Chart`, `Order Count Char`, etc.)
+    * `AbstractChartDataProvider::getIntervalsForPeriod` — returns an array of formatted `label` and `value` values representing intervals to be used for a chart e.g., `Order Revenue Chart`
     * `AbstractChartDataProvider::applyDateRangeRestrictionToQB` — used to modify QueryBuilder object and apply dates filter according to required period
 
 ## Dashboard
@@ -120,7 +120,7 @@ my_bundle.provider.my_chart_data_provider:
 **Step 2**
 
 Create and register the twig extension with the function that will be used in widget twig template to render the
-initial state of the chart, e.g. `Oro\Bundle\SellerDashboardBundle\Twig\OrderChartDataTwigExtension`.
+initial state of the chart, e.g., `Oro\Bundle\SellerDashboardBundle\Twig\OrderChartDataTwigExtension`.
 
 ```php
 namespace My\Bundle\SellerDashboardBundle\Twig;
@@ -190,8 +190,8 @@ public function getChartIdentifier(): string
 ```
 
 Implement the method `ChartDataProviderInterface::getChartData` — each chart data provider implements this method
-to prepare the data in the own specific format to be used by e.g. FusionChart component.
-As an example, please refer to any provider that implements `ChartDataProviderInterface`, e.g. `Oro\Bundle\SellerDashboardBundle\Provider\TopSellingCountChartDataProvider`
+to prepare the data in the own specific format to be used by e.g., FusionChart component.
+As an example, please refer to any provider that implements `ChartDataProviderInterface`, e.g., `Oro\Bundle\SellerDashboardBundle\Provider\TopSellingCountChartDataProvider`
 
 ```php
 public function getChartData(?string $period = null): array

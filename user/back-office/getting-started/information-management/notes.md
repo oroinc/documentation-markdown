@@ -13,7 +13,7 @@ By default, the list of activities available for each entity is determined by wh
 
 To add a note to a record:
 
-1. Click **Add Note** under the **More Actions** menu on the top right on the page of the selected record.
+1. Click **Add Note** under the **More Actions** menu at the top right on the page of the selected record.
    ![Click Add Note under the More Actions menu of the opportunity record](user/img/getting_started/records/AddNotetoRecord.png)
 2. In the **Add Note** dialog, provide the text for your note. Formatting tools are available at the top menu.
 3. Click **Save** to save and add the note to the record.

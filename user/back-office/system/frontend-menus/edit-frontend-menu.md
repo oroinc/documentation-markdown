@@ -13,7 +13,7 @@ On the page that opens, the menu item tree is displayed in the left panel. The c
 A storefront menu can be multi-level, and the child menu items are nested under parent menu items (e.g., **About**, **Customer Service**, **Privacy Policy**, and others are nested under **Information**).
 
 ![Configuration settings of the About menu under the commerce_footer_links storefront menu](user/img/system/frontend_menu/frontend_menu_2.png)
-1. To minimize or maximize the left menu panel, click the arrow on the top right of the panel.
+1. To minimize or maximize the left menu panel, click the arrow at the top right of the panel.
 2. To expand / collapse a parent menu item, click an arrow in front of it.
 
 ![Numbers that define the actions you can do to storefront menu items described above](user/img/system/frontend_menu/frontend_menu_edit.png)
@@ -23,7 +23,7 @@ A storefront menu can be multi-level, and the child menu items are nested under 
    - If an arrow points to the place between items, that is where the moved item will be placed.
      ![Dragging the Catalog menu under Shopping Rules](user/img/system/frontend_menu/d&dsame.png)
    - If an arrow appears in front of a menu item, then the moved item will become a child of the item to which the arrow points.
-2. To update the target type of the root menu item of any storefront menu, click on the menu item, and select one of the three options from the dropdown:
+2. To update the target type of the root menu item of any storefront menu, click on the menu item, and select one of the three options from the drop-down:
    - **Category** — Select a master catalog category from the list.
    - **Content Node** — Select the [web catalog](../../marketing/web-catalogs/index.md#user-guide-web-catalog) from which you want to choose the content node and the [content node](../../marketing/web-catalogs/edit-content-tree/content-variants.md#user-guide-marketing-web-catalog-content-variant) itself.
    - **None** — No target type is required.
@@ -36,7 +36,7 @@ A storefront menu can be multi-level, and the child menu items are nested under 
 ## Add a Menu Item
 
 1. In the left panel, click a menu item that will be a parent for the menu item you create.
-2. Click **Create Menu Item** on the top right and then **Create Menu Item** from the dropdown list.
+2. Click **Create Menu Item** at the top right and then **Create Menu Item** from the drop-down list.
 
    The created menu item is displayed as the last one on the list of children of the same parent item. You can move it to the position that you need, as described in the [Toggle the Menu Tree View](../menus/index.md#doc-config-menus-actions-draganddrop) action description.
 3. In the right part of the page, specify the following information:
@@ -105,9 +105,9 @@ The conditions use <a href="https://symfony.com/doc/6.4/components/expression_la
 As an example, let us make the **About** section in the storefront visible to customers with configured taxes. For this, we need to:
 
 1. Customize the *config_value(‘some_identifier’)* function with the required value instead of *some_identifier*. In our case, it is the *oro_tax.tax_enable* value.
-2. Click **Save** on the top right of the About menu page to save the changes.
+2. Click **Save** at the top right of the About menu page to save the changes.
 3. Enable **Tax Calculation** in the system configuration. More information on tax configuration can be found in the relevant [Configure Tax Calculation](../configuration/commerce/taxation/tax-calculation.md#user-guide-taxes-tax-configuration) topic.
-4. Click **Save** on the top right of the Tax Calculation configuration page.
+4. Click **Save** at the top right of the Tax Calculation configuration page.
 
 The steps are illustrated below:
 
@@ -115,7 +115,7 @@ The steps are illustrated below:
 
 * **Target Window** — determines the way to open the linked document or URI. Select *Same Window* option to open it in the current browser window. Select *New Window* to open it in a new browser tab.
 
-1. Click **Save** to save your changes. If you wish to start creating another menu item right away, click **Save and New** on the top right.
+1. Click **Save** to save your changes. If you wish to start creating another menu item right away, click **Save and New** at the top right.
 
 #### IMPORTANT
 You need to reload the page to see the changes in the storefront.
@@ -137,7 +137,7 @@ Menu items on the same level of hierarchy can be visually separated by a divider
 To add a divider:
 
 1. In the left panel, click a menu item which will be the parent for the menu divider that you create.
-2. Click **Create** drop-down on the top right, and select **Create Divider**.
+2. Click **Create** drop-down at the top right, and select **Create Divider**.
 
 ![Highlight the Create Divider button under Create Menu Item](user/img/system/frontend_menu/menus_createdivider.png)
 
@@ -150,23 +150,23 @@ Some menus (or some menu levels) cannot display dividers. For example, if you ad
 
 ## Toggle Item Visibility
 
-1. **Hide a Menu Item** — To hide the default menu items from the interface, click the necessary menu item in the left panel. Click **Hide** on the top right. Reload the page to see changes.
+1. **Hide a Menu Item** — To hide the default menu items from the interface, click the necessary menu item in the left panel. Click **Hide** at the top right. Reload the page to see changes.
 
    #### IMPORTANT
    - If a menu that you hide has child items, they will be hidden too.
    - You cannot hide non-default menu items.
-2. **Show a Menu Item** — To show a previously hidden menu item, click the necessary menu item in the left panel. Click **Show** on the top right. Reload the page to see changes.
+2. **Show a Menu Item** — To show a previously hidden menu item, click the necessary menu item in the left panel. Click **Show** at the top right. Reload the page to see changes.
 
    #### NOTE
    If a menu item that you want to show has a parent, it will become visible too.
 3. **Find a Menu Item** —  To quickly find a menu item, enter its name into the search field and click the ![Search-SVG](_themes/sphinx_rtd_theme/static/svg-icons/search.svg) **Search** icon or press **Enter**.
    ![Using the search tab to locate all references about sales](user/img/system/menus/menus_application_search.png)
-4. **Delete a Menu Item / Divider** — To delete a menu item or a divider, click the necessary item in the left panel. Click **Delete** on the top right. In the **Delete Confirmation** dialog box, click **Yes, Delete**. Reload the page to see changes.
+4. **Delete a Menu Item / Divider** — To delete a menu item or a divider, click the necessary item in the left panel. Click **Delete** at the top right. In the **Delete Confirmation** dialog box, click **Yes, Delete**. Reload the page to see changes.
 
    #### IMPORTANT
    - You cannot delete default menu items.
    - When you delete a menu item that has child items, they will not be deleted but moved to the parent of the menu item that you delete.
-5. **Reset a Menu** — To reset any customization changes and roll back to the menu that is provided out-of-the-box in the Oro application, click a menu name in the left panel. Click **Reset** on the top right. In the **Reset Confirmation** dialog box, click **Yes, Reset**. Reload the page to see changes.
+5. **Reset a Menu** — To reset any customization changes and roll back to the menu that is provided out of the box in the Oro application, click a menu name in the left panel. Click **Reset** at the top right. In the **Reset Confirmation** dialog box, click **Yes, Reset**. Reload the page to see changes.
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->

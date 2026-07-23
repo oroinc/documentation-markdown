@@ -64,7 +64,7 @@ To edit the product tax code value and description:
 
 To link a tax code to a product:
 
-1. Navigate to the necessary product (e.g. click **Products > Products** in the main menu, filter products to find the one you need).
+1. Navigate to the necessary product (e.g., click **Products > Products** in the main menu, filter products to find the one you need).
 2. Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the item and click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> to start editing its details.
 3. In the **General** section, in the Tax Code list, select the tax code that matches tax regulation for the product.
    ![Select the tax code that matches tax regulation for the product](user/img/taxes/select_tax_codes_for_product.png)

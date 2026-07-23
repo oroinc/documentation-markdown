@@ -15,7 +15,7 @@ To cancel an order:
 
 1. In the main menu, navigate to **Sales > Orders**.
 2. Choose the order in the list and click it. The order details page opens.
-3. Click the **More actions** and then the **Cancel** button on the top right of the page.
+3. Click the **More actions** and then the **Cancel** button at the top right of the page.
 
 The order [internal status](statuses.md#doc-orders-statuses-internal) becomes *Cancelled*.
 
@@ -37,6 +37,6 @@ To close an order:
 
 1. In the main menu, navigate to **Sales > Orders**.
 2. Choose the order in the list and click it. The order details page opens.
-3. Click the **More actions** and then the **Close** button on the top right of the page.
+3. Click the **More actions** and then the **Close** button at the top right of the page.
 
 The order [internal status](statuses.md#doc-orders-statuses-internal) becomes *Closed*.

@@ -8,7 +8,7 @@ The following information covers the **Address Book** section of the **Account**
 
 <!-- begin -->
 
-To open the address book, click **Address Book** under **My Profile** in the top navigation bar.
+To open the address book, click **Address Book** under **My Profile** on the top navigation bar.
 
 The address book has two sections:
 
@@ -28,7 +28,7 @@ Depending on the storefront settings, the address book lists may appear in the c
 
 To create a new company address:
 
-1. Click **+New Company Address** on the top right of the **All Company Addresses** list.
+1. Click **+New Company Address** at the top right of the **All Company Addresses** list.
    ![image](user/img/storefront/profile/MyProfileNewCompanyAddress.png)
 2. In the **Create Address** form, define the following fields:
    * Customer
@@ -70,7 +70,7 @@ You can perform the following actions for each address record:
 
 To create a new personal address:
 
-1. Click **+New Address** on the top right of the **All My Addresses** list.
+1. Click **+New Address** at the top right of the **All My Addresses** list.
    ![image](user/img/storefront/profile/MyProfileMyAddress.png)
 
 1. In the **Create Address** form, define the following fields:

@@ -25,7 +25,7 @@ This section is part of the [Checkout Configuration Concept Guide](../../../../.
 6. In the **Guest Checkout** section, set whether guest checkout should be enabled or disabled.
 
    By default, guest checkout is disabled.
-7. In the **Guest Checkout Owner Settings** section, select the default owner of the guest checkout. Depending on the roles and permissions of the owner, guest data (e.g. shopping lists) may or may not be viewed and managed by the users who are subordinated to the owner.
+7. In the **Guest Checkout Owner Settings** section, select the default owner of the guest checkout. Depending on the roles and permissions of the owner, guest data (e.g., shopping lists) may or may not be viewed and managed by the users who are subordinated to the owner.
 
    #### NOTE
    To enable users from the same business unit or organization (that the owner belongs to) to view and manage guest checkout data, adjust permissions for the checkout entity in their roles accordingly.

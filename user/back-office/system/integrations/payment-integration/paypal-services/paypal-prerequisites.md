@@ -68,7 +68,7 @@ OroCommerce requires enabling secure token and silent post features.
 To enable these features:
 
 1. Log into the <a href="https://manager.paypal.com/" target="_blank">https://manager.paypal.com/</a>:
-   1. Enter the partner name (e.g. PayPal) and PayPal Payflow Gateway account login and password.
+   1. Enter the partner name (e.g., PayPal) and PayPal Payflow Gateway account login and password.
    2. Click **Log In**. For the first log on, PayPal prompts you to type in answers for security question. Remember it for further authentication during the following logins.
 
    ![image](user/img/system/integrations/paypal/paypal_manager_login.png)

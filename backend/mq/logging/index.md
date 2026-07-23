@@ -111,7 +111,7 @@ All logs buffer collected before the error occurred will be erased before receiv
 To log into all environments, add the following code to `config.yml`. To log only in `prod`, add the code to `config_prod.yml`:
 
 #### NOTE
-Out of the box, the Fingers Crossed Handler is already enabled, and you don’t have to configure it manually.
+Out of the box, the Fingers Crossed Handler is already enabled, and you do not have to configure it manually.
 
 *config/config_prod.yml*
 ```yaml

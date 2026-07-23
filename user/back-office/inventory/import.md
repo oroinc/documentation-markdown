@@ -24,7 +24,7 @@ This section is part of the [Data Import](../../concept-guides/administration/da
 To import a bulk of inventory levels or statuses:
 
 1. In the main menu, navigate to **Inventory > Manage Inventory**. The inventory levels list opens.
-2. Click **Import File** on the top right.
+2. Click **Import File** at the top right.
 3. In the **Import** dialog, click **Choose File**, select the .csv file you prepared, and then click **Import File**.
 
 #### NOTE

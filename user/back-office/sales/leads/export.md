@@ -3,7 +3,7 @@
 To export lead details in a .csv file:
 
 1. Navigate to **Sales > Leads** in the main menu.
-2. To export information on all leads, click **Export** on the top right.
+2. To export information on all leads, click **Export** at the top right.
 3. Once the export is complete, you will receive an email to download the .csv file.
 
 #### NOTE

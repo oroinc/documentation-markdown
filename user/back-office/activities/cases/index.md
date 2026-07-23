@@ -19,7 +19,7 @@ Before proceeding to the step-by-step guidance, see a demo on <a href="https://a
 To create a new case:
 
 1. Navigate to **Activities > Cases** in the main menu.
-2. Click **Create Case** on the top right of the page.
+2. Click **Create Case** at the top right of the page.
 3. Provide the following information:
 
    | **Name**            | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -34,7 +34,7 @@ To create a new case:
    | **Priority**        | Define the priority of the task. The possible options are low, normal (default), high.                                                                                                                                                                                                                                                                                                                                                  |
    | **Related Contact** | Define a [contact record](../../../glossary.md#term-Contact) related to the case (optional).                                                                                                                                                                                                                                                                                                                                            |
    | **Related Account** | Define an [account record](../../../glossary.md#term-Account) related to the case (optional).                                                                                                                                                                                                                                                                                                                                           |
-4. Click **Save** on the top right.
+4. Click **Save** at the top right.
 
 <a id="user-guide-activities-cases-edit"></a>
 

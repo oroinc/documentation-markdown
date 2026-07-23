@@ -3,7 +3,7 @@
 To export  opportunity details in a .csv file:
 
 1. Navigate to **Sales > Opportunity** in the main menu.
-2. To export information on all opportunities, click **Export** on the top right.
+2. To export information on all opportunities, click **Export** at the top right.
 3. Once the export is complete, you will receive an email to download the .csv file.
 
 #### NOTE

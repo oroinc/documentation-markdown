@@ -20,7 +20,7 @@ To import external orders:
 
 1. Enable the feature in the system configuration on the [global](../../system/configuration/commerce/orders/global-external-order-import.md#system-configuration-orders-external-order-import) or [organization](../../system/user-management/organizations/org-configuration/commerce/orders/organization-external-order-import.md#configuration-commerce-orders-external-order-import-org) level.
 2. Once enabled, navigate to **Sales > Orders** in the main menu.
-3. Click **Import File** on the top right.
+3. Click **Import File** at the top right.
 4. In the **Import** dialog, click **Choose File**, select the .json file you prepared, and then click **Import File**.
 
 <!-- note: Ensure your .json file is saved in the Unicode (UTF-8) encoding. Otherwise, you may render the content of the file improperly. -->![The process of importing external orders](user/img/sales/orders/external-orders-import.png)

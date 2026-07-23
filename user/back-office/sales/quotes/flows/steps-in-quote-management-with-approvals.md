@@ -11,7 +11,7 @@ When Quote Management with Approvals is enabled, the quote status may be one of 
 * Submitted for Review — the quote has been sent to an authorized person for review.
 * Under Review — the quote is being reviewed by an authorized person.
 * Approved — the quote has been approved by an authorized person.
-* Not Approved – the authorized person declined the quote.
+* Not Approved — the authorized person declined the quote.
 * Sent to Customer — the quote is sent to the customer.
 * Closed — the quote is closed, and no further actions with it are possible unless it is reopened.
 * Deleted — the quote has been removed.

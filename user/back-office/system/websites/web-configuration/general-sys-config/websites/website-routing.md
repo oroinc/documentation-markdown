@@ -24,9 +24,9 @@ To change the default routing settings for the website:
    * **Secure URL** — Internal links and canonical URLs (meta keywords) on the OroCommerce storefront pages may contain this value as the website base URL. This option value is used in internal links when a customer uses secure (HTTPS) connection. In the canonical links, it is used when the **Canonical URL Security Type** is set to *Insecure*.
    * **Canonical URL Type** — this option defines whether the *System URL* or *Direct URL* should be used as a canonical link in the meta keywords in the page source code.
 
-     When *System URL* is selected, the page URL is built using the system path to the item and its ID (e.g. /product/view/4).
+     When *System URL* is selected, the page URL is built using the system path to the item and its ID (e.g., /product/view/4).
 
-     When *Direct URL* is selected, the page URL is built using the page title (e.g. /500-watt-work-light).
+     When *Direct URL* is selected, the page URL is built using the page title (e.g., /500-watt-work-light).
 
      #### NOTE
      <a href="https://support.google.com/webmasters/answer/139066?hl=en" target="_blank">Canonical link</a> is used to help search engines identify the unique content that should be indexed.

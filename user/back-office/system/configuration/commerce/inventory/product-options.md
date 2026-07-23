@@ -9,7 +9,7 @@
 #### HINT
 This section is part of the [Inventory and Warehouse Management](../../../../../concept-guides/catalog-promotions/inventory/index.md#concept-guide-inventory) topic that provides a general understanding of the inventory and warehouse concepts.
 
-You can control the way product inventory is managed for every product in the OroCommerce product catalog on multiple levels – globally, [per organization](../../../user-management/organizations/org-configuration/commerce/inventory/organization-product-options.md#sys-conf-commerce-inventory-product-options-organization), [per website](../../../websites/web-configuration/commerce/inventory/website-product-options.md#sys-conf-commerce-inventory-product-options-website), [per product](../../../../products/products/create-simple.md#create-simple-product-inventory), and [per master catalog category](../../../../products/master-catalog/index.md#master-catalog-inventory).
+You can control the way product inventory is managed for every product in the OroCommerce product catalog on multiple levels: globally, [per organization](../../../user-management/organizations/org-configuration/commerce/inventory/organization-product-options.md#sys-conf-commerce-inventory-product-options-organization), [per website](../../../websites/web-configuration/commerce/inventory/website-product-options.md#sys-conf-commerce-inventory-product-options-website), [per product](../../../../products/products/create-simple.md#create-simple-product-inventory), and [per master catalog category](../../../../products/master-catalog/index.md#master-catalog-inventory).
 
 To customize the default product options globally:
 

@@ -167,7 +167,7 @@ Bundle/UserNamingBundle/Entity/UserNamingType.php -> src/Entity/UserNamingType.p
 ```
 
 #### NOTE
-Don’t forget about declaring the controller as a service in the configuration.
+Do not forget about declaring the controller as a service in the configuration.
 
 ```yaml
 App\Controller\UserNamingController:
@@ -413,7 +413,7 @@ protected function build(ContainerBuilder $container)
 
 If the build uses the image or any other asset, it is automatically copied to the public folder. Copying ensures that the assets are readily available and can be served to users without issues.
 
-However, in some scenarios where assets are not directly utilized within the webpack build process, placing them directly in the public folder from the beginning is recommended. This approach eliminates the need for automatic copying since the assets are already in the correct location.
+However, in some scenarios where assets are not directly used within the webpack build process, placing them directly in the public folder from the beginning is recommended. This approach eliminates the need for automatic copying since the assets are already in the correct location.
 
 To adhere to the best practices mentioned above, manually move the image or any other static asset to the public folder.
 

@@ -4,7 +4,7 @@
 
 An invoice is a financial document that requires, among other attributes, to have a unique identifier or invoice number. While certain types of invoices (e.g., *proforma invoices*) may not require a unique number, most invoices must include one.
 
-OroCommerce includes a few invoice number generators out-of-the-box:
+OroCommerce includes a few invoice number generators out of the box:
 
 * Sequential monthly invoice number generator (default)
 * ID-based invoice number generator

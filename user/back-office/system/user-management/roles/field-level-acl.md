@@ -43,7 +43,7 @@ To enable field-level access:
 
    #### IMPORTANT
    Keep in mind that in OroCommerce field-level permissions can be applied only to the account, opportunity and custom entities.
-3. On the page of the selected entity, click **Edit** on the top right.
+3. On the page of the selected entity, click **Edit** at the top right.
 4. In the **Other** section, enable the **Field Level ACL** checkbox.
    ![image](user/img/system/user_management/access_field_level_acl_enable.png)
 5. Click **Save**.
@@ -56,7 +56,7 @@ When field-level permissions are enabled, the **+** icon appears next to the ent
 
 ## Enable Users to See Restricted Fields
 
-You can enable users to modify only certain entity fields and restrict them from modifying others. For example, you can enable sales managers to modify opportunity budget amount, but restrict sales assistants to only viewing it with no permissions to update amount in any way. Fields disabled for editing will appear dimmed on the interface.
+You can enable users to modify only certain entity fields and restrict them from modifying others. For example, you can enable sales managers to modify opportunity budget amount, but restrict sales assistants to only viewing it with no permissions to update amount in any way. Fields disabled for editing will appear dimmed in the interface.
 
 ![image](user/img/system/user_management/opportunity_greyed-status.png)
 
@@ -67,7 +67,7 @@ To enable field-level access:
 
    #### IMPORTANT
    Keep in mind that in OroCommerce field-level permissions can be applied only to the account, opportunity and custom entities.
-3. On the page of the selected entity, click **Edit** on the top right.
+3. On the page of the selected entity, click **Edit** at the top right.
 4. In the **Other** section, enable the **Show Restricted** checkbox.
 
    #### IMPORTANT

@@ -32,4 +32,4 @@ Please note that it is recommended to enable the All Products page exclusively f
 2. Select **Commerce > Catalog > Special Pages** in the panel to the left.
    ![All Products global configuration settings](user/img/system/config_commerce/catalog/AllProductsSystem.png)
 3. In the **All Products** section, select the **Enable All Products Page** checkbox.
-4. Click **Save Settings** on the top right of the page.
+4. Click **Save Settings** at the top right of the page.

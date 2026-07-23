@@ -5,7 +5,7 @@
 #### HINT
 This section is part of the [Payment Configuration](../../../../../concept-guides/administration/payment-configuration/index.md#user-guide-payment) topic that provides a general understanding of the payment concept in OroCommerce.
 
-PayPal is a fast, safe and reliable online global payment system that offers easy online payments for businesses and individuals.
+PayPal is a fast, safe and reliable online global payment system that offers online payments for businesses and individuals.
 
 OroCommerce supports integration with PayPal services to offer the following payment methods:
 
@@ -32,7 +32,7 @@ Depending on PayPal policies, payment methods may be different in various countr
 
 ### PayPal Express Payment Service Package
 
-It is a fast, safe and reliable online global payment system that offers easy online payments for businesses and individuals.
+It is a fast, safe and reliable online global payment system that offers online payments for businesses and individuals.
 
 PayPal Express, **unlike Gateway and Pro**, comes as a separate OroCommerce package and requires [installation](../../../../../../backend/extension/install-extension.md#cookbook-extensions-composer) of the <a href="https://packagist.oroinc.com/?#oro/paypal-express" target="_blank">Oro PayPal Express Integration</a> package.
 

@@ -74,7 +74,7 @@ Enabling consents adds the **Consent Management** menu under **System**.
 #### NOTE
 The number of consents that can be added to the list equals the number of consents created in the application. In addition, one consent cannot be added twice.
 
-1. Click **Save Settings** on the top right.
+1. Click **Save Settings** at the top right.
 
 **Related Topics**
 

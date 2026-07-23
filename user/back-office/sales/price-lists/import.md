@@ -19,7 +19,7 @@ The unit and currency should be created before the inventory levels import.
 To import a bulk of product prices:
 
 1. In the main menu, navigate to **Sales > Price Lists** and click the necessary price list to open its details.
-2. Click **Import File** on the top right.
+2. Click **Import File** at the top right.
 3. Click **Choose File** and select the .csv file you prepared.
 
 <!-- note: Ensure your .csv file is saved in the Unicode (UTF-8) encoding. Otherwise, the content of the file can be rendered improperly. -->

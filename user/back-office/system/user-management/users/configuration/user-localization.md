@@ -37,7 +37,7 @@ Here, you can configure the following options by clearing the **Use Organization
      * *CITY NAME, STATE CODE, COUNTRY, ZIP code*
 
      Otherwise, the *Primary Location* formatting is applied.
-   * **Timezone** — Defines the timezone to be applied for all the time settings defined in the instance. If the time-zone is changed, all the time settings (e.g. due dates of [tasks](../../../../activities/tasks/index.md#doc-activities-tasks)), time of reminders, etc. change correspondingly. The default value is(UTC -08:00) America/Los Angeles.
+   * **Timezone** — Defines the timezone to be applied for all the time settings defined in the instance. If the time-zone is changed, all the time settings (e.g., due dates of [tasks](../../../../activities/tasks/index.md#doc-activities-tasks)), time of reminders, etc. change correspondingly. The default value is(UTC -08:00) America/Los Angeles.
 2. In the **Map Settings**, select the **Temperature Unit** and **Wind Speed Unit** to display the weather on the map. The default values are Fahrenheit and miles per hour (MPH).
    ![image](user/img/system/config_system/localization_map.png)
 3. In the **Localization Settings**, provide:

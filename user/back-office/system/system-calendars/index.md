@@ -37,7 +37,7 @@ To create a system or an organization calendar:
 You can add event to system calendars in two ways:
 
 * From the page of the [system calendar](../../activities/calendar-events/create-calendar-event.md#user-guide-activities-events-add-system-calendar) under **System > System Calendars**.
-* From [My Calendar](../../activities/calendar-events/create-calendar-event.md#user-guide-activities-events-add-my-calendar) under your user name on the top right.
+* From [My Calendar](../../activities/calendar-events/create-calendar-event.md#user-guide-activities-events-add-my-calendar) under your user name at the top right.
 
 You can find detailed information on adding calendar events to user calendars in the [Calendar Events](../../activities/calendar-events/create-calendar-event.md#doc-activities-events-actions-add) topic.
 

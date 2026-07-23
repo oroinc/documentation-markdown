@@ -24,7 +24,7 @@ The following sections become available within the **Currency** tab:
 | **Name**               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Allowed currencies** | **Allowed currencies** list allows you to select some of all available currencies to enable them in your<br/>Oro application.<br/><br/>To add the allowed currency, select it from the list and click **Add**.<br/><br/>The new row is added to the allowed currencies options table, where you can configure the exchange rates<br/>for the newly added currency and may set it as a base currency.<br/><br/>**Note:** You cannot add the currency that is not set at the system level.<br/>See [Allowed Currencies Options for Organization]() for more information. |
-| **Display format**     | This setting controls how the currencies will be displayed within the system, as a 3-letter ISO code<br/>(e.g. GBP) or as the currency symbol (e.g. £).<br/><br/>To customize the **Display Format**:<br/><br/>1. Clear the **Use System** checkbox next to the option.<br/>2. Select the new option value (either *Currency Code* or *Currency Symbol*).<br/><br/>**Note:** Not all currencies might have symbols. For such currencies, ISO codes are used instead.<br/><br/>![image](user/img/system/config_system/currency_code.png)                                |
+| **Display format**     | This setting controls how the currencies will be displayed within the system, as a 3-letter ISO code<br/>(e.g., GBP) or as the currency symbol (e.g., £).<br/><br/>To customize the **Display Format**:<br/><br/>1. Clear the **Use System** checkbox next to the option.<br/>2. Select the new option value (either *Currency Code* or *Currency Symbol*).<br/><br/>**Note:** Not all currencies might have symbols. For such currencies, ISO codes are used instead.<br/><br/>![image](user/img/system/config_system/currency_code.png)                              |
 
 ## Allowed Currencies Options for Organization
 
@@ -33,14 +33,14 @@ The information about the allowed currencies options is grouped in the following
 #### NOTE
 This feature is only available in the Enterprise edition.
 
-| **Name**            | Description                                                                                                                                                                                                                                 |
-|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Base**            | A flag helps you to select the base currency.<br/>Base currency is used by default to display totals, budgets, and amounts.                                                                                                                 |
-| **Currency Name**   | International name of the currency that follows ISO 4217 standard (e.g. US dollar).                                                                                                                                                         |
-| **Currency Code**   | International currency code that follows ISO 4217 standard (e.g. USD).                                                                                                                                                                      |
-| **Currency Symbol** | Graphical symbol that is used to denote a currency (e.g. $).                                                                                                                                                                                |
-| **Rate From**       | The conversion rate from the selected currency to the base currency. Used to calculate transaction amounts<br/>(e.g. opportunity budget) in the base currency if they were entered in other currencies.<br/>Maximum precision is 10 digits. |
-| **Rate To**         | The conversion rate from the base currency to the selected currency. Used to calculate new exchange rates<br/>when the base currency is changed. Maximum precision is 10 digits.                                                            |
+| **Name**            | Description                                                                                                                                                                                                                                  |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Base**            | A flag helps you to select the base currency.<br/>Base currency is used by default to display totals, budgets, and amounts.                                                                                                                  |
+| **Currency Name**   | International name of the currency that follows ISO 4217 standard (e.g., US dollar).                                                                                                                                                         |
+| **Currency Code**   | International currency code that follows ISO 4217 standard (e.g., USD).                                                                                                                                                                      |
+| **Currency Symbol** | Graphical symbol that is used to denote a currency (e.g., $).                                                                                                                                                                                |
+| **Rate From**       | The conversion rate from the selected currency to the base currency. Used to calculate transaction amounts<br/>(e.g., opportunity budget) in the base currency if they were entered in other currencies.<br/>Maximum precision is 10 digits. |
+| **Rate To**         | The conversion rate from the base currency to the selected currency. Used to calculate new exchange rates<br/>when the base currency is changed. Maximum precision is 10 digits.                                                             |
 1. To change the base currency, click the **Base** option in the corresponding row. This will lead to reconversion of all multi-currency data to the new base currency, and all values will be re-converted according to the current rates. Keep in mind that multi-currency is only available in the Enterprise edition.
 
    Before:
@@ -58,7 +58,7 @@ In the example below, the base currency is British pounds but the budget of the 
 
 When you close a deal (determined by opportunity status), the exchange rate for it becomes locked and will no longer take rate changes into account.
 
-Dashboard widgets with monetary values (e.g. Forecast) and monetary metrics work in the base currency irrespective of the currency that the deals were made in.
+Dashboard widgets with monetary values (e.g., Forecast) and monetary metrics work in the base currency irrespective of the currency that the deals were made in.
 
 ![Sample of dashboard widgets that provide metrics in US](user/img/system/config_system/widgets_base_currency.png)
 1. To modify the currency exchange rate to and from the base currency, edit the **Rate To** and **Rate From** values in the corresponding row.
@@ -82,7 +82,7 @@ Dashboard widgets with monetary values (e.g. Forecast) and monetary metrics work
 
    If you delete a currency at organization level, it would appear in the **Allowed Currencies** field, so it would be possible to add it back if necessary. However, you cannot delete the currency that is already in use. In later releases, if you wish to delete the currency that is used by an entity, you would have an option of converting it into a different currency.
 4. To change the currency sort order, click and hold the <i class="fas fa-arrows-alt-v" aria-hidden="true"></i> **Sort** icon, and drag the currency up or down the list.
-5. To roll back any changes to the currency settings, click **Reset** on the top right.
+5. To roll back any changes to the currency settings, click **Reset** at the top right.
 6. Click **Save Settings**.
 
 <!-- fa-bars = fa-navicon -->

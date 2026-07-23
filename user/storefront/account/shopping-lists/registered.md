@@ -8,8 +8,8 @@ Shopping lists can be created using several flows.
 
 **Flow 1**
 
-1. Click ![ChevronDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/chevron-down.svg) next to **Shopping Lists** on the top right of the page.
-2. Click **Create New List** on the bottom of the drop-down window.
+1. Click ![ChevronDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/chevron-down.svg) next to **Shopping Lists** at the top right of the page.
+2. Click **Create New List** at the bottom of the drop-down window.
 3. Give the list a name and click **Create**.
 
 ![image](user/img/storefront/shopping_lists/ShoppingListName.png)
@@ -24,16 +24,16 @@ Shopping lists can be created using several flows.
 
 **Flow 3**
 
-1. Click **Quick Order Form** on the top right of the page.
+1. Click **Quick Order Form** at the top right of the page.
 2. Enter product details in the provided fields.
-3. Click **Add to** on the bottom of the Quick Order page.
+3. Click **Add to** at the bottom of the Quick Order page.
 4. Select **Create New Shopping List**.
 5. Give the list a name and click **Create**.
 
 **Flow 4**
 
 1. In the Quick Order Form, enter product SKU(s) and quantity.
-2. Open the dropdown next to the **Add to Shopping List** button.
+2. Open the drop-down next to the **Add to Shopping List** button.
 3. Select **+ Create New Shopping List**.
 4. Give the list a name and click **Create**.
 
@@ -57,7 +57,7 @@ Duplicate the already existing shopping list to make multiple similar orders:
 
 1. Open a shopping list.
 2. Click the ![MoreHorizontal-SVG](_themes/sphinx_rtd_theme/static/svg-icons/more-horizontal.svg) **More Options** menu at the end of the list header row.
-3. Click **Duplicate** from the dropdown list.
+3. Click **Duplicate** from the drop-down list.
 4. A copy of the shopping list will be created.
 
 ![image](user/img/storefront/shopping_lists/duplicate_shopping_list.png)

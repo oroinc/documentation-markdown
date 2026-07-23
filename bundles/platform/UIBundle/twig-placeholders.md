@@ -18,7 +18,7 @@ placeholders:
      <item_name>:                      # any unique identifier
         template: <template>           # path to custom template for renderer
      <another_item_name>:
-        action: <action>               # action name (e.g. OroSearchBundle:Search:searchBar)
+        action: <action>               # action name (e.g., OroSearchBundle:Search:searchBar)
 
     placeholders:
       <placeholder_name>:

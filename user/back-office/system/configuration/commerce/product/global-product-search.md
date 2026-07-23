@@ -18,8 +18,8 @@ To configure the product search settings globally:
    1. Clear the **Use Default** checkbox next to the option.
    2. Enable the required checkbox or enter the necessary file size and type information.
 4. In the **Product Fulltext Search** section, configure the following options:
-   * **Number of Products in Search Autocomplete** — Maximum number of products shown in the storefront autocomplete dropdown.
-   * **Number of Categories in Search Autocomplete** — Maximum number of categories shown in the storefront autocomplete dropdown.
+   * **Number of Products in Search Autocomplete** — Maximum number of products shown in the storefront autocomplete drop-down.
+   * **Number of Categories in Search Autocomplete** — Maximum number of categories shown in the storefront autocomplete drop-down.
      ![Illustration of 4 products and 2 categories in the autocomplete search field](user/img/concept-guides/search/storefront-autocomplete.png)
    * **Allow Partial Product Search** — When enabled, the customer can find a product in the global search and on quick order form using a substring inside a word. This means that even if users do not have the exact product name or spelling memorized, they can still find what they need. Enabling this option may have a performance impact on search behaviour. This is due to the system’s need to process and match substrings within product names or descriptions, potentially requiring additional computational resources.
      ![Partial Product Search illustration](user/img/concept-guides/search/partial-product-search.png)

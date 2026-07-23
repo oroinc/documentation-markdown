@@ -4,7 +4,7 @@
 
 <!-- begin -->
 
-Once you are logged in to the OroCommerce storefront, you can access your profile by clicking on your name in the top navigation bar, and selecting **My Profile** from the dropdown.
+Once you are logged in to the OroCommerce storefront, you can access your profile by clicking on your name on the top navigation bar, and selecting **My Profile** from the drop-down
 
 My Profile has three sections, Account Info, Sign In & Security, and Default Addresses.
 
@@ -68,7 +68,7 @@ To comply with the [data protection regulations (such as CPPA, GDPR, etc.)](../.
 
 Consents can be mandatory and optional:
 
-* **Mandatory consents** restrict you from proceeding to the checkout or creating RFQs, unless you accept them. Mandatory consents are marked with a red asterisk.
+* **Mandatory consents** restrict you from proceeding to the checkout or creating RFQs, unless you accept them. Mandatory consents are marked with an asterisk.
 * **Optional consents** do not restrict you from working with the application and are usually used to retrieve permissions to send them email newsletters, inform about upcoming sales or seasonal discounts, etc.
 
 The following key rules apply to consents in OroCommerce:
@@ -102,7 +102,7 @@ You can accept a [consent](#frontstore-guide-profile-consents) from the page of 
 #### NOTE
 You can view the description of the available consents in the **Account Info** by clicking on the consent links. The ![MinusCircle-SVG](_themes/sphinx_rtd_theme/static/svg-icons/minus-circle.svg) icon indicates that the consent has not been accepted, while the ![Check-SVG](_themes/sphinx_rtd_theme/static/svg-icons/check.svg) indicates that it has been read, understood and accepted.
 
-In the **Data Protection** section, select the checkbox next to the consent that you want to accept. At this point you are prompted to read the text of the consent. Click **Accept** to agree to the terms of the consent and Click **Save** on the bottom left.
+In the **Data Protection** section, select the checkbox next to the consent that you want to accept. At this point you are prompted to read the text of the consent. Click **Accept** to agree to the terms of the consent and Click **Save** at the bottom left.
 
 ![image](user/img/storefront/profile/revoke_consent.png)![image](user/img/storefront/profile/explicit_accept_consent1.png)
 
@@ -115,7 +115,7 @@ You can decline the [consent](#frontstore-guide-profile-consents) that you have 
 #### NOTE
 You can view the description of the available consents in the **Account Info** section by clicking on the consent links. The ![MinusCircle-SVG](_themes/sphinx_rtd_theme/static/svg-icons/minus-circle.svg) icon indicates that the consent has not been accepted, while the ![Check-SVG](_themes/sphinx_rtd_theme/static/svg-icons/check.svg) indicates that it has been read, understood and accepted.
 
-In the **Data Protection** section, clear the checkbox next to the consent that you want to revoke and click **Save** on the bottom left of the page.
+In the **Data Protection** section, clear the checkbox next to the consent that you want to revoke and click **Save** at the bottom left of the page.
 
 <!-- A -->
 <!-- B -->

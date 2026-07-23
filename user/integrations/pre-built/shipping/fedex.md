@@ -11,7 +11,7 @@ FedEx is a multinational courier delivery services company, known for its compre
 
 Here is an overview of the key FedEx features that OroCommerce supports:
 
-* **Diverse Shipping Options**: FedEx offers a wide range of shipping services, allowing e-commerce businesses to choose the most suitable options for their products and customers. Whether it’s express delivery, ground shipping, or international freight, OroCommerce users can access and offer these services to their customers with ease.
+* **Diverse Shipping Options**: FedEx offers a wide range of shipping services, allowing e-commerce businesses to choose the most suitable options for their products and customers. Whether it is express delivery, ground shipping, or international freight, OroCommerce users can access and offer these services to their customers with ease.
 * **Real-time Shipping Rates**: With the FedEx integration, OroCommerce users can provide customers with accurate real-time shipping rates during the checkout process. This transparency enhances customer trust and can reduce cart abandonment rates, ultimately leading to increased sales.
 * **Improved Order Tracking**: OroCommerce’s integration with FedEx enables businesses to provide customers with real-time tracking information, enhancing the overall shopping experience and reducing customer inquiries about order status.
 

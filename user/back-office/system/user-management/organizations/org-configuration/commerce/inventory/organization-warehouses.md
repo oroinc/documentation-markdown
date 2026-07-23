@@ -17,7 +17,7 @@ To enable and prioritize warehouses per organization:
    For faster navigation between the configuration menu sections, use [Quick Search](../../../../../configuration/quick-search.md#user-guide-system-configuration-quick-search).
 4. In the **Enabled Warehouses**, add as many warehouse as you require to enable them:
    > 1. If necessary, click **+Add Warehouse**.
-   > 2. Select the warehouse name in the *Choose a Warehouse* dropdown.
+   > 2. Select the warehouse name in the *Choose a Warehouse* drop-down
    > 3. Drag and drop the warehouses using the vertical arrows icon.
    >    Products will be ordered and shipped from the higher priority warehouses first.
 

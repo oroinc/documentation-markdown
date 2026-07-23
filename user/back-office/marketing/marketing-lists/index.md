@@ -39,8 +39,8 @@ To create a new marketing list:
    |------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    | **Name**                                 | A name used to refer to the marketing list in the system.                                                                                                                                                                                                                                                                                                            |
    | **Include Previously Contacted Members** | The option is helpful when you change the filter conditions of the marketing list. The contacts that were on the list before the condition update, might not meet the new rules. So, if you enable the checkbox, the marketing list would include both new records (based on new rules) and the ones that were contacted in the past (based on previous conditions). |
-   | **Entity**                               | Choose an entity from the dropdown. Only entities with contact details (email or phone number) are available. Records of the chosen entity and entities related to it will be used to create the list of contacts.                                                                                                                                                   |
-   | **Type**                                 | Chose the list type from the dropdown:<br/>- **Dynamic** lists are updated as soon as any changes have occurred in the system.<br/>- **On demand** lists will be updated only following the user request (click <i class="fas fa-sync-alt" aria-hidden="true"></i> to refresh the table on the view page of the marketing list record).                              |
+   | **Entity**                               | Choose an entity from the drop-down. Only entities with contact details (email or phone number) are available. Records of the chosen entity and entities related to it will be used to create the list of contacts.                                                                                                                                                  |
+   | **Type**                                 | Chose the list type from the drop-down :<br/>- **Dynamic** lists are updated as soon as any changes have occurred in the system.<br/>- **On demand** lists will be updated only following the user request (click <i class="fas fa-sync-alt" aria-hidden="true"></i> to refresh the table on the view page of the marketing list record).                            |
    | **Owner**                                | Limits the list of users that can manage the marketing list to the users whose roles allow managing marketing lists of the owner (e.g., the owner, members of the same business unit, system administrator, etc.).                                                                                                                                                   |
    | **Description**                          | Free text to help you and other users understand the purpose or peculiarities of the list in the future.                                                                                                                                                                                                                                                             |
 
@@ -66,7 +66,7 @@ To create a new marketing list:
    - Click **Add**.
 
    You can ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) delete, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> edit, or <i class="fas fa-arrows-alt-v" aria-hidden="true"></i> change the column position by clicking the corresponding icon.
-6. Once you finish configuring the marketing list, click **Save and Close** in the top right corner.
+6. Once you finish configuring the marketing list, click **Save and Close** in the top-right corner.
 
 Now, you can use contacts from your marketing lists to run dedicated campaigns.
 
@@ -129,7 +129,7 @@ To share the marketing list with other Oro application users:
 
 1. Navigate to **Marketing > Marketing Lists** in the main menu.
 2. Click on the marketing list to preview its contents.
-3. Click **Share** in the top right corner to open the **Sharing Settings**.
+3. Click **Share** in the top-right corner to open the **Sharing Settings**.
 4. Type in the user name next to the *Share with* text, or search for the necessary user. Next, click <i class="fa fa-bars fa-lg" aria-hidden="true"></i>, find the required person, select the checkbox next to their name, and click **Add**.
 
 You can preview the sharing status and see who you already shared the marketing list with. For this, click **Share** again.
