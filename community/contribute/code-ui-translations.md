@@ -38,22 +38,22 @@ To contribute to Oro translation into your native language:
 1. To open the translation project, click **Get Involved** in the email from Crowdin that confirms your OroCommerce project team membership.
 
    Alternatively, use the <a href="https://crowdin.com/project/orocommerce" target="_blank">OroCommerce project</a> link to open the project.
-2. Select the target language (e.g. Korean).
+2. Select the target language (e.g., Korean).
 
-   Translations are stored in yaml files organized by bundles (e.g. OroAlternativeCheckoutBundle, OroCatalogBundle) and by groups (e.g. messages, jsmessages).
+   Translations are stored in yaml files organized by bundles (e.g., OroAlternativeCheckoutBundle, OroCatalogBundle) and by groups (e.g., messages, jsmessages).
 3. Select the yaml file with the translations you would like to contribute to.
 4. Submit your translation. For more information on using Crowdin, please see the <a href="https://support.crowdin.com/crowdin-intro/" target="_blank">Crowdin tutorial</a>.
 
 After you have submitted the translation, it will be queued for proofreading. Other translators can vote for it.
 
-When the translation is approved, it is marked with a green check mark and moved to the end of the list on the translation page. Approved translations are merged (published) to the Oro application translations once a day and become available in Oro application in the language settings (to open the language settings, in the main menu, navigate to **System > Configuration > Language Settings**).
+When the translation is approved, it is marked with a check mark and moved to the end of the list on the translation page. Approved translations are merged (published) to the Oro application translations once a day and become available in Oro application in the language settings (to open the language settings, in the main menu, navigate to **System > Configuration > Language Settings**).
 
 <a id="translations-language-settings"></a>
 
 ## Update Translation in Oro Application
 
 1. Navigate to the **System > Localization > Languages** in the main menu.
-2. If your target language is not listed, click **Add Language** at the top right corner. Select the target language from the available list in the popup dialog. Click **Add Language** in the bottom right of the dialog.
+2. If your target language is not listed, click **Add Language** at the top right corner. Select the target language from the available list in the popup dialog. Click **Add Language** at the bottom right of the dialog.
 3. Import the system elements translation from the <a href="https://crowdin.com/join" target="_blank">Crowdin</a> project by clicking the <i class="fas fa-cloud-download-alt" aria-hidden="true"></i> icon at the end of the row and then **Install** in the popup form. The import is available if the status in the **Updates** column is set to **Can be installed** signifying that the corresponding translation has been provided on the Crowdin website.
 4. If the status for your target language is *Disabled*, click the <i class="fa fa-check fa-lg" aria-hidden="true"></i> **Enable** icon at the end of the row.
 5. If you see *Update is available* in the **Updates** column, click <i class="fas fa-cloud-download-alt" aria-hidden="true"></i> **Update** at the end of the row to update translations from the Crowdin project.

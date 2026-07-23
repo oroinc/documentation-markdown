@@ -44,7 +44,7 @@ services:
 ## Caching Static Configuration
 
 A static configuration is defined in the configuration files and does not depend on the application data.
-Usually such configuration is loaded from configuration files located in different bundles, e.g. from
+Usually such configuration is loaded from configuration files located in different bundles, e.g., from
 Resources/config/oro/my_config.yml files that can be located in any bundle.
 There are several possible ways to store the collected configuration to avoid loading and merging it
 on each request:
@@ -268,7 +268,7 @@ the persistent one.
 There are two abstract services you can use as a parent for your cache services. Default implementations is
 following:
 
-For services based on `oro.data.cache` the: <a href="https://symfony.com/doc/current/cache.html#creating-a-cache-chain" target="_blank">Symfony Cache ChainAdapter</a> with <a href="https://symfony.com/doc/current/components/cache/adapters/array_cache_adapter.html" target="_blank">Symfony ArrayAdapter</a> on the top of <a href="https://symfony.com/doc/current/components/cache/adapters/filesystem_adapter.html" target="_blank">Symfony FilesystemAdapter</a>
+For services based on `oro.data.cache` the: <a href="https://symfony.com/doc/current/cache.html#creating-a-cache-chain" target="_blank">Symfony Cache ChainAdapter</a> with <a href="https://symfony.com/doc/current/components/cache/adapters/array_cache_adapter.html" target="_blank">Symfony ArrayAdapter</a> at the top of <a href="https://symfony.com/doc/current/components/cache/adapters/filesystem_adapter.html" target="_blank">Symfony FilesystemAdapter</a>
 
 For services based on `oro.data.cache.without_memory_cache` the <a href="https://symfony.com/doc/current/cache.html#creating-a-cache-chain" target="_blank">Symfony Cache ChainAdapter</a> is not used.
 

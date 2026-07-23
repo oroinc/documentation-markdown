@@ -61,7 +61,7 @@ We are now going to add the newly created content node with New Arrivals to the 
 We can now connect the *commerce_quick_access_refreshing_teal* to a storefront menu.
 
 1. Navigate to **System > Theme Configuration**.
-2. For the **Quick Links Menu** option, select *commerce_quick_access_refreshing_teal* from the dropdown.
+2. For the **Quick Links Menu** option, select *commerce_quick_access_refreshing_teal* from the drop-down.
 3. Click **Save and Close**.
 
 The New Arrivals menu item should now be available in the storefront and contain the product collection from the New Arrivals segment.

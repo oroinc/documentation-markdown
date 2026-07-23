@@ -11,7 +11,7 @@ Once the [integration with the chosen AI client](../../../../../integrations/ai/
 3. Click **System Configuration > Integrations > AI Content Generation** in the menu to the left.
 
 ![AI configuration setting on the organization level](user/img/system/user_management/org_configuration/ai/ai-org-setting.png)
-1. In the **AI Content Generation Settings** section, clear the **Use System** checkbox and select the AI client of choice from the dropdown next to **AI Generator**. The selected AI client will be used to generate content throughout the application. Please make sure you have enough credits in your AI Generator account to be able to use it.
+1. In the **AI Content Generation Settings** section, clear the **Use System** checkbox and select the AI client of choice from the drop-down next to **AI Generator**. The selected AI client will be used to generate content throughout the application. Please make sure you have enough credits in your AI Generator account to be able to use it.
 
    Be aware that data from your website will be used by a third party to generate content.
 2. Click **Save Settings**.

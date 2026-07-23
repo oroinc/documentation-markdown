@@ -76,7 +76,7 @@ List of properties that will be used in view to convert json object to string th
 
 **autocomplete.selection_template_twig**
 
-A name of Twig template that contain <a href="http://underscorejs.org/" target="_blank">underscore.js</a> template. This template will be used in the dropdown list to render each result row.
+A name of Twig template that contain <a href="http://underscorejs.org/" target="_blank">underscore.js</a> template. This template will be used in the drop-down list to render each result row.
 
 Example of template:
 

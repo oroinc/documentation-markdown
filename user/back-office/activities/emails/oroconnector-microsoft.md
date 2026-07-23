@@ -100,7 +100,7 @@ For more details on OAuth application configuration, refer to the [related docum
 2. Navigate to **Applications > App registrations** and click **+ New registration** to create a new registration.
 
 ![Highlighting the New registration button on the App registrations page](user/img/activities/connector-outlook/new-registration.png)
-1. Fill in the app name, choose a supported account type, and select the **Single-page application (SPA)** option from the dropdown menu under **Redirect URI**. Click **Register**.
+1. Fill in the app name, choose a supported account type, and select the **Single-page application (SPA)** option from the drop-down menu under **Redirect URI**. Click **Register**.
 
 ![Highlighting the fields a user needs to fill when creating a new registration](user/img/activities/connector-outlook/registration-details.png)
 1. The system will generate **Application (client) ID** and **Directory (tenant) ID** for your application. Update your  *.env* file with the generated credentials, where:

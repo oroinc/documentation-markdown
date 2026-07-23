@@ -71,7 +71,7 @@ To customize a storefront menu for the website:
 4. Click on the menu to start customizing it:
    ![Click on the menu to start customizing it](user/img/system/websites/edit_menu.png)
    * Drag-and-drop menu items to rearrange them.
-   * Create new items and dividers if necessary by clicking **Create Menu Item** or **Create Divider** (in the button group on the top right of the page).
+   * Create new items and dividers if necessary by clicking **Create Menu Item** or **Create Divider** (in the button group at the top right of the page).
    * Click on the menu item to edit its details.
 
 Find more information on how to edit and customize the storefront menu in the [Storefront Menu Management](../frontend-menus/index.md#frontend-menus-overview) section.

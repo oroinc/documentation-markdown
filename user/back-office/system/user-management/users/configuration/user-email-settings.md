@@ -22,7 +22,7 @@ To configure email settings per user:
 > #### IMPORTANT
 > To change *your own* email configuration settings:
 
-> 1. Click on your username on the top right.
+> 1. Click on your username at the top right.
 > 2. Click **My Configuration**.
 > 3. Follow the steps described below.
 
@@ -49,12 +49,12 @@ To change any of the system-wide options, clear the **Use Organization** checkbo
    ![Email synchronization settings for Microsoft 365](user/img/system/integrations/microsoft/office-365-email-sync.png)
    * **Account Type: Other**:
      * *Enable IMAP* — Select the checkbox to enable retrieving email messages
-     * *IMAP Host* — Provide the IMAP Host, e.g. imap.gmail.com
-     * *IMAP Port* — Provide the IMAP Port, e.g. 993
+     * *IMAP Host* — Provide the IMAP Host, e.g., imap.gmail.com
+     * *IMAP Port* — Provide the IMAP Port, e.g., 993
      * *Encryption* — Select the encryption type, SSL or TLS.
      * *Enable SMTP* — Select the checkbox to enable sending messages
-     * *SMTP Host* — Provide the SMTP host, e.g. smtp.gmail.com
-     * *SMTP Port* — Provide the SMTP port, e.g. 587
+     * *SMTP Host* — Provide the SMTP host, e.g., smtp.gmail.com
+     * *SMTP Port* — Provide the SMTP port, e.g., 587
      * *Encryption* — Select the encryption type, SSL or TLS.
      * *User* — Provide your email address
      * *Password* — Provide your password
@@ -72,7 +72,7 @@ To change any of the system-wide options, clear the **Use Organization** checkbo
    ![A sample of an email with the threaded option selected](user/img/system/config_system/threaded_emails.png)![A sample of an email with the non-threaded option selected](user/img/system/config_system/non-threaded-emails.png)
    * **Display Emails In Activity Lists As** — Defines how emails and replies are displayed under the **Activity** menu of a selected record.
      ![A sample of an email with the threaded option selected](user/img/system/config_system/threaded_email_activities.png)![A sample of an email with the non-threaded option selected](user/img/system/config_system/non_threaded_email_activities.png)
-2. **Reply** — Define which button will be displayed as the default one: **Reply** is available by default with the **Forward** and **Reply all** options in the dropdown. The settings can be changed to have **Reply all** displayed at the top.
+2. **Reply** — Define which button will be displayed as the default one: **Reply** is available by default with the **Forward** and **Reply all** options in the drop-down  The settings can be changed to have **Reply all** displayed at the top.
 3. Click **Save Settings**.
 
 **Related Topics**

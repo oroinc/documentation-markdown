@@ -72,7 +72,7 @@ To configure the user provisioning via <a href="https://help.okta.com/en-us/cont
    > #### NOTE
    > You can find the redirect URL in the <a href="https://developer.okta.com/docs/guides/scim-provisioning-integration-prepare/main/#authentication" target="_blank">Okta SCIM API</a> authentication documentation which provides example URLs to use. These URLs include an identifier `{appName}` generated after you create your app integration in Okta. If the Okta application is already created, use the generated URL. Otherwise, you can temporarily specify a placeholder (fake) URL and update it later once the application is created.
    ![Creating an Okta OAuth app page](user/img/system/config_system/okta_oauth_app.png)
-3. Copied **Client ID** and **Client secret**. For security reasons, the Client Secret is displayed only once – immediately after you have created a new application. You cannot view the Client Secret anywhere in the application once you leave a page with the created application information, so make sure you save it somewhere safe so you can access it later.
+3. Copied **Client ID** and **Client secret**. For security reasons, the Client Secret is displayed only once, immediately after you have created a new application. You cannot view the Client Secret anywhere in the application once you leave a page with the created application information, so make sure you save it somewhere safe so you can access it later.
    ![Client Id and Client Secret details of the Okta OAuth app](user/img/system/config_system/okta_client_id_secret.png)
 
 **Okta side**
@@ -169,7 +169,7 @@ To configure the user provisioning via <a href="https://learn.microsoft.com/en-u
    > #### IMPORTANT
    > At least one organization business unit and user role should be configured in order to allow login of imported users.
 2. Created **Client Credentials** OAuth application as described in the [Create an OAuth Application](../../../user-management/oauth-app.md#oauth-applications) topic.
-3. Copied **Client ID** and **Client secret**. For security reasons, the Client Secret is displayed only once – immediately after you have created a new application. You cannot view the Client Secret anywhere in the application once you leave a page with the created application information, so make sure you save it somewhere safe so you can access it later.
+3. Copied **Client ID** and **Client secret**. For security reasons, the Client Secret is displayed only once, immediately after you have created a new application. You cannot view the Client Secret anywhere in the application once you leave a page with the created application information, so make sure you save it somewhere safe so you can access it later.
    > ![image](user/img/system/user_management/oauth/client_creds_app.png)
 
 **Microsoft Entra side**

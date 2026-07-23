@@ -6,7 +6,7 @@ A post-processor is a data transformer that converts a field value to a format s
 Post-processors are used only in the [get](actions.md#get-action), [get_list](actions.md#get-list-action) and
 [get_subresource](actions.md#get-subresource-action) actions.
 
-The following table shows all post processors provided out-of-the-box:
+The following table shows all post processors provided out of the box:
 
 | Name   | Description              | Options                                                |
 |--------|--------------------------|--------------------------------------------------------|

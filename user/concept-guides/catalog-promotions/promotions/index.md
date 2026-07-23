@@ -15,11 +15,11 @@ These promotional tools help encourage new leads, motivate returning customers, 
 
 ## Discount Types
 
-It is important to select the right discount metrics to reach your sales goals and benefit your business. Offering discounts can drive more sales volume to your business, attract new customers, and help them choose your services over competitors.
+Select discount metrics that support your sales goals and business strategy. Discounts can increase sales volume, attract new customers, and encourage customers to choose your services over those of your competitors.
 
 OroCommerce offers [four promotion options](../../../back-office/marketing/promotions/promotions/create.md#user-guide-marketing-promotions-create) to suit the needs of any business. B2B sellers can configure promotions by:
 
-![Discount type dropdown](user/img/concept-guides/promotions/discount-types.png)
+![Discount type drop-down](user/img/concept-guides/promotions/discount-types.png)
 * **Order**
 
   The discount is applied to the total amount. This type of discount can be used to encourage larger orders, instead of a series of small ones.
@@ -36,7 +36,7 @@ OroCommerce offers [four promotion options](../../../back-office/marketing/promo
 These four discounts can be represented by a fixed amount or a certain percent.
 
 #### HINT
-With some developer assistance, implementers can add any custom business-specific promotion types, in addition to the four types that come out-of-the-box.
+With some developer assistance, implementers can add any custom business-specific promotion types, in addition to the four types that come out of the box.
 
 ## Conditions
 
@@ -51,7 +51,7 @@ Conditions with restrictions allow you to evaluate customers and orders by parti
 
 ## Coupons
 
-Like promotions, [coupons](../../../back-office/marketing/promotions/coupons/index.md#user-guide-marketing-promotions-coupons) are an effective marketing tool. Because coupon codes are easy to track, you can measure the success of coupon-tagged promotions more precisely than couponless campaigns.
+Like promotions, [coupons](../../../back-office/marketing/promotions/coupons/index.md#user-guide-marketing-promotions-coupons) are an effective marketing tool. Because you can track coupon codes, you can measure the success of coupon-tagged promotions more precisely than couponless campaigns.
 
 You can use coupons to:
 

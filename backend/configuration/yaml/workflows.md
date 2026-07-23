@@ -159,7 +159,7 @@ Transitions define how one step is transformed into another using the following 
 
 A message that will be shown in case the user does not have access granted through the access
 control list configured with the [acl_resource]() option. This option will be translated before
-being shown on the UI.
+being shown in the UI.
 
 ### acl_resource
 

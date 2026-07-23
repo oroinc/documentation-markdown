@@ -7,7 +7,7 @@ The following article describes how to replace logo and favicon images in your c
 This topic assumes that you have previously created a custom application, a bundle, and a storefront theme, as described in the [Storefront Customization](index.md#storefront-customization-guide) topic.
 
 #### NOTE
-This tutorial is suitable for both cases: when you have created your own custom storefront theme, and when you need to change an out-of-the-box one. However, creating your own theme is recommended as it enables managing your storefront appearance easily.
+This tutorial is suitable for both cases: when you have created your own custom storefront theme, and when you need to change the default one. However, creating your own theme is recommended as it enables managing your storefront appearance easily.
 
 ## Replace Favicons
 

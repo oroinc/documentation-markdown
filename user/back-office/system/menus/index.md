@@ -102,8 +102,8 @@ On the page that opens, the menu item tree is shown in the left panel. Center is
 
 #### Toggle the Menu Tree View
 
-1. To minimize or maximize the left menu panel, click a double arrow on the top right of the panel.
-2. To expand / collapse all menu items, click the ellipses drop-down menu on the top right of the left panel and click **Expand All** or **Collapse All**.
+1. To minimize or maximize the left menu panel, click a double arrow at the top right of the panel.
+2. To expand / collapse all menu items, click the ellipses drop-down menu at the top right of the left panel and click **Expand All** or **Collapse All**.
 3. To expand / collapse a parent menu item, click an arrow in front of it.
    ![image](user/img/system/menus/edit_menu.png)
 
@@ -119,7 +119,7 @@ On the page that opens, the menu item tree is shown in the left panel. Center is
 #### Add a Menu Item
 
 1. In the left panel, click a menu item which will be parent for the menu item that you create.
-2. Click **Create Menu Item** on the top right and then **Create Menu Item** from the dropdown list.
+2. Click **Create Menu Item** at the top right and then **Create Menu Item** from the drop-down list.
 
    The created menu item will appear as the last one on the list of children of the same parent item. You can move it to the position that you need, as described in the [Toggle the Menu Tree View](#doc-config-menus-actions-draganddrop) action description.
 3. In the right part of the page, specify the following information:
@@ -138,7 +138,7 @@ On the page that opens, the menu item tree is shown in the left panel. Center is
    - **Description**—Type a short but meaningful description of the menu item.
 
      Click the <i class="fas fa-language" aria-hidden="true"></i> **Translations** icon to provide spelling for different languages. Click the <i class="fas fa-language" aria-hidden="true"></i> **Default Language** icon to return to the single-language view.
-4. Click **Save** to save your changes. If you wish to start creating another menu item right away, click **Save and New** on the top right.
+4. Click **Save** to save your changes. If you wish to start creating another menu item right away, click **Save and New** at the top right.
 
 #### IMPORTANT
 You need to reload the page to see the changes.
@@ -146,7 +146,7 @@ You need to reload the page to see the changes.
 #### Add a Divider
 
 1. In the left panel, click a menu item which will be parent for the menu divider that you create.
-2. Click **Create** drop-down on the top right and select **Create Divider**.
+2. Click **Create** drop-down at the top right and select **Create Divider**.
 
 ![image](user/img/system/menus/menus_createdivider.png)
 
@@ -157,23 +157,23 @@ Some menus (or some menu levels) cannot display dividers. For example, if you ad
 
 #### Toggle Item Visibility
 
-1. **Hide a Menu Item** — To hide the default menu items from the interface, click the necessary menu item in the left panel. Click **Hide** on the top right. Reload the page to see changes.
+1. **Hide a Menu Item** — To hide the default menu items from the interface, click the necessary menu item in the left panel. Click **Hide** at the top right. Reload the page to see changes.
 
    #### IMPORTANT
    - If a menu that you hide has child items, they will be hidden too.
    - You cannot hide non-default menu items.
-2. **Show a Menu Item** — To show a previously hidden menu item, click the necessary menu item in the left panel. Click **Show** on the top right. Reload the page to see changes.
+2. **Show a Menu Item** — To show a previously hidden menu item, click the necessary menu item in the left panel. Click **Show** at the top right. Reload the page to see changes.
 
    #### NOTE
    If a menu item that you want to show has a parent, it will become visible too.
 3. **Find a Menu Item** —  To quickly find a menu item, enter its name into the search field and click the ![Search-SVG](_themes/sphinx_rtd_theme/static/svg-icons/search.svg) **Search** icon, or press **Enter**.
    ![image](user/img/system/menus/menus_application_search.png)
-4. **Delete a Menu Item / Divider** — To delete a menu item or a divider, click the necessary item in the left panel. Click **Delete** on the top right. In the **Delete Confirmation** dialog box, click **Yes, Delete**. Reload the page to see changes.
+4. **Delete a Menu Item / Divider** — To delete a menu item or a divider, click the necessary item in the left panel. Click **Delete** at the top right. In the **Delete Confirmation** dialog box, click **Yes, Delete**. Reload the page to see changes.
 
    #### IMPORTANT
    - You cannot delete default menu items.
    - When you delete a menu item that has child items, they will not be deleted but moved to the parent of the menu item that you delete.
-5. **Reset a Menu** — To reset any customization changes and roll back to the menu that is provided out-of-the-box in the Oro application, click a menu name in the left panel. Click **Reset** on the top right. In the **Reset Confirmation** dialog box, click **Yes, Reset**. Reload the page to see changes.
+5. **Reset a Menu** — To reset any customization changes and roll back to the menu that is provided out of the box in the Oro application, click a menu name in the left panel. Click **Reset** at the top right. In the **Reset Confirmation** dialog box, click **Yes, Reset**. Reload the page to see changes.
 
 <!-- finish -->
 <!-- fa-bars = fa-navicon -->

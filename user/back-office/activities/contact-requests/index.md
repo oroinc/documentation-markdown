@@ -2,7 +2,7 @@
 
 # Manage Contact Requests in the Back-Office
 
-Contact requests are used to track contact with individuals who are requesting information such as product information, support, partnership information, or any other types of assistance. Oro has a standard embedded contact form out-of-the-box for you to add to your websites. Contact requests are automatically generated and added to the page of all contacts in your Oro application when your customers use this form.
+Contact requests are used to track contact with individuals who are requesting information such as product information, support, partnership information, or any other types of assistance. Oro has a standard embedded contact form out of the box for you to add to your websites. Contact requests are automatically generated and added to the page of all contacts in your Oro application when your customers use this form.
 
 Additionally, contact requests are used for consent management purposes when a customer [declines a consent](../../system/consent-management/index.md#user-guide-consents-create) in the OroCommerce storefront. When the **Declined Consent Notification** option is enabled for a specific consent, a notification is created in the back-office as a contact request to inform that the consent has been declined. Read more information on consents in the relevant [Data Protection and Consent Management](../../../concept-guides/administration/consents/index.md#user-guide-consents) topic.
 
@@ -17,7 +17,7 @@ See a short demo in our media library on <a href="https://academy.oroinc.com/med
 If you need to register a particular request received from a customer by phone or email, you can manually create a contact request within your Oro application.
 
 1. Navigate to **Activities > Contact Requests** in the main menu.
-2. Click **Create Contact Request** on the top right.
+2. Click **Create Contact Request** at the top right.
 3. Provide the following details on the page that appears:
 
    | **Name**                     | **Description**                                                                                                                                                                                                                                                                                                          |
@@ -29,7 +29,7 @@ If you need to register a particular request received from a customer by phone o
    | **Phone** and **Email**      | Contact details related to the request. The values are determined by the *Preferred Contact Method* and must be defined.                                                                                                                                                                                                 |
    | **Contact Reason**           | Choose a contact reason from the list to simplify request analysis. By default, the field is set to *Other*. To create a new contact reason that can be assigned to a certain contact request, refer to the [Contact Reasons](../../system/contact-reasons/index.md#admin-guide-contact-reasons) topic for more details. |
    | **Comment**                  | The text of the request.                                                                                                                                                                                                                                                                                                 |
-4. Click **Save** on the top right.
+4. Click **Save** at the top right.
 
 #### NOTE
 If you use the OroCommerce application, you can also relate a contact request to a customer user or a website, if necessary.

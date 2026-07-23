@@ -34,16 +34,16 @@ Whenever you modify a content widget, changes are applied everywhere the widget 
 To create a new content widget:
 
 1. Navigate to **Marketing > Content Widgets** in the main menu.
-2. Click **Create Content Widget** on the top right.
+2. Click **Create Content Widget** at the top right.
 
    #### NOTE
    If you have more than one organization in your OroCommerce application, first select the organization to which you want to add a new content widget.
 3. Depending on the widget type, form fields are different:
 
-* **Contact Us Form** - Enables you to add a standard Contact Us form to the Contact Us storefront page. Once the widget is saved, add it to the **Contact Us Form** field under the [theme configuration](../../system/theme-configuration/index.md#back-office-theme-configuration).
+* **Contact Us Form** — Enables you to add a standard Contact Us form to the Contact Us storefront page. Once the widget is saved, add it to the **Contact Us Form** field under the [theme configuration](../../system/theme-configuration/index.md#back-office-theme-configuration).
 
 ![Contact us content widget form](user/img/marketing/content_widgets/contact_us.png)
-* **Image Slider** - Enables you to add an image slider with multiple images, configure slider options and style each slide. To configure the image slider, you can select the number of slides to show or scroll, enable or disable autoplay and control its speed in milliseconds, select whether to display dots and/or arrows at the bottom of the image slider in the storefront, control how the slide images are positioned and scaled, and enable or disable infinite scroll. To add slides, click **Add** at the bottom of the *Slides* section. You can customize each slide by setting its sort order, URL, target window, ALT text, text alignment, header and text for the image. You can choose different image sizes based on screen size (extra large, large, medium, small).
+* **Image Slider** — Enables you to add an image slider with multiple images, configure slider options and style each slide. To configure the image slider, you can select the number of slides to show or scroll, enable or disable autoplay and control its speed in milliseconds, select whether to display dots and/or arrows at the bottom of the image slider in the storefront, control how the slide images are positioned and scaled, and enable or disable infinite scroll. To add slides, click **Add** at the bottom of the *Slides* section. You can customize each slide by setting its sort order, URL, target window, ALT text, text alignment, header and text for the image. You can choose different image sizes based on screen size (extra large, large, medium, small).
 
   In addition, you can control how each slide’s image loads using the **Loading** and **Fetch Priority** options. **Loading** defines when the image is loaded (*Lazy* or *Eager*), while **Fetch Priority** defines its importance for page load (*Auto*, *High*, or *Low*). Use *Eager* and *High* for images that are visible immediately when the page opens. Prefer *Lazy* with *Auto* or *Low* for images shown after sliding or placed lower on the page.
 
@@ -51,15 +51,15 @@ To create a new content widget:
   For existing sliders created before **Loading** and **Fetch Priority** options were introduced in OroCommerce v.6.1.7, image loading behavior is preserved and images continue to load eagerly by default.
 
 ![Image slider content widget form](user/img/marketing/content_widgets/image_slider_1.png)
-* **Product Mini Block** - Enables you to add a block with product information with or without prices and/or the **Add to Shopping List** button.
+* **Product Mini Block** — Enables you to add a block with product information with or without prices and/or the **Add to Shopping List** button.
 
 ![A product mini block form](user/img/marketing/content_widgets/mini-block.png)
 
 <a id="content-widgets-product-segment"></a>
-* **Product Segment** - Enables you to add a product segment content widget to your website page. Only segments with type *Product* are listed in the **Segment** field dropdown. You can modify an existing [segment](../../reports-segments/segments.md#user-guide-business-intelligence-filters-segments) or create a new one under **Reports & Segments > Manage Segments**. You can add a label to be displayed above the list of the products, configure the max and min number of items to show, whether to use slider on mobile, and show the **Add to Shopping List** button in the storefront. Additionally, you can enable or disable autoplay and control its speed in milliseconds, select whether to display dots and/or arrows at the bottom of the product segment and on touchscreens, enable or disable infinite scroll, and enable the display of inventory levels for customers in the storefront.
+* **Product Segment** — Enables you to add a product segment content widget to your website page. Only segments with type *Product* are listed in the **Segment** field drop-down. You can modify an existing [segment](../../reports-segments/segments.md#user-guide-business-intelligence-filters-segments) or create a new one under **Reports & Segments > Manage Segments**. You can add a label to be displayed above the list of the products, configure the max and min number of items to show, whether to use slider on mobile, and show the **Add to Shopping List** button in the storefront. Additionally, you can enable or disable autoplay and control its speed in milliseconds, select whether to display dots and/or arrows at the bottom of the product segment and on touchscreens, enable or disable infinite scroll, and enable the display of inventory levels for customers in the storefront.
 
 ![A product segment form](user/img/marketing/content_widgets/product-segment.png)
-* **Tabbed Content** - Enables you to add content to your storefront website in a form of tabs or an accordion.
+* **Tabbed Content** — Enables you to add content to your storefront website in a form of tabs or an accordion.
 
 ![Tabbed vs Accordion view of tabbed content widget](user/img/marketing/content_widgets/tabs-vs-accordion-new.png)
 
@@ -68,7 +68,7 @@ Tabbed content widget uses the [WYSIWYG editor](../../../concept-guides/content-
 ![Contact us widget embedded in tabbed content widget](user/img/marketing/content_widgets/injected-widget-new.png)
 
 <a id="content-widgets-dashboard-datagrid-widget"></a>
-* **Customer Dashboard DataGrid** - Enables you to add a structured, table-style (datagrid) widget to the customer user’s [Dashboard](../../../storefront/account/dashboard/index.md#storefront-dashboard) page in the My Account section. Each widget presents up to five of the latest records and allows customers to navigate to a dedicated page for full details. You can configure the datagrid widget to display data from one of the following entities:
+* **Customer Dashboard DataGrid** — Enables you to add a structured, table-style (datagrid) widget to the customer user’s [Dashboard](../../../storefront/account/dashboard/index.md#storefront-dashboard) page in the My Account section. Each widget presents up to five of the latest records and allows customers to navigate to a dedicated page for full details. You can configure the datagrid widget to display data from one of the following entities:
   > * **Latest Orders** – Lists the most recent orders placed by the current **customer user**, including order number, total amount, status, and last update.
   > * **Open Quotes** – Lists open quotes associated with the current **customer**, including quote number, PO number, and expiration date. Depending on the customer user’s permissions, they may or may not see quotes from other users within their organization.
   > * **My Checkouts** – Lists ongoing checkout sessions of the current **customer user**, including the number of items, subtotal, and last update. Customers can proceed to checkout directly from this widget.

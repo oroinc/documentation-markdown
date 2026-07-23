@@ -113,7 +113,7 @@ datagrids:
 ### Problem 3
 
 Let’s take the previous problem when we must fill a form field dependent on the grid state.
-For example, *a grid should show users for a group currently editing, and a user should be able to select a parameter from the dropdown for users in this group*.
+For example, *a grid should show users for a group currently editing, and a user should be able to select a parameter from the drop-down for users in this group*.
 
 **Solution**:
 
@@ -247,7 +247,7 @@ datagrids:
 
 ### Problem 6
 
-*I’m developing a grid that should be shown in the modal window, so I don’t need the “grid state URL”*
+*I’m developing a grid that should be shown in the modal window, so I do not need the “grid state URL”*
 
 **Solution**:
 

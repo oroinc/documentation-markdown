@@ -23,7 +23,7 @@ OpenAI’s text generation in your Oro application offers flexibility in length,
 To create an integration with OpenAI as the AI content generator of choice:
 
 1. Navigate to **System > Integrations > Manage Integrations** in the main menu.
-2. Click **Create Integration** on the top right and provide the following information:
+2. Click **Create Integration** at the top right and provide the following information:
 
    | **Type**          | Select *OpenAI* as the integration type you are creating.                                                                                                                                                     |
    |-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -45,7 +45,7 @@ In the **Synchronization Settings** section, select the **Log Warnings** checkbo
 To create and integration with Vertex AI as the AI content generator of choice:
 
 1. Navigate to **System > Integrations > Manage Integrations** in the main menu.
-2. Click **Create Integration** on the top right and provide the following information.
+2. Click **Create Integration** at the top right and provide the following information.
 
    | **Type**          | Select *VertexAI* as the integration type you are creating.                                                                                                                                                   |
    |-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -13,7 +13,7 @@ The feature requires extension, so visit Oro Extensions Store to download the In
 To configure the integration between Ingenico and OroCommerce, follow the steps outlined below:
 
 1. Navigate to **System > Integrations > Manage Integrations** in the main menu of the OroCommerce back-office
-2. Click **Create Integration** on the top right.
+2. Click **Create Integration** at the top right.
 3. Provide the following information in the form:
    ![Integration with Ingenico setup](user/img/system/integrations/ingenico/integration.png)
    * **Type** — Select *Ingenico ePayments Connect platform* from the drop-down list.

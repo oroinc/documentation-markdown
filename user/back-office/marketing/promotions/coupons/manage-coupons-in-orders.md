@@ -16,7 +16,7 @@ To view the coupon codes that apply to the selected order:
 1. Navigate to **Sales > Orders** in the main menu.
 2. Click to open the required order to open it.
 3. Click **Discounts** to open the section.
-4. Under **All Promotions** on the left of the section, click <i class="fa fa-eye fa-lg" aria-hidden="true"></i> at the end of the coupon code row.
+4. Under **All Promotions**, to the left of the section, click <i class="fa fa-eye fa-lg" aria-hidden="true"></i> at the end of the coupon code row.
    ![View the coupon applied to the order in the back-office](user/img/marketing/coupons/ViewCouponsIcon.png)
 5. In the popup that opens, you can view the details of the selected coupon, as illustrated below.
    ![View the details of the coupon applied to the order in the back-office](user/img/marketing/coupons/ViewCoupon.png)
@@ -27,7 +27,7 @@ To add a coupon code to the required order from its page:
 
 1. Navigate to **Sales > Orders** in the main menu.
 2. Click to open the required order to open it.
-3. Click **Add Coupon Code** in the **More Actions** menu on the top right of the order page.
+3. Click **Add Coupon Code** in the **More Actions** menu at the top right of the order page.
    ![More Actions menu options on the order page](user/img/marketing/coupons/more-actions-coupon.png)
 4. In the popup that opens, choose a coupon code from the list:
    ![Selecting the coupon code from the list in the popup dialog](user/img/marketing/coupons/CouponCodesListOrder.png)

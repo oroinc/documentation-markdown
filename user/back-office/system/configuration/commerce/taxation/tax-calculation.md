@@ -204,7 +204,7 @@ In the **Matcher** section:
 
 ## Origin
 
-In the **Origin** section, provide the origin address (e.g. location of your warehouse or the company legal address) that will be used system-wide for origin-based tax. When the shipping origin is a core jurisdiction, OroCommerce will use the address provided here to find the matching built-in tax jurisdiction rules for tax calculation.
+In the **Origin** section, provide the origin address (e.g., location of your warehouse or the company legal address) that will be used system-wide for origin-based tax. When the shipping origin is a core jurisdiction, OroCommerce will use the address provided here to find the matching built-in tax jurisdiction rules for tax calculation.
 
 ## Promotions
 

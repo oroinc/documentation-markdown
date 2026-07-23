@@ -137,7 +137,7 @@ In the System Capabilities section, the following capabilities are available:
 * **Manage Passwords** — Enables a user to change passwords of other users. See the [User Management](../users/index.md#user-management-users) section for more information.
 
   #### HINT
-  This capability does not influence a user’s ability to edit their own password from the **My User** page.
+  This capability does not control a user’s ability to edit their own password from the **My User** page.
 
   ![image](user/img/system/user_management/manage_passwords.png)
 * **Price Calculation Details** — Enables a user to access the Price Calculation Details menu under Sales to understand how prices for a particular product are created, what the current prices are for a given customer and website, and what the prices will be for a specific date.
@@ -178,10 +178,10 @@ In the System Capabilities section, the following capabilities are available:
 
 * **Access Entity Management** — Enables a user to access entity management section under **System > Entities > Entity Management** in the main menu. Many entities in OroCommerce can be configured from the interface, as described in the [Entity Management topic](../../entities/index.md#doc-entities) and [Entity Fields](../../entities/entity-fields/index.md#doc-entity-fields) topics.
 * **Merge Entities** — Enables users to [merge](../../../getting-started/information-management/manage-records/index.md#doc-grids-actions-records-merge) several records of the same entity.
-* **Search** — Enables users to [search](../../../../concept-guides/catalog-promotions/search/index.md#user-guide-getting-started-search) for specific records within the application. The setting does not influence the user’s ability to [search by tag](../../../../concept-guides/catalog-promotions/search/index.md#user-guide-getting-started-search-tag).
-* **Export Entity Records** — Enables users to export entity records. When the capability is enabled, the **Export** button appears on the top right of the page with the table of selected records.
+* **Search** — Enables users to [search](../../../../concept-guides/catalog-promotions/search/index.md#user-guide-getting-started-search) for specific records within the application. The setting does not control the user’s ability to [search by tag](../../../../concept-guides/catalog-promotions/search/index.md#user-guide-getting-started-search-tag).
+* **Export Entity Records** — Enables users to export entity records. When the capability is enabled, the **Export** button appears at the top right of the page with the table of selected records.
   ![image](user/img/system/user_management/export_data.png)
-* **Import Entity Records** — Enables users to import records from a file to OroCommerce. When the capability is enabled, the **Import File** button appears on the top right of the page with the table of selected records.
+* **Import Entity Records** — Enables users to import records from a file to OroCommerce. When the capability is enabled, the **Import File** button appears at the top right of the page with the table of selected records.
   ![image](user/img/system/user_management/import_data.png)
 
 **Related Articles**

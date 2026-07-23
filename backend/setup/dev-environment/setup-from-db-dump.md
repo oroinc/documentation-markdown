@@ -56,7 +56,7 @@ There are 3 typical use cases for restoring your application from a database dum
 <a id="setup-from-db-dump-restore-local-cloud"></a>
 1. Locally and from OroCloud
    > #### HINT
-   > Postgres superuser (sudo -u postgres) is used here to make sure there are no permission issues. If you don’t have access to sudo or prefer running the commands as a different user, use `psql -U username`.
+   > Postgres superuser (sudo -u postgres) is used here to make sure there are no permission issues. If you do not have access to sudo or prefer running the commands as a different user, use `psql -U username`.
 
    > ```none
    > # drop an old db first
@@ -85,7 +85,7 @@ There are 3 typical use cases for restoring your application from a database dum
    > # commerce-crm-ee_pgsql_1 - docker container of your DB
    > # oro_db_user - oro database user
    > # oro_db - oro database
-   > # Recreate containers in order to kill all the active db sessions
+   > # Recreate containers in order to stop all the active db sessions
    > docker stop commerce-crm-ee_pgsql_1
    > docker start commerce-crm-ee_pgsql_1
 
@@ -101,7 +101,7 @@ There are 3 typical use cases for restoring your application from a database dum
    > ```none
    > # oro_db_user - oro database user
    > # oro_db - oro database
-   > # Recreate containers in order to kill all the active db sessions
+   > # Recreate containers in order to stop all the active db sessions
    > docker compose stop pgsql # or docker compose down
    > docker compose up -d
 

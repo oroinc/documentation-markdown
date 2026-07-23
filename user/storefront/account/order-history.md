@@ -25,7 +25,7 @@ From the all open orders table, you can:
 
 From the all past orders table, you can:
 
-* Click ![Eye-SVG](_themes/sphinx_rtd_theme/static/svg-icons/eye.svg) **View** at the end of the row to view an order or click the order to open it. To return to the Order History page, click **Back to Orders List** on the bottom left of the view page.
+* Click ![Eye-SVG](_themes/sphinx_rtd_theme/static/svg-icons/eye.svg) **View** at the end of the row to view an order or click the order to open it. To return to the Order History page, click **Back to Orders List** at the bottom left of the view page.
 * Click ![ShoppingCart-SVG](_themes/sphinx_rtd_theme/static/svg-icons/shopping-cart.svg)  **Re-Order** at the end of the row to submit the same order
 
 Information displayed in the tables depends on the columns selected in the ![Columns-SVG](_themes/sphinx_rtd_theme/static/svg-icons/columns.svg) grid settings. Within each of the tables, you have the following [action buttons](../getting-started/common-controls.md#frontstore-guide-navigation-action-buttons) available:
@@ -54,7 +54,7 @@ There is also an option download a PDF version of any placed order directly from
 #### NOTE
 Order PDF functionality is available as of OroCommerce version 6.1.6.
 
-To print an order, click on the **Print** button on the top right and follow the instructions on your device.
+To print an order, click on the **Print** button at the top right and follow the instructions on your device.
 
 #### NOTE
 More details on how to review ordered items, billing and shipping information, and re-order products from the previous orders are described in the [Orders](../orders/index.md#frontstore-guide-orders) section of the Storefront guide.

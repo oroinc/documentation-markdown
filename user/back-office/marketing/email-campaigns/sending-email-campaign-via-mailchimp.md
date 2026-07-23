@@ -2,7 +2,7 @@
 
 # Send an Email Campaign via Mailchimp
 
-Oro applications support an out-of-the-box integration with Mailchimp, enabling you to:
+Oro applications support a default integration with Mailchimp, enabling you to:
 
 * Map the Marketing Lists as segments in Mailchimp and keep them synchronized.
 * Use existing segments in Mailchimp and import them to the Oro application.
@@ -41,9 +41,9 @@ To create an audience on the Mailchimp side:
 
 1. Login to your Mailchimp account.
 2. Click **Audience** in the menu above.
-3. In the **Manage Audience** dropdown, select **View audiences**.
-   ![In the Manage Audience dropdown, select to view audiences](user/img/marketing/marketing/mailchimp/mc_create_audience.png)
-4. Click **Create Audience** on the top right and then **Create Audience** in the popup.
+3. In the **Manage Audience** drop-down, select **View audiences**.
+   ![In the Manage Audience drop-down , select to view audiences](user/img/marketing/marketing/mailchimp/mc_create_audience.png)
+4. Click **Create Audience** at the top right and then **Create Audience** in the popup.
    ![Create a new audience in Mailchimp](user/img/marketing/marketing/mailchimp/create_audience.png)
 5. Provide the following information:
    * **List Name** — The name of the list that will be seen by all your subscribers.
@@ -74,14 +74,14 @@ To map contents of the Oro application marketing list to use a segment of the **
 
 1. Navigate to **Marketing > Marketing Lists** in the main menu.
 2. Click on the required marketing list to open its details page.
-3. Click **Connect to Mailchimp** in the top right corner.
+3. Click **Connect to Mailchimp** in the top-right corner.
 4. Provide **Mailchimp Segment Name**.
 5. Select **Mailchimp Integration**.
 6. Select **Mailchimp Subscribers List**, the audience that you have created.
 7. Click **Connect**.
    ![Map contents of an Oro marketing list to use a segment of the subscribers' list in Mailchimp](user/img/marketing/marketing/mailchimp/o_select_mc_subscribers_list2.png)
 
-Once you are connected, the Mailchimp button is displayed at the top with the following actions in the dropdown:
+Once you are connected, the Mailchimp button is displayed at the top with the following actions in the drop-down :
 
 * **Synchronize** — Start sync manually
 * **Connection Settings** — Change connection or integration for the current marketing list in the Oro application
@@ -107,7 +107,7 @@ marketing list, you can create and send an email campaign in Mailchimp:
 
 1. Log into your Mailchimp account.
 2. Click **Campaigns** in the main menu.
-3. Click **Create Campaign** on the top right.
+3. Click **Create Campaign** at the top right.
    ![Create and send campaign on the Mailchimp side](user/img/marketing/marketing/mailchimp/mc_create_campaign.png)
 4. Click **Create an Email** in the popup.
    ![The popup dialog in Mailchimp displaying the button to create a new email](user/img/marketing/marketing/mailchimp/new_create_email_camp_mc.png)
@@ -127,7 +127,7 @@ Once you selected the campaign type, provide the following information for the c
 
 ![Steps for the campaign in mailchimp](user/img/marketing/marketing/mailchimp/create_campaign_mc_steps.png)
 1. **To** — Click **Add Recipients** to select the list segment for the email campaign.
-   * **Audience** — Select your marketing list from the dropdown.
+   * **Audience** — Select your marketing list from the drop-down
    * **Segment or Tag** — Select the marketing list segment or the related tag that you created previously.
 
      #### NOTE
@@ -155,7 +155,7 @@ create your own.
 5. In the **Settings and Tracking** you can add the options relevant to your campaign (e.g., track opens, track clicks, etc). If you
 wish to promote your email in social media, select **Connect to Twitter** or **Connect to Facebook**.
 
-1. Review campaign details and click **Send** on the top right.
+1. Review campaign details and click **Send** at the top right.
    ![Review campaign details before sending](user/img/marketing/marketing/mailchimp/review_campaign_content.png)
 2. Click **Send Now**.
    ![Send the email campaign from mailchimp](user/img/marketing/marketing/mailchimp/prepare_for_launch.png)

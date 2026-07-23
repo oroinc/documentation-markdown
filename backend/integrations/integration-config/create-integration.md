@@ -121,7 +121,7 @@ services:
 ## Connect Data to Your Entities
 
 #### NOTE
-Please note that this step is necessary when you need to import-export data between your database and the third-party system (e.g. synchronize tasks created in your Oro instance and other application, import/export cart items). Omit this step if you use this instruction to add an integration that requests and receives only credentials/tokens and a short list of available options.
+Please note that this step is necessary when you need to import-export data between your database and the third-party system (e.g., synchronize tasks created in your Oro instance and other application, import/export cart items). Omit this step if you use this instruction to add an integration that requests and receives only credentials/tokens and a short list of available options.
 
 Your final step is to implement the `Oro\Bundle\IntegrationBundle\Provider\ConnectorInterface`:
 

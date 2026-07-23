@@ -11,7 +11,7 @@ Each conversation consists of a set of messages that can be sent by [back-office
 To start a new conversation in the storefront:
 
 1. Navigate to **Profiles & Addresses > Conversations** in the menu
-2. Click **Create Conversation** on the top right.
+2. Click **Create Conversation** at the top right.
 
 ![Show the New Conversation button under the Conversations menu](user/img/storefront/conversation/new_conversation.png)
 
@@ -35,7 +35,7 @@ You can view the existing conversations from the following pages in your Oro app
 
 * From the page of all conversations under **Profiles & Addresses > Conversations** in the user menu, where you can perform the necessary actions for a conversation.
   ![The actions available for conversations on the view conversation page](user/img/storefront/conversation/ConversationViewPage.png)
-* From the page of a related record under the dropdown of the **Questions** button.
+* From the page of a related record under the drop-down of the **Questions** button.
   ![The actions available for conversations on the page of a related record](user/img/storefront/conversation/ConversationRelatedRecord.png)
 
 <!-- A -->

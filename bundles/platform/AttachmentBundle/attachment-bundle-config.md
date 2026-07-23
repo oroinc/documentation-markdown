@@ -173,7 +173,7 @@ class AcmeDemoBundle implements Migration, AttachmentExtensionAwareInterface
     {
         $this->attachmentExtension->addImageRelation(
             $schema,
-            'entity_table_name', // entity table, e.g. oro_user, orocrm_contact etc.
+            'entity_table_name', // entity table, e.g., oro_user, orocrm_contact etc.
             'new_field_name', // field name
             [], //additional options for relation
             7, // max allowed file size in megabytes, can be omitted, by default 1 Mb
@@ -204,7 +204,7 @@ class AcmeDemoBundle implements Migration, AttachmentExtensionAwareInterface
     {
         $this->attachmentExtension->addAttachmentAssociation(
             $schema,
-            'entity_table_name', // entity table, e.g. oro_user, orocrm_contact etc.
+            'entity_table_name', // entity table, e.g., oro_user, orocrm_contact etc.
             [], // optional, allowed MIME types of attached files, if empty - global configuration will be used
             2 // optional, max allowed file size in megabytes, by default 1 Mb
         );
@@ -233,7 +233,7 @@ class AcmeDemoBundle implements Migration, AttachmentExtensionAwareInterface
     {
         $this->attachmentExtension->addMultiImageRelation(
             $schema,
-            'entity_table_name', // entity table, e.g. oro_user, orocrm_contact etc.
+            'entity_table_name', // entity table, e.g., oro_user, orocrm_contact etc.
             'new_field_multiimage_name', // field name
             [], //additional options for relation
             7, // max allowed file size in megabytes, can be omitted, by default 1 Mb
@@ -243,7 +243,7 @@ class AcmeDemoBundle implements Migration, AttachmentExtensionAwareInterface
 
        $this->attachmentExtension->addMultiFileRelation(
             $schema,
-            'entity_table_name', // entity table, e.g. oro_user, orocrm_contact etc.
+            'entity_table_name', // entity table, e.g., oro_user, orocrm_contact etc.
             'new_field_multifile_name', // field name
             [], //additional options for relation
             7 // max allowed file size in megabytes, can be omitted, by default 1 Mb
@@ -264,7 +264,7 @@ A user can use 3 formatters for image type fields.
 - `height` — a custom height attribute for the image tag. There is no default value for this attribute.
 - `width`- custom width attribute for the image tag. There is no default value for this attribute.
 
-`image_link` returns a link to the resized image (e.g. `<a href='http://test.com/path/to/image.jpg'>image name</a>`). Additional parameters:
+`image_link` returns a link to the resized image (e.g., `<a href='http://test.com/path/to/image.jpg'>image name</a>`). Additional parameters:
 
 - `title` — a custom image text value. By default, the original file name is used.
 - `height` — a custom image height. By default, it is 100 px.

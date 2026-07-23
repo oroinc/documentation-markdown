@@ -48,7 +48,7 @@ You can only import data saved in the .csv (comma separated values) format.
 
 1. Navigate to **System > Entities > Entity Management**.
 2. In the grid on the **All Entities** page, click the required entity.
-3. On the page of the entity, click **Import File** on the top right.
+3. On the page of the entity, click **Import File** at the top right.
    ![A popup dialog that opens when clicking the import file button](user/img/system/entity_management/entity_import_dialog.png)
 
 #### HINT

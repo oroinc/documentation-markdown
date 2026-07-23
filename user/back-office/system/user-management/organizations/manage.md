@@ -12,8 +12,8 @@ To open the page of a specific organization:
 1. Navigate to **System > User Management > Organizations** in the main menu.
 2. Click the organization to open its details.
    > ![Organization details page](user/img/system/user_management/organization_page_details.png)
-   * To open [organization configuration settings](org-configuration/index.md#doc-organization-configuration), click <i class="fas fa-cog" aria-hidden="true"></i> **Configuration** on the top right.
-   * To edit the [back-office menu](../../menus/index.md#doc-config-menus) for this organization, click <i class="fas fa-cog" aria-hidden="true"></i> **Edit Menu** on the top right.
+   * To open [organization configuration settings](org-configuration/index.md#doc-organization-configuration), click <i class="fas fa-cog" aria-hidden="true"></i> **Configuration** at the top right.
+   * To edit the [back-office menu](../../menus/index.md#doc-config-menus) for this organization, click <i class="fas fa-cog" aria-hidden="true"></i> **Edit Menu** at the top right.
    * To edit the [storefront menu](../../frontend-menus/index.md#backend-frontend-menus) for this organization in OroCommerce, click <i class="fas fa-cog" aria-hidden="true"></i>  **Edit Storefront Menu**.
    * To update organization details, such as it name or access level, click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit**.
    * To view who updated organization details, click the **Change History** link.

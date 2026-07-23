@@ -17,13 +17,13 @@ By default, only one shopping list is available for unregistered users:
    You can also create a new shopping list when selecting multiple products using [mass action](registered.md#frontstore-guide-shopping-lists-create-mass-action) on the product listing page.
 2. To add more items to the existing list, or change the quantity of the items that are already on the list, click **Update Shopping List** next to the product.
 
-   Alternatively, navigate to the shopping list itself by clicking **Shopping List** in the top right corner of the store page, and click *View Details*.
+   Alternatively, navigate to the shopping list itself by clicking **Shopping List** in the top-right corner of the store page, and click *View Details*.
 
    In the *Quantity* field, change the quantity of the product.
 3. To remove items from the list, click ![ChevronDown-SVG](_themes/sphinx_rtd_theme/static/svg-icons/chevron-down.svg) next to **Update Shopping List** and click **Remove from Shopping List**.
    > ![image](user/img/storefront/shopping_lists/shopping_list_dropdown_2.png)
 
-   > Alternatively, navigate to the shopping list itself by clicking **Shopping List** in the top right corner of the store page, and click *View Details*.
+   > Alternatively, navigate to the shopping list itself by clicking **Shopping List** in the top-right corner of the store page, and click *View Details*.
 
    > Next to the product, click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) to remove it.
 

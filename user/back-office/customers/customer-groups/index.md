@@ -36,7 +36,7 @@ To create a new customer group:
 5. In the **Additional** section, select a Payment term to be used as a payment option available to the customer users during the checkout.
 6. In the **Customers** section, check the customers to add them to the customer group.
 7. In the **Price Lists** section, add the price lists and configure the fallback option, as described in the [Price List Management for a Customer Group](#user-guide-customers-customer-groups-pricelist) section.
-8. Click **Save** in the top right corner.
+8. Click **Save** in the top-right corner.
 
 <a id="user-guide-customers-customer-groups-pricelist"></a>
 

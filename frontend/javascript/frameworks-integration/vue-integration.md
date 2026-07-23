@@ -140,7 +140,7 @@ The example below illustrates creating a simple component, such as the one shown
 
 Vue makes it possible to use one file for the component. For more information, see the official <a href="https://v3.vuejs.org/guide/single-file-component.html#introduction" target="_blank">Single File Components</a> documentation.
 
-The webpack config does not support the `vue-loader` out-of-the-box. You need to modify the `webpack.config.js` file at the root of your application.
+The webpack config does not support the `vue-loader` out of the box. You need to modify the `webpack.config.js` file at the root of your application.
 
 The example below implements the same functionality discussed above but uses the Single File Component in Vue3.
 

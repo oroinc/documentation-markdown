@@ -22,7 +22,7 @@ Pros:
 
 * SQL queries give you fine-grained control over data insertion, allowing you to specify exact values, relationships, and constraints. This is useful when performing complex data manipulations during the loading process.
 * SQL queries are highly efficient, making them a valuable tool for quickly loading data from external sources in real-time situations.
-* You don’t need additional tools or libraries to execute SQL queries, as most database systems provide built-in support for running SQL scripts.
+* You do not need additional tools or libraries to execute SQL queries, as most database systems provide built-in support for running SQL scripts.
 
 Cons:
 

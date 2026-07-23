@@ -35,7 +35,7 @@ To set up root content nodes in the back-office, we:
 This way, we create all the required first-level menus.
 
 #### NOTE
-Make sure you create first-level nodes from Skincare Web Catalog in the nodes section on the left of the page.
+Make sure you create first-level nodes from Skincare Web Catalog in the nodes section to the left of the page.
 
 ![The details of the Skincare Web Catalog](user/img/marketing/web_catalogs/Create1RootNode.png)
 
@@ -68,7 +68,7 @@ Each of such levels can be populated with more levels, or nodes, if necessary, a
 Once the catalog is enabled ([globally](../../system/configuration/system/websites/global-routing.md#user-guide-marketing-web-catalog-enable-globally) or [per website](../../system/websites/web-configuration/general-sys-config/websites/website-routing.md#user-guide-marketing-web-catalog-enable-per-website)), you will be able to see it in the storefront.
 
 #### NOTE
-You can drag the existing content nodes to a different position within the content tree on the left of the page, as illustrated below:
+You can drag the existing content nodes to a different position within the content tree to the left of the page, as illustrated below:
 
 ![Dragging the existing content nodes to a different position within the content tree](user/img/marketing/web_catalogs/DragDropNode.png)
 

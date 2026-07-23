@@ -21,8 +21,8 @@ The following information about products is available in the product list.
 | PRICE (<Currency>) *Multiple columns* | The product pricing information per unit of quantity. There is an individual column for each currency in which you have defined the price.                                                    |
 | Price Attributes *Multiple columns*   | The additional price information that may be useful for determining the product pricing strategy (e.g., MSRP, MAP). There is an individual column for each price attribute and each currency. |
 | TAX CODE                              | The code that helps identify what taxes to apply to the product.                                                                                                                              |
-* To control the product information displayed in the list, click <i class="fa fa-cog fa-lg" aria-hidden="true"></i> **Settings** on the top right of the list, and in the dialog that appears, select which column to display.
-* To filter product information by value, click <i class="fa fa-filter fa-lg" aria-hidden="true"></i> **Filter** on the top right of the list, and in the filter section that appears, select the required values.
+* To control the product information displayed in the list, click <i class="fa fa-cog fa-lg" aria-hidden="true"></i> **Settings** at the top right of the list, and in the dialog that appears, select which column to display.
+* To filter product information by value, click <i class="fa fa-filter fa-lg" aria-hidden="true"></i> **Filter** at the top right of the list, and in the filter section that appears, select the required values.
 * To display pricing information related only to a particular price list, select the price list from the **Price List** list in the left panel, or click <i class="fa fa-bars fa-lg" aria-hidden="true"></i> next to it to select the price list using the dialog.
 * To display/hide pricing information related to the particular currency, select/clear the checkbox next to the name of the corresponding currency in the left panel.
 * To display/hide tier prices, in the left panel, select/clear the **Show Tier Prices** checkbox.
@@ -35,7 +35,7 @@ The following information about products is available in the product list.
 
 You can perform the following actions for a specific product from the grid:
 
-* [Create a product](../index.md#doc-products-actions-create) by clicking the corresponding button on the top right.
+* [Create a product](../index.md#doc-products-actions-create) by clicking the corresponding button at the top right.
 * [Export](../export-products.md#export-products) and [import](../import-products.md#import-products) the necessary product information.
 
 Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the required product’s row, and select whether to

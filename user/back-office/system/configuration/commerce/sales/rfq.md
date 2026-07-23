@@ -13,7 +13,7 @@ This section is part of the [RFQ and Quote Management](../../../../../concept-gu
 
 On the RFQ configuration page, you can enable RFQ feature for the back-office and storefront, control RFQ Notification options and Guest RFQs.
 
-The rfq settings can be configured on three levels – globally, [per organization](../../../user-management/organizations/org-configuration/commerce/sales/organization-guest-rfq.md#user-guide-system-configuration-commerce-sales-rfq-organization), and [per website](../../../websites/web-configuration/commerce/sales/website-guest-rfq.md#sys-conf-commerce-sales-rfq-notifications-website). Please note that website settings override organization, organization settings override system settings.
+The rfq settings can be configured on three levels: globally, [per organization](../../../user-management/organizations/org-configuration/commerce/sales/organization-guest-rfq.md#user-guide-system-configuration-commerce-sales-rfq-organization), and [per website](../../../websites/web-configuration/commerce/sales/website-guest-rfq.md#sys-conf-commerce-sales-rfq-notifications-website). Please note that website settings override organization, organization settings override system settings.
 
 To configure the request for quote settings globally:
 

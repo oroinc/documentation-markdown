@@ -6,7 +6,7 @@
 
 In the Shopping List section of Commerce configuration settings, you to set various options for a shopping list, control whether to let unregistered customers purchase goods in the store, set the number of shopping lists allowed per customer, enable a shopping list section under the My Account menu, and more.
 
-This can be configured on three levels – [globally](../../../../configuration/commerce/sales/global-shopping-list.md#configuration-shopping-list), [per organization](../../../../user-management/organizations/org-configuration/commerce/sales/organization-guest-shopping-list.md#user-guide-system-configuration-commerce-sales-shopping-list-per-organization), and website.
+This can be configured on three levels: [globally](../../../../configuration/commerce/sales/global-shopping-list.md#configuration-shopping-list), [per organization](../../../../user-management/organizations/org-configuration/commerce/sales/organization-guest-shopping-list.md#user-guide-system-configuration-commerce-sales-shopping-list-per-organization), and website.
 
 To configure them per website:
 
@@ -27,7 +27,7 @@ To configure them per website:
    To enable users from the same business unit or organization (that the owner belongs to) to view and manage guest shopping lists, adjust permissions for the shopping list entity in their roles accordingly.
 5. In the **Shopping List Options** section, set the following options:
    * **Enable Mass Adding On Product Listing** — The options controls whether customer and guest users are allowed to mass select and add items to the shopping list in the storefront.
-   * **Maximum Line Items Per Page** — The maximum shopping list line items that can be displayed per page. If the number of shopping list line items exceeds this value, then the “All” value, in the list of pagination dropdown values, is changed to the one specified in the option.
+   * **Maximum Line Items Per Page** — The maximum shopping list line items that can be displayed per page. If the number of shopping list line items exceeds this value, then the “All” value, in the list of pagination drop-down values, is changed to the one specified in the option.
    * **Show All Lists In Shopping List Widget** — The option defines which shopping lists a customer user can view in the widget. If this option is enabled, the user can view all the shopping lists that they are allowed to access, besides their own. For instance, a user can own one shopping list, which is reflected in the Shopping List section under My Account, while the widget will display four shopping lists assigned to other users but available to view and edit by the selected user.
 
    > ![Illustration of the mentioned sample](user/img/system/config_commerce/sales/show_all_lists_in_widget.png)

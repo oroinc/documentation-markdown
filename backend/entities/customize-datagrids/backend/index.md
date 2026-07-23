@@ -154,7 +154,7 @@ datagrids:
                 label: acme.demo.grid.columns.firstName  # translation string
             age:
                 label: acme.demo.grid.columns.age        # translation string
-                frontend_type: number                    # needed for correct l10n (e.g. thousand, decimal separators etc)
+                frontend_type: number                    # needed for correct l10n (e.g., thousand, decimal separators etc)
 ```
 
 ### Sorting

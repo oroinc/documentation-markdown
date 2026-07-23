@@ -66,7 +66,7 @@ To create a new customer user:
 
     #### IMPORTANT
     At least one role must be assigned if the **Enabled** checkbox is selected. Disabled customer users can be saved without roles, but you will need to assign roles to them later before enabling them.
-13. Click **Save** on the top right.
+13. Click **Save** at the top right.
 
 <a id="user-guide-customers-customer-users-consents"></a>
 
@@ -110,7 +110,7 @@ To impersonate a customer user from the customer user grid, hover over the <i cl
 
 ![Impersonating a customer user from the customer user grid](user/img/customers/customer_user_roles/impersonate-customer-user-grid-icon.png)
 
-Click <i class="fas fa-user-secret" aria-hidden="true"></i> **Log in as a User** on the top right to impersonate a customer user from the customer user view page.
+Click <i class="fas fa-user-secret" aria-hidden="true"></i> **Log in as a User** at the top right to impersonate a customer user from the customer user view page.
 
 ![Impersonating a customer user from the customer user view page](user/img/system/user_management/user-impersonation-button.png)
 
@@ -188,7 +188,7 @@ To add a new OAuth application for a customer user in the back-office:
 ![image](user/img/customers/customer_users/customer-user-oauth-details-page.png)
 1. Click **Create**.
 
-A corresponding notification is sent to the user’s primary email address, the owner of the OAuth application. You can change the default recipient, localization, or email content if needed by updating the [OAuth email templates](../../system/emails/email-templates.md#user-guide-using-emails-create-template) and the related [notification rule](../../system/emails/notification-rules.md#user-guide-using-emails-notifications) set out-of-the-box in the system configuration.
+A corresponding notification is sent to the user’s primary email address, the owner of the OAuth application. You can change the default recipient, localization, or email content if needed by updating the [OAuth email templates](../../system/emails/email-templates.md#user-guide-using-emails-create-template) and the related [notification rule](../../system/emails/notification-rules.md#user-guide-using-emails-notifications) set out of the box in the system configuration.
 
 Once the application is created, you are provided with a Client ID and a Client Secret. Click on the <i class="fa fa-copy" aria-hidden="true"></i> icon to copy the credentials to the clipboard.
 

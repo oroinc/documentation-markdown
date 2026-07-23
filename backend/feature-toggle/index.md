@@ -8,7 +8,7 @@
 
 Features are defined in configuration files placed into Resources/config/oro/features.yml.
 
-Each feature consists of one required option, the label. You can configure the following sections, out-of-the-box:
+Each feature consists of one required option, the label. You can configure the following sections, out of the box:
 
 > - `label` — A feature title.
 > - `description` — A feature description.
@@ -307,9 +307,9 @@ services:
 
 There are three strategies available:
 
-* *affirmative* – The strategy grants access if one voter grants access;
-* *consensus* – The strategy grants access if there are more voters that grant access than those that deny;
-* *unanimous* (default) – The strategy grants access only if all voters grant access.
+* *affirmative* — The strategy grants access if one voter grants access;
+* *consensus* — The strategy grants access if there are more voters that grant access than those that deny;
+* *unanimous* (default) — The strategy grants access only if all voters grant access.
 
 Strategy configuration (may be defined in Resources/config/oro/app.yml)
 

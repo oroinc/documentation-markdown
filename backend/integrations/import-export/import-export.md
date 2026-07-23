@@ -156,7 +156,7 @@ them out of OroPlatform. The bundle uses the <a href="https://github.com/oroinc/
 the execution of import/export operations. Any import/export operation is
 a job.
 
-A job itself is abstract. It doesn’t know any specific details of what is
+A job itself is abstract. It does not know any specific details of what is
 happening during its execution. A job consists of steps which can be configured
 to run in an execution context and are executed by the client.
 
@@ -274,7 +274,7 @@ contact data from a CSV file:
 >   controller action configured by the `oro_importexport_import_validate`
 >   route). As a result, the user will be presented with all actions that will
 >   be performed by the import as well as any errors that have occurred in the
->   previous step. Records with errors can’t be imported; however, errors do
+>   previous step. Records with errors cannot be imported; however, errors do
 >   not block valid records.
 > * In the final step, the import is processed (see the `importProcess`
 >   controller action which is configured by the `oro_importexport_import_process`
@@ -283,7 +283,7 @@ contact data from a CSV file:
 ## Export Process in Detail
 
 The export process is essentially the import process in reverse, except that it
-doesn’t use a strategy:
+does not use a strategy:
 
 1. First, the `Oro\Bundle\ImportExportBundle\Reader\EntityReader`
    class reads an object.
@@ -1032,7 +1032,7 @@ The Gaufrette filesystem name is `importexport`.
 By default, it is a private storage that is configured to store files in the `var/data/importexport` local directory
 of your project.
 
-To upload additional files, e.g. images, that are referenced by importing files, a separate filesystem is used.
+To upload additional files, e.g., images, that are referenced by importing files, a separate filesystem is used.
 The Gaufrette filesystem name is `import_files`.
 By default, it is a private storage that is configured to retrieve files from the `var/data/import_files` local directory
 of your project.

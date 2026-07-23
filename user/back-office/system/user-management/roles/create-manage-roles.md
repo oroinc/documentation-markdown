@@ -11,7 +11,7 @@ You can create new roles and apply permissions to fit specifically your business
 To create a new role in:
 
 1. Navigate to **System > User Management > Roles** in the main menu.
-2. Click **Create Role** on the top right.
+2. Click **Create Role** at the top right.
 3. In the **General** section, provide the role name.
    ![image](user/img/system/user_management/create_new_role_from_scratch.png)
 4. In the **Entities** section, you can set three types of permissions - **entity-level**, **field-level** and **system capabilities**:
@@ -49,7 +49,7 @@ You can create a role by cloning the existing one:
 2. On the page of **All Roles**, click the ellipsis menu at end of the corresponding row of the selected role, and then click the <i class="far fa-copy" aria-hidden="true"></i> **Clone** icon.
    ![image](user/img/system/user_management/clone_role_from_grid.png)
 
-   Alternatively, you can clone the role from the page of the selected role by clicking <i class="far fa-copy" aria-hidden="true"></i> **Clone** on the top right.
+   Alternatively, you can clone the role from the page of the selected role by clicking <i class="far fa-copy" aria-hidden="true"></i> **Clone** at the top right.
    ![image](user/img/system/user_management/clone_role_from_role_page.png)
 3. The page that opens has all of the settings as the original role. Modify the settings as required.
 4. Click **Save**.
@@ -64,7 +64,7 @@ To edit an existing role:
 2. On the page of **All Roles**, click the ellipsis menu at end of the corresponding row of the selected role, and then click the <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** icon.
    ![image](user/img/system/user_management/edit_role.png)
 
-   Alternatively, you can edit the role from the page of the selected role by clicking <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** on the top right.
+   Alternatively, you can edit the role from the page of the selected role by clicking <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** at the top right.
    ![image](user/img/system/user_management/edit_role_from_role_page.png)
 3. On the page that opens, update the information as necessary.
 
@@ -80,7 +80,7 @@ To delete an existing role:
 2. On the page of **All Roles**, click the ellipsis menu at end of the corresponding row of the selected role, and then click the ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** icon.
    ![image](user/img/system/user_management/delete_role.png)
 
-   Alternatively, you can edit the role from the page of the selected role by clicking ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** on the top right.
+   Alternatively, you can edit the role from the page of the selected role by clicking ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** at the top right.
    ![image](user/img/system/user_management/delete_role_from_page.png)
 
 **Related Articles**

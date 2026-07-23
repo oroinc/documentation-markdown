@@ -18,7 +18,7 @@ To configure product data export settings per organization:
 
    ![Product data export configuration options on organization level](user/img/system/user_management/org_configuration/products/org-product-data-export.png)
 4. Enable the following options by clearing the **Use System** checkbox next to the required option:
-   * **Enable Product Grid Export** — Enable this option to allow customers in the storefront to export selected product data. Once you enable this option and click **Save Settings** on the top right, options **Include Product Prices** and **Include Price Tiers** will be displayed.
+   * **Enable Product Grid Export** — Enable this option to allow customers in the storefront to export selected product data. Once you enable this option and click **Save Settings** at the top right, options **Include Product Prices** and **Include Price Tiers** will be displayed.
    * **Include Product Prices** — Enable this option to add product prices to the exported product data file. Data will be displayed only for the primary unit, minimum quantity and the currency currently selected in the storefront.
    * **Include Price Tiers** — Enable this option to include price tiers to the exported product data file, if available. If product units have no price, they will be omitted in the exported file.
 5. Click **Save Settings**.

@@ -16,12 +16,12 @@ This section is part of the [Data Import](../../../concept-guides/administration
 | field_money | money  | label_value    | description_value    | marketinglist.entity_config. | yes               | header_value          |                   12 | no                      | mimetypes_value        |
 
 #### NOTE
-Keep in mind that multi-select attribute type doesn’t support the sorting option, so make sure to set this option to “0” or “No” when preparing the corresponding file for importing.
+Keep in mind that multi-select attribute type does not support the sorting option, so make sure to set this option to “0” or “No” when preparing the corresponding file for importing.
 
 To import a bulk of product attributes:
 
 1. In the main menu, navigate to **Products > Product Attributes**.
-2. Click **Import File** on the top right.
+2. Click **Import File** at the top right.
 
 #### HINT
 You may receive the following warning message which notifies you about the limits for the number of attributes that can be imported, which can effect the future export of entities.

@@ -37,7 +37,7 @@ The following actions are available for a lead on the lead view page:
 
   #### NOTE
   You can disqualify a lead in three ways:
-  1. By clicking on the red **Disqualify** button on the lead view page.
+  1. By clicking on the **Disqualify** button on the lead view page.
   2. By changing its status to Disqualified in the edit lead form.
   3. By changing its status to Disqualified from the grid.
 - **Convert to Opportunity:** Converting a lead to opportunity (i.e., and potential deal) qualifies the lead. You can find more information on opportunities in the [opportunities topic](../opportunities/index.md#user-guide-system-channel-entities-opportunities).
@@ -56,7 +56,7 @@ You can also edit the address details of a lead, as illustrated in the screensho
 #### BUSINESS TIP
 ## Business Tip
 
-Want to unlock eCommerce opportunities to drive <a href="https://oroinc.com/b2b-ecommerce/blog/digital-transformation-in-manufacturing/" target="_blank">digital transformation in manufacturing</a>? Make sure to check out our guide on the topic.
+Want to unlock eCommerce opportunities to drive <a href="https://oroinc.com/b2b-ecommerce/blog/digital-transformation-in-manufacturing/" target="_blank">digital transformation in manufacturing</a>? Make sure to check out our guide at the topic.
 
 <!-- fa-bars = fa-navicon -->
 <!-- Ic Tiles is used as Set As Default in saved views, and as tiles in display layout options -->

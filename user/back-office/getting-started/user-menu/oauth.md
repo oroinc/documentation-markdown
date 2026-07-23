@@ -21,10 +21,10 @@ If no keys are found, the following warning message will be displayed in the bac
 
 To add a new OAuth application in the back-office:
 
-1. Click on your user name on the top right of the screen.
+1. Click on your user name at the top right of the screen.
 2. Click **My User**.
    ![Profile menu](user/img/getting_started/user_menu/oauth/my_user.png)
-3. In the **OAuth Applications** section, click **Add Application** on the top right and provide the following details in the pop-up dialog:
+3. In the **OAuth Applications** section, click **Add Application** at the top right and provide the following details in the pop-up dialog:
    ![Add an oauth application](user/img/getting_started/user_menu/oauth/oauth_tab.png)
    * **Organization** — If you are adding an application within the organization with *global* access, you can select which other available organization to add the application to. This field is displayed to users with access to multiple organizations (available for the Enterprise edition only).
    * **Application Name** — Provide a meaningful name for the application you are adding.
@@ -33,14 +33,14 @@ To add a new OAuth application in the back-office:
    * **Supported APIs** — The field appears when the *Support all APIs* field is disabled. Select the API type that the client should support, for example JSON:API, Email Addon, SCIM, etc.
 4. Click **Create**.
 
-A corresponding notification is sent to the user’s primary email address, the owner of the oauth application. You can change the default recipient, localization, or an email content if needed by updating the [OAuth email templates](../../system/emails/email-templates.md#user-guide-using-emails-create-template) and the related [notification rule](../../system/emails/notification-rules.md#user-guide-using-emails-notifications) set out-of-the-box in the system configuration.
+A corresponding notification is sent to the user’s primary email address, the owner of the oauth application. You can change the default recipient, localization, or an email content if needed by updating the [OAuth email templates](../../system/emails/email-templates.md#user-guide-using-emails-create-template) and the related [notification rule](../../system/emails/notification-rules.md#user-guide-using-emails-notifications) set out of the box in the system configuration.
 
 Once the application is created, you are provided with a Client ID and a Client Secret. Click on the <i class="fa fa-copy" aria-hidden="true"></i> icon to copy the credentials to the clipboard.
 
 ![OAuth credentials](user/img/getting_started/user_menu/oauth/oauth_credentials.png)
 
 #### IMPORTANT
-For security reasons, the Client Secret is displayed only once – immediately after you have created a new application. You cannot view the Client Secret anywhere in the application once you close this dialog, so make sure you save it somewhere safe to access it later.
+For security reasons, the Client Secret is displayed only once, immediately after you have created a new application. You cannot view the Client Secret anywhere in the application once you close this dialog, so make sure you save it somewhere safe to access it later.
 
 You can add as many applications as you need for any of your existing organizations. All added applications are displayed in the grid; you can filter them by name, organization, and status.
 

@@ -28,7 +28,7 @@ To mark an entity as auditable:
 
 ## View Entity Change History
 
-You can monitor changes to auditable entities on their view and edit pages by clicking on the **Change History** link on the top right.
+You can monitor changes to auditable entities on their view and edit pages by clicking on the **Change History** link at the top right.
 
 The history includes the author and the time of the change, and the difference between the previous and the new version.
 
@@ -41,7 +41,7 @@ Make sure that the entity field of the entity are also marked as auditable if yo
 To set an entity field as *Auditable*:
 
 1. Open its edit page.
-2. In the **Back-Office options** section, select **Yes** from the dropdown list for the *Auditable* field.
+2. In the **Back-Office options** section, select **Yes** from the drop-down list for the *Auditable* field.
    ![Set an entity field as auditable](img/backend/architecture/set_entity_field_to_auditable.png)
 
    For instance, once we made the *newArrival* field as auditable, any changes to this field have become traceable, as illustrated in the screenshot below:

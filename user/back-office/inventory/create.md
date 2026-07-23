@@ -32,7 +32,7 @@ To view all warehouses, navigate to **Inventory > Warehouses** in the main menu.
 
 You can perform the following actions here:
 
-* Create a warehouse: Click the button on the top right.
+* Create a warehouse: Click the button at the top right.
 * **View Warehouse details**: Click on the warehouse to open its details page.
 * **Edit Warehouse details**: Click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> at the end of the row to start editing the selected warehouse details. You might need to click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the row to reach the <i class="fa fa-edit fa-lg" aria-hidden="true"></i> icon.
 * **Delete a Warehouse**: Click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the row, and then click the ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** icon.

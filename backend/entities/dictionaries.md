@@ -10,7 +10,7 @@ REST API resources for viewing dictionary values are created automatically and a
 
 Please refer to [entity aliases](entity-aliases.md#entity-aliases) topic to better understand how the aliases are generated.
 
-**Dictionary types supported out-of-the-box**
+**Dictionary types supported out of the box**
 
 REST API resources are created automatically for the following types of dictionaries:
 

@@ -26,7 +26,7 @@ Before using OroPay, please contact the [OroCloud team](../../../../../../cloud/
 To configure the OroPay integration, follow the steps outlined below:
 
 1. Navigate to **System > Integrations > Manage Integrations** in the main menu of the OroCommerce back-office.
-2. Click **Create Integration** on the top right.
+2. Click **Create Integration** at the top right.
 3. Provide the following information in the form:
    ![Create an integration with OroPay in the back-office](user/img/system/integrations/oropay/create-oropay-integration.png)
 

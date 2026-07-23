@@ -9,8 +9,8 @@ Once the [basic properties](entity-fields-basic-properties.md#admin-guide-create
 
 1. In the **General Information** section, provide:
 
-* **Label** — Type a label that will be used for referring to the field on the interface. By default, the label is the same as **Name**.
-* **Description** — Type a short but meaningful description that will appear as a field tooltip on the interface.
+* **Label** — Type a label that will be used for referring to the field in the interface. By default, the label is the same as **Name**.
+* **Description** — Type a short but meaningful description that will appear as a field tooltip in the interface.
 * **Field Type-related Properties** — Depending on the entity type selected when defining the [basic properties](entity-fields-basic-properties.md#admin-guide-create-entity-fields-basic) for the entity field you are creating, additional [type-related options](entity-field-type-related-properties.md#admin-guide-create-entity-fields-type-related) appear in the **General Information** section once you click **Continue**.
 
 1. In the **Import and Export** section, specify the following information:
@@ -34,7 +34,7 @@ Import and export of non-default fields may not be supported until the dedicated
   > * By default, *Yes and Display* is selected which makes the field available and visible in the grid.
   > * The *Yes and do not display* option means that the field is hidden by default, but the visibility may be toggled in the grid settings.
   > * The *Yes as Mandatory* option adds the field permanently to all grid views and disables visibility toggle.
-  > * *No* – The field visibility and appearance order cannot be toggled in the grid settings.
+  > * *No* — The field visibility and appearance order cannot be toggled in the grid settings.
 * **Show Grid Filter** — Not available for [serialized fields](../../../../../backend/entities/extend-entities/serialized-fields.md#book-entities-extended-entities-serialized-fields). If set to *Yes*, a corresponding filter will be added to [grid filters](../../../getting-started/navigation/record-tables.md#doc-grids-actions-filters) by default.
 * **Grid Order** — Defines the order of the field in the grid. The field with a smaller value of the grid order number will be displayed before the field with a bigger value.
 * **Show on Form** — If set to *Yes*, the field value appears as editable on record edit pages.
@@ -57,8 +57,8 @@ Import and export of non-default fields may not be supported until the dedicated
 * **Allowed MIME types** — Limits the types of files you can attach to an entity. This applies to file attributes only. For instance, using this option, you can enable application users to upload files only in .pdf format. For this, add the *File* field to the opportunity entity, and enter *application/pdf* into the *Allowed Mime types* field. If this field is left empty, the list of [MIME types defined in the system configuration](../../configuration/system/general-setup/upload.md#admin-configuration-upload-settings) is applied.
 * **Include in Smart Insights** — If set to *yes*, this field will be considered in [OroIQ Smart Insights](../../../../concept-guides/ai/index.md#concept-guide-oroiq) to generate analytics, trends, and contextual recommendations (available as of OroCommerce v6.1.9).
 
-1. Once all the information has been provided, click **Save and Close** on the top right.
-2. On the entity page, click **Update Schema** on the top right, if the storage type for the entity field has been set to *Table Column*.
+1. Once all the information has been provided, click **Save and Close** at the top right.
+2. On the entity page, click **Update Schema** at the top right, if the storage type for the entity field has been set to *Table Column*.
 
 #### IMPORTANT
 Schema changes are permanent and cannot be easily rolled back. We recommend that developers back up data before any database schema change if changes have to be rolled back.

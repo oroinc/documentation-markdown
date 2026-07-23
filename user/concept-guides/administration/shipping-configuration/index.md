@@ -17,9 +17,9 @@ See a short demo on <a href="https://academy.oroinc.com/media-library/create-shi
 
 ## Shipping Integration
 
-**Shipping integrations** allow sellers to enable out-of-the-box and third-party shipping methods to offer shipping services when orders are placed through OroCommerce. For example you can integrate  UPS shipping functionality into your OroCommerce store which would add a number of UPS shipping services, such as UPS 2nd Day Air, UPS Standard, and others. Configuring integration with shipping provides, you can also add shipping services to customer quotes and manage them in the OroCommerce back-office.
+**Shipping integrations** allow sellers to enable out of the box and third-party shipping methods to offer shipping services when orders are placed through OroCommerce. For example you can integrate  UPS shipping functionality into your OroCommerce store which would add a number of UPS shipping services, such as UPS 2nd Day Air, UPS Standard, and others. Configuring integration with shipping provides, you can also add shipping services to customer quotes and manage them in the OroCommerce back-office.
 
-OroCommerce works with the following shipping methods out-of-the-box:
+OroCommerce works with the following shipping methods out of the box:
 
 * [Flat Rate](../../../back-office/system/integrations/shipping-integration/flat-rate.md#doc-integrations-flat-rate)
 

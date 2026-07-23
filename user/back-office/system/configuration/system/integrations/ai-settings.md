@@ -11,7 +11,7 @@ Once the [integration with the chosen AI client](../../../integrations/ai/index.
 3. In the **AI Content Generation Settings** section, clear the **Use Default** checkbox next to *Enable AI Content Generation* to enable the feature.
 
 ![Global AI configuration settings](user/img/system/config_system/ai-global-settings.png)
-1. Select the AI client of choice from the dropdown next to **AI Generator**. The selected AI client will be used to generate content throughout the application. Please make sure you have enough credits in your AI Generator account to be able to use it.
+1. Select the AI client of choice from the drop-down next to **AI Generator**. The selected AI client will be used to generate content throughout the application. Please make sure you have enough credits in your AI Generator account to be able to use it.
 
    Be aware that data from your website will be used by a third party to generate content.
 2. Click **Save Settings**.

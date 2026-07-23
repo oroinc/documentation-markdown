@@ -32,7 +32,7 @@ This topic describes only the default sections and fields and the most common on
 
 ![A sample of a product header](user/img/products/products/products_review_top.png)
 
-You can see the product name on the top left of the page. Next to it, there is the product status indicating whether the product is enabled or disabled.
+You can see the product name at the top left of the page. Next to it, there is the product status indicating whether the product is enabled or disabled.
 
 In the next row, you can see when the product was created and updated.
 

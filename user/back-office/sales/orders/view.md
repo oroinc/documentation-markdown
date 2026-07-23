@@ -13,11 +13,11 @@ Alternatively, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></
 
 ![An order details page](user/img/sales/orders/order_all_page.png)
 
-You can see the order name on the top left of the page.
+You can see the order name at the top left of the page.
 
 In the next row, you can find when the order was created and last updated and whether the customer user who created the order has already been contacted.
 
-To manage an order, use the actions buttons on the top right of the page. The following buttons are
+To manage an order, use the actions buttons at the top right of the page. The following buttons are
 available by default but depend on the order status:
 
 - **Shipping Tracking** — Click to add [shipping tracking](track-order.md#user-guide-shipping-order).

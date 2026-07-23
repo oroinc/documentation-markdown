@@ -14,7 +14,7 @@ Developer Documentation is intended for developers and contains information abou
 <p>This section offers documentation on Oro Config Component which provides additional resource types to the Symfony Config Component infrastructure responsible for loading configurations from different data sources and optionally monitoring these data sources for changes.</p><h2><a href="../api/">Web Services API Guide</a></h2>
 <p>Web Services API Guide enables developers to integrate Oro functionality into third-party software systems.</p><h2><a href="../community/">Community Guide</a></h2>
 <p>Community Guide instructs on how to contribute to the Oro application development, documentation, and translations. It also explains the philosophy of Oro releases and helps users join Oro community and support teams.</p>
-<!-- Use above links or the search bar on the top right to navigate the documentation and discover how to:
+<!-- Use above links or the search bar at the top right to navigate the documentation and discover how to:
 
 * Configure the proper development or production environment for Oro applications
 * Install the application and upgrade it to a new version

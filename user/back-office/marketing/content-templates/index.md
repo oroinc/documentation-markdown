@@ -23,7 +23,7 @@ Content templates, on the contrary, can be altered everywhere they are placed wi
 To create a content template:
 
 1. Navigate to **Marketing > Content Templates** in the main menu.
-2. Click **Create Content Template** on the top right.
+2. Click **Create Content Template** at the top right.
 3. Provide the following details:
 
 * **Owner** — the owner of the content template.

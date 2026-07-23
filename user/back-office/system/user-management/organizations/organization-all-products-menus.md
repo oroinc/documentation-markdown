@@ -12,12 +12,12 @@ Once the All Products page has been enabled in the system configuration [globall
 3. Click the <i class="fas fa-cog" aria-hidden="true"></i> **Edit Storefront Menu** icon to start editing the configuration.
    ![image](user/img/products/all_products_page/AllProductsOrganizationEditMenu.png)
 4. Click on the menu to which you will add the All Products page.
-5. Click **Create Menu Item** on the top right of the page.
+5. Click **Create Menu Item** at the top right of the page.
 6. In the **Title** field, type in the label for the menu item.
 7. In the **URI** field, specify  */catalog/allproducts*.
 8. Complete the other fields as required.
    ![image](user/img/products/all_products_page/AllProductsOrganization.png)
-9. Click **Save** on the top right of the page.
+9. Click **Save** at the top right of the page.
 
 The All Products page should now become available as part of the selected menu on the organization level.
 

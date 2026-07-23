@@ -26,7 +26,7 @@ OroCommerce works with the following payment methods:
   A money order is an alternative to cash or personal checks. It is a prepaid piece of paper that you get in exchange for cash. This integration does not require registration with third-party services.
 * [Payment Terms](../../../back-office/system/integrations/payment-integration/payment-terms/index.md#user-guide-payment-payment-providers-overview-payment-term-config)
 
-  Payment term is a set of conditions required for the sale to be completed, e.g. the period that is allowed to a buyer to pay off the amount due. Payment terms may also include cash in advance requirement, cash collection on delivery, a deferred payment period of 10/20/30 days, etc. Payment terms are configured per customer to help them use the payment conditions guaranteed by their contract with your company. This integration does not require registration with third-party services.
+  Payment term is a set of conditions required for the sale to be completed, e.g., the period that is allowed to a buyer to pay off the amount due. Payment terms may also include cash in advance requirement, cash collection on delivery, a deferred payment period of 10/20/30 days, etc. Payment terms are configured per customer to help them use the payment conditions guaranteed by their contract with your company. This integration does not require registration with third-party services.
 * [OroPay](../../../back-office/system/integrations/payment-integration/oropay/index.md#user-guide-payment-oropay)
 
   OroPay is OroCommerce’s integrated payment feature, created in partnership with Global Payments. It allows customers to pay invoices and complete checkout transactions using credit cards or ACH, all within the platform. Integrated with both the invoice portal and checkout, OroPay connects payment processing with existing ERP and commerce systems. This integration helps reduce manual work, improve accuracy, and provide better visibility into payment status.
@@ -47,7 +47,7 @@ OroCommerce works with the following payment methods:
 <!-- CyberSource is a payment gateway solution that allows merchants to safely accept and effectively process payments. -->
 
 #### HINT
-The default OroCommerce application includes the following payment methods out-of-the-box: Check/Money Order, Payment Terms, and PayPal Payflow Gateway/PayPal Payment Pro. Check out <a href="https://extensions.oroinc.com/orocommerce/" target="_blank">OroCommerce's Extensions Store</a> to download other payment extensions that you can pair with your OroCommerce applications.
+The default OroCommerce application includes the following payment methods out of the box: Check/Money Order, Payment Terms, and PayPal Payflow Gateway/PayPal Payment Pro. Check out <a href="https://extensions.oroinc.com/orocommerce/" target="_blank">OroCommerce's Extensions Store</a> to download other payment extensions that you can pair with your OroCommerce applications.
 
 * [Stripe](../../../back-office/system/integrations/payment-integration/stripe/index.md#user-guide-payment-payment-providers-stripe-overview)
 

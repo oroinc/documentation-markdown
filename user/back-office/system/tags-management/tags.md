@@ -42,7 +42,7 @@ Tags can be created in a number of ways:
 
 1. Navigate to a grid page for an entity that supports tag creation. For example, open **Customers > Accounts** from the main menu. Tags will be available from the grid of that entity.
 2. Click ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) edit next to the selected entity record.
-3. Start typing in the tag name. If it does not yet exist in the system, (New Tag) will appear next to it in the drop down.
+3. Start typing in the tag name. If it does not yet exist in the system, (New Tag) will appear next to it in the drop-down.
    ![image](user/img/system/tags_management/new-tag.png)
 
    Alternatively, select an existing tag from the list. You can add multiple tags.

@@ -35,7 +35,7 @@ The following information about orders is available:
 * **Warehouse** — The warehouse from which the goods are shipped.
 
 #### HINT
-To manage the columns displayed within the grid, click <i class="fas fa-cog" aria-hidden="true"></i> on the right of the grid and select the information you wish to be displayed.
+To manage the columns displayed within the grid, click <i class="fas fa-cog" aria-hidden="true"></i> to the right of the grid and select the information you wish to be displayed.
 
 To handle the significant volume of data, use the page switcher, increase the ‘view per page’ value, or use <i class="fa fa-filter fa-lg" aria-hidden="true"></i> filters to narrow down the list to the needed information.
 
@@ -48,7 +48,7 @@ At the top right, you can see the name of the view. The views are defined by def
 
 To change the view, click the drop-down next to the view name and select the required view.
 
-![Required view options available in the dropdown next to the view name](user/img/sales/orders/orders_views.png)
+![Required view options available in the drop-down next to the view name](user/img/sales/orders/orders_views.png)
 
 You can also create and save new views for future use.
 
@@ -61,11 +61,11 @@ To edit an order:
 1. Navigate to **Sales > Orders** in the main menu.
 2. Choose an order in the list, hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the item, and click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> to start editing its details.
 
-   Alternatively, click the order to open its details. On the order details page, click the **Edit** button on the top right.
+   Alternatively, click the order to open its details. On the order details page, click the **Edit** button at the top right.
 3. Update the required information. See [Create an Order from Scratch](create.md#user-guide-sales-orders-create) and [Manage Promotions in Orders](../../marketing/promotions/promotions/manage-discounts-in-orders.md#user-guide-sales-orders-promotions) topics for detailed information on the available options.
 
    If the order contains [product kit(s)](../../products/products/create-kit.md#products-products-create-product-kit), you can add items that qualify for it to the order.
-4. Click **Save** on the top right of the page.
+4. Click **Save** at the top right of the page.
 
 <a id="user-guide-sales-orders-reorder"></a>
 
@@ -78,9 +78,9 @@ To re-order an existing order:
 1. Navigate to **Sales > Orders** in the main menu.
 2. Choose an order in the list, hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the item, and click **Re-order** to start a new order from the existing one.
 
-   Alternatively, click the order to open its details. On the order details page, click the **Re-order** button on the top right.
+   Alternatively, click the order to open its details. On the order details page, click the **Re-order** button at the top right.
 3. Update the required information. See [Create an Order from Scratch](create.md#user-guide-sales-orders-create) and [Manage Promotions in Orders](../../marketing/promotions/promotions/manage-discounts-in-orders.md#user-guide-sales-orders-promotions) topics for detailed information on the available options.
-4. Click **Save** on the top right of the page.
+4. Click **Save** at the top right of the page.
 
 ## Schedule a Recurring Order
 
@@ -120,7 +120,7 @@ Once scheduled, the recurring order is created and managed separately from the o
 
 1. In the main menu, navigate to **Sales > Orders**. The order list opens.
 2. Click the order that you need to delete. The order view page opens.
-3. Click **Delete** on the top right.
+3. Click **Delete** at the top right.
 4. In the confirmation dialog, click **Yes, Delete**.
 
 <a id="doc-orders-actions-delete-multiple"></a>

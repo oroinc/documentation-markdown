@@ -14,7 +14,7 @@ To translate a product attribute option from English into the required language,
    #### NOTE
    Make sure you have created the corresponding localization in the **System > Localization > Localizations** menu to make them available in the list.
 3. Click **Save Settings**.
-4. Navigate to your user configuration by clicking on your user name on the top right of the page and clicking **My Configuration**.
+4. Navigate to your user configuration by clicking on your user name at the top right of the page and clicking **My Configuration**.
    ![User configuration menu](user/img/system/localization/labels/user_config_menu.png)
 5. Clear the **Use Organization** checkbox and set the localization that you have just added (e.g., German) as the default language for your application and for the UI system elements and content displayed in the back-office and in the storefront.
    ![Changing the default language on user level](user/img/system/localization/labels/user_config_language_settings.png)

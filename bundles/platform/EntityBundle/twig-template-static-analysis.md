@@ -49,7 +49,7 @@ The mechanism is built from the following classes:
 
 `Oro\Bundle\EntityBundle\Twig\Analyzer\TemplateRendererConfigTypeResolver`
 : Resolves virtual variables defined by `EntityVariablesProviderInterface` implementations. When an
-  attribute name is a namespace prefix of a dotted virtual variable (e.g. `url` when `url.view` is
+  attribute name is a namespace prefix of a dotted virtual variable (e.g., `url` when `url.view` is
   a known variable), it returns a `ResolvedAccess` with `skipAccessEntry = true` to prevent false
   positive security-policy violations.
 
@@ -96,7 +96,7 @@ $entries = $analyzer->analyzeTemplate(
 
 foreach ($entries as $entry) {
     // $entry->className    - FQCN of the class being accessed
-    // $entry->variableName - template variable name (e.g. 'entity')
+    // $entry->variableName - template variable name (e.g., 'entity')
     // $entry->attributeName - property or method name
     // $entry->accessType   - TemplateAccessEntry::ACCESS_TYPE_PROPERTY or ACCESS_TYPE_METHOD
     // $entry->lineNumber   - source line in the template
@@ -167,7 +167,7 @@ acme.twig.security_policy.template_checker:
         - '@acme.twig.analyzer.template_access_analyzer'
 ```
 
-When the sandbox must run in an isolated Twig environment (e.g. a sandboxed email template renderer),
+When the sandbox must run in an isolated Twig environment (e.g., a sandboxed email template renderer),
 pass that environment instance instead of `@twig`.
 
 ## How to Extend

@@ -33,7 +33,7 @@ Coupons can be created manually or generated. Usually, you *create* coupons manu
 To create a new coupon:
 
 1. Navigate to **Marketing > Promotions > Coupons** in the main menu.
-2. Click **Coupons Actions > Create Coupon** on the top right.
+2. Click **Coupons Actions > Create Coupon** at the top right.
    ![The steps you need to perform to get to the coupon creation page](user/img/marketing/coupons/FindCoupon.png)
 3. In the  **General** section, complete the following fields:
    ![Create a new coupon](user/img/marketing/coupons/CreateCoupon.png)
@@ -53,7 +53,7 @@ To create a new coupon:
 To generate new coupons:
 
 1. Navigate to  **Marketing > Promotions > Coupons** in the main menu.
-2. Click **Coupons Actions > Generate Multiple Coupons** on the top right.
+2. Click **Coupons Actions > Generate Multiple Coupons** at the top right.
    ![Multiple coupons generation page](user/img/marketing/coupons/GenerateCoupons.png)
 3. In the form, complete the following fields:
    * **Promotion** — Select the promotion that the coupon should relate to, or click <i class="fa fa-bars fa-lg" aria-hidden="true"></i> to load the list of promotions to choose from. Please note that only promotions with the *Triggered by* [option](../promotions/create.md#user-guide-marketing-promotions-create) set to *Coupons and Conditions* will be displayed on the list of available promotions.
@@ -85,13 +85,13 @@ Navigate to **Marketing > Promotions > Coupons** in the main menu.
 The page contains the list of all available coupons in your Oro application. From here, you can perform the following actions:
 
 ![The page of all coupons available in the system](user/img/marketing/coupons/ActionsCoupons.png)
-1. Create a new coupon: Click **Coupons Actions > Create Promotion** on the top right.
-2. Generate coupons: Click **Coupons Actions > Generate Multiple Coupons** on the top right.
-3. Export coupons: Click  **Export** on the top right.
-4. Import coupons: Click  **Import** on the top right.
+1. Create a new coupon: Click **Coupons Actions > Create Promotion** at the top right.
+2. Generate coupons: Click **Coupons Actions > Generate Multiple Coupons** at the top right.
+3. Export coupons: Click  **Export** at the top right.
+4. Import coupons: Click  **Import** at the top right.
 5. View coupon details: Click on the item from the list to open its details page.
 6. Hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu to the right of the necessary coupon and select either to <i class="fa fa-eye fa-lg" aria-hidden="true"></i> **View**, <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit**, or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** the existing coupons from the system.
-7. Mass edit or mass delete coupons: Select the checkboxes on the left of the corresponding rows. Click <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> on the far right of the table header. Click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** to edit, or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** to delete the selected coupons.
+7. Mass edit or mass delete coupons: Select the checkboxes to the left of the corresponding rows. Click <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> on the far right of the table header. Click <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** to edit, or ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) **Delete** to delete the selected coupons.
    ![The illustration of a mass action](user/img/marketing/coupons/MassActionsCoupons.png)
 8. Filter a coupons grid to find the required records quicker: Click <i class="fa fa-filter fa-lg" aria-hidden="true"></i> above the table on the far right to display the filters. To apply a filter, click on its button in the bar, and specify your query in the control that appears.
 
@@ -129,7 +129,7 @@ To view the coupon codes that apply to the selected order:
 1. Navigate to **Sales > Orders** in the main menu.
 2. Click to open the required order to open it.
 3. Click **Discounts** to open the section.
-4. Under **All Promotions** on the left of the section, click <i class="fa fa-eye fa-lg" aria-hidden="true"></i> at the end of the coupon code row.
+4. Under **All Promotions**, to the left of the section, click <i class="fa fa-eye fa-lg" aria-hidden="true"></i> at the end of the coupon code row.
    ![View the coupon applied to the order in the back-office](user/img/marketing/coupons/ViewCouponsIcon.png)
 5. In the popup that opens, you can view the details of the selected coupon, as illustrated below.
    ![View the details of the coupon applied to the order in the back-office](user/img/marketing/coupons/ViewCoupon.png)
@@ -140,7 +140,7 @@ To add a coupon code to the required order from its page:
 
 1. Navigate to **Sales > Orders** in the main menu.
 2. Click to open the required order to open it.
-3. Click **Add Coupon Code** in the **More Actions** menu on the top right of the order page.
+3. Click **Add Coupon Code** in the **More Actions** menu at the top right of the order page.
    ![More Actions menu options on the order page](user/img/marketing/coupons/more-actions-coupon.png)
 4. In the popup that opens, choose a coupon code from the list:
    ![Selecting the coupon code from the list in the popup dialog](user/img/marketing/coupons/CouponCodesListOrder.png)
@@ -180,7 +180,7 @@ As an illustration, let us create a sample promotion and generate 100 coupons. T
 As coupons must be linked to promotions, the first step is to create a new promotion:
 
 1. Navigate to **Marketing > Promotions > Promotions** in the main menu.
-2. Click **Coupons Actions > Create Promotion** on the top right.
+2. Click **Coupons Actions > Create Promotion** at the top right.
 3. In the form that opens, specify the discount details and items, making sure that the **Triggered by** field is set to *Coupons and Conditions*.
    The sample promotion is called **Spring Sale**, and the discount options are 20% off all orders.
    ![image](user/img/marketing/coupons/coupon-promotion-20-off.png)
@@ -202,7 +202,7 @@ Now that the promotion has been created and coupons generated, we can add a coup
 
 1. Navigate to **Sales > Orders** in the main menu.
 2. Select the relevant order and click on it once to open.
-3. Click **Add Coupon Code** on the top right of the order page.
+3. Click **Add Coupon Code** at the top right of the order page.
 4. Select the coupon from the list, click **Add** and then  **Apply**.
 5. The coupon for 20% off is now applied to the order.
    ![The illustration of applying the coupon for 20% off to the order](user/img/marketing/coupons/SampleCoupons8.png)
@@ -220,7 +220,7 @@ Buyers in the storefront can add coupon codes to their storefront orders to rece
 To export the coupons in a .csv format:
 
 1. In the main menu, navigate to **Marketing > Promotions > Coupons**.
-2. To export information on all coupons, click **Export** on the top right.
+2. To export information on all coupons, click **Export** at the top right.
 3. Once the export is complete, you will receive an email to download the .csv file.
 
 ![Export of coupons in the back-office](user/img/marketing/coupons/export-coupon.png)
@@ -238,7 +238,7 @@ To export the coupons in a .csv format:
 To import a bulk of coupons:
 
 1. In the main menu, navigate to **Marketing > Promotions > Coupons**.
-2. Click **Import File** on the top right of the page.
+2. Click **Import File** at the top right of the page.
 3. **Prepare data for import**: Create your bulk information in the .csv format. Once your file is ready, click **Choose File**, select the prepared comma-separated values (.csv) file, and click **Import File**.
    ![The steps that are necessary to perform to import the coupons successfully](user/img/marketing/coupons/import_coupons.png)
 4. **Validate import results**: Click **Validate** to check your import results. If there are any *Records with errors*, fix them in the .csv file before starting the import.

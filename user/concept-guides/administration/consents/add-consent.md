@@ -43,7 +43,7 @@ To add a consent landing page to a web catalog content node:
 
    #### IMPORTANT
    Be aware that web catalog restrictions can affect the visibility of the consent in the storefront. Make sure that the visibility restriction are configured properly. Read more on restrictions in the [Set Up Content Variant Visibility topic](../../../back-office/marketing/web-catalogs/edit-content-tree/visibility.md#user-guide-marketing-web-catalog-content-visibility).
-5. Click **Save** on the top right to save the content node.
+5. Click **Save** at the top right to save the content node.
 
 Once the landing page with the consent description is added to a web catalog node, you can [create a new consent](../../../back-office/system/consent-management/index.md#user-guide-consents-create) under **System > Consent Management**, and link it to the required web catalog node.
 

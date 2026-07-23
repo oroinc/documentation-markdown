@@ -2,11 +2,11 @@
 
 # Available HTTP Methods
 
-The primary or most commonly-used HTTP methods are POST, GET, PUT, PATCH, and DELETE. These methods correspond to create, read, update, and delete (or CRUD) operations, respectively. There are a number of other methods, too, but they are utilized less frequently.
+The primary or most commonly-used HTTP methods are POST, GET, PUT, PATCH, and DELETE. These methods correspond to create, read, update, and delete (or CRUD) operations, respectively. There are a number of other methods, too, but they are used less frequently.
 
 Below is a table summarizing HTTP methods available in Oro API and their return values in combination with the resource URIs:
 
-| HTTP Method   | CRUD operation   | Entire Collection (e.g. /users)                                                                    | Specific Item (e.g. /users/{id})                                                    |
+| HTTP Method   | CRUD operation   | Entire Collection (e.g., /users)                                                                   | Specific Item (e.g., /users/{id})                                                   |
 |---------------|------------------|----------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
 | GET           | Read             | 200 (OK), list of entities.<br/>Use pagination, sorting and filtering<br/>to navigate big lists.   | 200 (OK), single entity.<br/><br/>404 (Not Found), if ID not found or invalid.      |
 | POST          | Create           | 201 (Created), Response contains<br/>response similar to **GET** /user/{id}<br/>containing new ID. | **not applicable**                                                                  |
@@ -54,8 +54,8 @@ So, they are considered safe. That is they can be called without risk of data mo
 
 ## POST
 
-The POST method is most often utilized to *create* new resources. In particular, it is used to create subordinate
-resources. That is subordinate to some other (e.g. parent) resource. In other words, when creating a new resource,
+The POST method is most often used to *create* new resources. In particular, it is used to create subordinate
+resources. That is subordinate to some other (e.g., parent) resource. In other words, when creating a new resource,
 POST to the parent and the service takes care of associating the new resource with the parent, assigning an
 ID (new resource URI), etc.
 
@@ -97,7 +97,7 @@ For details, see the [Creating Resource or Updating Existing Resource via Single
 
 ## DELETE
 
-DELETE is quite easy to understand. It is used to *delete* a resource identified by filters or ID.
+The DELETE method is used to *delete* a resource identified by filters or ID.
 
 On successful deletion, the HTTP response status code 204 (No Content) returns with no response body.
 

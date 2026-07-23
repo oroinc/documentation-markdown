@@ -4,7 +4,7 @@
 
 # Opportunities Reports
 
-There are three out-of-the-box [reports for opportunities](#user-guide-opportunities-reports):
+There are three built-in [reports for opportunities](#user-guide-opportunities-reports):
 
 * [Opportunities By Status](#user-guide-opportunities-reports-opportunities-by-status)
 * [Won Opportunities By Period](#user-guide-opportunities-reports-won-opportunities-by-period)

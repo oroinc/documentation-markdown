@@ -30,7 +30,7 @@ Marketplace Operator must be of the **General** organization type to access all 
 ![Marketplace owner has global access level and is of General type](user/img/concept-guides/marketplace/global-access-marketplace-owner.png)
 
 #### IMPORTANT
-Although there are two default organization types out-of-the-box, more custom organization types can be configured by the developer to advance and customize specific implementation needs. New custom organization types can have any set of features or restrictions added to match any business criteria.
+Although there are two default organization types out of the box, more custom organization types can be configured by the developer to advance and customize specific implementation needs. New custom organization types can have any set of features or restrictions added to match any business criteria.
 
 ## Seller Registration
 
@@ -52,7 +52,7 @@ The details provided in the registration form are immediately displayed in the O
 
 ![Seller registration workflow](user/img/concept-guides/marketplace/seller-registration-request-wf.png)
 
-A person responsible for registration in the marketplace owner organization (marketplace operator) can then [start processing the request](../../../back-office/sales/seller-registration-requests/index.md#user-guide-sales-seller-registration-requests), accept it immediately, or decline it using the back-office [Seller Registration Request workflow](../../../back-office/system/workflows/system-workflows/seller-registration-flow.md#system-workflows-seller-registration-flow). Once accepted, the seller will be assigned a username and receive access to their own newly created seller organization in OroMarketplace. At each step of registration, [an email](../../../back-office/system/emails/email-templates.md#user-guide-email-template) is sent to the seller informing them about the progress of his application.
+A person responsible for registration in the marketplace owner organization (marketplace operator) can then [start processing the request](../../../back-office/sales/seller-registration-requests/index.md#user-guide-sales-seller-registration-requests), accept it immediately, or decline it using the back-office [Seller Registration Request workflow](../../../back-office/system/workflows/system-workflows/seller-registration-flow.md#system-workflows-seller-registration-flow). Once accepted, the seller will be assigned a username and receive access to their own newly created seller organization in OroMarketplace. At each step of registration, [an email](../../../back-office/system/emails/email-templates.md#user-guide-email-template) is sent to the seller informing them about the progress of their application.
 
 ![Email templates for the seller registration process](user/img/concept-guides/marketplace/email-templates.png)
 

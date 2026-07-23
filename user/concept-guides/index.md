@@ -7,7 +7,7 @@ Concept Guides introduce you to the business logic behind comprehensive Oro appl
 Complementary to the how-to approach of the Back-office section of the documentation, Concept Guides give you context and references to other how-to articles in the documentation.
 
 #### NOTE
-When browsing documentation, be on the lookout for the ![Extension is required](user/img/doctypes/extension-icon-logo.png) icon on the top right. It indicates whether the features require extension installation.
+When browsing documentation, be on the lookout for the ![Extension is required](user/img/doctypes/extension-icon-logo.png) icon at the top right. It indicates whether the features require extension installation.
 
 #### BUSINESS TIP
 # Business Tip

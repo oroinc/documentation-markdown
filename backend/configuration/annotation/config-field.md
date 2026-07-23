@@ -62,7 +62,7 @@ Attribute fields have a dedicated CRUD and field types, similarly to the extend 
 * **is_global** *boolean* - defines whether the attribute was created in the global organization.
 * **field_name** *string* - defines an attribute field name.
 * **organization_id** *integer* - defines the id of a specific organization.
-* **search_boost** *integer* -  enables you to influence the relevancy ranking of the search results by the value of the attributes.
+* **search_boost** *integer* -  enables you to control the relevancy ranking of the search results by the value of the attributes.
 * **immutable** *boolean* - is used to prohibit changing the attribute association state (regardless of whether it is enabled or not) for the entity. If TRUE, then the current state cannot be changed.
 
 <a id="annotation-config-field-dataaudit"></a>

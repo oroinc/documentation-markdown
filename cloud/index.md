@@ -8,7 +8,7 @@ Adoption of cloud platforms has skyrocketed due to their elasticity, security, a
 
 With full control over the resources and infrastructure configuration that cloud platforms offer today, one can hardly find any downsides of moving their business solutions from the private in-house infrastructure to the highly distributed and fault-tolerant global resources provided by the cloud niche leaders.
 
-OroCloud heavily utilizes the advantages of the different models of virtualization and cloud infrastructure-as-a-service providers, being completely vendor-agnostic. This means that Oro can support the deployment of OroCloud to the IaaS of your preference including customer on-premise instances.
+OroCloud heavily uses the advantages of the different models of virtualization and cloud infrastructure-as-a-service providers, being completely vendor-agnostic. This means that Oro can support the deployment of OroCloud to the IaaS of your preference including customer on-premise instances.
 
 Oro’s cloud offering is based on two Infrastructure-as-a-Service (IaaS) platforms: <a href="https://cloud.google.com/docs/" target="_blank">Google Cloud Platform</a> and <a href="https://docs.oracle.com/en-us/iaas/Content/home.htm" target="_blank">Oracle Cloud Infrastructure (OCI)</a> from the shelf. Both IaaS platforms work well for OroCloud because they provide a flexible infrastructure that scales on-demand, end-to-end security, and high availability.
 
@@ -27,9 +27,9 @@ With OroCloud, you get the following package of services:
 
 The following benefits come along:
 
-* Ease of use – With OroCloud, you can focus on your business and save time and money on the in-house infrastructure technical support. OroCloud manages the application environment as part of the service, but we also offer a customized application maintenance service
-* Security – OroCloud has been <a href="https://cloud.google.com/security/compliance/pci-dss/" target="_blank">PCI-DSS certified</a> since December 2017 and is scheduled for yearly reassessment and renewal. This means that every resource that the OroCloud environment uses – the servers, network, software, and configuration – comply with the <a href="https://services.google.com/fh/files/misc/gcp_pci_dss_v4_responsibility_matrix.pdf" target="_blank">PCI DSS Shared Responsibility GCP v4.0</a> .
-* Reliability – OroCloud is based on the highly reliable cloud platform and supports high-availability and fault-tolerant deployments out-of-the-box and comes with 24x7 technical support for P1 issues.
+* Ease of use — With OroCloud, you can focus on your business and save time and money on the in-house infrastructure technical support. OroCloud manages the application environment as part of the service, but we also offer a customized application maintenance service
+* Security — OroCloud has been <a href="https://cloud.google.com/security/compliance/pci-dss/" target="_blank">PCI-DSS certified</a> since December 2017 and is scheduled for yearly reassessment and renewal. This means that every resource that the OroCloud environment uses – the servers, network, software, and configuration – comply with the <a href="https://services.google.com/fh/files/misc/gcp_pci_dss_v4_responsibility_matrix.pdf" target="_blank">PCI DSS Shared Responsibility GCP v4.0</a> .
+* Reliability — OroCloud is based on the highly reliable cloud platform and supports high-availability and fault-tolerant deployments out of the box and comes with 24x7 technical support for P1 issues.
 
 **What’s Next**
 

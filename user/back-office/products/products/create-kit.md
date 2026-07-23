@@ -11,7 +11,7 @@ To create a new product kit:
 
 1. Navigate to **Products > Products** in the main menu.
 2. Click **Create Product**.
-3. Select the **Kit** product type from the dropdown.
+3. Select the **Kit** product type from the drop-down.
    ![Selection of the kit product type](user/img/products/products/kits/product-type-kit.png)
 4. Select the [product family](../product-families/index.md#products-product-families) to define the product options and details that will be filled in the following steps.
 5. Place the product under the necessary category in the master catalog by clicking on the category. Use the search to limit the list of categories.

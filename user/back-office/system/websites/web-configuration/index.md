@@ -15,7 +15,7 @@ You can configure available system settings on four [configuration levels](../..
 On the website level, there are a number of options that you can configure specifically for the particular OroCommerce website, but which will not affect system-wide or organization-wide configuration.
 
 #### IMPORTANT
-Website-level configuration settings can fall back to organization settings. For this, select the **Use Organization** checkbox next to the selected option. To go back to the default website-level settings, click **Reset** on the top right.
+Website-level configuration settings can fall back to organization settings. For this, select the **Use Organization** checkbox next to the selected option. To go back to the default website-level settings, click **Reset** at the top right.
 
 Two categories of settings are available for configuration at the website level:
 

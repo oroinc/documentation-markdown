@@ -23,7 +23,7 @@ For the details on how to add an OAuth application to a selected user in the bac
 To create a new OAuth application for a customer user in the back-office:
 
 1. Navigate to **Customers > Customer User OAuth Applications** in the main menu.
-2. Click **Create OAuth Application** on the top right of the screen.
+2. Click **Create OAuth Application** at the top right of the screen.
 3. Provide the following details on the page that opens:
    ![image](user/img/customers/customer_user_oauth_app/customer_user_oauth_app_create.png)
    * **Organization** — If you are adding an application within the organization with *global* access, you can select which other available organization to add the application to. This field is displayed to users with access to multiple organizations (available for the Enterprise edition only).
@@ -38,7 +38,7 @@ To create a new OAuth application for a customer user in the back-office:
    * **Skip User Consent** — The field appears when selecting *Authorization Code* as a grant type. Use this option for first party applications to skip user login consent screen.
 4. Click **Save and Close**.
 
-A corresponding notification is sent to the primary email address of the user, the owner of oauth application. You can change the default recipient, localization, or an email content if needed by updating the [OAuth email templates](../../system/emails/email-templates.md#user-guide-using-emails-create-template) and the related [notification rule](../../system/emails/notification-rules.md#user-guide-using-emails-notifications) set out-of-the-box in the system configuration.
+A corresponding notification is sent to the primary email address of the user, the owner of oauth application. You can change the default recipient, localization, or an email content if needed by updating the [OAuth email templates](../../system/emails/email-templates.md#user-guide-using-emails-create-template) and the related [notification rule](../../system/emails/notification-rules.md#user-guide-using-emails-notifications) set out of the box in the system configuration.
 
 Once the application is created, you are provided with a Client ID and a Client Secret. Click on the <i class="fa fa-copy" aria-hidden="true"></i> icon to copy the credentials to the clipboard.
 

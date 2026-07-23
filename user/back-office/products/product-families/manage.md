@@ -14,7 +14,7 @@ From the product families page, you can:
 - Filter existing product families
 - Manage product family grid settings (<i class="fa fa-eye fa-lg" aria-hidden="true"></i> **View** or <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** product family details by clicking the required icon at the end of a product family row)
 
-Additionally, you can edit the details of a product family on the product families details page by clicking <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** on the top right of its page.
+Additionally, you can edit the details of a product family on the product families details page by clicking <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** at the top right of its page.
 
 You can delete a product family if it was created within your organization and your [user role](../../system/user-management/roles/index.md#user-guide-user-management-permissions) has the necessary permissions. Product families created in other organizations cannot be deleted unless you are operating from the [global organization](../../system/user-management/organizations/index.md#user-management-organizations) and your role has the appropriate permission to perform this action. Note that system product family(ies) cannot be deleted under any circumstances.
 
@@ -29,7 +29,7 @@ To edit a product family:
 1. Navigate to **Products > Product Families** in the main menu.
 2. Choose the required product family from the list, click the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the corresponding row, and click the <i class="fa fa-edit fa-lg" aria-hidden="true"></i> **Edit** icon.
 3. Update the necessary information.
-4. Click **Save** on the top right of the page.
+4. Click **Save** at the top right of the page.
 
 ### Add a New Product Attribute Group
 
@@ -62,8 +62,8 @@ To edit a product family:
 
 ### Delete a Product Attribute Group
 
-1. Click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) on the top right of the group area.
-   ![Click delete on the top right of the group area](user/img/products/product_families/ProductAttributeRemoveGroup.png)
+1. Click ![Trash-SVG](_themes/sphinx_rtd_theme/static/svg-icons/trash.svg) at the top right of the group area.
+   ![Click delete at the top right of the group area](user/img/products/product_families/ProductAttributeRemoveGroup.png)
 
    If the group contains any system attributes, the confirmation dialog appears. Once confirmed, the group is deleted, and the system attributes are automatically moved to the default group.
 2. Click **Save**.

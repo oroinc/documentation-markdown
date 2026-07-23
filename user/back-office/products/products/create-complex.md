@@ -59,15 +59,15 @@ To add a new configurable product and make it available in the master catalog (f
    | **Additional Units**        | Add more than one unit of quantity if needed. For every additional unit, provide precision and conversion rate compared to the main unit of quantity. Select the **Sell** checkbox to enable selling the product in these units. Unless **Sell** is selected, the unit is considered a draft.                                                                                                                                                                                                                                                                    |
 
    Also, specify the value of your configurable attributes and define any other custom attributes if required.
-8. In the **Short Description** section, provide a short but meaningful default description that best positions the product for your target audience and will appear in the catalog listing. Move from tab to tab to localize the description by setting the required fallback option. You can select whether to fall back to the default value, parent localization, or a custom value from the dropdown. When selecting the custom value, provide the localized version of the short description in the text field.
+8. In the **Short Description** section, provide a short but meaningful default description that best positions the product for your target audience and will appear in the catalog listing. Move from tab to tab to localize the description by setting the required fallback option. You can select whether to fall back to the default value, parent localization, or a custom value from the drop-down. When selecting the custom value, provide the localized version of the short description in the text field.
    > ![Localization fallback option for the short description of the configurable product](user/img/products/products/localize_short_descr_config_product.png)
-9. In the **Description** section, provide a long default product description that will appear on the product view page. Move from tab to tab to localize the description by setting the required fallback option. You can select whether to fall back to the default value, parent localization, or a custom value from the dropdown. When selecting the custom value, provide the localized version of the long description in the WYSIWYG field. For more details on WYSIWYG management, see the [WYSIWYG Editor](../../../concept-guides/content-management/wysiwyg.md#getting-started-wysiwyg-editor-field) topic.
+9. In the **Description** section, provide a long default product description that will appear on the product view page. Move from tab to tab to localize the description by setting the required fallback option. You can select whether to fall back to the default value, parent localization, or a custom value from the drop-down. When selecting the custom value, provide the localized version of the long description in the WYSIWYG field. For more details on WYSIWYG management, see the [WYSIWYG Editor](../../../concept-guides/content-management/wysiwyg.md#getting-started-wysiwyg-editor-field) topic.
 10. In the **Image** section, add a new image to the product by clicking **+Add Image** and then **Choose Image**. You can either upload a new image or select the required one from the list of available [digital assets](../../marketing/digital-assets/index.md#digital-assets) records.
 
 > Then, select whether to show the image as *main* (the image is used in the product details view), *listing* (the image is shown in the catalog listing), or *additional* (additional product pictures). All three categories can be selected at the same time. To remove an image, click <i class="fas fa-times" aria-hidden="true"></i> next to it.
 1. In the **Design** section, select the [page template](../../system/theme-configuration/index.md#back-office-theme-configuration) from the list. A page template is used to render the product page in the storefront. Available options are *Default*, *Tabs*, and *Wide*. To override the template configuration set in the theme configuration menu, deselect **Use** and choose the required option from the list.
 
-> ![The list of available page templates in the dropdown of the Page Template field](user/img/products/products/SimpleProductDesign.png)
+> ![The list of available page templates in the drop-down of the Page Template field](user/img/products/products/SimpleProductDesign.png)
 1. In the **Product Variants** section, select the configurable product variants by ticking the **Is Variant** checkbox next to the product. Ensure the configurable product has the same product unit as its product variants.
 
 > ![Selecting the configurable product variants](user/img/products/products/SampleProductVariantsForConfigProduct.png)![Selecting the default product variant to be displayed in the storefront](user/img/products/products/select-default-variant.png)
@@ -104,7 +104,7 @@ The sample flow below shows all the steps required to create a configurable prod
 **Step 1. Create Attributes.**
 
 1. Navigate to **Products > Product Attributes** in the main menu.
-2. Click **Create Attribute** on the top right, and proceed to creating attribute memory.
+2. Click **Create Attribute** at the top right, and proceed to creating attribute memory.
 3. Choose select as the attribute type.
 
    #### IMPORTANT
@@ -116,7 +116,7 @@ The sample flow below shows all the steps required to create a configurable prod
 **Step 2. Create a Product Family.**
 
 1. Navigate to **Products > Product Families** in the main menu.
-2. Click **Create Product Family** in the top right corner.
+2. Click **Create Product Family** in the top-right corner.
 3. Fill in the required information for the product family (e.g., name Tech).
 4. Click  **Add** to create a new attribute group (e.g., Memory Capacity) and add attribute memory to it.
    ![Add new product attributes to separate groups when creating a product family](user/img/products/products/SampleProductFamily.png)
@@ -128,7 +128,7 @@ The sample flow below shows all the steps required to create a configurable prod
 Next, create two simple products, Hard Drive 1 TB and Hard Drive 2 TB, and select the corresponding memory attribute to each. These simple products will subsequently be added to the configurable product as its product variants.
 
 1. Navigate to **Products > Products** in the main menu.
-2. Click **Create Product** in the top right corner.
+2. Click **Create Product** in the top-right corner.
 3. Set the product type to *Simple*, select the new product family (Tech).
 4. Fill in the required information and add the attributes required for this particular product.
 

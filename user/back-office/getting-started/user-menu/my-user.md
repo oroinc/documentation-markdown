@@ -22,7 +22,7 @@ Several practical tools and actions are available on your user profile page, fro
    In particular, you can set up localization, language, display settings, update email configuration details, and configure customer-visible contact information in the storefront. Read more about the available settings in the relevant [User-Level Configuration section](../../system/user-management/users/configuration/index.md#doc-my-user-configuration) of the documentation library.
 3. **Edit your user profile.**
 
-   To update your profile details, click **Edit** on the top right of the page. You can update your credentials, change the password, upload a new avatar, and update email details on the edit page.
+   To update your profile details, click **Edit** at the top right of the page. You can update your credentials, change the password, upload a new avatar, and update email details on the edit page.
 4. **Perform actions available under the More Actions menu**:
    * [Send an email](my-emails.md#user-guide-using-emails-view)
    * [Log a call](../../activities/calls/index.md#doc-activities-calls)
@@ -58,7 +58,7 @@ We recommend changing your password after the first login unless you use a Googl
 
 **To change your password when editing your user profile:**
 
-1. Click on your user name on the top right of the screen.
+1. Click on your user name at the top right of the screen.
 2. Click **My User**.
 3. On the page of your profile, click **Edit**.
 4. In the **Password** section, provide the following information:
@@ -69,7 +69,7 @@ We recommend changing your password after the first login unless you use a Googl
 
 **To change your password via the More Actions menu:**
 
-1. Click on your user name on the top right of the screen.
+1. Click on your user name at the top right of the screen.
 2. Click **My User**.
 3. On your profile page, click **More Actions > Change Password**.
    ![The change password popup dialog](user/img/getting_started/user_menu/My_User_Change_Password.png)
@@ -80,7 +80,7 @@ We recommend changing your password after the first login unless you use a Googl
 
 Only administrators can reset passwords.
 
-1. Click on your user name on the top right of the screen.
+1. Click on your user name at the top right of the screen.
 2. Click **My User**.
 3. On your profile page, click **More Actions > Reset Password**.
 4. In the dialog box, click **Reset**. The password reset link will be sent to your (admin) primary email address.
@@ -104,10 +104,10 @@ If no keys are found, the following warning message will be displayed in the bac
 
 To add a new OAuth application in the back-office:
 
-1. Click on your user name on the top right of the screen.
+1. Click on your user name at the top right of the screen.
 2. Click **My User**.
    ![Profile menu](user/img/getting_started/user_menu/oauth/my_user.png)
-3. In the **OAuth Applications** section, click **Add Application** on the top right and provide the following details in the pop-up dialog:
+3. In the **OAuth Applications** section, click **Add Application** at the top right and provide the following details in the pop-up dialog:
    ![Add an oauth application](user/img/getting_started/user_menu/oauth/oauth_tab.png)
    * **Organization** — If you are adding an application within the organization with *global* access, you can select which other available organization to add the application to. This field is displayed to users with access to multiple organizations (available for the Enterprise edition only).
    * **Application Name** — Provide a meaningful name for the application you are adding.
@@ -116,14 +116,14 @@ To add a new OAuth application in the back-office:
    * **Supported APIs** — The field appears when the *Support all APIs* field is disabled. Select the API type that the client should support, for example JSON:API, Email Addon, SCIM, etc.
 4. Click **Create**.
 
-A corresponding notification is sent to the user’s primary email address, the owner of the oauth application. You can change the default recipient, localization, or an email content if needed by updating the [OAuth email templates](../../system/emails/email-templates.md#user-guide-using-emails-create-template) and the related [notification rule](../../system/emails/notification-rules.md#user-guide-using-emails-notifications) set out-of-the-box in the system configuration.
+A corresponding notification is sent to the user’s primary email address, the owner of the oauth application. You can change the default recipient, localization, or an email content if needed by updating the [OAuth email templates](../../system/emails/email-templates.md#user-guide-using-emails-create-template) and the related [notification rule](../../system/emails/notification-rules.md#user-guide-using-emails-notifications) set out of the box in the system configuration.
 
 Once the application is created, you are provided with a Client ID and a Client Secret. Click on the <i class="fa fa-copy" aria-hidden="true"></i> icon to copy the credentials to the clipboard.
 
 ![OAuth credentials](user/img/getting_started/user_menu/oauth/oauth_credentials.png)
 
 #### IMPORTANT
-For security reasons, the Client Secret is displayed only once – immediately after you have created a new application. You cannot view the Client Secret anywhere in the application once you close this dialog, so make sure you save it somewhere safe to access it later.
+For security reasons, the Client Secret is displayed only once, immediately after you have created a new application. You cannot view the Client Secret anywhere in the application once you close this dialog, so make sure you save it somewhere safe to access it later.
 
 You can add as many applications as you need for any of your existing organizations. All added applications are displayed in the grid; you can filter them by name, organization, and status.
 

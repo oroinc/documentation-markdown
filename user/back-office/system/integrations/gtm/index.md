@@ -19,7 +19,7 @@ Please, be aware that you must have <a href="https://support.google.com/tagmanag
 
 To create a GA4 property, navigate to your Google Analytics account.
 
-1. Click <i class="fas fa-cog" aria-hidden="true"></i> **Admin** on the bottom left.
+1. Click <i class="fas fa-cog" aria-hidden="true"></i> **Admin** at the bottom left.
 2. Click **+ Create Property** under the **Property** column.
 3. Provide a name for the property, select the reporting time zone and the currency. Keep in mind that Google Analytics tracks only one currency at a time. This means that if, for example, your default currency is set to **US Dollar**, but you have a multi-currency web store (available for the Enterprise edition only), a purchase of 100EUR will be tracked in the converted dollar amount of 107USD (depending on the currency rate that day).
 4. Click **Next**. Select your industry category, business size, and choose your business objectives.
@@ -96,7 +96,7 @@ To change the Google Tag ID for the imported variable:
 ![Edit imported variable configuration](user/img/system/integrations/gtm/edit-GA4-var-tag.png)
 1. Substitute the dummy number with the corresponding [Google Tag ID](#data-stream-measurement-id) of your Google Analytics data stream that follows the **G-XXXXX** pattern.
 2. Click **Save** to save variable settings.
-3. Click **Submit** and then **Publish** on the top right to apply the changes.
+3. Click **Submit** and then **Publish** at the top right to apply the changes.
 
 <a id="ga4-ga-tag-table"></a>
 
@@ -423,10 +423,10 @@ The <a href="https://developers.google.com/analytics/devguides/collection/ga4/re
 To configure a Google Tag Manager integration:
 
 1. Navigate to **System > Integrations > Manage Integrations** in the main menu.
-2. Click **Create Integration** on the top right.
+2. Click **Create Integration** at the top right.
 3. In the **Type** field, select **Google Tag Manager**.
 4. In the **Name** field, provide the name for the integration you are creating to refer to it in the Oro application. Since you can create many Google Tag Manager integrations, make sure the name is meaningful.
-5. In the **Container ID** field, provide the <a href="https://support.google.com/tagmanager/answer/6103696?hl=en" target="_blank">Google Tag Manager Container ID</a>. The Container ID is located in your Google Tag Manager account on the top right of the workspace page. It is formatted as *GTM-XXXXXX*.
+5. In the **Container ID** field, provide the <a href="https://support.google.com/tagmanager/answer/6103696?hl=en" target="_blank">Google Tag Manager Container ID</a>. The Container ID is located in your Google Tag Manager account at the top right of the workspace page. It is formatted as *GTM-XXXXXX*.
 6. In the **Status** field, set the integration to *Active* to enable it. Should you need to disable it, select *Inactive* from the list.
 7. In the **Default Owner**, select the owner of the integration.
 

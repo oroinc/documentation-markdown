@@ -46,10 +46,10 @@ If the **Ship to this address** checkbox has been selected in the Billing Inform
 > #### IMPORTANT
 > Check SKUs, quantities, price, subtotal, shipping and total cost.
 
-> If not all of the items are visible, click **Show Less Items** on the bottom right of the item list.
+> If not all of the items are visible, click **Show Less Items** at the bottom right of the item list.
 
 > #### TIP
-> You can edit the order content if required. To do this, click ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) on the top right of the item list. The shopping list page will open. Make the required changes and then click **Checkout**. You will be redirected back to the order you have been submitting.
+> You can edit the order content if required. To do this, click ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) at the top right of the item list. The shopping list page will open. Make the required changes and then click **Checkout**. You will be redirected back to the order you have been submitting.
 1. If required, provide additional order options:
    * **Do not ship later than** — Click the field to select the date on which the order expires.
    * **PO Number** — Enter the purchase order number for reference.
@@ -59,7 +59,7 @@ If the **Ship to this address** checkbox has been selected in the Billing Inform
    ![image](user/img/system/workflows/checkout/Order_Review.png)
 
 #### TIP
-Until you have submitted the order, you can return back and edit any step using the step list on the left of the page:
+Until you have submitted the order, you can return back and edit any step using the step list to the left of the page:
 
 * Click the step that you want to return to. In this case, *all the changes made at the later steps will be lost*.
 * Click ![Pencil-SVG](_themes/sphinx_rtd_theme/static/svg-icons/pencil.svg) next to the step that you want to edit. In this case, *all the changes made at the later steps will be preserved*.
