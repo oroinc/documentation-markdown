@@ -1,3 +1,5 @@
+<a id="bundle-docs-commerce-pricing-bundle-combined-price-lists"></a>
+
 # Combined Price List
 
 Combined Price List (CPL) is an internal entity that stores prices displayed to the end customer. Each CPL represents a price lists chain. Such chain is created based on the fallback settings
@@ -110,6 +112,9 @@ Compared to assignments collection, assignments processing is a much simpler pro
 ## Build Flow for Combined Prices
 
 Let’s summarize the Combined Price Lists build flow and its distribution in time.
+
+#### NOTE
+For the exact message queue topic names, the message filters that collapse the rebuild requests, and the complete producer-to-consumer message paths of this flow, see [Pricing Message Queue Flows](pricing-mq-flows.md#bundle-docs-commerce-pricing-bundle-mq-flows).
 
 ### Step 1
 
