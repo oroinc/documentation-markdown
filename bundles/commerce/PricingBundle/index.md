@@ -18,7 +18,11 @@ For back-office users (e.g., sales representatives), the bundle enables the foll
 * [Configure Price List Sharding](price-list-sharding.md)
 * [Optimize Website Indexation and Price Recalculation](optimize-index-and-price-calculation.md)
 * [Combined Price List](combined-price-lists.md)
+* [Flat Price List Storage](flat-pricing-storage.md)
 * [Price Storage](price-storage.md)
+* [Price Rule Expression Language](price-rule-expression-language.md)
+* [Pricing and Search Index](pricing-and-search.md)
+* [Pricing Message Queue Flows](pricing-mq-flows.md)
 * [Pricing Strategy](pricing-strategy.md)
 * [Commands](commands.md)
 
