@@ -9,12 +9,12 @@
 # Install Extension from the Oro Extensions Store
 
 #### CAUTION
-Before installing an extension it is recommended to back up the database and the application
-source code. There is no simple way to uninstall an extension.
+Back up the database and the application source code before installing an extension.
+There is no simple way to uninstall one.
 
-Installing an extension from the Oro Extensions Store is the least resource-consuming way to expand the existing functionality of the Oro application.
+Installing an extension from the Oro Extensions Store is the least resource-consuming way to expand the functionality of an Oro application.
 
-Oro application’s extensions store is a catalog service for sharing packages that extend a particular Oro application. On the Extensions Store, Oro and third-party vendors may publish free or chargeable custom packages to distribute commonly-used extension solutions to the Oro community.
+Oro application’s extensions store is a catalog service for sharing packages that extend a particular Oro application. On the Extensions Store, Oro and third-party vendors publish free or chargeable custom packages to distribute commonly-used extension solutions to the Oro community.
 
 #### NOTE
 See the [Oro PHP application structure](../architecture/structure/index.md#architecture-oro-php-application-structure) topic for more information on the definition of a package and levels of extension and customization.
@@ -30,8 +30,8 @@ Once the Oro application extension package is [published on the Oro Extensions S
 
 You can install extensions from the command-line.
 
-Start with upgrading Composer to the latest version. This may be needed in case the extension to be
-installed uses some bleeding edge feature in its `composer.json` file:
+Start by upgrading Composer to the latest version. The extension you install may rely on a
+bleeding edge feature in its `composer.json` file:
 
 ```none
 $ composer self-update

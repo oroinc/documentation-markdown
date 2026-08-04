@@ -11,6 +11,10 @@ To configure the upload settings for a particular website:
    #### NOTE
    For faster navigation between the configuration menu sections, use [Quick Search](../../../../configuration/quick-search.md#user-guide-system-configuration-quick-search).
 4. In the **File Names** section, you can control whether to use original file names. By default, the setting is enabled.
+
+   #### WARNING
+   Changing this setting only affects the global upload limit. It does not override a lower limit configured on an individual entity field. If a File, Image, Multiple Files, or Multiple Images type attribute has its own File Size value, that value still applies and can block uploads even after you raise this global setting. For example, out of the box, the *Product Image* attribute has its own 10 MB limit. See [Manage Product Attributes in the Back-Office](../../../../../products/product-attributes/index.md#products-product-attributes-type-based-details) for how to check or change per-attribute file size limits.
+
    ![File names section on website level](user/img/system/websites/web_configuration/upload_settings_websites.png)
 
    #### HINT

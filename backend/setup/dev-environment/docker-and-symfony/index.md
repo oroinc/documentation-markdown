@@ -2,10 +2,9 @@
 
 # Set up Environment for OroPlatform Based Application with Docker and Symfony Server
 
-During development, you can use Docker to run various application
-services (Postgres, ElasticSearch, RabbitMQ, Redis and MailCatcher), but for
-simplicity, performance and reliability have PHP and NodeJS installed
-locally on a host machine.
+During development, use Docker to run application services (Postgres,
+ElasticSearch, RabbitMQ, Redis, and MailCatcher). For simplicity, performance,
+and reliability, install PHP and NodeJS locally on the host machine.
 
 ## Set Up the Environment
 
@@ -19,12 +18,12 @@ There are quick guides to set up Docker and Symfony Server development stack:
 **Development Stack**
 
 - PHP, Composer, Node.js, NPM and PNPM should be installed locally for a better development experience.
-- <a href="https://symfony.com/doc/current/setup/symfony_server.html" target="_blank">Symfony Local Web Server</a> is used to make you more productive while
-  developing applications. This server is not intended for production
+- <a href="https://symfony.com/doc/current/setup/symfony_server.html" target="_blank">Symfony Local Web Server</a> makes you more productive while
+  developing applications. It is not intended for production
   use. It supports HTTP/2, TLS/SSL, automatic generation of security
   certificates, local domains, and many other features.
-- <a href="https://www.docker.com/" target="_blank">Docker</a> is used to run application services.
-- <a href="https://docs.docker.com/compose/" target="_blank">Docker Compose</a> is used to manage them all with a single command.
+- <a href="https://www.docker.com/" target="_blank">Docker</a> runs application services.
+- <a href="https://docs.docker.com/compose/" target="_blank">Docker Compose</a> manages them all with a single command.
 
 #### NOTE
 PHP and NodeJS should meet the [System Requirements](../../system-requirements/index.md#system-requirements).
@@ -81,11 +80,12 @@ symfony console oro:install -vvv --sample-data=y --application-url=https://127.0
 
 ## Use a Symfony Server
 
-To automatically apply environment variables exposed by Symfony Server
-from Docker Compose and to use the proper PHP version, you should run
-all the symfony application commands using `symfony console` instead
-of `php bin/console`. Use `symfony php` to run php binaries
-using proper PHP version and expose environment variables from the application services defined with Docker Compose.
+Run all Symfony application commands with `symfony console` instead
+of `php bin/console`. This automatically applies the environment variables
+that Symfony Server exposes from Docker Compose and uses the proper PHP version.
+
+Use `symfony php` to run PHP binaries with the proper PHP version and expose
+environment variables from the application services defined with Docker Compose.
 
 #### NOTE
 On Windows with WSL2 the website is accessible using `https://localhost:8000`, instead of `https://127.0.0.1:8000`.
@@ -116,7 +116,7 @@ symfony server:log
 
 ### Switch PHP version
 
-You can have multiple versions of PHP versions locally. To use a
+You can have multiple PHP versions locally. To use a
 specific PHP version for the project, go to the project root folder and run:
 
 ```none
@@ -163,7 +163,7 @@ You can enable local domains by <a href="https://symfony.com/doc/current/setup/s
 ## Manage Application Services
 
 All application services are defined in the `docker-compose.yml` file.
-By default, the `docker-compose.yml` file shipped with an application has a
+By default, the file shipped with an application has a
 set of recommended services for each application:
 
 * For community edition applications: **Postgres** and **MailCatcher**.
@@ -211,9 +211,8 @@ For more details, see <a href="https://docs.docker.com/compose/" target="_blank"
 
 ## Store Sessions in Redis
 
-It is not recommended to store sessions on the same redis server as the
-cache, but for testing purpose, you can enable it with the following
-command:
+Storing sessions on the same redis server as the cache is not recommended,
+but for testing purposes you can enable it with the following command:
 
 ```none
 composer set-parameters 'env(ORO_SESSION_DSN)'='%env(ORO_REDIS_SESSION_DSN)%'

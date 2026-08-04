@@ -6,13 +6,13 @@ Field ACL allows checking access to an entity field and supports the following p
 
 ## Prepare the System for Field ACL
 
-By default, entity fields are not protected by ACL. The templates, datagrids, and other parts of the system that use the entity that should be Field ACL protected do not have such checks.
+By default, entity fields are not protected by ACL. The templates, datagrids, and other parts of the system that use the entity do not perform such checks.
 
-Before enabling the support of the Field ACL for an entity, prepare the system parts that use the entity to use Field ACL.
+Before you enable Field ACL for an entity, prepare the system parts that use the entity to check it.
 
 ## Check Field ACL in PHP Code
 
-In PHP code, access to the field is provided by the isGranted method of the security.authorization_checker service.
+In PHP code, the isGranted method of the security.authorization_checker service checks access to the field.
 
 The second parameter of this method should be an instance of <a href="https://github.com/symfony/security-acl/blob/master/Voter/FieldVote.php" target="_blank">FieldVote</a>:
 
@@ -37,11 +37,11 @@ The second parameter of this method should be an instance of <a href="https://gi
     }
 ```
 
-As a result, the $isGranted variable contains the *true* value if access is granted and the *false* value if it does not.
+As a result, the $isGranted variable is *true* if access is granted and *false* otherwise.
 
 The $entity parameter should contain an instance of the entity you want to check.
 
-If you have no entity instance, but you know a class name, the ID of the record, the owner, and the organization IDs of this record, the <a href="https://github.com/oroinc/platform/blob/7.0/src/Oro/Bundle/SecurityBundle/Acl/Domain/DomainObjectReference.php" target="_blank">DomainObjectReference</a>] can be used as the domain object:
+If you have no entity instance but know the class name, the record ID, the owner ID, and the organization ID of this record, you can use the <a href="https://github.com/oroinc/platform/blob/7.0/src/Oro/Bundle/SecurityBundle/Acl/Domain/DomainObjectReference.php" target="_blank">DomainObjectReference</a> as the domain object:
 
 ```php
 // ....
@@ -70,11 +70,11 @@ Use the is_granted twig function to check grants in twig templates. To check the
 
 To manage field ACL, add the field_acl_supported attribute to the ‘security’ scope of the entity config.
 
-Enabling this attribute means the system is prepared to check access to the entity fields.
+This attribute tells the system it is prepared to check access to the entity fields.
 
 You can achieve this with the Config annotation if you have access to both the entity and the process oro:platform:update command.
 
-The following example is an illustration of the entity configuration:
+The following example illustrates the entity configuration:
 
 *src/Acme/Bundle/DemoBundle/Entity/Favorite.php*
 ```php
@@ -119,7 +119,7 @@ class Favorite implements
 }
 ```
 
-If you have no access to the entity to modify the Config annotation, set the field_acl_supported parameter with the migration:
+If you cannot modify the Config annotation on the entity, set the field_acl_supported parameter with a migration:
 
 *src/Acme/Bundle/DemoBundle/Migrations/Schema/v1_8/TurnFieldAclSupportForFavorites.php*
 ```php
@@ -161,13 +161,13 @@ Please do not enable these parameters from the code without enabling the field_a
 
 With the Field Level ACL parameter, the system manager can enable or disable Field ACL for the entity.
 
-When both the *Show Restricted* and *Field ACL* options are enabled, but a user does not have access to the field, this field is displayed in a read-only format on the create and edit pages.
+When both the *Show Restricted* and *Field ACL* options are enabled but a user lacks access to the field, the field appears in read-only format on the create and edit pages.
 
 ## Limit Permissions List
 
-A developer can limit the list of available permissions for the field with the permissions parameter in the Security scope.
+A developer can limit the available permissions for the field with the permissions parameter in the Security scope.
 
-The permissions should be listed as the string with the ; delimiter.
+List the permissions as a string with the ; delimiter.
 
 For example:
 

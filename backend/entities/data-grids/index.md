@@ -12,11 +12,11 @@ Creating a basic datagrid to display the data of all tasks involves three steps:
 
 ## Configure the Grid
 
-The backend datagrid is configured in the `/config/oro/datagrids.yml` file, while the frontend datagrid is configured in the `/views/layouts/<theme>/config/datagrids.yml` file within the configuration directory of your bundle, and is divided into the sections below.
+Configure the backend datagrid in the `/config/oro/datagrids.yml` file and the frontend datagrid in the `/views/layouts/<theme>/config/datagrids.yml` file within the configuration directory of your bundle. The configuration is divided into the sections below.
 
 ### Datasource
 
-The `source` option is used to configure a Doctrine query builder that is used to fetch the data to be displayed in the grid:
+The `source` option configures a Doctrine query builder that fetches the data displayed in the grid:
 
 *src/Acme/Bundle/DemoBundle/Resources/config/oro/datagrids.yml*
 ```yaml
@@ -42,7 +42,7 @@ datagrids:
 
 ### Displayed Columns
 
-Then, the `columns` option needs to be used to configure how which data will be displayed:
+Next, use the `columns` option to configure which data is displayed and how:
 
 *src/Acme/Bundle/DemoBundle/Resources/config/oro/datagrids.yml*
 ```yaml
@@ -64,7 +64,7 @@ Keep in mind that the frontend datagrid is configured in the `Resources/views/la
 
 ### Column Sorters
 
-Use the `sorters` option to define on which columns’ header the user can click to order by the data:
+Use the `sorters` option to define which column headers the user can click to order the data:
 
 *src/Acme/Bundle/DemoBundle/Resources/config/oro/datagrids.yml*
 ```yaml
@@ -84,13 +84,13 @@ datagrids:
                 dueDate: DESC
 ```
 
-Each key under `sorters.columns` refers to one displayed column. The `data_name` option is the term that will be used as the `order by` term in the Doctrine query.
+Each key under `sorters.columns` refers to one displayed column. The `data_name` option provides the `order by` term for the Doctrine query.
 
 ### Data Filters
 
-Data filters are UI elements that allow the user to filter the data being displayed in the data grid. List all the attributes for which a filter should be shown under the `filters.columns` key. To configure the filter for a certain property, two options are needed:
+Data filters are UI elements that let the user filter the data displayed in the data grid. List every attribute that needs a filter under the `filters.columns` key. Configuring a filter for a property requires two options:
 
-* The `type` configures the UI type of the filter. The type of filter should be chosen based on the data type of the underlying attribute.
+* The `type` configures the UI type of the filter. Choose it based on the data type of the underlying attribute.
 * The `data_name` denotes the name of the property to filter and will be used as is to modify the datagrid’s query builder.
 
 *src/Acme/Bundle/DemoBundle/Resources/config/oro/datagrids.yml*
@@ -186,7 +186,7 @@ datagrids:
 
 ## Create the Controller and View
 
-To make your datagrid accessible, create a controller that the user can visit, which will serve as a view that renders the configured datagrid:
+To make your datagrid accessible, create a controller the user can visit. It serves as a view that renders the configured datagrid:
 
 *src/Acme/Bundle/DemoBundle/Controller/QuestionController.php*
 ```php
@@ -221,13 +221,13 @@ The view can be straightforward if you extend the `@OroUI/actions/index.html.twi
 {% set pageTitle = 'acme.demo.question.entity_plural_label'|trans %}
 ```
 
-Configure the name of your datagrid and the title you wish to be displayed. The base template from the OroUIBundle handles everything else.
+Configure the name of your datagrid and the title you want to display. The base template from the OroUIBundle handles everything else.
 
 <a id="cookbook-entities-grid-navigation"></a>
 
 ## Link to the Action
 
-At last, you need to make the action accessible by creating a menu item:
+Finally, make the action accessible by creating a menu item:
 
 *src/Acme/Bundle/DemoBundle/Resources/config/oro/navigation.yml*
 ```yaml
