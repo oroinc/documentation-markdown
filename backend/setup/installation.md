@@ -4,7 +4,7 @@
 
 # Installation
 
-The topic provides the details on how to install Oro applications via the command-line interface provided that the necessary environment is already installed.
+This topic explains how to install Oro applications from the command line, assuming the required environment is already in place.
 
 #### NOTE
 For environment installation guidelines, see [Development Environment](dev-environment/index.md#doc-dev-env-best-practices).
@@ -15,7 +15,7 @@ For environment installation guidelines, see [Development Environment](dev-envir
 
 There are eight base applications to choose from.
 
-Create your new Oro application project with the composer by running one of the commands below, depending on the base application you want to install:
+Create your Oro application project with Composer by running the command for the base application you want to install:
 
 ```none
 # OroCommerce Community Edition
@@ -41,7 +41,7 @@ composer create-project oro/commerce-enterprise-application my_project_name 6.0.
 #### HINT
 Version `6.0.3` is an example. Please replace it with the version you want to download.
 
-This command creates a new directory called my_project_name/ that contains an empty project. An absolute path to the directory will be used in the following steps and will be referred to as **<application-root-folder>** further in this topic.
+This command creates a new directory, my_project_name/, that contains an empty project. Later steps refer to the absolute path of this directory as **<application-root-folder>**.
 
 #### NOTE
 Alternatively, you can download and unpack the archive with the application source code or use git instead of the composer. Please, refer to the dedicated article [Get the Oro Application Source Code](get-source-files.md#installation-get-files) for more details.
@@ -62,17 +62,17 @@ For more information on these parameters, see <a href="https://github.com/oroinc
 
 ## Configure File Storages
 
-By default, an application will be installed with local file systems as [File Storages](../architecture/tech-stack/file-storage.md#backend-file-storage) with predefined system paths.
+By default, the application installs local file systems as [File Storages](../architecture/tech-stack/file-storage.md#backend-file-storage) with predefined system paths.
 
-To change this configuration, please follow the [Adapters Configuration](../architecture/tech-stack/file-storage.md#backend-file-storage-adapters-configuration) to learn how you can change this configuration.
+To change this configuration, follow the [Adapters Configuration](../architecture/tech-stack/file-storage.md#backend-file-storage-adapters-configuration) guide.
 
 ## Configure Application For Media Storage as a Sub-Folder
 
-The application’s default public/media folder can have many files.
+The application’s default public/media folder can hold many files.
 
-To make better use of the disk space, you can move files to an external storage or use another volume or directory as file storage. See [File Storages](../architecture/tech-stack/file-storage.md#backend-file-storage) and [Adapters Configuration](../architecture/tech-stack/file-storage.md#backend-file-storage-adapters-configuration) topics to learn how to switch to the external storage.
+To use disk space more efficiently, move files to external storage or use another volume or directory as file storage. See the [File Storages](../architecture/tech-stack/file-storage.md#backend-file-storage) and [Adapters Configuration](../architecture/tech-stack/file-storage.md#backend-file-storage-adapters-configuration) topics to learn how to switch to external storage.
 
-If the customizer decides to use another volume or directory as file storage, they can do it in two ways:
+You can use another volume or directory as file storage in two ways:
 
 - with a symlink
 - by binding one directory path (the folder outside your web root) to another
@@ -108,7 +108,7 @@ php bin/console oro:migration:data:load --fixtures-type=demo --env=prod
 
 ## Set Up File Permissions
 
-Below application directories must be writable both by the web server and the command line user:
+The following application directories must be writable by both the web server and the command-line user:
 
 * var/sessions
 * var/cache
@@ -149,9 +149,9 @@ The required background processes are the following:
 * **message queue consumer** — Performs resource-consuming tasks in the background.
 * **web socket server** — Manages real-time messages between the application server and the user’s browser.
 
-It is crucial to keep these two background processes running. To maintain their constant availability, using <a href="http://supervisord.org/" target="_blank">Supervisord</a> or another supervising tool is recommended.
+You must keep these two background processes running. To keep them constantly available, use <a href="http://supervisord.org/" target="_blank">Supervisord</a> or another supervising tool.
 
-To configure Supervisord, use your root privileges.
+Configure Supervisord with root privileges.
 
 ### Configure the Supervisor
 
@@ -219,7 +219,7 @@ OAuth 2.0 authorization requires generating RSA private and public keys and plac
 You can generate these keys using the following command:
 
 ```none
-php bin/console oro:oauth-server:generate-keys``
+php bin/console oro:oauth-server:generate-keys
 ```
 
 Alternatively, keys can be created manually:
@@ -242,7 +242,7 @@ Alternatively, keys can be created manually:
    openssl rsa -in private.key -passin pass:_passphrase_ -pubout -out public.key
    ```
 
-The private key should remain confidential and must not be stored within the web-accessible directories of the authorization server. The authorization server also needs access to the corresponding public key. If a passphrase was used during the generation of the private key, it must be supplied to the authorization server. The public key should be shared with any services responsible for validating access tokens.
+Keep the private key confidential, and never store it within the web-accessible directories of the authorization server. The authorization server also needs the corresponding public key, plus the passphrase if one was used to generate the private key. Share the public key with any services responsible for validating access tokens.
 
 ### Congratulations! You’ve Successfully Installed Your Oro Application
 

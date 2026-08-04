@@ -1,14 +1,14 @@
 # Data Fixtures for Translation Entities
 
-The article provides information about data fixtures for translatable entities.
+This article describes data fixtures for translatable entities.
 
 ## Classes Description
 
 ### AbstractTranslatableEntityFixture
 
-The purpose of this class is to create translatable entities. It gathers translation files, defines existing locales, and provides service methods to perform translation.
+This class creates translatable entities. It gathers translation files, defines existing locales, and provides service methods to perform translation.
 
-Descended classes must define the method “loadEntities”.
+Descendant classes must define the method “loadEntities”.
 
 Constants:
 

@@ -24,7 +24,7 @@ This guide demonstrates how to set up [Docker and Symfony Server development sta
    ```none
    npm install -g pnpm@latest-10
    ```
-5. If you are going to use an Enterprise Edition of the application, install the mongodb php extension:
+5. If you plan to use the Enterprise Edition, install the mongodb php extension:
    ```none
    brew tap shivammathur/extensions
    brew install mongodb@8.5
@@ -38,7 +38,7 @@ This guide demonstrates how to set up [Docker and Symfony Server development sta
    brew install symfony-cli
    symfony local:server:ca:install
    ```
-8. Restart the terminal and web browser to get them ready.
+8. Restart the terminal and web browser.
 
 ## What’s Next
 

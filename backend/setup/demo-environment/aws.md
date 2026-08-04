@@ -2,7 +2,7 @@
 
 # AWS Cloud Platform
 
-The <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html" target="_blank">Amazon Machine Image (AMI)</a> with OroCommerce Community Edition is listed on the <a href="https://aws.amazon.com/marketplace" target="_blank">Amazon Web Services Marketplace</a>. With its help, you can effortlessly and quickly set up an instance with a working OroCommerce Community Edition application on the <a href="https://aws.amazon.com/ec2/" target="_blank">Amazon EC2</a> platform, as described in detail further in this article.
+The <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html" target="_blank">Amazon Machine Image (AMI)</a> with OroCommerce Community Edition is listed on the <a href="https://aws.amazon.com/marketplace" target="_blank">Amazon Web Services Marketplace</a>. It lets you quickly set up an instance with a working OroCommerce Community Edition application on the <a href="https://aws.amazon.com/ec2/" target="_blank">Amazon EC2</a> platform, as described in this article.
 
 Deploying a single EC2 instance is helpful when reviewing Oro application features or using the default uncustomized application version for low and medium-traffic websites.
 
@@ -23,10 +23,10 @@ Before proceeding, ensure you have created an AWS user <a href="https://aws.amaz
 ## Installation Steps
 
 1. Sign in to the <a href="https://console.aws.amazon.com/console/home" target="_blank">AWS Management Console</a>.
-2. Open the  <a href="https://console.aws.amazon.com/ec2/v2/home" target="_blank">EC2 Dashboard</a> page (the item **Services -> EC2** in the top menu). The EC2 Dashboard enables you to observe and control all information related to your AWS EC2 instances.
+2. Open the <a href="https://console.aws.amazon.com/ec2/v2/home" target="_blank">EC2 Dashboard</a> page (the item **Services -> EC2** in the top menu). The EC2 Dashboard lets you view and manage all information about your AWS EC2 instances.
 3. Click **Launch Instance** to start the first step of the multi-step EC2 instance launching wizard.
    ![image](img/backend/setup/aws/EC2_dashboardh.png)
-4. To select the source for the AMI to run on the EC2 instance, click **AWS Marketplace** in the panel to the left. Select the source for the Amazon Machine Image that will be run on the EC2 instance.
+4. To select the source for the AMI to run on the EC2 instance, click **AWS Marketplace** in the panel to the left.
    ![image](img/backend/setup/aws/choose_an_ami.png)
 5. In the **Search AWS Marketplace Products** field, type in *Oro* and press **Enter** to see a list of AMIs with all Oro applications.
    ![image](img/backend/setup/aws/aws_marketplace.png)
@@ -40,7 +40,7 @@ Before proceeding, ensure you have created an AWS user <a href="https://aws.amaz
    #### NOTE
    You can choose a different type of the EC2 cloud but make sure that it meets the Oro application [System Requirements](../system-requirements/index.md#system-requirements).
 
-   Clicking **Review and Launch**  redirects you to the final installation step. Steps 3 to 6 are skipped as they contain preconfigured default values. Should you need to change the default values, return to Steps 3 to 6.
+   Clicking **Review and Launch** takes you to the final installation step. Steps 3 to 6 are skipped because they contain preconfigured default values. To change these values, return to Steps 3 to 6.
    ![image](img/backend/setup/aws/step_7.png)
 9. Click **Launch** at the bottom right. Select an existing public or private key pair for secure SSH access to your instance or create a new key pair.
    ![image](img/backend/setup/aws/select_a_key_pair.png)
@@ -56,7 +56,7 @@ Store the downloaded .pem private key file in a secure and accessible location. 
 12. Click **View Instances** at the bottom right to access the **Instances** page with a list of your launched EC2 instances and the information on their
 state and status.
 
-1. Click on the required instance from the list to view its description at the bottom. You can see detailed information about the selected instance below the launched instances list.
+1. Click the required instance in the list to view its detailed description below the list.
 
 > ![image](img/backend/setup/aws/launching_instance.png)
 
