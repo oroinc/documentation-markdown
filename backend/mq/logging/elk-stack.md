@@ -9,7 +9,7 @@
 >   * [Dashboard](#dashboard)
 >   * [Charts and Metrics](#charts-and-metrics)
 
-ELK Stack is the acronym that represents three open source projects: <a href="https://www.elastic.co/products/elasticsearch" target="_blank">Elasticsearch</a>, <a href="https://www.elastic.co/products/logstash" target="_blank">Logstash</a>, and <a href="https://www.elastic.co/products/kibana" target="_blank">Kibana</a>. Elasticsearch is a search and analytics engine. Logstash is a server‑side data processing pipeline that ingests data from multiple sources simultaneously, transforms it, and then sends it to a “stash” like Elasticsearch. Kibana lets users visualize data with charts and graphs in Elasticsearch.
+ELK Stack is the acronym for three open source projects: <a href="https://www.elastic.co/products/elasticsearch" target="_blank">Elasticsearch</a>, <a href="https://www.elastic.co/products/logstash" target="_blank">Logstash</a>, and <a href="https://www.elastic.co/products/kibana" target="_blank">Kibana</a>. Elasticsearch is a search and analytics engine. Logstash is a server-side data processing pipeline that ingests data from multiple sources simultaneously, transforms it, and then sends it to a “stash” like Elasticsearch. Kibana lets users visualize data with charts and graphs in Elasticsearch.
 
 ## Installing ELK Stack
 
@@ -18,6 +18,7 @@ See the documentation on how to install ELK Stack on <a href="https://www.elasti
 ## Using Logstash Formatter
 
 Logstash supports a variety of inputs that pull in all events from a multitude of common sources simultaneously. For more detailed documentation, check the <a href="https://www.elastic.co/products/logstash" target="_blank">Logstash product page</a>.
+
 Configure <a href="https://github.com/Seldaek/monolog/blob/master/src/Monolog/Formatter/LogstashFormatter.php" target="_blank">Monolog Logstash formatter</a> in your `config_%env%.yml` file.
 
 *path/to/config_prod.yml*
@@ -69,7 +70,8 @@ Logs will be formatted like:
 
 ## Using Filebeat
 
-Filebeat helps you keep the simple things simple by offering a lightweight way to forward and centralize logs and files.
+Filebeat offers a lightweight way to forward and centralize logs and files.
+
 Filebeat comes with internal modules (auditd, Apache, NGINX, System, PostgreSQL, and more) that simplify the collection, parsing, and visualization of common log formats down to a single command.
 
 Filebeat configuration:
@@ -90,7 +92,7 @@ filebeat.prospectors:
 
 ## Visualisation
 
-Kibana works in pair with Elasticsearch and gives the possibility to search, view, and interact with data stored in Elasticsearch indices. You can easily perform advanced data analysis and visualize your data in a variety of charts, tables, and maps.
+Kibana works together with Elasticsearch, letting you search, view, and interact with data stored in Elasticsearch indices. You can perform advanced data analysis and visualize your data in a variety of charts, tables, and maps.
 
 Kibana benefits:
 
@@ -103,7 +105,7 @@ Kibana benefits:
 
 ### Dashboard
 
-You can easily set up dashboards and reports and share them with others. All you need is a browser to view and explore the data.
+You can set up dashboards and reports and share them with others. All you need is a browser to view and explore the data.
 
 ### Charts and Metrics
 

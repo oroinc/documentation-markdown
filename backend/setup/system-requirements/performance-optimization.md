@@ -8,9 +8,9 @@
 
 ### PHP-FPM configuration
 
-PHP-FPM (FastCGI Process Manager) is an alternative PHP FastCGI implementation adjusted for better handling of the heavy workload.
+PHP-FPM (FastCGI Process Manager) is an alternative PHP FastCGI implementation tuned to handle heavy workloads.
 
-The recommended configuration of the PHP-FPM is provided below.
+The recommended PHP-FPM configuration is below.
 
 ```ini
 [www]
@@ -37,7 +37,7 @@ Make sure that Nginx `fastcgi_pass` and PHP-FPM `listen` options are aligned.
 
 Use an OpCache bytecode engine to cache bytecode representation of the PHP code and save time on the repetitive runtime compilation.
 
-Please install Opcache php-extension and configure it in the following way:
+Install the Opcache php-extension and configure it as follows:
 
 ```text
 opcache.enable=1
@@ -55,8 +55,7 @@ The opcache.load_comments and opcache.save_comments parameters are enabled by de
 
 ## Optimize Web Server Performance
 
-You can improve your website performance by turning on compression and caching.
-This is configured on your web server.
+Improve your website performance by turning on compression and caching. You configure both on your web server.
 
 ### For Nginx
 
@@ -116,8 +115,7 @@ server {
 
 If you are using Apache as your web server, you already have the necessary configuration in the `public/.htaccess` file.
 
-However, this configuration relies on the `mod_deflate` and `mod_headers` modules that are needed for the compression
-and caching to work. Ensure these modules are enabled in Apache configuration.
+However, this configuration relies on the `mod_deflate` and `mod_headers` modules for compression and caching to work. Ensure both modules are enabled in your Apache configuration.
 
 1. To enable compression, ensure that the `mod_deflate` module is loaded in your Apache config file as illustrated below:
    ```none
@@ -142,7 +140,7 @@ and caching to work. Ensure these modules are enabled in Apache configuration.
    </IfModule>
    ```
 2. To install `Pagespeed` module for Apache, follow the guidance on <a href="https://modpagespeed.com/doc/download" target="_blank">installing from Apache-only packages</a>.
-   To enable `HTML compression`, ensure that these lines are uncommetned in `pagespeed.conf`:
+   To enable `HTML compression`, ensure that these lines are uncommented in `pagespeed.conf`:
    ```none
    ModPagespeed On
    ModPagespeedFileCachePath "/var/cache/mod_pagespeed/"
@@ -191,11 +189,11 @@ To tune for indexing speed, you can try the following recommendations:
 
 See more information on optimizing indexing speed on <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/tune-for-search-speed.html" target="_blank">Elasticsearch website</a>.
 
-Also, keep in mind that using Elasticsearch with PostgreSQL, Redis and/or Rabbit on one server is not recommended to avoid slow performance.
+Also, avoid running Elasticsearch on the same server as PostgreSQL, Redis, and/or Rabbit, as this can slow performance.
 
 ## Optimize Redis
 
-To optimize Redis, try the following configurations for performance optimization:
+To optimize Redis, try the following configurations:
 
 * Limits
   ```none
@@ -229,13 +227,13 @@ To optimize Redis, try the following configurations for performance optimization
   activerehashing yes
   ```
 
-The complete configuration recommendations is available in the <a href="http://download.redis.io/redis-stable/redis.conf" target="_blank">Redis configuration file example</a>.
+The complete configuration recommendations are available in the <a href="http://download.redis.io/redis-stable/redis.conf" target="_blank">Redis configuration file example</a>.
 
 You can find more information on memory optimization on <a href="https://redis.io/topics/memory-optimization" target="_blank">Redis website</a>.
 
 ## Optimize PostgreSQL
 
-The following recommendations can highly improve PostgreSQL performance:
+The following recommendations can significantly improve PostgreSQL performance:
 
 * Increase the *shared_buffers* value in postgresql.conf. The *shared_buffers* parameter defines how much dedicated memory PostgreSQL uses for the cache. The recommended value is 25% of your total machine RAM, but the value can be lower or higher depending on your system configuration. Try finding the right balance by altering the values.
 * Increase the *effective_cache_size* value in postgresql.conf. The parameter specifies the amount of memory available in the OS and PostgreSQL buffer caches. Usually, it should be more than 50% of the total memory. Otherwise, it may slow down the performance.

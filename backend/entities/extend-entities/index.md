@@ -2,10 +2,9 @@
 
 # Extend Entities
 
-Common Doctrine entities have a fixed structure. This means that you cannot add additional
-attributes to existing entities. Of course, one can extend an entity class and add additional
-fields and associations in the subclass. However, this approach does not work anymore when an entity should be
-extended by different modules.
+Common Doctrine entities have a fixed structure, so you cannot add attributes to existing
+entities. You can extend an entity class and add fields and associations in a subclass, but this
+approach breaks down when different modules need to extend the same entity.
 
 To solve this, you can use <a href="https://github.com/oroinc/platform/tree/6.1/src/Oro/Bundle/EntityExtendBundle" target="_blank">EntityExtendBundle</a> which offers the following features:
 
@@ -16,8 +15,8 @@ To solve this, you can use <a href="https://github.com/oroinc/platform/tree/6.1/
 * Support for dynamic relationships between entities.
 
 #### CAUTION
-It is not recommended to rely on the existence of dynamic fields in your business logic since
-they can be removed by administrative users.
+Do not rely on the existence of dynamic fields in your business logic, since administrative
+users can remove them.
 
 <a id="book-entities-extended-entities-create"></a>
 
@@ -84,9 +83,9 @@ The example above adds a new column `document_rating`. The third parameter confi
 as an extended field. The `ExtendScope::OWNER_CUSTOM` owner in the `oro_options` key
 indicates that the column was added dynamically. It will be visible and configurable in the UI.
 
-Note that this field is neither present in the `Document` entity class nor in the
-`ExtendDocument` class in your bundle, but it will only be part of the `ExtendDocument` class that
-will be generated in your application cache.
+Note that this field is present neither in the `Document` entity class nor in the
+`ExtendDocument` class in your bundle. It becomes part only of the `ExtendDocument` class
+generated in your application cache.
 
 1. Finally, load the changed configuration using the `oro:migration:load` command:
    ```bash
@@ -115,15 +114,15 @@ The ``dry-run`` can be used to show changes without applying them, for example:
 
 ## Add Entity Fields
 
-You may require to customize the default Oro entities to meet the needs of your application.
+You may need to customize the default Oro entities to meet the needs of your application.
 
-Let us customize the User entity to store the date when a contact becomes a member of your company’s partner network.
-As an illustration, we will use the User entity from a custom DemoBundle.
+As an illustration, let us customize the User entity from a custom DemoBundle to store the date
+when a contact becomes a member of your company’s partner network.
 
-To achieve this, add a new field `partnerSince` to store the date and time of when a contact joined your network.
-To add the field, create a migration:
+Add a new field `partnerSince` to store the date and time when a contact joined your network,
+using a migration:
 
-*src/Acme/Bundle/DemoBundle/Migrations/Schema/v1_2/AddPartnerSinceToOroUser.php;*
+*src/Acme/Bundle/DemoBundle/Migrations/Schema/v1_2/AddPartnerSinceToOroUser.php*
 ```php
 <?php
 
@@ -156,8 +155,8 @@ class AddPartnerSinceToOroUser implements Migration
 ```
 
 #### NOTE
-Please note that the entity that you add a new field to must have the `#[Config]` attribute
-and should extend an Extend class.
+The entity you add a new field to must have the `#[Config]` attribute and should extend an
+Extend class.
 
 The important part in this migration (which is different from common Doctrine migrations) is the `oro_options` key.
 It is passed through the `options` argument of the `addColumn()` method:
@@ -180,13 +179,13 @@ It is passed through the `options` argument of the `addColumn()` method:
 All options nested under this key are handled outside of the usual Doctrine migration workflow.
 
 When the EntityExtendBundle of the OroPlatform finds the `extend` key, it generates an intermediate class
-with getters and setters for the defined fields, thus making them accessible from every part of the code.
-The intermediate class is generated automatically based on the configured data when the application cache is warmed up.
+with getters and setters for the defined fields, making them accessible everywhere in your code.
+This class is generated automatically from the configured data when the application cache is warmed up.
 
 The `owner` attribute can have the following values:
 
 * `ExtendScope::OWNER_CUSTOM` — The field is user-defined, and the core system should handle how the field appears in grids, forms, etc. (if not configured otherwise).
-* `ExtendScope::OWNER_SYSTEM`— Nothing is rendered automatically, and the developer must explicitly specify how to show the field in different parts of the system (grids, forms, views, etc.).
+* `ExtendScope::OWNER_SYSTEM` — Nothing is rendered automatically, and the developer must explicitly specify how to show the field in different parts of the system (grids, forms, views, etc.).
 
 #### NOTE
 For more default attribute set settings for Extend Entities, see <a href="https://doc.oroinc.com/backend/configuration/annotation/config-field" target="_blank">#[ConfigField]</a>.

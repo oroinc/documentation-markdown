@@ -6,36 +6,37 @@
 
 ## AmqpMessageQueue Component
 
-The component incorporates message queue in your application via
-different transports. It contains several layers.
+The component adds a message queue to your application through
+different transports. It is built from several layers.
 
-The lowest layer is called Transport and it provides an abstraction of
-transport protocol. The Consumption layer provides the tools to consume
-messages, such as the cli command, signal handling, logging, extensions. It
-works on top of the transport layer.
+The lowest layer, Transport, abstracts the transport protocol.
 
-The Client layer provides the ability to start
-`producing\consuming` messages with as little configuration as possible.
+The Consumption layer runs on top of the Transport layer. It provides the
+tools to consume messages, such as the CLI command, signal handling, logging,
+and extensions.
+
+The Client layer lets you start `producing\consuming` messages with as
+little configuration as possible.
 
 ## Installation
 
-You need to have RabbitMQ **version 3.7.21**  and above installed to use the AMQP
-transport. To install the RabbitMQ you should follow the <a href="https://www.rabbitmq.com/download.html" target="_blank">download and installation manual</a>.
+To use the AMQP transport, install RabbitMQ **version 3.7.21** and above. Follow
+the <a href="https://www.rabbitmq.com/download.html" target="_blank">download and installation manual</a>.
 
-After the installation, please check that you have all the required plugins
-installed and enabled.
+After installation, check that all the required plugins are installed and
+enabled.
 
 ## Minimum Permissions
 
 #### NOTE
 You might want to read more on <a href="https://www.rabbitmq.com/access-control.html" target="_blank">access control</a>.
 
-Your credentials must meet the next minimum requirements:
+Your credentials must meet the following minimum requirements:
 
 - You have access to the requested rabbitmq’s virtual host (`/` by
   default).
-- You need to have the next permissions: `configure`, `write`,
-  `read`. It could be a default value `.*` or a stricter
+- You have the following permissions: `configure`, `write`,
+  `read`. The value can be the default `.*` or a stricter
   `oro\..*`.
 
 ## RabbitMQ Plugins
@@ -46,9 +47,8 @@ Your credentials must meet the next minimum requirements:
 |----------------------------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | rabbitmq_del<br/>ayed_message<br/>\_exchange | 3.8.0     | A plugin that adds delayed-messaging (or<br/>scheduled-messaging) to RabbitMQ.<br/><a href="https://github.com/rabbitmq/rabbitmq-delayed-message-exchange" target="_blank">Read more on Delayed Message Exchange</a>. |
 
-The plugin `rabbitmq_delayed_message_exchange` is necessary
-for the proper work but it is not installed by default, so you need to
-download, install and enable it.
+The `rabbitmq_delayed_message_exchange` plugin is required but is not
+installed by default, so you must download, install, and enable it.
 
 To download it, use the following command:
 
@@ -98,13 +98,12 @@ a different enabled plugin.
 
 ## Queues
 
-If you use only this component, you are free to create any queues you
-want and as many as you need. If you use the Client abstraction
-with this transport, the next queues will be created: `oro.default` and
-`oro.default.delayed`. The first keeps all sent messages, and the
-seconds keeps broken message that have to be delayed and redelivered
-later. You can still have more queues by explicitly configuring the message
-processor `destinationName` option.
+If you use only this component, you can create as many queues as you
+need. If you use the Client abstraction with this transport, two queues
+are created: `oro.default` and `oro.default.delayed`. The first keeps
+all sent messages; the second keeps broken messages that have to be delayed
+and redelivered later. You can still add more queues by explicitly
+configuring the message processor `destinationName` option.
 
 ## Default Queue Presets
 
@@ -123,14 +122,14 @@ processor `destinationName` option.
 
 ## Delaying Messages
 
-In order to use delayed message with RabbitMQ broker, you have to install
+To use delayed messages with the RabbitMQ broker, you must install
 its plugin. Read more on <a href="https://www.rabbitmq.com/blog/2015/04/16/scheduling-messages-with-rabbitmq/" target="_blank">scheduling messages on RabbitMQ website</a>.
 
 ## Usage
 
-Usage is similar to one described in the message queue component. Here,
-we will show you how to get amqp connection. We are assuming the
-RabbitMQ is used as a broker with minimum configuration.
+Usage is similar to the message queue component. This section shows how to
+get an AMQP connection, assuming RabbitMQ is used as a broker with minimum
+configuration.
 
 ```php
 use Oro\Component\AmqpMessageQueue\Transport\Amqp\AmqpConnection;
@@ -144,9 +143,8 @@ $connection = AmqpConnection::createFromConfig([
 ]);
 ```
 
-In order to use the component with the symfony application, you first have to
-register the amqp transport factory (). And tell the message queue
-bundle to use it.
+To use the component with a Symfony application, first register the AMQP
+transport factory, then tell the message queue bundle to use it.
 
 ```php
 namespace Oro\Bundle\AmqpMessageQueueBundle;
@@ -179,18 +177,17 @@ You can use the `ORO_MQ_DSN` environment variable:
 ORO_MQ_DSN=amqp://guest:guest@localhost:5672/%2Fmaster
 ```
 
-When configuring a virtual host (vhost), ensure that the vhost is URL encoded.
-If no vhost is provided, the default value of `/` is used.
-For example, if the vhost is `/master`, the corresponding url encoded vhost value is `%2Fmaster`, and if the vhost is `master`,the url encoded value is `master`.
+When configuring a virtual host (vhost), make sure the vhost is URL encoded.
+If no vhost is provided, the default value `/` is used.
+For example, the vhost `/master` is URL encoded as `%2Fmaster`, and the vhost `master` is URL encoded as `master`.
 
 ## RabbitMQ Useful Hints
 
-- You can see the RabbitMQ default web interface here, if the
-  `rabbitmq_management` plugin is enabled:
-  `http://localhost:15672/`. <a href="https://www.rabbitmq.com/management.html" target="_blank">Read more on Management</a>.
-- You can temporary stop RabbitMQ by running the command
-  `rabbitmqctl stop_app`. The command will stop the RabbitMQ
-  application, leaving the Erlang node running. You can resume it with
-  the command `rabbitmqctl start_app`. <a href="https://www.rabbitmq.com/rabbitmqctl.8.html" target="_blank">Read more on rabbitmqctl(8)</a>.
+- If the `rabbitmq_management` plugin is enabled, you can view the
+  RabbitMQ default web interface at `http://localhost:15672/`.
+  <a href="https://www.rabbitmq.com/management.html" target="_blank">Read more on Management</a>.
+- To temporarily stop RabbitMQ, run `rabbitmqctl stop_app`. This stops
+  the RabbitMQ application but leaves the Erlang node running. Resume it
+  with `rabbitmqctl start_app`. <a href="https://www.rabbitmq.com/rabbitmqctl.8.html" target="_blank">Read more on rabbitmqctl(8)</a>.
 
 <!-- Frontend -->

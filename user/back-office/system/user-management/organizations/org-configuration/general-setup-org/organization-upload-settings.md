@@ -15,10 +15,10 @@ To configure **MIME types** per organization:
 4. Clear the **Use System** checkbox next to the option.
 5. Select a set of mime types that will be supported for the file and image attachments in the system.
 6. Add any MIME type by writing the required file or image format in the text box.
-7. In the **File Names** section, you can control whether to use original file names. By default, the setting is enabled.
+7. In the **File Names** section, you can control whether to use original file names. By default, the setting is enabled. The **File Names** settings can be configured [globally](../../../../configuration/system/general-setup/upload.md#admin-configuration-upload-settings), per organization and [per website](../../../../websites/web-configuration/general-sys-config/general/website-upload-settings.md#upload-settings-website).
 
-   #### HINT
-   The **File Names** settings can be configured [globally](../../../../configuration/system/general-setup/upload.md#admin-configuration-upload-settings), per organization and [per website](../../../../websites/web-configuration/general-sys-config/general/website-upload-settings.md#upload-settings-website).
+   #### WARNING
+   Changing this setting only affects the global upload limit. It does not override a lower limit configured on an individual entity field. If a File, Image, Multiple Files, or Multiple Images type attribute has its own File Size value, that value still applies and can block uploads even after you raise this global setting. For example, out of the box, the *Product Image* attribute has its own 10 MB limit. See [Manage Product Attributes in the Back-Office](../../../../../products/product-attributes/index.md#products-product-attributes-type-based-details) for how to check or change per-attribute file size limits.
 
    **Enable Original File Names** — When enabled, the original file name is appended to the system-generated hash value. All non-alphanumeric characters (e.g., “:”, “)”, “,”, “~”) are replaced with “-” (dash).
 

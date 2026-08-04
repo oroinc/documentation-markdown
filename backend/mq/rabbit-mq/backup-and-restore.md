@@ -2,11 +2,11 @@
 
 # Backup and Restore
 
-This section provides recommendations on how to back up and restore the message queue when working with Oro applications. For more information on how to back up and restore RabbitMQ, see the related <a href="https://www.rabbitmq.com/backup.html" target="_blank">documentation on RabbitMQ website</a>.
+This section provides recommendations on backing up and restoring the message queue in Oro applications. For more details, see the related <a href="https://www.rabbitmq.com/backup.html" target="_blank">documentation on RabbitMQ website</a>.
 
 ## Backup
 
-RabbitMQ backups are JSON representation of your broker’s metadata which includes users, vhosts, queues, exchanges, and bindings.
+A RabbitMQ backup is a JSON representation of your broker’s metadata: users, vhosts, queues, exchanges, and bindings.
 
 ### Backup Procedure
 
@@ -28,7 +28,7 @@ rabbitmqadmin export /path/to/your/backup/directory/definitions.backup
 
 ### Backing Up Messages
 
-**Stop all consumers** to back up messages. Messages’ data is stored in the <a href="https://www.rabbitmq.com/relocate.html" target="_blank">node's data directory</a>. Here, the nodes are collected in the `msg_stores/vhosts` subdirectory which has other directories created per vhost.
+**Stop all consumers** to back up messages. Message data is stored in the <a href="https://www.rabbitmq.com/relocate.html" target="_blank">node's data directory</a>, under the `msg_stores/vhosts` subdirectory, which holds a directory per vhost.
 
 The only way to back up messages is to **copy \`\`msg_stores\`\` messages data directory**.
 
@@ -42,7 +42,7 @@ cp -a /var/lib/rabbitmq/mnesia/your\@node/msg_stores/ /path/to/your/backup/direc
 
 ## Restore
 
-For messages to be restored, the broker should have all the definitions already in place. Message data for unknown vhosts and queues will not be loaded and can be deleted by the node.
+Before restoring messages, the broker must already have all the definitions in place. The node does not load message data for unknown vhosts and queues, and it may delete such data.
 
 ### Restore Procedure
 

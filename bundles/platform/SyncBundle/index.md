@@ -19,7 +19,7 @@ INFO      [websocket] Starting web socket
 INFO      [websocket] Launching Ratchet on 127.0.0.1:8080 PID: 4675
 ```
 
-The websocket server should now be up and running.
+The WebSocket server should now be up and running.
 
 ## Logging Levels
 

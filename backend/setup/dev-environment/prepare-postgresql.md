@@ -8,9 +8,9 @@ postgresql-setup --initdb
 
 ## Enable Password Protected PostgreSQL Authentication
 
-By default, PostgreSQL is configured to use ident authentication.
+By default, PostgreSQL uses ident authentication.
 
-To use the password-based authentication instead, replace the ident with the md5 in the pg_hba.conf file.
+To use password-based authentication instead, replace ident with md5 in the pg_hba.conf file.
 
 Open the file  */var/lib/pgsql/data/pg_hba.conf* and change the following strings:
 
@@ -28,7 +28,7 @@ host    all             all             ::1/128                 md5
 
 ## Change the Password for the *postgres* User
 
-To set the password for the *postgres* user to the new secure one, run the following commands:
+To set a new secure password for the *postgres* user, run the following commands:
 
 ```bash
 systemctl start postgresql
@@ -42,7 +42,7 @@ You will be prompted to enter the new password.
 
 ## Create a Database for the Oro Application
 
-To create the oro database that will be used by the Oro application, run the following commands:
+To create the oro database for the Oro application, run the following commands:
 
 ```bash
 CREATE DATABASE oro;

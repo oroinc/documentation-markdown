@@ -1,6 +1,6 @@
 # Mass Action Configuration
 
-Using the themeOptions parameters in the bundle layout.yml file, you can customize and tune the way individual mass actions and the mass actions group are shown in the UI when the items delivered by the bundle are shown in the grid view.
+The themeOptions parameters in the bundle layout.yml file let you customize how individual mass actions and the mass actions group appear in the grid view.
 
 Sample configuration in the layout.yml file(s) in the `Resources/views/layouts/theme/page/folder` in the bundle (e.g., OrderBundle):
 
@@ -20,9 +20,9 @@ layout:
 
 ## Controlling Actions List View
 
-The cellActionsHideCount and cellLauncherOptions > actionsState parameters control the way mass actions collapse into the show more group (…) and will be displayed on hover over the ….
+The cellActionsHideCount and cellLauncherOptions > actionsState parameters control how mass actions collapse into the show more group (…) and appear on hover over the ….
 
-When not collapsed, the actions show inline with the item: ‘three dots’ menu is hidden.
+When not collapsed, the actions show inline with the item, and the ‘three dots’ menu is hidden.
 
 To collapse all actions into the show more group (…), set actionsState to hide.
 In this case, the actionsHideCount value is ignored.
@@ -36,7 +36,7 @@ To keep all actions expanded, set actionsState to show and actionsHideCount to a
 
 A user sees all line items.
 
-To optimize the space organization, keep the most used actions expanded and hide the less frequent ones.
+To save space, keep the most used actions expanded and hide the less frequent ones.
 To do so, set actionsHideCount to the average number of frequently used actions (e.g., 3).
 
 #### HINT
@@ -46,7 +46,7 @@ A user sees only some line items and the ‘three dots’ menu.
 
 ## Controlling the Action View
 
-Based on the launcherMode value, the individual mass actions can be displayed in one of the following modes.
+The launcherMode value displays each individual mass action in one of the following modes.
 
 ### Label and Icon
 
