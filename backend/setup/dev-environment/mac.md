@@ -36,7 +36,7 @@ This guide demonstrates how to set up [Docker and Symfony Server development sta
    source ~/.bash_profile
    symfony local:server:ca:install
    ```
-7. Restart the terminal and web browser to get them ready.
+7. Restart the terminal and web browser.
 
 ## What’s Next
 

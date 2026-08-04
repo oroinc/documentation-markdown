@@ -51,7 +51,7 @@ parameters:
     secret: '%env(ORO_SECRET)%'
     database_dsn: '%env(ORO_DB_DSN)%'
     mailer_dsn: '%env(ORO_MAILER_DSN)%'
-    websocket_server_dsn: '%env(ORO_WEBSOCKET_SERVER_DSN)%' # The websocket server will listen on this address and port.
+    websocket_server_dsn: '%env(ORO_WEBSOCKET_SERVER_DSN)%' # The WebSocket server will listen on this address and port.
     websocket_frontend_dsn: '%env(ORO_WEBSOCKET_FRONTEND_DSN)%' # The host, port and path for the browser to connect to.
     websocket_backend_dsn: '%env(ORO_WEBSOCKET_BACKEND_DSN)%' # The host, port and path for the server-side code to connect to.
     search_engine_dsn: '%env(ORO_SEARCH_ENGINE_DSN)%'

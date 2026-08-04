@@ -2,12 +2,14 @@
 
 This topic describes how to add a custom shipping method to your OroCommerce-based store.
 
-It is recommended to manage shipping methods through integrations. Therefore, to create a new shipping method:
+We recommend managing shipping methods through integrations. To create a new shipping method:
 
 - Implement an integration for the shipping method
 - Implement the shipping method itself
 
-Usually, a shipping method has several services to provide a flexible choice of price and delivery time. As an example, we will implement the “Fast Shipping” method — a simple method that requires just the minimum set of options to operate. It will have two services (types): “With present” and “Without present”. Thus, at the end of the topic, you will have the understanding of what steps are necessary to add a workable shipment method and the basic template that you can further extend when the need arises.
+A shipping method usually has several services to offer a flexible choice of price and delivery time. As an example, we will implement the “Fast Shipping” method — a simple method that needs only the minimum set of options to operate. It will have two services (types): “With present” and “Without present”.
+
+By the end of this topic, you will understand the steps needed to add a working shipping method, along with a basic template that you can extend later as needed.
 
 ## Create a Bundle
 
@@ -49,7 +51,7 @@ All the files and subdirectories mentioned in the following sections are to be a
 
 ### Create an Entity to Store the Shipping Method Settings
 
-Define an entity that to store the configuration settings of the shipping method in the database. To do this, create <bundle_root>/Entity/FastShippingSettings.php:
+Define an entity to store the shipping method’s configuration settings in the database. To do this, create <bundle_root>/Entity/FastShippingSettings.php:
 
 ```php
 <?php
@@ -139,7 +141,7 @@ When naming DB columns, make sure that the name does not exceed 31 symbols. Pay 
 
 ### Create a User Interface Form for the Shipping Method Integration
 
-When you add an integration via the user interface of the back-office, a form that contains the integration settings appears. In this step, implement the form. To do this, create <bundle_root>/Form/Type/FastShippingTransportSettingsType.php:
+When you add an integration in the back-office, a form with the integration settings appears. Implement that form by creating <bundle_root>/Form/Type/FastShippingTransportSettingsType.php:
 
 ```php
 <?php
@@ -262,7 +264,7 @@ To make sure that the icon is accessible for the web interface, check if it appe
 
 ### Create the Integration Transport
 
-Transport is generally responsible for how the data is obtained from the external system. While the Fast Shipping method does not interact with external systems, you still need to define transport and implement all methods of the TransportInterface for the integration to work properly. To add transport, create <bundle_root>/Integration/FastShippingTransport.php:
+Transport is generally responsible for how data is obtained from the external system. The Fast Shipping method does not interact with external systems, but you still need to define transport and implement all methods of the TransportInterface for the integration to work properly. To add transport, create <bundle_root>/Integration/FastShippingTransport.php:
 
 ```php
 <?php
@@ -383,7 +385,7 @@ acme:
 
 ### Add an Installer
 
-An installer ensures that upon the application installation, the database will contain the entity that you defined within your bundle.
+An installer ensures that when the application is installed, the database contains the entity you defined in your bundle.
 
 Follow the instructions provided in the [How to generate an installer](../entities/migration.md#installer-generate) topic to apply the changes without migration and generate an installer file based on the current schema of the DB.
 
@@ -619,7 +621,7 @@ The methods are the following:
 * `getIcon` — Returns the icon that appears on the shipping rule edit page.
 * `isEnabled` — Defines, whether the integration of the shipping method is enabled by default.
 * `isGrouped` — Defines how shipping method’s types appear in the shipping method configuration on the user interface. If set to `true`, the types appear in the table where each line contains the **Active** checkbox that enables users to enable individual shipping method types for a particular shipping method configuration.
-* `getSortOrder` —  Defines the order in which shipping methods appear on the user interface. For example, in the following screenshot, the Flat rate sort order is lower than the UPS sort order:
+* `getSortOrder` — Defines the order in which shipping methods appear on the user interface. For example, in the following screenshot, the Flat rate sort order is lower than the UPS sort order:
   ![image](img/backend/extend_commerce/shipping_methods_frontend.png)
 * `getType` — Returns the selected shipping method type based on the type identifier.
 * `getTypes` — Returns a set of the shipping method types.
@@ -834,10 +836,10 @@ class FastShippingMethodType implements ShippingMethodTypeInterface
 
 * `getIdentifier` — Returns a unique identifier of a shipping method type in the scope of the shipping method.
 * `getLabel` — Returns the label of the shipping method type. The label appears on the shipping rule edit page in the back-office and in the storefront.
-* `getSortOrder` —  Defines the order in which shipping method types appear on the user interface. For example, see the UPS shipping types below. The number that defines the sort order of the UPS Ground is lower than that of the UPS 2nd Day Air (i.e. the lower the number, the higher up the list the method type appears):
+* `getSortOrder` — Defines the order in which shipping method types appear on the user interface. For example, see the UPS shipping types below. The number that defines the sort order of the UPS Ground is lower than that of the UPS 2nd Day Air (i.e. the lower the number, the higher up the list the method type appears):
   ![image](img/backend/extend_commerce/shipping_methods_frontend.png)
 * `getOptionsConfigurationFormType` — Returns the user interface form with the configuration options. The form appears on the shipping rule edit page. If the method returns `HiddenType::class`, the form does not appear.
-* `calculatePrice`– Contains the main logic and returns the shipping price for the given `$context`.
+* `calculatePrice` — Contains the main logic and returns the shipping price for the given `$context`.
 
 #### NOTE
 If you implement a more complicated shipping method, see Oro\\Bundle\\ShippingBundle\\Context\\ShippingContextInterface for attributes that can affect a shipping price (e.g., shipping address information or line items).
@@ -975,7 +977,7 @@ acme:
 
 ### Add a Template
 
-In the shipping rules, this template is used to display the configured settings of the Fast Shipping integration.
+In the shipping rules, this template displays the configured settings of the Fast Shipping integration.
 
 Create the /Resources/views/method/fastShippingMethodWithOptions.html.twig file with the following content:
 

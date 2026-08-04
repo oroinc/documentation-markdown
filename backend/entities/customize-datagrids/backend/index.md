@@ -2,16 +2,16 @@
 
 # Backend Datagrid
 
-Datagrid is a table-oriented representation of the data from a datasource.
-It is configured in a YAML file placed in your bundle’s `Resources/config/oro` folder and called `datagrids.yml`.
-This file should contain the root node `datagrids` and each grid configuration must be placed under it.
+A datagrid is a table-oriented representation of data from a datasource.
+Configure it in a YAML file named `datagrids.yml`, placed in your bundle’s `Resources/config/oro` folder.
+The file must contain the root node `datagrids`, with each grid configuration placed under it.
 
 ## Getting Started
 
 ### Configuration File
 
-To define your own datagrid, create a configuration file as described above.
-Next, choose the identifier of your future grid and declare it by adding an associative array with the identifier as the key.
+To define your own datagrid, create the configuration file described above.
+Then choose an identifier for the grid and declare it by adding an associative array with the identifier as the key.
 
 For example:
 
@@ -23,8 +23,8 @@ datagrids:
 
 ### Datasource
 
-The next step is configuring datasource, a similar array under the `source` node.
-Choose datasource type and properly configure it. For further details, check the [datasources](datasources/index.md#customize-datagrids-datasource) section.
+Next, configure the datasource in a similar array under the `source` node.
+Choose a datasource type and configure it. For details, see the [datasources](datasources/index.md#customize-datagrids-datasource) section.
 
 For example:
 
@@ -41,8 +41,8 @@ datagrids:
 
 #### Datasource as Service
 
-Other than the `query` yaml-oriented provider, ORM datasource supports an alternative `query_builder` service-oriented provider.
-You use any arbitrary method that returns a valid `Doctrine\ORM\QueryBuilder` instance.
+Besides the `query` yaml-oriented provider, the ORM datasource supports a `query_builder` service-oriented provider.
+It can use any method that returns a valid `Doctrine\ORM\QueryBuilder` instance.
 
 ```php
 // @acme_demo.user.repository
@@ -106,12 +106,12 @@ See more in the [parameters binding](parameter-binding.md#datagrids-customize-pa
 
 ### Columns and Properties
 
-The next step is column definition. It is an array as well as other parts of the grid configuration.
-The root node for columns is `columns`, the definition key should be a unique column identifier, and the value is an array of the column configuration.
-The same for properties, but the root node is `properties`.
+The next step is defining columns. Like the other parts of the grid configuration, columns are an array.
+The root node is `columns`, each definition key is a unique column identifier, and the value is an array of the column configuration.
+Properties work the same way, but their root node is `properties`.
 
-A property is something similar to a column but without frontend representation.
-Properties can be used to pass additional data generated for each row, for example, URLs of row actions.
+A property is similar to a column but has no frontend representation.
+Use properties to pass additional data generated for each row, such as URLs of row actions.
 
 #### NOTE
 The column identifier is used for a suggestion, so the best practice is to use an identifier similar to the data identifier (e.g., a field name in DQL).
@@ -119,7 +119,7 @@ The column identifier is used for a suggestion, so the best practice is to use a
 #### NOTE
 A row identifier property is usually added for correct work, but for simple grids, it is excessive.
 
-The configuration format is different depending on the column type, but there is a list of keys shared between all types.
+The configuration format depends on the column type, but some keys are shared across all types:
 
 - type - backend formatter type (field by default)
 - label - column title (translated on backend, translation should be placed in the “messages” domain)
@@ -159,10 +159,10 @@ datagrids:
 
 ### Sorting
 
-After that, you may want to make your columns sortable. The sorting configuration should be placed under the `sorters` node.
-The configuration takes the `columns` and `default` keys in basic sorter implementation.
-It is an array of column names where the value is a sorter configuration.
-One required value, `data_name`, is responsible for knowing which datagrid should do the sorting.
+Next, you may want to make your columns sortable. Place the sorting configuration under the `sorters` node.
+In the basic sorter implementation, it takes the `columns` and `default` keys.
+`columns` is an array of column names where each value is a sorter configuration.
+The required `data_name` value determines which datagrid should do the sorting.
 
 Let’s make all columns sortable:
 
@@ -186,11 +186,11 @@ For detailed explanation, see the section on [sorters](extensions/sorter.md#cust
 
 ### Final Step
 
-The final step is to add a grid to the template.
-There is a predefined macro for grid rendering defined in @OroDataGrid/macros.html.twig and can be imported
-by the following call `{% import '@OroDataGrid/macros.html.twig' as dataGrid %}` .
-Macro’s name is `renderGrid`, and it takes two arguments: grid name, route parameters(used for advanced query building).
-To display our grid, add the following code to the template:
+The final step is to add the grid to a template.
+A predefined rendering macro is defined in @OroDataGrid/macros.html.twig and is imported
+with the call `{% import '@OroDataGrid/macros.html.twig' as dataGrid %}`.
+The macro is named `renderGrid` and takes two arguments: the grid name and route parameters (used for advanced query building).
+To display the grid, add the following code to the template:
 
 ```twig
 {% import '@OroDataGrid/macros.html.twig' as dataGrid %}
@@ -200,7 +200,7 @@ To display our grid, add the following code to the template:
 ```
 
 #### NOTE
-If your template extends the @OroUI/actions/index.html.twig template, macros will be already imported, and you only have to set the gridName variable to get the grid rendered
+If your template extends the @OroUI/actions/index.html.twig template, the macros are already imported, and you only need to set the gridName variable to render the grid.
 
 ### Advanced Configuration
 
@@ -212,7 +212,7 @@ Actions, mass actions, toolbar, pagers, grid views and other functionality are e
 
 ### Behavior Customization
 
-To customize the datagrid (e.g., dynamically added columns, custom actions, add additional data, etc.), you can listen to one of the events dispatched in the datagrid component. More information on events, including their full list, is available in the section on [events](events.md#customize-datagrids-events).
+To customize the datagrid (e.g., dynamically add columns, add custom actions, or add extra data), listen to one of the events dispatched in the datagrid component. For more information, including the full list of events, see the section on [events](events.md#customize-datagrids-events).
 
 ### Extending
 

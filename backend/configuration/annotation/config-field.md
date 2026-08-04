@@ -4,7 +4,7 @@
 
 # #[ConfigField]
 
-This attribute is used to configure default values for properties of configurable entity classes.
+This attribute configures default values for properties of configurable entity classes.
 
 ## Arguments
 
@@ -39,7 +39,7 @@ This example sets the `auditable` option from the `dataaudit` scope to `true` fo
 * **is_stored_externally** *boolean* - indicates whether the file referenced by this field is stored externally on a third party service. If enabled, the external URL text input is displayed instead of the file upload input. The URLs of the external files should be publicly available. The system will not process, resize or modify the files that are stored externally. By default `false`.
 * **acl_protected** *boolean* - indicates whether acl check should be applied when loading or displaying attachments. Each ACL-protected entity must have an ownership type. Various entities can act as one, such as a user, a business unit, an organization. By default `false`.
 * **file_applications** — the list of all allowed file applications. Possible values are: ‘file’, ‘image’, ‘wysiwyg’, ‘wysiwyg_styles’, ‘multiFile’, ‘multiImage’,’default’. By default `default`.
-* **use_dam** *boolean* - indicates whether to use DAM (Digital Asset Management) to upload a file. OroDigitalAssetBundle bundle provides the Digital Asset Management (DAM) functionality and CRUD for digital assets. It can be enabled for fields of type File and Image  in the back-office UI both via the entity management and field configuration.
+* **use_dam** *boolean* - indicates whether to use DAM (Digital Asset Management) to upload a file. OroDigitalAssetBundle bundle provides the Digital Asset Management (DAM) functionality and CRUD for digital assets. It can be enabled for fields of type File and Image in the back-office UI both via the entity management and field configuration.
 * **maxsize** *integer* - sets the max size of an uploaded file in megabytes.
 * **width** *integer* - sets width for a picture thumbnail in pixels.
 * **height** *integer* - sets height for a picture thumbnail in pixels.
@@ -62,7 +62,7 @@ Attribute fields have a dedicated CRUD and field types, similarly to the extend 
 * **is_global** *boolean* - defines whether the attribute was created in the global organization.
 * **field_name** *string* - defines an attribute field name.
 * **organization_id** *integer* - defines the id of a specific organization.
-* **search_boost** *integer* -  enables you to influence the relevancy ranking of the search results by the value of the attributes.
+* **search_boost** *integer* - enables you to influence the relevancy ranking of the search results by the value of the attributes.
 * **immutable** *boolean* - is used to prohibit changing the attribute association state (regardless of whether it is enabled or not) for the entity. If TRUE, then the current state cannot be changed.
 
 <a id="annotation-config-field-dataaudit"></a>
@@ -79,7 +79,7 @@ Add a property of an entity to the changelog.
 
 #### `datagrid`
 
-Contain some settings for the datagrid screen.
+Contains settings for the datagrid screen.
 
 * **is_visible** *boolean* - if set to true, the field is displayed as the datagrid column.
 * **show_filter** *boolean* - if set to true, the field is displayed in the datagrid filter.
@@ -90,7 +90,7 @@ Contain some settings for the datagrid screen.
 
 #### `draft`
 
-[OroDraftBundle](../../../bundles/platform/DraftBundle/how-to-use-draft.md#draft-bundle-use-draft) enables you too edit and publish a version of a draftable entity record that requires more work to be finished.
+[OroDraftBundle](../../../bundles/platform/DraftBundle/how-to-use-draft.md#draft-bundle-use-draft) enables you to edit and publish a version of a draftable entity record that requires more work to be finished.
 
 * **draftable** *boolean* - defines whether field can involved in the draft operation.
 * **immutable** *boolean* - is used to prohibit changing the draftable association state (regardless of whether it is enabled or not) for the entity. If TRUE, then the current state cannot be changed.
@@ -108,7 +108,7 @@ Sets default settings for [OroEmailBundle](../../../bundles/platform/EmailBundle
 
 #### `entity`
 
-Contain settings for the entity UI.
+Contains settings for the entity UI.
 
 * **label** *string* - enables you to change the label of the field.
 * **description** *string* - enables you to change the description of the field.
@@ -136,7 +136,7 @@ The enum functionality is described in [Option Set Fields](../../entities/extend
 This attribute sets default settings for [Extend Entities](../../entities/extend-entities/index.md#book-entities-extended-entities).
 
 * **is_extend** *boolean* - switches to the ‘extend’ functionality.
-* **is_serialized** *boolean* - if set to true, the field data is saved in  the serialized_data column without doctrine schema update.
+* **is_serialized** *boolean* - if set to true, the field data is saved in the serialized_data column without doctrine schema update.
 * **without_default** *boolean* - indicates whether a relation has default value or not. Applicable only to many-to-many or one-to-many relations. If not specified or FALSE, the relation has the default value.
 * **cascade** — The names of persistence operations to cascade on the relation. Possible values are: ‘persist’, ‘remove’, ‘detach’, ‘merge’, ‘refresh’, ‘all’. Note that the ‘detach’ operation for many-to-one and one-to-many relations is applied by default and this cannot be changed through the configuration. This attribute is applicable to any type of relations. See Doctrine’s documentation for more details.
 * **bidirectional** *boolean* - a relation feature parameter, check Doctrine’s documentation for more details.
@@ -171,7 +171,7 @@ The attribute specifies a custom form type for the field.
 
 * **is_enabled** *boolean* - enables the ‘form’ functionality.
 * **form_type** or **type** *string* - form type for a specific field. Example: `Oro\Bundle\FormBundle\Form\Type\OroPercentType`.
-* **form_options** *boolean* - form options for a specific field. For more information, see <a href="https://symfony.com/doc/current/forms.html#form-type-options" target="_blank">Symfony Form Type Options</a> .
+* **form_options** *boolean* - form options for a specific field. For more information, see <a href="https://symfony.com/doc/current/forms.html#form-type-options" target="_blank">Symfony Form Type Options</a>.
 * **immutable** *boolean* - is used to prohibit changing the form association state (regardless of whether it is enabled or not) for the entity. If TRUE, then the current state cannot be changed.
 
 <a id="annotation-config-field-frontend"></a>
@@ -230,7 +230,9 @@ Settings of [entity merge](../../entities/entity-merge.md#dev-entities-merge).
 
 #### `multicurrency`
 
-As currency functionality is represented by three fields (from entity side) we have to hide such fields from permissions configuration page and add only one that will affect all of them. Adds virtual field into permissions list, the name of such field will be taken from target property. Walks through fields with defined target in multicurrency scope and makes changes in FieldSecurityMetadata sets alias to target and isHidden to TRUE. The field with defined virtual_field in multicurrency scope is used to retrieve the label to be used for virtual field mentioned above.
+As currency functionality is represented by three fields (from entity side) we have to hide such fields from permissions configuration page and add only one that will affect all of them.
+
+Adds virtual field into permissions list, the name of such field will be taken from target property. Walks through fields with defined target in multicurrency scope and makes changes in FieldSecurityMetadata sets alias to target and isHidden to TRUE. The field with defined virtual_field in multicurrency scope is used to retrieve the label to be used for virtual field mentioned above.
 
 * **target** *string* - The name of virtual field.
 * **virtual_field** *string* - This attribute is used to retrieve the label to be used for virtual field target.
@@ -238,26 +240,26 @@ As currency functionality is represented by three fields (from entity side) we h
 
 #### `organization`
 
-* **applicable** —  is used to specify for which organizations custom field will be visible. On the field edit page, it is represented with form type `oro_type_choice_organization_type`, which provides a selector for organizations (regardless of whether it is activated or not) defined in the application so that a user can select a specific organization(s) or “ALL” organizations.
+* **applicable** — is used to specify for which organizations custom field will be visible. On the field edit page, it is represented with form type `oro_type_choice_organization_type`, which provides a selector for organizations (regardless of whether it is activated or not) defined in the application so that a user can select a specific organization(s) or “ALL” organizations.
 * **immutable** *boolean* - is used to prohibit changing the applicable association state (regardless of whether it is enabled or not) for the entity. If TRUE, then the current state cannot be changed.
 
 #### `search`
 
-Attributes that using to set up [search](../../../user/concept-guides/catalog-promotions/search/index.md#user-guide-getting-started-search) functionality.
+Attributes used to set up [search](../../../user/concept-guides/catalog-promotions/search/index.md#user-guide-getting-started-search) functionality.
 
 * **searchable** *boolean* - Indicates what custom field could be searchable.
 * **immutable** *boolean* - is used to prohibit changing the searchable association state (regardless of whether it is enabled or not) for the entity. If TRUE, then the current state cannot be changed.
 
 #### `security`
 
-Attributes that using to set up [security](../../security/index.md#backend-security-bundle-intro) functionality.
+Attributes used to set up [security](../../security/index.md#backend-security-bundle-intro) functionality.
 
 * **permissions** *string* - The following permissions are supported for fields: VIEW, EDIT.
 * **immutable** *boolean* - is used to prohibit changing the security association state (regardless of whether it is enabled or not) for the entity. If TRUE, then the current state cannot be changed.
 
 #### `view`
 
-Attributes that using to set up Entity View Page\`.
+Attributes used to set up the Entity View Page.
 
 * **is_displayable** *boolean* - Show on view.
 * **priority** *integer* - Priority of field.

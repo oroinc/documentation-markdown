@@ -29,7 +29,7 @@ As board appearance uses save_api_accessor internally, make sure that at least o
 
 * `save_api_accessor` for column transition option (check [documentation](../../../../../bundles/platform/UIBundle/client-side/api-accessor.md#bundle-docs-platform-ui-bundle-apiaccessor))
 * `save_api_accessor` for default transition (check `default_transition` configuration option below)
-* `save_api_accessor` for inline editing (check this [article](inline-editing.md#customize-datagrid-extensions-inline-editing)
+* `save_api_accessor` for inline editing (check this [article](inline-editing.md#customize-datagrid-extensions-inline-editing))
 
 ## Datagrid Configuration Details
 
@@ -51,7 +51,7 @@ group_by:
 - column_header_view (Optional): Specifies the view for board column header. Default `orodatagrid/js/app/views/board/column-header-view`
 - column_view (Optional): Specifies the view for board column. Default `orodatagrid/js/app/views/board/column-view`
 - acl_resource (Optional): Enabled Acl resource checks whether board items transitions are allowed. If no permission is granted to a user, they see the board in read only mode.
-- processor (Optional): Specified the name of the board processor. default processor is used by default.
+- processor (Optional): Specifies the name of the board processor. The default processor is used by default.
 - default_transition (Optional): Section to specify configuration for the transition, e.g., update property when cards are dragged and dropped from one column to another.
 
 ```yaml

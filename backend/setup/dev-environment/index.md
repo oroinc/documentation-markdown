@@ -4,7 +4,7 @@
 
 # Set Up Development Environment for OroPlatform Based Application
 
-Please follow the steps outlined in the sections below to set up the development environment for Oro application customization tasks.
+Follow the steps in the sections below to set up the development environment for Oro application customization tasks.
 
 #### BUSINESS TIP
 # Business Tip
@@ -17,10 +17,10 @@ Are you searching for the <a href="https://oroinc.com/b2b-ecommerce/b2b-ecommerc
 
 * **Operating System**
 
-  The recommended OS for Oro applications is Oracle Linux. However, it is possible to set up the development environment on any Linux, Mac, or Windows with WSL2.
+  The recommended OS for Oro applications is Oracle Linux. However, you can set up the development environment on any Linux, Mac, or Windows with WSL2.
 * **Disk Drive**
 
-  A solid-state drive (SSD) is recommended. As the Oro application uses many files (vendors, cache), an SSD speeds up everyday development operations much faster than an HDD.
+  A solid-state drive (SSD) is recommended. Because the Oro application uses many files (vendors, cache), an SSD makes everyday development operations much faster than an HDD.
 * **Available RAM**
 
   The recommended amount of available RAM is 8Gb for most development operations (e.g., upgrading the application or updating Composer dependencies). However, 2Gb of available RAM is usually enough to run the application.
@@ -62,7 +62,7 @@ Are you searching for the <a href="https://oroinc.com/b2b-ecommerce/b2b-ecommerc
    Use the <a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo" target="_blank">Github guide on forking a repo</a> as an illustration of how to fork the Oro application repository.
 
    #### NOTE
-   Pay attention to the <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork" target="_blank">Keep your fork synced</a> section of this Github guide. You have to set the original Oro application repository as the remote upstream in order to be able to pull improvements and fixes from the original Oro application.
+   Pay attention to the <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork" target="_blank">Keep your fork synced</a> section of this Github guide. Set the original Oro application repository as the remote upstream so you can pull improvements and fixes from it.
 2. (optional) Change the **README.md** file in your repo to describe your application.
 3. (optional) Change the package name of your application in the **composer.json** file.
 
@@ -71,7 +71,7 @@ Please be aware that in accordance with the [Oro PHP Application structure](../.
 
 * **src**: the main folder for your customization code
 * **templates**: the folder for template files
-* **config**: folder the folder for config files
+* **config**: the folder for config files
 * **translations**: the folder for translation files
 * **README.MD**: the file for the description of your custom application
 * **composer.json**: the file which you can change if you want to <a href="https://symfonycasts.com/screencast/question-answer-day/create-composer-package" target="_blank">make a package</a> from your custom application
@@ -107,7 +107,7 @@ php bin/console oro:check-requirements -v
 php bin/console oro:check-requirements -vv
 ```
 
-The command will return 0 on exit if all application requirements are met and 1 if some of the requirements are not fulfilled.
+The command exits with 0 if all application requirements are met, or 1 if some are not.
 
 <a id="dev-guide-development-practice-setup-dev-env-install-app"></a>
 
@@ -122,9 +122,9 @@ If you use [Docker and Symfony Server](docker-and-symfony/index.md#setup-dev-env
 
 ## Create a Custom Bundle
 
-All OroPlatform-based applications have unique features that facilitate smooth development routines, like autoregistration of bundles and configuration files, for example.
+All OroPlatform-based applications have features that streamline development routines, such as autoregistration of bundles and configuration files.
 
-However, these features assume that all application code is **organized in bundles**. For this reason, you have to create your own bundle for your custom code to perform customization tasks.
+However, these features assume that all application code is **organized in bundles**. For this reason, you must create your own bundle for your custom code to perform customization tasks.
 
 Please, follow the [How to Create a New Bundle](../../extension/create-bundle.md#how-to-create-new-bundle) cookbook article to create a bundle in your custom application.
 

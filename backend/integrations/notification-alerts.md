@@ -2,7 +2,7 @@
 
 # Notification Alerts
 
-Notification alerts enable developers to log the errors detected during data synchronization and notify a user or a system administrator about these errors for them to take actions to resolve the issues.
+Notification alerts let developers log the errors detected during data synchronization and notify a user or system administrator, so they can take action to resolve the issues.
 
 All the alerts are stored in the database and are available in the [application back-office UI](../../user/back-office/system/alerts/index.md#user-back-office-system-alerts), under **System > Alerts**, or via a CLI command.
 
@@ -10,9 +10,9 @@ All the alerts are stored in the database and are available in the [application 
 
 The class that represents a notification alert for your resource type must implement <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/NotificationBundle/NotificationAlert/NotificationAlertInterface.php" target="_blank">NotificationAlertInterface</a>.
 
-You need to register your own notification alert manager to work with a particular integration and resource type in order to add your notification alerts. As an example, please see <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/NotificationBundle/NotificationAlert/NotificationAlertManager.php" target="_blank">NotificationAlertManager</a>.
+To add your notification alerts, register your own notification alert manager for a particular integration and resource type. For an example, see <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/NotificationBundle/NotificationAlert/NotificationAlertManager.php" target="_blank">NotificationAlertManager</a>.
 
-The NotificationAlertManager should be registered as a service with the source type and resource names, as illustrated below:
+Register the NotificationAlertManager as a service with the source type and resource names, as illustrated below:
 
 ```yaml
 acme_demo.your_notification_alert_manager:
@@ -58,9 +58,9 @@ The datagrid displays the following details:
 
 ### View Alerts
 
-1. Run the `oro:notification:alerts:list` command to view the list of notification alerts. By default, the last 20 alert records are displayed. Keep in mind that the list includes unresolved alerts only. To include the resolved ones into listing, use the `--resolved` command option.
+1. Run the `oro:notification:alerts:list` command to view the list of notification alerts. By default, it displays the last 20 alert records and includes unresolved alerts only. To include the resolved ones, use the `--resolved` command option.
 2. Use the `--page` and `--per-page` command options to paginate the list.
-3. Use the `--summary` option to display alerts in statistical mode. All the record are to be grouped by source, resource, and the alert type with the number of similar alerts.
+3. Use the `--summary` option to display alerts in statistical mode. All records are grouped by source, resource, and alert type, with the number of similar alerts.
 4. Use `--source-type`, `--resource-type`, `--alert-type`, `--current-user`, and `--current-organization` to filter the records by one or multiple filters.
 
 You can get either a full list of notification alerts or its summarized version.

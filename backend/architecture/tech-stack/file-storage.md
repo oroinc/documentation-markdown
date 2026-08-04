@@ -60,7 +60,7 @@ knp_gaufrette:
                 mongodb_gridfs_dsn: 'mongodb://127.0.0.1:27017/media'
 ```
 
-As you can see from the example, the configuration of the `oro_gridfs` adapter has the `mongodb_gridfs_dsn` parameter with the configuration of the MongoDB DSN string. The format of this string is the following:
+In this example, the `oro_gridfs` adapter configuration includes the `mongodb_gridfs_dsn` parameter, which holds the MongoDB DSN string. The format of this string is the following:
 `[protocol]://[username]:[password]@[host]:[port]/[database]`, where:
 
 - **protocol** is mongodb
@@ -246,7 +246,7 @@ If the Gaufrette local filesystem adapter is used to store files for the public 
 stored in this filesystem will be available via direct URI `http://your_domain/media/sub_directory/filename`.
 
 But if the storage uses another adapter type, for example, the <a href="https://www.mongodb.com/docs/manual/core/gridfs/" target="_blank">GridFS</a> storage type
-by [GridFSConfigBundle](../../../bundles/platform/GridFSConfigBundle/index.md#bundle-docs-platform-gridfs-config-bundle), this URIs will not work
+by [GridFSConfigBundle](../../../bundles/platform/GridFSConfigBundle/index.md#bundle-docs-platform-gridfs-config-bundle), these URIs will not work
 and you will have to implement access points to the files manually.
 
 To simplify this case, configure the file manager service with the `oro_gaufrette.public_filesystem_manager` tag.
@@ -277,13 +277,12 @@ The application has two stream wrappers configured to be used with Gaufrette fil
 - Common wrapper by the <a href="https://github.com/KnpLabs/KnpGaufretteBundle" target="_blank">KnpGaufretteBundle</a>;
 - Read-only wrapper by the [OroGaufretteBundle](../../../bundles/platform/GaufretteBundle/index.md#bundle-docs-platform-gaufrette-bundle).
 
-The standard stream wrapper allows full access to the files stored in the filesystem. By default, the wrapper is configured
-to use the `gaufrette` protocol. To get the full URL of a file use the getFilePath() method of the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/GaufretteBundle/FileManager.php" target="_blank">FileManager</a> service.
+The standard stream wrapper allows full access to the files stored in the filesystem. By default, it uses the `gaufrette` protocol. To get the full URL of a file, use the getFilePath() method of the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/GaufretteBundle/FileManager.php" target="_blank">FileManager</a> service.
 
-You can use the read-only stream wrapper if you need to read data but do not know if the data to be written is available.
-For example, this case can be figured if the local adapter was used and the files were uploaded by someone other than the user that runs
-the application. By default, the wrapper is configured to use the `gaufrette-readonly` protocol.
-To get the full URL of a file use getReadonlyFilePath() method of the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/GaufretteBundle/FileManager.php" target="_blank">FileManager</a> service.
+Use the read-only stream wrapper when you need to read data that the application may not have write access to.
+This can happen, for example, when the local adapter is used and the files were uploaded by someone other than the user that runs
+the application. By default, this wrapper uses the `gaufrette-readonly` protocol.
+To get the full URL of a file, use the getReadonlyFilePath() method of the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/GaufretteBundle/FileManager.php" target="_blank">FileManager</a> service.
 
 <a id="backend-file-storage-migrate-data-command"></a>
 

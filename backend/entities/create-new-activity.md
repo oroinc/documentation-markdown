@@ -42,14 +42,14 @@ class Sms implements
 }
 ```
 
-Your entity is now recognized as the activity entity. To make sure that the activity is displayed correctly, you need to configure its UI.
+Your entity is now recognized as the activity entity. To display the activity correctly, configure its UI.
 
 <a id="backend-make-entity-activities-working-with-activity-associations"></a>
 
 ## Working with Activity Associations
 
 Activity associations are represented by [multiple many-to-many](extend-entities/multi-target-associations.md#book-entities-extended-entities-multi-target-associations-types) associations.
-It is quite a complex type of associations, and to help work with activities, use the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ActivityBundle/Manager/ActivityManager.php" target="_blank">ActivityManager</a> class.
+This is a complex association type, so use the <a href="https://github.com/oroinc/platform/blob/master/src/Oro/Bundle/ActivityBundle/Manager/ActivityManager.php" target="_blank">ActivityManager</a> class to work with activities.
 
 This class provides the following functionality:
 
@@ -152,7 +152,7 @@ Please note that the example above contains the route attribute to specify the c
 
 To add an activity button to the view page of the entity with the assigned activity:
 
-1. Create two TWIG templates responsible for rendering the button and the link in the dropdown menu. Please note that you should provide both templates because an action can be rendered either as a button or a link depending on the number of actions, UI theme, device (desktop/mobile), etc.
+1. Create two TWIG templates responsible for rendering the button and the link in the dropdown menu. Provide both templates, because an action can be rendered either as a button or a link depending on the number of actions, UI theme, device (desktop/mobile), etc.
 
 Here is an example of TWIG templates:
 
@@ -310,7 +310,7 @@ datagrids:
                 entity_name: ~         # optional, set the FQCN of the grid base entity if auto detection fails
 ```
 
-This configuration creates a column named contexts and tries to detect the activity class name automatically. If, for some reason, it fails, you can specify an FQCN in the entity_name option.
+This configuration creates a column named contexts and tries to detect the activity class name automatically. If detection fails, specify an FQCN in the entity_name option.
 
 If you wish to configure the column, add a section with the name specified in the column_name option:
 
@@ -365,7 +365,7 @@ services:
             - { name: oro_activity_list.provider, class: Acme\Bundle\DemoBundle\Entity\Sms, priority: 10 }
 ```
 
-This will add your provider class into providers (**ActivityListChainProvider**) that will be invoked to fetch data ordering by priority (added in service definition). Priority is helpful for future implementations or overriding existing providers in third-party bundles.
+This adds your provider class to the providers (**ActivityListChainProvider**), which are invoked to fetch data in priority order (set in the service definition). Priority is helpful for future implementations or for overriding existing providers in third-party bundles.
 
 Each activity entity has its own row template for the UI component. Although you can place it anywhere, make sure its path is returned in the Provider via the getTemplate() method. For instance:
 
@@ -865,7 +865,7 @@ services:
             - '@doctrine.orm.entity_manager'
 ```
 
-This API handler is the implementation of REST API.
+This API handler implements the REST API.
 
 *src/Acme/Bundle/DemoBundle/Form/Handler/SmsApiHandler.php*
 ```php

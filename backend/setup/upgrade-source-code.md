@@ -11,37 +11,35 @@ If you are looking for instructions on upgrading the entire OroCommerce applicat
 
 ## Upgrade Sequence for Earlier Versions
 
-For users operating on versions of OroCommerce earlier than 5.1,
-it is recommended to bypass upgrading to 5.1 and instead upgrade directly to version 6.0.
+If you run a version of OroCommerce earlier than 5.1, skip the upgrade to 5.1 and upgrade directly to version 6.0.
 
 ## Preserve Old Custom Theme
 
-If you are upgrading from version 5.0 or 5.1 and wish to save time and resources by reusing the existing theme,
-you can dump it before the upgrade. First, you need to require the `oro/theme-migration package`:
+If you are upgrading from version 5.0 or 5.1 and want to reuse the existing theme, dump it before the upgrade.
+First, require the `oro/theme-migration package`:
 
 ```none
 composer require --dev oro/theme-migration --no-scripts
 ```
 
-Please ensure that a theme package is created for the current (old) version you are upgrading from, not the target version.
+Ensure that the theme package is created for the current (old) version you are upgrading from, not the target version.
 
 #### WARNING
-The oro/theme-migration bundle requires the oro/platform version of at least 5.0.18 or 5.1.6.
-If you encounter the error below, it may be due to having older versions of the oro/platform:
+The oro/theme-migration bundle requires oro/platform version 5.0.18 or 5.1.6 at minimum.
+An older oro/platform version may cause the error below:
 
 > ```none
 > Your requirements could not be resolved to an installable set of packages.
 > ```
 
-To resolve this, consider upgrading related dependencies by re-running the command
-with the `--with-all-dependencies` option.
+To resolve this, re-run the command with the `--with-all-dependencies` option to upgrade related dependencies.
 
 > ```none
 > composer require --dev oro/theme-migration --no-scripts --with-all-dependencies
 > ```
 
 #### NOTE
-Please note that oro/platform 5.0.18 is available only for Enterprise customers and partners.
+oro/platform 5.0.18 is available only for Enterprise customers and partners.
 
 Next, run the following commands:
 
@@ -77,14 +75,14 @@ resolve_extra_paths:
 ```
 
 The resolve_extra_paths option in the generated code
-requires the “@oroinc/oro-webpack-config-builder” node module upgrade to version “6.0.0-dev002” or later. Therefore,  this code is not currently compatible with the old version but will work after upgrading the project to v6.
+requires the “@oroinc/oro-webpack-config-builder” node module at version “6.0.0-dev002” or later. This code is therefore not compatible with the old version, but it works after you upgrade the project to v6.
 
 ## Upgrade Application Level Assets (without the src/ folder)
 
 1. Create backups of your Database and Code.
 2. Get changes.
    * Pull changes from the Oro application GitHub repository.
-   * Add the corresponding ORO application repository as an additional remote by running one of commands below. In the example below, a new remote name is oro.
+   * Add the corresponding ORO application repository as an additional remote by running one of the commands below. In this example, the new remote is named oro.
      ```bash
      # OroCommerce Community Edition
      git remote add oro git@github.com:oroinc/orocommerce-application.git
@@ -107,7 +105,7 @@ requires the “@oroinc/oro-webpack-config-builder” node module upgrade to ver
      ```bash
      git fetch oro --tags
      ```
-   * Checkout the new branch that will contain the code of the upgraded application to the next version
+   * Check out a new branch to hold the code of the application upgraded to the next version
      ```bash
      git checkout -b feature/upgrade
      ```
@@ -139,8 +137,8 @@ requires the “@oroinc/oro-webpack-config-builder” node module upgrade to ver
    composer install --prefer-dist --no-dev
    ```
 
-5. Refer to the `UPGRADE.md` and `CHANGELOG.md` files in the application repository for a list of changes
-in the code that may affect the upgrade of some customizations.
+5. Refer to the `UPGRADE.md` and `CHANGELOG.md` files in the application repository for a list of code changes
+that may affect the upgrade of some customizations.
 
 ## Upgrade Application Level Assets (with the src/ folder)
 
@@ -148,16 +146,16 @@ in the code that may affect the upgrade of some customizations.
 
 You can use the `oro/upgrade-toolkit` package to automatically migrate a significant portion of the PHP code.
 
-It is important to note that the tool handles most PHP changes but does not upgrade YAML, Twig, JS, or SCSS.
-However, you can skip the frontend assets upgrade if you’ve used the theme dump as described earlier.
-Back-office customization and changes to YAML files should be processed manually.
+The tool handles most PHP changes but does not upgrade Twig, JS, or SCSS.
+You can skip the frontend assets upgrade if you used the theme dump described earlier.
+Process back-office customization and YAML file changes manually.
 
-The major update to the YAML configuration involves
-[moving the datagrids configuration](https://github.com/oroinc/platform/blob/6.0.0/CHANGELOG.md#datagrids)
+The major YAML configuration update
+[moves the datagrids configuration](https://github.com/oroinc/platform/blob/6.0.0/CHANGELOG.md#datagrids)
 to the theme level.
 Another significant change that requires manual intervention is the upgrade of the
 [symfony/security component architecture](https://github.com/oroinc/platform/blob/6.0.0/CHANGELOG.md#security-changes)
-. For a comprehensive list of changes, please refer to the relevant guides corresponding to the base application you are using.
+. For a full list of changes, refer to the guide for the base application you are using.
 
 - [https://github.com/oroinc/platform-application/blob/master/UPGRADE.md](https://github.com/oroinc/platform-application/blob/master/UPGRADE.md)
 - [https://github.com/oroinc/crm-application/blob/master/UPGRADE.md](https://github.com/oroinc/crm-application/blob/master/UPGRADE.md)
@@ -179,7 +177,7 @@ Next, run the automatic migrations with the following command:
 php bin/upgrade-toolkit
 ```
 
-To verify the results without making any changes, you can add `--dry-run` to the `bin/upgrade-toolkit` command.
+To verify the results without making any changes, add `--dry-run` to the `bin/upgrade-toolkit` command.
 
 #### HINT
 Once the changes are verified, run the following command to apply them:
@@ -192,8 +190,8 @@ Once the changes are verified, run the following command to apply them:
 
 ### Regular Expressions in PhpStorm
 
-Regular expression replacements may process some changes not covered by the oro/upgrade toolkit.
-The most convenient tool for running them is PhpStorm. It is advisable to use them in case-sensitive mode.
+Regular expression replacements can process some changes not covered by the oro/upgrade toolkit.
+PhpStorm is the most convenient tool for running them. Use case-sensitive mode.
 
 Below is the list of regular expressions you can use during the upgrade from 5.1 to 6.0:
 
@@ -207,20 +205,20 @@ Below is the list of regular expressions you can use during the upgrade from 5.1
 
 ### Fix Code Style After Automatic Code Migration
 
-Please be aware that the tool may break the code style of the changed files.
-You may need to make some manual adjustments to ensure they meet the project’s coding standards.
+The tool may break the code style of the changed files.
+You may need to make manual adjustments so they meet the project’s coding standards.
 We recommend using PhpStorm’s built-in
 <a href="https://www.jetbrains.com/help/phpstorm/reformat-and-rearrange-code.html" target="_blank">Code > Reformat Code</a> feature for the changed files:
 
 ![PhpStorm's Reformat Code image](img/backend/setup/upgrade/php_storm_reformat_code.png)
 
-Run Our Php-CS-Fixer by running the following commands:
+Run our Php-CS-Fixer with the following command:
 
 ```none
 php bin/php-cs-fixer fix src --verbose --config=vendor/oro/platform/build/.php-cs-fixer.php
 ```
 
-You can enforce PHP_CodeSniffer rules by running the phpcbf script to automatically correct coding standard violations:
+Enforce PHP_CodeSniffer rules by running the phpcbf script to automatically correct coding standard violations:
 
 ```none
 php bin/phpcbf src/ -p --encoding=utf-8 --extensions=php --standard=vendor/oro/platform/build/Oro/phpcs.xml
@@ -232,6 +230,6 @@ Run required <a href="https://doc.oroinc.com/backend/automated-tests/" target="_
 
 ## Next Steps
 
-Once the source code is upgraded, the next step is to upgrade the Oro application to v6.0 For comprehensive instructions on this process, please refer to the [Upgrading the Application to the Next Version](upgrade-to-new-version.md#upgrade-application) documentation.
+Once the source code is upgraded, the next step is to upgrade the Oro application to v6.0. For full instructions, refer to the [Upgrading the Application to the Next Version](upgrade-to-new-version.md#upgrade-application) documentation.
 
 <!-- Frontend -->

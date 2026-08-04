@@ -7,7 +7,9 @@ As described in <a href="https://symfony.com/doc/current/translation.html#transl
 
 These translations are compiled in the [Symfony translation catalogs](translations.md#dev-translation-symfony-translator), which are sets of PHP files. As a result, these files are cached by <a href="http://php.net/manual/en/intro.opcache.php" target="_blank">OPcache</a>, so getting these translations is fairly quick.
 
-You can download translations for other languages from [Crowdin](../../community/contribute/code-ui-translations.md#doc-community-ui-translations) or added manually in the [Back-Office](../../user/back-office/system/localization/translations/index.md#localization-translations-config). These translations are loaded from the database to the application cache, and getting them is slower than from the Symfony translation catalogs. To minimize performance issues, consider adding them to the source code, as described below:
+You can download translations for other languages from [Crowdin](../../community/contribute/code-ui-translations.md#doc-community-ui-translations) or add them manually in the [Back-Office](../../user/back-office/system/localization/translations/index.md#localization-translations-config). These translations load from the database into the application cache, which is slower than reading them from the Symfony translation catalogs.
+
+To minimize performance issues, add them to the source code as described below:
 
 1. Use [oro:translation:dump-files](../../bundles/platform/TranslationBundle/commands.md#oro-translation-dump-files-command) to dump translations to the translations directory of the application.
 2. When you have updated the existing translations, use a file comparison tool of your choice to verify the dumped files.
@@ -15,6 +17,6 @@ You can download translations for other languages from [Crowdin](../../community
 
 To rebuild Symfony translation catalogs with new translations and remove them from the database, use the `oro:platform:update` command.
 
-Please take into account that languages loaded from the dumped files will be disabled from management via Crowdin in the UI and the data should be managed by a developer.
+Note that languages loaded from the dumped files can no longer be managed via Crowdin in the UI; a developer must manage their data instead.
 
 <!-- Frontend -->
