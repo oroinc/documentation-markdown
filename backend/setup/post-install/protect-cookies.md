@@ -2,7 +2,7 @@
 
 # Protect Cookies
 
-If the application is configured to be used via an SSL connection, you should protect the application cookies, too.
+If your application runs over an SSL connection, protect its cookies as well.
 
 Cookies are protected with **Secure** and **HttpOnly** flags.
 
@@ -12,9 +12,9 @@ Except for the CSRF cookie, all cookies have the **httponly** flag set to *true*
 
 More information about this configuration is available in the <a href="https://symfony.com/doc/5.4/reference/configuration/framework.html#cookie-secure" target="_blank">cookie secure configuration</a> section of Symfony documentation.
 
-If your application uses a proxy that redirects from https requests to http, the application will detect that the request was made with the http request. As a result, the `auto` value for the secure parameter will remove the **secure** flag.
+If your application uses a proxy that redirects https requests to http, the application detects the request as an http request. As a result, the `auto` value for the secure parameter removes the **secure** flag.
 
-In this case, you can manually set this parameter for each cookie via the configuration or reconfigure your web sever to add the **secure** flag by the server.
+In this case, either set this parameter manually for each cookie in the configuration, or reconfigure your web server to add the **secure** flag itself.
 
 ## Reconfigure Apache Web Server
 

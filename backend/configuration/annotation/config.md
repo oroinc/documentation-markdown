@@ -31,14 +31,14 @@ class User
 
 This example sets the `auditable` option from the `dataaudit` scope to `true` for the `User` class.
 
-You can use\`\`immutable\`\` on any settings. This attribute can be used to prohibit changing the association state.
+You can use `immutable` on any setting to prohibit changing the association state.
 
 #### `activity`
 
 This parameter sets default settings for OroActivityBundle. This bundle helps classify certain entity types as activities and enables a special relation type between an entity and activities. For more information, see [OroActivityBundle](../../../bundles/platform/ActivityBundle/index.md#bundle-docs-platform-activity-bundle).
 
 * **show_on_page** *integer* - is used to change a page, which will display the “activity list” and activity buttons. Can be used as bitmask. Possible values are in `\Oro\Bundle\ActivityBundle\EntityConfig\ActivityScope::VIEW_PAGE`.
-* **route** *string* - is the route name for the controller that can be used to render the list of this type of activities. This controller must have $entityClass and $entityId. Parameters to pass the target entity. This attribute must be defined for each activity entity (an entity included in the ‘activity’ group, see ‘grouping’ scope).
+* **route** *string* - is the route name for the controller that can be used to render the list of this type of activities. This controller must have $entityClass and $entityId parameters to pass the target entity. This attribute must be defined for each activity entity (an entity included in the ‘activity’ group, see ‘grouping’ scope).
 * **acl** *string* - is used to check whether this type of activity is available in the current security context.
 * **action_button_widget** *string* - is the widget name of the activity action used to render a button. This widget should be defined in placeholders.yml. This attribute can be defined for the activity entity. Please note that an activity should provide both action_link_widget and action_link_widget, because actions can be rendered both as a button as a dropdown menu.
 * **action_link_widget** *string* - is the widget name of the activity action used to render a link in the dropdown menu. This widget should be defined in placeholders.yml. This attribute can be defined for the activity entity. Please note that an activity should provide both action_link_widget and action_link_widget, because actions can be rendered as a button as a dropdown menu.
@@ -70,7 +70,7 @@ You can configure this attribute when you use <a href="https://github.com/oroinc
 * **maxsize** *integer* - is the max size of the uploaded file in megabytes.
 * **mimetypes** *string* - is the list of all allowed MIME types for attachments. MIME types are delimited by linefeed (n) symbol. Example of values: ‘image/jpeg’, ‘image/gif’, ‘application/pdf’.
 * **auto_link_attachments** *boolean* - if TRUE, then Email Attachments are saved to the Attachment Entity.
-* **immutable** *boolean* - can be used to prohibit changing the attachment association state (regardless of whether it is enabled or not) for the entity. If TRUE than the current state cannot be changed.
+* **immutable** *boolean* - can be used to prohibit changing the attachment association state (regardless of whether it is enabled or not) for the entity. If TRUE, then the current state cannot be changed.
 
 #### `attribute`
 
@@ -92,14 +92,14 @@ Provides customer configuration, such as registered customer classes, entity lab
 
 #### `dataaudit`
 
-The parameter use OroDataAuditBundle to provide changelogs for your entities. Read more about [Data Audit](../../entities-data-management/data-audit.md#entities-data-management-data-audit) bundle.
+The parameter uses OroDataAuditBundle to provide changelogs for your entities. Read more about [Data Audit](../../entities-data-management/data-audit.md#entities-data-management-data-audit) bundle.
 
 * **auditable** *boolean* - enables dataaudit for this entity. If it is not specified or set to false, you can enable audit in the UI.
-* **immutable** *boolean* - this attribute can be used to prohibit changing the auditable state (no matter whether it is enabled or not) for the entity. If TRUE than the current state cannot be changed.
+* **immutable** *boolean* - this attribute can be used to prohibit changing the auditable state (no matter whether it is enabled or not) for the entity. If TRUE, then the current state cannot be changed.
 
 #### `dictionary`
 
-Dictionary entities are responsible for storing a predefined set of values of a certain type and their translations. They values within a dictionary can have a priority or some other data. More information is available in the [Dictionaries](../../entities/dictionaries.md#dev-entities-dictionaries) topic.
+Dictionary entities store a predefined set of values of a certain type and their translations. The values within a dictionary can have a priority or some other data. More information is available in the [Dictionaries](../../entities/dictionaries.md#dev-entities-dictionaries) topic.
 
 * **virtual_fields** *string[]* - specifies the list of fields for which the virtual fields can be created. If it is not specified, the virtual fields are created for all fields, except for the identifier ones.
 * **search_fields** *string[]* - specifies the list of fields used for searching in the reports filter.
@@ -121,7 +121,7 @@ OroDraftBundle enables you to edit and publish a version of the Draftable entity
 
 This attribute configures UI params of the entity.
 
-* **icon** *string* - sets the icon in the admin area. For more information, see <a href="https://fontawesome.com/v4.7.0/icons/" target="_blank">Font Awesome</a> documentation .
+* **icon** *string* - sets the icon in the admin area. For more information, see <a href="https://fontawesome.com/v4.7.0/icons/" target="_blank">Font Awesome</a> documentation.
 * **entity_alias** *string* - stores an alias generated for an entity and helps to resolve duplicate aliases.
 * **entity_plural_alias** *string* - stores a plural alias generated for an entity and helps to resolve duplicate aliases.
 * **contact_information** *array* - enables you to change contact information (phone or email) for the entity.
@@ -133,7 +133,7 @@ This attribute configures UI params of the entity.
 
 #### `enum`
 
-This attribute is only used for Enum parameters. For more information, see [Option Set Fields](../../entities/extend-entities/enums.md#book-entities-extended-entities-enums) .
+This attribute is only used for Enum parameters. For more information, see [Option Set Fields](../../entities/extend-entities/enums.md#book-entities-extended-entities-enums).
 
 * **code** *string* - a unique identifier of this enum.
 * **public** *boolean* - indicates whether this enum is public. Public enums can be used in any extendable entity, which means that you can create a field of this enum type in any entity. Private enums cannot be reused.
@@ -153,7 +153,7 @@ This attribute sets default settings for [Extend Entities](../../entities/extend
   > - `ExtendScope::OWNER_CUSTOM` - The property is user-defined, and the core system should handle how the property appears in grids, forms, etc. (if not configured otherwise).
   > - `ExtendScope::OWNER_SYSTEM` - Nothing is rendered automatically, and you must explicitly specify how to show the property in different parts of the system (grids, forms, views, etc.).
 * **table** *string* - is the table name for a custom entity. This is optional attribute. If it is not specified, the table name is generated automatically.
-* **inherit** *string* - is the parent class name. You are not usually requires to specify this attribute as it is calculated automatically for regular extend and custom entities. An example of an entity where this attribute is used is EnumValue.
+* **inherit** *string* - is the parent class name. You are not usually required to specify this attribute, as it is calculated automatically for regular extend and custom entities. An example of an entity where this attribute is used is EnumValue.
 * **pending_changes** — when a user changes something that requires schema update, this change is not applied to the configuration, but is stored into “pending_changes” as changeset. The format of changeset is [‘scope’ => [‘field’ => [‘oldValue’, ‘newValue’], …], …].
   > Let’s assume that a user has an active activity email and changes it to a task. In this case, the value of pending changes would be the following:
   > ```none
@@ -177,7 +177,7 @@ This attribute sets default settings for [Extend Entities](../../entities/extend
 
 #### `form`
 
-This attribute configures [Custom Form Type for Fields](../../entities/extend-entities/define-custom-form-type.md#book-entities-extended-entities-custom-form-type-for-fields) .
+This attribute configures [Custom Form Type for Fields](../../entities/extend-entities/define-custom-form-type.md#book-entities-extended-entities-custom-form-type-for-fields).
 
 * **form_type** *string* - form type for a specific entity.
 * **form_options** *array* - form options for a specific entity.
@@ -216,7 +216,7 @@ Example:
 
 #### `ownership`
 
-The attribute set owner of the entity. For more information, see [Access Levels and Ownership](../../security/example.md#backend-security-bundle-example) and [Configuring Permissions for Entities](../../security/acl.md#backend-security-bundle-configure-entities).
+The attribute sets the owner of the entity. For more information, see [Access Levels and Ownership](../../security/example.md#backend-security-bundle-example) and [Configuring Permissions for Entities](../../security/acl.md#backend-security-bundle-configure-entities).
 
 * **owner_type** *string* - can have the following status:
   > - `ORGANIZATION` needs to set **owner_field_name** and **owner_column_name**
@@ -259,7 +259,7 @@ Other possible attributes for security: **group**, **share_grid**, **field_acl_e
 
 Data sharding allows to improve OroCommerce operation and accelerate database performance when handling big volumes of data. For more information, see [Configure Price List Sharding](../../../bundles/commerce/PricingBundle/price-list-sharding.md#admin-price-list-sharding).
 
-* **discrimination_field** *string* - is the name of the sharding field. Example:  “priceList”.
+* **discrimination_field** *string* - is the name of the sharding field. Example: “priceList”.
 
 #### `search`
 

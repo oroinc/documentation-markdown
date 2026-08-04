@@ -1,6 +1,6 @@
 # Localization
 
-Localization is the process of translating and adapting a product for a specific country or region. OroPlatform allows a user to customize the format of date/time/datetime, numeric and percent values, monetary values, and the format of names and addresses.
+Localization is the process of translating and adapting a product for a specific country or region. OroPlatform lets you customize the format of date/time/datetime, numeric and percent values, monetary values, and names and addresses.
 
 ## System Configuration
 
@@ -35,8 +35,9 @@ Localization information is stored in configuration files. Each bundle can add i
 
 This file contains the most basic information for countries (`US` and `RU` are country codes as defined by <a href="http://en.wikipedia.org/wiki/ISO_3166" target="_blank">ISO 3166</a>).
 
-Each country configuration provides information about a country’s currency (according to <a href="http://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a>):
+Each country configuration provides:
 
+* the currency (according to <a href="http://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a>)
 * the phone number prefix (as defined in <a href="http://en.wikipedia.org/wiki/E.164" target="_blank">E.164</a>)
 * its default locale (e.g., the locale that is used to define the appropriate name format by country for a specific address).
 
@@ -89,9 +90,9 @@ The allowed placeholders are:
 
 ## Date and Numeric Formatting
 
-Both dates and numbers (decimal, percent, or currency) are formatted using the <a href="http://www.php.net/manual/en/intro.intl.php" target="_blank">INTL library</a> functions. Therefore, this library is required, and dates and numbers are formatted according to the installed version of the library.
+The <a href="http://www.php.net/manual/en/intro.intl.php" target="_blank">INTL library</a> functions format both dates and numbers (decimal, percent, or currency). The library is therefore required, and formatting follows its installed version.
 
-The application provides formatter services used to format dates and numbers in the backend, which serve as wrappers for the INTL library:
+On the backend, the application provides formatter services that wrap the INTL library to format dates and numbers:
 
 * `Oro\Bundle\LocaleBundle\Formatter\DateTimeFormatter`
   * `formatDate()`
@@ -125,14 +126,14 @@ For example, the following Twig template prints a formatted datetime and a forma
 {{ item.value|oro_format_currency }}
 ```
 
-Suppose that the current locale is `en`, and that the currency is `USD`, the template will render the following values:
+If the current locale is `en` and the currency is `USD`, the template renders the following values:
 
 ```text
 May 28, 2014 1:40 PM
 $5,103.00
 ```
 
-In addition to backend formatters, the application also provides the following JavaScript-powered similar formatters on the frontend side, which can be accessed using JS modules aliases:
+The application also provides similar JavaScript formatters on the frontend, accessed through JS module aliases:
 
 - `orolocale/js/formatter/datetime` (<a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/LocaleBundle/Resources/public/js/formatter/datetime.js" target="_blank">datetime.js</a>)
   : * `formatDate(value)`
@@ -146,12 +147,11 @@ In addition to backend formatters, the application also provides the following J
 
 ## Name Formatting
 
-Some entities in the application may have names that require localization before they are rendered. Localization includes the formatting of name parts according to a specified format (see [name_format.yml](#localization-config-file-name-format)).
+Some entities have names that require localization before rendering. This includes formatting the name parts according to a specified format (see [name_format.yml](#localization-config-file-name-format)).
 
-On the backend side, such an entity must implement the `Oro\Bundle\LocaleBundle\Model\FullNameInterface`.
-This interface contains methods to extract all parts of a name, including the name prefix, the first name, the middle name, the last name, and the name suffix. Furthermore, separate interfaces for each name part can be used when an entity defines only a subset of the full name definition.
+On the backend, such an entity must implement the `Oro\Bundle\LocaleBundle\Model\FullNameInterface`. This interface contains methods to extract all parts of a name: the name prefix, first name, middle name, last name, and name suffix. When an entity defines only a subset of the full name, you can use separate interfaces for each name part instead.
 
-Formatting is done on the backend side by applying the `Oro\Bundle\LocaleBundle\Formatter\NameFormatter::format` method from the `Oro\Bundle\LocaleBundle\Formatter\NameFormatter` class. It receives an entity and returns it as a string which is formatted according to the defined rules.
+On the backend, the `Oro\Bundle\LocaleBundle\Formatter\NameFormatter::format` method of the `Oro\Bundle\LocaleBundle\Formatter\NameFormatter` class handles formatting. It receives an entity and returns a string formatted according to the defined rules.
 
 The same formatting can be used in twig templates using the `oro_format_name` filter:
 
@@ -169,11 +169,9 @@ On the frontend side, you can perform the same formatting with the `orolocale/js
 
 ## Address Formatting
 
-Other entities may represent addresses that should be appropriately formatted when being rendered. The application provides a list of default address formats
-for several countries (see [address_format.yml](#localization-config-file-address-format)).
+Other entities may represent addresses that should be formatted appropriately when rendered. The application provides default address formats for several countries (see [address_format.yml](#localization-config-file-address-format)).
 
-Further, an address entity may have person fields and implement the `FullNameInterface` interface. In this case, the name will be rendered according to the country’s
-default locale and will be used instead of an appropriate placeholder.
+An address entity may also have person fields and implement the `FullNameInterface` interface. In that case, the name is rendered according to the country’s default locale and used in place of the corresponding placeholder.
 
 To support formatting, an address entity should implement the `Oro\Bundle\LocaleBundle\Model\AddressInterface` which defines methods to retrieve all required address parts (street, city, region name/code, postal code, country name/ISO2/ISO3 and organization).
 
@@ -194,7 +192,7 @@ Products Inc.
 ROMNEY IN US 47981
 ```
 
-As with other entities, the frontend provides an appropriate JavaScript formatter,  the `orolocale/js/formatter/address` JS module. This module is located in the `address.js` file in the Locale bundle and contains a `format()` method, which behaves exactly like the backend formatter.
+As with other entities, the frontend provides a JavaScript formatter — the `orolocale/js/formatter/address` JS module. Located in the `address.js` file in the Locale bundle, it contains a `format()` method that behaves exactly like the backend formatter.
 
 ## Updating Localization from CLI
 

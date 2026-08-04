@@ -2,20 +2,19 @@
 
 # Access Rules
 
-Symfony security system allows checking access to an existing object by the Authorization Checker’s isGranted method.
+The Symfony security system lets you check access to an existing object with the Authorization Checker’s isGranted method.
 
 You can also check access to queries, such as Doctrine ORM query or Search query.
 
 ## Protect ORM Queries
 
-To protect ORM queries, an <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/SecurityBundle/ORM/Walker/AclHelper.php" target="_blank">AclHelper</a> was implemented. With its help, when you call the apply method of the ACL helper with ORM Query Builder or ORM Query, the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/SecurityBundle/ORM/Walker/AccessRuleWalker.php" target="_blank">AccessRuleWalker</a> is used
-to process the query. This walker modifies the query’s AST following the restrictions imposed by access rules.
+To protect ORM queries, use the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/SecurityBundle/ORM/Walker/AclHelper.php" target="_blank">AclHelper</a>. When you call its apply method with an ORM Query Builder or ORM Query, the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/SecurityBundle/ORM/Walker/AccessRuleWalker.php" target="_blank">AccessRuleWalker</a> processes the query. This walker modifies the query’s AST to enforce the restrictions imposed by access rules.
 
 An access rule is a class that implements the <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/SecurityBundle/AccessRule/AccessRuleInterface.php" target="_blank">AccessRuleInterface</a> interface.
 
 Each access rule modifies expressions of the <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/SecurityBundle/AccessRule/Criteria.php" target="_blank">Criteria object</a>.
 
-You can change the behavior of access rules and AccessRuleWalker with additional options that you can set as the third parameter of the apply method.
+You can change the behavior of access rules and the AccessRuleWalker with additional options, set as the third parameter of the apply method.
 
 The options that can change the behavior of AccessRuleWalker:
 
@@ -29,7 +28,7 @@ The options that can change the behavior of access rules:
 - **aclParentClass** — Contains the parent class name of the current joined entity. This option is used together with the check owner option.
 - **aclParentField** — Contains the field name by which the current entity is joined. This option is used together with the check owner option.
 - **availableOwnerEnable** — Enables the <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/SecurityBundle/AccessRule/AvailableOwnerAccessRule.php" target="_blank">AvailableOwnerAccessRule</a>. The default value is false.
-- **availableOwnerTargetEntityClass**  — The target class name whose access level should be used for the check in <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/SecurityBundle/AccessRule/AvailableOwnerAccessRule.php" target="_blank">AvailableOwnerAccessRule</a>.
+- **availableOwnerTargetEntityClass** — The target class name whose access level should be used for the check in <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/SecurityBundle/AccessRule/AvailableOwnerAccessRule.php" target="_blank">AvailableOwnerAccessRule</a>.
 - **availableOwnerCurrentOwner** — The owner’s ID that should be available even if the ACL check denies access.
 
 To find all possible options, see classes that implement <a href="https://github.com/oroinc/platform/tree/5.1/src/Oro/Bundle/SecurityBundle/AccessRule/AccessRuleInterface.php" target="_blank">AccessRuleInterface</a>.
@@ -130,15 +129,15 @@ The oro_security.access_rule tag options that can be used for any access rule:
 - loggedUserClass - the FQCN of a logged-in user.
 
 #### NOTE
-You can use The\`oro_security.access_rule\` tag with options specific to a particular access rule. Using options for the oro_security.access_rule tag is preferable to implementing logic in the isApplicable() method because it allows not to initialize a rule service if it is not applicable. The isApplicable() method is intended for complex logic that cannot be achieved via the tag options.
+You can also use the oro_security.access_rule tag with options specific to a particular access rule. Prefer tag options over logic in the isApplicable() method, because they let you avoid initializing a rule service when it does not apply. Use the isApplicable() method only for complex logic that the tag options cannot express.
 
-To add additional options you need to create a class that implements <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/SecurityBundle/AccessRule/AccessRuleOptionMatcherInterface.php" target="_blank">AccessRuleOptionMatcherInterface</a> and decorate the service oro_security.access_rule_option_matcher.
+To add additional options, create a class that implements <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/SecurityBundle/AccessRule/AccessRuleOptionMatcherInterface.php" target="_blank">AccessRuleOptionMatcherInterface</a> and decorate the oro_security.access_rule_option_matcher service.
 
 ## Access Rules Visitor
 
 If you want to apply access rule expressions to your type of query, use a class that extends an abstract <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/SecurityBundle/AccessRule/Visitor.php" target="_blank">Visitor</a>.
 
-For example,|AstVisitor| converts access rule expressions to Doctrine AST conditions.
+For example, <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/SecurityBundle/ORM/Walker/AstVisitor.php" target="_blank">AstVisitor</a> converts access rule expressions to Doctrine AST conditions.
 
 Check <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/SecurityBundle/ORM/Walker/AccessRuleWalker.php" target="_blank">AccessRuleWalker</a> for details on how to use this visitor.
 

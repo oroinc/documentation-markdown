@@ -8,8 +8,7 @@
 
 This guide explains how to upgrade Oro application to the next version in a development environment.
 
-An absolute path to the directory where an application is installed will be used in the guide and will
-be referred to as **<application-root-folder>** further in this topic.
+This guide refers to the absolute path of the directory where the application is installed as **<application-root-folder>**.
 
 #### NOTE
 We highly recommend running all the commands in this guide from the same user the web server runs (e.g., **nginx** or **www-data**).

@@ -3,7 +3,7 @@
 # References in YAML Configuration
 
 You can use a static method call, a service method call, and class constant access in the YAML datagrid configuration.
-These references will be called by SystemAwareResolver while building the datagrid in the datagrid manager.
+SystemAwareResolver resolves these references while building the datagrid in the datagrid manager.
 
 ## References types
 
@@ -13,7 +13,7 @@ These references will be called by SystemAwareResolver while building the datagr
 @oro_email.grid.query_builder->getChoicesQuery
 ```
 
-Call method getChoicesQuery with datagrid name and YAML configuration key as arguments from oro_email.grid.query_builder service.
+Calls the getChoicesQuery method of the oro_email.grid.query_builder service, passing the datagrid name and YAML configuration key as arguments.
 
 ## Static Method Call
 
@@ -29,9 +29,9 @@ The class name can be defined in the container’s parameters or specified direc
 Acme\Bundle\DemoBundle\SomeClass::TEST
 ```
 
-PHP is_callable is used to determine if it is callable or should be treated as constant.
+PHP is_callable determines whether the value is callable or should be treated as a constant.
 
-The value becomes unchanged if it is not callable and no constant exists with such a name in the class.
+The value stays unchanged if it is not callable and no constant with that name exists in the class.
 
 ## Service Injection
 

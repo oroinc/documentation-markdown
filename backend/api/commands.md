@@ -8,13 +8,13 @@
 
 This command clears the API cache.
 
-Usually, you need to run this command when you add a new entity to Resources/config/oro/api.yml or a new processor that changes a list of available via the API.
+Run this command after you add a new entity to Resources/config/oro/api.yml or a new processor that changes a list of available via the API.
 
 ```none
 php bin/console oro:api:cache:clear
 ```
 
-The `--no-warmup` option can be used to skip warming up the cache after cleaning:
+Use the `--no-warmup` option to skip warming up the cache after cleaning:
 
 ```none
 php bin/console oro:api:cache:clear --no-warmup
@@ -26,7 +26,7 @@ php bin/console oro:api:cache:clear --no-warmup
 
 This clears or warms up the API documentation cache.
 
-If this command is launched without parameters, it warm ups all API documentation caches:
+Run this command without parameters to warm up all API documentation caches:
 
 ```none
 php bin/console oro:api:doc:cache:clear
@@ -38,7 +38,7 @@ To clear the cache without then warming it up, use the `--no-warmup` option:
 php bin/console oro:api:doc:cache:clear --no-warmup
 ```
 
-To work only with the specified <a href="https://github.com/nelmio/NelmioApiDocBundle/blob/2.x/Resources/doc/multiple-api-doc.rst" target="_blank">API documentation views</a> use the `--view` option:
+To work only with the specified <a href="https://github.com/nelmio/NelmioApiDocBundle/blob/2.x/Resources/doc/multiple-api-doc.rst" target="_blank">API documentation views</a>, use the `--view` option:
 
 ```none
 php bin/console oro:api:doc:cache:clear --view=rest_json_api
@@ -50,7 +50,7 @@ php bin/console oro:api:doc:cache:clear --view=rest_json_api
 
 This command dumps API documentation in OpenAPI format.
 
-The `--view` option is required and it is used to specify one of <a href="https://github.com/nelmio/NelmioApiDocBundle/blob/2.x/Resources/doc/multiple-api-doc.rst" target="_blank">API documentation views</a> for which OpenAPI specification should be dumped:
+The required `--view` option specifies one of the <a href="https://github.com/nelmio/NelmioApiDocBundle/blob/2.x/Resources/doc/multiple-api-doc.rst" target="_blank">API documentation views</a> for which to dump the OpenAPI specification:
 
 ```none
 php bin/console oro:api:doc:open-api:dump --view=rest_json_api
@@ -63,13 +63,13 @@ php bin/console oro:api:doc:open-api:dump --view=rest_json_api --format=json-pre
 php bin/console oro:api:doc:open-api:dump --view=rest_json_api --format=yaml
 ```
 
-To skip validation of the generated OpenAPI specification, use the  `--no-validation` option:
+To skip validation of the generated OpenAPI specification, use the `--no-validation` option:
 
 ```none
 php bin/console oro:api:doc:open-api:dump --view=rest_json_api --no-validation
 ```
 
-To generate OpenAPI specification only for the specified entities,  use the `--entity` option:
+To generate OpenAPI specification only for the specified entities, use the `--entity` option:
 
 ```none
 php bin/console oro:api:doc:open-api:dump --view=rest_json_api --entity=countries --entity=regions
@@ -181,7 +181,7 @@ or
 php bin/console oro:api:debug --no-docs <action>
 ```
 
-The list of the processors can be limited to some group specified as the second argument:
+To limit the list of processors to a group, specify the group as the second argument:
 
 ```none
 php bin/console oro:api:debug <action> <group>
@@ -193,7 +193,7 @@ or
 php bin/console oro:api:debug --no-docs <action> <group>
 ```
 
-You can use the `--attribute` option to show the processors that will be executed only when the context has a given attribute with the specified value.
+Use the `--attribute` option to show only the processors that run when the context has a given attribute with the specified value.
 Separate the attribute name and value by a colon, e.g., `--attribute=collection:true` for a scalar value, or `--attribute=extra:[definition,filters]` for an array value:
 
 ```none
@@ -206,7 +206,7 @@ or
 php bin/console oro:api:debug --attribute=extra:[definition,filters] <action>
 ```
 
-Use the `--processors` and ``--processors-without-description` options to display all processors and all processors without descriptions, respectively:
+Use the `--processors` and `--processors-without-description` options to display all processors and all processors without descriptions, respectively:
 
 ```none
 php bin/console oro:api:debug --processors
@@ -254,7 +254,7 @@ or
 php bin/console oro:api:config:dump users
 ```
 
-To display the configuration used for a particular action, use the `--action option` (please note that the default value for this option is `get`):
+To display the configuration used for a particular action, use the `--action` option (please note that the default value for this option is `get`):
 
 ```none
 php bin/console oro:api:config:dump users --action=update
@@ -266,7 +266,7 @@ To display the configuration for a particular request type, use the `request-typ
 php bin/console oro:api:config:dump users --request-type=rest --request-type=json_api
 ```
 
-No extra configuration data are added to the output by default, but you can add them with the `--extra` option. The value for the `extra` option can be: actions, definition, filters, sorters, descriptions, or the full name of a class implements <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ApiBundle/Config/Extra/ConfigExtraInterface.php" target="_blank">ConfigExtraInterface</a>, e.g.
+By default, no extra configuration data is added to the output. Add it with the `--extra` option, whose value can be: actions, definition, filters, sorters, descriptions, or the full name of a class that implements <a href="https://github.com/oroinc/platform/blob/5.1/src/Oro/Bundle/ApiBundle/Config/Extra/ConfigExtraInterface.php" target="_blank">ConfigExtraInterface</a>, e.g.
 
 ```none
 php bin/console oro:api:config:dump users --extra=filters --extra=sorters
@@ -360,7 +360,7 @@ This command deletes all obsolete asynchronous operations used by Batch API.
 php bin/console oro:cron:api:async_operations:cleanup
 ```
 
-To show the number of obsolete asynchronous operations without the deletion of them, use the `--dry-run` option:
+To show the number of obsolete asynchronous operations without deleting them, use the `--dry-run` option:
 
 ```none
 php bin/console oro:cron:api:async_operations:cleanup --dry-run
