@@ -1,3 +1,5 @@
+<!-- meta: description = What OroPay is, what it supports, and what to expect when you set it up. -->
+
 <a id="pre-built-integrations-payment-oropay"></a>
 
 # Integration with OroPay Payment Service
@@ -5,53 +7,103 @@
 #### HINT
 Please <a href="https://oroinc.com/contact-us/" target="_blank">contact our support team</a> for more information on available integration options. You can also visit our <a href="https://extensions.oroinc.com/" target="_blank">extensions store</a> to explore other integrations and extensions.
 
-[OroPay](../../../back-office/system/integrations/payment-integration/oropay/index.md#user-guide-payment-oropay) is a payment solution integrated into OroCommerce, designed specifically for B2B transactions. Unlike typical consumer-focused payment tools, OroPay addresses the unique needs of B2B organizations, such as large orders, recurring invoices, and complex account structures. It combines eCommerce, ERP, and payment workflows into one natural process.
+OroPay is the payment service built into OroCommerce, delivered together with <a href="https://www.globalpayments.com/" target="_blank">Global Payments</a>. It lets your customers pay by card, ACH, Apple Pay, Google Pay, and PayPal, including the local payment methods PayPal surfaces automatically where available. All of this happens within the checkout, invoice, and order screens you already use. Availability depends on your Global Payments account setup, so confirm with your account manager which methods apply to your business.
 
-OroPay is developed with Global Payments, a top company in financial technology, and offers strong reliability and compliance features. It is built directly into the OroCommerce platform, meaning it does not work as a separate product. This integration removes the need for external portals or third-party services, which helps lower operational costs. As a result, businesses gain a single, trustworthy source for their financial data, making operations easier and data more accurate.
+![OroPay diagram showing how it works with Global Payments](user/img/integrations/oro-pay-diagram.png)
 
-#### IMPORTANT
-Before using OroPay, please contact the [OroCloud team](../../../../cloud/support.md#cloud-support) to have OroPay provisioned in your cloud environment.
+## What OroPay Is
 
-![View the OroPay payment method under the Invoices section](user/img/system/integrations/oropay/oropay-invoices.png)
+OroPay brings payment processing directly into OroCommerce, so a payment, an order, and an invoice all live in the same place instead of across separate systems. There is no additional application for your team to install or maintain.
 
-## Key OroPay Features
+<a href="https://www.globalpayments.com/" target="_blank">Global Payments</a> provides the underlying gateway, processing, and acquiring. Global Payments is a Fortune 500, S&P 500 payment technology company serving more than 6 million merchant locations and processing trillions of dollars in payment volume across more than 175 countries, so your transactions run on established, well-capitalized infrastructure. Because Global Payments covers the gateway, processing, and acquiring roles directly, there are no separate intermediary gateway, processor, or acquirer relationships to manage — one direct connection replaces what would otherwise be several. Global Payments manages your merchant account and processing rates directly with you, while Oro takes care of connecting that account to your OroCommerce checkout and keeping it running.
 
-Here is an overview of the key OroPay features:
+OroPay supplies OroCommerce with the settings and credentials it needs to communicate with Global Payments. When a customer pays at checkout, or against an invoice, OroCommerce processes the payment directly with Global Payments using that connection, and the outcome comes back as a notification that updates the order or invoice. Card details themselves are entered on a payment page hosted by Global Payments and tokenized there, so OroCommerce only ever sees a transaction record, never the card itself.
 
-* **Payment Methods** — Supports credit card and ACH (bank transfer) payments.
-* **Checkout and Invoices** — Enables buyers to pay either during the checkout process or directly from the storefront’s Invoices menu.
-* **Unified Workflow** — Integrates commerce, ERP, and financial data into a single workflow, minimizing the need for duplicate systems or manual reconciliation.
-* **Efficiency Gains** — Automates invoice handling and payment reconciliation, helping finance teams reduce errors and focus on higher-value tasks.
+OroCommerce also connects to the ERP and other back-office systems you already run, with ready-made connectors for platforms such as SAP, NetSuite, and Microsoft Dynamics, among others. Because OroPay is part of OroCommerce, payment activity shows up alongside your existing order and financial data instead of in a separate system you have to reconcile by hand.
 
-## Data Exchanged
+## OroPay and Your Existing Payment Providers
 
-When a payment is initiated, OroPay exchanges transactional and contextual information with multiple types of data with Global Payments to provide the smooth flow of payment information and enable secure and seamless transactions.
+OroPay is an additional payment method, not a replacement for what you already use. You can run it alongside your current providers for as long as it makes sense, splitting by website, currency, or customer segment however suits your business.
 
-**Transaction Amount** — The total amount of the payment.
+If you do decide to move volume over later, two things are worth knowing in advance:
 
-**Currency** — The currency in which the transaction is made.
+* Saved cards do not carry over between processors, so a returning buyer re-enters their card the first time they pay through OroPay.
+* An authorization already taken on another provider needs to be captured or voided there (OroPay cannot take over a payment that started elsewhere).
 
-**Customer Information** — Information about the customer making the purchase, such as name, phone number, and shipping address.
+## Supported Payment Capabilities
 
-**Order Information:** Details about the products or services being purchased, including item names, quantities, prices, and any applicable taxes or discounts.
+<a id="pre-built-integrations-payment-oropay-capabilities"></a>
+
+The table below covers what is available today. A few items depend on how your merchant account is set up with Global Payments rather than being on by default, and those are noted so you know what to ask about.
+
+**At checkout and on invoices**
+
+| Capability                                  | Details                                                                                                                                                                                                                                                               |
+|---------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Card payment at checkout, automatic capture | The customer pays at checkout, and the funds are captured immediately.                                                                                                                                                                                                |
+| Card payment at checkout, manual authorize  | The card is authorized at checkout, and you capture the funds later from the order view page — useful if you prefer to capture on shipment rather than at order placement.                                                                                            |
+| Level 2 and Level 3 card data               | Submitted automatically with card transactions, providing the more detailed transaction data that complex B2B purchases require. This can help qualify large B2B transactions for reduced interchange rates, depending on your card network and processing agreement. |
+| Invoice payment                             | Customers can pay an open invoice directly from the storefront. A **Pay** button appears on the invoice, and a Payments section is added to the invoice view page in the back-office.                                                                                 |
+| Saved-card payment for returning buyers     | Available where enabled on your merchant account. A returning buyer can select a previously used card instead of entering details again.                                                                                                                              |
+| ACH payment                                 | Available where ACH is part of your merchant setup. Authorization wording and SEC code selection remain the merchant’s responsibility, under NACHA rules.                                                                                                             |
+
+**After the sale**
+
+| Capability                    | Details                                                                               |
+|-------------------------------|---------------------------------------------------------------------------------------|
+| Full refund                   | Refund the full amount of a captured payment from the order view page.                |
+| Partial refund                | Refund part of a captured payment, where enabled on your merchant account.            |
+| Capture from an authorization | Complete a manual-authorize payment from the order view page.                         |
+| Partial capture               | Capture less than the full authorized amount, where enabled on your merchant account. |
+| Cancel or void                | Void an authorization before it is captured.                                          |
+
+Every transaction is visible both in OroCommerce, on the order or invoice, and in the payment portal Global Payments sets you up with. The portal is the place to go for statements and settlement details.
 
 #### NOTE
-The data exchanged and the integration level depend on the OroCommerce configuration and implemented customizations.
+This reflects what OroPay supports today. If you have a specific need that is not covered here, for example a pay-by-link flow, it is worth checking with your account manager rather than assuming OroPay covers everything a payment gateway typically can.
 
-## Data Security
+## How to Get Started
 
-Security is a core component of OroPay’s architecture. OroCommerce uses Global Payments’ infrastructure to provide:
+Your Oro account manager is your main point of contact for the whole process, from your first conversation through go-live, bringing in the right people at the right points and providing a coordinated experience across all parties.
 
-* **Real-Time Fraud Detection** — Continuous monitoring of transactions to identify and prevent suspicious activity.
-* **Data Tokenization** — Sensitive payment data is replaced with secure tokens, minimizing exposure of cardholder or bank details.
-* **Regulatory Compliance** — Full adherence to PCI DSS standards, SOC 1 and SOC 2 reporting, Strong Customer Authentication (SCA), and 3D Secure 2.0 protocols.
+Along the way, your account manager will want to understand a few things about your setup: whether your environment runs on OroCloud (OroPay is available there today, with self-hosted support on the roadmap), which OroCommerce version you are on, which legal entity and currencies the merchant account should cover, and, if you run multiple websites or customer groups, which ones you would like OroPay available to first. None of this needs to be settled before your first conversation — it is easier to work through together with your account manager.
 
-This layered security approach protects both sellers and customers, ensuring that financial data is processed and stored in line with industry best practices.
+## The Onboarding Process
+
+You can begin testing while the Global Payments merchant application is being processed, helping the implementation move forward in parallel. The production timeline is then primarily determined by the application process, which varies depending on your business. Your account manager can give you a sense of what to expect for your situation.
+
+Broadly, it works like this:
+
+1. **Getting acquainted.** Your account manager reviews your requirements and current payment setup, then brings in the right team members to help define the approach and prepare a proposal.
+2. **Trying it out early.** A sandbox OroPay environment, connected to a test gateway, can be requested from your account manager at any time and does not depend on your merchant application being finished. Most teams request one early and run through the payment lifecycle in parallel with the steps below — a good point to work through the capabilities in [Supported Payment Capabilities]() and confirm everything behaves as expected, with our team on hand to help.
+3. **Setting up your merchant account.** You work with Global Payments directly to apply for a merchant account and agree the terms. This typically covers your company details, ownership information, a settlement bank account, and your expected transaction volumes. Global Payments also gives you your own portal for the virtual terminal, transaction search, and statements.
+4. **Adding OroPay to your Oro agreement.** Your account manager handles this in parallel, so it does not hold anything up.
+5. **Connecting the two for production.** Once your merchant account is approved, the Oro team sets up the technical connection between OroPay and your merchant account, and styles the hosted payment page to match your checkout. Around this point, Oro’s support team sends you a short questionnaire covering the specific details they need to complete your account configuration. You never need to handle the gateway credentials yourself.
+6. **Going live.** OroPay moves into production, you confirm it with a handful of real transactions, and then you decide how widely to roll it out and to whom. Nothing is switched on for your buyers until you choose to switch it on.
+
+One detail worth knowing ahead of time: OroPay learns the outcome of a payment through a notification link that OroCommerce generates the first time you save the integration, so it cannot be set up any earlier than that. Your account manager will ask you for this link once you set up your sandbox integration, and again once you move to production, since the two are different. Until it is in place, a payment can succeed on the Global Payments side while still showing as pending in OroCommerce, so it is worth double-checking this step during testing.
+
+## Getting Support
+
+Once you are live, where you go for help depends on what you are seeing:
+
+| What you are seeing                                                                                                                                     | Where to go                                               |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
+| The payment method is missing at checkout, the integration shows an error, a payment status is not updating in OroCommerce, or the health check fails   | [Oro support](../../../../cloud/support.md#cloud-support) |
+| Questions about the merchant account, settlement and funding, fees and statements, declines and fraud rules, chargebacks and disputes, or portal access | Global Payments, directly                                 |
+
+## Payment Data and Compliance
+
+Card details are entered on the payment page hosted by Global Payments, never on an OroCommerce page, and are tokenized there. OroCommerce only stores the transaction record and a reference back to the gateway, not the card itself.
+
+Global Payments’ compliance coverage also extends to GDPR-compliant data handling and, for European transactions, PSD2 and Strong Customer Authentication (SCA).
+
+Because of that, working out which PCI DSS self-assessment questionnaire applies to your business is best done together with Global Payments and your own security assessor, since it depends on your broader payment setup rather than on OroCommerce alone.
+
+If you accept ACH payments, the authorization wording shown to your buyers and the SEC code you use remain your responsibility as the merchant, under NACHA rules.
 
 **Related Articles**
 
+* [OroPay Payment Service in the Back-Office](../../../back-office/system/integrations/payment-integration/oropay/index.md#user-guide-payment-oropay)
 * [Payment Configuration Concept Guide](../../../concept-guides/administration/payment-configuration/index.md#user-guide-payment)
-* [Manage OroPay Payment Service in the Back-Office](../../../back-office/system/integrations/payment-integration/oropay/index.md#user-guide-payment-oropay)
-* [Payment Actions (Authorize/Authorize and Charge)](../../../back-office/system/integrations/payment-integration/paypal-services/paypal-payment-actions.md#user-guide-payment-configuration-payment-method-integration-payment-actions)
-* [Payments at Checkout (Illustration)](../../../back-office/system/integrations/payment-integration/checkout/index.md#doc-payment-checkout)
-* [System Payment Configuration](../../../back-office/system/configuration/commerce/payment/index.md#configuration-guide-commerce-configuration-payment)
+* [Payment Rules](../../../back-office/system/payment-rules/index.md#sys-payment-rules)
