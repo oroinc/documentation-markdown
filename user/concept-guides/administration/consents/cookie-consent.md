@@ -48,7 +48,7 @@ The situation changes as soon as you add third-party services. These typically i
 1. **Via the Google Tag Manager (GTM) integration.** OroCommerce includes a built-in GTM integration. Once enabled, you manage third-party “tags” (essentially tracking scripts) inside GTM, including Google’s own products such as Google Analytics and Google Ads, as well as many non-Google platforms.
 
    For configuration details, see [Configure Google Tag Manager Integration in the Back-Office](../../../back-office/system/integrations/gtm/index.md#gtm-ga-4-integration).
-2. **By inserting third-party JavaScript directly into the storefront** (not through GTM). This means placing the JS snippet or markup supplied by a marketing/analytics/ad platform directly into the frontend, for example through theme/template customization or a content block.
+2. **By inserting third-party JavaScript directly into the storefront** (not through GTM). This means placing the JS snippet or markup supplied by a marketing/analytics/ad platform directly into the frontend through theme/template customization. The supported ways of doing this are described in [How to Add Third-Party Scripts to Storefront Pages](../../../../frontend/storefront/how-to/how-to-add-third-party-scripts.md#frontend-how-to-add-third-party-scripts-to-storefront).
 
 In both cases, the moment you introduce these services you are adding **non-essential cookies**, which in many jurisdictions require **prior, informed, opt-in consent** before they may be set. The default notice-and-acknowledge banner is generally **not** sufficient on its own for this scenario, because it neither captures granular consent nor gates the scripts on it. You will need one of the approaches below.
 
@@ -76,7 +76,7 @@ If you are not using GTM, a specialized CMP is still the recommended approach. T
 
 ### C. Native OroCommerce or Custom Banner
 
-As an alternative, you can extend the built-in OroCommerce native banner, or build your own custom one, to collect consent for additional cookie categories and use that signal to control which third-party scripts are embedded. In this approach you customize the banner to present category choices and add the logic so that a given third-party script is loaded only when its category has been accepted.
+As an alternative, you can extend the built-in OroCommerce native banner, or build your own custom one, to collect consent for additional cookie categories and use that signal to control which third-party scripts are embedded. In this approach you customize the banner to present category choices and add the logic so that a given third-party script is loaded only when its category has been accepted. For implementation details and code examples, see [How to Customize the Cookie Consent Banner](../../../../frontend/storefront/how-to/how-to-customize-cookie-consent-banner.md#frontend-how-to-customize-cookie-consent-banner) and [How to Add Third-Party Scripts to Storefront Pages](../../../../frontend/storefront/how-to/how-to-add-third-party-scripts.md#frontend-how-to-add-third-party-scripts-to-storefront).
 
 Consider this option when:
 
