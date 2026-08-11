@@ -22,3 +22,5 @@ Change Corporate Identity:
 * [Override, Remove or Disable Files](how-to-override-remove-files.md)
 * [Create Extra JS Build for a Landing Page](how-to-create-extra-js-build-for-landing-page.md)
 * [Disable Data Format Detection](how-to-disable-format-detection.md)
+* [Customize the Cookie Consent Banner](how-to-customize-cookie-consent-banner.md)
+* [Add Third-Party Scripts to Storefront Pages](how-to-add-third-party-scripts.md)
