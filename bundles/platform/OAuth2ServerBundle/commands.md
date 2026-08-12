@@ -18,7 +18,8 @@ You can customize the permissions being assigned to RSA keys via `setPrivateKeyP
 
 ## oro:cron:oauth-server:cleanup
 
-Removes outdated OAuth 2.0 access tokens, refresh tokens and auth codes. It also removes OAuth 2.0 applications that belong to removed users. Runs daily at midnight via cron.
+Removes outdated OAuth 2.0 access tokens, refresh tokens, auth codes, and expired Session Transfer Tokens. It also
+removes OAuth 2.0 applications that belong to removed users. Runs daily at midnight via cron.
 
 ```bash
 php bin/console oro:cron:oauth-server:cleanup
