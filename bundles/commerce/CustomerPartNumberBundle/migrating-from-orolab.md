@@ -19,21 +19,24 @@ installed or updated (e.g., the legacy extension is added later), or to re-run t
    ```
 
    This copies the existing rows from the legacy `orolab_customer_part_number` table into the new
-   `oro_customer_part_number` table, skipping any that already exist there.
+   `oro_customer_part_number` table. A row is skipped when it already exists there, when it has no customer, or
+   when its part number is longer than the 255 characters the new column allows. The command summary counts the
+   skipped rows by reason, and a row skipped because of a missing customer or a part number that is too long is
+   also reported individually.
 2. Run the website search reindex, so migrated customer part numbers appear in the storefront search:
    ```none
    php bin/console oro:website-search:reindex --scheduled
    ```
 3. Verify the migrated customer part numbers in the storefront (search results, product view, listing pages,
    etc.).
-4. Remove the old OroLab customer part number extension (the legacy package/bundle) from the application.
-5. Remove the legacy entity configuration:
+4. Remove the legacy entity configuration:
    ```none
    php bin/console oro:customer-part-number:cleanup-orolab
    ```
 
    The legacy `orolab_customer_part_number` table is intentionally kept and must be dropped manually if it is
    no longer needed.
+5. Remove the old OroLab customer part number extension (the legacy package/bundle) from the application.
 6. Clear the application cache:
    ```none
    php bin/console cache:clear
