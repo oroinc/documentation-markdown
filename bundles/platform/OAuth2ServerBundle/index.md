@@ -7,7 +7,9 @@
 <a href="https://github.com/oroinc/oauth2-server" target="_blank">OroOAuth2ServerBundle</a> provides OAuth 2.0 authorization and resource server capabilities implemented
 on top of <a href="https://github.com/thephpleague/oauth2-server" target="_blank">thephpleague/oauth2-server</a> library.
 
-Currently, Authorization Code (with PKCE extention), Client Credentials and Password grants are implemented.
+Currently, Authorization Code (with PKCE extension), Client Credentials and Password grants are implemented. The
+bundle also provides the custom Session Transfer grant that exchanges an OAuth access token for a short-lived,
+one-time token used to create an authenticated browser session.
 
 See <a href="https://oauth2.thephpleague.com/authorization-server/auth-code-grant/" target="_blank">OAuth 2.0 Server Authorization Code Grant</a> and <a href="https://oauth.net/2/grant-types/authorization-code/" target="_blank">OAuth 2.0 Authorization Code Grant</a> for details of
 Authorization Code grant.
@@ -42,6 +44,9 @@ oro_oauth2_server:
 
         # Determines if the authorization code grant is enabled.
         enable_auth_code: true
+
+        # The lifetime in seconds of a Session Transfer Token.
+        session_transfer_token_lifetime: 60
 
         # The full path to the private key file that is used to sign JWT tokens.
         private_key: '%kernel.project_dir%/var/oauth_private.key'
@@ -137,6 +142,7 @@ Find out what sets <a href="https://oroinc.com/b2b-ecommerce/what-is-b2b-ecommer
 
 ## Related Documentation
 
+* [Session Transfer](session-transfer.md)
 * [Commands](commands.md)
 
 <!-- Frontend -->
