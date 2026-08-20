@@ -59,6 +59,9 @@ To change any of the system-wide options, clear the **Use Organization** checkbo
      * *User* — Provide your email address
      * *Password* — Provide your password
 
+     #### NOTE
+     List of outbound connections may be restricted by your application environment. If the connection cannot be established, contact your system administrator.
+
      Click **Check Connection/Retrieve Folders**. After successful connection, a list of folders will be loaded. Check the folders that you wish to be synchronized (e.g., Inbox).
 
      As an example, we have synchronized a Gmail mailbox with your Oro application, having previously turned on **access for less secure apps**. More details on how to synchronize your Gmail and turn on access for less secured apps can be found in the <a href="https://support.google.com/mail/answer/7126229?hl=en&rd=2&visit_id=1-636180891016092253-2149088408#ts=1665018%2C1665144" target="_blank">Use IMAP to check Gmail</a> and <a href="https://support.google.com/accounts/answer/6010255?hl=en" target="_blank">Less secure apps & your Google Account</a> topics.
