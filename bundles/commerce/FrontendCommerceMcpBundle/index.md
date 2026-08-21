@@ -212,6 +212,9 @@ plain_json_api:
                 # Indicates whether a relationship to another entity should be expanded in MCP.
                 expand:               ~
 
+                # API actions to which the field configuration is applied.
+                actions:              ~
+
                 exclusion_policy:     ~
                 field_name_prefix:    ~
                 fields:
@@ -219,6 +222,7 @@ plain_json_api:
                     field_name:
                         exclude:              ~
                         expand:               ~
+                        actions:              ~
                         exclusion_policy:     ~
                         field_name_prefix:    ~
                         fields:
@@ -226,6 +230,7 @@ plain_json_api:
                             field_name:
                                 exclude:              ~
                                 expand:               ~
+                                actions:              ~
 ```
 
 To configure API resources that should be applicable only to the plain format, use Resources/config/oro/api_frontend_commerce_mcp_plain.yml in any bundle or config/api_frontend_commerce_mcp_plain.yml of your application.
