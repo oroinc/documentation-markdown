@@ -38,6 +38,9 @@ To configure email settings per organization:
    > * *Encryption* — Encryption type: None, SSL or TLS
    > * *Username* — Your email address
    > * *Password* — The password for your email address
+
+   #### NOTE
+   List of outbound connections may be restricted by your application environment. If the connection cannot be established, contact your system administrator.
 6. Under **HTML in templates**, enable or disable HTML Purifier. Disabling HTML Purifier allows pasting any HTML code into a template or an email body editor without tag stripping.
 7. Under **System Mailboxes**, configure a [system mailbox](../../../../configuration/system/general-setup/global-email.md#admin-configuration-system-mailboxes) that allows people who do not have access to the company mailbox addresses write to the company. To add a new system mailbox, click **Add Mailbox**.
 8. Click **Save Settings**.
@@ -69,6 +72,9 @@ To configure a system mailbox on the [organization level](../../../../index.md#c
    * *Encryption* — Select the encryption type, SSL or TLS
    * *User* — Provide your email address
    * *Password* — Provide your password
+
+   #### NOTE
+   List of outbound connections may be restricted by your application environment. If the connection cannot be established, contact your system administrator.
 7. Click **Check Connection/Retrieve Folders**. After successful connection, a list of available folders is displayed. Select the checkboxes next to the folders you wish to synchronize.
 
    #### HINT

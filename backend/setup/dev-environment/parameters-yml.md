@@ -34,6 +34,12 @@ Infrastructure-related environment variable defaults are stored in the  *.env-ap
   >   "api.example.com:80,443,8000-8100"    - allows port 80, 443 and the 8000-8100 range
   >   "*.example.com:443;payments.acme.com" - multiple semicolon-separated rules
   > ```
+
+  > #### NOTE
+  > If `ORO_PERMITTED_OUTBOUND_CONNECTIONS` is empty, outbound connection restrictions are disabled.
+  > Configure at least one rule to restrict outbound connections.
+
+  > The allowlist applies to SMTP, IMAP, and LDAP connections.
 * The `ORO_OUTBOUND_CONNECTION_CHECK_DURATION` environment variable defines the duration, in seconds, used to check whether an outbound connection can be established. It is used to prevent time-based attacks by introducing an artificial delay so that both successful and failed requests take the same amount of time. The default value is 5 seconds. Set it to `null` or `0` to disable the constant-time connection check.
 
 <a id="book-installation-github-clone-configuration-params-default"></a>
