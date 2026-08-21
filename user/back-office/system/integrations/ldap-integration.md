@@ -38,6 +38,9 @@ To set up an integration with LDAP:
    | **Base Distinguished Name\***     | The default base distinguished name used by the LDAP server for search (e.g., to<br/>search for LDAP accounts). This option is required for most account-related operations and should indicate the<br/>distinguished name under which accounts are located.                                                                                                                                                                             |
    | **Default Business Unit Owner\*** | A [business unit](../../../glossary.md#term-Business-Unit) that will by default own the newly<br/>imported users in Oro application (members of this unit can manage the user records subject to the<br/>role settings).<br/><br/>If you want to assign users to multiple business units,<br/>this can be done after the synchronization is complete. Another option is to create separate integrations for every default business unit. |
 
+   #### NOTE
+   List of outbound connections may be restricted by your application environment. If the connection cannot be established, contact your system administrator.
+
    Optionally, provide the following values, if they are required by the target LDAP server:
 
    |                               |                                                                                                                                                                                                               |
