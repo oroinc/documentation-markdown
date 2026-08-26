@@ -22,6 +22,10 @@ To create a new order from the back-office:
    ![The general section of the order details page](user/img/sales/orders/orders_create_general.png)
 4. In the **Line Items** section, provide the following information:
    1. **Product**: Add products to the order by clicking **+Add Product**. Use the drop-down to select a product. Alternatively, begin typing in the name of the product to narrow down your search. To see a list of all the products, click <i class="fa fa-bars fa-lg" aria-hidden="true"></i>.
+
+      #### NOTE
+      If the customer selected in the **General** section above has [customer part numbers](../../products/customer-part-numbers/index.md#back-office-customer-part-numbers) defined, each matching product in the drop-down also shows that customer’s part number (CPN) under its name and SKU, and you can type the customer’s part number instead of the SKU or product name to find it. Customer part numbers are specific to the selected customer, so **select the customer first**. Until a customer is selected, the Product field only searches by SKU and name.
+      ![The product drop-down displaying each product's customer part number (CPN) under its SKU and name](user/img/products/cpn/orders_create_lineitems_cpn.png)
    2. **Quantity**: Enter product quantity.
    3. **Warehouse**: Choose a warehouse from the drop-down, or click <i class="fa fa-bars fa-lg" aria-hidden="true"></i> to see a list of all warehouses.
    4. **Price**: Enter the price for the product, or click <i class="fa fa-bars fa-lg" aria-hidden="true"></i> to select the price from the list.
