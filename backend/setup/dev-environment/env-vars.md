@@ -198,6 +198,9 @@ When configuring a virtual host (vhost), ensure that the vhost is URL encoded. I
 
 ### Message Queue Consumer Timeouts
 
+#### NOTE
+The configurable consumer `receive_timeout` option is available as of OroCommerce version 7.0.4.
+
 You can tune the message queue consumer timeout with the following environment variable:
 
 ```bash
@@ -209,6 +212,9 @@ ORO_MQ_CONSUMER_RECEIVE_TIMEOUT=1.0
 The variable overrides the corresponding `oro_message_queue.consumer.receive_timeout` configuration option.
 
 ### Message Queue Consumption Mode
+
+#### NOTE
+Consumption modes are available as of OroCommerce version 7.0.4.
 
 You can use the following environment variable to select the consumption mode, which determines the order in which a consumer visits multiple queues.
 

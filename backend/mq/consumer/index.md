@@ -26,6 +26,9 @@ that does nothing but requeue such incoming message. Default status can be chang
 
 ## Consumption Modes
 
+#### NOTE
+Consumption modes are available as of OroCommerce version 7.0.4.
+
 When the consumer is bound to multiple queues, the consumption mode controls the order in which queues are polled. The mode is selected with the `--mode` option. The default mode is `default`.
 
 Built-in modes:
@@ -39,6 +42,9 @@ Built-in modes:
 For a detailed description of each mode, including consumption schemas, and instructions for creating custom modes, see [Consumption Modes](../consumption-modes.md#dev-guide-mq-consumption-modes).
 
 ## Receive Timeout
+
+#### NOTE
+The configurable consumer `receive_timeout` option is available as of OroCommerce version 7.0.4.
 
 The consumer’s `receive_timeout` option controls how long the consumer waits for messages when no messages are available. It accepts a fractional (sub-second) value in seconds:
 
