@@ -29,7 +29,7 @@ The following integration types are available:
 To create an integration with **OpenID Connect**, **Google OpenID Connect**, **Microsoft OpenID Connect**, or **Okta OpenID Connect**:
 
 1. Navigate to **System > Integrations > Manage Integrations** in the main menu.
-2. Click **Create Integration** on the top right and provide the required information.
+2. Click **Create Integration** at the top right and provide the required information.
 
 The configuration options described below represent the full set of settings available for the generic OpenID Connect integration type.
 
@@ -40,6 +40,7 @@ If you select one of the provider-specific integrations (**OpenID Connect**, **G
 * **Apply to** — Available only when the *Customer bundle* is installed. The field allows to select the user type this integration will be used for:
   : * **User** — The login button is displayed on the back-office login page.
     * **Customer User** — The login button is displayed on the storefront login page.
+* **Website** — (available as of OroCommerce v6.0.11.) Available only when the *Customer Pro bundle* is installed and *Customer User* is selected in the *Apply to* field. Determines the storefront website on which the button is displayed.
 * **Label** — The label displayed on the SSO login button.
 * **Button Background Color** — The background color of the SSO login button. If no color is specified, the default system background color is used.
 * **Button Icon** — The icon displayed on the login button in the back-office. The icon is shown only when *User* is selected in the *Apply to* field.
