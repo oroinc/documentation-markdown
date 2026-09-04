@@ -8,7 +8,14 @@ The OroIQ feature is available as of OroCommerce version 7.0.2.
 #### HINT
 Please <a href="https://oroinc.com/contact-us/" target="_blank">contact our support team</a> to learn more about OroCommerce AI features, discuss how they can meet your business needs, and get started with implementation.
 
-[OroIQ](../../../../../../../concept-guides/ai/index.md#concept-guide-oroiq) is an AI-powered assistant designed to help users analyze data and perform back-office operations in the OroCommerce Enterprise application using natural language. Once the OroIQ assistant is installed in the Oro application, it can be enabled [globally](../../../../../configuration/system/integrations/oroiq-settings.md#admin-configuration-oroiq-settings) and per organization:
+[OroIQ](../../../../../../../concept-guides/ai/index.md#concept-guide-oroiq) is an AI-powered assistant designed to help users analyze data and perform back-office operations in the OroCommerce Enterprise application using natural language. Once the OroIQ assistant is installed in the Oro application, it can be enabled [globally](../../../../../configuration/system/integrations/oroiq-settings.md#admin-configuration-oroiq-settings) and per organization.
+
+#### IMPORTANT
+Select the [Enable API](../organization-application-settings.md#admin-configuration-application-org) option under **System Configuration > General Setup > Application Settings > Web API** first. OroIQ depends on this API to function.
+
+![The Enable API feature under system configuration on the organization level](user/img/system/config_system/enable-api-org.png)
+
+To enable OroIQ per organization, do the following:
 
 1. Navigate to **System > User Management > Organizations** in the main menu.
 2. For the necessary organization, hover over the <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i> **More Options** menu at the end of the row and click <i class="fas fa-cog" aria-hidden="true"></i> to start editing the configuration.
