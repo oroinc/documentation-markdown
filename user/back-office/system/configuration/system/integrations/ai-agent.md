@@ -9,7 +9,14 @@ The [AI Smart Agent](../../../../../concept-guides/ai/index.md#concept-guide-ai)
 
 ![AI Smart Agent global config and illustration on the AI Smart Agent chat in the storefront](user/img/system/config_system/ai-agent-config.png)
 
-Once the agent is installed in the Oro application, you can enable it in the system configuration globally, per [organization](../../../user-management/organizations/org-configuration/general-setup-org/integrations/organization-ai-agent.md#organization-ai-agent-settings), [website](../../../websites/web-configuration/general-sys-config/integrations/website-ai-agent.md#website-configuration-ai-agent-settings), [customer](../../../../customers/customers/customer-configuration/system-configuration/integrations/customer-ai-agent-setting.md#user-guide-customer-configuration-settings-ai-agent) and [customer group](../../../../customers/customer-groups/customer-group-configuration/system-configuration/integrations/customer-group-ai-agent.md#user-guide-customer-groups-configuration-settings-ai-agent):
+Once the agent is installed in the Oro application, you can enable it in the system configuration globally, per [organization](../../../user-management/organizations/org-configuration/general-setup-org/integrations/organization-ai-agent.md#organization-ai-agent-settings), [website](../../../websites/web-configuration/general-sys-config/integrations/website-ai-agent.md#website-configuration-ai-agent-settings), [customer](../../../../customers/customers/customer-configuration/system-configuration/integrations/customer-ai-agent-setting.md#user-guide-customer-configuration-settings-ai-agent) and [customer group](../../../../customers/customer-groups/customer-group-configuration/system-configuration/integrations/customer-group-ai-agent.md#user-guide-customer-groups-configuration-settings-ai-agent).
+
+#### IMPORTANT
+Select the [Enable Storefront API](../general-setup/application.md#admin-configuration-application) option under **System Configuration > General Setup > Application Settings > Web API** first. The AI Smart Agent depends on this API to function.
+
+![The Enable Storefront API feature under system configuration](user/img/system/config_system/enable-storefront-api.png)
+
+To enable AI Smart Agent globally, do the following:
 
 1. Navigate to **System > Configuration** in the main menu.
 2. In the menu to the left, click **System Configuration > Integrations > AI Smart Agent**.
