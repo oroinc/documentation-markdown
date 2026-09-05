@@ -22,10 +22,11 @@ Each feature consists of one required option, the label. You can configure the f
 > - `api_resources` — A list of entity FQCNs that are available as API resources.
 > - `frontend_api_resources` — A list of entity FQCNs that are available as the storefront API resources.
 > - `commands` — A list of commands that depend on the feature. Running these commands is impossible or is not reasonable when the feature is disabled.
-> - `entities` — A list of entity FQCNs.
+> - `entities` — A list of entity FQCNs. A datagrid that declares one of these entities in the `extended_entity_name` option is not available when the feature is disabled as well.
 > - `dashboard_widgets` — A list of [dashboard widget](../dashboards/index.md#dev-dashboards) names.
 > - `sidebar_widgets` — A list of [sidebar widget](../../bundles/platform/SidebarBundle/index.md#bundle-docs-platform-sidebar-bundle) names.
 > - `cron_jobs` — A list of CRON commands that depend on the feature. These commands are not executed by the [cron](../cron.md#dev-guide-system-cron-jobs) when the feature is disabled.
+> - `datagrids` — A list of [datagrid](../entities/data-grids/index.md#data-grids) names. These datagrids are not available when the feature is disabled.
 > - `navigation_items` — A list of [navigation item](../navigation/index.md#doc-managing-app-menu) names.
 > - `placeholder_items` — A list of [placeholder item](../../frontend/back-office/placeholders.md#backend-placeholders) names.
 > - `mq_topics` — A list of [message queue topic](../mq/message-queue-topics.md#dev-guide-mq-topics) names.
@@ -73,12 +74,29 @@ features:
             - acme_sidebar_widget
         cron_jobs:
             - acme:cron:sync-job
+        datagrids:
+            - acme-page-grid
         navigation_items:
             - application_menu.sales_tab.acme_order_list
         placeholder_items:
             - acme_create_page_button
         mq_topics:
             - acme.mq_topics.calculate
+```
+
+#### NOTE
+A datagrid bound to a feature via the `datagrids` section is not rendered on a page when the feature is disabled, and its endpoints respond with 404. Every datagrid name must be listed explicitly: the datagrid inheritance is not taken into account, so binding a datagrid to a feature does not bind the datagrids that extend it, and vice versa. On the contrary, a datagrid scope is taken into account, so the `acme-page-grid` name covers `acme-page-grid:some-scope` as well. Datagrid mixins and datagrids with dynamically generated names, e.g. report and segment datagrids, cannot be bound to a feature this way.
+
+#### NOTE
+A datagrid is not available as well when the entity declared by the `extended_entity_name` option of its configuration is listed in the `entities` section of a disabled feature. Unlike the `datagrids` section, this covers datagrids declared anywhere, including custom bundles, and takes the datagrid inheritance into account, because the `extended_entity_name` option is inherited via the `extends` directive. Only the explicitly declared entity is taken into account, the root entity of the datasource query is not. To keep a datagrid available regardless of the state of its entity, use the `features.ignore_entity_state` datagrid option:
+
+*src/Acme/Bundle/AppBundle/Resources/config/oro/datagrids.yml*
+```yaml
+datagrids:
+    acme-page-grid:
+        extended_entity_name: Acme\Bundle\AppBundle\Entity\Page
+        features:
+            ignore_entity_state: true
 ```
 
 #### NOTE
