@@ -1,3 +1,5 @@
+<a id="bundle-docs-platform-message-queue-bundle-commands"></a>
+
 # CLI Commands (MessageQueueBundle)
 
 ## oro:message-queue:consume
@@ -147,6 +149,8 @@ php bin/console oro:message-queue:transport:consume --queue="name=oro.index,proc
 php bin/console oro:message-queue:transport:consume --queue="name=oro.default,weight=5" --queue=oro.system --mode=weighted-round-robin
 ```
 
+<a id="bundle-docs-platform-message-queue-bundle-commands-env-var"></a>
+
 ### Environment Variables
 
 The following environment variables affect the `oro:message-queue:transport:consume` command.
@@ -177,5 +181,8 @@ is equivalent to:
 ```none
 php bin/console oro:message-queue:transport:consume --queue="name=oro.index,processor=oro_search.async.index_entity_processor" --queue=oro.default
 ```
+
+#### NOTE
+In Oro Cloud, these environment variables can be defined via the `orocloud.yaml` configuration (`orocloud_options.application.env_vars`). See <a href="https://doc.oroinc.com/cloud/maintenance/env-vars/#how-to-add-remove-environment-variables" target="_blank">How to Add/Remove Environment Variables</a> for the exact syntax.
 
 <!-- Frontend -->

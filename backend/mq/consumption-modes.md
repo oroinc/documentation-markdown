@@ -6,6 +6,11 @@ Consumption modes determine the order in which multiple queues are visited by th
 
 The consumption mode is selected via the `--mode` CLI option or the `ORO_MQ_CONSUMPTION_MODE` environment variable. The default mode is `default`.
 
+Queues can also be grouped and pre-configured via the `ORO_MQ_CONSUMPTION_GROUPS` environment variable, which lets a single group name passed on the CLI expand into a full set of `--queue` options. For the complete list of supported environment variables and usage examples, see [Environment Variables](../../bundles/platform/MessageQueueBundle/commands.md#bundle-docs-platform-message-queue-bundle-commands-env-var).
+
+#### NOTE
+In Oro Cloud, these environment variables can be set through the `orocloud.yaml` configuration. See <a href="https://doc.oroinc.com/cloud/maintenance/env-vars/#how-to-add-remove-environment-variables" target="_blank">How to Add/Remove Environment Variables</a> for instructions.
+
 ## Built-in Consumption Modes
 
 ### default
