@@ -47,6 +47,9 @@ To change the default customer user configuration settings for an organization:
 > * **Show Banner** — Select the checkbox to display the cookie consent banner to the website’s visitor.
 > * **Cookies Banner Text** — Provide the message of the cookie banner. To edit the text for a specific language, click the language button and edit the text for the needed language.
 > * **Landing Page** — Select the landing page with cookie policy of the application, if any. This landing page will be highlighted as a link on the banner. To translate the landing page title to the specific language, click the language button and edit the title as required.
+1. In the **Customer User Invitations** section, configure the following option:
+
+> * **Enable Customer User Invitations** — Enables/disables [customer user invitations](../../../../../../customers/customer-users/invitations.md#user-guide-customers-customer-user-invitations) in the back-office and the storefront. When invitations are disabled, the invitation pages and actions are hidden. Enabled by default. You can configure this option [globally](../../../../../configuration/commerce/customer/global-customer-users.md#sys-config-configuration-commerce-customers-customer-users) and per organization, [website](../../../../../websites/web-configuration/commerce/customers/website-customer-users.md#system-website-configuration-commerce-customers-customer-users), [customer group](../../../../../../customers/customer-groups/customer-group-configuration/commerce/customer/index.md#user-guide-customer-groups-customer-users-settings), and [customer](../../../../../../customers/customers/customer-configuration/commerce/customer/index.md#user-guide-customers-customer-users-settings). A setting configured at a more specific level overrides the inherited setting.
 1. Click **Save Settings**.
 
 <!-- fa-bars = fa-navicon -->

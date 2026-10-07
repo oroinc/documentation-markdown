@@ -9,6 +9,7 @@ Learn how to enable and set up commerce-related features per customer:
   * [Integrations (AI Smart Agent)](system-configuration/integrations/customer-ai-agent-setting.md#user-guide-customer-configuration-settings-ai-agent)
 * **Commerce**
   * [Search (Search Terms)](commerce/search/customer-search-settings.md#user-guide-customers-search-settings)
+  * [Customer Users](commerce/customer/index.md#user-guide-customers-customer-users-settings)
   * [Product (Customer Settings)](commerce/product/customer-product-settings.md#user-guide-customers-customer-settings)
   * [Sales (Checkout, Recurring Orders and Invoices)](commerce/sales/index.md#user-guide-customers-sales-settings)
   * [Inventory](commerce/inventory/customer-warehouse-settings.md#user-guide-customers-inventory-settings)

@@ -11,5 +11,6 @@ The guide provides an overview of the first steps to start working with the stor
 * [Create an account](create-account.md#frontstore-guide-getting-started-overview-create-account) — navigates you through the steps of creating an account in your OroCommerce web store.
 * [Sign in](sign-in.md#frontstore-guide-getting-started-overview-sign-in) — illustrates the signing in process
 * [Forgot your passport](forgot-password.md#frontstore-guide-getting-started-overview-forgot-password) — helps you recover your passport if you happen to have forgotten it.
+* [Accept an invitation](accept-invitation.md#frontstore-guide-getting-started-overview-accept-invitation) — explains how to create your account from an invitation email.
 
 ![The Sign In page](user/img/storefront/sign_in/register_sign_in.png)

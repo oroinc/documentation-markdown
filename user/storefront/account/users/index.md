@@ -49,6 +49,9 @@ The page has two sections:
 
 To create a new user, click **+Create User** at the top right of the page, next to the view table name.
 
+If you want the new user to complete their own profile and choose their password, send them an invitation instead.
+See [Invite Customer Users](../../../back-office/customers/customer-users/invitations.md#user-guide-customers-customer-user-invitations) for instructions.
+
 A form will emerge with the following data to provide:
 
 * Customer
@@ -67,6 +70,19 @@ A form will emerge with the following data to provide:
 * Roles: administrator/buyer checkboxes
 
 ![image](user/img/storefront/users_roles/create-user.png)
+
+## Manage Invitations
+
+The **Users** page lists the pending invitations that have not expired yet. An invitation link is valid for 24 hours by default.
+
+Depending on your permissions, you can perform the following actions with an invitation:
+
+* **Resend** — Sends a new invitation email and extends the expiration date. The link in the previous email stops working.
+* **Revoke** — Cancels the invitation. The invitation link stops working.
+
+When the invited user accepts the invitation, their customer user account is enabled and confirmed automatically. The account belongs to the customer account selected in the invitation and receives the selected roles.
+
+![image](user/img/storefront/sign_in/manage-invitations.png)
 <!-- A -->
 <!-- B -->
 <!-- C -->
