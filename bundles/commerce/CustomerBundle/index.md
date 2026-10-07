@@ -15,6 +15,7 @@ OroCustomerBundle is responsible for:
 - Activating and deactivating customer users
 - Sending welcome emails
 - Editing password and automatically generating password for a new customer user
+- Inviting customer users to create their own profiles
 
 ## Configure Frontend Permissions (ACL)
 

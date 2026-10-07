@@ -49,7 +49,9 @@ If the application was installed without demo data, the banner is disabled. Conf
 >   ![Text language button](user/img/system/config_commerce/cookie_banner/text-language-button.png)
 > * **Landing Page** — Select the landing page with cookie policy of the application, if any. This landing page will be highlighted as a link on the banner. To translate the landing page title to the specific language, click the language button and edit the title as required.
 >   ![Text language button](user/img/system/config_commerce/cookie_banner/cookie-banner-landing-page.png)
-1. Click **Save Settings**.
+1. In the **Customer User Invitations** section, configure the following option:
+   * **Enable Customer User Invitations** — Enables/disables [customer user invitations](../../../../customers/customer-users/invitations.md#user-guide-customers-customer-user-invitations) in the back-office and the storefront. When invitations are disabled, the invitation pages and actions are hidden. Enabled by default. You can configure this option globally and per [organization](../../../user-management/organizations/org-configuration/commerce/customers/organization-customer-users.md#system-user-mngm-organization-configuration-commerce-customers-customer-users), [website](../../../websites/web-configuration/commerce/customers/website-customer-users.md#system-website-configuration-commerce-customers-customer-users), [customer group](../../../../customers/customer-groups/customer-group-configuration/commerce/customer/index.md#user-guide-customer-groups-customer-users-settings), and [customer](../../../../customers/customers/customer-configuration/commerce/customer/index.md#user-guide-customers-customer-users-settings). A setting configured at a more specific level overrides the inherited setting.
+2. Click **Save Settings**.
 
 <!-- Frontend -->
 <!-- fa-bars = fa-navicon -->
