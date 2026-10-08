@@ -48,37 +48,32 @@ The OroCommerce MCP server uses OAuth 2.0 Authorization Code authentication.
 
 To connect an AI application to OroCommerce storefront:
 
-1. Create a separate Customer User OAuth application for each AI application in the back-office.
+1. Create a separate [Customer User OAuth application](../../../user/back-office/customers/customer-user-oauth-app/index.md#customer-user-oauth-app) for each AI application in the back-office.
 2. Configure the AI application with the MCP server URL. AI applications that support OAuth server metadata, such as Visual Studio Code, discover the authentication settings automatically. For AI applications that do not support this metadata, provide the OAuth Client ID and Client Secret manually.
 
 The OAuth application setup is the same for every AI application. Only the redirect URL and a few application-specific fields differ.
 
-### Create the Customer User OAuth Application
-
-To create a new [Customer User OAuth Application](../../../user/back-office/customers/customer-user-oauth-app/index.md#customer-user-oauth-app) in Oro:
-
-1. Navigate to **Customers > Customer User OAuth Applications** in the back-office main menu.
-2. Click **Create OAuth Application**.
-3. Enter a descriptive name, for example, `Commerce Storefront MCP Server`.
-4. Select **Active**.
-5. Clear **Support all APIs**.
-6. In **Supported APIs**, select **Commerce Storefront MCP Server**.
-7. Set **Grant Type** to **Authorization Code**.
-8. Add the redirect URL required by your AI application.
-
-| **AI Application**   | **Redirect URL**                                            |
-|----------------------|-------------------------------------------------------------|
-| Visual Studio Code   | `http://127.0.0.1:33418/` and `https://vscode.dev/redirect` |
-| ChatGPT              | `https://chatgpt.com/connector_platform_oauth_redirect`     |
-1. Clear **Confidential Client** (e.g., for VS code) unless your AI application requires a confidential OAuth application.
-2. Toggle **Skip User Consent** to enable or skip user login consent screen.
-3. Click **Save and Close**. Create a new OAuth application with the following settings:
-
-Once saved, the system will generate the **Client ID** and **Client Secret** for the OAuth application. Copy both values, because you need them when you configure the AI application.
-
 ### Connect Visual Studio Code
 
-1. In your VS Code project, create or open the `.vscode/mcp.json` file.
+Create a Customer User OAuth application for Visual Studio Code:
+
+1. Navigate to **Customers > Customer User OAuth Applications** in the OroCommerce back-office.
+2. Create a Customer User OAuth application with the following settings:
+
+| **Field**           | **Value**                                                         |
+|---------------------|-------------------------------------------------------------------|
+| Application Name    | A descriptive name, for example `Commerce Storefront MCP Server`  |
+| Active              | On                                                                |
+| Support all APIs    | Off                                                               |
+| Supported APIs      | `Commerce Storefront MCP Server`                                  |
+| Grant Type          | `Authorization Code`                                              |
+| Redirect URLs       | `http://127.0.0.1:33418/` and `https://vscode.dev/redirect`       |
+| Confidential Client | Off                                                               |
+| Skip User Consent   | On or off, depending on whether you want the login consent screen |
+
+In your VS Code project:
+
+1. Create or open the `.vscode/mcp.json` file.
 2. Add an entry for the OroCommerce MCP server:
 
 ```json
@@ -97,7 +92,26 @@ Once saved, the system will generate the **Client ID** and **Client Secret** for
 #### IMPORTANT
 Connecting a custom MCP application in ChatGPT requires a ChatGPT plan that supports developer mode connectors. Verify your plan before you continue.
 
-1. In ChatGPT, open developer mode and create a new MCP application.
+Create a Customer User OAuth application for ChatGPT:
+
+1. Navigate to **Customers > Customer User OAuth Applications** in the OroCommerce back-office.
+2. Create a Customer User OAuth application with the following settings:
+
+| **Field**           | **Value**                                                         |
+|---------------------|-------------------------------------------------------------------|
+| Application Name    | A descriptive name, for example `Commerce Storefront MCP Server`  |
+| Active              | On                                                                |
+| Support all APIs    | Off                                                               |
+| Supported APIs      | `Commerce Storefront MCP Server`                                  |
+| Grant Type          | `Authorization Code`                                              |
+| Redirect URLs       | `https://chatgpt.com/connector_platform_oauth_redirect`           |
+| Confidential Client | On or off                                                         |
+| Skip User Consent   | On or off, depending on whether you want the login consent screen |
+1. Once saved, the system will generate the **Client ID** and **Client Secret** for the OAuth application. Copy both values, because you need them when you configure the AI application.
+
+In your ChatGPT application:
+
+1. Open developer mode and create a new MCP application.
 2. Enter a **Name**, for example, `OroCommerce`.
 3. Set **MCP Server URL** to ``https://yourapplication/commerce-mcp`.
 4. Set **Authentication** to **OAuth**.
@@ -110,21 +124,39 @@ OroFrontendCommerceMcpBundle provides a starting set of API-based tools out of t
 
 The following tables list the tools grouped by entity with the related description. An administrator can add, remove, or restrict tools by editing the `Resources/config/oro/frontend_commerce_mcp_api_based_tools.yml` file in the bundle or `config/frontend_commerce_mcp_api_based_tools.yml` of your application . See [Create Custom API-Based Tools]().
 
-| **Entity**   | **Action**   | **Tool Name**             | **Description**                                                                    |
-|--------------|--------------|---------------------------|------------------------------------------------------------------------------------|
-| Customer     | `get_list`   | `get_customers`           | Gets the list of customers                                                         |
-| Customer     | `get_count`  | `get_customer_count`      | Gets the number of customers                                                       |
-| Customer     | `get`        | `get_customer`            | Gets a customer by ID                                                              |
-| CustomerUser | `get_list`   | `get_customer_users`      | Gets the list of customer users                                                    |
-| CustomerUser | `get_count`  | `get_customer_user_count` | Gets the number of customer users                                                  |
-| CustomerUser | `get`        | `get_customer_user`       | Gets a customer user by ID                                                         |
-| CustomerUser | `create`     | `create_customer_user`    | Creates a new customer user. The created customer user is returned in the response |
-| CustomerUser | `update`     | `update_customer_user`    | Updates a customer user. The updated customer user is returned in the response     |
-| CustomerUser | `delete`     | `delete_customer_user`    | Deletes a customer user                                                            |
-| Order        | `get_list`   | `get_orders`              | Gets the list of orders                                                            |
-| Order        | `get_count`  | `get_order_count`         | Gets the number of orders                                                          |
-| Order        | `get`        | `get_order`               | Gets an order by ID                                                                |
-| Order        | `create`     | `create_order`            | Creates a new order. The created order is returned in the response                 |
+| **Entity**      | **Action**   | **Tool Name**                    | **Description**                                                                                                                                                                                                                                                                                                              |
+|-----------------|--------------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Customer        | `get_list`   | `get_customers`                  | Gets the list of customers                                                                                                                                                                                                                                                                                                   |
+| Customer        | `get_count`  | `get_customer_count`             | Gets the number of customers                                                                                                                                                                                                                                                                                                 |
+| Customer        | `get`        | `get_customer`                   | Gets a customer by ID                                                                                                                                                                                                                                                                                                        |
+| CustomerUser    | `get_list`   | `get_customer_users`             | Gets the list of customer users                                                                                                                                                                                                                                                                                              |
+| CustomerUser    | `get_count`  | `get_customer_user_count`        | Gets the number of customer users                                                                                                                                                                                                                                                                                            |
+| CustomerUser    | `get`        | `get_customer_user`              | Gets a customer user by ID                                                                                                                                                                                                                                                                                                   |
+| CustomerUser    | `create`     | `create_customer_user`           | Creates a new customer user. The created customer user is returned in the response                                                                                                                                                                                                                                           |
+| CustomerUser    | `update`     | `update_customer_user`           | Updates a customer user. The updated customer user is returned in the response                                                                                                                                                                                                                                               |
+| CustomerUser    | `delete`     | `delete_customer_user`           | Deletes a customer user                                                                                                                                                                                                                                                                                                      |
+| Order           | `get_list`   | `get_orders`                     | Gets the list of orders                                                                                                                                                                                                                                                                                                      |
+| Order           | `get_count`  | `get_order_count`                | Gets the number of orders                                                                                                                                                                                                                                                                                                    |
+| Order           | `get`        | `get_order`                      | Gets an order by ID                                                                                                                                                                                                                                                                                                          |
+| Order           | `create`     | `create_order`                   | Creates a new order. The created order is returned in the response                                                                                                                                                                                                                                                           |
+| Order           | `update`     | `update_order`                   | Updates an order. The updated order is returned in the response.                                                                                                                                                                                                                                                             |
+| InventoryLevel  | `get_list`   | `get_inventory_levels`           | Gets the list of inventory levels                                                                                                                                                                                                                                                                                            |
+| InventoryLevel  | `get_count`  | `get_inventory_level_count`      | Gets the number of inventory levels                                                                                                                                                                                                                                                                                          |
+| InventoryLevel  | `get`        | `get_inventory_level`            | Gets an inventory level by ID                                                                                                                                                                                                                                                                                                |
+| ShoppingList    | `get_list`   | `get_shopping_lists`             | Gets the list of shopping lists                                                                                                                                                                                                                                                                                              |
+| ShoppingList    | `get_count`  | `get_shopping_list_count`        | Gets the number of shopping lists                                                                                                                                                                                                                                                                                            |
+| ShoppingList    | `get`        | `get_shopping_list`              | Gets a shopping list by ID                                                                                                                                                                                                                                                                                                   |
+| ShoppingList    | `create`     | `create_shopping_list`           | Creates a new shopping list. The created shopping list is returned in the response.                                                                                                                                                                                                                                          |
+| LineItem        | `get_list`   | `get_shopping_list_items`        | Gets the list of shopping list items                                                                                                                                                                                                                                                                                         |
+| LineItem        | `get_count`  | `get_shopping_list_item_count`   | Gets the number of shopping list items                                                                                                                                                                                                                                                                                       |
+| LineItem        | `get`        | `get_shopping_list_item`         | Gets a shopping list item by ID                                                                                                                                                                                                                                                                                              |
+| LineItem        | `create`     | `add_shopping_list_line_item`    | Adds a line item to an existing shopping list. The added line item is returned in the response.                                                                                                                                                                                                                              |
+| LineItem        | `update`     | `update_shopping_list_line_item` | Updates a line item in an existing shopping list. The updated line item is returned in the response.                                                                                                                                                                                                                         |
+| LineItem        | `delete`     | `remove_shopping_list_line_item` | Removes a line item from an existing shopping list                                                                                                                                                                                                                                                                           |
+| ProductSearch   | `get_list`   | `product_search`                 | Finds products by SKU or by free-text search. Returns prices, medium-sized image links, and a storefront link for each product. This tool requires the `searchQuery` filter. Pass all search conditions in this filter. Image links in the response are absolute and medium-sized and can be returned to the customer as is. |
+| CustomerAddress | `get_list`   | `get_customer_addresses`         | Gets the list of customer addresses                                                                                                                                                                                                                                                                                          |
+| CustomerAddress | `get_count`  | `get_customer_address_count`     | Gets the number of customer addresses                                                                                                                                                                                                                                                                                        |
+| CustomerAddress | `get`        | `get_customer_address`           | Gets a customer address by ID                                                                                                                                                                                                                                                                                                |
 
 ### Create Custom API-Based Tools
 
