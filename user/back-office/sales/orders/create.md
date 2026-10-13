@@ -154,6 +154,8 @@ You have the option to:
 
 Approved orders move from status Pending to Open and you can still edit them as you would a normal order.
 
+For how the mailbox process turns email attachments into draft orders and how to change its rules, see [Email Intake](../../../../bundles/extensions/OrderRecognitionBundle/email-intake.md#bundle-docs-extensions-order-recognition-email-intake) in the developer documentation.
+
 #### NOTE
 Please <a href="https://oroinc.com/contact-us/" target="_blank">contact our support team</a> to learn more about OroCommerce AI features, discuss how they can meet your business needs, and get started with implementation.
 

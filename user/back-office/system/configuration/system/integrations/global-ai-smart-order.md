@@ -29,3 +29,5 @@ For faster navigation between the configuration menu sections, use [Quick Search
 
 #### HINT
 You can also enable Smart Order [per organization](../../../user-management/organizations/org-configuration/general-setup-org/integrations/organization-ai-smart-order.md#organization-ai-smart-order-settings).
+
+For the configuration keys, environment variables, and customization points on the bundle side, see [OroOrderRecognitionBundle](../../../../../../bundles/extensions/OrderRecognitionBundle/index.md#bundle-docs-extensions-order-recognition) in the developer documentation.
