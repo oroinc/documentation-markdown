@@ -22,6 +22,8 @@ If [Async Processing](../../system/configuration/system/integrations/global-ai-s
 
 > ![image](user/img/concept-guides/ai/async.png)
 
+For the message queue topics, the processors, and the notifications behind the asynchronous processing, see [Asynchronous Processing](../../../../bundles/extensions/OrderRecognitionBundle/async-processing.md#bundle-docs-extensions-order-recognition-async) in the developer documentation.
+
 Any draft created using the AI smart order feature includes a preview of the original uploaded document. You can turn this preview on or off using the Display/Hide Preview button. When the preview is displayed, you can zoom in and out using the controls above the image and move it horizontally by holding the Ctrl (or Command) key while dragging it.
 
 Once you manually amend the fields that require your attention, click the checkbox near the field to confirm your changes, and then **Save and Close** to close the order edit page. The order will now be available under **Sales > Orders** in the main menu.
