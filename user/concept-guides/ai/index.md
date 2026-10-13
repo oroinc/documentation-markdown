@@ -86,6 +86,8 @@ Using advanced recognition technology, AI Smart Order adapts to any purchase ord
 
 The AI Smart Order functionality is accessible through a dashboard widget and mailbox automation, making purchase order management even more efficient.
 
+For developers, the [OroOrderRecognitionBundle](../../../bundles/extensions/OrderRecognitionBundle/index.md#bundle-docs-extensions-order-recognition) documentation describes how the recognized data becomes a draft order and how to customize that process.
+
 ### Smart Order Widget
 
 The Smart Order dashboard [widget](../../back-office/dashboards/widgets/ai-smart-order.md#user-guide-dashboards-widgets) provides an intuitive interface for users to manually upload purchase order files or images for processing. This feature allows businesses to digitize and convert orders received through offline channels, ensuring all critical order details are accurately extracted and recorded in OroCommerce.
@@ -119,6 +121,7 @@ For configuration details, see the developer documentation for the [OroCommerceM
 * [Product recommendations with AI](../../integrations/pre-built/ai/google-retail.md#integrations-misc-google-retail-recommendations)
 * [Create an Order via AI Smart Order Automation](../../back-office/sales/orders/create.md#user-guide-sales-orders-create-from-ai-smart-order)
 * [Smart Order Widget](../../back-office/dashboards/widgets/ai-smart-order.md#user-guide-dashboards-widgets)
+* [OroOrderRecognitionBundle](../../../bundles/extensions/OrderRecognitionBundle/index.md#bundle-docs-extensions-order-recognition)
 * [OroIQ Back-Office Settings](../../back-office/system/configuration/system/integrations/oroiq-settings.md#admin-configuration-oroiq-settings)
 * [OroCommerceMcpBundle](../../../bundles/commerce/CommerceMcpBundle/index.md#bundle-docs-commerce-commerce-mcp-bundle)
 * [OroFrontendCommerceMcpBundle](../../../bundles/commerce/FrontendCommerceMcpBundle/index.md#bundle-docs-frontend-commerce-commerce-mcp-bundle)
