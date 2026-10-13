@@ -183,6 +183,18 @@ When configuring a virtual host (vhost), make sure the vhost is URL encoded.
 If no vhost is provided, the default value `/` is used.
 For example, the vhost `/master` is URL encoded as `%2Fmaster`, and the vhost `master` is URL encoded as `master`.
 
+For a connection over TLS, use the `amqps` scheme. The default port of `amqps` is 5671.
+
+```bash
+ORO_MQ_DSN='amqps://guest:guest@rabbitmq.example.com:5671/%2Fmaster?ssl[cafile]=/etc/pki/oro/ca.pem'
+```
+
+Without the `ssl[cafile]` option, the application verifies the certificate of RabbitMQ with the trust store of the
+operating system. This is correct for a certificate from a public certificate authority, for example, the
+certificate of Amazon MQ.
+
+See [Secure (TLS) Connections](../../setup/dev-environment/env-vars.md#backend-setup-env-vars-tls-connections) for all the options.
+
 ## RabbitMQ Useful Hints
 
 - If the `rabbitmq_management` plugin is enabled, you can view the
