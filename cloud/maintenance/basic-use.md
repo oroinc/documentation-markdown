@@ -135,6 +135,9 @@ When you need to check the current maintenance agent version or list all availab
 #### NOTE
 When the currently running command is finished or stopped with a warning or a notice, the maintenance agent is automatically unlocked.
 
+#### NOTE
+If a running command is interrupted, for example, because the SSH connection dropped while it was running outside the `screen` session, the maintenance agent may remain locked. To avoid this, run `orocloud-cli` commands inside the `screen` session. See [Connect to the OroCloud Environment via SSH](before-you-begin.md#orocloud-maintenance-connect-via-ssh) and the [FAQ](faq.md#orocloud-maintenance-faq) section.
+
 ## Deploy
 
 To deploy an Oro application in the OroCloud environment with default installation parameters, run the orocloud-cli deploy command.

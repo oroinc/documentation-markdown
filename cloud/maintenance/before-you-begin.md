@@ -16,19 +16,20 @@ You can use OpenVPN to create a VPN tunnel to the OroCloud. First, <a href="http
 
 Once the connection is established, you can access your OroCloud environment via SSH connection to the host you were provided. Use your personalized user details to log on to the server.
 
+<a id="orocloud-maintenance-connect-via-ssh"></a>
+
 ## Connect to the OroCloud Environment via SSH
 
 Configure password and SSH key using [SSH Access](../onboarding/ssh-access.md#public-identity-management-ssh) and connect to VPN.
 
-There are multiple ways to connect using SSH:
+Use IP address and username provided by Oro Support Team to connect to the OroCloud environment via SSH.
 
-1. Use IP address and username provided by Oro Support Team.
-2. Get IP address from <a href="https://console.cloud.google.com/compute/instances" target="_blank">Google Cloud Console</a>
+#### IMPORTANT
+When you connect to an OroCloud environment via SSH, a `screen` session starts automatically. Run all `orocloud-cli` commands inside this session and do not exit it.
 
-#### NOTE
-Connection using SSH button (using external IP) is now allowed.
+The `screen` session keeps running on the server even if your SSH connection drops, for example, due to a VPN disconnect or network interruption. If the connection is lost, reconnect to the environment, and the running operation continues and completes normally.
 
-1. Use <a href="https://cloud.google.com/sdk/docs/install" target="_blank">gcloud CLI</a> tool to list VMs gcloud compute instances list and connect gcloud compute ssh ocom-yourproject-prod1-maint1 –internal-ip to VMs.
+If you exit the `screen` session and run `orocloud-cli` in a plain SSH session, a dropped connection interrupts the running operation. This may leave the maintenance agent locked and cause subsequent operations to fail. See **My deployment or upgrade fails with a lock timeout** in the [FAQ](faq.md#orocloud-maintenance-faq) article.
 
 <a id="sftp-access"></a>
 
