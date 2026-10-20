@@ -45,6 +45,8 @@ To create a new OAuth application in the back-office:
    * **Redirect URLs** — The field appears when selecting *Authorization Code* as a grant type. The list of URLs to which it is allowed to redirect the user back to.
    * **Confidential Client** — The field appears when selecting *Authorization Code* as a grant type. Indicates whether the client is a confidential or a public. For confidential client, client secret is safely stored on the client side and must be used for authorization. Requests without client secret are accepted with PKCE if this option is not selected.
    * **Skip User Consent** — The field appears when selecting *Authorization Code* as a grant type. Use this option for first party applications to skip user login consent screen.
+   * **Enable Logout** — The field appears when selecting *Authorization Code* as a grant type. Allow the application to log the user out of the back-office and to redirect the user to one of the *Post-Logout URLs* after that. Logout is disabled by default.
+   * **Post-Logout URLs** — The field appears when selecting *Authorization Code* as a grant type. The list of URLs to which it is allowed to redirect the user after logout. At least one URL is required when *Enable Logout* is selected.
 4. Click **Save and Close**.
 
 A corresponding notification is sent to the primary email address of the user, the owner of oauth application. You can change the default recipient, localization, or an email content if needed by updating the [OAuth email templates](../emails/email-templates.md#user-guide-using-emails-create-template) and the related [notification rule](../emails/notification-rules.md#user-guide-using-emails-notifications) set out of the box in the system configuration.
