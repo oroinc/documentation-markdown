@@ -16,15 +16,19 @@ To configure customer user settings per customer:
 For faster navigation between the configuration menu sections, use [Quick Search](../../../../../system/configuration/quick-search.md#user-guide-system-configuration-quick-search).
 
 1. In the **Customer Users Registration** section, configure the following options:
-   > #### NOTE
-   > JIT provisioning of customer users is available as of OroCommerce version 7.0.3.
 
-   > * **Enable Just-In-Time (JIT) provisioning** — Enable the feature for the customer. The feature automatically approves registration and single sign-on (SSO) requests from users whose email domains match the approved domains. The system assigns the default roles to these users and does not require a manual invitation. When you enable the feature, the **Approved Domains** and **Default Roles** options become available. The setting is available only when JIT provisioning is enabled in the [system configuration](../../../../../system/configuration/commerce/customer/global-customer-users.md#sys-config-configuration-commerce-customers-customer-users).
-   > * **Approved Domains** — Specify the email domains whose customer users the system registers automatically. Registration and single sign-on (SSO) requests from these domains are approved without manual review. Requests from all other domains are blocked.
-   > * **Default Roles** — Select the customer user roles that the system assigns to every newly provisioned customer user.
-2. In the **Customer User Invitations** section, clear the **Use Customer Group** checkbox and configure the following option:
-   > * **Enable Customer User Invitations** — Enables/disables [customer user invitations](../../../../customer-users/invitations.md#user-guide-customers-customer-user-invitations) for the customer in the back-office and the storefront. When invitations are disabled, the invitation pages and actions are hidden. Enabled by default.
-3. Click **Save Settings**.
+#### NOTE
+JIT provisioning of customer users is available as of OroCommerce version 7.0.3.
+
+* **Enable Just-In-Time (JIT) provisioning** — Enable the feature for the customer. The feature automatically approves registration and single sign-on (SSO) requests from users whose email domains match the approved domains. The system assigns the default roles to these users and does not require a manual invitation. When you enable the feature, the **Approved Domains** and **Default Roles** options become available. The setting is available only when JIT provisioning is enabled in the [system configuration](../../../../../system/configuration/commerce/customer/global-customer-users.md#sys-config-configuration-commerce-customers-customer-users).
+* **Approved Domains** — Specify the email domains whose customer users the system registers automatically. Registration and single sign-on (SSO) requests from these domains are approved without manual review. Requests from all other domains are blocked.
+* **Default Roles** — Select the customer user roles that the system assigns to every newly provisioned customer user.
+
+1. In the **Customer User Invitations** section, clear the **Use Customer Group** checkbox and configure the following option:
+
+* **Enable Customer User Invitations** — Enables/disables [customer user invitations](../../../../customer-users/invitations.md#user-guide-customers-customer-user-invitations) for the customer in the back-office and the storefront. When invitations are disabled, the invitation pages and actions are hidden. Enabled by default.
+
+1. Click **Save Settings**.
 
 **Related Topics**
 
