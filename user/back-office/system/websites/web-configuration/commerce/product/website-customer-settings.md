@@ -5,7 +5,7 @@
 The **Customer Settings** configuration page brings together several settings that apply to storefront customers and how they can obtain product information. This section covers two groups of settings available here at the website level:
 
 * **Product Data Export** — Controls whether registered customer users can export products, their prices, and price tiers into a .csv file from the storefront product collection and search results pages.
-* **Customer Part Number** — (available in the EE as of OroCommerce v7.0.5) Controls whether [customer part numbers](../../../../../products/customer-part-numbers/index.md#back-office-customer-part-numbers) are displayed to customers of this website in the storefront.
+* **Customer Part Number** — (available in the EE as of OroCommerce v7.0.6) Controls whether [customer part numbers](../../../../../products/customer-part-numbers/index.md#back-office-customer-part-numbers) are displayed to customers of this website in the storefront.
 
 You can configure these settings [globally](../../../../configuration/commerce/product/global-customer-settings.md#sys-commerce-product-customer-settings), [per organization](../../../../user-management/organizations/org-configuration/commerce/product/organization-customer-settings.md#sys-users-organization-commerce-products-customer-settings), website, [customer group](../../../../../customers/customer-groups/customer-group-configuration/commerce/product/customer-group-product-customer-settings.md#user-guide-customer-groups-customer-settings), and [customer](../../../../../customers/customers/customer-configuration/commerce/product/customer-product-settings.md#user-guide-customers-customer-settings).
 
@@ -29,7 +29,7 @@ For faster navigation between the configuration menu sections, use [Quick Search
 2. Under **Customer Part Number**, enable the following option by clearing the **Use Organization** checkbox:
 
    #### NOTE
-   The Customer Part Number feature is only available in the Enterprise edition as of OroCommerce version 7.0.5.
+   The Customer Part Number feature is only available in the Enterprise edition as of OroCommerce version 7.0.6.
 
    * **Display Customer Part Numbers In The Storefront** — Enable this option to let customers view their own part numbers in the storefront (e.g., on the product listing, search results, and product details pages), as well as create, delete, and filter by them. This option has no effect on its own unless option **Enable Customer Part Numbers** is [enabled on the global level](../../../../configuration/commerce/product/global-customer-settings.md#sys-commerce-product-customer-settings).
 3. Click **Save Settings**.

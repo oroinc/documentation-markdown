@@ -105,6 +105,21 @@ For more information on how to set up Smart Order automation, see [Create an Ord
 
 ![image](user/img/concept-guides/ai/so-illustration.png)
 
+<a id="concept-guide-ai-mcp"></a>
+
+## Model Context Protocol (MCP)
+
+#### NOTE
+MCP tool support for OroIQ and Smart Agent is available as of OroCommerce version 7.0.5.
+
+The Oro AI capabilities are built on the Model Context Protocol (MCP), an open standard that defines how AI assistants connect to the tools and data they act on. Instead of relying on a fixed, hardcoded set of capabilities, the Oro AI microservices, such as OroIQ and the AI Smart Agent, discover the operations they can perform directly from OroCommerce, where each operation is exposed as an MCP tool.
+
+Because these tools are defined and managed within OroCommerce, you can customize which operations the AI is allowed to perform directly from the platform, tailoring the assistant to your business processes. For example, you can control whether the AI can find products, check inventory, create orders, or manage shopping lists, and expose additional operations built on top of the OroCommerce API as new MCP tools.
+
+This keeps the AI aligned with OroCommerce business logic and permission structures, while allowing its capabilities to be extended or restricted without changing the underlying AI microservices. OroCommerce provides MCP servers for both the back-office and the storefront, which can also be connected to external MCP-compatible clients.
+
+For configuration details, see the developer documentation for the [OroCommerceMcpBundle](../../../bundles/commerce/CommerceMcpBundle/index.md#bundle-docs-commerce-commerce-mcp-bundle) and [OroFrontendCommerceMcpBundle](../../../bundles/commerce/FrontendCommerceMcpBundle/index.md#bundle-docs-frontend-commerce-commerce-mcp-bundle).
+
 **Related Articles:**
 
 * [OroCommerce AI Content Generation Widget](../content-management/wysiwyg.md#getting-started-wysiwyg-editor-field-ai)
@@ -114,3 +129,5 @@ For more information on how to set up Smart Order automation, see [Create an Ord
 * [Smart Order Widget](../../back-office/dashboards/widgets/ai-smart-order.md#user-guide-dashboards-widgets)
 * [OroOrderRecognitionBundle](../../../bundles/extensions/OrderRecognitionBundle/index.md#bundle-docs-extensions-order-recognition)
 * [OroIQ Back-Office Settings](../../back-office/system/configuration/system/integrations/oroiq-settings.md#admin-configuration-oroiq-settings)
+* [OroCommerceMcpBundle](../../../bundles/commerce/CommerceMcpBundle/index.md#bundle-docs-commerce-commerce-mcp-bundle)
+* [OroFrontendCommerceMcpBundle](../../../bundles/commerce/FrontendCommerceMcpBundle/index.md#bundle-docs-frontend-commerce-commerce-mcp-bundle)
