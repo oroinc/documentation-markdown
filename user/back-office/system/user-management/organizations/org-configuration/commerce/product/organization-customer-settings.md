@@ -27,6 +27,10 @@ To configure these settings per organization:
    * **Include Product Prices** — Enable this option to add product prices to the exported product data file. Data will be displayed only for the primary unit, minimum quantity and the currency currently selected in the storefront.
    * **Include Price Tiers** — Enable this option to include price tiers to the exported product data file, if available. If product units have no price, they will be omitted in the exported file.
 5. Under **Customer Part Number**, enable the following option by clearing the **Use System** checkbox:
+
+   #### NOTE
+   The Customer Part Number feature is only available in the Enterprise edition as of OroCommerce version 6.1.12.
+
    * **Display Customer Part Numbers In The Storefront** — Enable this option to let customers view their own part numbers in the storefront (e.g., on the product listing, search results, and product details pages), as well as create, delete, and filter by them. This option has no effect on its own unless option **Enable Customer Part Numbers** is [enabled on the global level](../../../../../configuration/commerce/product/global-customer-settings.md#sys-commerce-product-customer-settings).
 6. Click **Save Settings**.
 

@@ -2,6 +2,9 @@
 
 # Migrating from the Legacy OroLab Bundle
 
+#### NOTE
+OroCustomerPartNumberBundle is only available in the Enterprise edition as of OroCommerce version 6.1.12.
+
 This bundle supersedes the legacy `orolab/customer-part-number` extension. Follow these steps to move existing data to the new entity. For command options, see [CLI Commands](commands.md#bundle-docs-commerce-customer-part-number-bundle-commands).
 
 #### NOTE

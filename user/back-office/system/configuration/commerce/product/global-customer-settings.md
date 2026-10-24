@@ -25,6 +25,10 @@ For faster navigation between the configuration menu sections, use [Quick Search
    * **Include Product Prices** — Enable this option to add product prices to the exported product data file. Data will be displayed only for the primary unit, minimum quantity and the currency currently selected in the storefront.
    * **Include Price Tiers** — Enable this option to include price tiers to the exported product data file, if available. If product units have no price, they will be omitted in the exported file.
 2. In the **Customer Part Number** section, enable the following options as needed:
+
+   #### NOTE
+   The Customer Part Number feature is only available in the Enterprise edition as of OroCommerce version 6.1.12.
+
    * **Enable Customer Part Numbers** — Enable this option to turn on [customer part numbers](../../../../products/customer-part-numbers/index.md#back-office-customer-part-numbers) for your instance. Once enabled, the **Customer Part Numbers** menu item becomes available under **Products** in the back-office, and back-office users can look up products by a customer’s part number when building an order. Enabling this feature does not automatically reindex existing products. Customer part numbers created after enabling the feature are indexed automatically. Part numbers that already existed beforehand will not appear in search or storefront listings until you manually reindex products.
    * **Display Customer Part Numbers In The Storefront** — Enable this option to let customers view their own part numbers in the storefront (e.g., on the product listing, search results, and product details pages), as well as create, delete, and filter by them. This option has no effect on its own unless option **Enable Customer Part Numbers** is enabled.
 3. Click **Save Settings**.

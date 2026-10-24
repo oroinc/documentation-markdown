@@ -2,6 +2,9 @@
 
 # CLI Commands (CustomerPartNumberBundle)
 
+#### NOTE
+OroCustomerPartNumberBundle is only available in the Enterprise edition as of OroCommerce version 6.1.12.
+
 Both commands below are feature-gated by the `oro_customer_part_number` feature. For a step-by-step guide on
 using them together to move off the legacy OroLab implementation, see [Migrating from the Legacy OroLab
 Bundle](migrating-from-orolab.md#bundle-docs-commerce-customer-part-number-bundle-migrating-from-orolab).
