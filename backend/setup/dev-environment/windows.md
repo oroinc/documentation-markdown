@@ -71,9 +71,9 @@ This guide demonstrates how to set up [Docker and Symfony Server development sta
    curl -sL https://deb.nodesource.com/setup_24.x | sudo -E bash -
    sudo apt -y install nodejs
    ```
-3. Install PNPM 10 Using NPM:
+3. Install PNPM 12 Using NPM:
    ```none
-   npm install -g pnpm@latest-10
+   npm install -g pnpm@latest-12
    ```
 
    #### NOTE
