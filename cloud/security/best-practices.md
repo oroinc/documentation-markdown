@@ -28,6 +28,10 @@ This section coordinates the area of security responsibility between Oro Inc., t
 
 ### Customer/Implementation Partners
 
+#### Application
+
+The customer and the implementation partner must upgrade the Oro application before the installed long-term support (LTS) version reaches the end of its support period. Upgrading on time keeps the application on an LTS version that Oro Inc. supports. For the supported versions and their support dates, see [Release Process](../../community/release-process.md#doc-community-release).
+
 #### Infrastructure
 
 1. Engineers with access to Oro infrastructure must not share access credentials with others.
