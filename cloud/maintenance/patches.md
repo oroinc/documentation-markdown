@@ -123,6 +123,9 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
   * Some changes only take effect after an additional build step. For example, JavaScript files are compiled into assets, so patching a JS source file has no visible effect until the assets are rebuilt. After applying such a patch, run the corresponding operation (e.g., an assets rebuild) to propagate the change.
 * **patch:revert** — reverts a patch, requires the full path to the patch file as an argument (/mnt/maint-data is suggested), by default the command runs in DRY-RUN mode, which means that changes will not be applied, only validated. Passing the –force option causes the specified patch to be physically reverted against your codebase.
 
+#### IMPORTANT
+A patch applied with the `patch:apply` command is temporary. The next upgrade or deployment removes the patch. To keep a patch permanently, add it to your codebase. Use the <a href="https://github.com/cweagans/composer-patches/blob/1.x/README.md" target="_blank">Composer Patches</a> plugin or the dedicated patch directory, as described in [Apply Patches During Deployment]().
+
 Usage examples:
 
 * Revert by a patch, dry-run mode (only shows what will be done):
