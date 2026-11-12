@@ -24,3 +24,4 @@ Learn how to configure localization options, currency and tracking, as well and 
 * [OroIQ](integrations/organization-oroiq.md#organization-oroiq-settings)
 * [AI Smart Order](integrations/organization-ai-smart-order.md#organization-ai-smart-order-settings)
 * [CAPTCHA Settings](integrations/organization-captcha.md#organization-configuration-captcha)
+* [Integration Flow Designer](integrations/organization-integration-flow-designer.md#organization-integration-flow-designer-settings)

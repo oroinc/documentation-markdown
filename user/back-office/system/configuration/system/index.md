@@ -29,6 +29,7 @@ Learn how to configure localization options, currency and tracking, as well as u
 * [AI Smart Agent](integrations/ai-agent.md#admin-configuration-ai-agent-settings)
 * [OroIQ](integrations/oroiq-settings.md#admin-configuration-oroiq-settings)
 * [AI Smart Order](integrations/global-ai-smart-order.md#admin-configuration-orders-ai-smart-order-settings)
+* [Integration Flow Designer](integrations/integration-flow-designer.md#admin-configuration-integration-flow-designer-settings)
 * [Dotdigital Settings](integrations/dotdigital-integration-settings.md#admin-configuration-dotmailer-integration-settings)
 
 ## [Websites](websites/index.md#configuration-guide-system-configuration-websites)

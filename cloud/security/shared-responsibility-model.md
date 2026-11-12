@@ -4,7 +4,7 @@
 
 As a service provider, Oro Inc. enables its customers to achieve PCI DSS v4.0.1 compliance by delivering secure hosting and application services through Infrastructure-as-a-Service (IaaS) platforms such as Google Cloud Platform (GCP) and Oracle Cloud Infrastructure (OCI).
 
-To support a clear division of responsibilities, Oro Inc. formally defines its Shared Responsibility Model in the accompanying <a href="https://static.oroinc.com/orohive/orocloud_shared_responsibilities_matrix_2025.pdf" target="_blank">Shared Responsibility Matrix</a>.
+To support a clear division of responsibilities, Oro Inc. formally defines its Shared Responsibility Model in the accompanying <a href="https://static.oroinc.com/The_OroCloud_PCI_DSS_v4_Shared_Responsibility_Matrix_2026.pdf" target="_blank">Shared Responsibility Matrix</a>.
 
 This matrix outlines which PCI DSS controls are managed by:
 
@@ -38,7 +38,7 @@ Updates in PCI DSS 4.0 introduce strict requirements to secure payment pages in 
 This section explains the purpose of Page Shield in your compliance program, your responsibilities as an OroCloud client, the types of alerts you will receive, and how to respond to them.
 
 #### NOTE
-For more information, please see <a href="https://static.oroinc.com/orohive/orocloud_shared_responsibilities_matrix_2025.pdf" target="_blank">Shared Responsibility Matrix</a>.
+For more information, please see <a href="https://static.oroinc.com/The_OroCloud_PCI_DSS_v4_Shared_Responsibility_Matrix_2026.pdf" target="_blank">Shared Responsibility Matrix</a>.
 
 ### Cloudflare Page Shield
 
