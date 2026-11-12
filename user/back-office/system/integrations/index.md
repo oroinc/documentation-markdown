@@ -44,6 +44,7 @@ Check the following integrations that can be enabled/disabled and configured in 
 * [Mailchimp Integration](mailchimp-integration.md#user-guide-mc-integration)
 * [Zendesk Integration](zendesk-integration.md#user-guide-zendesk-integration)
 * [LDAP Integration](ldap-integration.md#user-guide-ldap-integration)
+* [Activepieces Integration](activepieces-integration.md#user-guide-integrations-activepieces)
 * Embedded Forms
   * [Embedded Forms](embedded-forms/index.md#admin-embedded-forms)
 * Webhooks

@@ -20,4 +20,5 @@ Learn how to enable and setup the integration between your Oro application and G
 * [AI Smart Agent](ai-agent.md#admin-configuration-ai-agent-settings)
 * [OroIQ](oroiq-settings.md#admin-configuration-oroiq-settings)
 * [AI Smart Order](global-ai-smart-order.md#admin-configuration-orders-ai-smart-order-settings)
+* [Integration Flow Designer](integration-flow-designer.md#admin-configuration-integration-flow-designer-settings)
 * [Dotdigital Settings](dotdigital-integration-settings.md#admin-configuration-dotmailer-integration-settings)

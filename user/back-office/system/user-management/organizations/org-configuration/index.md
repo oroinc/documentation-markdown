@@ -34,6 +34,7 @@ The following categories of settings are available for system configuration at o
     * [AI Smart Agent](general-setup-org/integrations/organization-ai-agent.md#organization-ai-agent-settings)
     * [AI Smart Order](general-setup-org/integrations/organization-ai-smart-order.md#organization-ai-smart-order-settings)
     * [OroIQ](general-setup-org/integrations/organization-oroiq.md#organization-oroiq-settings)
+    * [Integration Flow Designer](general-setup-org/integrations/organization-integration-flow-designer.md#organization-integration-flow-designer-settings)
 * **Commerce**
   * Guests
     * [Website Access](commerce/guests/organization-guest-access.md#guest-access-org)

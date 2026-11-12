@@ -17,3 +17,4 @@ This section includes the following elements:
 * [Consent Management](consents/index.md)
 * [Data Import](data-import/index.md)
 * [Identity Management](identity-management/index.md)
+* [Integration Flows (Activepieces)](integration-flows/index.md)

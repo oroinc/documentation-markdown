@@ -90,13 +90,40 @@ This section summarizes the limitations and agreements important for shared test
 
 Use the default configuration for the application installed in the production mode.
 
-To test emails, install <a href="https://mailcatcher.me/" target="_blank">Mailcatcher</a> and set up ORO_MAILER_DSN environment variable:
+To test emails, install <a href="https://mailcatcher.me/" target="_blank">MailCatcher</a> or <a href="https://mailpit.axllent.org/" target="_blank">Mailpit</a>. Then set the `ORO_MAILER_DSN` environment variable to the SMTP address of the mail server:
 
 ```bash
 ORO_MAILER_DSN=smtp://127.0.0.1:1025
 ```
 
-Behat framework uses the mailcatcher UI to assert emails. By default, the framework expects the mailcatcher UI at `http://127.0.0.1:1080/`. To change the URL, provide the `ORO_MAILER_WEB_URL` environment variable.
+The Behat framework uses the HTTP API of the mail server to check the email messages. By default, the framework expects the MailCatcher API at `http://127.0.0.1:1080/`. To use another URL, set the `ORO_MAILER_WEB_URL` environment variable. For Mailpit, also set the `ORO_MAILER_WEB_TYPE` environment variable to `mailpit`. The default value of `ORO_MAILER_WEB_TYPE` is `mailcatcher`.
+
+To use Mailpit with its default HTTP port, set the following environment variables:
+
+```bash
+ORO_MAILER_WEB_URL=http://127.0.0.1:8025
+ORO_MAILER_WEB_TYPE=mailpit
+```
+
+For both servers, the framework gives the email messages in the same form. The sender is the sender of the SMTP envelope. The recipients include the Cc and Bcc addresses. The attachments include the inline parts, such as the embedded images.
+
+For an HTTP API with TLS, use the `https://` scheme. If the certificate of the mail server comes from a private certificate authority (CA), add the `ssl[cafile]` option to the URL. The URL accepts the following options:
+
+* `ssl[cafile]` — The path to the CA certificate.
+* `ssl[capath]` — The path to a directory with CA certificates. This option needs the PHP `curl` extension.
+* `ssl[verify_peer]` — `0` turns off the verification of the certificate and of the host name. Use this value only for testing.
+* `ssl[verify_peer_name]` — Only `1`, the default value, or `0` together with `ssl[verify_peer]=0`. The HTTP client cannot turn off the verification of the host name alone.
+* `ssl[local_cert]`, `ssl[local_pk]`, and `ssl[passphrase]` — The client certificate, its private key, and their passphrase.
+
+Another option, or an `ssl[...]` option with the `http://` scheme, causes an error.
+
+The SMTP connection uses the TLS options of `ORO_MAILER_DSN`. See [SMTP](../setup/dev-environment/env-vars.md#backend-setup-env-vars-tls-connections-smtp). The following variables require STARTTLS for SMTP and verify the certificate of Mailpit with a private CA:
+
+```bash
+ORO_MAILER_DSN='smtp://localhost:1025?require_tls=1&ssl[cafile]=/etc/pki/oro/ca.pem'
+ORO_MAILER_WEB_URL='https://localhost:8025?ssl[cafile]=/etc/pki/oro/ca.pem'
+ORO_MAILER_WEB_TYPE=mailpit
+```
 
 #### Behat Configuration
 
@@ -151,6 +178,12 @@ Install dev dependencies using the following command:
 
 ```none
 composer install
+```
+
+This command also installs axe-core for the [accessibility step](#behat-accessibility-checks) into the `var/axe` directory of the application with npm, so `node` and `npm` must be available. If the axe-core installation fails, `composer install` stops with an error. After fixing the cause, you can install axe-core without running `composer install` again:
+
+```none
+vendor/oro/platform/src/Oro/Bundle/TestFrameworkBundle/Resources/bin/axe-bootstrap
 ```
 
 #### Application Initial State
@@ -776,6 +809,36 @@ Scenario Outline: Fail login
 3. The line `Scenario: Success login` starts the scenario and provides a description for it.
 4. The next six lines are the scenario steps. Every step is matched to a regular expression defined in the Context.
 5. The line `Scenario Outline: Fail login` starts the following scenario. In the scenario outline, the placeholders are used instead of the actual values, and the values for scenario execution are provided as examples below the outline. Scenario Outlines help you run these steps several times, iterating through the values provided in the `Examples:` section and thus testing the same flow with different inputs. The Scenario Outline is a template that is never run on its own. Instead, a Scenario that follows an outline runs once for each row in the Examples section beneath it (except for the first header row that is skipped). Think of a placeholder as a variable. It is replaced with a real value from the `Examples:` table row, where the text between the placeholder angle brackets (e.g., <login>) matches the text of the table column header (e.g., login).
+
+<a id="behat-accessibility-checks"></a>
+
+## Accessibility Checks
+
+The `the page state should have no accessibility violations` step checks the current page with <a href="https://github.com/dequelabs/axe-core" target="_blank">axe-core</a>. The step fails when the page has accessibility violations or when an axe-core rule fails to run. The error message lists every violation with the CSS selectors and the HTML of the affected elements. It also lists the elements that axe-core cannot check automatically and the frames that it could not scan, but these do not fail the step.
+
+To use the step in the features of a bundle, add `Oro\Bundle\TestFrameworkBundle\Tests\Behat\Context\AccessibilityContext` to the contexts of the bundle suite in the `Tests/Behat/behat.yml` file of the bundle:
+
+```yaml
+oro_behat_extension:
+  suites:
+    OroShoppingListBundle:
+      contexts:
+        - Oro\Bundle\TestFrameworkBundle\Tests\Behat\Context\OroMainContext
+        - Oro\Bundle\TestFrameworkBundle\Tests\Behat\Context\AccessibilityContext
+      paths:
+        - '@OroShoppingListBundle/Tests/Behat/Features'
+```
+
+Then add the step after the steps that bring the page to the state you want to check:
+
+```gherkin
+When I click "Choose list"
+Then the page state should have no accessibility violations
+```
+
+The step checks the rules with the `wcag2a`, `wcag2aa`, `wcag21a`, `wcag21aa`, `wcag22aa` and `best-practice` tags of axe-core. The rules are set in the `Resources/axe/config.json` file of OroTestFrameworkBundle.
+
+The axe-core version is set in the `Resources/axe/package.json` file of OroTestFrameworkBundle. After a version change, `composer install` installs the new version.
 
 ## Troubleshooting
 

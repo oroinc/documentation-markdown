@@ -2,13 +2,13 @@
 
 # Understanding the Shared Responsibility Model in PCI DSS v4.0.1
 
-As a service provider, Oro Inc. enables its customers to achieve PCI DSS v4.0.1 compliance by delivering secure hosting and application services through Infrastructure-as-a-Service (IaaS) platforms such as Google Cloud Platform (GCP) and Oracle Cloud Infrastructure (OCI).
+As a service provider, Oro Inc. enables its customers to achieve PCI DSS v4.0.1 compliance by delivering secure hosting and application services through Oracle Cloud Infrastructure (OCI), our Infrastructure-as-a-Service (IaaS) platform.
 
-To support a clear division of responsibilities, Oro Inc. formally defines its Shared Responsibility Model in the accompanying <a href="https://static.oroinc.com/orohive/orocloud_shared_responsibilities_matrix_2025.pdf" target="_blank">Shared Responsibility Matrix</a>.
+To support a clear division of responsibilities, Oro Inc. formally defines its Shared Responsibility Model in the accompanying <a href="https://static.oroinc.com/The_OroCloud_PCI_DSS_v4_Shared_Responsibility_Matrix_2026.pdf" target="_blank">Shared Responsibility Matrix</a>.
 
 This matrix outlines which PCI DSS controls are managed by:
 
-* **IaaS Platform** – Google Cloud Platform or Oracle Cloud Infrastructure, depending on which is used as an IaaS provider for the specific customer.
+* **IaaS Platform** – Oracle Cloud Infrastructure, our IaaS provider.
 * **Oro**—Oro Inc. develops the OroCommerce application, deploys it into an Oro-managed cloud instance, and supports it throughout the service lifecycle.
 * **Customer** – generally responsible for PCI DSS-compliant processes and procedures that cover the customer’s personnel and systems in the scope of the customer’s PCI DSS compliance, including those that are connected to the OroCommerce instance.
 * **System Integrator** (S) – the organization responsible for the development and support of the OroCommerce customization. This role can be fulfilled by Oro, a third-party vendor, including Oro Partners, and by the Customer.
@@ -38,7 +38,7 @@ Updates in PCI DSS 4.0 introduce strict requirements to secure payment pages in 
 This section explains the purpose of Page Shield in your compliance program, your responsibilities as an OroCloud client, the types of alerts you will receive, and how to respond to them.
 
 #### NOTE
-For more information, please see <a href="https://static.oroinc.com/orohive/orocloud_shared_responsibilities_matrix_2025.pdf" target="_blank">Shared Responsibility Matrix</a>.
+For more information, please see <a href="https://static.oroinc.com/The_OroCloud_PCI_DSS_v4_Shared_Responsibility_Matrix_2026.pdf" target="_blank">Shared Responsibility Matrix</a>.
 
 ### Cloudflare Page Shield
 

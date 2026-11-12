@@ -9,14 +9,14 @@ You are viewing the upcoming documentation for OroCloud, scheduled for release l
 
 ## Network Segmentation
 
-Resources of the OroCloud environment are isolated in the dedicated GCP project or OCI subtenancy. This provides complete resource segregation for each particular instance. The network for the production deployment is divided into the following two subnets:
+Resources of the OroCloud environment are isolated in the dedicated OCI subtenancy. This provides complete resource segregation for each particular instance. The network for the production deployment is divided into the following two subnets:
 
 * [Application subnet]()
 * [Maintenance DMZ subnet]()
 
 The following diagram illustrates the network segmentation of a typical Oro application deployment in OroCloud environment:
 
-![The network segmentation of an average Oro application deployment in OroCloud environment](cloud/img/production_network_highlevel_public_diagram.png)
+![The network segmentation of an average Oro application deployment in OroCloud environment](cloud/img/production_network_highlevel_public_diagram-2026.png)
 
 <a id="cloud-security-application-subnet"></a>
 
@@ -24,13 +24,7 @@ The following diagram illustrates the network segmentation of a typical Oro appl
 
 All nodes that run Oro application components and store production data reside in the **application subnet**.
 
-The following rules apply to the incoming traffic in the application subnet depending on the CDN used.
-
-#### Google CDN and Load Balancing
-
-* No public IP addresses are directly connected to the application subnet. The only publicly accessible IP address points to the Google load balancer.
-* The Oro application web server accepts connections only from this load balancer via port 80 over HTTP and port 8080 over the WebSocket connection.
-* The load balancer terminates any HTTPS traffic.
+The following rules apply to the incoming traffic in the application subnet.
 
 #### Cloudflare
 
@@ -38,7 +32,7 @@ The following rules apply to the incoming traffic in the application subnet depe
 * The Oro application web server accepts connections only from the Cloudflare tunnel via port 80 over HTTP and port 8080 over the WebSocket connection.
 * Cloudflare terminates any HTTPS traffic.
 
-The following network rules are used for all possible CDNs:
+The following network rules are used for the CDN:
 
 * Nodes in the application subnet accept a connection to the service-specific ports that originated exclusively from the application subnet.
 * The outgoing public traffic is remapped by the NAT node with a public IP address. This public IP address may be added to any external whitelists and used to control the outgoing traffic from the application subnet.
@@ -76,7 +70,7 @@ See how to connect VPN in your operating system in the [Connect OroCloud VPN](..
 
 ## DDoS Mitigation
 
-Cloudfare and Google Cloud Platform provide a number of tools to prevent and defend against DDoS attacks.
+Cloudflare provides a number of tools to prevent and defend against DDoS attacks.
 Please check the respective links for more details.
 
 **What’s Next**

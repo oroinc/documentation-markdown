@@ -9,3 +9,4 @@ This section covers the following elements:
 * [Customer Management](customers/index.md)
 * [RFQ and Quote Management](rfq-quotes/index.md)
 * [Order Management](orders/index.md)
+* [Digital Sales Room](digital-sales-room/index.md)
