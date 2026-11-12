@@ -113,6 +113,20 @@ In the System Capabilities section, the following capabilities are available:
 
 ![image](user/img/system/user_management/system-capabilities.png)
 
+<a id="admin-capabilities-integration-flows"></a>
+
+### Integration Flows
+
+#### NOTE
+This feature is available in the OroCommerce Enterprise Edition.
+
+* **My Integrations** — Allows the user to open Activepieces flows page bound to their own account.
+* **System Flows** — Allows the user to open the **System Flows** page with the shared Activepieces flows.
+* **User’s Flows** — Allows to view all Activepieces users and open flows on their behalf.
+
+#### NOTE
+These permissions take effect only when an administrator has [enabled Integration Flow Designer](../../configuration/system/integrations/integration-flow-designer.md#admin-configuration-integration-flow-designer-settings) in the system configuration.
+
 ### Application
 
 * **Access Job Queue** — Enables a user to review jobs that have been started in the system, as well as view their current status and their performance log (by default, this information can be found by navigating to **System > Jobs** in the main menu).

@@ -7,3 +7,4 @@
 * [OroIQ](organization-oroiq.md)
 * [AI Smart Order](organization-ai-smart-order.md)
 * [CAPTCHA Settings](organization-captcha.md)
+* [Integration Flow Designer](organization-integration-flow-designer.md)

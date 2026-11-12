@@ -8,5 +8,6 @@
 
 * [Query Designer Configuration](config.md)
 * [Condition Builder Component](condition-builder.md)
+* [Commands](commands.md)
 
 <!-- Frontend -->

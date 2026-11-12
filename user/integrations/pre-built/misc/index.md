@@ -8,3 +8,4 @@ OroCommerce offers a versatile and dynamic ecosystem of integrations that extend
 * [Avatax](avatax.md#integrations-misc-avatax)
 * [Hawksearch](hawksearch.md#integrations-search-hawksearch)
 * [Marello](marello.md#integrations-mics-marello)
+* [Activepieces](activepieces.md#integrations-misc-activepieces)

@@ -35,6 +35,8 @@ ORO_DB_DSN=postgresql://postgres@127.0.0.1/commerce_crm_ee?serverVersion=13
 This parameter maps to the **url** parameter of the Doctrine configuration.
 For more information on this parameter, see the <a href="https://symfony.com/doc/current/reference/configuration/doctrine.html" target="_blank">Doctrine Configuration Reference</a> documentation.
 For the format, see the <a href="https://www.postgresql.org/docs/9.4/libpq-connect.html" target="_blank">PostgreSQL Connection URI Reference</a> documentation.
+Of the TLS parameters of the query string, Doctrine DBAL passes only `sslmode`, `sslrootcert`, `sslcert`, `sslkey`, and `sslcrl` to the database driver.
+For more information about these parameters, see [PostgreSQL](../../setup/dev-environment/env-vars.md#backend-setup-env-vars-tls-connections-postgresql).
 
 ### DBAL and ORM
 
