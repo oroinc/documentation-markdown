@@ -151,6 +151,10 @@ For example, install <a href="http://supervisord.org/" target="_blank">Superviso
  redirect_stderr=true
 ```
 
+## Memory Usage of the WebSocket Server
+
+The WebSocket server runs as a single long-running process. To keep its memory bounded, it closes the connections of the clients that stop reading the data sent to them and periodically releases the log records buffered after an error. Both behaviors are enabled by default and are configured with the `oro_sync.websocket_server` options. For details, see [Slow Client Protection](../../../bundles/platform/SyncBundle/configuration.md#bundle-docs-platform-sync-bundle-slow-client-protection) and [Error Log Buffer](../../../bundles/platform/SyncBundle/configuration.md#bundle-docs-platform-sync-bundle-error-log-buffer).
+
 ## Logging Levels
 
 Specify the logging level for the WebSocket server with the **-v|vv|vvv** option of the **gos:websocket:server** console command.

@@ -94,3 +94,32 @@ server {
     access_log /var/log/nginx/oro_https_access.log;
  }
 ```
+
+<a id="bundle-docs-platform-sync-bundle-slow-client-protection"></a>
+
+## Slow Client Protection
+
+A client that stops reading from its WebSocket connection, such as a browser tab with a blocked main thread, makes the server keep all the data addressed to it in memory. To prevent this, the server closes a connection whose write buffer holds 64 KiB or more for `oro_sync.websocket_server.stall_timeout` seconds (30 by default) and logs a warning that contains `did not catch up with its pending data`. A value of `0` disables the protection.
+
+```yaml
+oro_sync:
+    websocket_server:
+        stall_timeout: 60  # seconds, default 30
+```
+
+<a id="bundle-docs-platform-sync-bundle-error-log-buffer"></a>
+
+## Error Log Buffer
+
+The WebSocket server process never ends a request, so the log records buffered after an error would stay in its memory. Every `oro_sync.websocket_server.log_flush_interval` seconds (60 by default), the server resets its log handlers the same way as they are reset at the end of a request: the error email is sent and the buffered records are released. If the email cannot be sent, the records buffered by the handlers of the `buffer` and `deduplication` types are dropped. A value of `0` disables the resets.
+
+```yaml
+oro_sync:
+    websocket_server:
+        log_flush_interval: 300  # seconds, default 60
+```
+
+#### NOTE
+The email is sent from the server process, so the server does not serve its clients while it is being sent.
+
+After changing an option, clear the application cache and restart the `gos:websocket:server` process.
