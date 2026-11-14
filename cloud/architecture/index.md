@@ -9,7 +9,7 @@ You are viewing the upcoming documentation for OroCloud, scheduled for release l
 
 ## IaaS Platform
 
-OroCloud runs on <a href="https://docs.oracle.com/en-us/iaas/Content/home.htm" target="_blank">Oracle Cloud Infrastructure (OCI)</a> out of the box. OCI supports high availability and disaster recovery through a global network of data centers. To organize IaaS resources for a particular OroCloud environment, resources are grouped into an <a href="https://docs.oracle.com/en/cloud/foundation/cloud_architecture/governance/tenancy.html" target="_blank">OCI tenancy</a>. Within a single tenancy, resources are optimized for data transmission and communication within the same <a href="https://cloud.google.com/compute/docs/regions-zones" target="_blank">region</a> and provide redundancy for high availability, with redundant resources distributed among multiple zones.
+OroCloud runs on <a href="https://docs.oracle.com/en-us/iaas/Content/home.htm" target="_blank">Oracle Cloud Infrastructure (OCI)</a> out of the box. OCI supports high availability and disaster recovery through a global network of data centers. To organize IaaS resources for a particular OroCloud environment, resources are grouped into an <a href="https://docs.oracle.com/en/cloud/foundation/cloud_architecture/governance/tenancy.html" target="_blank">OCI tenancy</a>. Within a single tenancy, resources are optimized for data transmission and communication within the same <a href="https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm" target="_blank">region</a> and provide redundancy for high availability, with redundant resources distributed among multiple zones.
 
 ### IaaS Data Centers
 
@@ -39,7 +39,7 @@ The OroCloud infrastructure uses fully redundant components and services for Oro
 
 The content delivery network is the geographically distributed network of caching proxy servers that help improve response time for static content and provide high availability for the service.
 
-Load balancing is the process of distributing incoming traffic among web servers to improve service availability and performance. OroCloud provides CDN and load balancing through Cloudflare.
+Load balancing is the process of distributing incoming traffic among web servers to improve service availability and performance.
 
 ### Cloudflare
 
@@ -91,7 +91,7 @@ See <a href="https://redis.io/docs/latest/develop/reference/sentinel-clients/" t
 
 ### File Storage
 
-OroCloud environments are configured with a <a href="https://www.mongodb.com/docs/manual/core/gridfs/" target="_blank">GridFS</a> clustered file system to store application files related to user data (attachments, images, documents).
+OroCloud environments are configured with a <a href="https://juicefs.com/en/" target="_blank">JuiceFS</a> clustered file system to store application files related to user data (attachments, images, documents).
 
 ## Backups and Restore
 
