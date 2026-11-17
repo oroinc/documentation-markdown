@@ -6,7 +6,7 @@ This section explains OroCommerce’s deployment architecture, infrastructure se
 
 ## Deployment Architecture
 
-Oro Inc. offers [OroCloud](../../cloud/index.md#orocloud), a cloud solution based on the Google Cloud Platform (GCP) or Oracle Cloud Infrastructure (OCI) to host OroCommerce applications. The following diagram shows the general overview of the [OroCloud infrastructure architecture](../../cloud/architecture/index.md#cloud-architecture) and used virtual machines.
+Oro Inc. offers [OroCloud](../../cloud/index.md#orocloud), a cloud solution based on the Oracle Cloud Infrastructure (OCI) to host OroCommerce applications. The following diagram shows the general overview of the [OroCloud infrastructure architecture](../../cloud/architecture/index.md#cloud-architecture) and used virtual machines.
 
 ![image](img/solution-architect/15-environment-diagram.png)
 
@@ -53,7 +53,7 @@ Four [environment types](../../cloud/environments.md#cloud-environments) are typ
 
 ## Network Segmentation
 
-Resources of the [OroCloud environment](../../cloud/security/index.md#cloud-security) are isolated in the dedicated virtual private network (e.g., GCP project or OCI subtenancy). This provides complete resource segregation for each particular instance. The network for the production deployment is divided into the following two subnets:
+Resources of the [OroCloud environment](../../cloud/security/index.md#cloud-security) are isolated in the dedicated virtual private network (e.g., OCI subtenancy). This provides complete resource segregation for each particular instance. The network for the production deployment is divided into the following two subnets:
 
 * Application subnet
 * Maintenance DMZ subnet
