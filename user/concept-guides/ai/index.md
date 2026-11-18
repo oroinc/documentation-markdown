@@ -35,6 +35,12 @@ When a request requires data analysis, OroIQ engages Smart Insights. In this mod
 
 Smart Insights capabilities are managed through OroCommerce [entity management](../../back-office/system/entities/manage-entities.md#admin-guide-create-entities) at both the entity and field level using the *Include in Smart Insights* option, controlling whether the entity and its selected fields to be queried by the assistant. Sensitive information, such as passwords, is excluded by default. However, custom entities and fields can be included as needed, allowing organizations to securely tailor the assistant’s analytical reach to their specific business requirements.
 
+By default, Smart Insights can query the core business records (customers, orders, quotes, requests for quote, invoices, products, leads, opportunities, accounts, contacts, cases, and tasks), their tags, the activity log (logged calls, notes, and tasks), and the back-office and storefront login history. Activity titles and previews are queryable by default, so the assistant can answer what an activity was about without opening the activity record.
+
+Emails, calendar events, and conversations are not queryable by default because their access rules differ from the record ownership rules that Smart Insights applies. An administrator can enable them in entity management when this is acceptable for the organization. Enabling the Tag entity also makes tag assignments queryable. Enabling any activity entity also enables the shared activity log, so activity counts stay complete.
+
+Activities and tags are shown only for records the user can view. An activity is visible when the user can view at least one of its owners, the same way as in the activity grids. A tag assignment is visible only when the tagged record itself is visible. Changes made in entity management are picked up by the assistant automatically, without a deployment.
+
 ### Smart Assistant
 
 When a request involves taking action rather than just analyzing or viewing data, OroIQ transitions to the Smart Assistant. This mode allows you to execute business operations, such as creating quotes or orders, directly within the conversational interface.
@@ -102,6 +108,16 @@ For more information on how to set up Smart Order automation, see [Create an Ord
 
 ![image](user/img/concept-guides/ai/so-illustration.png)
 
+<a id="concept-guide-ai-smart-brief-overview"></a>
+
+## AI Smart Brief
+
+AI Smart Brief shows a short summary at the top of the back-office customer and request for quote view pages. OroCommerce computes every fact in the summary, such as dates, totals, statuses, counts, and price differences, from its own data. The selected AI provider, OpenAI or Vertex AI, only turns these facts into a short paragraph. OroCommerce shows the facts next to the paragraph. Each user’s summary reflects only the records that this user can view.
+
+For more information, see [AI Smart Brief](smart-brief.md#concept-guide-ai-smart-brief).
+
+![The AI Smart Brief block on the Customer A view page](user/img/concept-guides/ai/ai-smart-brief-customers.png)
+
 <a id="concept-guide-ai-mcp"></a>
 
 ## Model Context Protocol (MCP)
@@ -123,5 +139,6 @@ For configuration details, see the developer documentation for the [OroCommerceM
 * [Smart Order Widget](../../back-office/dashboards/widgets/ai-smart-order.md#user-guide-dashboards-widgets)
 * [OroOrderRecognitionBundle](../../../bundles/extensions/OrderRecognitionBundle/index.md#bundle-docs-extensions-order-recognition)
 * [OroIQ Back-Office Settings](../../back-office/system/configuration/system/integrations/oroiq-settings.md#admin-configuration-oroiq-settings)
+* [AI Smart Brief Concept Guide](smart-brief.md#concept-guide-ai-smart-brief)
 * [OroCommerceMcpBundle](../../../bundles/commerce/CommerceMcpBundle/index.md#bundle-docs-commerce-commerce-mcp-bundle)
 * [OroFrontendCommerceMcpBundle](../../../bundles/commerce/FrontendCommerceMcpBundle/index.md#bundle-docs-frontend-commerce-commerce-mcp-bundle)

@@ -39,6 +39,9 @@ In the Display section, you can configure the following display options for a pa
 
 > * **Enable Left Sidebar** — Select **Yes** to enable the user to see and use the left sidebar.
 > * **Enable Right Sidebar** — Select **Yes** to enable the user to see and use the right sidebar.
+1. In the **AI Smart Brief** section, configure the setting:
+
+> * **Expand by Default** — Select this checkbox to open the [AI Smart Brief](../../../../../concept-guides/ai/smart-brief.md#concept-guide-ai-smart-brief) block expanded on customer and request for quote view pages. When the user expands or collapses the block, it keeps that state for the record until the facts of the record change. The section is shown only when AI Smart Brief is enabled.
 1. In the **Reports Settings** section, configure the following settings:
    * **Display SQL In Reports And Segments** — Select this checkbox to enable the user to review the SQL request sent to the system for a report or a segment. This way, users can check if a report has been developed correctly.
 
