@@ -13,6 +13,8 @@ As an example, let us implement a collect on delivery (cash on delivery, COD) pa
 
 By the end of the topic, you will understand the steps required to add a workable payment method and have a basic template that you can extend later.
 
+To let the merchant charge the stored credentials of a customer later, see [Add Merchant-Initiated Payments to a Payment Method](merchant-initiated-payments.md#dev-extend-commerce-payment-merchant-initiated-payments).
+
 ## Create a Bundle
 
 First, create and enable the CollectOnDeliveryBundle bundle for your payment method as described in the [How to create a new bundle](../../extension/create-bundle.md#how-to-create-new-bundle) topic:

@@ -10,6 +10,8 @@ OroPaymentBundle makes it possible to configure payment methods via payment rule
 
 The bundle introduces the `\Oro\Bundle\PaymentBundle\Entity\PaymentTransaction` entity, which represents a payment transaction. Payment transactions are used to store information about payments processed via payment methods. Based on the payment transactions, the bundle calculates the payment status of the related entity (e.g., an order or an invoice) and stores in the `\Oro\Bundle\PaymentBundle\Entity\PaymentStatus` entity. The payment status indicates whether the related entity is paid, partially paid, or unpaid. For more information, see [Payment Status](payment-status.md#bundle-docs-commerce-payment-status).
 
+OroPaymentBundle provides the framework of merchant-initiated payments. A payment method may store the credentials of the customer in a contract during the checkout to make it possible to charge them later without the customer. For more information, see [Merchant-Initiated Payments](merchant-initiated-payments.md#bundle-docs-commerce-payment-bundle-merchant-initiated-payments).
+
 OroPaymentBundle also provides the operations to manage payments in the back-office:
 
 - **oro_payment_transaction_capture** — captures an authorized payment transaction;
@@ -17,5 +19,6 @@ OroPaymentBundle also provides the operations to manage payments in the back-off
 - **oro_payment_transaction_refund** — refunds a payment transaction.
 
 * [Payment Status](payment-status.md)
+* [Merchant-Initiated Payments](merchant-initiated-payments.md)
 
 <!-- Frontend -->
